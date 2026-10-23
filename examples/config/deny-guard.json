@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "mods": [
+    {
+      "id": "example-deny-guard",
+      "type": "denyGuard",
+      "enabled": true,
+      "rules": [
+        {
+          "toolNames": ["Bash"],
+          "commandContains": ["rm -rf"],
+          "reason": "Example rule: review recursive deletion before continuing."
+        }
+      ]
+    }
+  ]
+}

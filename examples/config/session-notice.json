@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "mods": [
+    {
+      "id": "session-notice",
+      "type": "sessionNotice",
+      "enabled": true,
+      "message": "Example session notice: reviewed local mods are active."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "mods": [
+    {
+      "id": "session-notice",
+      "type": "sessionNotice",
+      "enabled": true,
+      "message": "Claude Mods for Codex is active. Its guard is a policy aid; Codex permissions and sandboxing remain authoritative."
+    },
+    {
+      "id": "destructive-command-guard",
+      "type": "denyGuard",
+      "enabled": true,
+      "rules": [
+        {
+          "toolNames": ["Bash"],
+          "commandContains": ["rm -rf", "git reset --hard"],
+          "reason": "Blocked by the example destructive-command rule. Review the command and use Codex permissions or a safer operation."
+        }
+      ]
+    },
+    {
+      "id": "metadata-activity-journal",
+      "type": "activityJournal",
+      "enabled": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "mods": [
+    {
+      "id": "metadata-activity-journal",
+      "type": "activityJournal",
+      "enabled": true
+    }
+  ]
+}

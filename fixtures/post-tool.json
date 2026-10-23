@@ -1,0 +1,13 @@
+{
+  "cwd": "/example/project",
+  "hook_event_name": "PostToolUse",
+  "model": "example-model",
+  "permission_mode": "default",
+  "session_id": "fixture-session",
+  "tool_input": { "command": "git status" },
+  "tool_name": "Bash",
+  "tool_response": { "output": "fixture output" },
+  "tool_use_id": "fixture-post",
+  "transcript_path": null,
+  "turn_id": "fixture-turn"
+}

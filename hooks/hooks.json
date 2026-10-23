@@ -1,0 +1,41 @@
+{
+  "description": "Runs one deterministic dispatcher for Claude Mods for Codex.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Loading Claude Mods"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Checking Claude Mods policy"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Recording Claude Mods activity"
+          }
+        ]
+      }
+    ]
+  }
+}
