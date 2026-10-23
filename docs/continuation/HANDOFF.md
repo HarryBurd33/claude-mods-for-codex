@@ -110,9 +110,10 @@ CLI0.163.0; desktop26.1016.62342 build21477. CLI0.164 researched, not installed.
 
 - npm test:74 passed/one Windows-only skip; validation/replay pass.
 - Initial remote CI:all four Ubuntu/macOS Node22/24 full suites pass. Windows
-  portable lane9 pass/one failure due to LF-only skill-header test. CRLF fix
-  included in this follow-up; check its remote run before claiming Windows lane
-  passes. Native Windows Codex/storage support remains unverified.
+  portable lane initially9 pass/one failure due to LF-only skill-header test.
+  CRLF fix passed the subsequent remote run40009074164 on tested commit
+  da8d01dd65b015455d5a1cb47b9e1d6aa7500e87, including all five jobs. Native
+  Windows Codex/storage support remains unverified. Final follow-up is docs-only.
 - npm pack --ignore-scripts --offline and clean space-path extraction: package
   boundary inspected; offline tests/validation/replay passed at recorded revision.
 - CLI marketplace add, plugin add, plugin remove then add: success for proof only.

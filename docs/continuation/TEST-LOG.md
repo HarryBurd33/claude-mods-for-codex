@@ -182,3 +182,14 @@ Fresh space-path extraction passed74 tests plus1 Windows skip, validate/replay.
 The default npm cache was unwritable in the sandbox; a disposable cache resolved
 packaging without repairing/changing system tools. A future release must rebuild
 and verify its exact final archive.
+
+
+**Follow-up CI passed** for tested code commit
+[da8d01dd65b015455d5a1cb47b9e1d6aa7500e87](https://github.com/HarryBurd33/claude-mods-for-codex/commit/da8d01dd65b015455d5a1cb47b9e1d6aa7500e87):
+[run40009074164](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40009074164)
+completed successfully. This includes four POSIX full-suite jobs and the limited
+Windows portable-contract job after the CRLF fix. It does not establish native
+Windows Codex installation, hooks, process cleanup or private ACL storage. The
+subsequent handoff-record commit changes documentation only. Local and remote
+code trees were independently compared, and required public records were found
+in the fetched tree.
