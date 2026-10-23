@@ -1,5 +1,12 @@
 # Development dashboard and immediate local commands
 
+Native acceptance note2026-10-23: new dashboard views and fixed production
+rewrite/deny/control were verified after restart. Activity scope must align with
+the actual native chat/project context: setting a shell tool's workdir to a child
+does not establish matching hook scope. Do not automatically broaden logging to
+make counts increase. A synthetic matching replay verified the native Watch
+separately; empty retained counts do not prove the producer is connected/healthy.
+
 Version0.2.0-dev.1 is an incomplete development checkpoint. New production
 contracts/service/UI are tested offline; only the separate Astra proof has native
 MCP App rendering evidence. Do not attribute its results to this new dashboard.

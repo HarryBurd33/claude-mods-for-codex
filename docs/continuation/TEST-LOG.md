@@ -1,5 +1,35 @@
 # Continuation verification log
 
+## Production native acceptance after restart — 2026-10-23
+
+Production0.2.0-dev.1 tools and skills loaded after the human restarted Codex.
+Actual native calls: `printf MODS_PRODUCTION_BEFORE` returned MODS_PRODUCTION_AFTER;
+`printf MODS_PRODUCTION_DENY` was blocked by PreToolUse; CONTROL returned unchanged.
+No reinstall, trust edit, extra model turn or permission weakening occurred.
+
+The actual production dashboard opened beside this chat, separately from the
+original proof. Permitted MCP Apps inspection observed connected host, four view
+buttons, notes.txt/status??, read-only changes with Patch:not-requested and
+unavailable token/cache/billing disclosure. Screenshot stays ignored/local.
+Keyboard/screen-reader, resize/close/reopen acceptance remains unverified.
+
+Activity stayed0 after native calls: the selected child-project scope differs
+from this chat's hook context. Scope was not broadened. A labeled synthetic
+PreToolUse envelope replayed through the installed hook subprocess returned{},
+stored one metadata record and executed no command. Actual native panel Watch
+changed0→1/PreToolUse1; Watch was then unchecked. This verifies replay/storage/
+MCP/view observation, not native scoped event provenance or SessionStart.
+
+A normal print request inside a temporary chmod000 directory in the disposable
+project failed process creation with OS permission denied13. Permissions restored
+and empty directory removed. This establishes that specific OS boundary only;
+sandbox escalation and approval UI semantics remain unverified.
+
+The lexical fixture guard also rejected a shell documentation edit containing
+its deny marker. This false positive illustrates substring scope, not shell
+semantic analysis. File-edit tooling recorded these results without changing
+the installed policy. Source unchanged;129pass/1skip baseline still applies.
+
 Date: 2026-10-23, America/Denver. Full product incomplete. Documentation, released
 source, offline tests and actual host observations are distinguished below.
 

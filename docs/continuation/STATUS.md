@@ -1,5 +1,17 @@
 # Current High-stage status — 2026-10-23
 
+**Latest:** human restart completed; production tools now loaded in this chat.
+Actual native fixed rewrite/deny/control passed. New dashboard opened beside chat
+and rendered/interacted with project files/status, changes metadata/patch-off and
+missing usage views. Earlier restart-pending statements below are historical.
+Activity for native current-chat calls stayed0 because selected child-project
+scope and hook chat context do not match; no scope broadened. Labeled synthetic
+installed-hook replay changed the actual watched view0→1. Native scoped capture,
+SessionStart, full accessibility/lifecycle and hold acceptance remain unverified.
+Specific OS-denied directory check rejected a normal print request; this is not
+full sandbox/approval verification. See TEST-LOG. ContinueSolHigh; full product
+remains incomplete and no Medium switch is requested at this milestone.
+
 Full product incomplete. Human selected GPT-6.1 Sol High. High remains appropriate
 for pending production native integration; no Medium switch is requested yet.
 

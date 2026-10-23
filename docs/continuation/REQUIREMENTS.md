@@ -1,5 +1,15 @@
 # Requirements ledger
 
+Latest production H update2026-10-23: after restart, production0.2.0-dev.1 native
+fixed rewrite/deny/control and actual owned panel files/status/changes-metadata/
+missing-usage views verified. Native activity for this chat stayed0 (selected
+child-project scope differs from hook context). Labeled synthetic installed-hook
+replay updated actual Watch0→1; this is not native event capture. Specific
+OS-denied directory rejected normal print; broader sandbox/approval, SessionStart,
+hold acceptance and UI lifecycle/accessibility remain unverified. TEST-LOG is
+authoritative for these observations; prior uninstalled/restart-pending rows are
+historical where contradicted. All93 requirements remain in scope.
+
 Assessment date: **2026-10-23**. The full product is **incomplete**. This ledger
 supersedes the earlier MVP's exclusions; an earlier implementation choice is
 neither proof of host support nor proof that a capability is impossible.

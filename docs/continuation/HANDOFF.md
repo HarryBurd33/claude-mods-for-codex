@@ -1,5 +1,21 @@
 # Current continuation — Sol High, awaiting host restart
 
+**Latest2026-10-23: restart completed.** Do not request another restart for this
+unchanged snapshot. Production0.2.0-dev.1 tools loaded; native fixed BEFORE→AFTER,
+DENY blocked and CONTROL unchanged verified. Dashboard opened beside current chat
+and real file/status, change metadata/patch-off and unavailable usage views checked.
+Watch updated0→1 after labeled synthetic installed-hook replay only. Native
+current-chat metadata stayed0: child-project selection and hook context differ.
+No scope was broadened. Specific OS-denied cwd check rejected normal print;
+sandbox/approval-specific checks remain pending. Earlier restart instructions
+below are superseded. Source unchanged; automated baseline129pass/1skip.
+
+Next on SolHigh: align an explicitly selected native session/project for real
+activity/SessionStart acceptance, complete permission/hold cases, then remaining
+features. Never silently broaden metadata scope or launch a model test turn.
+Full product incomplete; Medium is not yet requested. TEST-LOG records exact
+observations and the lexical guard's documentation false positive.
+
 2026-10-23. This is an in-stage checkpoint, not a model-switch gate. Continue
 with GPT-6.1 Sol High; Medium is not yet justified for unresolved native integration.
 Starting verified commit5bc8ef7a7433189e8b5f1701d9fd4f1324f0ed2a.
