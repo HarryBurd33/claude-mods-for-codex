@@ -809,3 +809,14 @@ failure. Next source removes unnecessary output encoding setter and uses direct
 .NET constructor; protocol is ASCII JSON escapes/base64. Process-deadline fixture
 also uses direct .NET startup instead of module-dependent shell cmdlets. No ACL/
 production success claim until observed; scoped/state routes remain disabled.
+
+
+### Fifth candidate source9314b20/run40029987394
+
+All4POSIX/portable Windows passed. Copied trace advanced through buffer/input
+read, then stalled at the first JSON cmdlet. This rules out request EOF as the
+remaining blocker. Next source disables module auto-discovery and imports only
+the built-in Utility DLL at the fixed PowerShell home path, per public Import-
+Module API; no installed module changes/profile/policy override. Candidate state
+Node adapter is separate/unselected; shared journal encoder/parser extraction
+passed focused26tests/oneWindows-only skip on macOS. No installed6 change.

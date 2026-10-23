@@ -15,7 +15,9 @@ any production route is enabled.
 
 src/windows-storage.mjs launches only fixed Windows PowerShell5.1 with -NoProfile,
 -NonInteractive and the fixed packaged .ps1 path. A narrow allowlist of OS profile/runtime variables is supplied; no full inherited
-environment or arbitrary credential/API-key variables. No shell interpolation, PATH-selected
+environment or arbitrary credential/API-key variables. The helper disables module auto-discovery and imports only the built-in Utility
+DLL from its own PowerShell home; no user/project module or system installation
+change. No shell interpolation, PATH-selected
 helper, elevation, execution-policy override, profile, downloaded module or model
 call. Input JSON is bounded32KiB; output bounded3MiB,15s deadline plus2s cleanup,
 own helper tree targeted through fixed system taskkill on timeout. Errors are
@@ -86,3 +88,5 @@ need their own contracts. No raw secrets/transcripts or credential-store tests.
 Microsoft RawSecurityDescriptor .NET Framework4.8 page was inaccessible through the
 research tool; no claim of retrieving it. Relevant public APIs above were retrieved.
 Original MIT code, no third-party ACL library/native binary or upstream mod code.
+
+Public [Import-Module](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/import-module?view=powershell-5.1) and [module loading](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-5.1) guidance retrieved2026-10-23 supports the explicit built-in binary-module load; no remote module imported.

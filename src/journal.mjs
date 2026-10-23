@@ -143,11 +143,17 @@ async function rotateIfNeeded(dataDirectory, lineBytes) {
   return currentPath;
 }
 
-export async function appendJournalEntry(dataDirectoryInput, metadata, now = () => new Date()) {
+export function encodeJournalRecord(metadata, now = () => new Date()) {
   const record = { recordedAt: now().toISOString(), ...validateMetadata(metadata) };
   const line = `${JSON.stringify(record)}\n`;
   const lineBytes = Buffer.byteLength(line);
   if (lineBytes > MAX_JOURNAL_LINE_BYTES) throw new Error("journal record exceeds the size limit");
+  return line;
+}
+
+export async function appendJournalEntry(dataDirectoryInput, metadata, now = () => new Date()) {
+  const line = encodeJournalRecord(metadata, now);
+  const lineBytes = Buffer.byteLength(line);
   const dataDirectory = await prepareDataDirectory(dataDirectoryInput);
   return withLock(dataDirectory, async () => {
     const currentPath = await rotateIfNeeded(dataDirectory, lineBytes);
@@ -216,7 +222,7 @@ async function readJournalFile(path) {
   }
 }
 
-function parseJournalFiles(texts) {
+export function parseJournalFiles(texts) {
   const entries = [];
   for (const text of texts) {
     for (const line of text.split("\n")) {

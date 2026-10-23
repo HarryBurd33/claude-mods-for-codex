@@ -8,7 +8,7 @@ if(process.platform==='win32') {
  try {
   let script=await readFile(new URL('../src/windows/private-storage.ps1',import.meta.url),'utf8');
   script="[Console]::Error.WriteLine('stage-entered')\n"+script;
-  for(const [needle,stage] of [['  $text =','stage-before-buffer'],['  $request =','stage-input-read'],['  Add-Type','stage-before-compile'],['  $result =','stage-compiled'],['  [Console]::WriteLine((@{','stage-completed']])script=script.replace(needle,`  [Console]::Error.WriteLine('${stage}')\n${needle}`);
+  for(const [needle,stage] of [['  $text =','stage-before-buffer'],['  Import-Module','stage-input-read'],['  $request =','stage-imported'],['  Add-Type','stage-before-compile'],['  $result =','stage-compiled'],['  [Console]::WriteLine((@{','stage-completed']])script=script.replace(needle,`  [Console]::Error.WriteLine('${stage}')\n${needle}`);
   await writeFile(join(dir,'private-storage.ps1'),script);
   await writeFile(join(dir,'PrivateStorage.cs'),await readFile(new URL('../src/windows/PrivateStorage.cs',import.meta.url)));
   const systemRoot=process.env.SystemRoot,environment={};
