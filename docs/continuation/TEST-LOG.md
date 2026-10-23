@@ -12,6 +12,31 @@ OS tests added. node --test test/windows-owned-process.test.mjs on macOS:0pass,
 No production/helper/runtime/gate/config/trust/logging change, extra model run,
 REA, installed cache edit or policy bypass. Source runtime stays dev8.
 
+### First candidate CI and corrected identity assertion
+
+Source1797c9f5f3a946fced58659f4bfc86230af4caaf,
+[CI40041811825](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40041811825):
+all4POSIX+portableWindows and both existing NTFS20/20 suites passed. New job-list
+proof5/5 on Node24;4/5 on Node22. Only the unrelated-handle assertion failed: the
+child's SetEvent returned success for a recycled numeric handle (exit24), while
+parent's actual sentinel remained unsignalled. This is not evidence that the
+original object was inherited. Corrected the harness to check that original event
+object, with parent-side set/reset positive control and child attempted marker;
+never equate handle numbers across processes. Runner unchanged except unused import.
+New source/CI required; no blanket pass claim for the first candidate. Local full
+npm test:170pass/0fail/25Windows-only skips195total. No product integration.
+
+### Source9 executable/scratch extension candidate
+
+Added proof-only partial ProgramBoundary using the existing helper's same-handle
+ACL/parser/pins. Production class declaration changes to partial; no new production
+operation or gate removal. Source package/manifest/server dev9, not installed.
+Code root must be explicitly separate from project. Foreign write/create grants,
+trusted administrator code ownership acceptance, reparse/hardlink/alias/ADS refusal and live private empty scratch checks
+added. No real Git or dependency closure tested; no project data copied/read.
+Scratch normal cleanup is empty-only; external death can leave a private empty dir.
+No recursive deletion/ACL repair. Updated Windows CI result still pending.
+
 ## High read-only review and travel pause — 2026-10-23
 
 Resumed3e6272d with clean tracked tree. Read current handoff/Windows helper/C#,

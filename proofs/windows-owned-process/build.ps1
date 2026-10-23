@@ -10,7 +10,11 @@ try {
   $parameters.OutputAssembly = [System.IO.Path]::Combine($Destination,'owned-proof.exe')
   $parameters.CompilerOptions = '/noconfig'
   [void]$parameters.ReferencedAssemblies.Add([System.Uri].Assembly.Location)
-  $sources = [string[]]@([System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'OwnedProcess.cs')),[System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'Harness.cs')))
+  $sources = [string[]]@(
+    [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'OwnedProcess.cs')),
+    [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'ProgramBoundary.cs')),
+    [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'../../src/windows/PrivateStorage.cs')),
+    [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'Harness.cs')))
   $compiler = [Microsoft.CSharp.CSharpCodeProvider]::new()
   try { $result = $compiler.CompileAssemblyFromSource($parameters,$sources) }
   finally { $compiler.Dispose() }

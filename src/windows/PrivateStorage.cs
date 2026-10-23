@@ -10,7 +10,7 @@ using System.Threading;
 using Microsoft.Win32.SafeHandles;
 
 namespace CodexMods {
- public static class PrivateStorage {
+ public static partial class PrivateStorage {
   const uint ReadControl=0x20000, Attributes=0x80, GenericRead=0x80000000, GenericWrite=0x40000000;
   const uint Reparse=0x400, Directory=0x10, Backup=0x02000000, OpenReparse=0x00200000;
   const int JournalLimit=1048576;

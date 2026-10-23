@@ -1,6 +1,12 @@
 # Project status — 2026-10-23
 
-**Development source0.2.0-dev.8; full requested product incomplete.**
+High Windows work adds an isolated, unintegrated process/object-security proof:
+creation-time job ownership, executable handle/ACL checks and private empty scratch.
+Real Windows CI results and limits are in [the proof](proofs/windows-owned-process/README.md)
+and [verification log](docs/continuation/TEST-LOG.md). No project/settings/restore
+activation or installation; installed dev6, logging scope and human trust unchanged.
+
+**Development source0.2.0-dev.9; full requested product incomplete.**
 Human resumed Sol Medium from verified0c3413b. Source8 adds self-contained
 matching/control replay fixtures to disabled generated mods, with review steps.
 Real CLI regression/local170pass/20Windows-only skips and all7source8 CI jobs

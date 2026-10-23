@@ -1,5 +1,10 @@
 # Active High Windows process candidate — 2026-10-23
 
+Source0.2.0-dev.9 adds proof-only executable/scratch checks using a partial
+extension of the existing helper. Production compiles only its original source;
+no new operation or Windows gate removal. Installed dev6 unchanged. See proof
+README and current TEST-LOG for pending/current actual OS evidence.
+
 Resumed travel checkpoint1ae63d1; the historical pause below is no longer active.
 Current source runtime dev8 and installed/trusted6 unchanged. Full93-capability
 product incomplete. A separate candidate under proofs/windows-owned-process now

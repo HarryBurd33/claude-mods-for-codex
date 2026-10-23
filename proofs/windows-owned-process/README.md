@@ -2,7 +2,7 @@
 
 Original MIT proof, 2026-10-23. **Not loaded by any production hook, tool, CLI or
 server.** No new public execution operation, selected project access, installation,
-configuration/trust edit or model/API call. Source runtime remains dev8; installed
+configuration/trust edit or model/API call. Source version dev9 keeps the runtime behavior of dev8; installed
 human-trusted dev6 remains unchanged. Windows project/settings/restore gates stay.
 
 ## Contract under test
@@ -11,6 +11,11 @@ human-trusted dev6 remains unchanged. Windows project/settings/restore gates sta
 maximum, CancellationToken)` is a candidate **lifetime/stdio primitive only**.
 The synthetic harness supplies its own explicitly compiled absolute executable,
 private disposable NTFS cwd and synthetic arguments/environment. No Git is run.
+
+ProgramBoundary.cs is a proof-only partial extension of the original NTFS helper.
+The sole production security-source change is the partial class declaration;
+production still compiles only PrivateStorage.cs and exposes no new operation.
+Package/manifest/server identify the source snapshot as0.2.0-dev.9, not installed.
 
 - Fixed local absolute executable/cwd strings; explicit CreateProcessW application,
   CRT argument escaping, no shell or PATH lookup. At most32 arguments/16KiB command,
@@ -38,6 +43,33 @@ membership covers ordinary CreateProcess descendants, not every possible service
 mediated action. Only trusted deterministic programs could be considered later.
 Process/job/pipe descriptors use normal token defaults; no private data is placed
 in them by this proof. The existing storage adapter is not changed.
+
+## Executable and scratch object candidate
+
+ProgramPins(executable, codeRoot, selectedProject) pins no-reparse ancestors and
+same-handle disk/single-link executable with no write/delete sharing. Separately
+reviewed explicit code root must contain the executable and must not overlap the
+selected project. Code-root-to-executable directories reject foreign file creation,
+write, delete, ACL/owner/attribute mutation. Denies do not excuse broad allows.
+Private current-user fixture executables are checked, never run from project/PATH.
+Tests exercise foreign WriteData grants (including deny+allow), trusted administrator ownership,
+hardlinks/junctions/aliases/streams, scope overlap and accepted original fixture.
+
+This is an object-integrity check, not code provenance or DLL trust. The conservative
+shared ancestor ACL check may refuse legitimate installed code (including some
+TrustedInstaller grants); refusal is not repaired or interpreted as support. No
+real installed Git executable/installation/dependency closure has been validated.
+
+ScratchProof uses the existing atomically private descriptor to create a fresh
+random empty directory beneath an already-private explicit root. It verifies and
+pins before returning its path. A separate process checks it through the existing
+adapter; deletion while pinned refuses. Normal disposal removes only that empty
+owned directory, never recursively deletes unexpected entries. External death may
+leave an empty private directory; future content cleanup/recovery is unimplemented.
+No index/refs/content copied, no private project file read. A future Git operation
+must hold program and scratch handles across execution, validate all dependencies
+and IO, and design exact-owned-file cleanup separately. These fixtures do not prove
+that composite behavior or native sandbox authority.
 
 ## Not established by this candidate
 
@@ -88,3 +120,10 @@ identity. Local macOS skip is not a passing Windows test.
   pipe waits. This primitive is not suitable for concurrent pipe reads.
 - [AssignProcessToJobObject](https://learn.microsoft.com/en-us/windows/win32/api/jobapi2/nf-jobapi2-assignprocesstojobobject)
   was reviewed for nested-job restrictions; it is deliberately not the launch path.
+
+[DLL search order](https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order),
+[SetDefaultDllDirectories](https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-setdefaultdlldirectories)
+and [file access rights](https://learn.microsoft.com/en-us/windows/win32/fileio/file-security-and-access-rights)
+were retrieved2026-10-23 for the remaining trust boundary. Setting DLL search policy
+in a parent process is not evidence of configuring the child process's loader.
+Absolute executable selection alone does not validate dependent modules.

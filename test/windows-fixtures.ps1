@@ -20,6 +20,13 @@ try {
   } elseif ($request.mode -eq 'ancestor') {
     $principal = New-Object System.Security.Principal.SecurityIdentifier('S-1-1-0')
     $acl.AddAccessRule((New-Object System.Security.AccessControl.FileSystemAccessRule($principal,'DeleteSubdirectoriesAndFiles','Allow')))
+  } elseif ($request.mode -eq 'code-write' -or $request.mode -eq 'deny-code-write') {
+    $identity = if ($request.mode -eq 'deny-code-write') { 'S-1-5-21-111-222-333-424242' } else { 'S-1-1-0' }
+    $principal = New-Object System.Security.Principal.SecurityIdentifier($identity)
+    $acl.AddAccessRule((New-Object System.Security.AccessControl.FileSystemAccessRule($principal,'WriteData','Allow')))
+    if ($request.mode -eq 'deny-code-write') {
+      $acl.AddAccessRule((New-Object System.Security.AccessControl.FileSystemAccessRule($principal,'WriteData','Deny')))
+    }
   } elseif ($request.mode -eq 'broad' -or $request.mode -eq 'deny-and-broad') {
     $identity = if ($request.mode -eq 'deny-and-broad') { 'S-1-5-21-111-222-333-424242' } else { 'S-1-1-0' }
     $principal = New-Object System.Security.Principal.SecurityIdentifier($identity)

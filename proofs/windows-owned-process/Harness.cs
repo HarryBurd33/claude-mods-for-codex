@@ -12,6 +12,7 @@ public static class Harness {
  [StructLayout(LayoutKind.Sequential)] struct Security { public int Size; public IntPtr Descriptor; public int Inherit; }
  [DllImport("kernel32.dll",SetLastError=true)] static extern IntPtr CreateEventW(ref Security security,bool manual,bool initial,IntPtr name);
  [DllImport("kernel32.dll")] static extern bool SetEvent(IntPtr handle);
+ [DllImport("kernel32.dll")] static extern bool ResetEvent(IntPtr handle);
  [DllImport("kernel32.dll")] static extern uint WaitForSingleObject(IntPtr handle,uint milliseconds);
  [DllImport("kernel32.dll")] static extern bool CloseHandle(IntPtr handle);
  static string Exe { get {return System.Reflection.Assembly.GetExecutingAssembly().Location;} }
@@ -28,7 +29,9 @@ public static class Harness {
    case "args": for(int i=2;i<a.Length;i++)Console.WriteLine(B64(a[i]));return 0;
    case "env": Console.Write(B64(Environment.GetEnvironmentVariable("MODS_SYNTHETIC_ALLOWED")??""));Console.Write("|");Console.Write(B64(Environment.GetEnvironmentVariable("MODS_SYNTHETIC_FORBIDDEN")??""));return 0;
    case "stdin": Console.Write(Console.In.Read()==-1?"eof":"unexpected-input");return 0;
-   case "handle": return SetEvent(new IntPtr(Int64.Parse(a[2])))?24:0;
+   // Numeric handles can be reused by the child's CLR. The parent checks the
+   // original event object, never infers inheritance from this return value.
+   case "handle": SetEvent(new IntPtr(Int64.Parse(a[2])));Console.Write("attempted");return 0;
    case "sleep": File.WriteAllText(a[2],Process.GetCurrentProcess().Id.ToString());Thread.Sleep(60000);return 0;
    case "fork": case "fork-exit":
     using(var child=Spawn("sleep",a[2]+".descendant")) { }
@@ -44,6 +47,16 @@ public static class Harness {
    if(a.Length>1 && a[0]=="child")return Child(a);
    if(a.Length<3 || a[0]!="run")return 2;
    string mode=a[1],directory=a[2];
+   if(mode=="pin") {
+    try {using(var pin=new CodexMods.PrivateStorage.ProgramPins(a[3],a[4],a[5]))Console.WriteLine("pinned");}
+    catch(IOException){Console.WriteLine("refused");}return 0;
+   }
+   if(mode=="scratch") {
+    using(var scratch=new CodexMods.PrivateStorage.ScratchProof(directory)) {
+     Console.WriteLine(B64(scratch.Path));Console.Out.Flush();Console.In.ReadLine();
+    }
+    Console.WriteLine("removed");return 0;
+   }
    var args=new List<string>();args.Add("child");args.Add(mode=="cancel"||mode=="outer-kill"?"fork":mode);
    for(int i=3;i<a.Length;i++)args.Add(a[i]);
    var environment=new Dictionary<string,string>();
@@ -53,6 +66,7 @@ public static class Harness {
    if(mode=="handle") {
     var sa=new Security();sa.Size=Marshal.SizeOf(typeof(Security));sa.Inherit=1;
     sentinel=CreateEventW(ref sa,true,false,IntPtr.Zero);if(sentinel==IntPtr.Zero)throw new IOException();
+    if(!SetEvent(sentinel) || WaitForSingleObject(sentinel,0)!=0 || !ResetEvent(sentinel))throw new IOException();
     args.Add(sentinel.ToInt64().ToString());
    }
    using(var cancel=new CancellationTokenSource()) {

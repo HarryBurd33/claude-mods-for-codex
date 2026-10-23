@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
-using Microsoft.Win32.SafeHandles;
 
 namespace CodexMods.Proofs {
  public static class OwnedProcess {

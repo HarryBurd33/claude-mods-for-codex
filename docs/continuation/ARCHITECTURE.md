@@ -1,5 +1,10 @@
 # Extension architecture and security contracts
 
+Source0.2.0-dev.9 adds proof-only executable/scratch checks using a partial
+extension of the existing helper. Production compiles only its original source;
+no new operation or Windows gate removal. Installed dev6 unchanged. See proof
+README and current TEST-LOG for pending/current actual OS evidence.
+
 High resumed the travel checkpoint1ae63d1 on2026-10-23. An isolated Windows
 creation-time job-list/handle-list candidate is now under OS CI review, not loaded
 by production. Its local Mac tests skip; no Windows support result inferred.
