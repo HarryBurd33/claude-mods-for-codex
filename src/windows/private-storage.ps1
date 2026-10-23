@@ -2,10 +2,10 @@
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 try {
-  [Console]::InputEncoding = New-Object System.Text.UTF8Encoding($false)
   [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false)
   $text = New-Object System.Text.StringBuilder
   while (($c = [Console]::Read()) -ne -1) {
+    if ($c -eq 10) { break }
     if ($text.Length -ge 32768) { throw 'Request bound' }
     [void]$text.Append([char]$c)
   }

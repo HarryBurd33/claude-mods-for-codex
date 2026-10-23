@@ -28,7 +28,8 @@ export async function windowsStorageRequest(op, path, { data = '', limit = 0 } =
   const environment = { SystemRoot: systemRoot, windir: systemRoot,
     PATH: win32.join(systemRoot, 'System32'), PSModulePath: win32.join(directory, 'Modules'),
     ...(process.env.TEMP ? { TEMP: process.env.TEMP } : {}), ...(process.env.TMP ? { TMP: process.env.TMP } : {}) };
-  const request = Buffer.from(JSON.stringify({ version: 1, op, path, data, limit }));
+  const encoded = JSON.stringify({ version: 1, op, path, data, limit }).replace(/[^\x00-\x7f]/g, character => `\\u${character.charCodeAt(0).toString(16).padStart(4, '0')}`);
+  const request = Buffer.from(encoded + '\n', 'ascii');
   if (request.length > 32768) throw unavailable();
   return new Promise((resolve, reject) => {
     const child = spawn(win32.join(directory, 'powershell.exe'), ['-NoLogo', '-NoProfile', '-NonInteractive', '-File', SCRIPT],

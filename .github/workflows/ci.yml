@@ -62,5 +62,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
+      - name: Compile original public helper source under Windows PowerShell5.1
+        run: powershell.exe -NoLogo -NoProfile -NonInteractive -File test/windows-compile.ps1
       - name: Real NTFS owner, DACL, link, read, journal and refusal tests
         run: node --test test/windows-storage.test.mjs

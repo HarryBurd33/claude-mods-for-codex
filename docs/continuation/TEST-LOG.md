@@ -770,3 +770,15 @@ exactly matched prior fully tested archive; final extraction validate/replay pas
 Current following record-only commit changes these public verification notes, not
 runtime/installation/trust. Its exact final hash is reported after upload/readback
 in switch response/ignored handoff; no self-referential hash is invented.
+
+
+### First Windows candidate CI failure (retained)
+
+Source1da75da, run40028159430: Windows22/24 both2pass/7fail; every candidate
+request hit15s deadline, so no ACL success inferred. Refusal/path tests passed.
+Ubuntu24 failed two existing concurrent journal tests with activity-journal-busy
+at~537/569ms; other3POSIX jobs and Windows portable passed. First retry request
+while workflow still running returned403, no retry occurred. No POSIX runtime
+change/fix claim. Next source adds explicit newline/ASCII-escaped IPC framing,
+independent public-source compiler check and null-DACL/ancestor/process-deadline
+tests; actual root cause awaits observed Windows results. Production still refused.

@@ -3,7 +3,7 @@ import { spawn } from 'node:child_process';
 import { mkdtemp, mkdir, readFile, readdir, writeFile, link, symlink, rm, realpath } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, win32 } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import test from 'node:test';
 import { validateWindowsPrivatePath, windowsStorageRequest, readWindowsPrivateFile } from '../src/windows-storage.mjs';
 import { appendJournalEntry, prepareDataDirectory, readJournalEntries } from '../src/journal.mjs';
@@ -107,4 +107,32 @@ test('native Windows journal candidate refuses an existing lock without removing
   await assert.rejects(windowsStorageRequest('journal-append',data,{data:fixedRecord}),/Private Windows/);
   await assert.rejects(windowsStorageRequest('journal-read',data),/Private Windows/);
   assert.deepEqual(await readdir(data),['.activity-journal.lock']);
+});
+
+
+test('native Windows private reader rejects a null DACL and mutable ancestor',native,async t=>{
+  const {data}=await directory(t),file=join(data,'null.txt');await writeFile(file,'keep');
+  await acl(file,'null');await assert.rejects(readWindowsPrivateFile(file,100),/Private Windows/);
+  await acl(file,'private');assert.equal(await readFile(file,'utf8'),'keep');
+  await acl(data,'ancestor');await assert.rejects(readWindowsPrivateFile(file,100),/Private Windows/);
+  await acl(data,'private');assert.equal(await readFile(file,'utf8'),'keep');
+});
+
+
+test('native Windows owned-process deadline simulation kills helper and child tree',{...native,timeout:30000},async t=>{
+  const root=await mkdtemp(join(tmpdir(),'mods-timeout-'));t.after(()=>rm(root,{recursive:true,force:true}));
+  const runtime=await readFile(new URL('../src/windows-storage.mjs',import.meta.url),'utf8');
+  await writeFile(join(root,'windows-storage.mjs'),runtime);await mkdir(join(root,'windows'));
+  await writeFile(join(root,'windows/private-storage.ps1'),`
+$ErrorActionPreference = 'Stop'
+$child = Start-Process -FilePath (Join-Path $PSHOME 'powershell.exe') -ArgumentList @('-NoLogo','-NoProfile','-NonInteractive','-Command','Start-Sleep -Seconds 60') -PassThru -WindowStyle Hidden
+[System.IO.File]::WriteAllText((Join-Path $PSScriptRoot 'child.pid'),[string]$child.Id)
+Start-Sleep -Seconds 60
+`);
+  const candidate=await import(pathToFileURL(join(root,'windows-storage.mjs')).href);
+  const start=performance.now();
+  await assert.rejects(candidate.windowsStorageRequest('private-read',join(root,'synthetic.txt'),{limit:10}),/Private Windows/);
+  assert.ok(performance.now()-start>=14000);assert.ok(performance.now()-start<23000);
+  const pid=Number(await readFile(join(root,'windows/child.pid'),'utf8'));assert.ok(Number.isInteger(pid)&&pid>0);
+  assert.throws(()=>process.kill(pid,0),{code:'ESRCH'});
 });
