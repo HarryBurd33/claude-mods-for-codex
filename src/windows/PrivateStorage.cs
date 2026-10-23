@@ -130,7 +130,11 @@ namespace CodexMods {
      }
     } catch {Dispose();throw;}
    }
-   static SafeFileHandle OpenDirectory(string path) { return CreateFileW(path,ReadControl|Attributes,3,IntPtr.Zero,3,Backup|OpenReparse,IntPtr.Zero); }
+   // Metadata-only handles do not participate in every sharing conflict. Request
+   // FILE_LIST_DIRECTORY (the directory form of FILE_READ_DATA) so omission of
+   // FILE_SHARE_DELETE actually pins the name against deletion/replacement.
+   // This right is not used to enumerate ancestors or broaden selected IO.
+   static SafeFileHandle OpenDirectory(string path) { return CreateFileW(path,ReadControl|Attributes|1,3,IntPtr.Zero,3,Backup|OpenReparse,IntPtr.Zero); }
    void Pin(string path,bool privateObject) {
     var h=OpenDirectory(path);handles.Add(h);Info(h,path,true);Access(h,privateObject);
    }

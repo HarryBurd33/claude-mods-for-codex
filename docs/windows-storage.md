@@ -17,6 +17,13 @@ It is not loaded by the production adapter; existing taskkill behavior unchanged
 No executable-trust, private Git scratch, traversal, restore or native-host claim.
 Current OS results belong in continuation/TEST-LOG.md. Windows gates stay intact.
 
+Source9 corrects directory handle sharing: metadata-only opens did not prevent
+rmdir in a new live-handle CI witness. Pins now request FILE_LIST_DIRECTORY plus
+metadata rights while omitting share-delete; no ancestor enumeration or logging.
+Traverse-only directories without list permission refuse, never receive ACL repair.
+Source7/8 OS passes did not exercise this condition. Actual final CI belongs in
+TEST-LOG; no native-host support inferred from the correction.
+
 ## Storage boundary
 
 src/windows-storage.mjs launches only fixed Windows PowerShell5.1 with -NoProfile,

@@ -13,8 +13,10 @@ The synthetic harness supplies its own explicitly compiled absolute executable,
 private disposable NTFS cwd and synthetic arguments/environment. No Git is run.
 
 ProgramBoundary.cs is a proof-only partial extension of the original NTFS helper.
-The sole production security-source change is the partial class declaration;
-production still compiles only PrivateStorage.cs and exposes no new operation.
+Production compiles only PrivateStorage.cs and exposes no new operation. Its
+directory pin now also requests FILE_LIST_DIRECTORY, because metadata-only opens
+do not enforce every sharing conflict. It does not enumerate ancestor contents;
+insufficient list rights refuse. A partial class declaration enables proof reuse.
 Package/manifest/server identify the source snapshot as0.2.0-dev.9, not installed.
 
 - Fixed local absolute executable/cwd strings; explicit CreateProcessW application,
@@ -127,3 +129,11 @@ and [file access rights](https://learn.microsoft.com/en-us/windows/win32/fileio/
 were retrieved2026-10-23 for the remaining trust boundary. Setting DLL search policy
 in a parent process is not evidence of configuring the child process's loader.
 Absolute executable selection alone does not validate dependent modules.
+
+[MS-FSA access checks](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-fsa/82b364ce-6d7b-422f-8d88-4db32eea809a)
+and [sharing checks](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-fsa/8c0e3f4f-0729-49f4-a14d-7f7add593819)
+retrieved2026-10-23 explain why metadata-only handles cannot establish pinning.
+The corrected helper requests the directory list right solely to participate in
+sharing checks. Its independent NTFS rmdir witness and storage regressions must
+pass on the exact final source. No claim of defending hostile same-user processes
+or changing directory ACLs; OS administrators remain outside the isolation claim.

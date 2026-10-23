@@ -127,6 +127,7 @@ test('Windows executable-pin proof rejects project code, foreign writes, links, 
   assert.equal(await pin(hard),'refused');await rm(hard);
   const junction=join(data,'linked code');await symlink(code,junction,'junction');
   assert.equal(await run(exe,['run','pin',data,join(junction,'synthetic.exe'),junction,project]),'refused');
+  assert.equal(await run(exe,['run','pin',data,selected,code,junction]),'refused','project alias cannot hide overlap');
   await rm(junction);
   for(const path of [selected+':ads.exe',join(code,'..','reviewed code','synthetic.exe').replace('reviewed code','reviewed code.'),'relative.exe'])assert.equal(await pin(path),'refused');
   assert.equal(await pin(selected),'pinned');

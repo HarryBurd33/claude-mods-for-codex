@@ -37,6 +37,23 @@ added. No real Git or dependency closure tested; no project data copied/read.
 Scratch normal cleanup is empty-only; external death can leave a private empty dir.
 No recursive deletion/ACL repair. Updated Windows CI result still pending.
 
+### Second CI caught metadata-only directory handle limitation
+
+Source9770a98f600a062dc7f6d0ab77e6760eb9520d68/CI40042312290: all4POSIX and portable
+Windows passed, existing NTFS20/20 each. New proof6/7 on both Windows lanes; handle
+identity correction passed. Scratch same-user rmdir unexpectedly succeeded while
+metadata-only directory handles were open. The proof failed correctly; do not
+report pinned scratch from this candidate. Production helper's Pins.OpenDirectory
+used the same metadata-only rights, so corrected it to request FILE_LIST_DIRECTORY
+(directory FILE_READ_DATA) in addition to READ_CONTROL/READ_ATTRIBUTES, while still
+omitting share-delete. No directory enumeration/logging added. Traversal-only ACLs
+that cannot grant this right now refuse; no ACL repair. New exact-source CI is
+required, including existing storage regression. Project-junction alias check also
+added before code-root proof; it opens only directory ancestors, no project content.
+Retrieved CreateFileW, file disposition/rename docs; first winbase disposition-EX
+URL404, actual ntddk FILE_DISPOSITION_INFORMATION_EX retrieved. MS-FSA access/share algorithms subsequently retrieved corroborate that metadata-
+only opens do not enter these sharing conflicts; no POSIX-delete cause inferred. No native Codex support claim.
+
 ## High read-only review and travel pause — 2026-10-23
 
 Resumed3e6272d with clean tracked tree. Read current handoff/Windows helper/C#,

@@ -33,13 +33,18 @@ namespace CodexMods {
     if(!executable.EndsWith(".exe",StringComparison.OrdinalIgnoreCase) || !Within(codeRoot,System.IO.Path.GetDirectoryName(executable))
      || Within(selectedProject,codeRoot) || Within(codeRoot,selectedProject))throw Refuse();
     try {
+     // Pins(..., targetDirectory:false) checks/pins only ancestors, not the
+     // final leaf. This synthetic unused leaf lets us verify the selected
+     // project directory without requiring private-data ACLs or opening content.
+     // In particular a project junction must not bypass the overlap check.
+     held.Add(new Pins(System.IO.Path.Combine(selectedProject,".unused-proof-leaf"),false,false));
      held.Add(new Pins(executable,false,false));
      string directory=Path.GetDirectoryName(executable);
      // Validate each code-root directory, including intermediate dependency
      // locations along this path, against foreign create/write/ACL mutation.
      string cursor=codeRoot;
      while(true) {
-      var h=CreateFileW(cursor,ReadControl|Attributes,3,IntPtr.Zero,3,Backup|OpenReparse,IntPtr.Zero);
+      var h=CreateFileW(cursor,ReadControl|Attributes|1,3,IntPtr.Zero,3,Backup|OpenReparse,IntPtr.Zero);
       held.Add(h);Info(h,cursor,true);CodeAccess(h);
       if(String.Equals(cursor,directory,StringComparison.OrdinalIgnoreCase))break;
       string remaining=directory.Substring(cursor.Length+1);int slash=remaining.IndexOf('\\');
