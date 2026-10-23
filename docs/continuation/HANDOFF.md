@@ -9,12 +9,51 @@ Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, docs/runtime.md a
 docs/authoring.md. Ignored root HANDOFF.md supplies private setup/log paths; never
 upload it. Historical handoffs remain in Git history; this current record wins.
 
+## Immediate restart checkpoint
+
+Human reviewed/trusted production0.2.0-dev.4 and hold0.0.4, then asked to save
+before restarting Codex. Independent native inventory confirms all four owned
+hooks enabled/trusted,zero errors;108/7 cached files match snapshots. No repeat
+trust/install for unchanged code. User's next action: restart, reopen this same
+chat and continue **GPT-6.1 Sol High**. No Medium switch yet.
+
+New fixture keeps SAME project/data/project logging scope. Two synthetic replay
+commits, original notes unchanged/untracked. Patch opt-in only known synthetic
+files; usageExport is previous fixed test's private export, no new run. Source
+snapshot smoke passed usage/Replay/files/activity. Six actual CLI processes
+restored/reviewed/applied/reversed one synthetic file; notes/index/HEAD/inode/
+owner/mode preserved. This is not installed desktop restore acceptance.
+
+Next after restart: inspect connection/tools, call mods.dashboard to open the new
+panel beside this chat, verify Replay/patch/usage/source labels and lifecycle.
+Run the fixed permission probe with NORMAL use_default only (exact private target
+in local handoff); expect rejection outside workspace and no probe file. Never
+retry with elevation to make it pass. Verify hold-v4 connection first, then ask
+human readiness before the exact30s decision test; correlate accept/decline/cancel
+results, retain provenance/fail-open caveats, remove separate probe afterward.
+No additional paid model run authorized. Original one-run permission consumed.
+
+Public inspector intentionally hard-codes original proof name and cannot inspect
+these packages; that caused plugin/read-32600, not an install/host defect. Private
+bounded read-only owned inventory helper succeeded. Do not repair clients/private
+internals or discover sessions. Exact paths/backups/scripts are in ignored handoff.
+
+Rollback: remove hold plugin/dedicated marketplace through supported CLI. For
+production rollback, repoint ONLY owned local marketplace entry to preserved
+reviewed v1 snapshot, supported plugin add then human review/restart; don't
+restore an entire old user config. Clean up only the recorded test probe file/
+empty parent, never other files. Prior original proof stays installed.
+
+Source3d959ea all5 CI jobs success run40018498309. Updated restart documentation
+checkpoint hash is independently reported after upload/readback. No background
+work scheduled; await human restart. New renderer work has not begun.
+
 ## Identity and history
 
 Repository: [HarryBurd33/claude-mods-for-codex](https://github.com/HarryBurd33/claude-mods-for-codex).
 Branch: [codex/astra-groundwork](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
 Starting verified remote/local commit:
-[79a2ea78e9d4011948f2d60360c413d87dfeb70d](https://github.com/HarryBurd33/claude-mods-for-codex/commit/79a2ea78e9d4011948f2d60360c413d87dfeb70d).
+[3d959ea32d2b5d48ea1a84b78eaa240c3f881f92](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3d959ea32d2b5d48ea1a84b78eaa240c3f881f92).
 The checkpoint after this record is reported independently after upload/readback,
 not guessed in advance. Stages: Astra Ultra groundwork; human switch to Sol Ultra
 contracts/security/integration; human switch to Sol High authoring/native/features.
@@ -24,19 +63,19 @@ Original local main6c59e98 and equivalent checkpoint branches preserved. Never
 merge private history into public branch or force-push. Terminal push lacks
 credentials: use connected GitHub tree/commit/ref upload, fetch/full-tree comparison
 and independent ls-remote. Root handoff/.local stay ignored, nested public handoff
-tracked. Current source0.2.0-dev.4 is NOT installed; versioned update/human trust
-required after code changes. Never edit installed caches or silently reuse trust.
+tracked. Current source0.2.0-dev.4 is installed/trusted; host restart pending. Further
+code changes require a new versioned update/human trust. Never edit installed caches or silently reuse trust.
 
 ## Host and installation
 
 macOS14.6(23G80), Node24.22.0, CLI0.163.0; desktop26.1016.62342 build21477.
 CLI0.164 researched, not installed. No native Windows host.
-Production0.2.0-dev.1 user-profile installed/trusted as
-claude-mods-for-codex@claude-mods-production-dev;94 cache files matched reviewed
-snapshot, three hooks trusted in inventory. Human restarted; MCP tools and skills
-now loaded. Do not request another restart/retrust for this unchanged snapshot.
-Original proof0.0.2 retained. Hold-only0.0.3 and its marketplace removed;
-reviewed hold source0.0.4 not installed. Private paths/backups in root handoff.
+Production0.2.0-dev.4 is now user-profile installed/trusted as
+claude-mods-for-codex@claude-mods-production-dev;108 cache files match reviewed
+snapshot. Separate hold0.0.4 installed/trusted with7 matching files; all four
+hooks trusted in independent inventory. Desktop restart/new connection pending.
+Do not reinstall/retrust these unchanged snapshots. Original proof0.0.2 retained;
+old hold0.0.3 removed/archived. Private paths/backups in root handoff.
 
 Actual desktop production rewrite/deny/control and owned panel passed. Earlier
 synthetic replay established Watch0→1, not native capture. One authorized CLI exec
@@ -145,7 +184,7 @@ data cleanup; never overwrite whole current config from old backup.
 5. Windows ACL design/real host validation; Linux/WSL distinct from CI. Test update/
    disable/remove/restore, final public clone/package; reconcile all93 rows/review.
 
-No protected human action pending. Once remaining work fits Medium, save exact
+Human restart pending as above. Once remaining work fits Medium, save exact
 handoff, commit/upload/independently verify, request GPT-6.1 Sol Medium and STOP.
 Do not bypass with a subagent or continue in background.
 
@@ -155,8 +194,8 @@ Do not bypass with a subagent or continue in background.
 > Read docs/continuation/{STATUS,REQUIREMENTS,ARCHITECTURE,TEST-LOG,HANDOFF}.md,
 > docs/runtime.md and ignored root HANDOFF.md. Preserve work/private history.
 > Scope mismatch is resolved by matching the native session directory; never
-> broaden logging or use shell workdir for chat attribution. Installed0.2.0-dev.1
-> has native CLI/desktop evidence; source0.2.0-dev.4 is not installed. Continue all93
+> broaden logging or use shell workdir for chat attribution. Production0.2.0-dev.4/hold0.0.4 are installed/trusted and awaiting this restart;
+> prior0.2.0-dev.1 native results remain version-specific. Continue all93
 > requirements/priorities, keep automated/replay/native claims separate, preserve
 > permissions/human trust, and do not reuse the consumed additional-run permission.
 > Save/verify uploads. Stop for a human switch to Medium once it is sufficient.

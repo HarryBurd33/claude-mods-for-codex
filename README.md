@@ -4,8 +4,8 @@
 This branch corrects hook packaging and adds tested building blocks and separate
 native proofs. The dispatcher preserves the three v0.1 examples and adds opt-in exact command
 replacement and scoped metadata. The local dashboard and project views have
-partial native acceptance for the installed0.2.0-dev.1 snapshot; new source
-rendering/diagnostics are not installed. See [runtime access and use](docs/runtime.md), [current status](docs/continuation/STATUS.md), the
+partial native acceptance from0.2.0-dev.1. Updated0.2.0-dev.4 is now installed
+and human-trusted; new rendering/diagnostics await the requested desktop restart. See [runtime access and use](docs/runtime.md), [current status](docs/continuation/STATUS.md), the
 [requirements ledger](docs/continuation/REQUIREMENTS.md), and the
 [next-stage handoff](docs/continuation/HANDOFF.md).
 
@@ -27,7 +27,8 @@ passive reported token/cache counters from one explicitly selected private CLI
 export. It never sums cumulative completion records, discovers private chats,
 infers context/billing/cache health or makes keepalive calls. See
 [impact and usage limits](docs/impact-and-usage.md). These new components are
-tested locally, not installed/native-accepted; the trusted fixture remains0.2.0-dev.1.
+tested locally. The trusted fixture is now0.2.0-dev.4; new desktop acceptance awaits
+restart. Prior0.2.0-dev.1 observations remain version-specific.
 Unit tests and source support are listed separately in the
 [test log](docs/continuation/TEST-LOG.md).
 

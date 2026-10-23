@@ -12,7 +12,8 @@ tool workdir does not select project logging. No scope was expanded.
 
 Source0.2.0-dev.4 adds a no-write scope diagnostic, measured-event SVG chart/table,
 collapsible file tree and bounded literal diff display. These source changes are
-not installed; simulated DOM tests are separate from host acceptance. Selected
+now installed/human-trusted; native acceptance awaits the requested restart.
+Simulated DOM tests are separate from host acceptance. Selected
 commit Replay and a separate explicit POSIX one-file restore CLI are now source
 implementations with conflict/private-plan tests; no restore action in the panel.
 Unsupported restore cases and interruption limits are in docs/replay.md. Full local
@@ -34,3 +35,10 @@ See [current status](docs/continuation/STATUS.md),
 [test log](docs/continuation/TEST-LOG.md),
 [runtime access](docs/runtime.md) and [handoff](docs/continuation/HANDOFF.md).
 Current selected setting remains GPT-6.1 Sol High; no Medium switch yet.
+
+
+Restart checkpoint: human trusted production0.2.0-dev.4 and separate hold0.0.4;
+independent inventory confirms four enabled/trusted hooks,zero errors. All108/7
+cache files match reviewed snapshots, only owned configuration changed. Logging
+scope unchanged. Source3d959ea all5 CI jobs passed. Reopen the same chat on Sol High
+after restart; new panel/permission/hold checks remain before a Medium handoff.

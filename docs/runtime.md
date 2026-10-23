@@ -7,8 +7,8 @@ does not establish matching hook scope. Do not automatically broaden logging to
 make counts increase. A synthetic matching replay verified the native Watch
 separately; empty retained counts do not prove the producer is connected/healthy.
 
-Source0.2.0-dev.4 is an incomplete development checkpoint and is not installed.
-The installed0.2.0-dev.1 production dashboard has native rendering/interaction
+Source0.2.0-dev.4 is installed/human-trusted as a development fixture; desktop
+restart and new native acceptance are pending. Earlier0.2.0-dev.1 has rendering/interaction
 evidence; a bounded authorized CLI run in its selected project added three real
 lifecycle/tool events visible through desktop Refresh. This resolves scope without
 broader logging. New chart/tree/diff/Replay views still need reviewed host acceptance.

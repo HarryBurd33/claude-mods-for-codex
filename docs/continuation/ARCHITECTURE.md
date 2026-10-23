@@ -3,6 +3,13 @@
 Decision date: 2026-10-23. Development design; outstanding proof gates are explicit.
 Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.
 
+Current restart checkpoint: production0.2.0-dev.4 and hold0.0.4 installed through
+supported CLI, human-trusted, all4 hooks independently trusted/zero errors;
+108/7 cached files match reviewed snapshots. New desktop connection/native
+permission/hold acceptance awaits human restart. Code contracts below unchanged
+from verified source3d959ea; prior source-version/native observations are historical
+introductions, not transferred acceptance. Logging scope/retention unchanged.
+
 ## Product surfaces
 
 1. **Official native client extension:** supported lifecycle hooks, local plugin
@@ -140,8 +147,8 @@ uses supported installation/trust; it never automatically trusts generated code.
 
 Use compatibility-only `.codex-plugin/plugin.json` with no root `plugin.json`.
 The released 0.163/0.164 portable loader skips hooks; adding a compatibility
-overlay beside it does not fix discovery. Production source0.2.0-dev.2 is not
-installed; production snapshot0.2.0-dev.1 has native installation/execution/UI
+overlay beside it does not fix discovery. Current0.2.0-dev.4 is installed/human-
+trusted, awaiting desktop restart; earlier0.2.0-dev.1 has native execution/UI
 evidence on the recorded macOS host. Keep version-specific acceptance separate.
 Legacy MCP uses `.mcp.json`, relative `cwd: "."` and script arguments; it does
 not inject portable plugin variables. Pass a shared data location explicitly

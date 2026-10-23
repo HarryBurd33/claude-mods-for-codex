@@ -5,13 +5,39 @@ Astra Ultra → Sol Ultra → Sol High switches have occurred. This is an in-sta
 checkpoint, not a request to switch to Medium yet. Replay/restore security,
 hold integration and remaining feature work still require substantive reasoning.
 
-## Verified installed production snapshot
+## Current installation — awaiting human restart
 
-Production **0.2.0-dev.1** is user-profile installed through the supported CLI.
+Production0.2.0-dev.4 and separate hold-proof0.0.4 are now user-profile installed
+through supported CLI. All108 production and7 hold cached files match reviewed
+snapshots. Human confirmed changed-code review; independent hooks/list reports
+all four owned hooks enabled/trusted,zero errors. **Human asked for this saved
+checkpoint before restarting Codex and reopening the same chat.** No further
+trust review is needed for these unchanged snapshots. New desktop connection/
+UI and native permission/hold acceptance remain pending restart.
+
+Same selected project/data/project logging scope and retention. Fixture-only patch
+read opt-in covers two known synthetic files; checkpoints select two synthetic
+commits; optional usage source is the previous authorized fixed test export.
+Original notes preserved/untracked. Actual snapshot CLI restore/review/apply and
+reverse (six processes) passed, preserving notes/index/HEAD/inode/mode/owner;
+this is CLI/filesystem integration, not installed desktop restore evidence.
+One unique empty owner-writable directory outside the workspace is prepared for
+an exact harmless rewrite sandbox-negative test, not yet executed. No extra
+model run. Backups/paths/rollback are in ignored local handoff.
+
+Public source3d959ea passed all5 CI jobs (run40018498309). The safe source and
+restart records are on codex/astra-groundwork; final checkpoint hash is reported
+after independent upload/readback. Continue Sol High after restart. This is not
+a model-switch gate; full product remains incomplete.
+
+## Earlier production native acceptance (0.2.0-dev.1)
+
+Production **0.2.0-dev.1** was user-profile installed at the earlier native milestone.
 Human reviewed its three hooks; native inventory independently confirmed trust.
 All94 installed files matched the reviewed fixture. It selects a disposable Git
 project, explicitly opts into project metadata, keeps patches off and uses only
-fixed harmless rewrite/deny rules. Original proof retained; hold-only probe removed.
+fixed harmless rewrite/deny rules. Original proof retained; old hold0.0.3 was
+removed before the current0.0.4 installation described above.
 Private paths/backups stay local. No installed configuration changed this milestone.
 
 On macOS14.6 / desktop26.1016.62342, production rewrite, denial and unchanged
@@ -29,17 +55,16 @@ The first record was earlier synthetic replay; three new records were native CLI
 SessionStart notice presentation was not established by this JSON run. No logging
 boundary or permission changed. Additional-model-run authorization is consumed.
 
-## New source, not installed
+## Source implemented; new native acceptance pending
 
-Source **0.2.0-dev.4** extracts the same canonical containment contract into
+Source **0.2.0-dev.4** (now installed/trusted; awaiting restart) extracts the same canonical containment contract into
 src/scope.mjs and adds an immediate scope CLI diagnostic. It checks supplied
 directories only, neither discovers sessions nor logs identifiers. Activity
 reports producer health unknown; retained records are not a heartbeat.
 
 Owned view adds a bounded measured-event SVG chart with table alternative,
 collapsible file tree with Git status/size, and literal colored diff lines with
-control-character visibility and display limits. Source changes are not in the
-installed snapshot; they have simulated DOM evidence, not native acceptance.
+control-character visibility and display limits. These new views have simulated DOM evidence, not native acceptance after restart.
 
 Full local suite: **152 passed,0 failed,3 Windows-only skips (155 total)**.
 Validation and fixture replay pass. Four original authoring/debug/review/verification
@@ -47,7 +72,7 @@ skills and disabled declarative scaffolding remain usable source. Installed skil
 are visible; full invocation/authoring flow still needs acceptance. No dependencies
 added; MIT/disclaimer intact.
 
-Source0.2.0-dev.4 additionally compares two explicitly selected full Git commit
+The installed/trusted source0.2.0-dev.4 additionally compares two explicitly selected full Git commit
 IDs through read-only CLI/MCP/Replay. It excludes sensitive names and historical
 symlinks/submodules, bounds processes/content and leaves later working edits,
 index and HEAD unchanged. This is selected-commit provenance, not automatic
@@ -58,8 +83,7 @@ It preserves unselected work and inode/permissions; no mutating MCP/panel action
 Add/delete/binary/mode-transition restoration is unsupported. Interrupted in-place
 writes may require explicit recovery from the private plan; Windows refuses until
 ACL support. No native installed-host restoration or crash/disk-failure claim.
-See docs/replay.md. All5 CI jobs passed for prior source3efe179; current source
-CI awaits its own upload/result.
+See docs/replay.md. All5 CI jobs passed for source3d959ea (run40018498309).
 
 Source0.2.0-dev.4 also adds the original disabled blastRadiusGuard and immediate
 impact stdin assessment. Six fixed lexical categories yield bounded conservative

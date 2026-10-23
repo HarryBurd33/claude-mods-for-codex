@@ -1,5 +1,46 @@
 # Continuation verification log
 
+## Versioned fixture update and human trust — 2026-10-23, restart pending
+
+Saved source3d959ea was prepared as immutable production0.2.0-dev.4 snapshot.
+Supported codex plugin add updated the same production ID. Separate hold0.0.4
+installed with its own marketplace and changed mods-hold-v4 connection definition.
+Old0.0.3 snapshot archived privately. All108/7 cached file hashes match snapshots.
+Configuration backed up privately; semantic diff changed ONLY owned hold-probe
+marketplace/plugin entries. Production config key unchanged; cache version updated.
+Owned local production marketplace source points to new snapshot; old retained.
+
+New fixture runtime settings preserve same canonical project/data/project logging
+scope/retention. Patch opt-in covers only known synthetic notes/replay files;
+two fixed synthetic commits select Replay. Usage export is earlier authorized
+native fixed test log, not a discovered session or new model call. Snapshot
+handler smoke: expected usage42721,one replay file/known synthetic patch, two
+visible files,retained activity4. No new UI/native hook claim from this smoke.
+Six actual snapshot CLI processes prepared/reviewed/applied restore and reverse;
+final synthetic file returned to after content; notes/index/HEAD/inode/mode/owner
+unchanged. Private plans kept outside project; no installed desktop restore claim.
+
+One unique empty mode0700 user-owned directory outside workspace was prepared
+for a future exact harmless normal-sandbox rewrite write probe. Owner-writable
+baseline verified. No write probe executed yet, and no escalation/retry authorized
+for the test call. Target/cleanup are private; cleanup only created probe/empty
+parent. Original notes preserved. Human review sees full before/after rule.
+
+Native initial inventory reported three production plus one hold hook modified.
+Human confirmed review/trust. Independent read-only app-server hooks/list then
+reported all four enabled/trusted,zero errors. No model turn/trust automation.
+Public inspector targets original proof only; using it with new marketplaces
+failed plugin/read-32600. Private bounded owned-plugin inventory succeeded. This
+is not a client defect or reason to broaden private access.
+
+User explicitly asked to save before restarting/reopening this same chat. Current
+new MCP connection/UI/negative sandbox/hold acceptance remain pending restart.
+Stay Sol High for these checks. No Medium switch yet; no background continuation.
+CI source3d959ea run40018498309 SUCCESS; all5 jobs independently read back,
+including expanded Windows portable tests (not native host/storage evidence):
+https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40018498309 .
+
+
 ## Conservative impact and passive usage source — 2026-10-23
 
 Source0.2.0-dev.4 not installed. New disabled blastRadiusGuard uses six fixed
