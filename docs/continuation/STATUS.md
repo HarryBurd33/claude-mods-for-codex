@@ -51,9 +51,10 @@ permission/platform matrix remain incomplete.
 Unchanged dev6 source/extracted full suite164pass/three Windows-only skips,
 validation/default replay pass. Source1e5fa74 CI40024252139 initially4jobs pass/
 1existing macOS22 mocked-Git failure; targeted local test passed and requested
-retry yielded5successful new jobs. Unknown cause/no fix claim. Current final
-package/anonymous-clone evidence and exact verified commit are recorded after
-readback in TEST-LOG/final response; private paths/logs remain ignored.
+retry yielded5successful new jobs. Unknown cause/no fix claim. Current exact6ef6f67 anonymous clone164pass/0fail/3skips, validate/replay passed.
+Final125-file archive inspected, extraction validate/replay passed; executable
+assets exactly match fully tested package. See latest TEST-LOG publication record.
+Following notes-only commit identity reported after readback; private evidence ignored.
 
 All93 ledger rows remain scoped. Native Windows/Linux/WSL hosts unavailable;
 portable CI is not native integration. Windows state/settings/export/restore
@@ -68,3 +69,5 @@ restart records [98f12d0](https://github.com/HarryBurd33/claude-mods-for-codex/c
 Development branch codex/astra-groundwork; main remains historical MVP. Private
 local history/root handoff preserved; final checkpoint identity only after upload/
 fetch/tree-diff/ls-remote verification. Read HANDOFF.md for exact next tasks.
+
+Verified native checkpoint: [6ef6f67](https://github.com/HarryBurd33/claude-mods-for-codex/commit/6ef6f6725e77ceceac7a17401a97e2b4433f432c), tree f16d71da0bca474908c2b46acc61baf27cb3cf06.

@@ -737,3 +737,23 @@ Initial attempt remains4pass/1fail; no root cause/reliability fix is claimed.
 Native trust reread after human confirmation:3trusted/enabled/0errors/no model
 turn. Current milestone awaits human desktop restart for native6 acceptance;
 no further trust/install needed for this unchanged snapshot.
+
+## Verified Medium native checkpoint publication — 2026-10-23
+
+Native-result checkpoint local/remote aligned:
+[6ef6f6725e77ceceac7a17401a97e2b4433f432c](https://github.com/HarryBurd33/claude-mods-for-codex/commit/6ef6f6725e77ceceac7a17401a97e2b4433f432c),
+branch codex/astra-groundwork, tree f16d71da0bca474908c2b46acc61baf27cb3cf06.
+Original equivalent local8fd00fb231f2b5649c7d40f882c48b880ea87372 preserved on
+codex/dev6-native-local-checkpoint. Connected GitHub upload exact tree, non-force
+expected-parent ref update, fetch/full-tree diff and independent ls-remote matched.
+Soft alignment only after equal trees; no files/history lost.
+
+Anonymous credential-helper-disabled clean public clone at exact6ef6f67/tree passed
+npm test164/0fail/3Windows-only skips (167total), npm run validate and npm run replay.
+Final125-file/724966unpacked-byte archive from that clone inspected/extracted into
+a path containing spaces; no links/traversal/private root handoff/.local/.git/
+dependencies/actual machine paths/portable manifest. Runtime/test/config/UI assets
+exactly matched prior fully tested archive; final extraction validate/replay passed.
+Current following record-only commit changes these public verification notes, not
+runtime/installation/trust. Its exact final hash is reported after upload/readback
+in switch response/ignored handoff; no self-referential hash is invented.
