@@ -1,6 +1,12 @@
 # Project status — 2026-10-23
 
-**Development source0.2.0-dev.7; full requested product incomplete.**
+**Development source0.2.0-dev.8; full requested product incomplete.**
+Human resumed Sol Medium from verified0c3413b. Source8 adds self-contained
+matching/control replay fixtures to disabled generated mods, with review steps.
+Real CLI regression and local170pass/20Windows-only skips passed; source8 CI is
+pending. Installed dev6/logging/trust unchanged. One native preview keyboard
+path was human-confirmed and inspected; full accessibility remains incomplete.
+
 The High Windows private-storage milestone now has real Windows Server2025 NTFS
 CI: all20tests passed on both Node22/24, plus all4POSIX and portable Windows jobs.
 [f63ebab source](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f63ebabec8730cbfaa2e39a7f5e3ae2f58438838),
@@ -23,10 +29,9 @@ preservation. Already-loaded unload/UI disable/older rollback remain unverified.
 No installation/config/trust/logging change this High stage; activity4/same revision.
 Optional observers off, theme unapplied, client unchanged, no extra model run.
 
-Current human setting Sol High; after verified checkpoint the next setting is
-**GPT-6.1 Sol, Medium** for routine verification, packaging/docs and native acceptance
-preparation. New Windows Git/writer security work requires High again. Human switch
-and explicit continue are mandatory; no background/subagent substitute.
+Current human setting Sol Medium. This phase covers authoring/skill/verification
+and concrete native acceptance preparation. High is required before addressing
+gated Windows dashboard/Git/restore paths; no background/subagent substitute.
 
 Remaining full-product work includes accessibility, broader skills, lifecycle/
 rollback, themes, optional event/native platform acceptance and the gated Windows

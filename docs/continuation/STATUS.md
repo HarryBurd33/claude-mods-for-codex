@@ -1,11 +1,19 @@
 # Current status — 2026-10-23
 
-**Full93-capability product incomplete. Source0.2.0-dev.7; installed0.2.0-dev.6.**
-High resumed from23888dd for Windows private-storage security. That scoped
-milestone is implemented and OS-tested. After safe publication/readback, next
-human setting is **GPT-6.1 Sol, Medium** for routine existing-feature verification,
-review/package/documentation and concrete native acceptance preparation. Do not
-remove Windows security gates on Medium; a new writer/Git adapter needs High again.
+**Full93-capability product incomplete. Source0.2.0-dev.8; installed0.2.0-dev.6.**
+Human resumed GPT-6.1 Sol Medium from verified0c3413b. Source dev8 adds matching/
+nonmatching offline fixtures and a review sequence to disabled declarative mod
+scaffolds. It does not install or enable them. The current selected-chat skills
+were applied to disposable synthetic data without an additional model evaluator.
+Local full suite170pass/0fail/20Windows-only skips190total; focused author/package
+7pass. Source8 CI pending. See[authoring](../authoring.md) and
+[skill workflows](../skill-workflows.md). Installed dev6 remains unchanged.
+
+Human confirmed the installed preview's source → Tab → Render → Enter path;
+permitted MCP Apps inspection confirmed3nodes/2edges and complete tables. Resize
+question is pending. This is partial keyboard acceptance, not full accessibility.
+[Native acceptance](../native-acceptance.md) gives remaining concrete checks.
+No work on gated Windows paths occurred; High is required before those next steps.
 
 ## Source Windows security milestone
 
@@ -48,7 +56,7 @@ explorer, synthetic working/selected-commit patches and passive export counters
 were observed in prior dev6 phase. Reviewed authored print rewrite/control/deny
 passed. Supported unchanged remove/reinstall restored125exact files/three trusted
 hooks/zero errors and fresh-session absence during removal. Already-loaded unload,
-UI disable/older-version rollback remain unverified. Source7 is not installed.
+UI disable/older-version rollback remain unverified. Neither source7 nor8 is installed.
 
 No installation/config/trust changes this High stage. Same selected private project,
 data/settings/scope/retention/patches/commits/export. Actual installed activity

@@ -7,13 +7,14 @@ does not establish matching hook scope. Do not automatically broaden logging to
 make counts increase. A synthetic matching replay verified the native Watch
 separately; empty retained counts do not prove the producer is connected/healthy.
 
-Current dev6 is installed/human-trusted, awaiting desktop restart; project/data/
-settings/scope/retention unchanged, optional observers off. Earlier dev4 was verified after restart: five owned
-views, synthetic patches/selected Replay, scoped activity chart and selected-export
-usage display. A normal sandbox rejected an exact rewritten marker write outside
-the workspace; no file/elevated retry. Source0.2.0-dev.5 adds
-[local preview](local-preview.md) and [optional lifecycle observation](lifecycle-observation.md),
-now included in installed dev6, with native acceptance pending restart. The default three hooks/logging remain unchanged.
+Installed dev6 is human-trusted and was verified after desktop restart: all six
+owned views, including Local preview, synthetic patches/selected Replay, scoped
+activity and selected-export usage. The authored harmless print replacement,
+control and deny passed. A normal sandbox rejected an earlier rewritten marker
+write outside the workspace; no file/elevated retry. Source dev8 adds generated
+authoring replay fixtures but is not installed. Project/data/settings/scope and
+retention remain unchanged; optional lifecycle observers are off/unregistered.
+Default hooks and logging are unchanged. See the dated continuation records.
 
 ## Read-only commands
 
@@ -42,7 +43,9 @@ also describes the separate explicit POSIX one-file restore CLI, private plan
 contents, normal permissions, conflict checks and interruption/recovery limits.
 The panel/inspection commands never invoke this mutation. No mutating MCP tool.
 
-The `scope` command checks only the two supplied directories. It returns containment
+The `scope` command checks only the two supplied directory strings. POSIX checks
+canonical containment; Windows requires an exact explicitly selected root string
+without filesystem probing, descendant capture or case folding. It returns a match
 and a path-free explanation, makes no writes and does not attest installation,
 trust or current producer health. Use the native session directory, not a proposed
 tool workdir. Start a CLI session with `codex -C /absolute/selected/project` or open
@@ -126,20 +129,24 @@ prompts/models/permission fields or emit PermissionRequest approval.
 
 ## UI actions and limitations
 
-Installed dev4 has Activity, Project files, Changes, Replay and Access views; source dev5 adds Local preview.
-It uses local tools only, with escaped text. Watch is explicit, bounded to30s,
-and reads only the configured scope. Each observation request waits at most2s.
-Source0.2.0-dev.2 includes an SVG event-distribution chart with the same measured
-values in an accessible table, a native-HTML collapsible file tree and bounded
-literal diff lines. The tree reads no file contents. Diff signs carry meaning
-independently of colors; control/bidirectional characters are visible escapes.
-Diff display stops at64Ki characters or1,000 lines; listing display at500 paths/
-16 segments. These are display bounds in addition to backend limits.
-Cancellation, close and navigation must clean up pending work; tests exercise the
-bridge lifecycle with synthetic peers. Installed0.2.0-dev.4 chart/files/diff/Replay/usage rendering and view-button
-interactions were observed. Source dev5 Local preview, full keyboard/screen-reader
-behavior, resizing and close/reopen remain native acceptance work. No button approves a native tool call.
-No network resources are loaded.
+Installed dev6 has Activity, Project files, Changes, Replay, Access and usage,
+and Local preview. It uses local tools only, with escaped text. Watch is explicit,
+bounded to30s, and reads only the configured scope. Each observation request waits
+at most2s. The SVG event chart has measured values in a table; the native HTML
+collapsible tree reads filenames/status only. Diff signs carry meaning apart
+from color; controls/bidirectional characters use visible escapes. Display bounds
+are64Ki characters/1,000diff lines,500paths/16segments, in addition to backend
+limits. No network resources are loaded or pending tool approvals granted.
+
+Actual dev6 rendering/view controls/nested expansion and restricted local preview
+were observed after restart. A human in the Medium continuation confirmed Tab from
+Preview source reached Render locally and Enter rendered the diagram; permitted
+MCP Apps inspection confirmed the resulting3nodes/2edges and complete tables.
+This establishes that one keyboard path, not full focus/screen-reader/lifecycle
+accessibility. Resize, close/reopen and close-pending remain separate acceptance
+checks until recorded. Synthetic bridge cancellation/teardown tests remain distinct
+from actual host lifecycle behavior. No button approves a native tool call.
+
 Token/context/cache/billing information is unavailable from the hook feed.
 Optionally, reviewed settings may select `usageExport` outside the project for
 reported counters from one private exec JSONL export. It is not current context

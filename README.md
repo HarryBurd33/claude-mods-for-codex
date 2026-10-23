@@ -1,7 +1,8 @@
 # Claude Mods for Codex
 
-**Development source `0.2.0-dev.7`: the full requested product is incomplete.**
-Source dev7 adds handle-checked private Windows NTFS journal/state and explicit
+**Development source `0.2.0-dev.8`: the full requested product is incomplete.**
+Source dev8 adds matching/nonmatching offline fixtures to each generated mod and
+keeps its configuration disabled. The reviewed dev7 foundation provides handle-checked private Windows NTFS journal/state and explicit
 selected-usage reads, with bounded optional hook telemetry and cancellation.
 Windows dashboard settings, project/Git views and restore explicitly refuse before
 project traversal until their separate security/host gates pass. See
@@ -28,7 +29,7 @@ approximation, not full Mermaid or native transcript restyling. Optional
 [observation-only lifecycle events](docs/lifecycle-observation.md) remain source-
 tested, unregistered and native-unverified. Default hook registration/logging
 is unchanged. Local callbacks make no additional model calls; skill/chat use
-consumes usage. Current source local suite169pass/20Windows-only skips (189total); CI and native
+consumes usage. Current source local suite170pass/20Windows-only skips (190total); CI and native
 platform evidence are separate.
 
 Replay compares only explicit selected Git commits, which may include human edits
@@ -47,8 +48,10 @@ selected-export APIs have dedicated NTFS CI. Native Codex installation/events,
 standard-user sandbox behavior and full Windows compatibility remain unverified. The
 [93-capability ledger](docs/continuation/REQUIREMENTS.md) records every gap and
 alternative. An original [theme example and supported setup/rollback guide](docs/themes.md) is
-provided without applying it or upgrading Codex. The management skill now reflects
-the reviewed exact-replacement contract. Continue through the [handoff](docs/continuation/HANDOFF.md).
+provided without applying it or upgrading Codex. The management skill reflects
+the reviewed exact-replacement contract; the source scaffolding skill now uses
+self-contained fixtures. A human confirmed the installed dev6 Preview source →
+Tab → Enter rendering path; broader accessibility remains incomplete. Continue through the [handoff](docs/continuation/HANDOFF.md).
 
 Claude Mods for Codex is an inspectable local hook framework with a plugin-owned dashboard, scoped metadata, read-only project tools, authoring/replay CLI and five focused skills. Its default hook examples are: a visible session notice, a deny-only lexical command guard, and an optional metadata activity journal. A fixture replay CLI lets you test the exact hook responses without installing the plugin or signing in.
 

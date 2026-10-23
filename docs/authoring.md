@@ -25,18 +25,31 @@ Use a verified package CLI and an explicitly selected new absolute output path:
 ```sh
 node bin/codex-mods.mjs scaffold --spec /absolute/reviewed-spec.json --output /absolute/new-mod
 node bin/codex-mods.mjs validate --config /absolute/new-mod/mods.json
-node bin/codex-mods.mjs replay --config /absolute/new-mod/mods.json --fixtures /absolute/package/fixtures
+node bin/codex-mods.mjs replay --config /absolute/new-mod/mods.json --fixtures /absolute/new-mod/fixtures
 ```
 
-Output contains mods.json (disabled), access.json and REVIEW.md. Existing output
+Source dev8 output contains mods.json (disabled), access.json, REVIEW.md and
+fixtures/matching.json plus fixtures/nonmatching.json. Installed dev6 output
+contains only the first three files; source changes do not update that cache.
+Existing output
 is refused; validation happens before writing. No generated executable, dynamic
 import, installation, Codex settings edit or trust decision occurs. Review the
 specification, access declaration and diff. The access declaration describes this
 known template; it does not sandbox arbitrary edited local code.
 
-Replay a synthetic matching and nonmatching fixture. Enable only a temporary
-reviewed config when testing its decision: disabled rules abstain. Replay never
-executes the command. Merge only approved entries into selected configuration,
+With the generated fixtures, disabled configuration must yield two empty
+responses. For the enabled check, copy mods.json to a separately selected private
+temporary file, set only the generated mod's enabled field to true, and replay the
+same fixture directory with that temporary --config. Preserve the disabled
+original. Matching must produce the selected notice/denial/exact replacement;
+nonmatching must stay empty. For notice mods, the control is a tool event; for
+command rules, it is a different command on the same Bash tool. The control is
+chosen to avoid a literal collision with the authored rule. These are synthetic
+host-shaped envelopes, not actual host events or a permission test.
+
+Never execute fixture commands. They contain the chosen match/from text as
+plaintext, so keep the output private if the specification is sensitive. Replay
+never executes the command. Merge only approved entries into selected configuration,
 preserving existing entries. Use supported marketplace installation/update and
 human trust review after code changes; do not edit the installed cache, invent
 hot reload or automatically trust generated output.
@@ -53,3 +66,11 @@ The corrected installed management skill was read/used in this chat; independent
 invocation/evaluation of every skill and unsupported authoring shapes remain
 unverified. This is framework configuration authoring, not arbitrary plugin/UI
 generation or an immediate slash-command callback.
+
+
+## Skill collection and current evidence
+
+See [skill workflows](skill-workflows.md) for triggers, access, model usage and
+observable acceptance checks. Reading/applying a skill in the current selected
+chat is distinct from an independent model evaluation or native slash callback.
+No extra model run or automatic installation is required to scaffold/test data.

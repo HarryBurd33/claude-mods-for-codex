@@ -1,5 +1,37 @@
 # Continuation verification log
 
+## Medium dev8 authoring/selected-chat skills — 2026-10-23
+
+Human resumed Medium from verified0c3413b. Its formerly pending docs CI40036283037
+was read: all7jobs success. New source0.2.0-dev.8 adds generated matching/control
+JSON fixtures and disabled/temporary-enabled review instructions. No Windows gated
+path or installed cache/config/trust/logging change. Source8 CI pending.
+
+- node --test test/scaffold.test.mjs:3pass, including real CLI scaffold/validate/
+  disabled+enabled replay for notice/deny/replacement and control collisions.
+  No marker file created; original disabled config unchanged. Initial new test
+  wrongly expected replacement disclosure in permissionDecisionReason; source
+  correctly uses systemMessage. Corrected test expectation, not wire behavior.
+- Focused scaffold/package7pass; npm test170pass/0fail/20Windows-only skips190total;
+  npm run validate3mods/default replay4fixtures pass. Existing Windows NTFS code/
+  gates unchanged. Portable Windows CI now includes this synthetic data/CLI test;
+  no native install/private-authoring-ACL claim from that check.
+- Installed dev6 skills read and applied in current selected chat. Verified absolute
+  installed CLI scaffolded disposable deny data. Disabled abstained; enabled copy
+  unexpectedly abstained because selected literal used hyphen vs underscore in
+  fixture. Minimal temporary literal correction denied match/control abstained;
+  original disabled bytes preserved. Access review no runtime writes/network/model
+  calls; only selected disposable authoring writes. Synthetic configuration mistake,
+  not a native/product bug. No independent model evaluator or extra API run.
+- Attempted skill-creator quick_validate.py could not start: system Python lacks
+  PyYAML. No dependency installation/tool repair. Ruby YAML.safe_load validated
+  name/description/frontmatter for all5skills. Static parsing is not behavior proof.
+- Actual installed mods.dashboard reconnected via permitted MCP Apps; activity4/
+  same revision. Opened Local preview. Human confirmed source→Tab→Render→Enter;
+  permitted inspection verified3nodes/2edges and complete tables. Screenshots stay
+  ignored/local. Native resize question pending; full accessibility/lifecycle not
+  inferred. No private app CUA, settings/theme change or new native model prompt.
+
 ## Current High Windows storage milestone — 2026-10-23
 
 This summary supersedes earlier pending candidate statements, retained below as

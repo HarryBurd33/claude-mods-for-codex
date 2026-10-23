@@ -39,8 +39,10 @@ Usage:
 Commands:
   validate  Check the local mod configuration without running a hook.
   replay    Replay saved JSON envelopes offline and print restricted responses.
-  scaffold  Generate disabled declarative mod configuration and access review.
-  scope     Check supplied native session/project containment without logging.
+  scaffold  Generate disabled declarative configuration, access review and
+            matching/nonmatching offline replay fixtures. Never executes them.
+  scope     Check supplied native session/project capture boundary without logging.
+            Windows requires the exact explicitly selected root string.
   impact    Explain fixed lexical signals in a stdin JSON command object;
             assessment only, never executes or approves the command.
   usage     Read only reported counters from an explicit private exec export.

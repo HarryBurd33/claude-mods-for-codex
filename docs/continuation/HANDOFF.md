@@ -1,3 +1,15 @@
+# Medium authoring work in progress — source0.2.0-dev.8
+
+Human selected Sol Medium from verified0c3413b. Generated disabled mods now include
+matching/control replay fixtures and precise review instructions; CLI regressions
+and local full suite passed170/0fail/20Windows-only skips. Source8 CI pending.
+Installed human-trusted dev6, logging scope/retention and all Windows gates unchanged.
+Human confirmed one native preview keyboard path; resize question pending. Current
+routine skill/authoring/docs/native-step work precedes the next verified handoff.
+Do not follow the historical next-Medium stop below as a new model switch.
+High is mandatory before implementing/enabling gated Windows paths. No extra
+model/API evaluation or subagent authorized. Updated final handoff follows CI.
+
 # Dev7 Windows storage checkpoint — next GPT-6.1 Sol, Medium
 
 2026-10-23. **Full product incomplete. Human-controlled stopping point after

@@ -3,6 +3,17 @@
 Decision date: 2026-10-23. Development design; outstanding proof gates are explicit.
 Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.
 
+## Current authoring extension — source0.2.0-dev.8
+
+Medium extends the existing declarative scaffold contract with two synthetic
+host-shaped JSON fixtures in a new output's fixtures/ directory. The original
+config stays disabled; review uses a separate temporary enabled copy. Controls
+avoid literal/exact collisions on the same tool (notice control is a tool event).
+Real CLI tests verify all three templates, disabled/temporary-enabled decisions,
+no command execution and original preservation. No executable code generation,
+installed-cache/config/trust/logging change or Windows gate removal. Fixture text
+contains the selected match/from plaintext; keep specification privacy scope.
+
 ## Current Windows security boundary — source0.2.0-dev.7
 
 Original fixed PowerShell5.1/.NETFramework/C# handle+NTFS ACL adapter now backs
@@ -49,7 +60,7 @@ loaded desktop unload/older-version rollback evidence. No extra model run.
 Earlier dev4 normal sandbox-negative rewrite and separate hold0.0.4 confirm/
 decline/cancel/30s timeout remain version-specific. Hold removed; no remaining tool
 namespace after restart. Human provenance/infrastructure fail-open limits remain.
-Current High work resolves the scoped storage boundary; actual native platform
+The completed High stage resolved the scoped storage boundary; actual native platform
 validation remains separate from CI. Native Windows project/restore enabling
 requires stronger review and a suitable host, never a routine Medium refusal removal.
 
@@ -219,8 +230,8 @@ uses supported installation/trust; it never automatically trusts generated code.
 
 Use compatibility-only `.codex-plugin/plugin.json` with no root `plugin.json`.
 The released 0.163/0.164 portable loader skips hooks; adding a compatibility
-overlay beside it does not fix discovery. Current0.2.0-dev.4 is installed/human-
-trusted and verified after desktop restart; earlier0.2.0-dev.1 has native execution/UI
+overlay beside it does not fix discovery. Installed0.2.0-dev.6 is human-
+trusted and verified after desktop restart; source0.2.0-dev.8 is not installed; earlier0.2.0-dev.1 has native execution/UI
 evidence on the recorded macOS host. Keep version-specific acceptance separate.
 Legacy MCP uses `.mcp.json`, relative `cwd: "."` and script arguments; it does
 not inject portable plugin variables. Pass a shared data location explicitly
@@ -298,8 +309,11 @@ retest; installation/trust must not be inherited silently from0.0.3.
 
 High-stage authoring contract: scaffoldMod accepts only three known declarative
 templates, validates before exclusive output creation, emits disabled config and
-a template access declaration. No generated code, install, settings mutation or
-trust. Skills are model-mediated and declare scope/usage/limits. Production
+a template access declaration. Source dev8 also emits matching/control JSON
+fixtures and a disabled/temporary-enabled review sequence. Controls avoid lexical/
+exact collisions; replay never executes their commands. Fixtures contain selected
+match/from text as plaintext, so share the specification review/privacy scope.
+No generated code, install, settings mutation or trust. Skills are model-mediated and declare scope/usage/limits. Production
 fixture setup remains separate from public defaults and requires actual host
 delivery after installation/trust; CLI inventory alone is insufficient.
 
