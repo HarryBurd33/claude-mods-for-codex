@@ -7,11 +7,12 @@
 @media(forced-colors:active){.diff-add,.diff-remove{background:Canvas}.diff-hunk{text-decoration:underline}svg rect{fill:CanvasText;opacity:1}}
 </style><main>
 <header><h1>Claude Mods</h1><p>Local project tools and scoped activity · plugin-owned view</p><p id="connection" role="status">Connecting…</p></header>
-<nav aria-label="Views"><button data-view="activity" aria-current="true">Activity</button><button data-view="files">Project files</button><button data-view="changes">Changes</button><button data-view="access">Access and usage</button></nav>
+<nav aria-label="Views"><button data-view="activity" aria-current="true">Activity</button><button data-view="files">Project files</button><button data-view="changes">Changes</button><button data-view="replay">Replay</button><button data-view="access">Access and usage</button></nav>
 <div class="row"><button id="refresh" disabled>Refresh view</button><label><input id="watch" type="checkbox" disabled> Watch activity for 30 seconds</label></div><p id="notice" aria-live="polite"></p>
 <section id="activity"><h2>Retained activity</h2><p>Counts cover observed retained events. Tool completion does not imply success. Empty counts do not establish that hooks are connected. Scope follows the native session directory, not a shell call's workdir.</p><div id="activity-result"></div></section>
 <section id="files" hidden><h2>Project files</h2><p>Only the configured project is read. Ignored paths, links and secret filenames are excluded.</p><div id="files-result"></div></section>
 <section id="changes" hidden><h2>Working-tree changes</h2><p>Git changes against HEAD can include concurrent human edits. This view is read-only; it does not attribute changes to a specific turn or restore files.</p><div id="changes-result"></div></section>
+<section id="replay" hidden><h2>Selected Git checkpoints</h2><p>Only the two commits selected in reviewed settings are compared. They may include human edits or multiple turns. Inspection never changes files, creates commits or restores edits.</p><div id="replay-result"></div></section>
 <section id="access" hidden><h2>Access and usage</h2><p>No network or additional model calls. Hooks and the local service run with local process permissions, distinct from the model tool sandbox.</p><p>Context occupancy, token counts, cache health and exact billing are unavailable from this hook feed. Missing data is not zero. There are no paid keepalive calls.</p><div id="access-result"></div></section>
 <footer><p class="muted">Development checkpoint. A dashboard button never approves a pending native tool call. Configure access through a reviewed runtime settings file; installation and changed-hook trust remain separate steps.</p></footer></main>
 <script>
@@ -23,7 +24,7 @@ function request(method,params){
     // Project inspection includes bounded metadata preflight and Git calls.
     // Its preflight has no strict total wall-time bound: a view timeout means
     // stop waiting here, and does not attest native cancellation of the read.
-    const timeoutMs=method==='tools/call'&&['mods.files','mods.changes','mods.dashboard'].includes(params?.name)?15000:5000;
+    const timeoutMs=method==='tools/call'&&['mods.files','mods.changes','mods.checkpoints','mods.dashboard'].includes(params?.name)?15000:5000;
     const id=nextId++,timer=setTimeout(()=>{pending.delete(id);reject(Error('Host request timed out'));},timeoutMs);
     pending.set(id,{resolve,reject,timer});send({id,method,params});
   });
@@ -81,7 +82,8 @@ function render(view,data){
     fileTree(root,data.files);
     if(data.omitted)text(root,'p',`${data.omitted} paths excluded by the project adapter.`);
     if(!data.files?.length)text(root,'p','No visible files.');
-  }else if(view==='changes'){
+  }else if(view==='changes'||view==='replay'){
+    if(view==='replay'){table(root,[['From commit',data.fromCommit??'Unavailable'],['To commit',data.toCommit??'Unavailable']]);if(data.attribution)text(root,'p',data.attribution);if(data.exclusions)text(root,'p',data.exclusions);}
     if(data.truncated)text(root,'p','Changes truncated at safety bounds.');
     for(const c of (data.files??[]).slice(0,500)){text(root,'h3',c.path??'Change');text(root,'p',c.status??'');if(c.diff)patch(root,c.diff);else text(root,'p',`Patch: ${c.diffStatus??'unavailable'}`);}
     if(!data.files?.length)text(root,'p','No visible changes or patch content unavailable.');
@@ -97,7 +99,7 @@ async function refresh(wait=false){
   const view=selected;$('#refresh').disabled=true;
   refreshTask=(async()=>{
     try{
-      const r=await request('tools/call',{name:({activity:'mods.activity',files:'mods.files',changes:'mods.changes',access:'mods.dashboard'})[view],arguments:view==='activity'&&wait&&revision?{sinceRevision:revision,waitMs:2000}:{}});
+      const r=await request('tools/call',{name:({activity:'mods.activity',files:'mods.files',changes:'mods.changes',replay:'mods.checkpoints',access:'mods.dashboard'})[view],arguments:view==='activity'&&wait&&revision?{sinceRevision:revision,waitMs:2000}:{}});
       if(!closed&&selected===view){render(view,r.structuredContent??{});$('#notice').textContent='Updated from local service.';}
     }catch{
       if(!closed){$('#notice').textContent='The local service is unavailable. Reopen the view or check reviewed configuration.';stopWatch();}
@@ -143,7 +145,7 @@ for(const b of document.querySelectorAll('nav button'))b.onclick=()=>{
 $('#refresh').onclick=()=>refresh();$('#watch').onchange=()=>{if($('#watch').checked&&selected==='activity')void watch();else stopWatch();};
 (async()=>{
   try{
-    const host=await request('ui/initialize',{protocolVersion:'2026-01-26',appInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.2'},appCapabilities:{}});
+    const host=await request('ui/initialize',{protocolVersion:'2026-01-26',appInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.3'},appCapabilities:{}});
     if(closed)return;
     for(const[k,v]of Object.entries(host.hostContext?.styles?.variables??{}))if(/^--[a-z0-9-]+$/i.test(k)&&typeof v==='string')document.documentElement.style.setProperty(k,v);
     hostReady=!!host.hostCapabilities?.serverTools;send({method:'ui/notifications/initialized',params:{}});

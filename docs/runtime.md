@@ -7,11 +7,11 @@ does not establish matching hook scope. Do not automatically broaden logging to
 make counts increase. A synthetic matching replay verified the native Watch
 separately; empty retained counts do not prove the producer is connected/healthy.
 
-Source0.2.0-dev.2 is an incomplete development checkpoint and is not installed.
+Source0.2.0-dev.3 is an incomplete development checkpoint and is not installed.
 The installed0.2.0-dev.1 production dashboard has native rendering/interaction
 evidence; a bounded authorized CLI run in its selected project added three real
 lifecycle/tool events visible through desktop Refresh. This resolves scope without
-broader logging. New source chart/tree/diff views still need reviewed host acceptance.
+broader logging. New chart/tree/diff/Replay views still need reviewed host acceptance.
 
 ## Read-only commands
 
@@ -22,6 +22,7 @@ node bin/codex-mods.mjs files --project /absolute/selected/project
 node bin/codex-mods.mjs changes --project /absolute/selected/project
 node bin/codex-mods.mjs changes --project /absolute/selected/project --include-diffs
 node bin/codex-mods.mjs scope --project /absolute/selected/project --session-cwd /absolute/native/session/directory
+node bin/codex-mods.mjs checkpoints --project /absolute/selected/project --from FULL_FROM_COMMIT --to FULL_TO_COMMIT
 ```
 
 These are immediate local CLI callbacks and make no model calls. They are not
@@ -29,6 +30,14 @@ native slash-command callbacks. Changes default to filenames/status only;
 `--include-diffs` explicitly requests patch content, which may contain secrets
 even when sensitive filenames are excluded. Keep that output private unless
 reviewed for publication. Nothing restores files or executes project commands.
+
+Source0.2.0-dev.3 adds selected-commit inspection to the CLI and owned Replay view.
+Add a reviewed `checkpoints` selection with full fromCommit/toCommit IDs to runtime
+settings; the narrow read-only `mods.checkpoints` tool accepts no arguments.
+Commit history is not automatically assistant-turn history. [Replay documentation](replay.md)
+also describes the separate explicit POSIX one-file restore CLI, private plan
+contents, normal permissions, conflict checks and interruption/recovery limits.
+The panel/inspection commands never invoke this mutation. No mutating MCP tool.
 
 The `scope` command checks only the two supplied directories. It returns containment
 and a path-free explanation, makes no writes and does not attest installation,

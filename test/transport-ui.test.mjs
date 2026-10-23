@@ -107,11 +107,11 @@ class Element {
 async function dashboard() {
   const html = await readFile(new URL('../ui/dashboard.html', import.meta.url), 'utf8'), script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
   const messages = [], listeners = new Map(), timers = new Map(), elements = new Map(); let nextTimer = 0, now = 0;
-  for (const id of ['connection', 'refresh', 'watch', 'notice', 'activity', 'files', 'changes', 'access', 'activity-result', 'files-result', 'changes-result', 'access-result']) { const element = new Element(); element.id = id; elements.set('#' + id, element); }
-  const buttons = ['activity', 'files', 'changes', 'access'].map(view => { const element = new Element('button'); element.dataset.view = view; return element; });
+  for (const id of ['connection', 'refresh', 'watch', 'notice', 'activity', 'files', 'changes', 'replay', 'access', 'activity-result', 'files-result', 'changes-result', 'replay-result', 'access-result']) { const element = new Element(); element.id = id; elements.set('#' + id, element); }
+  const buttons = ['activity', 'files', 'changes', 'replay', 'access'].map(view => { const element = new Element('button'); element.dataset.view = view; return element; });
   const parent = { postMessage: message => messages.push(message) };
   runInNewContext(script, {
-    parent, document: { querySelector: selector => elements.get(selector), querySelectorAll: selector => selector === 'nav button' ? buttons : ['activity', 'files', 'changes', 'access'].map(id => elements.get('#' + id)), createElement: tag => new Element(tag), createElementNS: (_namespace, tag) => new Element(tag), documentElement: { style: { setProperty() {} } } },
+    parent, document: { querySelector: selector => elements.get(selector), querySelectorAll: selector => selector === 'nav button' ? buttons : ['activity', 'files', 'changes', 'replay', 'access'].map(id => elements.get('#' + id)), createElement: tag => new Element(tag), createElementNS: (_namespace, tag) => new Element(tag), documentElement: { style: { setProperty() {} } } },
     addEventListener: (name, callback) => listeners.set(name, callback), Date: { now: () => now },
     setTimeout: (callback, delay) => { const id = ++nextTimer; timers.set(id, { callback, delay }); return id; }, clearTimeout: id => timers.delete(id),
   }, { timeout: 1000 });
@@ -124,6 +124,15 @@ async function dashboard() {
 }
 const revision = 'a'.repeat(64);
 function descendants(node){return [node,...node.children.flatMap(descendants)];}
+test('replay requests only reviewed settings selection and displays explicit commit attribution (simulated DOM)',async()=>{
+  const p=await dashboard();p.reply(p.latestCall(),{revision,records:0});await tick();
+  p.buttons.find(b=>b.dataset.view==='replay').onclick();await tick();
+  assert.equal(p.latestCall().params.name,'mods.checkpoints');assert.deepEqual(Object.keys(p.latestCall().params.arguments),[]);
+  p.reply(p.latestCall(),{available:true,fromCommit:'a'.repeat(40),toCommit:'b'.repeat(40),attribution:'Selected commits may include human edits.',files:[{path:'fixture.txt',status:'M',diff:'+ fixture'}]});await tick();
+  const content=p.elements.get('#replay-result').textContent;assert.match(content,/human edits/);assert.match(content,/a{40}/);assert.match(content,/fixture.txt/);
+  assert.equal(p.messages.some(m=>m.method==='tools/call'&&/restore/.test(m.params.name)),false);
+  p.receive({id:100,method:'ui/resource-teardown'});
+});
 
 test('owned chart shows measured counts with an equivalent table and never fabricates missing values (simulated DOM)',async()=>{
   const p=await dashboard();p.reply(p.latestCall(),{revision,records:4,events:{SessionStart:1,PreToolUse:2,PostToolUse:1,invalid:-5,unknown:null}});await tick();
@@ -206,7 +215,7 @@ test('dashboard teardown settles sleeping watch and timed-out calls stop watchin
 });
 
 test('project reads get a longer view deadline while activity keeps its short wait (simulated DOM)', async () => {
-  for (const view of ['files', 'changes', 'access']) {
+  for (const view of ['files', 'changes', 'replay', 'access']) {
     const p = await dashboard();
     assert.deepEqual([...p.timers.values()].map(timer => timer.delay), [5000]);
     p.reply(p.latestCall(), { revision, records: 1 }); await tick();

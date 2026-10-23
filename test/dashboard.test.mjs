@@ -16,6 +16,8 @@ test('dashboard without reviewed settings exposes unavailable data, never guesse
  assert.equal(r.structuredContent.configured,false);assert.equal(r.structuredContent.activity.available,false);assert.equal(r.structuredContent.usage.available,false);
  await assert.rejects(call(h,'mods.files',{root:'/private/synthetic-secret'}));
  assert.equal((await call(h,'mods.changes')).structuredContent.available,false);
+ assert.equal((await call(h,'mods.checkpoints')).structuredContent.available,false);
+ await assert.rejects(call(h,'mods.checkpoints',{fromCommit:'a'.repeat(40),toCommit:'b'.repeat(40)}));
  const resource=await h({method:'resources/read',params:{uri:'ui://claude-mods/dashboard'}});
  assert.deepEqual(resource.contents[0]._meta.ui.csp,{connectDomains:[],resourceDomains:[]});
  assert.match(resource.contents[0].text,/Working-tree changes/);
@@ -40,6 +42,11 @@ test('runtime settings require explicit private file and reject links or unknown
  await writeFile(path,JSON.stringify({...value,projectRoot:dir}));await assert.rejects(loadRuntimeSettings(path),/outside/);await writeFile(path,JSON.stringify(value));
  await chmod(path,0o644);await assert.rejects(loadRuntimeSettings(path));await chmod(path,0o600);
  await writeFile(path,JSON.stringify({...value,execute:'anything'}));await assert.rejects(loadRuntimeSettings(path));
+  for(const checkpoints of [{fromCommit:'HEAD',toCommit:'b'.repeat(40)},{fromCommit:'a'.repeat(40),toCommit:'b'.repeat(40),path:'ignored'},{fromCommit:'a'.repeat(40)}]){
+    await writeFile(path,JSON.stringify({...value,checkpoints}));await assert.rejects(loadRuntimeSettings(path));
+  }
+  await writeFile(path,JSON.stringify({...value,checkpoints:{fromCommit:'a'.repeat(40),toCommit:'b'.repeat(40)}}));
+  assert.equal(Object.isFrozen((await loadRuntimeSettings(path)).checkpoints),true);
  const link=join(dir,'linked.json');await symlink(path,link);await assert.rejects(loadRuntimeSettings(link));
 });
 function peer(t,path){const child=spawn(process.execPath,[path],{stdio:['pipe','pipe','pipe']});const messages=[],waiters=[];let buffer='';

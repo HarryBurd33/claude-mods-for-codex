@@ -1,5 +1,47 @@
 # Continuation verification log
 
+## Selected checkpoint Replay and separate restore source — 2026-10-23
+
+Source0.2.0-dev.3, not installed. inspectCheckpointChanges accepts only two full
+lowercase SHA-1 local commit IDs, no arbitrary refs/revision syntax/fetch. Isolated
+Git config/helpers/network restrictions remain; historical sensitive/link/submodule
+paths omitted, per-file/output/process bounds apply. Working tree/index/HEAD remain
+unchanged. New no-argument mods.checkpoints uses only reviewed runtime settings;
+owned Replay displays source/commit attribution and never restores automatically.
+
+Separate src/restore.mjs and restore-plan/review/apply CLI implement a bounded
+POSIX one-existing-text-file workflow. Plan output is private0600 outside selected
+project and stores both versions/base64 plus canonical root; no project writes
+at preparation/review. Apply re-derives versions, requires exact reviewed plan ID
+(content identity, not human authentication), then fresh expected-content/mode/
+identity checks. Cooperative lock not stolen; writes in-place to retain existing
+metadata; both versions stay in plan. No mutating MCP tool/UI action. Add/delete,
+binary/invalid UTF-8, mode transitions, links/hardlinks/special bits and read-only
+files refused. No installed-host, interruption/disk-failure or extended ACL/xattr
+verification claimed. In-place write can be interrupted and is not an OS boundary
+against hostile same-user races; explicit recovery described in docs/replay.md.
+
+Tests cover before/after vs later edits; add/delete/binary inspection; bounds/refs/
+noncommit/missing objects/helpers; plans/explicit IDs/conflicts/unrelated edits/
+index/HEAD/inode/mode/owner; late link swap; competing calls/lock refusal; private
+file permissions/tampering; explicit reverse plan; unsupported restore cases.
+One initial permission assertion expected the post-open check but OS rejected
+open first; added an earlier owner-write-bit refusal and retained post-open check.
+Expanded concurrent tests exposed pre-existing cleanup test referencing undefined
+before only when another Git temp existed. Replaced global scan with an isolated
+worker TMPDIR and verified it is empty after output-overflow process cleanup.
+
+Latest full npm test: **144 passed,0 failed,2 Windows-only skips(146 total)**.
+Validation/replay passed; final scope test uses platform-neutral identifier checks.
+Windows CI adds Git/scope contracts and explicit restore ACL-refusal check; POSIX
+restore tests remain skipped there. Not native Windows compatibility evidence.
+Prior source3efe179 CI run40014702488 completed success; all5 jobs independently
+read back (Ubuntu/macOS Node22/24 full offline plus Windows portable lane):
+https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40014702488 .
+Current source requires its own upload/CI acceptance. No additional model call,
+installed configuration/cache/trust change or logging scope expansion.
+
+
 ## Scoped native CLI acceptance and source0.2.0-dev.2 — 2026-10-23
 
 The human explicitly authorized one bounded additional native model run. Before

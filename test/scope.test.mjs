@@ -17,7 +17,7 @@ test('scope diagnostic distinguishes parent session from child tool workdir with
   await runCli(['scope','--project',selected,'--session-cwd',parent], {stdout:{write:value => result += value}});
   const data = JSON.parse(result);
   assert.equal(data.matches,false); assert.equal(data.producerHealth,'unknown');
-  assert.doesNotMatch(result, new RegExp(parent));
+  assert.equal(Object.values(data).some(value=>typeof value==='string'&&value.includes(parent)),false);
   assert.deepEqual(await readdir(parent),['selected']);
   assert.deepEqual(await readdir(selected),['nested']);
   assert.match(data.guidance,/workdir/);

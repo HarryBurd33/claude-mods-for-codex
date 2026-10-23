@@ -77,11 +77,28 @@ into a selected child, expand logging automatically or scan private session stor
 A matching selected-project CLI run established native three-event capture;
 producer health still remains unknown from retained counts alone.
 
-A later read-only changes lane must be separate and explicitly opted in because
+The read-only changes lane is separate and patches explicitly opted in because
 patches may contain secrets. Prefer user-selected Git checkpoints or exported
 structured events. Never discover private chat/session files. Label provenance:
 Git changes can include concurrent human edits; tool attempts can fail or be
-denied. Restore is a separate reviewed write with a fresh diff and conflict check.
+denied. Source0.2.0-dev.3 selected-checkpoint comparison accepts two full SHA-1
+commit IDs only. Historical symlinks/submodules and sensitive paths are excluded;
+content opt-in remains separate. It is not automatic assistant-turn attribution.
+
+Restoration is a separate CLI, never an MCP writer/panel action. Plan creation
+stores both bounded file versions in private outside-project0600 storage; the
+local summary exposes canonical target root/path for meaningful review. Base64
+is not encryption. Re-derive versions from selected local Git objects on review/
+apply; reject arbitrary content/path/unknown fields. Exact plan ID is content
+identity, not authenticated human consent or permission approval. Require explicit
+restore intent and ordinary host tool permissions. Current support is one regular
+UTF-8 text file present with unchanged executable mode at both endpoints; no
+add/delete/binary/force/mode changes. Fresh expected-content/identity checks and a
+cooperative lock reject ordinary conflicts. In-place writes preserve inode/mode/
+ownership/extended metadata; they are not interruption-atomic or an OS boundary
+against hostile same-user races. Both versions remain for explicit recovery;
+ordinary write failure attempts rollback, crash/disk failure needs acceptance.
+Windows refuses pending private-plan ACL validation. See docs/replay.md.
 
 ## Local service and UI
 

@@ -1,5 +1,6 @@
 import { scaffoldMod } from "./scaffold.mjs";
 import { checkMetadataScope } from "./scope.mjs";
+import { prepareRestorePlan,reviewRestorePlan,applyRestorePlan } from "./restore.mjs";
 import { readdir } from "node:fs/promises";
 import { basename, dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -7,7 +8,7 @@ import { loadConfig } from "./config.mjs";
 import { dispatch } from "./dispatcher.mjs";
 import { MAX_STDIN_BYTES } from "./constants.mjs";
 import { parseJsonObject, readBoundedFile, readBoundedStream } from "./io.mjs";
-import { listProjectFiles, inspectProjectChanges } from "./workspace.mjs";
+import { listProjectFiles, inspectProjectChanges, inspectCheckpointChanges } from "./workspace.mjs";
 import { readJournalEntries, summarizeJournal } from "./journal.mjs";
 
 const PLUGIN_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -24,6 +25,10 @@ Usage:
   codex-mods scope --project PATH --session-cwd PATH
   codex-mods files --project PATH
   codex-mods changes --project PATH [--include-diffs]
+  codex-mods checkpoints --project PATH --from COMMIT --to COMMIT [--path FILE] [--include-diffs]
+  codex-mods restore-plan --project PATH --from COMMIT --to COMMIT --path FILE --output PRIVATE_NEW_FILE
+  codex-mods restore-review --plan PRIVATE_FILE
+  codex-mods restore-apply --plan PRIVATE_FILE --confirm-plan SHA256
   codex-mods report --data-dir PATH
   codex-mods help
 
@@ -35,6 +40,13 @@ Commands:
   files     List bounded non-secret project filenames and Git status, read-only.
   changes   Inspect Git working-tree changes against HEAD, read-only.
             Patch text requires --include-diffs and may contain sensitive data.
+  checkpoints  Compare two explicitly selected full commit IDs, read-only.
+               This does not attribute commits to an assistant turn or restore.
+  restore-plan  Save both versions of one existing text file for explicit review.
+                Selected project is unchanged; output must be private/outside it.
+  restore-review  Recheck a private plan against its selected Git checkpoints.
+  restore-apply  Explicit mutation: restore only the reviewed file after a fresh
+                conflict check. Never call automatically from inspection.
   report    Summarize the opt-in metadata journal. Raw records are not printed.
 
 The default config is config/mods.json in this plugin. Journaling is disabled by
@@ -123,6 +135,25 @@ export async function runCli(argv, streams = process) {
     if (options.project === undefined) throw new Error(`${command} requires --project PATH`);
     const result = command === "files" ? await listProjectFiles(options.project) : await inspectProjectChanges(options.project, {includeDiffs: options.include_diffs === true});
     streams.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
+    return;
+  }
+  if (command === "checkpoints") {
+    const options = parseOptions(args,new Set(["--project","--from","--to","--path","--include-diffs"]));
+    if(!options.project||!options.from||!options.to)throw new Error("checkpoints requires --project, --from and --to");
+    streams.stdout.write(`${JSON.stringify(await inspectCheckpointChanges(options.project,{fromCommit:options.from,toCommit:options.to,...(options.path!==undefined?{path:options.path}:{}),includeDiffs:options.include_diffs===true}),null,2)}\n`);
+    return;
+  }
+  if (command === "restore-plan") {
+    const options=parseOptions(args,new Set(["--project","--from","--to","--path","--output"]));
+    if(!options.project||!options.from||!options.to||!options.path||!options.output)throw new Error("restore-plan requires --project, --from, --to, --path and --output");
+    streams.stdout.write(`${JSON.stringify(await prepareRestorePlan(options.project,{fromCommit:options.from,toCommit:options.to,path:options.path},options.output),null,2)}\n`);
+    return;
+  }
+  if (command === "restore-review" || command === "restore-apply") {
+    const options=parseOptions(args,new Set(["--plan",...(command==="restore-apply"?["--confirm-plan"]:[])]));
+    if(!options.plan||(command==="restore-apply"&&!options.confirm_plan))throw new Error("restore requires --plan and apply requires --confirm-plan");
+    const result=command==="restore-review"?await reviewRestorePlan(options.plan):await applyRestorePlan(options.plan,options.confirm_plan);
+    streams.stdout.write(`${JSON.stringify(result,null,2)}\n`);
     return;
   }
   if (command === "report") {

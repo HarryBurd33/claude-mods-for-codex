@@ -31,7 +31,7 @@ boundary or permission changed. Additional-model-run authorization is consumed.
 
 ## New source, not installed
 
-Source **0.2.0-dev.2** extracts the same canonical containment contract into
+Source **0.2.0-dev.3** extracts the same canonical containment contract into
 src/scope.mjs and adds an immediate scope CLI diagnostic. It checks supplied
 directories only, neither discovers sessions nor logs identifiers. Activity
 reports producer health unknown; retained records are not a heartbeat.
@@ -41,16 +41,29 @@ collapsible file tree with Git status/size, and literal colored diff lines with
 control-character visibility and display limits. Source changes are not in the
 installed snapshot; they have simulated DOM evidence, not native acceptance.
 
-Full local suite: **134 passed,0 failed,1 Windows-only skip (135 total)**.
+Full local suite: **144 passed,0 failed,2 Windows-only skips (146 total)**.
 Validation and fixture replay pass. Four original authoring/debug/review/verification
 skills and disabled declarative scaffolding remain usable source. Installed skills
 are visible; full invocation/authoring flow still needs acceptance. No dependencies
 added; MIT/disclaimer intact.
 
+Source0.2.0-dev.3 additionally compares two explicitly selected full Git commit
+IDs through read-only CLI/MCP/Replay. It excludes sensitive names and historical
+symlinks/submodules, bounds processes/content and leaves later working edits,
+index and HEAD unchanged. This is selected-commit provenance, not automatic
+assistant-turn attribution. The separate POSIX restore CLI prepares a private
+outside-project plan, reviews exact target/content/compatibility and applies one
+existing text file only after an explicit command/exact plan ID/fresh conflict check.
+It preserves unselected work and inode/permissions; no mutating MCP/panel action.
+Add/delete/binary/mode-transition restoration is unsupported. Interrupted in-place
+writes may require explicit recovery from the private plan; Windows refuses until
+ACL support. No native installed-host restoration or crash/disk-failure claim.
+See docs/replay.md. All5 CI jobs passed for prior source3efe179; current source
+CI awaits its own upload/result.
+
 ## Remaining scoped work
 
-All93 requirements remain in REQUIREMENTS.md. Main gaps: selected checkpoint replay
-and separate explicit restore; blast-radius impact explanations/decision alternative;
+All93 requirements remain in REQUIREMENTS.md. Main gaps: broader/native replay/restore acceptance; blast-radius impact explanations/decision alternative;
 rich code/Mermaid; passive sourced usage/cache; supported theme workflow; complete
 authoring/install/update/disable/removal/restoration; native permissions and UI
 accessibility; Windows ACL adapter and real Windows/Linux/WSL validation. Native

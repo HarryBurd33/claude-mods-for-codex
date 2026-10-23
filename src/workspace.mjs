@@ -1,4 +1,5 @@
 import { spawn } from "node:child_process";
+import { isUtf8 } from "node:buffer";
 import { constants as fsConstants } from "node:fs";
 import { lstat, mkdir, mkdtemp, open, opendir, realpath, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
@@ -278,4 +279,80 @@ export async function inspectProjectChanges(absoluteRoot, input) {
     }
     return { available: true, ...provenance, baseline: context.head ? "HEAD" : "empty-repository", files, truncated, includesDiffs: options.includeDiffs === true };
   }); } catch (error) { return { ...unavailable(error), ...provenance, files: [] }; }
+}
+
+// A selected pair is explicit provenance, not automatic attribution to a turn.
+// Accept object IDs only: never resolve user-controlled refs, revision syntax,
+// external repositories, session files or object-store replacements.
+export async function inspectCheckpointChanges(absoluteRoot, input) {
+  const options = plainOptions(input, ['fromCommit','toCommit','path','includeDiffs','maxFiles','maxDiffBytes','maxFileBytes']);
+  for (const key of ['fromCommit','toCommit']) if (typeof options[key] !== 'string' || !/^[a-f0-9]{40}$/.test(options[key])) throw safeError('two full lowercase SHA-1 commit IDs are required');
+  if (options.includeDiffs !== undefined && typeof options.includeDiffs !== 'boolean') throw safeError('includeDiffs must be boolean');
+  if(options.path!==undefined&&!permitted(options.path))throw safeError('unsupported selected file path');
+  const maxFiles=bounded(options.maxFiles,LIMITS.files,LIMITS.files,'file');
+  const maxDiffBytes=bounded(options.maxDiffBytes,LIMITS.diffBytes,LIMITS.diffBytes,'diff byte');
+  const maxFileBytes=bounded(options.maxFileBytes,LIMITS.fileBytes,LIMITS.fileBytes,'file byte');
+  const root=await selectedRoot(absoluteRoot);
+  const provenance={readOnly:true,source:'git-selected-checkpoints',fromCommit:options.fromCommit,toCommit:options.toCommit,
+    attribution:'Explicit selected commits; may include human edits or multiple turns. Working tree and index are not changed.',
+    exclusions:'Sensitive/unsupported filenames, historical symlinks and submodules are omitted. Commit contents may include files ignored in the current working tree; patch content requires explicit opt-in.'};
+  try { return await inProject(root,async context=>{
+    for(const id of [options.fromCommit,options.toCommit]){
+      if((await git(context,['cat-file','-t',id],1024)).toString('utf8').trim()!=='commit') throw safeError('selected object is not a commit');
+    }
+    const records=(await git(context,['diff','--raw','-z','--no-abbrev','--no-renames','--no-ext-diff','--no-textconv',options.fromCommit,options.toCommit,'--',options.path??'.'])).toString('utf8').split('\0');
+    const files=[];let omitted=0,truncated=false,remaining=maxDiffBytes;
+    for(let index=0;index<records.length-1;index+=2){
+      const header=/^:(\d{6}) (\d{6}) ([a-f0-9]{40}) ([a-f0-9]{40}) ([ADMT])$/.exec(records[index]);
+      if(!header)throw safeError('unsupported checkpoint diff record');
+      const [,beforeMode,afterMode,beforeId,afterId,status]=header,path=records[index+1];
+      if(!permitted(path)||![beforeMode,afterMode].every(m=>['000000','100644','100755'].includes(m))){omitted++;continue;}
+      if(files.length>=maxFiles){truncated=true;break;}
+      const item={path,status,diffStatus:'not-requested'};files.push(item);
+      if(!options.includeDiffs)continue;
+      if(remaining<128){item.diffStatus='truncated';truncated=true;continue;}
+      try{
+        let large=false;
+        for(const [mode,id]of [[beforeMode,beforeId],[afterMode,afterId]]){
+          if(mode==='000000')continue;
+          const size=(await git(context,['cat-file','-s',id],1024)).toString('utf8').trim();
+          if(!/^\d+$/.test(size))throw safeError('invalid checkpoint object size');
+          if(Number(size)>maxFileBytes)large=true;
+        }
+        if(large){item.diffStatus='large';continue;}
+        const diff=await git(context,['diff','--no-ext-diff','--no-textconv','--no-color','--no-renames','--unified=3',options.fromCommit,options.toCommit,'--',path],remaining);
+        const content=diff.toString('utf8').replace(UNSAFE_TEXT,'�'),size=Buffer.byteLength(content);
+        if(size>remaining){item.diffStatus='truncated';truncated=true;continue;}
+        remaining-=size;
+        if(/^(?:Binary files |GIT binary patch)/m.test(content)||diff.includes(0))item.diffStatus='binary';
+        else{item.diffStatus='text';item.diff=content;}
+      }catch(error){item.diffStatus=/limit|deadline/.test(error.message)?'truncated':'unavailable';truncated||=item.diffStatus==='truncated';}
+    }
+    return{available:true,...provenance,files,omitted,truncated,includesDiffs:options.includeDiffs===true};
+  }); }catch(error){return{...unavailable(error),...provenance,files:[]};}
+}
+
+// Internal preparation contract for the separate, explicitly invoked restore
+// workflow. Bytes must stay in memory/private review plans, never activity data.
+export async function readCheckpointPair(absoluteRoot, input) {
+  const options=plainOptions(input,['fromCommit','toCommit','path']);
+  if(!permitted(options.path))throw safeError('unsupported selected file path');
+  for(const key of ['fromCommit','toCommit'])if(typeof options[key]!=='string'||!/^[a-f0-9]{40}$/.test(options[key]))throw safeError('two full lowercase SHA-1 commit IDs are required');
+  const root=await selectedRoot(absoluteRoot);
+  return inProject(root,async context=>{
+    const versions=[];
+    for(const id of [options.fromCommit,options.toCommit]){
+      if((await git(context,['cat-file','-t',id],1024)).toString('utf8').trim()!=='commit')throw safeError('selected object is not a commit');
+      const record=(await git(context,['ls-tree','-z',id,'--',options.path],4096)).toString('utf8');
+      const entry=/^(100644|100755) blob ([a-f0-9]{40})\t([^\0]+)\0$/.exec(record);
+      if(!entry||entry[3]!==options.path)throw safeError('restore requires a regular file present in both checkpoints');
+      const size=Number((await git(context,['cat-file','-s',entry[2]],1024)).toString('utf8').trim());
+      if(!Number.isSafeInteger(size)||size<0||size>LIMITS.fileBytes)throw safeError('selected checkpoint file exceeds the restore bound');
+      const bytes=await git(context,['cat-file','blob',entry[2]],LIMITS.fileBytes);
+      if(bytes.includes(0)||!isUtf8(bytes))throw safeError('binary restore is not supported');
+      versions.push({mode:entry[1],bytes});
+    }
+    if(versions[0].mode!==versions[1].mode)throw safeError('restore does not change executable mode');
+    return{root,path:options.path,before:versions[0],after:versions[1]};
+  });
 }

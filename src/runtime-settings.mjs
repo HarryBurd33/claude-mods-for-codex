@@ -18,7 +18,7 @@ export async function loadRuntimeSettings(path) {
   }
   if (process.platform === 'win32') throw new Error('Private runtime settings need Windows ACL validation');
   const value = parseJsonObject(await readBoundedFile(file, 16384), 'settings');
-  if (Object.keys(value).some(key => !['version','projectRoot','dataDirectory','stateScope','sessionId','allowChanges'].includes(key)) || value.version !== 1) throw new Error('Unsupported settings');
+  if (Object.keys(value).some(key => !['version','projectRoot','dataDirectory','stateScope','sessionId','allowChanges','checkpoints'].includes(key)) || value.version !== 1) throw new Error('Unsupported settings');
   for (const key of ['projectRoot','dataDirectory']) {
     if (typeof value[key] !== 'string' || !isAbsolute(value[key]) || value[key].length > 4096 || /\p{Cc}/u.test(value[key])) throw new Error('Settings paths must be absolute and bounded');
   }
@@ -31,5 +31,10 @@ export async function loadRuntimeSettings(path) {
   if (!['session','project'].includes(value.stateScope ?? 'session')) throw new Error('Unsupported state scope');
   if (value.sessionId !== undefined && (typeof value.sessionId !== 'string' || !value.sessionId || value.sessionId.length > 4096 || /\p{Cc}/u.test(value.sessionId))) throw new Error('Invalid session scope');
   if (value.allowChanges !== undefined && typeof value.allowChanges !== 'boolean') throw new Error('Invalid changes opt-in');
+  if(value.checkpoints!==undefined){
+    const selected=value.checkpoints;
+    if(!selected||typeof selected!=='object'||Array.isArray(selected)||Object.keys(selected).sort().join()!=='fromCommit,toCommit'||![selected.fromCommit,selected.toCommit].every(id=>typeof id==='string'&&/^[a-f0-9]{40}$/.test(id)))throw new Error('Select exactly two full lowercase commit IDs');
+    Object.freeze(selected);
+  }
   return Object.freeze({ ...value, projectRoot, dataDirectory: resolve(value.dataDirectory), stateScope: value.stateScope ?? 'session', allowChanges: value.allowChanges === true });
 }

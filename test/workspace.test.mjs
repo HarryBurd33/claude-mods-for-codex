@@ -223,13 +223,21 @@ test("non-Git directories and gitdir files are explicit unavailable states", asy
 test("diff output overflow kills the bounded subprocess and removes temporary metadata", async (t) => {
   const root = await fixture(t);
   await writeFile(join(root, "hello.txt"), "synthetic repeated line\n".repeat(1000));
-  const result = await inspectProjectChanges(root, { includeDiffs: true, maxDiffBytes: 128 });
+  // Isolate this worker's temporary metadata instead of scanning directories
+  // concurrently owned by other test processes. The old global scan also had
+  // an undefined baseline that was evaluated only when another worker existed.
+  const temporary = await mkdtemp(join(await realpath(tmpdir()), "mods-overflow-context-"));
+  t.after(() => rm(temporary, { recursive:true, force:true }));
+  const worker = spawnSync(process.execPath, ["--input-type=module", "-e",
+    `import { inspectProjectChanges } from ${JSON.stringify(new URL('../src/workspace.mjs',import.meta.url).href)}; console.log(JSON.stringify(await inspectProjectChanges(${JSON.stringify(root)}, { includeDiffs:true, maxDiffBytes:128 })));`],
+    { encoding:"utf8", timeout:5000, env:{...process.env,TMPDIR:temporary,TMP:temporary,TEMP:temporary} });
+  assert.equal(worker.status,0,worker.stderr||worker.error?.message);
+  const result = JSON.parse(worker.stdout);
   assert.equal(result.available, true);
   assert.equal(result.truncated, true);
   assert.equal(result.files[0].diffStatus, "truncated");
   assert.equal(Object.hasOwn(result.files[0], "diff"), false);
-  const left = (await readdir(tmpdir())).filter((name) => name.startsWith("codex-mods-git-view-") && !before.has(name));
-  assert.deepEqual(left, []);
+  assert.deepEqual(await readdir(temporary), []);
 });
 
 test("a tracked submodule is omitted without traversing its repository or invoking helpers", { skip: process.platform === "win32" }, async (t) => {

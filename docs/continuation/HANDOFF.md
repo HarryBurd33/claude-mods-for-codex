@@ -14,7 +14,7 @@ upload it. Historical handoffs remain in Git history; this current record wins.
 Repository: [HarryBurd33/claude-mods-for-codex](https://github.com/HarryBurd33/claude-mods-for-codex).
 Branch: [codex/astra-groundwork](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
 Starting verified remote/local commit:
-[3c61ca4ca75ca81eb1584381f1edd0d7e9ee87bd](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3c61ca4ca75ca81eb1584381f1edd0d7e9ee87bd).
+[3efe179f8cc93584a4ef097a036d6f42d8f5f32d](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3efe179f8cc93584a4ef097a036d6f42d8f5f32d).
 The checkpoint after this record is reported independently after upload/readback,
 not guessed in advance. Stages: Astra Ultra groundwork; human switch to Sol Ultra
 contracts/security/integration; human switch to Sol High authoring/native/features.
@@ -24,7 +24,7 @@ Original local main6c59e98 and equivalent checkpoint branches preserved. Never
 merge private history into public branch or force-push. Terminal push lacks
 credentials: use connected GitHub tree/commit/ref upload, fetch/full-tree comparison
 and independent ls-remote. Root handoff/.local stay ignored, nested public handoff
-tracked. Current source0.2.0-dev.2 is NOT installed; versioned update/human trust
+tracked. Current source0.2.0-dev.3 is NOT installed; versioned update/human trust
 required after code changes. Never edit installed caches or silently reuse trust.
 
 ## Host and installation
@@ -67,13 +67,28 @@ Empty counts do not establish producer health.
   continues ordinary permissions; never elevated approval.
 - src/workspace.mjs: isolated bounded read-only Git, ordinary in-project .git,
   no helpers/user config/network, conservative file exclusions, opt-in patches.
-  Working tree vsHEAD is not previous-turn history. No restore implemented.
+  Working tree vsHEAD is not previous-turn history. New inspectCheckpointChanges
+  compares explicit full IDs; readCheckpointPair prepares only bounded regular
+  text versions for separate restore. No refs/revision syntax/fetch accepted.
+- src/restore.mjs: prepareRestorePlan(root,input,output), reviewRestorePlan(path),
+  applyRestorePlan(path,confirmPlan). Private outside-project plan stores both
+  versions; re-derived against selected commits. Exact plan ID is content identity,
+  not authenticated human consent. CLI only, no mutating MCP/panel action.
+  Fresh current-file/identity/mode conflict checks, cooperative lock, in-place write
+  to preserve metadata, explicit recovery data. Not interruption-atomic; no OS
+  boundary against hostile same-user races. Add/delete/binary/mode changes refused.
+- src/runtime-settings.mjs checkpoints selection; mods.checkpoints accepts no args;
+  ui Replay labels commits/attribution. docs/replay.md has limits/recovery.
+- test/checkpoints.test.mjs / test/restore.test.mjs: read-only comparisons, metadata/
+  unselected work preservation, conflicts/permissions/locks/links/tampering/undo.
+  Fixed pre-existing cleanup test's undefined baseline and cross-worker scan by
+  running its bounded operation under an isolated worker temporary directory.
 - src/scaffold.mjs / four original skills: disabled declarative config/access/
   review generation; no executable/hot reload/install/automatic trust.
 
 ## Observed checks
 
-npm test:134 passed,0 failed,1 Windows-only skip(135 total).
+npm test:144 passed,0 failed,2 Windows-only skips(146 total).
 npm run validate:3 mods valid; npm run replay:all four fixtures expected.
 Scope/dashboard/contracts/transport targeted regressions pass. Native evidence
 above is separate from changed-source/simulated DOM evidence. Keyboard/resize/
@@ -96,8 +111,11 @@ data cleanup; never overwrite whole current config from old backup.
 
 ## Next tasks and acceptance
 
-1. Selected-checkpoint read-only replay with explicit attribution; separate restore
-   plan/action with fresh diff/conflict check and preservation of unselected work.
+1. Review new replay/restore risky paths and verify installed-host workflow in a
+   disposable project after a reviewed update. Native interrupted/disk-error/ACL/
+   xattr behavior remains unverified; don't overstate in-place-write guarantees.
+   Add/delete/rename restoration remains unsupported with normal explicit host
+   operations as alternative. Broader turn capture needs explicit boundaries.
 2. Original conservative blast-radius explanation/deny-retry alternative. Hold stays
    unverified proof unless actual human response/provenance works; missing MCP hook
    can fail open, so never present as production enforcement.
@@ -123,7 +141,7 @@ Do not bypass with a subagent or continue in background.
 > docs/runtime.md and ignored root HANDOFF.md. Preserve work/private history.
 > Scope mismatch is resolved by matching the native session directory; never
 > broaden logging or use shell workdir for chat attribution. Installed0.2.0-dev.1
-> has native CLI/desktop evidence; source0.2.0-dev.2 is not installed. Continue all93
+> has native CLI/desktop evidence; source0.2.0-dev.3 is not installed. Continue all93
 > requirements/priorities, keep automated/replay/native claims separate, preserve
 > permissions/human trust, and do not reuse the consumed additional-run permission.
 > Save/verify uploads. Stop for a human switch to Medium once it is sufficient.

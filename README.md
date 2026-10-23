@@ -1,6 +1,6 @@
 # Claude Mods for Codex
 
-**Development source `0.2.0-dev.2`: the full requested product is incomplete.**
+**Development source `0.2.0-dev.3`: the full requested product is incomplete.**
 This branch corrects hook packaging and adds tested building blocks and separate
 native proofs. The dispatcher preserves the three v0.1 examples and adds opt-in exact command
 replacement and scoped metadata. The local dashboard and project views have
@@ -16,9 +16,11 @@ CLI0.163.0 read-only test in the selected project verified native SessionStart,
 PreToolUse and PostToolUse metadata reaching that panel. Hook scope follows the
 session directory, not a shell workdir. Negative sandbox approval checks,
 full accessibility, hold acceptance, remaining features and native Windows are
-still unverified. Source0.2.0-dev.2 adds a no-write scope diagnostic, bounded event
-chart, collapsible file tree and literal diff display; these new views are tested
-with simulated DOM and await a reviewed install/host check.
+still unverified. Source0.2.0-dev.3 adds scope diagnostics, bounded chart/tree/diff
+display, read-only selected-commit Replay, and a separate explicit POSIX one-file
+restore CLI. These are tested with disposable files and simulated DOM; the new
+views/restore workflow await reviewed installed-host acceptance. See
+[checkpoint replay and restore limits](docs/replay.md).
 Unit tests and source support are listed separately in the
 [test log](docs/continuation/TEST-LOG.md).
 

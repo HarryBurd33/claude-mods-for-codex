@@ -4,7 +4,7 @@ import { runMcpServer } from './mcp-stdio.mjs';
 import { loadRuntimeSettings } from './runtime-settings.mjs';
 import { readBoundedFile } from './io.mjs';
 import { readMetadataState, observeMetadataState } from './state.mjs';
-import { describeProject, listProjectFiles, inspectProjectChanges } from './workspace.mjs';
+import { describeProject, listProjectFiles, inspectProjectChanges, inspectCheckpointChanges } from './workspace.mjs';
 import { CAPTURE_NOTE } from './scope.mjs';
 
 const URI = 'ui://claude-mods/dashboard';
@@ -15,6 +15,7 @@ const tools = [
   { name:'mods.activity', title:'Read scoped activity', description:'Read retained metadata for the explicitly configured project/session. Optional bounded wait for a change.', inputSchema:{type:'object', properties:{sinceRevision:{type:'string',pattern:'^[a-f0-9]{64}$'},waitMs:{type:'integer',minimum:1,maximum:2000}},additionalProperties:false},annotations:readOnly },
   { name:'mods.files', title:'List selected project files', description:'Read a bounded Git-aware file listing, excluding ignored paths, links and secret filenames.', inputSchema:empty,annotations:readOnly },
   { name:'mods.changes', title:'Inspect selected project changes', description:'Read working-tree changes against HEAD. Patch content requires configuration opt-in; this is not exact per-turn attribution.',inputSchema:empty,annotations:readOnly },
+  { name:'mods.checkpoints', title:'Inspect selected checkpoints', description:'Compare only the two commits selected in reviewed runtime settings. Read-only; no automatic turn attribution or restoration.',inputSchema:empty,annotations:readOnly },
 ];
 function noArguments(value) { if (value !== undefined && (!value || Array.isArray(value) || typeof value !== 'object' || Object.keys(value).length)) throw new Error('Unexpected arguments'); }
 function scope(settings) {
@@ -40,7 +41,7 @@ export function createDashboardHandler(settings) {
   return async (request, {signal} = {}) => {
     const p = request.params ?? {};
     switch (request.method) {
-      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.2'}};
+      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.3'}};
       case 'ping': return {};
       case 'tools/list': return {tools};
       case 'resources/list': return {resources:[{uri:URI,name:'Claude Mods dashboard',mimeType:'text/html;profile=mcp-app'}]};
@@ -57,7 +58,8 @@ export function createDashboardHandler(settings) {
           if (p.name === 'mods.dashboard') data = {surface:'plugin-owned MCP App',configured:!!settings,project:settings ? await describeProject(settings.projectRoot) : unavailable('No project selected.'),activity:await activity({},signal),usage:unavailable('This native hook feed supplies no context, token or billing counters.'),access:{network:false,modelCalls:false,changesOptIn:settings?.allowChanges === true}};
           else if (!settings) data = unavailable('No project selected in reviewed runtime settings.');
           else if (p.name === 'mods.files') data = await listProjectFiles(settings.projectRoot,{});
-          else data = await inspectProjectChanges(settings.projectRoot,{includeDiffs:settings.allowChanges});
+          else if (p.name === 'mods.changes') data = await inspectProjectChanges(settings.projectRoot,{includeDiffs:settings.allowChanges});
+          else data = settings.checkpoints ? await inspectCheckpointChanges(settings.projectRoot,{...settings.checkpoints,includeDiffs:settings.allowChanges}) : unavailable('Select two full commit IDs in reviewed runtime settings. Replay does not create checkpoints, infer turns or restore files.');
         }
         return {content:[{type:'text',text:JSON.stringify(data)}],structuredContent:data};
       }
