@@ -26,8 +26,15 @@ Development branch: [codex/astra-groundwork](https://github.com/HarryBurd33/clau
 Safe base: `4f2c0be0e734cad5d4769c840c43e02e298cc053`.
 Original local main6c59e98 and its history remain intact; never push it wholesale,
 because it tracks private local handoff history. No force push or history loss.
-Verified source checkpoint and remote hash will be stamped after initial upload;
-final handoff-record commit is verified separately in the human switch message.
+Verified source checkpoint: [`8bf70aeebe5842be130395483daef9e832733ac7`](https://github.com/HarryBurd33/claude-mods-for-codex/commit/8bf70aeebe5842be130395483daef9e832733ac7).
+Local branch was aligned to that verified commit. Its tree
+`079fc8bd0973405318efd4ec2055ca22ba723f52` exactly matches the original local
+checkpoint `c13555083e0f6d5413263ab39bea58a77dd49f51`, preserved on
+`codex/astra-local-checkpoint`. Terminal push lacked credentials; the connected
+GitHub integration uploaded the reviewed tree with public main as parent.
+Fetch, full-tree comparison and ls-remote independently verified it. No force push.
+This handoff-record follow-up also fixes one CRLF-sensitive test; its final
+commit is verified separately in the human switch message and private handoff.
 
 ## Completed, partial and unverified
 
@@ -101,7 +108,11 @@ final handoff-record commit is verified separately in the human switch message.
 See TEST-LOG for exact outcomes and limitations. macOS14.6, Node24.22.0,
 CLI0.163.0; desktop26.1016.62342 build21477. CLI0.164 researched, not installed.
 
-- npm test; npm run validate; npm run replay: pass (latest count in TEST-LOG).
+- npm test:74 passed/one Windows-only skip; validation/replay pass.
+- Initial remote CI:all four Ubuntu/macOS Node22/24 full suites pass. Windows
+  portable lane9 pass/one failure due to LF-only skill-header test. CRLF fix
+  included in this follow-up; check its remote run before claiming Windows lane
+  passes. Native Windows Codex/storage support remains unverified.
 - npm pack --ignore-scripts --offline and clean space-path extraction: package
   boundary inspected; offline tests/validation/replay passed at recorded revision.
 - CLI marketplace add, plugin add, plugin remove then add: success for proof only.

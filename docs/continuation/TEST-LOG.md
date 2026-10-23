@@ -160,3 +160,25 @@ Final local follow-up: cancellation regression fixed; targeted state suite12 pas
 (75 total)**. Validation and replay passed again. Whitespace and public path/secret-pattern
 scan found no new private-path or credential-shaped payload. Remote verification
 is recorded after upload; no CI success is inferred from workflow presence.
+
+
+Checkpoint source uploaded as [8bf70ae](https://github.com/HarryBurd33/claude-mods-for-codex/commit/8bf70aeebe5842be130395483daef9e832733ac7).
+Terminal push could not authenticate; connected GitHub upload succeeded. Fetched
+remote tree079fc8bd0973405318efd4ec2055ca22ba723f52 matched local exactly; ls-remote
+confirmed branch commit. The equivalent original local commit is preserved on a
+separate local branch, with no private history pushed and no force update.
+
+[Initial CI run](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40008784397):
+all four Ubuntu/macOS Node22/24 full suites succeeded. Actual Windows runner
+portable tests:9 passed,1 failed because a skill-frontmatter assertion accepted
+LF only while checkout used CRLF. The assertion now accepts both valid line
+endings; targeted package tests4/4 pass locally. Follow-up remote result must be
+checked independently; this fix does not claim native Windows Codex support.
+
+Final source archive before this small test/docs follow-up:69 files,375552
+unpacked bytes. Public docs/continuation/HANDOFF included; private root HANDOFF,
+.local/.git/node_modules/links/traversal and portable root manifest excluded.
+Fresh space-path extraction passed74 tests plus1 Windows skip, validate/replay.
+The default npm cache was unwritable in the sandbox; a disposable cache resolved
+packaging without repairing/changing system tools. A future release must rebuild
+and verify its exact final archive.

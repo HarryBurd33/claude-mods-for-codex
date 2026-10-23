@@ -44,7 +44,7 @@ test("every packaged hook command quotes the plugin path and uses no network pro
 
 test("bundled skill has valid frontmatter", async () => {
   const skill = await readFile(join(root, "skills/manage-claude-mods/SKILL.md"), "utf8");
-  assert.match(skill, /^---\nname: manage-claude-mods\ndescription: .+\n---\n/);
+  assert.match(skill, /^---\r?\nname: manage-claude-mods\r?\ndescription: .+\r?\n---\r?\n/);
   assert.match(skill, /two directory levels above/);
   assert.doesNotMatch(skill, /node \.\/bin/);
 });

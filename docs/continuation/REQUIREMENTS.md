@@ -59,7 +59,7 @@ independently of these CLI release findings.
 | `Desk` | Installed com.openai.codex desktop / ChatGPT 26.1016.62342, build 21477, macOS 14.6. Its bundled runtime must be measured independently; the system CLI version is not its version. |
 | `NodeMac` | Node 24.22.0 on macOS 14.6; local libraries and synthetic/subprocess tests. No implication of native Codex delivery. |
 | `UIhost` | An official Codex host implementing the documented MCP Apps/OpenAI Extensions capabilities; intended target is `Desk`. Per-host capabilities/version must be observed, with plain-text fallback. |
-| `POSIX-CI` | Planned GitHub Actions Ubuntu/macOS, Node 22 and 24; workflow exists, remote run results still need recording. |
+| `POSIX-CI` | GitHub Actions Ubuntu/macOS, Node 22 and 24: all four initial full offline jobs passed. Windows portable lane had a CRLF test failure; follow-up fix awaits its remote result. Native host claims remain separate. |
 | `Win` | Native Windows Codex, exact client version and Windows build to be recorded; Windows 11 baseline recommended by official docs. No native Windows host was tested. |
 | `WSL` | Linux Codex in WSL2, distinct from native Windows; not tested here. |
 | `Claude` | Reference product only: documented CLI Mods 2.1.287+, desktop embedded 2.1.286+, VS Code drawing 2.1.299+ (2.1.304+ where flags were not fetched). No Claude runtime tested. Version gates differ by feature. |
