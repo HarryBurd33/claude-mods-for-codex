@@ -1,3 +1,17 @@
+# Current High Windows security work in progress
+
+User selected GPT-6.1 Sol, High and resumed23888dd. Source0.2.0-dev.7 candidate
+checkpoint is being published for real Windows CI; continue High, not a switch
+stop yet. Read ../windows-storage.md and current STATUS/ARCHITECTURE/TEST-LOG.
+Windows journal now fails before IO; new native candidate is not production-enabled.
+Observe actual Windows results, review handle/ACL/race/process boundaries, then
+integrate only validated scope. Do not hand unresolved security integration to
+Medium or claim Windows Codex compatibility. Installed dev6/trust/logging unchanged.
+No extra model run/optional observer registration is authorized. Preserve private
+root handoff/.local; source candidate tests and native logs sanitized.
+
+Earlier completed Medium checkpoint and resume instructions below are historical.
+
 # Dev6 native checkpoint — next GPT-6.1 Sol, High
 
 2026-10-23. **Full product incomplete. Human-controlled stopping point.**

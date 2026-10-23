@@ -3,6 +3,13 @@
 Decision date: 2026-10-23. Development design; outstanding proof gates are explicit.
 Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.
 
+Source0.2.0-dev.7 Windows candidate: fixed PowerShell5.1 process and original C#
+handle-based ACL/IO boundary, no execution-policy override/elevation/ACL repair.
+Pinned ancestors, protected current-user targets, fixed local NTFS only; read and
+write check/IO same process. No production routing until native proof/review.
+Legacy journal now explicitly refuses Windows too. Candidate design/primary APIs
+and remaining gates in ../windows-storage.md. High current, installed dev6 unchanged.
+
 Current dev6 contracts are unchanged. After human trust/restart, the actual
 owned panel verified restricted flowchart/JSON/plain-code, unsupported fallback,
 Clear and all six views; reviewed authored print rewrite passed. Optional observers

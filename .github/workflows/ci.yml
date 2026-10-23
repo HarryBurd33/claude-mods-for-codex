@@ -48,3 +48,19 @@ jobs:
         run: node --test test/rendering.test.mjs test/observers.test.mjs
       - run: npm run validate
       - run: npm run replay
+
+  windows-private-storage:
+    name: Native Windows NTFS ACL candidate (not Codex host acceptance)
+    runs-on: windows-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Real NTFS owner, DACL, link, read, journal and refusal tests
+        run: node --test test/windows-storage.test.mjs

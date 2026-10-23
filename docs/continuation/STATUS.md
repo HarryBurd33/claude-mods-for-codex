@@ -1,9 +1,14 @@
 # Current status — 2026-10-23
 
-**Full product incomplete. Current human setting: GPT-6.1 Sol, Medium.**
-The bounded dev6 native acceptance below passed. Next requested setting:
-**GPT-6.1 Sol, High**, for Windows private-storage/security design. Do not start
-stronger work until the human switches/continues. No subagents/background work.
+**Full product incomplete. Current human setting: GPT-6.1 Sol, High.**
+User resumed High from verified23888dd. Source0.2.0-dev.7 closes the legacy
+Windows journal mode-bit gap with explicit refusal and adds a separate handle/
+NTFS ACL candidate (private reads, directory creation, bounded journal operations).
+Candidate is not production-enabled. Real Windows Node22/24 CI is pending;
+macOS165pass/11Windows-only skips176total. No compatibility/ACL success claim yet.
+See ../windows-storage.md. Continue High through native proof/security integration;
+no additional model run, logging grant or trust change. Installed immutable dev6
+below remains unchanged. Earlier model-switch instructions are historical.
 
 ## Current installation and acceptance
 

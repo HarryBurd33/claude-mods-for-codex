@@ -1,5 +1,10 @@
 # Project status
 
+Current High source0.2.0-dev.7 adds a Windows ACL candidate and explicit legacy
+journal refusal; candidate not production-enabled, native CI pending. Installed
+dev6/trust/logging unchanged. User resumed High from23888dd; older next-model
+statements below are historical. See [Windows security](docs/windows-storage.md).
+
 2026-10-23: **incomplete development source0.2.0-dev.6**. Human-trusted,
 restarted desktop acceptance passed: all six owned views, local restricted
 flowchart/JSON/plain code, unsupported-syntax fallback, Clear, nested explorer,

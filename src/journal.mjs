@@ -45,6 +45,7 @@ async function assertNoSymlinkComponents(path) {
 }
 
 export async function prepareDataDirectory(input) {
+  if (process.platform === "win32") throw new Error("Windows journal storage requires a reviewed ACL implementation");
   if (typeof input !== "string" || input.length === 0 || input.length > 4096 || /\p{Cc}/u.test(input)) {
     throw new Error("data directory must be a non-empty path without control characters");
   }
@@ -233,6 +234,7 @@ function parseJournalFiles(texts) {
 }
 
 export async function readJournalEntries(dataDirectoryInput) {
+  if (process.platform === "win32") throw new Error("Windows journal storage requires a reviewed ACL implementation");
   const dataDirectory = await openDataDirectoryForRead(dataDirectoryInput);
   const lockPath = join(dataDirectory, LOCK_NAME);
   // Reports remain read-only. Retry if a cooperating writer holds its lock or

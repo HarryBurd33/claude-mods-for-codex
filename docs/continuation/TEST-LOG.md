@@ -1,5 +1,18 @@
 # Continuation verification log
 
+## High Windows candidate first checkpoint — 2026-10-23
+
+From23888dd, source0.2.0-dev.7 adds original Windows handle/ACL candidate and a
+legacy journal Windows refusal before IO. Candidate not production-integrated.
+Local npm test165pass/0fail/11Windows-only skips176total; mocked stalled-Git test
+passed3.043s. Focused journal/state POSIX checks unchanged; node --check new bridge
+passed. Native candidate8tests skip on macOS, only portable path predicate executed.
+New Windows22/24 CI jobs must actually execute NTFS APIs; result pending.
+No local install/config/trust/logging/model/API run change. New native code is
+original MIT, only system APIs/PowerShell/.NET; source documentation retrieved
+primary Node/Windows APIs, inaccessible RawSecurityDescriptor page recorded.
+
+
 ## Dev6 restarted native acceptance and unchanged reinstall — 2026-10-23
 
 **Current summary supersedes earlier pending notes below.** Human restarted after

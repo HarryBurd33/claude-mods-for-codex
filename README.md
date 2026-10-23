@@ -1,6 +1,11 @@
 # Claude Mods for Codex
 
-**Development source `0.2.0-dev.6`: the full requested product is incomplete.**
+**Development source `0.2.0-dev.7`: the full requested product is incomplete.**
+Source dev7 adds a Windows ACL candidate and closes the legacy Windows journal
+mode-bit gap. Candidate operations are not production-enabled until native CI and
+security review pass; see [Windows storage](docs/windows-storage.md). Installed
+code/trust/logging remain unchanged.
+
 Installed test fixture `0.2.0-dev.6` has actual macOS desktop evidence after
 human trust and restart: six owned views, local flowchart/JSON/plain-code preview,
 Clear, nested project browsing, selected-commit diffs and passive usage counters.
