@@ -1,5 +1,10 @@
 # Requirements ledger
 
+Travel pause2026-10-23: human resumed High from3e6272d, then paused before Windows
+implementation. All93rows/acceptance gaps unchanged. No new support/test claim;
+resume High from HANDOFF travel section. Installed6/logging/trust unchanged.
+
+
 Assessment date: **2026-10-23**. The full product is **incomplete**. This ledger
 supersedes the earlier MVP's exclusions; an earlier implementation choice is
 neither proof of host support nor proof that a capability is impossible.

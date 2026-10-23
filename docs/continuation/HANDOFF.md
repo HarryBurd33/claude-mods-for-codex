@@ -1,3 +1,55 @@
+# Travel pause — resume GPT-6.1 Sol, High
+
+2026-10-23. User explicitly paused to close the laptop and travel. Resume the
+same **GPT-6.1 Sol, High** setting; no Medium switch is due yet. High resumed
+from verified3e6272d419ec655c0d7da1f3a3dd6f4d691f12eb, then performed read-only
+boundary review. No Windows implementation/config/install/trust/logging change,
+new test/native probe, additional model/API evaluation or background task.
+
+Read this file, STATUS/REQUIREMENTS/ARCHITECTURE/TEST-LOG, ../windows-storage.md
+and latest ignored root HANDOFF.md. Existing source8/installed6 distinctions and
+all93requirements below remain current. This travel save is documentation only.
+Exact following checkpoint identity is reported after remote readback in the
+pause response/private handoff; a file cannot include its own commit hash.
+
+## Where to resume
+
+First inspect Git status and preserve work. Resume the gated Windows execution
+foundation before project/Git/settings/restore activation. Review absolute trusted
+executable selection/ACLs, private scratch at creation, controlled cwd/argv/env,
+bounded output/deadline and owned descendant cleanup. Keep public gates intact.
+
+A Win32 Job Object is an **unverified design candidate** for the next decisive
+proof: create child suspended, assign a kill-on-close job before resume, explicitly
+limit inherited handles, and refuse if assignment/nested-job policy prevents it.
+This may address descendants surviving an outer-helper failure. Job Object and
+STARTUPINFOEX APIs have not yet been researched/implemented/tested here; verify
+primary documentation and real Windows CI before choosing or claiming this route.
+Existing system-taskkill adapter remains unchanged. No production activation.
+
+Project traversal/safe Git metadata and restore still need their own proofs; a
+process runner alone cannot establish them. Bounded tracked-file snapshots were
+considered as an alternative, not selected or implemented. Do not copy ignored/
+secret paths or silently change provenance. Native Codex Windows host remains
+unavailable; OS CI is not installation/event/permission/UI acceptance.
+
+Primary pages actually retrieved this High turn: Microsoft Process Creation Flags,
+.NET Framework4.8.1 ProcessStartInfo.UseShellExecute, Git git and git-config manuals.
+No new REA execution, Codex research result or runtime support claim.
+
+## Resume instruction
+
+> I am ready to resume on GPT-6.1 Sol, High. Continue from the verified travel
+> checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and the
+> other continuation records plus latest ignored root HANDOFF.md. Resume the
+> Windows security foundation proof; the Job Object idea is unverified design,
+> not implemented support. Preserve Windows gates, logging scope, human trust,
+> private history and permissions. No extra model test run is authorized. Stop
+> for Medium only when the demanding security work no longer needs High.
+
+The completed dev8 milestone handoff below is retained for code/test/contracts.
+Its next-High selection has already occurred; the current pause is for travel.
+
 # Dev8 authoring checkpoint — next GPT-6.1 Sol, High
 
 2026-10-23. **Full93-capability product incomplete.** Human resumed Sol Medium

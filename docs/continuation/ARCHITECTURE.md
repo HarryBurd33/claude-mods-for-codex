@@ -1,5 +1,10 @@
 # Extension architecture and security contracts
 
+Travel pause2026-10-23: High only reviewed Windows execution boundaries. A
+suspended-child/kill-on-close Job Object is an unverified candidate, not a selected
+or implemented contract. See HANDOFF travel section; current runtime/gates unchanged.
+
+
 Decision date: 2026-10-23. Development design; outstanding proof gates are explicit.
 Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.
 
