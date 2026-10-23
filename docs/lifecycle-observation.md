@@ -59,4 +59,6 @@ fields, no mod-handler execution, event-only storage and disabled no-write paths
 Native acceptance still needs a reviewed optional-hook installation and a
 separately authorized bounded model run for any model-driven trigger. Do not reuse
 the earlier consumed model-run authorization. Interruption, compaction and agent
-delivery need their own harmless host tests. Windows private state stays refused.
+delivery need their own harmless host tests. Source7 Windows private state has
+NTFS CI, but native Windows optional-hook delivery remains unverified; no optional
+registration or logging grant was added.

@@ -1,61 +1,42 @@
-# Project status
+# Project status — 2026-10-23
 
-Current High source0.2.0-dev.7 adds a Windows ACL candidate and explicit legacy
-journal refusal; candidate not production-enabled, native CI pending. Installed
-dev6/trust/logging unchanged. User resumed High from23888dd; older next-model
-statements below are historical. See [Windows security](docs/windows-storage.md).
+**Development source0.2.0-dev.7; full requested product incomplete.**
+The High Windows private-storage milestone now has real Windows Server2025 NTFS
+CI: all20tests passed on both Node22/24, plus all4POSIX and portable Windows jobs.
+[f63ebab source](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f63ebabec8730cbfaa2e39a7f5e3ae2f58438838),
+[CI40035478192](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40035478192).
+Local full suite169pass/20Windows-only skips; validate/default replay passed.
 
-2026-10-23: **incomplete development source0.2.0-dev.6**. Human-trusted,
-restarted desktop acceptance passed: all six owned views, local restricted
-flowchart/JSON/plain code, unsupported-syntax fallback, Clear, nested explorer,
-selected diffs and passive counters. Authored print replacement, original rewrite,
-control and deny passed. Scope/count/revision stayed unchanged. Supported production
-remove/reinstall verified cache and fresh-session hook absence, exact125-file
-restoration, three trusted hooks/zero errors, unrelated configuration/settings
-preserved. Already-loaded desktop unload was not tested. No extra model run.
+Source7 implements handle/ACL-checked private journal/state/selected-export reads,
+private creation, bounded retention, owned-helper cancellation and short-budget
+optional hook telemetry with exact selected Windows session root. No ACL repair,
+execution-policy bypass, additional model call or broader logging. Windows settings/
+dashboard, project/Git and restore refuse before IO pending their separate security/
+native-host gates. NTFS CI and a synthetic hook subprocess do not establish native
+Codex, Windows11 installation/events/sandbox/UI or WSL compatibility.
 
-Current human setting Sol Medium. Routine native verification is checkpointed;
-next requested setting is Sol High for Windows private-storage/security design.
-No switch or stronger work starts until the human changes setting and continues.
-Source/extracted-package164tests/three Windows-only skips passed. Dev6 source CI
-first attempt had one existing failure; all five rerun jobs passed. Its cause
-remains unknown; no runtime change/flake fix claimed. Logging scope is unchanged,
-optional observers off, theme unapplied and client not upgraded.
+The installed human-trusted macOS production fixture remains dev6: six owned views,
+restricted local preview/Clear, nested explorer, selected diffs/passive counters and
+reviewed authored print rewrite/control/deny observed. Supported identical remove/
+reinstall passed fresh-session absence,125matching files and configuration/trust
+preservation. Already-loaded unload/UI disable/older rollback remain unverified.
+No installation/config/trust/logging change this High stage; activity4/same revision.
+Optional observers off, theme unapplied, client unchanged, no extra model run.
 
-On macOS14.6 / desktop26.1016.62342, dev4 covered rewrite/deny/control and owned
-Activity/files/changes/selected-commit Replay/passive usage views were observed.
-A normal-sandbox rewritten outside-workspace marker write was rejected; target
-absent, no elevated retry. Shared scoped activity from the earlier authorized
-CLI0.163.0 run remains visible without broader logging.
+Current human setting Sol High; after verified checkpoint the next setting is
+**GPT-6.1 Sol, Medium** for routine verification, packaging/docs and native acceptance
+preparation. New Windows Git/writer security work requires High again. Human switch
+and explicit continue are mandatory; no background/subagent substitute.
 
-Separate hold0.0.4 verified human-confirmed continuation, decline, cancellation
-and30s timeout denial for one harmless marker. It was removed afterward using
-supported CLI; unrelated configuration preserved and fresh native inventory
-confirmed no hold hook. MCP response provenance and disconnected fail-open prevent
-production-enforcement claims; production keeps the deny/review alternative.
+Remaining full-product work includes accessibility, broader skills, lifecycle/
+rollback, themes, optional event/native platform acceptance and the gated Windows
+features. Restricted flowcharts are not full Mermaid; explicit Git checkpoints
+are not automatic turn capture; passive counters are not context/cache health/
+billing. Separate removed hold proof does not establish a production approval gate.
 
-New dev5 source adds local code/JSON/restricted flowchart preview and separately
-opt-in, observation-only lifecycle metadata. Preview is now native-verified in dev6; optional observers remain unregistered/native-unverified.
-Default three hooks and logging selection are unchanged. Full local suite164pass,
-three Windows-only skips; validation/default and seven observer replays pass.
-No added model run, upstream code copy, dependency or paid keepalive.
-
-Full product remains incomplete: broader skill invocation, disable/older-version
-rollback/loaded-process lifecycle, supported themes, accessibility, optional observer delivery,
-Windows ACL/native Windows/Linux/WSL and broader feature acceptance. Restricted
-flowcharts are not full Mermaid; Git checkpoints are not automatic turn capture;
-usage counters are not context, cache health or billing. Restore has documented
-POSIX/text/non-atomic limits. Native protected steps and absent hosts stay explicit.
-
-Read [current status](docs/continuation/STATUS.md),
+Current authoritative records:[STATUS](docs/continuation/STATUS.md),
 [93-capability ledger](docs/continuation/REQUIREMENTS.md),
-[test log](docs/continuation/TEST-LOG.md),
-[architecture](docs/continuation/ARCHITECTURE.md) and
-[handoff](docs/continuation/HANDOFF.md).
-Current human-selected setting: **GPT-6.1 Sol, Medium** for bounded routine verification,
-reviewed update/authoring/lifecycle/docs/packaging. Stronger new security/architecture
-work needs another checkpoint/switch; no automatic delegation/continuation.
-
-[Verified dev6 source1e5fa74](https://github.com/HarryBurd33/claude-mods-for-codex/commit/1e5fa74c69f38a2a09a82f6cd7de2bbbd2ef53d2);
-[CI including recorded retry](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40024252139).
-Source/UI/native/platform evidence remain separate.
+[architecture](docs/continuation/ARCHITECTURE.md),
+[test log](docs/continuation/TEST-LOG.md),[handoff](docs/continuation/HANDOFF.md),
+[Windows security and acceptance](docs/windows-storage.md).
+Historical experimental MVP/main and earlier logs are not full-product status.

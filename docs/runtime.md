@@ -86,8 +86,10 @@ and omit sessionId to aggregate that project's sessions. This is additional
 metadata scope, not a change to Codex permissions. Enable matching hook metadata
 configuration separately (below). `allowChanges:true` explicitly permits bounded
 patch content to be returned through MCP to the host/model; default false.
-Settings/private data ACL validation on native Windows is not implemented, so
-runtime settings/state refuse operation there.
+Windows private storage APIs now have real NTFS CI, but runtime settings/dashboard
+and project/Git views still refuse before traversal: safe private scratch, absolute
+trusted Git and native project/host boundaries are not validated. Explicit storage
+report/selected-export CLI remains separate. See [Windows storage](windows-storage.md).
 
 Start the server with `node src/server.mjs --settings /absolute/private/settings.json`,
 or set `CODEX_MODS_SETTINGS` to that file in the reviewed local `.mcp.json` server

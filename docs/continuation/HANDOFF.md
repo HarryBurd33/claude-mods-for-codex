@@ -1,200 +1,197 @@
-# Current High Windows security work in progress
+# Dev7 Windows storage checkpoint — next GPT-6.1 Sol, Medium
 
-User selected GPT-6.1 Sol, High and resumed23888dd. Source0.2.0-dev.7 candidate
-checkpoint is being published for real Windows CI; continue High, not a switch
-stop yet. Read ../windows-storage.md and current STATUS/ARCHITECTURE/TEST-LOG.
-Windows journal now fails before IO; new native candidate is not production-enabled.
-Observe actual Windows results, review handle/ACL/race/process boundaries, then
-integrate only validated scope. Do not hand unresolved security integration to
-Medium or claim Windows Codex compatibility. Installed dev6/trust/logging unchanged.
-No extra model run/optional observer registration is authorized. Preserve private
-root handoff/.local; source candidate tests and native logs sanitized.
+2026-10-23. **Full product incomplete. Human-controlled stopping point after
+upload/readback.** High resumed from23888dd and completed the scoped Windows
+private-storage/security milestone. Next exact setting: **GPT-6.1 Sol, Medium**.
+Routine verification/package/docs/native-step preparation fits Medium. A new
+Windows Git/project/restore adapter or approval/security architecture needs another
+saved High switch; do not remove those gates as a routine fix. No background
+continuation, substitute subagent or internal model switch.
 
-Earlier completed Medium checkpoint and resume instructions below are historical.
+## Read and preserve
 
-# Dev6 native checkpoint — next GPT-6.1 Sol, High
+Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, ../windows-storage.md,
+../runtime.md, ../privacy.md, ../authoring.md, ../removal.md and latest ignored root
+HANDOFF.md. Root HANDOFF.md/.local contain private paths, evidence, settings,
+backups/scripts/exports; never publish them or original private historical commits.
+All93ledger rows remain in scope; do not call the expanded product finished.
 
-2026-10-23. **Full product incomplete. Human-controlled stopping point.**
-Current stage completed on GPT-6.1 Sol, Medium. Next requested model:
-**GPT-6.1 Sol, High**, because Windows private-storage/ACL and process boundaries
-need security design beyond routine verification. Do not change model internally,
-spawn a substitute or continue in background after the switch announcement.
+Repo https://github.com/HarryBurd33/claude-mods-for-codex
+Branch codex/astra-groundwork; main remains historical experimental MVP.
+Verified runnable source:
+[f63ebabec8730cbfaa2e39a7f5e3ae2f58438838](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f63ebabec8730cbfaa2e39a7f5e3ae2f58438838),
+tree5d521c5133bba1620ea39d038544ef1986575d5e. Local HEAD was aligned only after
+GitHub upload, fetch and exact whole-tree equality. Original equivalent local
+2a055e53e2238eb042e00451d65d820171edf58c preserved on
+codex/windows-integration-local-checkpoint. Earlier local equivalents also retained,
+including codex/windows-budget-local-checkpoint; original local main untouched.
+Final records/package checkpoint identity is reported after upload/readback in the
+switch response and ignored local handoff; a file cannot contain its own commit ID.
+No force-push or private-history merge. Connected GitHub expected-parent ref update,
+not unauthenticated terminal push, is the working write path.
 
-## Objective and current checkpoint
+## What High implemented
 
-Continue the complete93-capability product on codex/astra-groundwork. Medium
-verified the restarted dev6 UI/authored rewrite and supported unchanged removal/
-reinstallation. Next: resolve Windows privacy/portability architecture while
-preserving current fail-closed storage behavior, then implement within reviewed
-contracts and keep absent native-host acceptance explicit.
+Source/package/compatibility manifest/server0.2.0-dev.7; **not installed**.
 
-Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, ../runtime.md,
-../privacy.md, ../removal.md, ../local-preview.md, ../authoring.md, ../replay.md
-and latest ignored root HANDOFF.md. Root handoff/.local contain private machine
-paths, backups/scripts/screenshots/settings/logs/exports; never upload them.
+- src/windows-storage.mjs: strict local drive-absolute path syntax,240UTF-16 bound,
+  fixed system Windows PowerShell5.1 -File argv/cwd, narrow OS environment, no shell/
+  profile/module discovery/policy override/elevation/network/model call. ASCII v2
+  pipe/base64 framed IPC32KiB request/3MiB response; canonical response validation,
+ 15s default+500ms owned-tree cleanup, validated AbortSignal/pre-abort/no raw errors.
+- src/windows/private-storage.ps1: .NET Framework CodeDOM compiles only fixed public
+  original C# source, in memory,/noconfig; no request/config text compilation. Normal
+  execution/application-control/language policy may refuse and must not be bypassed.
+  Compiler-managed scratch contains public source, not requests/private file bytes.
+- src/windows/PrivateStorage.cs: same-handle owner/DACL/type/link/identity checks,
+  pinned no-reparse ancestors, fixed local NTFS/persistent ACL only. Protected
+  current-user/SYSTEM/Administrators descriptor at creation, never repair existing
+  ACLs. Bounded cooperative journal/rotation/read retry, no lock stealing. State
+ 64hashed scopes/two1MiB files; explicit cutoff plus locked fresh byte digest prune.
+  Trusted OS admins/TrustedInstaller and hostile same-user processes outside claim.
+- src/journal.mjs/state.mjs/windows-state.mjs/usage.mjs: public journal/state/report/
+  explicit usage reads route through native helper on Windows; POSIX retained.
+  Shared strict metadata encoder/parser, no raw envelope/secret/transcript logging.
+- src/windows-hook.mjs/hook-main.mjs/scope.mjs: optional Windows telemetry shares
+ 1500ms+500ms cleanup below host5s hook deadline. Exact explicitly selected native
+  cwd string only; no descendant/casefold/workdir inference or filesystem scope walk.
+  Unavailable telemetry does not replace dispatcher deny/rewrite. No new observers.
+- State observation/MCP activity and selected-export reads propagate cancellation.
+  No additional model/API evaluation. Do not put default15s writer in hook path.
+- runtime-settings.mjs refuses Windows configured dashboard before filesystem IO;
+  workspace.mjs selectedRoot refuses every Windows project/Git entry before IO/
+  spawn. Existing POSIX Git PATH/project cwd/scratch cannot be safely ported by
+  removing storage refusal. Windows restore remains refused before IO.
 
-Repository https://github.com/HarryBurd33/claude-mods-for-codex
-Branch codex/astra-groundwork. Last verified source
-[1e5fa74c69f38a2a09a82f6cd7de2bbbd2ef53d2](https://github.com/HarryBurd33/claude-mods-for-codex/commit/1e5fa74c69f38a2a09a82f6cd7de2bbbd2ef53d2),
-tree eb5acc94cdc2a664a317f36ee0c9036a041189d6. Prior restart records
-[98f12d03c543a569d2421e08e660a5602462a909](https://github.com/HarryBurd33/claude-mods-for-codex/commit/98f12d03c543a569d2421e08e660a5602462a909),
-tree51c8b8bfb6d96c7660097e7d5d305be4cdc2e366. This docs-only checkpoint's
-local/equivalent remote commit and verification are recorded after upload/readback
-in the final response and ignored handoff. No impossible self-referential hash.
-Preserve original local main/private history and equivalent checkpoint branches;
-never force-push/merge private historical root handoff into public history.
+Stable dispatcher v2: abstain/notice/deny/exact command-only replacement, paired
+allow+updatedInput continues normal permissions. No PermissionRequest approval,
+user-prompt/model mutation, arbitrary mod code/network load or paid keepalive.
+Private reader success is not proof of a safe project writer or native sandbox.
 
-## Installed state and observed native results
+## Tests actually observed
 
-Host macOS14.6(23G80), arm64, desktop26.1016.62342 build21477, Node24.22.0;
-system CLI0.163.0 separate. CLI164 researched, not installed; no native Windows/
-Linux/WSL tested. Production claude-mods-for-codex@claude-mods-production-dev
-0.2.0-dev.6 user-profile installed/enabled/human-trusted; user restarted this chat.
-All125 cache files matched immutable reviewed snapshot. Original proof0.0.2 kept;
-separate hold0.0.4 removed and its tool namespace absent after restart.
+[Primitive CI40033656920](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40033656920),
+sourcef152acb: all7jobs success;15/15 on each Windows22/24 lane. Earlier failures/
+diagnostics preserved in TEST-LOG, not erased as if the first candidate worked.
 
-Actual permitted MCP Apps inspection passed six views, restricted flowchart SVG/
-complete tables, literal highlighted JSON/plain code, unsupported-click fallback,
-Clear, nested selected-project expansion, synthetic working/selected-commit diffs,
-passive selected-export counters. Authored print BEFORE→AFTER, existing rewrite,
-unchanged control and fixed deny passed under normal permissions. Corrected
-installed management skill read/used; synthetic disabled-scaffold/access/replay/
-review/install/trust/restart/native-author effect completed. Not arbitrary plugin
-creation, every-skill invocation or an independent extra model evaluator.
+[Integrated CI40035478192](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40035478192),
+sourcef63ebab: all7jobs success. Each Windows22/24 native lane20pass/0fail/0skip
+(17Windows-only cases+3portable predicates). Windows Server2025 Datacenter10.0.26100,
+imagewindows-2025-vs2026 20261021.278.1; Node22.23.4/npm10.9.9 and
+Node24.22.1/npm11.19.1, fixed Windows PowerShell5.1/.NETFramework.
 
-Supported production remove/add of identical snapshot passed cache and fresh-hook
-absence during removal;125exact-file restoration,3enabled/trusted hooks/zero errors
-afterward. Parsed config restored exactly, unrelated entries preserved throughout,
-settings hash unchanged. No trust writes/model turn/marketplace removal/data deletion.
-Current desktop service responds, but already-loaded unload/fresh desktop relaunch,
-UI disable and older-version rollback remain unverified. Do not repeat human trust
-for unchanged reviewed bytes; changed code needs real human review, even if CLI
-retains trust. Source code/docs changed now do not alter installed immutable cache.
+Tests: protected private read/create; broad/inherited/wrong-owner/null ACL/broad
+allow despite deny/mutable ancestor refusals; spaces/BMP/non-BMP Unicode; hardlink/
+junction refusal; concurrent journal/state, read no writes, rotation/unsafe archive,
+held locks, explicit retention/hash mismatch, session isolation/observed revision,
+public report/usage CLI privacy, cancelled owned helper+child cleanup/pre-abort,
+exact scope/no effects, synthetic Windows hook subprocess deny with stalled helper
+under3.5s. The fixture command is never executed. A subprocess is not native Codex.
 
-Same private runtime settings/data/selected project/project scope/retention,
-selected synthetic commits/patch opt-in and previous explicitly selected private
-export. Activity remained4 with identical revision. Native hook cwd means session
-directory, not shell-call workdir; this chat outside child selected project correctly
-adds no records. Never broaden logging or infer cwd from command text to fix this.
-Optional observers off/unregistered; no theme installed/applied/client upgrade.
+Local macOS Node24.22.0 full npm test169pass/0fail/20Windows-only skips189total;
+focused35pass/19skips54total. npm run validate3mods/default replay4fixtures pass.
+Anonymous credential-helper-disabled public clone at exactf63ebab/tree reran
+169pass/0fail/20skips, validate/replay pass. Initial restricted DNS clone failed;
+authorized network escalation succeeded. A137-file documentation archive was inspected/extracted in a path with spaces;
+validate/replay passed, every runtime/test/config/UI/package asset byte-equal the
+fully tested anonymous clone. Final record rebuild/inspection and remote identity
+are reported after observation in the ignored handoff/switch response; no full
+suite repeat after docs-only changes is implied.
 
-Earlier dev4 ordinary sandbox rejected rewritten outside-workspace marker (no
-file/elevated retry). Separate holdv4 human-confirmed accept/decline/cancel/30s
-untouched timeout passed then removed. Responder provenance/disconnected fail-open
-remain; production is deny/review approximation, never automatic approval.
+## Installed host and unchanged authority
 
-## Tests and limits
+Production claude-mods-for-codex@claude-mods-production-dev0.2.0-dev.6 remains
+user-profile installed/enabled/human-trusted. Prior native host macOS14.6arm64,
+desktop26.1016.62342build21477, Node24.22.0; systemCLI0.163.0 separately. No upgrade.
+No Windows11/native Codex/Linux/WSL host available; Windows CI is OS primitive/
+process evidence only. No source7 installation/live hook/UI/sandbox claim.
 
-Commands actually used this phase: harmless exec_command print fixtures; actual
-mods.dashboard; MCP Apps buttons/fields; supported codex plugin remove/add; fresh
-read-only no-daemon app-server initialize/hooks/list/plugin/read, no model turn.
-Private helper45s child bounds/inventory35s total; process groups cleaned. Public
-TEST-LOG records exact semantic outcomes without private paths/IDs/raw logs.
+Prior dev6 actual permitted MCP Apps six views/preview/nested files/selected diffs/
+passive usage and authored harmless print rewrite/control/deny passed. Supported
+same-snapshot remove/add verified fresh-session absence,125exact files restored,
+3trusted hooks/zero errors and exact parsed config/settings preservation. Already-
+loaded unload/UI disable/older-version rollback still unverified. Original proof
+retained; hold0.0.4 removed/namespace absent after prior restart. Prior hold accept/
+decline/cancel/30s timeout and sandbox-negative results are version-specific, not
+production enforcement: human provenance/disconnected fail-open unresolved.
 
-Unchanged source/extracted suite164passed,3Windows-only skips167total; validate3mods/
-4default replay fixtures pass. Source1e5fa74 CI40024252139 initially4pass/1existing
-macOS22 mocked stalled-Git cleanup failure, targeted local pass3.069s. Requested
-failed-job retry yielded5newjobs allsuccess. Unknown cause/no flake fix claimed.
-Fresh125-file documentation archive inspected (724216unpacked bytes), path-with-
-spaces extraction164pass/0fail/3Windows-only skips, validate/default replay pass.
-Final docs-only rebuild and anonymous-public-clone/commit readback identities are
-reported after observation in final response/ignored handoff; no future claim.
+This High stage changed no machine config/install/cache/trust. Same selected
+private project/data/settings/scope/retention/patches/commits/export. Actual installed
+mods.activity after source integration:4records/same revision. Chat cwd outside
+selected child project; no capture is correct. Never infer scope from a shell
+command/workdir or broaden it. Optional observers remain off/unregistered; theme
+unapplied. Prior single bounded native model run grant consumed. No additional
+Codex/model/API evaluation, secret/session discovery or subagent authorized.
 
-Keyboard/resize/screen-reader/close-pending unverified; human did not complete the
-optional manual check. Browser DOM is not keyboard/accessibility proof. Optional
-observer native triggers need separate explicit reception/storage opt-ins and fresh
-bounded model-run authorization. Prior single model-run authorization is consumed.
-No additional model/API run or subagent is authorized. Theme choice/native renderer,
-visible SessionStart/resume/full permission matrix and native hosts remain gaps.
+Human selected/reported stages: Astra Ultra groundwork/proofs; Sol Ultra demanding
+hold/integration; Sol High dev4/dev5 integration; Sol Medium dev6 native/packaging;
+Sol High dev7 Windows storage security. Next is human-selected Sol Medium.
 
-## Code contracts and next High tasks
+## Next tasks in priority order and acceptance
 
-1. **Windows privacy boundary (SEC/platform rows):** inspect src/state.mjs,
-   src/runtime-settings.mjs, src/usage.mjs, src/journal.mjs, src/restore.mjs and
-   src/workspace.mjs; corresponding tests and .github/workflows/ci.yml. Current
-   state/settings/export/restore explicitly refuse Windows pending reviewed ACLs;
-   journal/paths/process behavior must be assessed separately. Research official
-   Windows/Node/Codex mechanisms only where concrete uncertainty remains. Design a
-   narrow OS adapter with documented threat model, ownership/principal/inheritance/
-   reparse-point/link/drive/UNC/Unicode/process-cleanup handling. Inspect dependency
-   licenses/authority before choosing helpers; no silent broad grants/install.
-   Acceptance: unauthorized principal/inherited access and unsafe traversal refuse,
-   verified private current-user paths succeed, read/write/lock/rotation/timeout/
-   removal meaningful tests on real Windows CI; existing POSIX tests unchanged.
-   Never replace ACL checks with Windows mode bits, enable on mock-only evidence,
-   collect secrets, scan credentials or erase native-unverified distinctions.
-   If native validation cannot establish a safe adapter, keep refusal and record
-   exact blocker/practical alternative rather than claim Windows support.
-2. **Implement reviewed scope, then native host acceptance:** preserve three
-   default hooks, source observer registration opt-in, scoped metadata, no arbitrary
-   command/path/model/approval mutation. Validate/fixtures/unit/security tests then
-   real platform CI. CI is not native Codex integration. No native Windows host
-   available here; prepare precise separate acceptance requirements.
-3. **Remaining supported features:** finish coherent per-skill invocation/review
-   checks, actual disable/older-version rollback/loaded-session lifecycle, native
-   accessibility/theme selection and optional event delivery. Batch concrete
-   protected human steps; do useful independent work while blocked. No optional
-   telemetry/model test run/theme/client upgrade without the separate user choice.
-4. **Reconcile all93 rows and safe checkpoint:** source/doc/package/public-clone/CI
-   evidence separately; do not silently roadmap supported features/full completion.
-   Request Astra Ultra only for a genuinely harder architecture/security problem;
-   otherwise switch back to Sol Medium once demanding work is resolved, via exact
-   save/upload/fetch/tree/ls-remote/final/stop protocol.
+1. **Routine current-feature/ledger audit.** Resolve stale pending claims against
+   already recorded evidence (e.g. management skill discovery now observed). Keep
+   all93rows, supported unfinished work and per-version/OS evidence separate. Check
+   docs/setup/removal/CLI help/access matrix for source7 vs installed6, original MIT/
+   independent disclaimer and source-only Windows limits. Acceptance: no current
+   summary contradicts tests; no native/full-completion claim from mocks/OS CI.
+2. **Existing safe skills/review workflow.** Read the packaged debugging/verification/
+   review/scaffolding skills when invoked; use synthetic disposable fixtures to
+   verify the coherent collection without another independent model evaluator.
+   Acceptance: scope/permissions/triggers/model-usage limits clear; no prompt/model
+   rewrite, arbitrary code/trust/network grant or automatic publish. Record actual
+   skill use separately from static/package tests.
+3. **Native acceptance preparation.** Prepare short concrete steps for human
+   keyboard/resize/close-pending, supported disable/re-enable/older-version rollback
+   of immutable snapshots and native theme choice. User previously found broad
+   accessibility request unclear: use one or two visible actions, explain expected
+   focus/behavior. Do independent routine work while answers pending. Changed-code
+   install needs reviewed immutable snapshot+human hook trust/restart; do not install
+   source7 merely to collect Windows evidence on macOS or repeatedly re-trust dev6.
+   Acceptance: exact before/after/fallback/restore check, protected actions human-
+   controlled, unrelated entries/data preserved. No extra model run inferred.
+4. **Windows/native blockers explicitly unfinished.** Need a real Windows Codex
+   host and separate stronger review before enabling configured dashboard/project/
+   Git/restore. Git acceptance: absolute trusted local executable, private atomic
+   scratch, trusted cwd/env, no project executable/helper/config launch, reparse/
+   streams/UNC/special-file bounds, no outbound operations and owned process-tree
+   timeout. Restore acceptance: private plans, explicit decision, no-follow current
+   identity/conflict/metadata preservation/interruption and normal sandbox checks.
+   Do not hand these risky implementations to Medium or simply remove refusals.
+   Preserve requirements and prepare a High switch when host/implementation work
+   becomes concrete. Native guard allow/deny/rewrite/permission matrix, install/
+   update/trust/disable/remove and user-policy-blocked helper refusal need that host.
+5. **Checkpoint meaningfully.** Package/public-clone/source CI verify relevant
+   changes, keep private evidence ignored, publish safe development progress with
+   expected-parent/non-force upload, fetch/tree diff/independent remote readback.
+   Stop for exact stronger/cheaper human setting when warranted. No automation.
 
-Stable contracts: dispatcher v2 abstain/notice/deny/exact command-only replacement,
-validated paired allow+updatedInput continues host permissions; no PermissionRequest
-approvals. Bounded POSIX metadata, read-only selected Git tools, explicit selected
-export, separate one-file POSIX restore (not interruption-atomic). Original restricted
-renderer16nodes/24edges/64lines/4096characters; not full Mermaid. Observer lane{}
-with event/time only, no stop blocks/follow-up/model calls. No app patch/private
-internals/custom client/fork direction, prompt/model change or automatic trust.
+## Setup/update/disable/removal/rollback
 
-## Configuration and rollback
+No config rollback required for this stage: source-only, installed dev6 unchanged.
+Use docs/setup.md and docs/removal.md supported plugin operations for the owned
+identity. Keep original proof/other entries; never restore an old full shared config
+or write trust hashes. Prior immutable snapshots/settings backups are private.
+A future source7 update needs code/access diff, source/package tests, supported
+versioned install, human changed-code review and restart. No hot-reload/trust bypass.
+Removal does not delete settings/data/plans; inspect separately after stopping
+writers. Windows locks never stolen; explicit prune is metadata retention only.
 
-Private backups, immutable dev4/dev6 snapshots/settings/evidence locations are in
-ignored root handoff. Current remove/reinstall changed no surviving config/settings;
-production remains dev6. Older-version rollback is prepared, not executed: repoint
-only owned marketplace to preserved snapshot, supported add, inspect exact cache/
-native inventory, human changed-code review/restart. Never restore entire shared
-config from old backup. Optional removal uses supported plugin remove for owned
-production identity; marketplace removal separate only if dedicated/no other needs.
-Data/settings/plans remain separate; no cleanup inferred or active-lock deletion.
+## Complete copy-and-paste resume instruction
 
-No human action required before reading/design. Extra native model runs, optional
-observer data reception/storage and theme/client choices remain separately pending.
-Human must select next model/effort before stronger work.
-
-## Copy-and-paste resume instruction
-
-> I switched to GPT-6.1 Sol, High. Continue Claude Mods for Codex on
-> codex/astra-groundwork from the verified dev6 native handoff. Read
-> docs/continuation/{STATUS,REQUIREMENTS,ARCHITECTURE,TEST-LOG,HANDOFF}.md and latest
-> ignored root HANDOFF.md. Medium verified actual dev6 Local preview, authored
-> print rewrite, six views, nested explorer and unchanged supported remove/reinstall;
-> three trusted hooks/125 matching files, logging scope/count unchanged. Inspect and
-> design the Windows private-storage/ACL and process boundary, implement only safely
-> validated scope with meaningful Windows CI, and keep native compatibility gaps
-> explicit. Preserve human trust, permissions, private history and default logging;
-> optional observers remain off and no extra model run is authorized. Continue all93
-> requirements without claiming full completion. Stop/checkpoint/upload/verify for
-> Medium when High is no longer needed, or Astra if a new harder problem requires it.
-
-## Verified Medium native checkpoint publication — 2026-10-23
-
-Native-result checkpoint local/remote aligned:
-[6ef6f6725e77ceceac7a17401a97e2b4433f432c](https://github.com/HarryBurd33/claude-mods-for-codex/commit/6ef6f6725e77ceceac7a17401a97e2b4433f432c),
-branch codex/astra-groundwork, tree f16d71da0bca474908c2b46acc61baf27cb3cf06.
-Original equivalent local8fd00fb231f2b5649c7d40f882c48b880ea87372 preserved on
-codex/dev6-native-local-checkpoint. Connected GitHub upload exact tree, non-force
-expected-parent ref update, fetch/full-tree diff and independent ls-remote matched.
-Soft alignment only after equal trees; no files/history lost.
-
-Anonymous credential-helper-disabled clean public clone at exact6ef6f67/tree passed
-npm test164/0fail/3Windows-only skips (167total), npm run validate and npm run replay.
-Final125-file/724966unpacked-byte archive from that clone inspected/extracted into
-a path containing spaces; no links/traversal/private root handoff/.local/.git/
-dependencies/actual machine paths/portable manifest. Runtime/test/config/UI assets
-exactly matched prior fully tested archive; final extraction validate/replay passed.
-Current following record-only commit changes these public verification notes, not
-runtime/installation/trust. Its exact final hash is reported after upload/readback
-in switch response/ignored handoff; no self-referential hash is invented.
+> I switched to GPT-6.1 Sol, Medium. Continue Claude Mods for Codex on
+> codex/astra-groundwork from the verified dev7 Windows storage checkpoint. Read
+> docs/continuation/{STATUS,REQUIREMENTS,ARCHITECTURE,TEST-LOG,HANDOFF}.md,
+> docs/windows-storage.md and latest ignored root HANDOFF.md. Source7 has NTFS
+> handle/ACL journal/state/selected-export integration, exact-root short-budget
+> optional hook telemetry and owned-helper cancellation; Windows22/24 CI20/20
+> each, all7jobs passed. Installed human-trusted dev6 is unchanged, activity4/same
+> revision, same logging scope/retention, optional observers off, no extra model
+> run. Continue routine ledger/skill/review/package/docs and concrete native
+> acceptance preparation. Keep Windows configured dashboard/project/Git/restore
+> refused before IO until a real native host and separate High security review;
+> do not silently drop those incomplete requirements or weaken gates on Medium.
+> Preserve human trust, private paths/history, selected model and permissions.
+> No additional Codex/model/API evaluation or subagent is authorized. Stop/save/
+> upload/verify and request High before any new risky architecture, or a cheaper
+> setting when sufficient. Do not claim the full93-capability product complete.

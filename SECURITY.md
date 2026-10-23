@@ -2,7 +2,9 @@
 
 ## Supported versions
 
-Until the first stable release, security fixes target the latest version on the default branch.
+Until the first stable release, the default branch remains an experimental MVP.
+Current expanded development/security work is on codex/astra-groundwork; it is
+not a completed stable release. Consult continuation/STATUS and the exact version.
 
 ## Report a vulnerability
 
@@ -14,7 +16,28 @@ The dispatcher is an advisory policy mechanism. It does not replace Codex permis
 
 Configuration is data, not executable code. The release has no dynamic module loader, remote configuration, network client, install script, approval automation, or prompt rewriting. New mod implementations are reviewed source registered in `src/mods/registry.mjs`.
 
-Journaling is disabled by default and accepts only a strict metadata record. Files are written only under the explicit `PLUGIN_DATA` directory supplied by Codex. The CLI report requires an explicit absolute data directory. Data directories and journal files must have private permissions and, on POSIX systems, belong to the current user. New directories use mode `0700` and new files use `0600`; unsuitable existing permissions are rejected. Symbolic links in data paths and hard-linked journal files are rejected. These are local privacy safeguards, not protection from a hostile process running as the same operating-system user. Windows ownership and permission behavior remains unverified. Reports create no files or directories and use bounded retries to detect cooperating writes or rotations; they can return a busy error. A short directory lock serializes normal concurrent writers; a process that terminates while holding that lock can stop later journal writes until the stale lock directory is removed manually. Hook decisions still return when journal writing fails.
+Journaling is disabled by default and accepts only strict event/time/tool/deny
+metadata. Storage uses only the explicit configured data directory (native
+PLUGIN_DATA or reviewed CODEX_MODS_DATA_DIR override); no session discovery or
+prompt/transcript/argument collection. POSIX directories/files require current-
+user ownership and private0700/0600 modes. Source7 Windows uses fixed local NTFS
+handle/ACL validation and protected user/SYSTEM/Administrators descriptors at
+creation; mode bits are never Windows privacy evidence. Unsafe existing access,
+reparse points, hardlinks, unsupported namespaces and network storage refuse.
+The helper runs with local process authority, distinct from a model-executed
+sandboxed tool; normal OS/helper policy still applies. No elevation/ACL repair/
+execution-policy override. Trusted administrators/hostile same-user processes are
+outside the isolation claim. See[Windows storage](docs/windows-storage.md).
+
+Reports create no selected-project/data files and retry cooperating writes boundedly.
+A private cooperative lock serializes writers; a killed writer can leave it behind.
+Never steal a live lock. Stop all writers and inspect the explicit selected path
+before any separate human stale-lock removal. Windows optional hook storage shares
+1500ms+500ms cleanup; failure cannot replace a dispatcher decision. Codex host
+crash/timeout fail-open limits still apply. Fixed helper compiles only public package
+source; compiler-managed scratch contains no request/config/private file bytes.
+Windows dashboard settings/project/Git/restore remain before-IO refused pending
+separate native security validation. Windows OS CI is not native Codex acceptance.
 
 Development source0.2.0-dev.3 also offers explicit selected-commit inspection and
 a separate POSIX one-file restore CLI. Inspection is read-only. Restore plan

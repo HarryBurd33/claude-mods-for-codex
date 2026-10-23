@@ -1,5 +1,10 @@
 # Scoped metadata state proof
 
+Historical first synthetic state checkpoint. Current source7 integration, real
+Windows NTFS CI and prior macOS host evidence are in STATUS/TEST-LOG/REQUIREMENTS.
+The pending/unintegrated/refusal statements below describe that earlier version,
+not current source or installed dev6. Native-platform evidence remains separate.
+
 Status: implemented as a narrow library and tested with synthetic subprocess writers on macOS, 2026-10-23. This is **not native Codex event delivery or UI integration**. The packaged hook entrypoint is unchanged and does not call this module yet. No plugin/configuration installation, model/API calls, or network access is required by the proof.
 
 ## Observed checks

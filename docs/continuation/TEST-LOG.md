@@ -1,5 +1,72 @@
 # Continuation verification log
 
+## Current High Windows storage milestone — 2026-10-23
+
+This summary supersedes earlier pending candidate statements, retained below as
+history. Human selected Sol High from23888dd. Source0.2.0-dev.7 is source-only;
+installed human-trusted dev6/config/logging unchanged. No extra model/API evaluator.
+
+- Primitive[sourcef152acb](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f152acb41c8e2ea046b70bacbdd00b8120a9e201),
+  [CI40033656920](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40033656920):
+  all7jobs passed,15/15 on each Windows Node22/24 lane. Fixed Unicode fixture
+  console encoding and lock waiter deletion race were decisive, not ACL weakening.
+- Integrated[sourcef63ebab](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f63ebabec8730cbfaa2e39a7f5e3ae2f58438838),
+  tree5d521c5133bba1620ea39d038544ef1986575d5e,
+  [CI40035478192](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40035478192):
+  all7jobs passed. Windows Node22/24 each20pass/0fail/0skip (17Windows-only cases,
+  3portable predicates); all4POSIX full jobs and portable Windows job passed.
+  Windows Server2025 Datacenter10.0.26100, windows-2025-vs2026 image20261021.278.1;
+  Node22.23.4/npm10.9.9 and24.22.1/npm11.19.1. Fixed system Windows PowerShell5.1/
+  .NETFramework; neither PowerShell7 nor execution-policy override used by helper.
+- Dedicated node --test test/windows-storage.test.mjs runs actual NTFS ACL APIs,
+  public journal/state/report/selected-usage routes, observer revision/retention,
+  private descriptor creation, broad/inherited/null/wrong-owner/broad-allow-despite-
+  deny/mutable-ancestor refusals, hardlink/junction refusal, space/BMP/non-BMP paths,
+  concurrent writes, rotation/unsafe archive and held locks. Read reports create
+  nothing. State prune rechecks exact bytes under root/scope locks; no lock stealing.
+- Copied fixed helper deadline and AbortSignal cancellation tests stop owned helper+
+  child; pre-abort starts nothing. Real Windows synthetic hook subprocess with
+  valid host fixture and stalled helper emits deny under3.5s; journal and state
+  share1500ms plus500ms cleanup. Mismatched/child scope starts no helper/writes.
+  The fixture command is never executed. This is subprocess replay, not Codex.
+- Reviewed Windows project/Git/settings paths now refuse before filesystem IO or
+  executable search. Negative test includes project git.exe fixture but never
+  launches it. Existing POSIX PATH/project cwd/private scratch cannot be safely
+  assumed on Windows. Two formerly portable positive Windows checkpoint tests are
+  explicitly skipped while project adapter is refused; POSIX coverage retained,
+  native refusal acceptance added. Restore remains explicitly Windows-refused.
+- Local commands: focused node --test Windows/state/scope/usage/contracts35pass/
+  0fail/19skips54total; npm test169pass/0fail/20Windows-only skips189total. npm run
+  validate3mods; npm run replay4fixtures, expected notice/deny/empty outputs passed.
+  git diff --check used; documentation trailing blank found and repaired.
+- Anonymous GIT_TERMINAL_PROMPT=0/config-disabled/credential-helper-disabled clone
+  at exactf63ebab/tree reran npm test169pass/0fail/20skips, validate/replay passed.
+  Restricted DNS first failed; authorized network escalation succeeded. No login,
+  private dependency, trust action or model turn. Final package/readback results
+  follow after observation; source checks do not imply package/native installation.
+- Actual installed mods.activity after integration source changes:4records and
+  identical revision; same selected project/data/settings/scope/retention/export.
+  No install/cache/config/trust change, broader logging, optional observer, theme/
+  client upgrade, secret/session search, raw event capture or additional model run.
+
+Package verification:137-file documentation archive inspected with no links,
+traversal, private root handoff/.local/.git/dependencies, machine-private paths or
+portable root manifest. All executable/runtime/test/config/UI/package assets
+byte-equal the fully tested anonymous f63ebab clone. Path-with-spaces extraction
+npm run validate and npm run replay passed. Documentation-only final records are
+rebuilt/inspected before publication; exact final archive hash/size belong in the
+ignored local record/final response rather than a self-referential package field.
+No full-suite repeat after notes-only changes is implied or needed.
+
+High reviewed the scoped handle/ACL/protocol/path/process/guard integration; no
+independent third-party security audit claimed. Native Codex Windows11/standard-
+user/sandbox/install/trust/events/UI/update/removal, Linux/WSL, unsupported callback
+ACL and actual policy-blocked-host handling remain unverified. Windows configured
+dashboard/Git/project and restore are explicitly unfinished behind before-IO gates.
+Their next concrete security/native acceptance is in HANDOFF/windows-storage.
+All93requirements retained. Medium can continue routine existing-feature/skill/
+package/docs/native-step preparation; new risky adapters need High again.
+
 ## High Windows candidate first checkpoint — 2026-10-23
 
 From23888dd, source0.2.0-dev.7 adds original Windows handle/ACL candidate and a

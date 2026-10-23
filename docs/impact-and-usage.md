@@ -44,8 +44,9 @@ node bin/codex-mods.mjs usage --export /absolute/private/selected-exec.jsonl
 ```
 
 The file must be canonical, current-user owned, mode0600 and unlinked on POSIX;
-Windows refuses pending ACL validation. It can contain sensitive prompts/tool
-output. Raw data is read in bounded memory but never returned or persisted by
+Source7 Windows uses the local fixed NTFS handle/ACL private reader, with
+explicit selected path and bounded cancellation; native Codex Windows acceptance
+is separate. The export can contain sensitive prompts/tool output. Raw data is read in bounded memory but never returned or persisted by
 this adapter. Bounds:1MiB,4,096 lines,256KiB/line,32 completion records and128
 non-JSON diagnostic lines. Broken JSON, multiple thread identities, invalid
 counters/relations and excess bounds report unavailable. Diagnostics aren't echoed.

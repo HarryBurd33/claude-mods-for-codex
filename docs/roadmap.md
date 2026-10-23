@@ -7,17 +7,23 @@ An old exclusion is not evidence that Codex lacks the capability. Hidden prompt
 changes, permission weakening, automatic approval and unsupported patches remain
 excluded by policy.
 
-## Candidate next steps
+## Current required work
 
-- Verify manual installation, hook trust review, and harmless native events in supported Codex desktop hosts.
-- Test Windows Node discovery and command quoting before claiming Windows support.
-- Add more reviewed, declarative built-in mod types when they preserve the narrow output and privacy contract.
-- Explore a read-only MCP report tool and owned MCP Apps panel after verifying host support. Keep it separate from the hook decision path.
-- Explore `codex exec --json` observation and a separate app-server client as distinct adapters.
-- Add release provenance and reproducible archive checks for tagged versions.
+The complete93-capability ledger and continuation handoff govern development;
+these are required gaps, not an exclusion list used to declare completion.
 
-## Out of scope
+- Native accessibility, disable/older rollback/loaded lifecycle, broader safe skill
+  invocation, supported theme choices and optional-event delivery acceptance.
+- Windows storage APIs have real NTFS CI; native Codex install/trust/events/UI and
+  standard-user permissions remain unverified. Dashboard/project/Git and restore
+  stay explicitly refused pending separate reviewed native security gates.
+- Linux/WSL/native platform matrix, release provenance/package/update/removal checks.
+- Full native UI restyling/insertion and model interception remain assessed against
+  released public interfaces. Owned UI, official themes/notices and explicit new-
+  task routing are disclosed alternatives; no separate-client direction agreed.
 
-Native Codex UI replacement, hidden prompt changes, arbitrary Claude runtime emulation, automatic approvals, tool-input rewriting, synthetic tool outputs, trust bypasses, auto-installers, scheduler edits, remote mod loading, and reading private session or transcript data are not planned for this framework.
-
-The OpenAI public Plugins Directory currently excludes hook-containing plugins. GitHub releases and local marketplaces are the distribution path unless that policy changes.
+Hidden prompt/model changes, automatic approvals, permission/trust bypasses,
+installed-app patches and implicit secret/session discovery remain excluded by
+user policy. Exact opted-in tool-input replacement is implemented with normal
+permissions and visible before/after. Recheck dated distribution policy before a
+release; current development branch is not a completed public-directory submission.

@@ -1,10 +1,12 @@
 # Claude Mods for Codex
 
 **Development source `0.2.0-dev.7`: the full requested product is incomplete.**
-Source dev7 adds a Windows ACL candidate and closes the legacy Windows journal
-mode-bit gap. Candidate operations are not production-enabled until native CI and
-security review pass; see [Windows storage](docs/windows-storage.md). Installed
-code/trust/logging remain unchanged.
+Source dev7 adds handle-checked private Windows NTFS journal/state and explicit
+selected-usage reads, with bounded optional hook telemetry and cancellation.
+Windows dashboard settings, project/Git views and restore explicitly refuse before
+project traversal until their separate security/host gates pass. See
+[Windows storage](docs/windows-storage.md). Native Windows CI is storage/process
+evidence, not Codex/Windows11 compatibility. Installed dev6/trust/logging unchanged.
 
 Installed test fixture `0.2.0-dev.6` has actual macOS desktop evidence after
 human trust and restart: six owned views, local flowchart/JSON/plain-code preview,
@@ -26,7 +28,7 @@ approximation, not full Mermaid or native transcript restyling. Optional
 [observation-only lifecycle events](docs/lifecycle-observation.md) remain source-
 tested, unregistered and native-unverified. Default hook registration/logging
 is unchanged. Local callbacks make no additional model calls; skill/chat use
-consumes usage. Full local suite164pass/three Windows-only skips; CI and native
+consumes usage. Current source local suite169pass/20Windows-only skips (189total); CI and native
 platform evidence are separate.
 
 Replay compares only explicit selected Git commits, which may include human edits
@@ -39,14 +41,16 @@ health. No private-session discovery or paid keepalive.
 
 Remaining incomplete work includes full accessibility, broader skill invocation,
 disable/older-version rollback and loaded-process lifecycle, supported themes,
-optional event native delivery and real Windows/Linux/WSL compatibility. Windows private state,
-settings, usage exports and restore refuse pending ACL support. The
+optional event native delivery and real Windows/Linux/WSL compatibility. Windows settings/dashboard,
+project/Git views and restore remain explicitly unavailable; private storage and
+selected-export APIs have dedicated NTFS CI. Native Codex installation/events,
+standard-user sandbox behavior and full Windows compatibility remain unverified. The
 [93-capability ledger](docs/continuation/REQUIREMENTS.md) records every gap and
 alternative. An original [theme example and supported setup/rollback guide](docs/themes.md) is
 provided without applying it or upgrading Codex. The management skill now reflects
 the reviewed exact-replacement contract. Continue through the [handoff](docs/continuation/HANDOFF.md).
 
-Claude Mods for Codex is a small, inspectable framework for local Codex lifecycle hooks. It ships three examples: a visible session notice, a deny-only lexical command guard, and an optional metadata activity journal. A fixture replay CLI lets you test the exact hook responses without installing the plugin or signing in.
+Claude Mods for Codex is an inspectable local hook framework with a plugin-owned dashboard, scoped metadata, read-only project tools, authoring/replay CLI and five focused skills. Its default hook examples are: a visible session notice, a deny-only lexical command guard, and an optional metadata activity journal. A fixture replay CLI lets you test the exact hook responses without installing the plugin or signing in.
 
 This is an independent project. It is not affiliated with, endorsed by, or maintained by Anthropic or OpenAI. It does not run Claude Mods unchanged.
 
@@ -57,7 +61,7 @@ This is an independent project. It is not affiliated with, endorsed by, or maint
 - Keeps a denial effective regardless of later configured mods.
 - Validates a narrow JSON configuration. It never evaluates configuration as code or loads remote modules.
 - Keeps journaling off by default. When enabled, it stores only time, event name, tool identifier, and a deny outcome in Codex's explicit plugin data directory.
-- Uses Node.js standard-library modules and makes no network calls.
+- Uses standard Node.js modules, plus fixed system Windows PowerShell5.1/.NET Framework for Windows private storage; no dependency download or network call.
 
 The guard is a policy aid. It is not a sandbox, a shell parser, or complete enforcement. Codex runs native hooks concurrently with other hook sources, and a hook crash or timeout may fail open at the host boundary.
 

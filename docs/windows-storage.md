@@ -2,7 +2,7 @@
 
 Native OS primitive checkpoint f152acb passed all15 tests on Windows Server2025
 Node22/24 in CI40033656920. Current source integrates journal, scoped state and
-explicit selected-usage reads through that adapter; integration CI is pending.
+explicit selected-usage reads through that adapter; integration CI40035478192 passed all7jobs (20/20 in each native Windows lane).
 This is not native Codex/Windows11 acceptance. Installed dev6 is unchanged.
 
 Windows dashboard settings, project/Git views and restore remain explicitly
@@ -74,8 +74,9 @@ No native Windows Codex install/events, Windows11 desktop, WSL or restore claim.
 
 Integration adds public journal/state/report/selected-usage APIs, read cancellation,
 observer signal propagation and a synthetic native hook subprocess with stalled
-telemetry. These new exact-source tests are pending; a subprocess is not native
-Codex event delivery. Default logging/registration remain unchanged. The current
+telemetry. Source f63ebab/CI40035478192 passed20/20 on both native Windows
+Node22/24 lanes (17Windows-only cases+3portable predicates), all4POSIX and portable
+Windows jobs. A subprocess is not native Codex event delivery. Default logging/registration remain unchanged. The current
 macOS installed dev6 configuration, human trust and selected data are untouched.
 
 ## Explicit Windows boundaries
@@ -123,6 +124,7 @@ and choose separate data deletion. Never delete a live lock to force operation.
 
 ## Primary evidence retrieved2026-10-23
 
+- [Windows executable search](https://learn.microsoft.com/en-us/windows/win32/api/processenv/nf-processenv-needcurrentdirectoryforexepathw): current-directory search is a separate boundary; an absolute trusted Git path/cwd still needs validation.
 - [Node22 file-system documentation](https://nodejs.org/docs/latest-v22.x/api/fs.html): Windows mode bits do not distinguish owner/group/other permissions.
 - [CreateFileW](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew): handle access/share modes and reparse/directory flags.
 - [GetSecurityInfo](https://learn.microsoft.com/en-us/windows/win32/api/aclapi/nf-aclapi-getsecurityinfo): descriptor on an open handle; READ_CONTROL; no race guarantee for concurrent descriptor changes.
@@ -139,4 +141,3 @@ Public [Import-Module](https://learn.microsoft.com/en-us/powershell/module/micro
 .NET [Assembly.Load](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.assembly.load?view=netframework-4.8) retrieved2026-10-23. GlobalAssemblyCache property page was inaccessible; property behavior must be observed in native tests, not claimed from that page.
 
 [CodeDomProvider.CompileAssemblyFromSource](https://learn.microsoft.com/en-us/dotnet/api/system.codedom.compiler.codedomprovider.compileassemblyfromsource?view=netframework-4.8.1) and [CSharpCodeProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.csharp.csharpcodeprovider?view=netframework-4.8.1) retrieved2026-10-23; these APIs require .NET Framework. Earlier module-loading experiments were superseded, not shipped as supported routes.
-

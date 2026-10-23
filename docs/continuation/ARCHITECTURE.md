@@ -3,12 +3,40 @@
 Decision date: 2026-10-23. Development design; outstanding proof gates are explicit.
 Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.
 
-Source0.2.0-dev.7 Windows candidate: fixed PowerShell5.1 process and original C#
-handle-based ACL/IO boundary, no execution-policy override/elevation/ACL repair.
-Pinned ancestors, protected current-user targets, fixed local NTFS only; read and
-write check/IO same process. No production routing until native proof/review.
-Legacy journal now explicitly refuses Windows too. Candidate design/primary APIs
-and remaining gates in ../windows-storage.md. High current, installed dev6 unchanged.
+## Current Windows security boundary — source0.2.0-dev.7
+
+Original fixed PowerShell5.1/.NETFramework/C# handle+NTFS ACL adapter now backs
+journal/state/selected-export APIs. No shell/profile/module discovery/policy
+override/elevation/ACL repair, no additional model call. Private descriptors at
+creation, pinned no-reparse ancestors, same-handle owner/DACL/file checks, local
+fixed NTFS only, bounded framed IPC and owned-process-tree cleanup. State keeps
+hashed scope IDs, metadata allowlist,64scopes, two1MiB files and explicit fresh-
+content-checked prune. Foreign broad/inherited/null/unsupported grants refuse;
+trusted OS administrators/hostile same-user processes are outside the claim.
+
+Native primitive checkpoint f152acb/CI40033656920 passed15/15 on Node22/24 Windows
+Server2025. Integrated source f63ebab adds public API/CLI, cancellation and actual
+Windows synthetic hook-subprocess tests; result belongs in TEST-LOG. These are
+OS/subprocess tests, never Codex Windows installation/event/UI acceptance.
+
+Windows hook-main routes only optional telemetry through windows-hook.mjs, one
+shared1500ms budget+500ms cleanup. Exact explicitly selected native cwd string
+only; no descendant/casefold/network scope walk or command-based inference.
+Storage failure cannot replace deny/rewrite output. Public reads use15s default,
+validated AbortSignal cancels only owned helper tree; pre-abort does not spawn.
+State observer/MCP activity and selected-export reads propagate cancellation.
+POSIX scope/storage and all logging defaults/registrations are unchanged.
+
+Windows runtime settings and every workspace selectedRoot entry refuse *before*
+traversal/spawn. Private reader success cannot safely enable existing POSIX Git
+PATH/current-project executable lookup or inherited Windows temporary scratch.
+Absolute trusted local executable, atomically private scratch, trusted cwd/env,
+no-follow project/object traversal and owned Git tree cleanup need separate native
+validation. Windows restore also stays refused before IO: private plan creation,
+project writes/metadata/conflict/interruption and sandbox require separate review.
+These are explicitly unfinished requirements; no unsupported-Codex conclusion.
+No installed snapshot/config/trust change. Source contract/primary APIs/next
+acceptance: [Windows storage](../windows-storage.md).
 
 Current dev6 contracts are unchanged. After human trust/restart, the actual
 owned panel verified restricted flowchart/JSON/plain-code, unsupported fallback,
@@ -21,10 +49,9 @@ loaded desktop unload/older-version rollback evidence. No extra model run.
 Earlier dev4 normal sandbox-negative rewrite and separate hold0.0.4 confirm/
 decline/cancel/30s timeout remain version-specific. Hold removed; no remaining tool
 namespace after restart. Human provenance/infrastructure fail-open limits remain.
-Next security work needs human-controlled Sol High checkpoint: review Windows
-private storage/ACL contracts before changing current refusal. Native platform
-validation remains mandatory and separate from code/CI. Do not weaken checks or
-infer OS access from POSIX mode bits on Windows.
+Current High work resolves the scoped storage boundary; actual native platform
+validation remains separate from CI. Native Windows project/restore enabling
+requires stronger review and a suitable host, never a routine Medium refusal removal.
 
 ## New bounded contracts (source0.2.0-dev.5)
 
@@ -118,7 +145,8 @@ Counts describe retained records, not all-time usage or successful actions.
 64 scopes, two bounded journal files per scope, private POSIX ownership/modes,
 no-follow/link checks, serialized writes and explicit pruning are current limits.
 The process-user boundary is not protection from hostile same-user code.
-Windows storage refuses operation until an ACL-backed adapter is reviewed.
+Windows storage uses the handle/ACL adapter described above; Windows dashboard/
+project/Git/restore remain refused pending their separate boundaries.
 
 Native scope is the session directory supplied by Codex. A tool workdir is not a
 trustworthy per-call identity in the covered hook adapter (it supplies command
@@ -238,8 +266,8 @@ explicit CODEX_MODS_DATA_DIR and CODEX_MODS_PROJECT_ROOT; canonical containment
 prevents recording another project into the selected scope. MCP runtime settings
 select the same directory/project/session deliberately. No session-file discovery.
 Only explicitly requested project scope aggregates sessions. Root `docs/runtime.md`
-describes actual access and setup; native Windows ACL-backed settings/state remain
-unavailable. Metadata errors cannot discard a denial.
+describes actual access and setup; Windows state APIs use NTFS ACLs, while settings/
+dashboard remain unavailable. Metadata errors cannot discard a denial.
 
 Production `.mcp.json` now declares `src/server.mjs`, using the bounded local
 `src/mcp-stdio.mjs` transport and `ui/dashboard.html`. Settings absent means project
