@@ -1,12 +1,13 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { mkdtemp, mkdir, readFile, readdir, writeFile, link, symlink, rm, realpath } from 'node:fs/promises';
+import { mkdtemp, mkdir, readFile, readdir, writeFile, cp, link, symlink, rm, realpath } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, win32 } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import test from 'node:test';
-import { validateWindowsPrivatePath, windowsStorageRequest, readWindowsPrivateFile } from '../src/windows-storage.mjs';
+import { windowsHookProjectMatches } from '../src/windows-hook.mjs';
+import { validateWindowsPrivatePath, windowsStorageRequest, readWindowsPrivateFile, parseWindowsStorageResponse } from '../src/windows-storage.mjs';
 import { appendJournalEntry, prepareDataDirectory, readJournalEntries } from '../src/journal.mjs';
 
 const native = { skip: process.platform !== 'win32' };
@@ -15,7 +16,7 @@ const fixedRecord = Buffer.from('{"recordedAt":"2026-10-23T12:00:00.000Z","event
 async function directory(t) {
   const root = await mkdtemp(join(await realpath(tmpdir()), 'mods-windows-'));
   t.after(() => rm(root, { recursive: true, force: true }));
-  const data = join(root, 'private data Ω');
+  const data = join(root, 'private data Ω🚀');
   await windowsStorageRequest('prepare-directory', data);
   return { root, data };
 }
@@ -26,7 +27,7 @@ async function acl(path, mode = 'private') {
     let output=''; const timer=setTimeout(()=>{child.kill();reject(new Error('Synthetic ACL fixture deadline'));},10000);
     child.stdout.on('data', c=>{output+=c;}); child.on('error',reject);
     child.on('close', code=>{clearTimeout(timer);code===0 && output.trim()==='fixture-ready'?resolve():reject(new Error('Synthetic ACL fixture failed'));});
-    child.stdin.end(JSON.stringify({path,mode}));
+    child.stdin.end(JSON.stringify({path,mode}).replace(/[^\x00-\x7f]/g,c=>`\\u${c.charCodeAt(0).toString(16).padStart(4,'0')}`)+'\n');
   });
 }
 
@@ -149,7 +150,8 @@ test('native Windows scoped candidate isolates sessions, preserves concurrent re
   const state=join(data,'metadata-state-v1');
   assert.deepEqual((await windowsStorageRequest('state-read',data,{data:one})).map(b=>b.length),[0,0]);
   assert.deepEqual(await readdir(data),[]);
-  await Promise.all(Array.from({length:4},()=>windowsStorageRequest('state-record',data,{data:one+':'+fixedRecord})));
+  await assert.doesNotReject(windowsStorageRequest('state-record',data,{data:one+':'+fixedRecord}),'first synthetic state record');
+  await assert.doesNotReject(Promise.all(Array.from({length:3},()=>windowsStorageRequest('state-record',data,{data:one+':'+fixedRecord}))),'concurrent synthetic state records');
   await windowsStorageRequest('state-record',data,{data:two+':'+fixedRecord});
   const first=await windowsStorageRequest('state-read',data,{data:one});
   assert.equal(first[1].toString('utf8').trim().split('\n').length,4);
@@ -161,4 +163,42 @@ test('native Windows scoped candidate isolates sessions, preserves concurrent re
   await windowsStorageRequest('state-prune',data,{data:one+':'+hash});
   assert.deepEqual(await readdir(state),[two]);
   assert.equal((await windowsStorageRequest('state-read',data,{data:two}))[1].toString('utf8').trim().split('\n').length,1);
+});
+
+
+test('Windows hook scope predicate is exact, explicit and never infers a child or case alias',()=>{
+  assert.equal(windowsHookProjectMatches('C:\\project','C:\\project'),true);
+  for(const [cwd,selected] of [['C:\\project\\child','C:\\project'],['C:\\other','C:\\project'],['c:\\project','C:\\project'],['C:\\project',undefined],['\\\\server\\share','C:\\project']])assert.equal(windowsHookProjectMatches(cwd,selected),false);
+});
+
+test('native Windows candidate shares a short telemetry budget and mismatched scope has no effects',{...native,timeout:15000},async t=>{
+  const root=await mkdtemp(join(await realpath(tmpdir()),'mods-budget-'));t.after(()=>rm(root,{recursive:true,force:true}));
+  const source=join(root,'src');await cp(new URL('../src/',import.meta.url),source,{recursive:true});
+  const project=join(root,'project'),data=join(root,'data');await mkdir(project);
+  const spy=join(source,'windows/starts.txt');
+  await writeFile(join(source,'windows/private-storage.ps1'),`
+[System.IO.File]::AppendAllText([System.IO.Path]::Combine($PSScriptRoot,'starts.txt'),"started"+[Environment]::NewLine)
+[System.Threading.Thread]::Sleep(60000)
+`);
+  const module=await import(pathToFileURL(join(source,'windows-hook.mjs')).href);
+  const base={projectRoot:project,dataDirectory:data,journal:{event:'PreToolUse',tool:'Bash',decision:'deny'},stateMetadata:{event:'PreToolUse',tool:'Bash',decision:'deny'},stateScope:'project'};
+  for(const cwd of [join(project,'child'),join(root,'other')]) {
+    assert.deepEqual(await module.writeWindowsHookMetadata({...base,event:{cwd,session_id:'synthetic'}}),{journal:'unavailable',state:'unavailable'});
+  }
+  assert.deepEqual((await readdir(join(source,'windows'))).sort(),['PrivateStorage.cs','private-storage.ps1']);
+  const start=performance.now();
+  assert.deepEqual(await module.writeWindowsHookMetadata({...base,event:{cwd:project,session_id:'synthetic'}}),{journal:'unavailable',state:'unavailable'});
+  assert.ok(performance.now()-start<2600,'telemetry must leave time for the native five-second guard response');
+  const starts=await readFile(spy,'utf8').catch(e=>{if(e.code==='ENOENT')return '';throw e;});
+  assert.ok(starts.trim()?starts.trim().split('\n').length===1:true,'second telemetry lane must not get a new budget');
+  assert.deepEqual((await readdir(root)).sort(),['project','src']);
+});
+
+
+test('Windows private bridge rejects malformed, mismatched, noncanonical, oversized and non-ASCII responses',()=>{
+  assert.equal(parseWindowsStorageResponse(Buffer.from('2|ok|1|YWJj\r\n'),'private-read',3)[0].toString(),'abc');
+  assert.deepEqual(parseWindowsStorageResponse(Buffer.from('2|ok|2||'),'journal-read').map(b=>b.length),[0,0]);
+  for(const [value,op,limit] of [['1|ok|0|','journal-append',0],['2|ok|0|','private-read',10],['2|ok|1|YR==','private-read',10],['2|ok|1|YWJj|extra','private-read',10],['2|ok|1|YWJj','private-read',2],['2|ok|0|YWJj','journal-append',0],['2|error','private-read',10],['{"ok":true}','private-read',10],['2|ok|0|','unknown',0]])assert.throws(()=>parseWindowsStorageResponse(Buffer.from(value),op,limit),/Private Windows/);
+  assert.throws(()=>parseWindowsStorageResponse(Buffer.concat([Buffer.from([0x82]),Buffer.from('|ok|0|')]),'journal-append'),/Private Windows/);
+  assert.throws(()=>parseWindowsStorageResponse(Buffer.alloc(3*1024*1024+1),'journal-append'),/Private Windows/);
 });

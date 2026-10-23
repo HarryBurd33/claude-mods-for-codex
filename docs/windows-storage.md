@@ -18,7 +18,7 @@ src/windows-storage.mjs launches only fixed Windows PowerShell5.1 with -NoProfil
 are narrowly allowlisted, never the full environment or credential/API-key vars.
 No shell interpolation, PATH-selected helper, elevation, policy override, module
 import/discovery, profile or downloaded code. Internal v2 frames are ASCII with
-base64 fields, bounded32KiB request/3MiB response. Default15s plus2s cleanup targets
+base64 fields, bounded32KiB request/3MiB response. Default15s plus500ms cleanup targets
 only the owned helper tree via fixed system taskkill. A shorter shared telemetry
 budget is required before native-hook activation; do not put15s work before a
 five-second host guard response. Errors sanitized, no native diagnostics/paths/SIDs
@@ -99,3 +99,12 @@ Public [Import-Module](https://learn.microsoft.com/en-us/powershell/module/micro
 .NET [Assembly.Load](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.assembly.load?view=netframework-4.8) retrieved2026-10-23. GlobalAssemblyCache property page was inaccessible; property behavior must be observed in native tests, not claimed from that page.
 
 [CodeDomProvider.CompileAssemblyFromSource](https://learn.microsoft.com/en-us/dotnet/api/system.codedom.compiler.codedomprovider.compileassemblyfromsource?view=netframework-4.8.1) and [CSharpCodeProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.csharp.csharpcodeprovider?view=netframework-4.8.1) retrieved2026-10-23; these APIs require .NET Framework. Earlier module-loading experiments were superseded, not shipped as supported routes.
+
+Candidate Windows hook lane uses an overall1500ms telemetry budget plus at most
+500ms cleanup. The two opt-in storage lanes share it; no fresh second deadline.
+It compares only exact explicitly configured native-session root strings, with
+no filesystem scope walk, command-based inference, case folding or descendant
+capture. This narrower Windows approximation avoids scope IO/network traversal
+on a five-second guard path. Start the session at the selected canonical root;
+native-host path spelling still requires actual Windows Codex acceptance. POSIX
+containment and current installed scope remain unchanged. Candidate not wired yet.

@@ -170,7 +170,10 @@ namespace CodexMods {
       if(CreateDirectoryW(path,ref security.Attributes))return;
       if(Marshal.GetLastWin32Error()!=183)throw Refuse();
      }
-     using(var pins=new Pins(path,false,true)){} // never steal or remove an existing lock
+     // A waiter must not pin the lock against deletion while its owner releases it.
+     // Its parent is already pinned/private. Invalid or disappearing locks are
+     // retried boundedly, never trusted, stolen, followed or removed.
+     try { LockExists(directory,name); } catch { }
      Thread.Sleep(10);
     }
     throw Refuse();
@@ -193,8 +196,8 @@ namespace CodexMods {
     }
    }
   }
-  static bool LockExists(string directory) {
-   string path=Path.Combine(directory,".activity-journal.lock");
+  static bool LockExists(string directory,string name=".activity-journal.lock") {
+   string path=Path.Combine(directory,name);
    using(var h=CreateFileW(path,Attributes|ReadControl,7,IntPtr.Zero,3,Backup|OpenReparse,IntPtr.Zero)) {
     if(h.IsInvalid){if(Marshal.GetLastWin32Error()==2)return false;throw Refuse();}
     Info(h,path,true);Access(h,true);return true;

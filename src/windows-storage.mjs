@@ -18,10 +18,27 @@ export function validateWindowsPrivatePath(path) {
   return path;
 }
 
-export async function windowsStorageRequest(op, path, { data = '', limit = 0 } = {}) {
+export function parseWindowsStorageResponse(output, op, limit = 0) {
+  if (!Buffer.isBuffer(output) || output.length > MAX_OUTPUT || !OPERATIONS.has(op) || !Number.isInteger(limit) || limit < 0 || limit > 1024 * 1024
+    || output.some(byte => byte > 127 || byte < 32 && byte !== 10 && byte !== 13)) throw unavailable();
+  const fields = output.toString('ascii').trim().split('|');
+  const expected = op === 'private-read' || op === 'state-list' ? 1 : op === 'journal-read' || op === 'state-read' ? 2 : 0;
+  if (fields[0] !== '2' || fields[1] !== 'ok' || fields[2] !== String(expected)) throw unavailable();
+  const data = fields.slice(3);
+  if (expected === 0 ? data.length !== 1 || data[0] !== '' : data.length !== expected) throw unavailable();
+  if (expected === 0) data.length = 0;
+  if (data.some(s => s.length % 4 || /[^A-Za-z0-9+/=]/.test(s))) throw unavailable();
+  const buffers = data.map(s => Buffer.from(s, 'base64'));
+  if (buffers.some((buffer, index) => buffer.toString('base64') !== data[index])) throw unavailable();
+  if (buffers.some(b => b.length > (op === 'private-read' ? limit : 1024 * 1024))) throw unavailable();
+  return buffers;
+}
+
+export async function windowsStorageRequest(op, path, { data = '', limit = 0, timeoutMs = 15000 } = {}) {
   if (process.platform !== 'win32' || !OPERATIONS.has(op)) throw unavailable();
   validateWindowsPrivatePath(path);
   if (typeof data !== 'string' || data.length > 24 * 1024 || !Number.isInteger(limit) || limit < 0 || limit > 1024 * 1024) throw unavailable();
+  if (!Number.isInteger(timeoutMs) || timeoutMs < 100 || timeoutMs > 15000) throw unavailable();
   const systemRoot = process.env.SystemRoot;
   if (typeof systemRoot !== 'string' || !/^[A-Za-z]:\\[^\p{Cc}]*$/u.test(systemRoot)) throw unavailable();
   const directory = win32.join(systemRoot, 'System32', 'WindowsPowerShell', 'v1.0');
@@ -57,10 +74,10 @@ export async function windowsStorageRequest(op, path, { data = '', limit = 0 } =
         killer.on('error', () => { child.kill(); finish(true); });
         killer.on('close', () => finish(true));
       } else child.kill();
-      cleanup = setTimeout(() => { killer?.kill(); child.kill(); finish(true); }, 2000);
+      cleanup = setTimeout(() => { killer?.kill(); child.kill(); finish(true); }, 500);
     };
     let cleanup;
-    const deadline = setTimeout(stop, 15000);
+    const deadline = setTimeout(stop, timeoutMs);
     child.on('error', () => finish(true));
     child.stdin.on('error', stop);
     child.stdout.on('data', chunk => {
@@ -73,16 +90,7 @@ export async function windowsStorageRequest(op, path, { data = '', limit = 0 } =
       if (failed) { if (!killer) finish(true); return; }
       if (code !== 0) { finish(true); return; }
       try {
-        const fields = Buffer.concat(chunks).toString('ascii').trim().split('|');
-        const expected = op === 'private-read' || op === 'state-list' ? 1 : op === 'journal-read' || op === 'state-read' ? 2 : 0;
-        if (fields[0] !== '2' || fields[1] !== 'ok' || fields[2] !== String(expected)) throw unavailable();
-        const data = fields.slice(3);
-        if (expected === 0 ? data.length !== 1 || data[0] !== '' : data.length !== expected) throw unavailable();
-        if (expected === 0) data.length = 0;
-        if (data.some(s => s.length % 4 || /[^A-Za-z0-9+/=]/.test(s))) throw unavailable();
-        const buffers = data.map(s => Buffer.from(s, 'base64'));
-        if (buffers.some((buffer, index) => buffer.toString('base64') !== data[index])) throw unavailable();
-        if (buffers.some(b => b.length > (op === 'private-read' ? limit : 1024 * 1024))) throw unavailable();
+        const buffers = parseWindowsStorageResponse(Buffer.concat(chunks), op, limit);
         finish(false, buffers);
       } catch { finish(true); }
     });

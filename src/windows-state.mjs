@@ -5,9 +5,9 @@ import { windowsStorageRequest } from './windows-storage.mjs';
 import { encodeJournalRecord, parseJournalFiles } from './journal.mjs';
 const KEY = /^[a-f0-9]{64}$/;
 const checkKey = key => { if (typeof key !== 'string' || !KEY.test(key)) throw new Error('Invalid metadata scope key'); return key; };
-export async function recordWindowsMetadata(dataDirectory, key, metadata, now) {
+export async function recordWindowsMetadata(dataDirectory, key, metadata, now, timeoutMs = 15000) {
   const data = checkKey(key) + ':' + Buffer.from(encodeJournalRecord(metadata, now)).toString('base64');
-  await windowsStorageRequest('state-record', dataDirectory, { data });
+  await windowsStorageRequest('state-record', dataDirectory, { data, timeoutMs });
 }
 export async function readWindowsMetadata(dataDirectory, key) {
   const files = await windowsStorageRequest('state-read', dataDirectory, { data: checkKey(key) });

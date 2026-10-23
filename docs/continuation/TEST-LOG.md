@@ -845,3 +845,17 @@ Production integration remains pending actual Windows proof. Before hook activat
 telemetry must have an overall budget below native5s deadline so it cannot delay a
 guard decision; no15s helper on that path. Windows session scope must not perform
 implicit network traversal or broaden logging. These integration gates remain High.
+
+
+### First functional native primitive results — source110477b/run40031636664
+
+Module-free copied-helper trace completed successfully with no compiler errors.
+Both Windows lanes reached actual primitive tests; Node24 observed5pass/7fail.
+Concurrent journal append/read, empty/held-lock no-write report and owned-process
+15s timeout tree cleanup passed. Six failures were Synthetic ACL fixture failed
+before reader acceptance: fixture sent raw Unicode JSON over default Windows
+console decoding, unlike corrected base64 production bridge. Next fixture uses
+ASCII JSON escapes. State concurrency failure retained; review found waiters pinned
+existing lock against deletion, racing owner release. Waiters now inspect no-follow
+with share-delete and boundedly retry invalid/disappearing locks without stealing.
+No private-reader/full scoped-state/Windows-host claim before corrected results.

@@ -13,7 +13,7 @@ try {
     $acl.AddAccessRule($rule)
   }
   if ($request.mode -eq 'null') {
-    $raw = New-Object System.Security.AccessControl.RawSecurityDescriptor([System.Security.AccessControl.ControlFlags]::DiscretionaryAclPresent,$sid,$sid,$null,$null)
+    $raw = New-Object System.Security.AccessControl.RawSecurityDescriptor(([System.Security.AccessControl.ControlFlags]::DiscretionaryAclPresent -bor [System.Security.AccessControl.ControlFlags]::DiscretionaryAclProtected),$sid,$sid,$null,$null)
     $bytes = New-Object byte[]($raw.BinaryLength)
     $raw.GetBinaryForm($bytes,0)
     $acl.SetSecurityDescriptorBinaryForm($bytes)
