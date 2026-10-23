@@ -1,0 +1,35 @@
+import { lstat, realpath } from 'node:fs/promises';
+import { isAbsolute, resolve, dirname, relative, sep } from 'node:path';
+import { readBoundedFile, parseJsonObject } from './io.mjs';
+
+// Paths are configuration, never tool parameters. This file can grant local
+// reads and must therefore be reviewed outside the model's project contents.
+export async function loadRuntimeSettings(path) {
+  if (!path) return null;
+  if (!isAbsolute(path)) throw new Error('Settings path must be absolute');
+  const file = resolve(path);
+  let cursor = file;
+  while (true) {
+    const info = await lstat(cursor);
+    if (info.isSymbolicLink()) throw new Error('Settings path cannot contain links');
+    if (cursor === file && (!info.isFile() || info.nlink !== 1)) throw new Error('Settings must be a regular unlinked file');
+    if (cursor === file && process.platform !== 'win32' && ((info.mode & 0o077) || (process.getuid && info.uid !== process.getuid()))) throw new Error('Settings must be private');
+    const parent = dirname(cursor); if (parent === cursor) break; cursor = parent;
+  }
+  if (process.platform === 'win32') throw new Error('Private runtime settings need Windows ACL validation');
+  const value = parseJsonObject(await readBoundedFile(file, 16384), 'settings');
+  if (Object.keys(value).some(key => !['version','projectRoot','dataDirectory','stateScope','sessionId','allowChanges'].includes(key)) || value.version !== 1) throw new Error('Unsupported settings');
+  for (const key of ['projectRoot','dataDirectory']) {
+    if (typeof value[key] !== 'string' || !isAbsolute(value[key]) || value[key].length > 4096 || /\p{Cc}/u.test(value[key])) throw new Error('Settings paths must be absolute and bounded');
+  }
+  const projectRoot = await realpath(value.projectRoot);
+  // A linked selected root is refused by workspace adapter; keep scope identity
+  // canonical for matching native hook cwd while never displaying this raw path.
+  if (resolve(value.projectRoot) !== projectRoot) throw new Error('Select the canonical project root');
+  const settingsRelative = relative(projectRoot, file);
+  if (settingsRelative === '' || (!isAbsolute(settingsRelative) && settingsRelative !== '..' && !settingsRelative.startsWith(`..${sep}`))) throw new Error('Keep reviewed runtime settings outside the selected project');
+  if (!['session','project'].includes(value.stateScope ?? 'session')) throw new Error('Unsupported state scope');
+  if (value.sessionId !== undefined && (typeof value.sessionId !== 'string' || !value.sessionId || value.sessionId.length > 4096 || /\p{Cc}/u.test(value.sessionId))) throw new Error('Invalid session scope');
+  if (value.allowChanges !== undefined && typeof value.allowChanges !== 'boolean') throw new Error('Invalid changes opt-in');
+  return Object.freeze({ ...value, projectRoot, dataDirectory: resolve(value.dataDirectory), stateScope: value.stateScope ?? 'session', allowChanges: value.allowChanges === true });
+}

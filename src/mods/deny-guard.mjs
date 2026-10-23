@@ -13,6 +13,8 @@ function matchesRule(rule, event) {
 
 export const denyGuard = {
   type: "denyGuard",
+  // Re-run policy checks against the one proposed command before emitting it.
+  inspectReplacement: true,
   allowedKeys: ["rules"],
   validate(raw, context) {
     if (!Array.isArray(raw.rules) || raw.rules.length === 0 || raw.rules.length > 64) {

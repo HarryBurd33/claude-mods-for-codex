@@ -1,0 +1,18 @@
+import {mkdir,cp,writeFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {join} from 'node:path';
+import {prepareDataDirectory} from '../src/journal.mjs';
+const root=fileURLToPath(new URL('../',import.meta.url));
+await prepareDataDirectory(join(root,'.local'));
+const market=join(root,'.local','hold-marketplace'),target=join(market,'plugin');
+await mkdir(market,{mode:0o700});
+await mkdir(join(market,'.agents','plugins'),{recursive:true,mode:0o700});
+await mkdir(join(target,'.codex-plugin'),{recursive:true,mode:0o700});
+await mkdir(join(target,'src'),{mode:0o700});await mkdir(join(target,'proofs'),{mode:0o700});
+for(const f of ['src/mcp-stdio.mjs','proofs/hold.mjs','proofs/hold-server.mjs','LICENSE'])await cp(join(root,f),join(target,f),{errorOnExist:true});
+const save=(path,data)=>writeFile(path,JSON.stringify(data,null,2)+'\n');
+await save(join(target,'.codex-plugin','plugin.json'),{name:'claude-mods-hold-proof',version:'0.0.4',description:'Exact harmless native elicitation probe; incomplete human provenance verification.',license:'MIT',hooks:'./hooks.json',mcpServers:'./.mcp.json',interface:{displayName:'Claude Mods Hold Proof',shortDescription:'Harmless decision probe',category:'Developer Tools',capabilities:['Read']}});
+await save(join(target,'.mcp.json'),{mcpServers:{'mods-hold':{command:'node',args:['proofs/hold-server.mjs'],cwd:'.'}}});
+await save(join(target,'hooks.json'),{hooks:{PreToolUse:[{matcher:'^Bash$',hooks:[{type:'mcp_tool',server:'mods-hold',tool:'mods.hold',input:{hook_event_name:'${hook_event_name}',tool_name:'${tool_name}',tool_input:'${tool_input}'},timeout:35,statusMessage:'Review harmless hold probe'}]}]}});
+await save(join(market,'.agents','plugins','marketplace.json'),{name:'claude-mods-hold-dev',interface:{displayName:'Claude Mods Hold Development'},plugins:[{name:'claude-mods-hold-proof',source:{source:'local',path:'./plugin'},policy:{installation:'AVAILABLE',authentication:'ON_INSTALL'},category:'Developer Tools'}]});
+console.log('Prepared .local/hold-marketplace. No installation, trust change or model call.');

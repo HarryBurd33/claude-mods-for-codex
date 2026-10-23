@@ -145,3 +145,45 @@ registration/cache, marketplace registration and separately retained data.
 
 Completion is capability-by-capability. Passing small proofs is not completion
 of these milestones or the full user request.
+
+## Sol implementation checkpoint — 2026-10-23
+
+The v2 proposal adapter is now implemented in the production dispatcher, with the
+v1 result adapter preserved. `exactCommandRewrite` is disabled unless explicitly
+configured/enabled. Only the command string changes (max200 characters); input
+is copied/frozen, denial wins before and after transformation, distinct proposals
+conflict, and full before/after disclosure is mandatory. Structural preparation
+failures after valid PreToolUse validation now emit an explicit sanitized denial.
+The host can still fail open on external hook infrastructure failures.
+
+`metadataState` configuration is default off/session scoped. Hook launch accepts
+explicit CODEX_MODS_DATA_DIR and CODEX_MODS_PROJECT_ROOT; canonical containment
+prevents recording another project into the selected scope. MCP runtime settings
+select the same directory/project/session deliberately. No session-file discovery.
+Only explicitly requested project scope aggregates sessions. Root `docs/runtime.md`
+describes actual access and setup; native Windows ACL-backed settings/state remain
+unavailable. Metadata errors cannot discard a denial.
+
+Production `.mcp.json` now declares `src/server.mjs`, using the bounded local
+`src/mcp-stdio.mjs` transport and `ui/dashboard.html`. Settings absent means project
+and scoped activity unavailable. Tools are dashboard/activity/files/changes;
+request schemas contain no arbitrary path, command, write or permission action.
+Workspace Git operations use temporary sanitized metadata, selected local objects,
+read-only copies of HEAD/index/excludes and no project/user Git configuration.
+Patch content is separately opted in. Working-tree provenance is explicit and
+must not be relabeled previous-turn replay. Unsupported Git layouts abstain.
+
+The UI owns its four views and escapes text; optional observation is bounded to30s
+with request cancellation and teardown. It remains unverified in the actual host.
+Synthetic bridge/stdio tests are separate from Astra's different native panel.
+Token/context/cache/billing data remain unavailable, never fabricated.
+
+The synchronous MCP-hook probe now has an implemented decision helper/transport.
+Known automatic review denies, a nonempty required-confirm form is used, expected
+failure emits valid denial, and acceptance would abstain for ordinary permissions.
+Actual0.0.3 host held then denied on deadline; the user reported answering a form,
+so successful human decision handling is not established. Disconnected startup
+allowed the earlier fixed marker before the MCP connection appeared. The probe
+was removed through supported CLI after testing. Reviewed source0.0.4 includes
+transport/lifecycle corrections and requires a new reviewed snapshot before any
+retest; installation/trust must not be inherited silently from0.0.3.

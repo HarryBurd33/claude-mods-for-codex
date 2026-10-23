@@ -1,8 +1,8 @@
 {
   "name": "claude-mods-for-codex",
-  "version": "0.1.1-dev.1",
+  "version": "0.2.0-dev.1",
   "private": true,
-  "description": "A small, reviewable framework for safe Codex hook mods.",
+  "description": "Reviewable local Codex hooks, scoped activity, and read-only project tools.",
   "type": "module",
   "engines": {
     "node": ">=22"
@@ -11,8 +11,21 @@
     "codex-mods": "./bin/codex-mods.mjs"
   },
   "files": [
-    ".codex-plugin/plugin.json", "bin/", "src/", "config/", "hooks/", "skills/",
-    "examples/", "fixtures/", "test/", "docs/", "proofs/", "SECURITY.md", "CONTRIBUTING.md"
+    ".codex-plugin/plugin.json",
+    "bin/",
+    "src/",
+    "config/",
+    "hooks/",
+    "skills/",
+    "examples/",
+    "fixtures/",
+    "test/",
+    "docs/",
+    "proofs/",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    ".mcp.json",
+    "ui/"
   ],
   "scripts": {
     "test": "node --test",

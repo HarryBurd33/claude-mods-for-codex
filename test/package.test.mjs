@@ -27,7 +27,11 @@ test("compatibility manifest declares hooks, skills, and contained OpenAI resour
   assert.ok(packageInfo.files.includes(".codex-plugin/plugin.json"));
   assert.ok(packageInfo.files.includes("proofs/"));
   assert.ok(!packageInfo.files.includes("plugin.json"));
-  assert.equal(manifest.mcpServers, undefined, "development proof server must not activate with the production plugin");
+  assert.equal(manifest.mcpServers, "./.mcp.json");
+  const mcp = JSON.parse(await readFile(join(root, ".mcp.json"), "utf8"));
+  assert.deepEqual(mcp.mcpServers, {"claude-mods": {command:"node", args:["src/server.mjs"], cwd:"."}});
+  assert.ok(packageInfo.files.includes("ui/"));
+  assert.ok(packageInfo.files.includes(".mcp.json"));
 });
 
 test("every packaged hook command quotes the plugin path and uses no network program", async () => {

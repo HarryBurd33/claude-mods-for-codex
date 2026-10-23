@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "mods": [
+    {
+      "id": "reviewed-exact-command-replacement",
+      "type": "exactCommandRewrite",
+      "enabled": false,
+      "rules": [
+        {
+          "toolName": "Bash",
+          "fromCommand": "printf MODS_BEFORE",
+          "toCommand": "printf MODS_AFTER"
+        }
+      ]
+    }
+  ]
+}

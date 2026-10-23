@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "claude-mods": {
+      "command": "node",
+      "args": [
+        "src/server.mjs"
+      ],
+      "cwd": "."
+    }
+  }
+}

@@ -193,3 +193,92 @@ Windows Codex installation, hooks, process cleanup or private ACL storage. The
 subsequent handoff-record commit changes documentation only. Local and remote
 code trees were independently compared, and required public records were found
 in the fetched tree.
+
+# Sol Ultra stage — 2026-10-23
+
+The human explicitly switched to GPT-6.1 Sol Ultra and resumed from verified
+bf2960e on codex/astra-groundwork. Initial working tree clean. Same-stage workers
+implemented/reviewed contracts, workspace reads and the hold proof. No additional
+model/API test turn was launched; local callbacks/services make no model calls.
+
+## New automated and review evidence
+
+Production0.2.0-dev.1 now has typed opt-in exact command replacement, scoped hook
+metadata, bounded MCP transport/dashboard and read-only Git project tools.
+Contract tests cover immutable inputs, original/revised denial precedence,
+conflicting proposals, permission-field preservation, structural failures,
+privacy, default-off storage, session isolation and explicit project scope.
+Workspace fixtures use actual macOS Git; one stalled executable is deliberately
+mocked for process-deadline cleanup, not native Git evidence. UI bridge/hold peers
+are synthetic and do not establish host rendering or human approval provenance.
+
+Independent reviews fixed these concrete issues before checkpoint:
+
+- A structural-clone failure after valid PreToolUse validation could escape with
+  no decision. It now emits a sanitized explicit denial; subprocess regressions
+  cover deep/node-limited unrelated fields and post-event fallback.
+- Malformed MCP errors could bypass output bounds. All responses/notifications
+  now share a bounded32-message/2MiB output queue and one timed write.
+- Elicitation timeout/abort now sends cancellation notifications; pending maps,
+  timers and callbacks are cleaned up. Host visual dismissal remains unverified.
+- Native host request IDs could collide with pending UI response IDs; method
+  classification precedes response lookup. Watch generation, teardown, navigation
+  refresh and correct changes.files rendering are covered by simulated tests.
+- Runtime settings require a private, unlinked file outside the selected project.
+  This is a reviewed configuration boundary, not protection from arbitrary
+  same-user local code. Paths are not accepted through UI tool parameters.
+- A cleanup test compared shared temporary-directory contents and could fail when
+  a parallel package suite created its own metadata. It now checks the exact
+  temporary path used by its mocked Git process. The initial failed run is not
+  counted as success; final rerun is recorded below.
+
+Patch content is explicitly opt-in; filename exclusions do not scan every secret
+inside otherwise allowed content. Git reads use temporary sanitized metadata and
+ignore project/user helper configuration. Native Windows/private ACL work remains
+unverified/unavailable. Source settings/native observer integration and new UI
+have no production native-host acceptance yet.
+
+## Native hold evidence and rollback
+
+A separate hold-only0.0.3 snapshot was prepared and installed via:
+
+```text
+node proofs/prepare-hold.mjs
+codex plugin marketplace add <private-hold-marketplace> --json
+codex plugin add claude-mods-hold-proof@claude-mods-hold-dev --json
+```
+
+The user explicitly trusted its single MCP hook. The first exact harmless
+`printf MODS_HOLD` printed MODS_HOLD before the new MCP server appeared in the
+active tool inventory. After server availability, the next identical native call
+held30s and was blocked by the hook's decision-deadline denial. The user reported
+answering the form. Successful accept/decline handling and the reason for that
+discrepancy remain unresolved; no human-acceptance claim follows. This provides
+native held/timeout-deny evidence and a real connection/fail-open dependency.
+No destructive operation or model turn was used.
+
+The installed snapshot was not edited after review. After preserving a private
+current-config backup, supported plugin remove and marketplace remove succeeded
+for only claude-mods-hold-proof@claude-mods-hold-dev / claude-mods-hold-dev. A parsed
+before/after comparison confirmed only owned hold-probe config entries changed.
+Fresh-host loaded-tool/process absence is still unverified. Original Astra native
+proof0.0.2 is preserved installed/enabled/trusted; production is not installed.
+Private hold snapshots remain ignored. Reviewed source0.0.4 contains fixes and
+requires a new snapshot/review/trust cycle before any retest; old trust is not
+silently reused.
+
+## Sol checkpoint verification
+
+Final local suite, packaging and remote observations are appended before the
+human-controlled switch. No workflow presence alone is called CI success.
+
+Final Sol local run: `npm test` **127 passed,0 failed,1 Windows-only skip
+(128 total)**; `npm run validate`3 mods valid; `npm run replay` all shipped
+fixtures valid; `git diff --check` passed. Final focused transport/UI12 tests
+include a real stalled-output deadline with synthetic streams; dashboard4 and
+hold8 passed. All tests remain separate from native evidence.
+Intermediate87-file source archive (519197 unpacked bytes) included .mcp.json,
+compatibility manifest, UI and public handoff, excluded private roots/links and
+portable root manifest, and passed clean extraction test/validate/replay. That
+archive preceded final review corrections; final release must rebuild exact
+source. A fresh checkpoint package/run is recorded separately if performed.

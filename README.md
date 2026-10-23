@@ -1,9 +1,10 @@
 # Claude Mods for Codex
 
-**Development checkpoint `0.1.1-dev.1`: the full requested product is incomplete.**
+**Development checkpoint `0.2.0-dev.1`: the full requested product is incomplete.**
 This branch corrects hook packaging and adds tested building blocks and separate
-native proofs. The production dispatcher still provides the three v0.1 examples
-below. See [current status](docs/continuation/STATUS.md), the
+native proofs. The dispatcher preserves the three v0.1 examples and adds opt-in exact command
+replacement and scoped metadata. The new local dashboard and project views are
+source implementations awaiting native acceptance. See [runtime access and use](docs/runtime.md). See [current status](docs/continuation/STATUS.md), the
 [requirements ledger](docs/continuation/REQUIREMENTS.md), and the
 [next-stage handoff](docs/continuation/HANDOFF.md).
 
@@ -22,7 +23,7 @@ This is an independent project. It is not affiliated with, endorsed by, or maint
 ## What it does
 
 - Runs one deterministic dispatcher for `SessionStart`, `PreToolUse`, and `PostToolUse`.
-- Emits only an empty response, a bounded `systemMessage`, or the documented `PreToolUse` denial shape.
+- Emits bounded abstention/notices/denials and, only for explicitly enabled exact Bash rules, a validated command replacement with visible before/after and normal permissions.
 - Keeps a denial effective regardless of later configured mods.
 - Validates a narrow JSON configuration. It never evaluates configuration as code or loads remote modules.
 - Keeps journaling off by default. When enabled, it stores only time, event name, tool identifier, and a deny outcome in Codex's explicit plugin data directory.
@@ -74,7 +75,9 @@ See [configuration](docs/configuration.md), [wire format](docs/wire-format.md), 
 
 ## Install manually
 
-This checkpoint is source-only. Follow [setup](docs/setup.md) to register a local
+This checkpoint is source-only. It now declares a local MCP dashboard service;
+project and activity access are unavailable until explicitly configured.
+Read [runtime setup and limits](docs/runtime.md) before enabling it. Follow [setup](docs/setup.md) to register a local
 marketplace, install the reviewed package and complete human hook trust. It uses
 only `.codex-plugin/plugin.json`: released CLI0.163.0/0.164.0 skip hooks when a
 portable root manifest is selected. Do not restore that root manifest.

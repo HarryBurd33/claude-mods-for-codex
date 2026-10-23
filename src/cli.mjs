@@ -5,6 +5,7 @@ import { loadConfig } from "./config.mjs";
 import { dispatch } from "./dispatcher.mjs";
 import { MAX_STDIN_BYTES } from "./constants.mjs";
 import { parseJsonObject, readBoundedFile, readBoundedStream } from "./io.mjs";
+import { listProjectFiles, inspectProjectChanges } from "./workspace.mjs";
 import { readJournalEntries, summarizeJournal } from "./journal.mjs";
 
 const PLUGIN_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -17,12 +18,17 @@ export const HELP = `Claude Mods for Codex
 Usage:
   codex-mods validate [--config PATH]
   codex-mods replay [--config PATH] (--event PATH | --fixtures DIRECTORY | --stdin)
+  codex-mods files --project PATH
+  codex-mods changes --project PATH [--include-diffs]
   codex-mods report --data-dir PATH
   codex-mods help
 
 Commands:
   validate  Check the local mod configuration without running a hook.
   replay    Replay saved JSON envelopes offline and print restricted responses.
+  files     List bounded non-secret project filenames and Git status, read-only.
+  changes   Inspect Git working-tree changes against HEAD, read-only.
+            Patch text requires --include-diffs and may contain sensitive data.
   report    Summarize the opt-in metadata journal. Raw records are not printed.
 
 The default config is config/mods.json in this plugin. Journaling is disabled by
@@ -33,8 +39,8 @@ function parseOptions(args, allowed) {
   for (let index = 0; index < args.length; index += 1) {
     const flag = args[index];
     if (!allowed.has(flag)) throw new Error(`unknown option: ${flag}`);
-    if (flag === "--stdin") {
-      options.stdin = true;
+    if (["--stdin", "--include-diffs"].includes(flag)) {
+      options[flag.slice(2).replaceAll("-", "_")] = true;
       continue;
     }
     const value = args[index + 1];
@@ -93,6 +99,13 @@ export async function runCli(argv, streams = process) {
     return;
   }
   if (command === "replay") return replay(args, streams);
+  if (command === "files" || command === "changes") {
+    const options = parseOptions(args, new Set(["--project", ...(command === "changes" ? ["--include-diffs"] : [])]));
+    if (options.project === undefined) throw new Error(`${command} requires --project PATH`);
+    const result = command === "files" ? await listProjectFiles(options.project) : await inspectProjectChanges(options.project, {includeDiffs: options.include_diffs === true});
+    streams.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
+    return;
+  }
   if (command === "report") {
     const options = parseOptions(args, new Set(["--data-dir"]));
     if (options.data_dir === undefined) throw new Error("report requires --data-dir PATH");

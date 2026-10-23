@@ -1,7 +1,7 @@
 {
   "name": "claude-mods-for-codex",
-  "version": "0.1.1-dev.1",
-  "description": "A small, reviewable framework for visible notices, deny-only tool policy, and opt-in metadata activity reports in Codex.",
+  "version": "0.2.0-dev.1",
+  "description": "Local hook contracts, opt-in scoped metadata, and a read-only project dashboard. Incomplete development checkpoint.",
   "author": {
     "name": "HarryBurd33"
   },
@@ -19,10 +19,13 @@
   "interface": {
     "displayName": "Claude Mods for Codex",
     "shortDescription": "Reviewable local hook mods",
-    "longDescription": "Configure and replay a small set of reviewable Codex hook mods: a visible session notice, a deny-only lexical tool guard, and an opt-in metadata-only activity report.",
+    "longDescription": "Local hook contracts, opt-in scoped metadata, and a read-only project dashboard. Incomplete development checkpoint.",
     "developerName": "HarryBurd33",
     "category": "Developer Tools",
-    "capabilities": [],
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
     "websiteURL": "https://github.com/HarryBurd33/claude-mods-for-codex",
     "defaultPrompt": "Help me review and configure Claude Mods for Codex safely."
   },
@@ -30,5 +33,6 @@
     "com.openai": {
       "onboardingSkill": "./skills/manage-claude-mods/SKILL.md"
     }
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

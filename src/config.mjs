@@ -3,7 +3,7 @@ import { MAX_CONFIG_BYTES, MAX_MESSAGE_CHARS } from "./constants.mjs";
 import { parseJsonObject, readBoundedFile } from "./io.mjs";
 import { getModDefinition } from "./mods/registry.mjs";
 
-const TOP_KEYS = new Set(["version", "mods"]);
+const TOP_KEYS = new Set(["version", "mods", "metadataState"]);
 const COMMON_KEYS = new Set(["id", "type", "enabled"]);
 
 export function fail(message) {
@@ -62,7 +62,16 @@ export function validateConfig(raw) {
   if (raw.version !== 1) fail("version must be 1");
   if (!Array.isArray(raw.mods) || raw.mods.length > 64) fail("mods must be an array with at most 64 entries");
   const ids = new Set();
-  return { version: 1, mods: raw.mods.map((mod, index) => validateMod(mod, index, ids)) };
+  const metadataState = { enabled: false, scope: "session" };
+  if (raw.metadataState !== undefined) {
+    if (raw.metadataState === null || typeof raw.metadataState !== "object" || Array.isArray(raw.metadataState)) fail("metadataState must be an object");
+    assertOnlyKeys(raw.metadataState, new Set(["enabled", "scope"]), "metadataState");
+    if (typeof raw.metadataState.enabled !== "boolean") fail("metadataState.enabled must be boolean");
+    if (raw.metadataState.scope !== undefined && !["session", "project"].includes(raw.metadataState.scope)) fail("metadataState.scope must be session or project");
+    metadataState.enabled = raw.metadataState.enabled;
+    metadataState.scope = raw.metadataState.scope ?? "session";
+  }
+  return { version: 1, mods: raw.mods.map((mod, index) => validateMod(mod, index, ids)), metadataState };
 }
 
 export async function loadConfig(configPath) {
