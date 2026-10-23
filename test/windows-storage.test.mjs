@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { mkdtemp, mkdir, readFile, readdir, writeFile, link, symlink, rm, realpath } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, win32 } from 'node:path';
@@ -135,4 +136,24 @@ Start-Sleep -Seconds 60
   assert.ok(performance.now()-start>=14000);assert.ok(performance.now()-start<23000);
   const pid=Number(await readFile(join(root,'windows/child.pid'),'utf8'));assert.ok(Number.isInteger(pid)&&pid>0);
   assert.throws(()=>process.kill(pid,0),{code:'ESRCH'});
+});
+
+
+test('native Windows scoped candidate isolates sessions, preserves concurrent records and prunes only exact unchanged scope',native,async t=>{
+  const {data}=await directory(t),one='1'.repeat(64),two='2'.repeat(64);
+  const state=join(data,'metadata-state-v1');
+  assert.deepEqual((await windowsStorageRequest('state-read',data,{data:one})).map(b=>b.length),[0,0]);
+  assert.deepEqual(await readdir(data),[]);
+  await Promise.all(Array.from({length:4},()=>windowsStorageRequest('state-record',data,{data:one+':'+fixedRecord})));
+  await windowsStorageRequest('state-record',data,{data:two+':'+fixedRecord});
+  const first=await windowsStorageRequest('state-read',data,{data:one});
+  assert.equal(first[1].toString('utf8').trim().split('\n').length,4);
+  assert.equal((await windowsStorageRequest('state-read',data,{data:two}))[1].toString('utf8').trim().split('\n').length,1);
+  assert.deepEqual(JSON.parse((await windowsStorageRequest('state-list',data))[0]),[one,two]);
+  await assert.rejects(windowsStorageRequest('state-prune',data,{data:one+':'+ '0'.repeat(64)}),/Private Windows/);
+  assert.equal((await readFile(join(state,one,'activity.jsonl'),'utf8')).trim().split('\n').length,4);
+  const hash=createHash('sha256').update(first[0]).update(Buffer.from([0])).update(first[1]).digest('hex');
+  await windowsStorageRequest('state-prune',data,{data:one+':'+hash});
+  assert.deepEqual(await readdir(state),[two]);
+  assert.equal((await windowsStorageRequest('state-read',data,{data:two}))[1].toString('utf8').trim().split('\n').length,1);
 });

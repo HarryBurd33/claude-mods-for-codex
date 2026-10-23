@@ -103,7 +103,9 @@ namespace CodexMods {
   }
   sealed class Pins : IDisposable {
    readonly List<SafeFileHandle> handles=new List<SafeFileHandle>();
-   public Pins(string path,bool create,bool targetDirectory) {
+   public bool Exists=true;
+   public Pins(string path,bool create,bool targetDirectory,bool allowMissing=false) {
+    PathInput(path);
     try {
      string root=path.Substring(0,3),cursor=root;
      Pin(root,false);Volume(handles[0],path);
@@ -114,6 +116,7 @@ namespace CodexMods {
       var h=OpenDirectory(cursor);
       if(h.IsInvalid) {
        int error=Marshal.GetLastWin32Error();h.Dispose();
+       if(!create && allowMissing && (error==2 || error==3)){Dispose();Exists=false;return;}
        if(!create || error!=2 && error!=3) throw Refuse();
        // Atomic private descriptor at creation: no create-then-chmod window.
        // Another cooperating creator may win; open and verify the actual object.
@@ -162,8 +165,8 @@ namespace CodexMods {
   }
   sealed class JournalLock : IDisposable {
    readonly string path;
-   public JournalLock(string directory) {
-    path=Path.Combine(directory,".activity-journal.lock");
+   public JournalLock(string directory,string name=".activity-journal.lock") {
+    path=Path.Combine(directory,name);
     for(int n=0;n<50;n++) {
      using(var security=new Creation(true)) {
       if(CreateDirectoryW(path,ref security.Attributes))return;
@@ -211,15 +214,7 @@ namespace CodexMods {
    }
    return result.ToString();
   }
-  public static string[] Run(string op,string path,string data,int limit) {
-   path=PathInput(path);
-   if(op=="prepare-directory") {using(var pins=new Pins(path,true,true)){};return new string[0];}
-   if(op=="private-read") {
-    if(limit<1 || limit>JournalLimit)throw Refuse();
-    using(var pins=new Pins(path,false,false))return new string[]{Convert.ToBase64String(ReadFile(path,limit,false))};
-   }
-   if(op=="journal-append") {Append(path,Convert.FromBase64String(data));return new string[0];}
-   if(op=="journal-read") {
+  static string[] ReadJournal(string path) {
     using(var pins=new Pins(path,false,true)) {
      for(int attempt=0;attempt<50;attempt++) {
       if(LockExists(path)){Thread.Sleep(10);continue;}
@@ -232,7 +227,80 @@ namespace CodexMods {
      }
      throw Refuse();
     }
+  }
+  static List<string> StateNames(string root) {
+   var names=new List<string>();
+   foreach(string entry in System.IO.Directory.EnumerateFileSystemEntries(root)) {
+    string name=Path.GetFileName(entry);
+    if(name==".state.lock")continue;
+    if(!System.Text.RegularExpressions.Regex.IsMatch(name,"^[a-f0-9]{64}$"))throw Refuse();
+    using(var pins=new Pins(entry,false,true)){}
+    names.Add(name);if(names.Count>64)throw Refuse();
    }
+   names.Sort(StringComparer.Ordinal);return names;
+  }
+  static string Digest(byte[] first,byte[] second) {
+   using(var stream=new MemoryStream())using(var hash=System.Security.Cryptography.SHA256.Create()) {
+    stream.Write(first,0,first.Length);stream.WriteByte(0);stream.Write(second,0,second.Length);
+    stream.Position=0;return BitConverter.ToString(hash.ComputeHash(stream)).Replace("-","").ToLowerInvariant();
+   }
+  }
+  static string[] State(string op,string dataRoot,string data) {
+   if(dataRoot.Length+83>240)throw Refuse();
+   bool write=op=="state-record";
+   using(var dataPins=new Pins(dataRoot,write,true,!write)) {
+    if(!dataPins.Exists)return op=="state-list"?new string[]{"W10="}:new string[]{"",""};
+    string root=Path.Combine(dataRoot,"metadata-state-v1");
+    using(var rootPins=new Pins(root,write,true,!write)) {
+     if(!rootPins.Exists)return op=="state-list"?new string[]{"W10="}:new string[]{"",""};
+     if(op=="state-list") {
+      var names=StateNames(root);string json="["+String.Join(",",names.ConvertAll(n=>"\""+n+"\""))+ "]";
+      return new string[]{Convert.ToBase64String(Encoding.UTF8.GetBytes(json))};
+     }
+     if(data==null || data.Length<64 || !System.Text.RegularExpressions.Regex.IsMatch(data.Substring(0,64),"^[a-f0-9]{64}$"))throw Refuse();
+     string key=data.Substring(0,64),scope=Path.Combine(root,key);
+     if(op=="state-read") {
+      if(data.Length!=64)throw Refuse();
+      using(var scopePins=new Pins(scope,false,true,true)) {
+       if(!scopePins.Exists)return new string[]{"",""};
+       return ReadJournal(scope);
+      }
+     }
+     using(var rootLock=new JournalLock(root,".state.lock")) {
+      var names=StateNames(root);
+      if(op=="state-record") {
+       if(data.Length<66 || data[64]!=':' || !names.Contains(key) && names.Count>=64)throw Refuse();
+       using(var scopePins=new Pins(scope,true,true))Append(scope,Convert.FromBase64String(data.Substring(65)));
+       return new string[0];
+      }
+      if(op!="state-prune" || data.Length!=129 || data[64]!=':' || !System.Text.RegularExpressions.Regex.IsMatch(data.Substring(65),"^[a-f0-9]{64}$") || !names.Contains(key))throw Refuse();
+      using(var scopePins=new Pins(scope,false,true))using(var scopeLock=new JournalLock(scope)) {
+       foreach(string entry in System.IO.Directory.EnumerateFileSystemEntries(scope)) {
+        string name=Path.GetFileName(entry);
+        if(name!="activity.jsonl" && name!="activity.previous.jsonl" && name!=".activity-journal.lock")throw Refuse();
+       }
+       string archive=Path.Combine(scope,"activity.previous.jsonl"),current=Path.Combine(scope,"activity.jsonl");
+       byte[] first=ReadFile(archive,JournalLimit,true),second=ReadFile(current,JournalLimit,true);
+       if(Digest(first,second)!=data.Substring(65))throw Refuse(); // freshness is not authenticated consent
+       if(File.Exists(archive))File.Delete(archive);
+       if(File.Exists(current))File.Delete(current);
+      }
+      System.IO.Directory.Delete(scope,false);
+      return new string[0];
+     }
+    }
+   }
+  }
+  public static string[] Run(string op,string path,string data,int limit) {
+   path=PathInput(path);
+   if(op=="prepare-directory") {using(var pins=new Pins(path,true,true)){};return new string[0];}
+   if(op=="private-read") {
+    if(limit<1 || limit>JournalLimit)throw Refuse();
+    using(var pins=new Pins(path,false,false))return new string[]{Convert.ToBase64String(ReadFile(path,limit,false))};
+   }
+   if(op=="journal-append") {Append(path,Convert.FromBase64String(data));return new string[0];}
+   if(op=="journal-read")return ReadJournal(path);
+   if(op=="state-record" || op=="state-read" || op=="state-list" || op=="state-prune")return State(op,path,data);
    throw Refuse();
   }
  }

@@ -782,3 +782,16 @@ while workflow still running returned403, no retry occurred. No POSIX runtime
 change/fix claim. Next source adds explicit newline/ASCII-escaped IPC framing,
 independent public-source compiler check and null-DACL/ancestor/process-deadline
 tests; actual root cause awaits observed Windows results. Production still refused.
+
+
+### Second candidate CI — source2c0b910, run40028598107
+
+Both Windows public-source compiler steps passed; candidate calls still reached
+15s deadlines. Node24 native lane2pass/9fail, including owned-child simulation
+which never produced its child.pid; no ACL/process-cleanup success claimed.
+All4POSIX jobs and Windows portable lane passed. ASCII/newline framing alone did
+not resolve startup; next source preserves a narrow OS profile/runtime environment
+allowlist and adds an independent fixed-output startup diagnostic (no env values
+or file contents printed). No policy override/full inherited environment.
+Scoped-state candidate now includes hash-only directories and fresh-content-hash
+retention under native locks, still not production-enabled until exact native tests.

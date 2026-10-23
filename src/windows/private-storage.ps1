@@ -11,7 +11,7 @@ try {
   }
   $request = $text.ToString() | ConvertFrom-Json
   if (($request.PSObject.Properties.Name | Sort-Object) -join ',' -ne 'data,limit,op,path,version' -or $request.version -ne 1) { throw 'Request shape' }
-  if ($request.op -notin @('prepare-directory','private-read','journal-append','journal-read')) { throw 'Operation' }
+  if ($request.op -notin @('prepare-directory','private-read','journal-append','journal-read','state-record','state-read','state-list','state-prune')) { throw 'Operation' }
   Add-Type -Path (Join-Path $PSScriptRoot 'PrivateStorage.cs')
   $result = @([CodexMods.PrivateStorage]::Run([string]$request.op,[string]$request.path,[string]$request.data,[int]$request.limit))
   [Console]::WriteLine((@{version=1;ok=$true;data=$result} | ConvertTo-Json -Compress))

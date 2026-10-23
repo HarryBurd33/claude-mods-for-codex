@@ -14,7 +14,8 @@ any production route is enabled.
 ## Candidate boundary
 
 src/windows-storage.mjs launches only fixed Windows PowerShell5.1 with -NoProfile,
--NonInteractive and the fixed packaged .ps1 path. No shell interpolation, PATH-selected
+-NonInteractive and the fixed packaged .ps1 path. A narrow allowlist of OS profile/runtime variables is supplied; no full inherited
+environment or arbitrary credential/API-key variables. No shell interpolation, PATH-selected
 helper, elevation, execution-policy override, profile, downloaded module or model
 call. Input JSON is bounded32KiB; output bounded3MiB,15s deadline plus2s cleanup,
 own helper tree targeted through fixed system taskkill on timeout. Errors are
@@ -60,8 +61,9 @@ or hostile-same-user defense. Metadata allowlist still belongs to journal.mjs.
 Current macOS syntax/path/POSIX tests are not Windows evidence. New Windows Node22/
 24 CI runs real ACL/file APIs: protected current-user reads, broad/inherited/wrong-
 owner refusal, broad allow despite deny, hardlinks/junctions, no-write reports,
-concurrent appends, rotation/unsafe archive and held-lock bounds. First CI result
-is pending at this candidate checkpoint. No native Windows Codex install/events,
+concurrent appends, rotation/unsafe archive and held-lock bounds. Initial two candidate runs hit15s process deadlines; independent C# compilation
+passed on the second run, but no ACL success is inferred. Selected OS environment
+startup diagnosis and scoped-state candidate tests are the next exact-source gates. No native Windows Codex install/events,
 Windows11 desktop, WSL or Windows restore claim. Windows CI is an OS primitive
 proof, not host integration. Runtime state/settings/exports/restore stay refused
 until reviewed integration and corresponding tests are completed.

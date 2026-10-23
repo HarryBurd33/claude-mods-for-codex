@@ -4,7 +4,7 @@ import { win32 } from 'node:path';
 
 const SCRIPT = fileURLToPath(new URL('./windows/private-storage.ps1', import.meta.url));
 const MAX_OUTPUT = 3 * 1024 * 1024;
-const OPERATIONS = new Set(['prepare-directory', 'private-read', 'journal-read', 'journal-append']);
+const OPERATIONS = new Set(['prepare-directory', 'private-read', 'journal-read', 'journal-append', 'state-record', 'state-read', 'state-list', 'state-prune']);
 const unavailable = () => new Error('Private Windows storage unavailable; review local NTFS ownership, protected ACLs, path, helper policy and bounds');
 
 // This is deliberately stricter than general Windows paths. No normalization can
@@ -25,9 +25,16 @@ export async function windowsStorageRequest(op, path, { data = '', limit = 0 } =
   const systemRoot = process.env.SystemRoot;
   if (typeof systemRoot !== 'string' || !/^[A-Za-z]:\\[^\p{Cc}]*$/u.test(systemRoot)) throw unavailable();
   const directory = win32.join(systemRoot, 'System32', 'WindowsPowerShell', 'v1.0');
-  const environment = { SystemRoot: systemRoot, windir: systemRoot,
-    PATH: win32.join(systemRoot, 'System32'), PSModulePath: win32.join(directory, 'Modules'),
-    ...(process.env.TEMP ? { TEMP: process.env.TEMP } : {}), ...(process.env.TMP ? { TMP: process.env.TMP } : {}) };
+  // Windows PowerShell/CLR startup uses Windows profile and runtime locations.
+  // Pass only these OS variables, never the calling process's full environment.
+  const environment = {};
+  for (const name of ['SystemRoot','windir','SystemDrive','ComSpec','TEMP','TMP','USERPROFILE','HOMEDRIVE','HOMEPATH','APPDATA','LOCALAPPDATA','ProgramFiles','ProgramFiles(x86)','ProgramW6432','NUMBER_OF_PROCESSORS','PROCESSOR_ARCHITECTURE','OS']) {
+    if (process.env[name] !== undefined) environment[name] = process.env[name];
+  }
+  environment.SystemRoot = systemRoot;
+  environment.windir = systemRoot;
+  environment.PATH = win32.join(systemRoot, 'System32');
+  environment.PSModulePath = win32.join(directory, 'Modules');
   const encoded = JSON.stringify({ version: 1, op, path, data, limit }).replace(/[^\x00-\x7f]/g, character => `\\u${character.charCodeAt(0).toString(16).padStart(4, '0')}`);
   const request = Buffer.from(encoded + '\n', 'ascii');
   if (request.length > 32768) throw unavailable();
@@ -69,7 +76,7 @@ export async function windowsStorageRequest(op, path, { data = '', limit = 0 } =
         const value = JSON.parse(Buffer.concat(chunks).toString('utf8'));
         if (!value || Object.keys(value).sort().join() !== 'data,ok,version' || value.version !== 1 || value.ok !== true
           || !Array.isArray(value.data) || value.data.length > 2 || value.data.some(s => typeof s !== 'string' || s.length % 4 || /[^A-Za-z0-9+/=]/.test(s))) throw unavailable();
-        const expected = op === 'private-read' ? 1 : op === 'journal-read' ? 2 : 0;
+        const expected = op === 'private-read' || op === 'state-list' ? 1 : op === 'journal-read' || op === 'state-read' ? 2 : 0;
         if (value.data.length !== expected) throw unavailable();
         const buffers = value.data.map(s => Buffer.from(s, 'base64'));
         if (buffers.some((buffer, index) => buffer.toString('base64') !== value.data[index])) throw unavailable();
