@@ -143,8 +143,8 @@ were observed after restart. A human in the Medium continuation confirmed Tab fr
 Preview source reached Render locally and Enter rendered the diagram; permitted
 MCP Apps inspection confirmed the resulting3nodes/2edges and complete tables.
 This establishes that one keyboard path, not full focus/screen-reader/lifecycle
-accessibility. Resize, close/reopen and close-pending remain separate acceptance
-checks until recorded. Synthetic bridge cancellation/teardown tests remain distinct
+accessibility. The human also confirmed narrower/wider preview usability; exact widths were not
+measured. Close/reopen and close-pending remain separate acceptance checks. Synthetic bridge cancellation/teardown tests remain distinct
 from actual host lifecycle behavior. No button approves a native tool call.
 
 Token/context/cache/billing information is unavailable from the hook feed.

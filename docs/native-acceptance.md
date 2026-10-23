@@ -10,7 +10,7 @@ or theme selection is implied. Keep other plugins and existing data unchanged.
 | Check | Exact action and expected result | Current evidence |
 | --- | --- | --- |
 | Preview keyboard | Click Preview source, press Tab once, then Enter. Focus should reach Render locally and render the sample. | Human confirmed2026-10-23; permitted MCP Apps inspection saw3nodes/2edges and complete tables. One keyboard path only. |
-| Preview resize | Drag the divider between this chat and Claude Mods narrower, then wider. Source and Render/Clear should remain usable. | Human result pending; static CSS/DOM is not native resizing proof. |
+| Preview resize | Drag the divider between this chat and Claude Mods narrower, then wider. Source and Render/Clear should remain usable. | Human confirmed both narrower and wider widths remained usable2026-10-23; exact widths not measured. |
 | Other keyboard controls | From Render locally, Shift-Tab should return to source; Tab should reach Clear. Use the labeled Format select to change format. | Not established. Preserve any user-entered source before Clear. |
 | Screen reader/zoom/contrast | Inspect labels, equivalent node/edge tables, meaningful diff signs and visible focus in the actual host/settings chosen by the user. | Not established. Do not change OS accessibility/preferences silently. |
 | Close/reopen | Close only the Claude Mods panel, preserving this chat. Reopen through the installed entry or ask for mods.dashboard in this same chat. It should reconnect with the same selected scope/counts; local source need not persist. | Native reopen/loaded-session behavior not established. This does not alone prove pending requests were cancelled. |

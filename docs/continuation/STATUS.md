@@ -6,14 +6,20 @@ nonmatching offline fixtures and a review sequence to disabled declarative mod
 scaffolds. It does not install or enable them. The current selected-chat skills
 were applied to disposable synthetic data without an additional model evaluator.
 Local full suite170pass/0fail/20Windows-only skips190total; focused author/package
-7pass. Source8 CI pending. See[authoring](../authoring.md) and
+7pass. Source8[d7fafbb](https://github.com/HarryBurd33/claude-mods-for-codex/commit/d7fafbb2444f50be6c05993b53365760aad6e93e)
+[CI40037382500](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40037382500)
+passed all7jobs:4POSIX full, portable Windows including generated CLI fixtures,
+and2NTFS lanes20/20 each. See[authoring](../authoring.md) and
 [skill workflows](../skill-workflows.md). Installed dev6 remains unchanged.
 
 Human confirmed the installed preview's source → Tab → Render → Enter path;
 permitted MCP Apps inspection confirmed3nodes/2edges and complete tables. Resize
-question is pending. This is partial keyboard acceptance, not full accessibility.
+was also human-confirmed at narrower/wider widths. This is partial accessibility
+acceptance, not a full keyboard/screen-reader audit.
 [Native acceptance](../native-acceptance.md) gives remaining concrete checks.
-No work on gated Windows paths occurred; High is required before those next steps.
+No work on gated Windows paths occurred. After verified publication/readback,
+select GPT-6.1 Sol High before the next Windows Git/scratch/process/project-write
+implementation work. Current Medium work stops at that boundary.
 
 ## Source Windows security milestone
 
@@ -58,7 +64,7 @@ passed. Supported unchanged remove/reinstall restored125exact files/three truste
 hooks/zero errors and fresh-session absence during removal. Already-loaded unload,
 UI disable/older-version rollback remain unverified. Neither source7 nor8 is installed.
 
-No installation/config/trust changes this High stage. Same selected private project,
+No installation/config/trust changes during the High storage or Medium authoring stages. Same selected private project,
 data/settings/scope/retention/patches/commits/export. Actual installed activity
 read after source integration:4records/same revision. Current chat outside selected
 child logging project; no capture is correct. Optional observers unregistered/off,
@@ -67,7 +73,7 @@ unchanged. No additional model/API evaluation, session discovery or raw event lo
 
 ## Remaining work
 
-All93rows stay in scope. Native accessibility/resize/close-pending, broader safe
+All93rows stay in scope. Full native accessibility/close-pending, broader safe
 skill invocation, supported disable/older rollback/loaded lifecycle, theme choice,
 optional observer delivery and full platform acceptance remain incomplete. Human
 protected steps must be concrete; no extra model run, optional telemetry or theme/

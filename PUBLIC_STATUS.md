@@ -3,9 +3,10 @@
 **Development source0.2.0-dev.8; full requested product incomplete.**
 Human resumed Sol Medium from verified0c3413b. Source8 adds self-contained
 matching/control replay fixtures to disabled generated mods, with review steps.
-Real CLI regression and local170pass/20Windows-only skips passed; source8 CI is
-pending. Installed dev6/logging/trust unchanged. One native preview keyboard
-path was human-confirmed and inspected; full accessibility remains incomplete.
+Real CLI regression/local170pass/20Windows-only skips and all7source8 CI jobs
+passed. Installed dev6/logging/trust unchanged. One native preview keyboard
+path was human-confirmed/inspected, and narrower/wider usability human-confirmed;
+full accessibility remains incomplete.
 
 The High Windows private-storage milestone now has real Windows Server2025 NTFS
 CI: all20tests passed on both Node22/24, plus all4POSIX and portable Windows jobs.
@@ -26,11 +27,11 @@ restricted local preview/Clear, nested explorer, selected diffs/passive counters
 reviewed authored print rewrite/control/deny observed. Supported identical remove/
 reinstall passed fresh-session absence,125matching files and configuration/trust
 preservation. Already-loaded unload/UI disable/older rollback remain unverified.
-No installation/config/trust/logging change this High stage; activity4/same revision.
+No installation/config/trust/logging change in the High storage/Medium authoring stages; activity4/same revision.
 Optional observers off, theme unapplied, client unchanged, no extra model run.
 
 Current human setting Sol Medium. This phase covers authoring/skill/verification
-and concrete native acceptance preparation. High is required before addressing
+and concrete native acceptance preparation. After verified publication/readback, select GPT-6.1 Sol High before addressing
 gated Windows dashboard/Git/restore paths; no background/subagent substitute.
 
 Remaining full-product work includes accessibility, broader skills, lifecycle/

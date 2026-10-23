@@ -5,7 +5,11 @@
 Human resumed Medium from verified0c3413b. Its formerly pending docs CI40036283037
 was read: all7jobs success. New source0.2.0-dev.8 adds generated matching/control
 JSON fixtures and disabled/temporary-enabled review instructions. No Windows gated
-path or installed cache/config/trust/logging change. Source8 CI pending.
+path or installed cache/config/trust/logging change. Source8[d7fafbb](https://github.com/HarryBurd33/claude-mods-for-codex/commit/d7fafbb2444f50be6c05993b53365760aad6e93e)
+[CI40037382500](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40037382500)
+all7jobs success: all4POSIX full suites, portable Windows and both NTFS lanes.
+Windows generated authoring CLI2pass/0fail/1POSIX-only link-test skip; generated
+matching/control regression actually ran. Both NTFS Node22/24 lanes20pass/0fail.
 
 - node --test test/scaffold.test.mjs:3pass, including real CLI scaffold/validate/
   disabled+enabled replay for notice/deny/replacement and control collisions.
@@ -29,8 +33,23 @@ path or installed cache/config/trust/logging change. Source8 CI pending.
 - Actual installed mods.dashboard reconnected via permitted MCP Apps; activity4/
   same revision. Opened Local preview. Human confirmed source→Tab→Render→Enter;
   permitted inspection verified3nodes/2edges and complete tables. Screenshots stay
-  ignored/local. Native resize question pending; full accessibility/lifecycle not
+  ignored/local. Human confirmed narrower/wider preview usability; full accessibility/lifecycle not
   inferred. No private app CUA, settings/theme change or new native model prompt.
+
+Anonymous config/credential-helper-disabled clone exactd7fafbb/tree4f927dd626bff034948d4f1597d0140612668f9f
+reran npm test170pass/0fail/20Windows-only skips190total, validate3mods/replay4fixtures
+passed. Documentation-only final records do not change tested executable/test/
+skill/config assets. Final package inspection/extraction/readback recorded only
+after observation; no native source8 installation or full-product claim.
+
+Package review observed140files, no links/traversal/private root handoff/.local/
+.git/dependencies/machine-private paths/portable root manifest. Runtime/test/skill/
+config/UI/example/proof assets byte-equal fully tested anonymous d7fafbb clone.
+Path-with-spaces extraction validate/replay passed. Records-only final rebuild
+must keep those assets equal; exact final archive identity is recorded privately
+and after readback, not embedded into itself. No redundant full-suite repeat after
+documentation-only changes. All93requirement IDs retained. Actual installed
+mods.activity at final verification still4/same revision; no scope/retention change.
 
 ## Current High Windows storage milestone — 2026-10-23
 

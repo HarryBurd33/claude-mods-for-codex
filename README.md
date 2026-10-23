@@ -51,7 +51,8 @@ alternative. An original [theme example and supported setup/rollback guide](docs
 provided without applying it or upgrading Codex. The management skill reflects
 the reviewed exact-replacement contract; the source scaffolding skill now uses
 self-contained fixtures. A human confirmed the installed dev6 Preview source →
-Tab → Enter rendering path; broader accessibility remains incomplete. Continue through the [handoff](docs/continuation/HANDOFF.md).
+Tab → Enter rendering path and narrower/wider preview usability; broader
+accessibility remains incomplete. Continue through the [handoff](docs/continuation/HANDOFF.md).
 
 Claude Mods for Codex is an inspectable local hook framework with a plugin-owned dashboard, scoped metadata, read-only project tools, authoring/replay CLI and five focused skills. Its default hook examples are: a visible session notice, a deny-only lexical command guard, and an optional metadata activity journal. A fixture replay CLI lets you test the exact hook responses without installing the plugin or signing in.
 
