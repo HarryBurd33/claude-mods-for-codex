@@ -108,6 +108,7 @@ namespace CodexMods {
     PathInput(path);
     try {
      string root=path.Substring(0,3),cursor=root;
+     if(GetDriveTypeW(root)!=3)throw Refuse(); // reject mapped/network drives before any CreateFile
      Pin(root,false);Volume(handles[0],path);
      string[] parts=path.Substring(3).Split('\\');
      int end=targetDirectory?parts.Length:parts.Length-1;
@@ -135,7 +136,7 @@ namespace CodexMods {
    }
    public void Dispose(){for(int n=handles.Count-1;n>=0;n--)handles[n].Dispose();handles.Clear();}
   }
-  static SafeFileHandle OpenPrivateFile(string path,bool write,bool create,uint share=1) {
+  static SafeFileHandle OpenPrivateFile(string path,bool write,bool create,uint share=1,bool missing=false) {
    uint access=GenericRead|ReadControl|(write?GenericWrite:0);SafeFileHandle h;
    if(create) {
     using(var security=new Creation(false)) {
@@ -145,22 +146,19 @@ namespace CodexMods {
     }
     if(h.IsInvalid) {int error=Marshal.GetLastWin32Error();h.Dispose();if(error!=80 && error!=183)throw Refuse();h=CreateFileW(path,access,share,IntPtr.Zero,3,OpenReparse,IntPtr.Zero);}
    } else h=CreateFileW(path,access,share,IntPtr.Zero,3,OpenReparse,IntPtr.Zero);
+   if(h.IsInvalid && missing && Marshal.GetLastWin32Error()==2){h.Dispose();return null;}
    try {Info(h,path,false);Access(h,true);return h;} catch {h.Dispose();throw;}
   }
   static byte[] ReadFile(string path,int limit,bool missing,uint share=1) {
-   if(missing && !File.Exists(path)) {
-    // File.Exists is only a missing-path hint. A reparse/special/access error is
-    // not absence: an attributes-only no-follow handle must also report ENOENT.
-    var probe=CreateFileW(path,Attributes,1,IntPtr.Zero,3,OpenReparse,IntPtr.Zero);
-    int code=Marshal.GetLastWin32Error();bool invalid=probe.IsInvalid;probe.Dispose();
-    if(invalid && code==2)return new byte[0];
-   }
-   using(var h=OpenPrivateFile(path,false,false,share)) using(var stream=new FileStream(h,FileAccess.Read)) {
+   using(var h=OpenPrivateFile(path,false,false,share,missing)) {
+    if(h==null)return new byte[0];
+    using(var stream=new FileStream(h,FileAccess.Read)) {
     if(stream.Length>limit)throw Refuse();
     byte[] buffer=new byte[limit+1];int total=0,n;
     while(total<buffer.Length && (n=stream.Read(buffer,total,buffer.Length-total))>0)total+=n;
     if(total>limit)throw Refuse();
     byte[] result=new byte[total];Array.Copy(buffer,result,total);return result;
+    }
    }
   }
   sealed class JournalLock : IDisposable {
@@ -186,7 +184,7 @@ namespace CodexMods {
     var existing=ReadFile(current,JournalLimit,true);
     if(existing.Length+line.Length>JournalLimit) {
      ReadFile(archive,JournalLimit,true); // inspect existing archive before unlinking
-     if(File.Exists(archive))File.Delete(archive);
+     File.Delete(archive);
      File.Move(current,archive);
     }
     using(var h=OpenPrivateFile(current,true,true)) using(var stream=new FileStream(h,FileAccess.ReadWrite)) {
@@ -282,8 +280,8 @@ namespace CodexMods {
        string archive=Path.Combine(scope,"activity.previous.jsonl"),current=Path.Combine(scope,"activity.jsonl");
        byte[] first=ReadFile(archive,JournalLimit,true),second=ReadFile(current,JournalLimit,true);
        if(Digest(first,second)!=data.Substring(65))throw Refuse(); // freshness is not authenticated consent
-       if(File.Exists(archive))File.Delete(archive);
-       if(File.Exists(current))File.Delete(current);
+       File.Delete(archive);
+       File.Delete(current);
       }
       System.IO.Directory.Delete(scope,false);
       return new string[0];

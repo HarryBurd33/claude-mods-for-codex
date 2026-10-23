@@ -14,24 +14,29 @@ any production route is enabled.
 ## Candidate boundary
 
 src/windows-storage.mjs launches only fixed Windows PowerShell5.1 with -NoProfile,
--NonInteractive and the fixed packaged .ps1 path. A narrow allowlist of OS profile/runtime variables is supplied; no full inherited
-environment or arbitrary credential/API-key variables. The helper disables module auto-discovery and imports only the built-in Utility
-DLL from its own PowerShell home; no user/project module or system installation
-change. No shell interpolation, PATH-selected
-helper, elevation, execution-policy override, profile, downloaded module or model
-call. Input JSON is bounded32KiB; output bounded3MiB,15s deadline plus2s cleanup,
-own helper tree targeted through fixed system taskkill on timeout. Errors are
-sanitized; no paths, SIDs, settings/export contents or native diagnostics returned
-to the model. Explicit private-file reads return bytes only to the calling local
-process. PowerShell compiles only the original packaged C# source with Add-Type;
-normal execution/application-control policy can refuse it and must not be bypassed.
-Compilation can create system-managed temporary artifacts containing public source,
-not request or file contents. This is a trusted local process, not model sandbox IO.
+-NonInteractive and the fixed packaged .ps1 path/cwd. OS profile/runtime variables
+are narrowly allowlisted, never the full environment or credential/API-key vars.
+No shell interpolation, PATH-selected helper, elevation, policy override, module
+import/discovery, profile or downloaded code. Internal v2 frames are ASCII with
+base64 fields, bounded32KiB request/3MiB response. Default15s plus2s cleanup targets
+only the owned helper tree via fixed system taskkill. A shorter shared telemetry
+budget is required before native-hook activation; do not put15s work before a
+five-second host guard response. Errors sanitized, no native diagnostics/paths/SIDs
+returned to model. Explicit private-file bytes go only to the calling local process.
+
+The script uses only language/.NET APIs and compiles fixed original C# package
+source with Framework CSharpCodeProvider, GenerateInMemory and /noconfig. It never
+compiles request/config text. Normal execution/application-control/language policy
+can refuse and must not be bypassed. Compiler-managed temporary artifacts contain
+public source, not requests/file contents. .NET Core/PowerShell7 is not a fallback.
+This is trusted local process authority, distinct from the model tool sandbox.
 
 src/windows/PrivateStorage.cs keeps checks and IO inside one process. It opens
 and pins each ancestor with no share-delete, OPEN_REPARSE_POINT and directory
 backup semantics, verifies disk object type, final normalized path, reparse status,
-owner and ACL. Local fixed NTFS with persistent ACLs only. UNC, device/extended
+owner and ACL. Local fixed NTFS with persistent ACLs only. Drive type is checked before opening
+its root, and missing-file checks use no-follow handles rather than File.Exists,
+so a rejected junction/mapped drive cannot first trigger a target read. UNC, device/extended
 namespaces, alternate streams, drive-relative/normalized aliases, reserved devices,
 trailing dots/spaces and paths over240characters are refused. Unicode ordinary
 names are supported; control/format characters are refused. Mapped drives/aliases
@@ -90,3 +95,7 @@ research tool; no claim of retrieving it. Relevant public APIs above were retrie
 Original MIT code, no third-party ACL library/native binary or upstream mod code.
 
 Public [Import-Module](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/import-module?view=powershell-5.1) and [module loading](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-5.1) guidance retrieved2026-10-23 supports the explicit built-in binary-module load; no remote module imported.
+
+.NET [Assembly.Load](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.assembly.load?view=netframework-4.8) retrieved2026-10-23. GlobalAssemblyCache property page was inaccessible; property behavior must be observed in native tests, not claimed from that page.
+
+[CodeDomProvider.CompileAssemblyFromSource](https://learn.microsoft.com/en-us/dotnet/api/system.codedom.compiler.codedomprovider.compileassemblyfromsource?view=netframework-4.8.1) and [CSharpCodeProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.csharp.csharpcodeprovider?view=netframework-4.8.1) retrieved2026-10-23; these APIs require .NET Framework. Earlier module-loading experiments were superseded, not shipped as supported routes.

@@ -64,9 +64,9 @@ jobs:
           node-version: ${{ matrix.node }}
       - name: Independent fixed-output PowerShell startup and selected OS environment
         run: node test/windows-startup.mjs
-      - name: Synthetic copied-helper fixed-stage IPC trace (no file content or env values)
-        run: node test/windows-ipc.mjs
       - name: Compile original public helper source under Windows PowerShell5.1
         run: powershell.exe -NoLogo -NoProfile -NonInteractive -File test/windows-compile.ps1
+      - name: Synthetic copied-helper fixed-stage IPC trace (no file content or env values)
+        run: node test/windows-ipc.mjs
       - name: Real NTFS owner, DACL, link, read, journal and refusal tests
         run: node --test test/windows-storage.test.mjs

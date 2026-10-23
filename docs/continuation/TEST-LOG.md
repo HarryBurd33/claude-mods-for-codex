@@ -820,3 +820,28 @@ the built-in Utility DLL at the fixed PowerShell home path, per public Import-
 Module API; no installed module changes/profile/policy override. Candidate state
 Node adapter is separate/unselected; shared journal encoder/parser extraction
 passed focused26tests/oneWindows-only skip on macOS. No installed6 change.
+
+
+### Sixth source970b116/run40030408183
+
+All4POSIX/portable passed. Explicit DLL-by-home import changed the trace from
+deadline to immediate refusal before imported stage; no ACL proof. Windows5.1
+Utility binary location cannot be assumed to be beside powershell.exe. Next
+source binds its exact framework strong assembly identity through public .NET
+Assembly.Load, requires GlobalAssemblyCache, then public Import-Module -Assembly.
+No search/download/install, current-directory binary, profile or policy override.
+
+
+### Candidate boundary simplification before activation
+
+New v2 internal pipe frame uses base64 paths/data, not JSON cmdlets. Fixed original
+C# compiled through .NET Framework CSharpCodeProvider with /noconfig, in memory;
+normal -File execution policy and constrained-language controls remain in force.
+No Import-Module/Add-Type/profile/module discovery needed. Primary CodeDOM4.8.1
+pages retrieved;4.8 endpoints inaccessible. Never compile request/config text.
+Review also moved fixed-drive rejection before opening root and removed File.Exists
+prechecks that could follow a junction. Missing reads now use no-follow handles.
+Production integration remains pending actual Windows proof. Before hook activation,
+telemetry must have an overall budget below native5s deadline so it cannot delay a
+guard decision; no15s helper on that path. Windows session scope must not perform
+implicit network traversal or broaden logging. These integration gates remain High.

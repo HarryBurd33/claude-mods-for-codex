@@ -8,7 +8,8 @@ if(process.platform==='win32') {
  try {
   let script=await readFile(new URL('../src/windows/private-storage.ps1',import.meta.url),'utf8');
   script="[Console]::Error.WriteLine('stage-entered')\n"+script;
-  for(const [needle,stage] of [['  $text =','stage-before-buffer'],['  Import-Module','stage-input-read'],['  $request =','stage-imported'],['  Add-Type','stage-before-compile'],['  $result =','stage-compiled'],['  [Console]::WriteLine((@{','stage-completed']])script=script.replace(needle,`  [Console]::Error.WriteLine('${stage}')\n${needle}`);
+  for(const [needle,stage] of [['  $text =','stage-before-buffer'],['  $parts =','stage-input-read'],['  $parameters =','stage-request-parsed'],['    $compiled =','stage-before-compile'],['  $native =','stage-compiled'],['  $result =','stage-before-call'],["  [Console]::WriteLine('2|ok|'",'stage-completed']])script=script.replace(needle,`  [Console]::Error.WriteLine('${stage}')\n${needle}`);
+  script=script.replace("if ($compiled.Errors.HasErrors) { throw 'Native source compilation failed' }","if ($compiled.Errors.HasErrors) { foreach ($e in $compiled.Errors) { [Console]::Error.WriteLine('compile-'+$e.ErrorNumber+'-line-'+[string]$e.Line) }; throw 'Native source compilation failed' }");
   await writeFile(join(dir,'private-storage.ps1'),script);
   await writeFile(join(dir,'PrivateStorage.cs'),await readFile(new URL('../src/windows/PrivateStorage.cs',import.meta.url)));
   const systemRoot=process.env.SystemRoot,environment={};
@@ -21,10 +22,10 @@ if(process.platform==='win32') {
    child.stderr.on('data',b=>{if(stderr.length<4096)stderr+=b;});child.stdout.on('data',b=>{if(output.length<4096)output+=b;});child.stdin.on('error',()=>{});
    child.on('error',()=>{if(!done){done=true;clearTimeout(timer);resolve({stderr,output,status:'spawn-failed'});}});
    child.on('close',code=>{if(!done){done=true;clearTimeout(timer);resolve({stderr,output,status:code===0?'success':'refused'});}});
-   child.stdin.end(JSON.stringify({version:1,op:'prepare-directory',path:join(dir,'private'),data:'',limit:0})+'\n');
+   child.stdin.end(['2','prepare-directory',Buffer.from(join(dir,'private')).toString('base64'),'','0'].join('|')+'\n');
   });
   const stages=result.stderr.match(/stage-[a-z-]+/g)??[];
-  console.log(JSON.stringify({syntheticHelper:result.status,stages}));
+  console.log(JSON.stringify({syntheticHelper:result.status,stages,compilerErrors:result.stderr.match(/compile-CS[0-9]+-line-[0-9]+/g)??[]}));
   if(!stages.includes('stage-compiled'))process.exitCode=1;
  } finally { await rm(dir,{recursive:true,force:true}); }
 }
