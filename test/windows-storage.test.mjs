@@ -126,9 +126,14 @@ test('native Windows owned-process deadline simulation kills helper and child tr
   await writeFile(join(root,'windows-storage.mjs'),runtime);await mkdir(join(root,'windows'));
   await writeFile(join(root,'windows/private-storage.ps1'),`
 $ErrorActionPreference = 'Stop'
-$child = Start-Process -FilePath (Join-Path $PSHOME 'powershell.exe') -ArgumentList @('-NoLogo','-NoProfile','-NonInteractive','-Command','Start-Sleep -Seconds 60') -PassThru -WindowStyle Hidden
-[System.IO.File]::WriteAllText((Join-Path $PSScriptRoot 'child.pid'),[string]$child.Id)
-Start-Sleep -Seconds 60
+$info = [System.Diagnostics.ProcessStartInfo]::new()
+$info.FileName = [System.IO.Path]::Combine($PSHOME,'powershell.exe')
+$info.Arguments = '-NoLogo -NoProfile -NonInteractive -Command "[System.Threading.Thread]::Sleep(60000)"'
+$info.UseShellExecute = $false
+$info.CreateNoWindow = $true
+$child = [System.Diagnostics.Process]::Start($info)
+[System.IO.File]::WriteAllText([System.IO.Path]::Combine($PSScriptRoot,'child.pid'),[string]$child.Id)
+[System.Threading.Thread]::Sleep(60000)
 `);
   const candidate=await import(pathToFileURL(join(root,'windows-storage.mjs')).href);
   const start=performance.now();

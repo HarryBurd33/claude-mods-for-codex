@@ -2,8 +2,7 @@
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 try {
-  [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false)
-  $text = New-Object System.Text.StringBuilder
+  $text = [System.Text.StringBuilder]::new()
   while (($c = [Console]::Read()) -ne -1) {
     if ($c -eq 10) { break }
     if ($text.Length -ge 32768) { throw 'Request bound' }

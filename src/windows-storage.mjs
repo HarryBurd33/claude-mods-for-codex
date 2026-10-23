@@ -40,7 +40,7 @@ export async function windowsStorageRequest(op, path, { data = '', limit = 0 } =
   if (request.length > 32768) throw unavailable();
   return new Promise((resolve, reject) => {
     const child = spawn(win32.join(directory, 'powershell.exe'), ['-NoLogo', '-NoProfile', '-NonInteractive', '-File', SCRIPT],
-      { shell: false, windowsHide: true, env: environment, stdio: ['pipe', 'pipe', 'ignore'] });
+      { shell: false, windowsHide: true, cwd: win32.dirname(SCRIPT), env: environment, stdio: ['pipe', 'pipe', 'ignore'] });
     let chunks = [], bytes = 0, failed = false, done = false;
     let killer;
     const finish = (error, value) => {

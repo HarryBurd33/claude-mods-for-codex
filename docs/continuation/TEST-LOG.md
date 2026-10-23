@@ -795,3 +795,17 @@ allowlist and adds an independent fixed-output startup diagnostic (no env values
 or file contents printed). No policy override/full inherited environment.
 Scoped-state candidate now includes hash-only directories and fresh-content-hash
 retention under native locks, still not production-enabled until exact native tests.
+
+
+### Third/fourth candidate diagnostics (retained)
+
+Sourcea8ff2bc/run40029203710: fixed startup succeeded, but POSIX discovered the
+Windows-only startup .mjs and failed on absent SystemRoot. Reproduced locally and
+platform-guarded; sourcea65555c/run40029722209 all4POSIX and portable Windows passed.
+On both Windows lanes minimal/selected OS environments, -Command/-File and pipe
+startup all ready. Copied-helper trace stopped at stage-entered before buffer
+creation, locating the stall in encoding setup/New-Object, not evidence of ACL
+failure. Next source removes unnecessary output encoding setter and uses direct
+.NET constructor; protocol is ASCII JSON escapes/base64. Process-deadline fixture
+also uses direct .NET startup instead of module-dependent shell cmdlets. No ACL/
+production success claim until observed; scoped/state routes remain disabled.
