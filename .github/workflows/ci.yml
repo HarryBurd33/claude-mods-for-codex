@@ -44,5 +44,7 @@ jobs:
         run: node --test test/contracts.test.mjs test/hold.test.mjs
       - name: Selected Git and scope contracts; restore privacy refusal
         run: node --test test/checkpoints.test.mjs test/scope.test.mjs test/restore.test.mjs test/usage.test.mjs test/impact.test.mjs
+      - name: Local rendering contracts (simulated DOM, not native host)
+        run: node --test test/rendering.test.mjs test/observers.test.mjs
       - run: npm run validate
       - run: npm run replay

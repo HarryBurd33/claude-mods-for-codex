@@ -1,0 +1,89 @@
+{
+  "description": "Optional observation-only hooks; merge only after reviewing events/access and completing host trust. No default installation.",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Observing opted-in Claude Mods lifecycle metadata"
+          }
+        ]
+      }
+    ],
+    "Interrupt": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Observing opted-in Claude Mods lifecycle metadata"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Observing opted-in Claude Mods lifecycle metadata"
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Observing opted-in Claude Mods lifecycle metadata"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Observing opted-in Claude Mods lifecycle metadata"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Observing opted-in Claude Mods lifecycle metadata"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
+            "timeout": 5,
+            "statusMessage": "Observing opted-in Claude Mods lifecycle metadata"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "cwd": "/example/selected-project",
+  "hook_event_name": "Interrupt",
+  "session_id": "synthetic-private-session",
+  "transcript_path": "/synthetic-private-transcript",
+  "turn_id": "synthetic-private-turn",
+  "model": "synthetic-model",
+  "permission_mode": "default"
+}

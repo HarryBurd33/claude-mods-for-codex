@@ -1,0 +1,11 @@
+{
+  "cwd": "/example/selected-project",
+  "hook_event_name": "SubagentStart",
+  "session_id": "synthetic-private-session",
+  "transcript_path": "/synthetic-private-transcript",
+  "turn_id": "synthetic-private-turn",
+  "model": "synthetic-model",
+  "permission_mode": "default",
+  "agent_id": "synthetic-private-agent",
+  "agent_type": "synthetic"
+}

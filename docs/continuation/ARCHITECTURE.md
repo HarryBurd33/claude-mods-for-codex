@@ -3,12 +3,39 @@
 Decision date: 2026-10-23. Development design; outstanding proof gates are explicit.
 Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.
 
-Current restart checkpoint: production0.2.0-dev.4 and hold0.0.4 installed through
-supported CLI, human-trusted, all4 hooks independently trusted/zero errors;
-108/7 cached files match reviewed snapshots. New desktop connection/native
-permission/hold acceptance awaits human restart. Code contracts below unchanged
-from verified source3d959ea; prior source-version/native observations are historical
-introductions, not transferred acceptance. Logging scope/retention unchanged.
+Current checkpoint: installed production0.2.0-dev.4 native dashboard and normal
+sandbox-negative rewrite passed after restart; hold0.0.4 confirm/decline/cancel/
+30s timeout observed then supported removal/fresh no-hold inventory. Human MCP
+provenance and infrastructure fail-open remain limits. Source0.2.0-dev.5 adds the
+contracts below; not installed/native accepted. Defaults/logging scope unchanged.
+
+## New bounded contracts (source0.2.0-dev.5)
+
+- ui/rendering.js: parseFlowchart(source), jsonTokens(source), renderLocalPreview
+  (document,parent,format,source). Original restricted grammar,4,096 characters,
+  16 nodes/24 edges/64 lines, no interpretation of HTML/directives/links. Bounded
+  declaration-order SVG + complete node/edge tables; no full Mermaid runtime.
+  JSON validation/token display only, plain code literal/control-visible. No
+  model/tool/network/storage calls. Clear/teardown remove local source/output.
+- src/dashboard-resource.mjs: loadDashboardHtml() bundles exactly fixed trusted
+  package HTML/rendering assets, sizes128/64KiB. One checked marker, no script-close
+  sequence in the static rendering asset; no user path/content interpolation.
+- OBSERVER_EVENTS in src/constants.mjs and metadataState.observerEvents config:
+  explicit seven-event allowlist, default absent. Default hooks remain three.
+  Dispatcher branches before mod handlers/raw-envelope clone and returns exactly
+  {}, event-only state metadata only when independently opted in. It never blocks
+  Stop/interrupt, requests follow-up, approves, mutates prompts/models or reads
+  transcript/response content. Counts are deliveries, not unique turns/success.
+- examples/hooks/observe-lifecycle.json and examples/events: optional reviewed
+  registration, seven synthetic released0.163.0 projections. Not installed.
+  New event reception itself exposes host payload in local process memory;
+  registration and storage opt-ins are separately reviewed, same scoped retention.
+  No automatic optional-hook installation/logging expansion.
+
+See docs/local-preview.md and docs/lifecycle-observation.md for grammar, evidence,
+acceptance and limits. High reviewed risky parser/output/privacy paths; Medium
+may verify/fix within these contracts. A broader runtime, ACL adapter or approval
+bridge requires stronger reasoning and a new explicit checkpoint/switch.
 
 ## Product surfaces
 
@@ -148,7 +175,7 @@ uses supported installation/trust; it never automatically trusts generated code.
 Use compatibility-only `.codex-plugin/plugin.json` with no root `plugin.json`.
 The released 0.163/0.164 portable loader skips hooks; adding a compatibility
 overlay beside it does not fix discovery. Current0.2.0-dev.4 is installed/human-
-trusted, awaiting desktop restart; earlier0.2.0-dev.1 has native execution/UI
+trusted and verified after desktop restart; earlier0.2.0-dev.1 has native execution/UI
 evidence on the recorded macOS host. Keep version-specific acceptance separate.
 Legacy MCP uses `.mcp.json`, relative `cwd: "."` and script arguments; it does
 not inject portable plugin variables. Pass a shared data location explicitly
@@ -167,7 +194,7 @@ registration/cache, marketplace registration and separately retained data.
 1. Native gates partly passed: production install/trust, covered tool events,
    fixed rewrite/deny and MCP App interaction verified. Selected-project standalone
    CLI SessionStart/tool metadata reached desktop Refresh. Visible start notice,
-   negative sandbox approvals and synchronous MCP human elicitation remain pending.
+   one normal sandbox-negative rewrite and synchronous MCP fixed-marker responses passed; provenance/all-mode guarantees remain unverified.
 2. Integrate event projection/state/MCP status and lifecycle controls with versioned
    contracts; add covered event types and validate timeout/error behavior.
 3. Build useful bounded explorer, changes inspector, risk explanation and passive

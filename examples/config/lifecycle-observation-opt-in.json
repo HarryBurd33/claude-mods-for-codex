@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "mods": [],
+  "metadataState": {
+    "enabled": true,
+    "scope": "session",
+    "observerEvents": [
+      "Stop",
+      "Interrupt",
+      "PreCompact",
+      "PostCompact",
+      "SubagentStart",
+      "SubagentStop",
+      "SessionEnd"
+    ]
+  }
+}

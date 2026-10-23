@@ -1,114 +1,100 @@
 # Current status — 2026-10-23
 
-**Full product incomplete. Current model: GPT-6.1 Sol, High.** Human-controlled
-Astra Ultra → Sol Ultra → Sol High switches have occurred. This is an in-stage
-checkpoint, not a request to switch to Medium yet. Replay/restore security,
-hold integration and remaining feature work still require substantive reasoning.
+**Full product incomplete. Source0.2.0-dev.5; installed0.2.0-dev.4.**
+Astra Ultra → Sol Ultra → Sol High stages were human selected. High has resolved
+this milestone's native permission/hold uncertainty and implemented the bounded
+rendering/observer contracts. Next setting: **GPT-6.1 Sol, Medium**, for reviewed
+update/acceptance, authoring/lifecycle workflows, documentation and packaging.
+This is a human-controlled switch checkpoint, not a finished release.
 
-## Current installation — awaiting human restart
+## Actual installed state and native evidence
 
-Production0.2.0-dev.4 and separate hold-proof0.0.4 are now user-profile installed
-through supported CLI. All108 production and7 hold cached files match reviewed
-snapshots. Human confirmed changed-code review; independent hooks/list reports
-all four owned hooks enabled/trusted,zero errors. **Human asked for this saved
-checkpoint before restarting Codex and reopening the same chat.** No further
-trust review is needed for these unchanged snapshots. New desktop connection/
-UI and native permission/hold acceptance remain pending restart.
+Production0.2.0-dev.4 remains user-profile installed/enabled/trusted. Its108 cached
+files matched the reviewed snapshot; no cache edits. User restarted this chat.
+New mods.checkpoints/usage tools connected. Actual owned panel displayed Activity
+chart/table, two selected files/Git status, working-tree synthetic patch, selected
+commit Replay diff and passive export counters with accurate unknowns. Five view
+buttons worked. Keyboard/screen reader/resize/close-pending remain unverified.
+The permitted MCP Apps interface was used; native app control remains restricted.
 
-Same selected project/data/project logging scope and retention. Fixture-only patch
-read opt-in covers two known synthetic files; checkpoints select two synthetic
-commits; optional usage source is the previous authorized fixed test export.
-Original notes preserved/untracked. Actual snapshot CLI restore/review/apply and
-reverse (six processes) passed, preserving notes/index/HEAD/inode/mode/owner;
-this is CLI/filesystem integration, not installed desktop restore evidence.
-One unique empty owner-writable directory outside the workspace is prepared for
-an exact harmless rewrite sandbox-negative test, not yet executed. No extra
-model run. Backups/paths/rollback are in ignored local handoff.
+Fixed rewrite produced the expected AFTER marker; fixed deny blocked; unchanged
+control stayed unchanged. A separate exact rewrite attempted a fixed marker file
+in one owner-writable0700 disposable directory outside the allowed workspace.
+The ordinary use_default sandbox rejected it, exit1/operation not permitted;
+no file was created. No elevated retry. Only the empty test directory was removed.
+This proves one normal sandbox-negative rewrite case, not every approval mode.
 
-Public source3d959ea passed all5 CI jobs (run40018498309). The safe source and
-restart records are on codex/astra-groundwork; final checkpoint hash is reported
-after independent upload/readback. Continue Sol High after restart. This is not
-a model-switch gate; full product remains incomplete.
+Separate hold0.0.4 (mods-hold-v4) was installed and human trusted, then connected:
+confirm allowed the fixed print after5.419s (human confirmed personally submitting),
+decline blocked, cancellation blocked after27.145s, unanswered30.013s denied with
+the decision-deadline message. One attempted cancel was actually a second decline;
+it is not double-counted as cancellation. No automatic approval was used.
+MCP acceptance is not authenticated human provenance; prior disconnected-hook
+fail-open still applies. Hold remains a separate proof, not production enforcement.
 
-## Earlier production native acceptance (0.2.0-dev.1)
+Supported CLI removed only the hold plugin/dedicated marketplace afterward.
+Parsed config comparison confirmed unrelated entries preserved. Fresh read-only
+native inventory: three trusted/enabled production hooks, no hold hook, zero
+errors, no model turn. Loaded desktop connection/process absence needs a fresh
+host; do not invoke the removed tool. Original native proof0.0.2 is retained.
+Private backups/evidence/rollback paths stay in ignored root HANDOFF.md.
 
-Production **0.2.0-dev.1** was user-profile installed at the earlier native milestone.
-Human reviewed its three hooks; native inventory independently confirmed trust.
-All94 installed files matched the reviewed fixture. It selects a disposable Git
-project, explicitly opts into project metadata, keeps patches off and uses only
-fixed harmless rewrite/deny rules. Original proof retained; old hold0.0.3 was
-removed before the current0.0.4 installation described above.
-Private paths/backups stay local. No installed configuration changed this milestone.
+Logging project/data/scope/retention unchanged; counts remain4. Native hook scope
+is the session directory, not shell workdir. Earlier one authorized CLI0.163.0
+Sol High read-only run in the selected project added SessionStart/PreToolUse/
+PostToolUse metadata visible in desktop Refresh1→4; first record was synthetic.
+That extra-run authorization is consumed. No additional model run this milestone.
+Visible SessionStart notice, resume semantics and desktop SessionStart unverified.
 
-On macOS14.6 / desktop26.1016.62342, production rewrite, denial and unchanged
-control behavior passed. Actual owned dashboard opened beside this chat; activity,
-files/Git status, changes metadata and unavailable usage views worked. Full keyboard/
-screen-reader, resize, close/reopen and sandbox approval tests remain unverified.
+## New source, not installed or natively accepted
 
-The activity scope mismatch is **resolved without expanding logging**: hooks use
-the native session directory, not a shell call workdir. Parent-chat calls were
-correctly excluded from the selected child project. One human-authorized ephemeral
-CLI0.163.0 / gpt-6.1-sol / High / read-only run started in the selected project,
-executed one fixed print rewritten to expected output, and added SessionStart,
-PreToolUse and PostToolUse. Counts rose1→4; actual desktop Refresh displayed4.
-The first record was earlier synthetic replay; three new records were native CLI.
-SessionStart notice presentation was not established by this JSON run. No logging
-boundary or permission changed. Additional-model-run authorization is consumed.
+Source0.2.0-dev.5 adds Local preview: local plain code, highlighted JSON and an
+original restricted Mermaid-compatible flowchart subset. Fixed offline assets,
+4,096-character input;16 nodes/24 edges/64 lines, literal labels, SVG plus complete
+tables, no HTML/link/directive interpretation or model/tool/network calls. Clear
+and teardown discard panel source/output. Unsupported syntax shows escaped source;
+this is not the full Mermaid library/layout or a native transcript replacement.
+See docs/local-preview.md. Browser preview is simulation, not Codex host evidence.
 
-## Source implemented; new native acceptance pending
+Optional observer source covers Stop/Interrupt/PreCompact/PostCompact/SubagentStart/
+SubagentStop/SessionEnd with output exactly{} and event/time-only scoped metadata.
+Default hooks remain the existing three; each observer needs explicit reviewed
+hook registration plus metadataState.observerEvents selection. No raw messages,
+IDs/transcript content, stop blocks, follow-up/model calls or default logging
+expansion. Exact released0.163.0 source corroborates schemas. Native delivery of
+these new events is unverified; see docs/lifecycle-observation.md.
 
-Source **0.2.0-dev.4** (now installed/trusted; awaiting restart) extracts the same canonical containment contract into
-src/scope.mjs and adds an immediate scope CLI diagnostic. It checks supplied
-directories only, neither discovers sessions nor logs identifiers. Activity
-reports producer health unknown; retained records are not a heartbeat.
+Full local suite: **164 passed,0 failed,3 Windows-only skips (167 total)**.
+Default config3 mods/four replay fixtures passed. New observer config validated,
+seven synthetic envelopes replayed to{}. Targeted rendering/UI/dashboard28 pass;
+observer/contracts/journal/state45 pass/one Windows-only skip. Geometry refinement
+then rendering6 pass. New source CI still needs observed remote results.
+Prior source3d959ea all5 CI jobs passed, run40018498309; not inherited by dev5.
 
-Owned view adds a bounded measured-event SVG chart with table alternative,
-collapsible file tree with Git status/size, and literal colored diff lines with
-control-character visibility and display limits. These new views have simulated DOM evidence, not native acceptance after restart.
+Existing one-file POSIX restore was tested through six CLI processes with exact
+synthetic reverse/preserved notes,index,HEAD,inode,mode,owner. It remains non-atomic
+under interruption; no extended ACL/xattr/disk-failure/native Windows claim. No
+panel/MCP writer. Conservative impact guard remains disabled by default; native
+impact-specific fixture acceptance still needed. Selected usage counters are latest
+reported cumulative snapshot only, never occupancy/billing/cache health.
 
-Full local suite: **152 passed,0 failed,3 Windows-only skips (155 total)**.
-Validation and fixture replay pass. Four original authoring/debug/review/verification
-skills and disabled declarative scaffolding remain usable source. Installed skills
-are visible; full invocation/authoring flow still needs acceptance. No dependencies
-added; MIT/disclaimer intact.
+## Incomplete requirements and next bounded work
 
-The installed/trusted source0.2.0-dev.4 additionally compares two explicitly selected full Git commit
-IDs through read-only CLI/MCP/Replay. It excludes sensitive names and historical
-symlinks/submodules, bounds processes/content and leaves later working edits,
-index and HEAD unchanged. This is selected-commit provenance, not automatic
-assistant-turn attribution. The separate POSIX restore CLI prepares a private
-outside-project plan, reviews exact target/content/compatibility and applies one
-existing text file only after an explicit command/exact plan ID/fresh conflict check.
-It preserves unselected work and inode/permissions; no mutating MCP/panel action.
-Add/delete/binary/mode-transition restoration is unsupported. Interrupted in-place
-writes may require explicit recovery from the private plan; Windows refuses until
-ACL support. No native installed-host restoration or crash/disk-failure claim.
-See docs/replay.md. All5 CI jobs passed for source3d959ea (run40018498309).
+All93 capabilities remain in REQUIREMENTS.md. Medium should verify the new source
+through a reviewed versioned update/human trust/restart, complete routine authoring
+and install/update/disable/remove/rollback acceptance, fix stale skill guidance,
+prepare supported theme setup without silently upgrading a client, rebuild/test
+packages and reconcile remaining documentation/evidence. Keep native accessibility,
+optional observer delivery and unsupported renderer/restore cases explicit.
 
-Source0.2.0-dev.4 also adds the original disabled blastRadiusGuard and immediate
-impact stdin assessment. Six fixed lexical categories yield bounded conservative
-impact explanations/denial, no target/path counts or command echo. This is a
-clearly labeled deny/review approximation, not pending-call approval. Misses and
-false positives remain; replacement guards recheck proposed commands.
+Native Windows/WSL/Linux hosts unavailable. Windows private state/settings/export/
+restore refuse pending reviewed ACL support. CI is portable code evidence only.
+A new ACL adapter, broader parser/runtime, model routing or human-approval gate is
+outside the routine Medium phase: preserve a checkpoint and request a stronger
+setting/user decision before expanding those contracts. These gaps stay incomplete,
+not silently moved to a roadmap or declared impossible. No extra model run without
+fresh visible bounded authorization; no separate client/fork/app patch direction.
 
-Optional usageExport grants read access to one private selected JSONL outside the
-project. Only numeric completion counters are returned; raw contents/IDs/paths
-never returned/persisted. Released CLI0.163.0 copies cumulative thread totals:
-latest snapshot only, never sum completion records. Missing/zero-denominator data,
-current context, billing and cache health stay unavailable. No private-session
-search, model/network call or keepalive. CLI read of the earlier authorized fresh
-run export returned expected counters without another run; native new MCP/UI use
-remains pending. See docs/impact-and-usage.md.
-
-## Remaining scoped work
-
-All93 requirements remain in REQUIREMENTS.md. Main gaps: broader/native replay/restore acceptance; native impact/decision acceptance;
-rich code/Mermaid; broader passive usage-source validation; supported theme workflow; complete
-authoring/install/update/disable/removal/restoration; native permissions and UI
-accessibility; Windows ACL adapter and real Windows/Linux/WSL validation. Native
-hold acceptance remains blocked by the answered-form timeout; disconnected MCP
-hooks can fail open. Do not ship it as a production safety gate.
-
-Published main is the historical experimental baseline. Development remains on
-codex/astra-groundwork. Root HANDOFF.md and .local ignored. These current records
-supersede historical statements retained in TEST-LOG and Git history.
+Public main remains the historical MVP; codex/astra-groundwork is incomplete
+safe development. Root HANDOFF.md/.local remain ignored, historical local commits
+preserved. Next-stage handoff records exact commits after verified upload.

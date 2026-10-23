@@ -524,3 +524,74 @@ CLI inventory does not establish current desktop connection. User asked to
 restart Codex and resume this same chat before further marker/panel checks.
 No extra model turn was launched. The panel has not been inspected and no new
 production UI observation is claimed. Keep High until this integration is resolved.
+
+# Sol High dev4 restart acceptance / dev5 source — 2026-10-23
+
+User restarted Codex and requested dashboard/sandbox/hold verification. Entry
+checkpoint ec2fb5e verified locally/remote. Actual host/OS unchanged from records.
+No additional model run or logging expansion this stage; current activity4.
+
+Native dev4 new tools and five owned panel views connected. Activity chart/table,
+files/Git status, working synthetic patch, selected-commit Replay and selected
+private-export reported counters/unknown labels observed through permitted MCP
+Apps DOM/screenshots. Fixed rewrite/deny/control repeated passed. Exact harmless
+rewrite targeted a unique outside-workspace owner-writable0700 directory; NORMAL
+sandbox returned operation not permitted/exit1. Target absent, no elevated retry.
+Only its empty recorded parent removed afterward. This is one native sandbox
+negative, not universal approval-mode coverage. Visible start notice/full native
+accessibility/resize/close-pending remain unverified.
+
+Holdv4 nonmatch tool responded{}. Native fixed-print form confirm continued after
+5.419s; human confirmed personally selecting/submitting confirm. Decline blocked.
+An intended cancel returned decline and human clarified clicking Decline; not
+counted as cancel. Subsequent interacted/dismissed form cancelled after27.145s
+and blocked. Final unanswered form denied after30.013s, explicit deadline message.
+No automatic approval. Human reports correlate visible interaction, not MCP
+cryptographic provenance. Earlier disconnected-hook fail-open remains. Removed
+only hold plugin/marketplace via supported CLI afterward; parsed only those two
+owned config entries removed. Fresh bounded read-only app-server inventory shows
+three trusted/enabled production hooks/no hold/zero errors/no model turn. Initial
+sandboxed inventory process closed with cleanup permission error; elevated
+read-only inventory succeeded. Desktop loaded connection/process absence needs
+fresh host; original proof retained. Exact private paths/evidence in ignored handoff.
+
+High implemented source0.2.0-dev.5 local JSON/plain/restricted flowchart preview
+and optional observation-only lifecycle lane, unchanged default hooks/logging.
+No dependencies/upstream code copied; original renderer is a declared approximation.
+Released CLI163 observer event list/schemas inspected locally; primary Mermaid
+12.2.0 flowchart basic sections retrieved, no whole-page review claim.
+
+Commands/outcomes:
+
+- node --test test/rendering.test.mjs test/transport-ui.test.mjs test/dashboard.test.mjs:
+  28pass; synthetic transport/DOM, not native dev5.
+- node --test test/observers.test.mjs test/contracts.test.mjs test/journal.test.mjs
+  test/state.test.mjs:45pass/one Windows-only skip. Observer subprocess/scoped
+  storage tests not native Codex event delivery.
+- npm test:164pass,0fail,3 Windows-only skips/167total. Local Node24.22.0/macOS14.6.
+- npm run validate:3mods valid; npm run replay:four default fixtures expected.
+- Lifecycle example validate:0mods valid; examples/events replay:seven{} outputs,
+  no storage/model call. Default hook manifest still exactly three events.
+- A temporary loopback-only fixed-HTML server required local-listen escalation;
+  default sandbox EPERM was not a product error. Browser simulation (no host
+  bridge) displayed graph/table/JSON/literal hostile text and Clear. A visual
+  arrow-layout issue was corrected, rendering6pass afterward and corrected browser
+  picture verified. Source preview browser closed; servers bounded3min, cleanup
+  verified before stop. This is separate from native installed dev4 screenshots.
+
+New dev5 source not installed/trusted/natively accepted. Prior source3d959ea all5
+CI jobs passed run40018498309; new source must have independent CI observation.
+Exact final package/upload/CI results follow, not inferred from workflow presence.
+Next human setting Sol Medium: bounded routine acceptance/lifecycle/authoring/docs/
+packaging, with stronger-model checkpoint before new security contract expansion.
+
+Development archive123 files/709562 unpacked bytes (before final CI/hash prose):
+required fixed renderer/resource/observer assets/public continuation included;
+root private handoff/.local/.git/dependencies/links/traversal/portable manifest and
+actual private machine paths excluded. Fresh extraction in a path containing
+spaces passed164tests/three Windows-only skips, validate/default replay/seven
+observer replays. Runtime source exactly matches this milestone; final prose-only
+records are refreshed after remote verification. Initial npm pack attempted the
+unwritable user cache; rerun used an isolated workspace cache successfully, no
+system cache/tool repair. Both bounded loopback test server sessions exited0;
+source simulation tab closed. No active test process or scheduled continuation.

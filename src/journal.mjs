@@ -2,7 +2,7 @@ import { constants as fsConstants } from "node:fs";
 import { lstat, mkdir, open, rename, rm, rmdir, stat } from "node:fs/promises";
 import { dirname, isAbsolute, join, parse, resolve, sep } from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
-import { MAX_JOURNAL_BYTES, MAX_JOURNAL_LINE_BYTES } from "./constants.mjs";
+import { MAX_JOURNAL_BYTES, MAX_JOURNAL_LINE_BYTES, KNOWN_EVENTS, OBSERVER_EVENTS } from "./constants.mjs";
 
 const JOURNAL_NAME = "activity.jsonl";
 const ARCHIVE_NAME = "activity.previous.jsonl";
@@ -102,7 +102,8 @@ function validateMetadata(metadata) {
   if (metadata === null || Array.isArray(metadata) || typeof metadata !== "object") throw new Error("journal metadata must be an object");
   const allowed = new Set(["event", "tool", "decision"]);
   for (const key of Object.keys(metadata)) if (!allowed.has(key)) throw new Error("journal metadata contains a forbidden field");
-  if (!["SessionStart", "PreToolUse", "PostToolUse"].includes(metadata.event)) throw new Error("journal event is invalid");
+  if (!KNOWN_EVENTS.has(metadata.event)) throw new Error("journal event is invalid");
+  if (OBSERVER_EVENTS.has(metadata.event) && (metadata.tool !== undefined || metadata.decision !== undefined)) throw new Error("observer metadata must contain only the event name");
   if (metadata.tool !== undefined) {
     const reserved = new Set(["__proto__", "prototype", "constructor"]);
     if (typeof metadata.tool !== "string" || !/^[A-Za-z0-9_.:-]{1,256}$/.test(metadata.tool) || reserved.has(metadata.tool.toLowerCase())) {

@@ -1,36 +1,37 @@
 # Claude Mods for Codex
 
-**Development source `0.2.0-dev.4`: the full requested product is incomplete.**
-This branch corrects hook packaging and adds tested building blocks and separate
-native proofs. The dispatcher preserves the three v0.1 examples and adds opt-in exact command
-replacement and scoped metadata. The local dashboard and project views have
-partial native acceptance from0.2.0-dev.1. Updated0.2.0-dev.4 is now installed
-and human-trusted; new rendering/diagnostics await the requested desktop restart. See [runtime access and use](docs/runtime.md), [current status](docs/continuation/STATUS.md), the
-[requirements ledger](docs/continuation/REQUIREMENTS.md), and the
-[next-stage handoff](docs/continuation/HANDOFF.md).
+**Development source `0.2.0-dev.5`: the full requested product is incomplete.**
+Installed test fixture0.2.0-dev.4 has actual macOS desktop covered-hook and owned
+MCP App evidence. Its Activity chart/table, files/Git status, working-tree patch,
+selected-commit Replay and passive reported usage views work on the recorded host.
+Normal sandboxing rejected a rewritten marker-file write outside the workspace;
+no target was created or elevated retry used. A separate harmless hold proof
+verified confirm/decline/cancel/30s timeout and was then removed. It is not a
+production security gate: human provenance is not attested and disconnected hooks
+can fail open. See [current status](docs/continuation/STATUS.md) and
+[test log](docs/continuation/TEST-LOG.md) for version-specific evidence/limits.
 
-On macOS14.6 / desktop26.1016.62342, production0.2.0-dev.1 verified covered tool
-events, a fixed harmless rewrite, denial and an actual plugin-owned MCP App with
-files/Git status, change metadata and manual refresh. A separately authorized
-CLI0.163.0 read-only test in the selected project verified native SessionStart,
-PreToolUse and PostToolUse metadata reaching that panel. Hook scope follows the
-session directory, not a shell workdir. Negative sandbox approval checks,
-full accessibility, hold acceptance, remaining features and native Windows are
-still unverified. Source0.2.0-dev.3 adds scope diagnostics, bounded chart/tree/diff
-display, read-only selected-commit Replay, and a separate explicit POSIX one-file
-restore CLI. These are tested with disposable files and simulated DOM; the new
-views/restore workflow await reviewed installed-host acceptance. See
-[checkpoint replay and restore limits](docs/replay.md).
+New source adds [local code/JSON/restricted Mermaid flowchart preview](docs/local-preview.md)
+and [optional observation-only lifecycle events](docs/lifecycle-observation.md).
+They have unit/subprocess/browser-simulation evidence, **not installed dev5 native
+acceptance**. Default hook registration/logging is unchanged. All callbacks stay
+local; skill/chat use still consumes model usage. Full local suite164pass/three
+Windows-only skips; CI/native platform claims are separate.
 
-Source0.2.0-dev.4 adds a disabled conservative blast-radius denial example and
-passive reported token/cache counters from one explicitly selected private CLI
-export. It never sums cumulative completion records, discovers private chats,
-infers context/billing/cache health or makes keepalive calls. See
-[impact and usage limits](docs/impact-and-usage.md). These new components are
-tested locally. The trusted fixture is now0.2.0-dev.4; new desktop acceptance awaits
-restart. Prior0.2.0-dev.1 observations remain version-specific.
-Unit tests and source support are listed separately in the
-[test log](docs/continuation/TEST-LOG.md).
+Replay compares only explicit selected Git commits, which may include human edits
+or multiple turns; it is not automatic previous-turn attribution. A separate
+explicit POSIX one-file [restore CLI](docs/replay.md) has conflict/private-plan
+checks and documented non-atomic interruption limits; no panel/MCP restore action.
+[Usage](docs/impact-and-usage.md) reads only one explicitly selected private export:
+latest cumulative counters, never summed or called current context/billing/cache
+health. No private-session discovery or paid keepalive.
+
+Remaining incomplete work includes new-source native acceptance, full accessibility,
+authoring/update/disable/removal/rollback flows, supported themes, optional event
+native delivery and real Windows/Linux/WSL compatibility. Windows private state,
+settings, usage exports and restore refuse pending ACL support. The
+[93-capability ledger](docs/continuation/REQUIREMENTS.md) records every gap and
+alternative. Continue through the [handoff](docs/continuation/HANDOFF.md).
 
 Claude Mods for Codex is a small, inspectable framework for local Codex lifecycle hooks. It ships three examples: a visible session notice, a deny-only lexical command guard, and an optional metadata activity journal. A fixture replay CLI lets you test the exact hook responses without installing the plugin or signing in.
 
@@ -101,7 +102,7 @@ See [configuration](docs/configuration.md), [wire format](docs/wire-format.md), 
 
 ## Install manually
 
-This checkpoint is source-only. It now declares a local MCP dashboard service;
+This branch is a development distribution. The local MCP dashboard service is included;
 project and activity access are unavailable until explicitly configured.
 Read [runtime setup and limits](docs/runtime.md) before enabling it. Follow [setup](docs/setup.md) to register a local
 marketplace, install the reviewed package and complete human hook trust. It uses
@@ -117,8 +118,9 @@ trust or hot reload is provided. [Setup](docs/setup.md) covers reviewed updates;
 The journal is disabled in the shipped config. It does not store commands, prompts,
 tool arguments/results, transcripts, session IDs, credentials or paths. Hooks
 receive event fields in memory and execute as local trusted processes, whose OS
-authority differs from the model tool sandbox. Local MCP proof processes read
-only their explicitly configured aggregate-data directory and static UI file.
+authority differs from the model tool sandbox. The local MCP service reads only its reviewed selected project, private metadata
+and optional selected export, plus fixed packaged UI assets. Patch/export reads
+are separate explicit grants.
 They make no network/model calls. Skills use the selected model and consume usage;
 the whole workflow is not free merely because callbacks are deterministic.
 Read [privacy](docs/privacy.md) and [security](SECURITY.md) before enabling storage

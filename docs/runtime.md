@@ -7,11 +7,12 @@ does not establish matching hook scope. Do not automatically broaden logging to
 make counts increase. A synthetic matching replay verified the native Watch
 separately; empty retained counts do not prove the producer is connected/healthy.
 
-Source0.2.0-dev.4 is installed/human-trusted as a development fixture; desktop
-restart and new native acceptance are pending. Earlier0.2.0-dev.1 has rendering/interaction
-evidence; a bounded authorized CLI run in its selected project added three real
-lifecycle/tool events visible through desktop Refresh. This resolves scope without
-broader logging. New chart/tree/diff/Replay views still need reviewed host acceptance.
+Production0.2.0-dev.4 is installed/trusted and verified after restart: five owned
+views, synthetic patches/selected Replay, scoped activity chart and selected-export
+usage display. A normal sandbox rejected an exact rewritten marker write outside
+the workspace; no file/elevated retry. Source0.2.0-dev.5 adds
+[local preview](local-preview.md) and [optional lifecycle observation](lifecycle-observation.md),
+not installed or native accepted. The default three hooks/logging remain unchanged.
 
 ## Read-only commands
 
@@ -117,12 +118,12 @@ Rules are bounded literal from/to command strings, not scripts/modules/regex.
 The adapter changes only command, preserves all other fields, rejects conflicts,
 rechecks enabled guards and emits the full before/after. Its paired PreToolUse
 allow+updatedInput continues normal host permissions; it does not approve an
-escalation. Negative native permission acceptance is still pending. Never alter
+escalation. One native dev4 normal-sandbox outside-workspace write rejection passed; other approval modes remain unverified. Never alter
 prompts/models/permission fields or emit PermissionRequest approval.
 
 ## UI actions and limitations
 
-The new owned dashboard has Activity, Project files, Changes and Access views.
+Installed dev4 has Activity, Project files, Changes, Replay and Access views; source dev5 adds Local preview.
 It uses local tools only, with escaped text. Watch is explicit, bounded to30s,
 and reads only the configured scope. Each observation request waits at most2s.
 Source0.2.0-dev.2 includes an SVG event-distribution chart with the same measured
@@ -132,9 +133,9 @@ independently of colors; control/bidirectional characters are visible escapes.
 Diff display stops at64Ki characters or1,000 lines; listing display at500 paths/
 16 segments. These are display bounds in addition to backend limits.
 Cancellation, close and navigation must clean up pending work; tests exercise the
-bridge lifecycle with synthetic peers. Installed0.2.0-dev.1 rendering/interactions
-were observed; new0.2.0-dev.2 views, keyboard/screen-reader behavior, resizing and
-reopening remain native acceptance work. No button approves a native tool call.
+bridge lifecycle with synthetic peers. Installed0.2.0-dev.4 chart/files/diff/Replay/usage rendering and view-button
+interactions were observed. Source dev5 Local preview, full keyboard/screen-reader
+behavior, resizing and close/reopen remain native acceptance work. No button approves a native tool call.
 No network resources are loaded.
 Token/context/cache/billing information is unavailable from the hook feed.
 Optionally, reviewed settings may select `usageExport` outside the project for

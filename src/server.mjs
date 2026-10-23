@@ -1,8 +1,8 @@
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { pathToFileURL } from 'node:url';
 import { resolve } from 'node:path';
 import { runMcpServer } from './mcp-stdio.mjs';
 import { loadRuntimeSettings } from './runtime-settings.mjs';
-import { readBoundedFile } from './io.mjs';
+import { loadDashboardHtml } from './dashboard-resource.mjs';
 import { readMetadataState, observeMetadataState } from './state.mjs';
 import { describeProject, listProjectFiles, inspectProjectChanges, inspectCheckpointChanges } from './workspace.mjs';
 import { CAPTURE_NOTE } from './scope.mjs';
@@ -44,14 +44,14 @@ export function createDashboardHandler(settings) {
   return async (request, {signal} = {}) => {
     const p = request.params ?? {};
     switch (request.method) {
-      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.4'}};
+      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.5'}};
       case 'ping': return {};
       case 'tools/list': return {tools};
       case 'resources/list': return {resources:[{uri:URI,name:'Claude Mods dashboard',mimeType:'text/html;profile=mcp-app'}]};
       case 'resources/templates/list': return {resourceTemplates:[]};
       case 'resources/read':
         if (p.uri !== URI) throw new Error('Unknown resource');
-        return {contents:[{uri:URI,mimeType:'text/html;profile=mcp-app',text:await readBoundedFile(fileURLToPath(new URL('../ui/dashboard.html',import.meta.url)),256*1024),_meta:{ui:{csp:{connectDomains:[],resourceDomains:[]}},'openai/ui':{preferredDisplayMode:'fullscreen',availableDisplayModes:['fullscreen']}}}]};
+        return {contents:[{uri:URI,mimeType:'text/html;profile=mcp-app',text:await loadDashboardHtml(),_meta:{ui:{csp:{connectDomains:[],resourceDomains:[]}},'openai/ui':{preferredDisplayMode:'fullscreen',availableDisplayModes:['fullscreen']}}}]};
       case 'tools/call': {
         if (!tools.some(t => t.name === p.name)) throw new Error('Unknown tool');
         let data;

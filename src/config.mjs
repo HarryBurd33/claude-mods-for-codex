@@ -1,5 +1,5 @@
 import { resolve } from "node:path";
-import { MAX_CONFIG_BYTES, MAX_MESSAGE_CHARS } from "./constants.mjs";
+import { MAX_CONFIG_BYTES, MAX_MESSAGE_CHARS, OBSERVER_EVENTS } from "./constants.mjs";
 import { parseJsonObject, readBoundedFile } from "./io.mjs";
 import { getModDefinition } from "./mods/registry.mjs";
 
@@ -65,11 +65,16 @@ export function validateConfig(raw) {
   const metadataState = { enabled: false, scope: "session" };
   if (raw.metadataState !== undefined) {
     if (raw.metadataState === null || typeof raw.metadataState !== "object" || Array.isArray(raw.metadataState)) fail("metadataState must be an object");
-    assertOnlyKeys(raw.metadataState, new Set(["enabled", "scope"]), "metadataState");
+    assertOnlyKeys(raw.metadataState, new Set(["enabled", "scope", "observerEvents"]), "metadataState");
     if (typeof raw.metadataState.enabled !== "boolean") fail("metadataState.enabled must be boolean");
     if (raw.metadataState.scope !== undefined && !["session", "project"].includes(raw.metadataState.scope)) fail("metadataState.scope must be session or project");
     metadataState.enabled = raw.metadataState.enabled;
     metadataState.scope = raw.metadataState.scope ?? "session";
+    if (raw.metadataState.observerEvents !== undefined) {
+      const events = raw.metadataState.observerEvents;
+      if (!Array.isArray(events) || events.length > OBSERVER_EVENTS.size || events.some(event => !OBSERVER_EVENTS.has(event)) || new Set(events).size !== events.length) fail("metadataState.observerEvents must contain unique supported observer events");
+      metadataState.observerEvents = [...events];
+    }
   }
   return { version: 1, mods: raw.mods.map((mod, index) => validateMod(mod, index, ids)), metadataState };
 }

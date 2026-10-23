@@ -1,0 +1,7 @@
+{
+  "cwd": "/example/selected-project",
+  "hook_event_name": "SessionEnd",
+  "session_id": "synthetic-private-session",
+  "transcript_path": "/synthetic-private-transcript",
+  "reason": "other"
+}

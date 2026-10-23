@@ -2,10 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { PassThrough } from 'node:stream';
 import { EventEmitter } from 'node:events';
-import { readFile } from 'node:fs/promises';
 import { runInNewContext } from 'node:vm';
 import { runMcpServer } from '../src/mcp-stdio.mjs';
 import { holdProof } from '../proofs/hold.mjs';
+import { loadDashboardHtml } from '../src/dashboard-resource.mjs';
 
 const tick = () => new Promise(resolve => setImmediate(resolve));
 function transport(t, handle, { slow = false } = {}) {
@@ -105,13 +105,14 @@ class Element {
   insertRow() { const element = new Element('tr'); this.append(element); return element; }
 }
 async function dashboard() {
-  const html = await readFile(new URL('../ui/dashboard.html', import.meta.url), 'utf8'), script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
+  const html = await loadDashboardHtml(), script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
   const messages = [], listeners = new Map(), timers = new Map(), elements = new Map(); let nextTimer = 0, now = 0;
-  for (const id of ['connection', 'refresh', 'watch', 'notice', 'activity', 'files', 'changes', 'replay', 'access', 'activity-result', 'files-result', 'changes-result', 'replay-result', 'access-result']) { const element = new Element(); element.id = id; elements.set('#' + id, element); }
-  const buttons = ['activity', 'files', 'changes', 'replay', 'access'].map(view => { const element = new Element('button'); element.dataset.view = view; return element; });
+  const views = ['activity', 'files', 'changes', 'replay', 'access', 'preview'];
+  for (const id of ['connection', 'refresh', 'watch', 'notice', ...views, ...views.map(v=>v+'-result'), 'preview-source', 'preview-format', 'preview-render', 'preview-clear']) { const element = new Element(); element.id = id; elements.set('#' + id, element); }
+  const buttons = views.map(view => { const element = new Element('button'); element.dataset.view = view; return element; });
   const parent = { postMessage: message => messages.push(message) };
   runInNewContext(script, {
-    parent, document: { querySelector: selector => elements.get(selector), querySelectorAll: selector => selector === 'nav button' ? buttons : ['activity', 'files', 'changes', 'replay', 'access'].map(id => elements.get('#' + id)), createElement: tag => new Element(tag), createElementNS: (_namespace, tag) => new Element(tag), documentElement: { style: { setProperty() {} } } },
+    parent, document: { querySelector: selector => elements.get(selector), querySelectorAll: selector => selector === 'nav button' ? buttons : views.map(id => elements.get('#' + id)), createElement: tag => new Element(tag), createElementNS: (_namespace, tag) => new Element(tag), documentElement: { style: { setProperty() {} } } },
     addEventListener: (name, callback) => listeners.set(name, callback), Date: { now: () => now },
     setTimeout: (callback, delay) => { const id = ++nextTimer; timers.set(id, { callback, delay }); return id; }, clearTimeout: id => timers.delete(id),
   }, { timeout: 1000 });
@@ -124,6 +125,20 @@ async function dashboard() {
 }
 const revision = 'a'.repeat(64);
 function descendants(node){return [node,...node.children.flatMap(descendants)];}
+test('local preview renders/clears without tools or model messages and clears sensitive memory on teardown (simulated DOM)',async()=>{
+  const p=await dashboard();p.reply(p.latestCall(),{revision,records:0});await tick();
+  const count=p.messages.length;
+  p.buttons.find(b=>b.dataset.view==='preview').onclick();await tick();
+  const input=p.elements.get('#preview-source'),format=p.elements.get('#preview-format'),result=p.elements.get('#preview-result');
+  input.value='flowchart LR\nA["synthetic-private-label"]\nA --> B';format.value='flowchart';
+  p.elements.get('#preview-render').onclick();
+  assert.match(result.textContent,/synthetic-private-label/);
+  assert.equal(p.messages.length,count);assert.equal(p.elements.get('#refresh').disabled,true);assert.equal(p.elements.get('#watch').disabled,true);
+  p.elements.get('#preview-clear').onclick();assert.equal(input.value,'');assert.equal(result.children.length,0);
+  input.value='synthetic-private-label';p.receive({id:100,method:'ui/resource-teardown'});
+  assert.equal(input.value,'');assert.equal(result.children.length,0);
+  assert.equal(p.messages.some(m=>JSON.stringify(m).includes('synthetic-private-label')),false);
+});
 test('replay requests only reviewed settings selection and displays explicit commit attribution (simulated DOM)',async()=>{
   const p=await dashboard();p.reply(p.latestCall(),{revision,records:0});await tick();
   p.buttons.find(b=>b.dataset.view==='replay').onclick();await tick();

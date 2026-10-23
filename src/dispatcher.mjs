@@ -1,5 +1,5 @@
 import { types } from "node:util";
-import { KNOWN_EVENTS, MAX_MESSAGE_CHARS } from "./constants.mjs";
+import { KNOWN_EVENTS, MAX_MESSAGE_CHARS, OBSERVER_EVENTS } from "./constants.mjs";
 import { getModDefinition } from "./mods/registry.mjs";
 import { MAX_REWRITE_COMMAND_CHARS } from "./mods/exact-command-rewrite.mjs";
 
@@ -16,6 +16,23 @@ export function validateEventEnvelope(event) {
   }
   if (!(event.transcript_path === null || typeof event.transcript_path === "string")) {
     throw new Error("event.transcript_path must be a string or null");
+  }
+  if (OBSERVER_EVENTS.has(event.hook_event_name)) {
+    const name = event.hook_event_name;
+    if (name === "SessionEnd") {
+      if (event.reason !== "other") throw new Error("SessionEnd reason is invalid for CLI0.163.0");
+    } else {
+      for (const key of ["model", "turn_id"]) if (typeof event[key] !== "string" || event[key].length === 0) throw new Error(`observer ${key} must be a non-empty string`);
+      if (["PreCompact", "PostCompact"].includes(name)) {
+        if (!["manual", "auto"].includes(event.trigger)) throw new Error("observer compaction trigger is invalid");
+      } else if (!["default", "acceptEdits", "plan", "dontAsk", "bypassPermissions"].includes(event.permission_mode)) throw new Error("observer permission_mode is invalid");
+      if (["Stop", "SubagentStop"].includes(name) && typeof event.stop_hook_active !== "boolean") throw new Error("observer stop_hook_active must be boolean");
+      if (["SubagentStart", "SubagentStop"].includes(name)) for (const key of ["agent_id", "agent_type"]) {
+        if (typeof event[key] !== "string" || !event[key].length) throw new Error(`observer ${key} must be a non-empty string`);
+      }
+    }
+    // Optional response/transcript payloads are never accessed by this lane.
+    return true;
   }
   if (event.hook_event_name === "SessionStart") {
     if (typeof event.model !== "string" || event.model.length === 0) throw new Error("event.model must be a non-empty string");
@@ -147,6 +164,16 @@ export function validateHandlerResult(result, eventName) {
 // The resolver is a trusted source/test seam, never configurable by hook input.
 export function dispatch(event, config, resolveDefinition = getModDefinition) {
   if (!validateEventEnvelope(event)) return { output: {}, journal: null, stateMetadata: null, diagnostic: "unsupported hook event" };
+  if (OBSERVER_EVENTS.has(event.hook_event_name)) {
+    // Never call mod handlers for stop/interrupt/compaction/subagent/end events:
+    // observation cannot block/continue a turn, rewrite context, or start work.
+    // Do not clone or retain last_assistant_message, prompts, agent IDs or paths.
+    return {
+      output: {}, journal: null, diagnostic: null,
+      stateMetadata: config.metadataState?.enabled === true && config.metadataState.observerEvents?.includes(event.hook_event_name)
+        ? { event: event.hook_event_name } : null,
+    };
+  }
   // Each handler sees immutable JSON copied before invoking trusted definitions.
   // Even a mistaken handler cannot mutate a permission field for a later one.
   event = freezeData(cloneToolInput(event));
