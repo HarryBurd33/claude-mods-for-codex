@@ -187,3 +187,11 @@ allowed the earlier fixed marker before the MCP connection appeared. The probe
 was removed through supported CLI after testing. Reviewed source0.0.4 includes
 transport/lifecycle corrections and requires a new reviewed snapshot before any
 retest; installation/trust must not be inherited silently from0.0.3.
+
+
+High-stage authoring contract: scaffoldMod accepts only three known declarative
+templates, validates before exclusive output creation, emits disabled config and
+a template access declaration. No generated code, install, settings mutation or
+trust. Skills are model-mediated and declare scope/usage/limits. Production
+fixture setup remains separate from public defaults and requires actual host
+delivery after installation/trust; CLI inventory alone is insufficient.

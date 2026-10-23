@@ -1,3 +1,35 @@
+# Current High-stage status — 2026-10-23
+
+Full product incomplete. Human selected GPT-6.1 Sol High. High remains appropriate
+for pending production native integration; no Medium switch is requested yet.
+
+This stage added deterministic configuration scaffolding (disabled notice/deny/
+replacement templates, access declaration, review instructions) and four original
+skills: mod-scaffolding, systematic-debugging, verify-mod-completion and
+prepare-mod-review. Scaffold tests and full local suite pass129 tests/one Windows
+skip. Ruby YAML validation passed all four new frontmatters; bundled Python skill
+validator could not run because PyYAML is absent. No system repair performed.
+
+Production fixture0.2.0-dev.1 was installed in the user profile through supported
+CLI, with private config backup and only owned entries changed. All94 cached
+files match the reviewed snapshot. Disposable Git project only, explicit project
+metadata opt-in, patch content off, fixed harmless rewrite/deny rules. Human
+confirmed trust; native CLI inventory independently reports three trusted hooks.
+
+Current desktop chat has NOT loaded the new MCP tool connection. The exact
+production BEFORE and DENY markers both ran unchanged. Native production hook
+execution and new panel remain unverified. User was asked to restart Codex,
+reopen this same chat and continue, so the new connection can load; then open the
+dashboard tool here and inspect the expanded MCP App beside the chat. Do not
+repeat installation/trust unless the package changes. Original native proof
+remains installed; hold-only probe remains removed. Private paths/rollback are
+in ignored root HANDOFF. No extra model/API turn or permission change occurred.
+
+The prior stage record below is historical and its uninstalled-production state
+is superseded by the fixture installation above. All93 requirements remain scoped.
+
+---
+
 # Current continuation status
 
 Updated2026-10-23. **Sol Ultra integration checkpoint; full product incomplete.**

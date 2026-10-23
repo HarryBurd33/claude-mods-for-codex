@@ -1,3 +1,4 @@
+import { scaffoldMod } from "./scaffold.mjs";
 import { readdir } from "node:fs/promises";
 import { basename, dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -18,6 +19,7 @@ export const HELP = `Claude Mods for Codex
 Usage:
   codex-mods validate [--config PATH]
   codex-mods replay [--config PATH] (--event PATH | --fixtures DIRECTORY | --stdin)
+  codex-mods scaffold --spec PATH --output NEW_ABSOLUTE_DIRECTORY
   codex-mods files --project PATH
   codex-mods changes --project PATH [--include-diffs]
   codex-mods report --data-dir PATH
@@ -26,6 +28,7 @@ Usage:
 Commands:
   validate  Check the local mod configuration without running a hook.
   replay    Replay saved JSON envelopes offline and print restricted responses.
+  scaffold  Generate disabled declarative mod configuration and access review.
   files     List bounded non-secret project filenames and Git status, read-only.
   changes   Inspect Git working-tree changes against HEAD, read-only.
             Patch text requires --include-diffs and may contain sensitive data.
@@ -99,6 +102,13 @@ export async function runCli(argv, streams = process) {
     return;
   }
   if (command === "replay") return replay(args, streams);
+  if (command === "scaffold") {
+    const options = parseOptions(args, new Set(["--spec", "--output"]));
+    if (!options.spec || !options.output) throw new Error("scaffold requires --spec and --output");
+    const spec = parseJsonObject(await readBoundedFile(options.spec, 16384), "scaffold spec");
+    streams.stdout.write(`${JSON.stringify(await scaffoldMod(spec, options.output), null, 2)}\n`);
+    return;
+  }
   if (command === "files" || command === "changes") {
     const options = parseOptions(args, new Set(["--project", ...(command === "changes" ? ["--include-diffs"] : [])]));
     if (options.project === undefined) throw new Error(`${command} requires --project PATH`);

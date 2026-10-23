@@ -1,3 +1,51 @@
+# Current continuation — Sol High, awaiting host restart
+
+2026-10-23. This is an in-stage checkpoint, not a model-switch gate. Continue
+with GPT-6.1 Sol High; Medium is not yet justified for unresolved native integration.
+Starting verified commit5bc8ef7a7433189e8b5f1701d9fd4f1324f0ed2a.
+
+Read current STATUS/REQUIREMENTS/ARCHITECTURE/TEST-LOG and docs/authoring.md. Root
+HANDOFF.md is private and has exact installation/config/fixture paths. Preserve
+history and unrelated changes. All93 requirements remain incomplete as recorded.
+
+New source: src/scaffold.mjs; CLI scaffold --spec PATH --output NEW_ABSOLUTE_DIR;
+four new skills under skills/; test/scaffold.test.mjs; proofs/prepare-production.mjs.
+Templates produce disabled config/access/review only. Ruby validated frontmatter;
+Python validator unavailable (PyYAML missing). Full suite129 pass/1 Windows skip.
+
+New fixture installation: claude-mods-for-codex@claude-mods-production-dev0.2.0-dev.1
+is user-profile installed, human-trusted, three trusted hooks independently in
+native inventory,94 cache files equal reviewed snapshot. Current desktop chat
+still has no new MCP dashboard tool, and production BEFORE/DENY markers both ran
+unchanged. Do not claim actual execution or panel rendering. Human asked to restart
+Codex and reopen this same chat. Next: after restart inspect tools, open actual
+mods.dashboard here (user expands inline app if necessary), observe new panel,
+run fixed marker/control tests in disposable project and verify scoped metadata.
+No new model turn needed. Do not reinstall/retrust unchanged snapshot repeatedly.
+
+Config backup/selected synthetic-project settings remain private. Production
+fixture explicitly enables project metadata scope, fixed harmless rewrite/deny,
+no patch contents. Original proof0.0.2 unchanged; hold-only proof removed. Rollback:
+
+```sh
+codex plugin remove claude-mods-for-codex@claude-mods-production-dev --json
+codex plugin marketplace remove claude-mods-production-dev --json
+```
+
+Stop affected clients before optional data cleanup; do not overwrite unrelated
+config from backup. Installed fixture snapshot is immutable; later source/doc
+changes are not automatically installed. Version/review/retrust changed code.
+
+Resume: “Continue on GPT-6.1 Sol High after restarting Codex. Read current
+continuation records and private local handoff, verify the new production MCP
+connection and actual hook/panel behavior, then continue all93 requirements.
+Keep source/mock/native claims separate. Stop for Medium only when the remaining
+work is routine enough, after saving/uploading/verifying its handoff.”
+
+The prior Ultra→High handoff below is historical; installation state above wins.
+
+---
+
 # Sol Ultra → Sol High handoff
 
 2026-10-23. Full product incomplete. **Next model GPT-6.1 Sol; effort High.**

@@ -65,6 +65,13 @@ The denied fixture produces exactly this decision:
 
 A nonmatch produces `{}`. The replay command never executes the command stored in a fixture.
 
+## Author a configuration
+
+Use the [authoring workflow](docs/authoring.md) to describe, scaffold, inspect access,
+validate and replay a disabled mod before review and supported installation. Four
+bundled skills cover scaffolding, debugging, verification and review preparation.
+They consume model usage when invoked; local CLI callbacks make no model calls.
+
 ## Configure the examples
 
 Edit `config/mods.json`, then run `validate` and `replay` again. Rules match an exact Codex hook tool name and/or a literal substring of the normalized `tool_input.command`. Both conditions must match when both are present. Literal matching is case-sensitive and intentionally avoids regular expressions.

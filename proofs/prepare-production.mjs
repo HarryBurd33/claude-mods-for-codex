@@ -1,0 +1,24 @@
+// Reversible development fixture. Does not install, trust, or call a model.
+import {cp,mkdir,writeFile,readFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {join} from 'node:path';
+import {prepareDataDirectory} from '../src/journal.mjs';
+const root=fileURLToPath(new URL('../',import.meta.url));
+await prepareDataDirectory(join(root,'.local'));
+const market=join(root,'.local','production-marketplace'),target=join(market,'plugin');
+await mkdir(market,{mode:0o700});await mkdir(target,{mode:0o700});
+const packageInfo=JSON.parse(await readFile(join(root,'package.json'),'utf8'));
+for(const item of [...packageInfo.files,'package.json','README.md','LICENSE'])await cp(join(root,item),join(target,item),{recursive:true,errorOnExist:true});
+await mkdir(join(market,'.agents','plugins'),{recursive:true,mode:0o700});
+const project=join(root,'.local','production-project'),data=join(root,'.local','production-data'),settings=join(root,'.local','production-settings.json');
+await mkdir(project,{mode:0o700});await writeFile(join(project,'notes.txt'),'Harmless selected-project fixture.\n',{flag:'wx'});
+const save=(path,v)=>writeFile(path,JSON.stringify(v,null,2)+'\n',{mode:0o600,flag:'w'});
+await writeFile(settings,JSON.stringify({version:1,projectRoot:project,dataDirectory:data,stateScope:'project',allowChanges:false},null,2)+'\n',{flag:'wx',mode:0o600});
+await save(join(target,'config','mods.json'),{version:1,metadataState:{enabled:true,scope:'project'},mods:[{id:'notice',type:'sessionNotice',enabled:true,message:'Claude Mods production fixture is active.'},{id:'rewrite',type:'exactCommandRewrite',enabled:true,rules:[{toolName:'Bash',fromCommand:'printf MODS_PRODUCTION_BEFORE',toCommand:'printf MODS_PRODUCTION_AFTER'}]},{id:'deny',type:'denyGuard',enabled:true,rules:[{toolNames:['Bash'],commandContains:['MODS_PRODUCTION_DENY'],reason:'Harmless production fixture denial.'}]}]});
+await save(join(target,'.mcp.json'),{mcpServers:{'claude-mods':{command:'node',args:['src/server.mjs'],cwd:'.',env:{CODEX_MODS_SETTINGS:settings}}}});
+const hooks=JSON.parse(await readFile(join(target,'hooks','hooks.json'),'utf8'));
+const quote=s=>"'"+s.replaceAll("'","'\\''")+"'";
+for(const groups of Object.values(hooks.hooks))for(const group of groups)for(const hook of group.hooks)hook.command=`env CODEX_MODS_DATA_DIR=${quote(data)} CODEX_MODS_PROJECT_ROOT=${quote(project)} node "${'${PLUGIN_ROOT}'}/src/hook-main.mjs"`;
+await save(join(target,'hooks','hooks.json'),hooks);
+await save(join(market,'.agents','plugins','marketplace.json'),{name:'claude-mods-production-dev',interface:{displayName:'Claude Mods Production Development'},plugins:[{name:'claude-mods-for-codex',source:{source:'local',path:'./plugin'},policy:{installation:'AVAILABLE',authentication:'ON_INSTALL'},category:'Developer Tools'}]});
+console.log('Prepared private production snapshot and synthetic project; no installation, trust, or model call. Initialize only the disposable project with Git before testing explorer.');

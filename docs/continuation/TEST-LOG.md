@@ -297,3 +297,33 @@ into a path containing spaces passed127 tests plus one skip, validate and replay
 [CI run40011272508](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40011272508)
 was in progress when this record was written. Its actual result must be checked;
 no CI success or native Windows result is inferred. This follow-up is docs-only.
+
+
+# Sol High authoring and production-install milestone — 2026-10-23
+
+Resumed clean at5bc8ef7 after explicit human switch to Sol High. Added scaffold
+CLI producing disabled validated declarative config/access.json/REVIEW.md with
+exclusive output creation; no executable generation, install or trust automation.
+Tests generate/replay matching behavior for all three templates and preserve
+existing paths/refuse symlink parents and invalid specs. Four original scoped
+skills authored; Ruby YAML frontmatter checks passed. Bundled quick_validate.py
+failed due absent PyYAML; no successful run of that validator is claimed.
+Full local npm test:129 passed,0 failed,1 Windows-only skip (130 total).
+
+Prepared a separate private production fixture, initialized its disposable Git
+project, backed up current configuration privately, registered dedicated local
+marketplace and installed claude-mods-for-codex@claude-mods-production-dev0.2.0-dev.1
+through supported CLI. All94 cached files matched snapshot. Parsed before/after
+config comparison showed only owned production marketplace/plugin changes.
+Fixture deliberately enables only selected-project metadata, fixed print rewrite
+and harmless deny marker, patches off. Public default configuration unchanged.
+Human confirmed three-hook trust; read-only native inventory independently showed
+three trusted/enabled hooks, no warnings/errors and declared MCP service.
+
+Current chat did not yet expose new MCP dashboard tools. Actual native command
+printf MODS_PRODUCTION_BEFORE returned MODS_PRODUCTION_BEFORE; DENY marker also
+ran unchanged. This is NOT production hook execution success. Installed/trusted
+CLI inventory does not establish current desktop connection. User asked to
+restart Codex and resume this same chat before further marker/panel checks.
+No extra model turn was launched. The panel has not been inspected and no new
+production UI observation is claimed. Keep High until this integration is resolved.
