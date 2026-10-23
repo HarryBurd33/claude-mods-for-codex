@@ -36,3 +36,7 @@ Read [current status](docs/continuation/STATUS.md),
 Next human-selected phase: **GPT-6.1 Sol, Medium** for bounded routine verification,
 reviewed update/authoring/lifecycle/docs/packaging. Stronger new security/architecture
 work needs another checkpoint/switch; no automatic delegation/continuation.
+
+[Verified source5a4ecd7](https://github.com/HarryBurd33/claude-mods-for-codex/commit/5a4ecd74a0f543db511a572c92547c714cfc6e5b), clean anonymous clone and
+[all5 CI jobs passed](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40022914501).
+Source/UI/native/platform evidence remain separate.

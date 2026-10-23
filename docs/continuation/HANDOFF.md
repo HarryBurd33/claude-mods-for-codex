@@ -126,8 +126,7 @@ No upstream implementation code/dependency copied; MIT/disclaimer preserved.
   text and Clear worked; screenshot local only. A layout issue was corrected and
   rechecked. Loopback-only three-minute fixed-resource test servers, no workspace
   serving; browser closed. This does not establish dev5 Codex native rendering.
-- Prior source3d959ea all5 CI jobs passed run40018498309. New checkpoint CI must be
-  observed before claiming success; Windows CI is portable-code evidence only.
+- Prior source3d959ea all5 CI jobs passed run40018498309. New source CI all5 jobs passed run40022914501; Windows CI is portable-code evidence only.
 
 ## Configuration, rollback and protected steps
 
@@ -196,6 +195,26 @@ host process/tool disappearance without a fresh-host observation.
 Do not declare full product done from this milestone. Keep each unimplemented
 supported feature explicitly in the ledger/current objective rather than dropping
 it to roadmap. No new app-server client/fork direction without human agreement.
+
+
+## Verified source checkpoint
+
+Source/local aligned commit **5a4ecd74a0f543db511a572c92547c714cfc6e5b**, tree
+301c005c11e2a93276b61c75727af88ef1789ff6, branch codex/astra-groundwork:
+[GitHub source checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/5a4ecd74a0f543db511a572c92547c714cfc6e5b).
+Original equivalent local8b1d06a8f0f50642f2136b2cf24087e4d84938c2 preserved on
+codex/dev5-preview-local-checkpoint. Connected upload tree matched exactly;
+fetched full-tree diff empty and independent ls-remote matched. Anonymous HTTPS
+clone with credential helpers/prompts disabled matched exact commit/tree, clean,
+private root handoff/portable manifest absent. No force push/history loss.
+
+[CI40022914501](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40022914501):
+all five jobs independently observed completed/success. Four full Ubuntu/macOS
+Node22/24 offline lanes plus Windows portable contracts, including new renderer
+and observer pure tests/private-state refusal/skip. Not native Windows Codex,
+private ACL or UI/event delivery certification. The subsequent handoff-record
+commit changes documentation only; final record commit is linked in the model-
+switch response and branch history, avoiding a self-referential commit hash.
 
 ## Complete resume instruction
 

@@ -595,3 +595,22 @@ records are refreshed after remote verification. Initial npm pack attempted the
 unwritable user cache; rerun used an isolated workspace cache successfully, no
 system cache/tool repair. Both bounded loopback test server sessions exited0;
 source simulation tab closed. No active test process or scheduled continuation.
+
+## Verified source checkpoint
+
+Source/local aligned commit **5a4ecd74a0f543db511a572c92547c714cfc6e5b**, tree
+301c005c11e2a93276b61c75727af88ef1789ff6, branch codex/astra-groundwork:
+[GitHub source checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/5a4ecd74a0f543db511a572c92547c714cfc6e5b).
+Original equivalent local8b1d06a8f0f50642f2136b2cf24087e4d84938c2 preserved on
+codex/dev5-preview-local-checkpoint. Connected upload tree matched exactly;
+fetched full-tree diff empty and independent ls-remote matched. Anonymous HTTPS
+clone with credential helpers/prompts disabled matched exact commit/tree, clean,
+private root handoff/portable manifest absent. No force push/history loss.
+
+[CI40022914501](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40022914501):
+all five jobs independently observed completed/success. Four full Ubuntu/macOS
+Node22/24 offline lanes plus Windows portable contracts, including new renderer
+and observer pure tests/private-state refusal/skip. Not native Windows Codex,
+private ACL or UI/event delivery certification. The subsequent handoff-record
+commit changes documentation only; final record commit is linked in the model-
+switch response and branch history, avoiding a self-referential commit hash.

@@ -68,8 +68,9 @@ Full local suite: **164 passed,0 failed,3 Windows-only skips (167 total)**.
 Default config3 mods/four replay fixtures passed. New observer config validated,
 seven synthetic envelopes replayed to{}. Targeted rendering/UI/dashboard28 pass;
 observer/contracts/journal/state45 pass/one Windows-only skip. Geometry refinement
-then rendering6 pass. New source CI still needs observed remote results.
-Prior source3d959ea all5 CI jobs passed, run40018498309; not inherited by dev5.
+then rendering6 pass. Source5a4ecd7 all5 CI jobs passed, run40022914501: Ubuntu/macOS Node22/24
+full suites and Windows portable lane. Exact source/tree verified by fetch/diff/
+ls-remote and clean anonymous public clone. No native Windows compatibility claim.
 
 Existing one-file POSIX restore was tested through six CLI processes with exact
 synthetic reverse/preserved notes,index,HEAD,inode,mode,owner. It remains non-atomic
@@ -98,3 +99,6 @@ fresh visible bounded authorization; no separate client/fork/app patch direction
 Public main remains the historical MVP; codex/astra-groundwork is incomplete
 safe development. Root HANDOFF.md/.local remain ignored, historical local commits
 preserved. Next-stage handoff records exact commits after verified upload.
+
+Verified source: [5a4ecd74a0f543db511a572c92547c714cfc6e5b](https://github.com/HarryBurd33/claude-mods-for-codex/commit/5a4ecd74a0f543db511a572c92547c714cfc6e5b).
+Final handoff-record commit is docs-only; identity reported after readback.
