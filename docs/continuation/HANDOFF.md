@@ -16,9 +16,13 @@ HANDOFF.md is ignored/private and has local paths/backups/logs; never upload it.
 
 Repository [HarryBurd33/claude-mods-for-codex](https://github.com/HarryBurd33/claude-mods-for-codex),
 branch [codex/astra-groundwork](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
-Starting verified commit bf2960eb5b0fc74c794dcd05955c42670b603163. Current source
-checkpoint/local/remote verification is stamped after upload below; final
-handoff-record commit is independently reported in switch message/private record.
+Starting verified commit bf2960eb5b0fc74c794dcd05955c42670b603163.
+Verified source checkpoint: [c6e4656beb39d8318701d3191cd84c8c06ea1a8c](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c6e4656beb39d8318701d3191cd84c8c06ea1a8c).
+Local HEAD was aligned to that remote commit after a full tree match and
+independent ls-remote readback. Tree4c12b4d99dadc25d2fd4536f879e7d6232af653b
+matches original local30904bc00ed3e7f5dfd90a7dd67265eaf3c18ef4, preserved on
+codex/sol-ultra-local-checkpoint. The final documentation-only handoff-record
+commit is independently reported in the switch message/private record.
 Original user local main6c59e98 and original Astra checkpoint branch preserved.
 No force push or private local-history merge. Terminal Git lacks credentials;
 use connected GitHub tree/commit/ref workflow, fetch and compare exact trees.
@@ -94,7 +98,13 @@ Production setup/removal uses separate identifiers in docs/setup.md/removal.md.
 
 ## Results, limits and known gaps
 
-Exact commands/results are in TEST-LOG. Native new-dashboard rendering/watch,
+Exact commands/results are in TEST-LOG. Final local suite127 passed/one Windows
+skip; validation/replay passed. Verified87-file package (522820 unpacked bytes)
+passed fresh space-path extraction test/validate/replay and privacy boundaries.
+[CI run40011272508](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40011272508)
+was in progress at handoff-record creation; do not infer its success. Check the
+actual conclusion before any compatibility claim. This final record changes
+documentation only. Native new-dashboard rendering/watch,
 negative permission preservation, SessionStart, human hold accept/decline/cancel,
 model-routing runtime and native Windows remain unverified. No per-turn attribution
 from Git working tree; restoring is a separate explicit action, not implemented.

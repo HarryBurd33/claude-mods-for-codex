@@ -282,3 +282,18 @@ compatibility manifest, UI and public handoff, excluded private roots/links and
 portable root manifest, and passed clean extraction test/validate/replay. That
 archive preceded final review corrections; final release must rebuild exact
 source. A fresh checkpoint package/run is recorded separately if performed.
+
+
+Verified Sol source checkpoint
+[c6e4656beb39d8318701d3191cd84c8c06ea1a8c](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c6e4656beb39d8318701d3191cd84c8c06ea1a8c).
+Connected GitHub upload tree4c12b4d99dadc25d2fd4536f879e7d6232af653b exactly
+matched committed local30904bc; original local commit preserved on its own branch,
+working branch aligned to remote without force update. Public fetch/diff/ls-remote
+independently verified branch/contents; working tree clean before this docs update.
+Exact-source87-file package,522820 unpacked bytes: included compatibility manifest,
+MCP config/UI and public continuation handoff; excluded private root handoff,
+.local/.git/dependencies/links/traversal/portable root manifest. Fresh extraction
+into a path containing spaces passed127 tests plus one skip, validate and replay.
+[CI run40011272508](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40011272508)
+was in progress when this record was written. Its actual result must be checked;
+no CI success or native Windows result is inferred. This follow-up is docs-only.
