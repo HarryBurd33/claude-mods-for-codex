@@ -9,6 +9,14 @@ Windows dashboard settings, project/Git views and restore remain explicitly
 unavailable before filesystem traversal. Private read support alone cannot safely
 enable those larger paths. See the separate acceptance gates below.
 
+## Gated execution research — resumed High 2026-10-23
+
+[Isolated process proof](../proofs/windows-owned-process/README.md) tests mandatory
+creation-time job-list/handle-list ownership, bounds and parent-death cleanup.
+It is not loaded by the production adapter; existing taskkill behavior unchanged.
+No executable-trust, private Git scratch, traversal, restore or native-host claim.
+Current OS results belong in continuation/TEST-LOG.md. Windows gates stay intact.
+
 ## Storage boundary
 
 src/windows-storage.mjs launches only fixed Windows PowerShell5.1 with -NoProfile,

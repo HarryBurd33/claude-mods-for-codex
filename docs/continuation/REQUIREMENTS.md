@@ -1,9 +1,10 @@
 # Requirements ledger
 
-Travel pause2026-10-23: human resumed High from3e6272d, then paused before Windows
-implementation. All93rows/acceptance gaps unchanged. No new support/test claim;
-resume High from HANDOFF travel section. Installed6/logging/trust unchanged.
-
+High resumed the travel checkpoint1ae63d1 on2026-10-23. An isolated Windows
+creation-time job-list/handle-list candidate is now under OS CI review, not loaded
+by production. Its local Mac tests skip; no Windows support result inferred.
+Windows project/settings/restore gates, installed6/trust/logging remain unchanged.
+See [process proof](../../proofs/windows-owned-process/README.md) and TEST-LOG.
 
 Assessment date: **2026-10-23**. The full product is **incomplete**. This ledger
 supersedes the earlier MVP's exclusions; an earlier implementation choice is

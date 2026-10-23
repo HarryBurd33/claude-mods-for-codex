@@ -72,3 +72,5 @@ jobs:
         run: node test/windows-ipc.mjs
       - name: Real NTFS ACL, public storage APIs, cancellation and synthetic hook subprocess
         run: node --test test/windows-storage.test.mjs
+      - name: Isolated job-list lifetime proof (not production Git or Codex acceptance)
+        run: node --test test/windows-owned-process.test.mjs

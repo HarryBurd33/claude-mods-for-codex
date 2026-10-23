@@ -1,10 +1,10 @@
 # Current status — 2026-10-23
 
-**Travel pause requested by the user. Resume GPT-6.1 Sol, High.** High resumed
-from3e6272d and only reviewed existing boundaries; no new code/config/trust/logging
-change or test/native probe. No background work. See the travel section of HANDOFF.
-The prior next-High instruction below has been fulfilled; Medium is not due yet.
-
+High resumed the travel checkpoint1ae63d1 on2026-10-23. An isolated Windows
+creation-time job-list/handle-list candidate is now under OS CI review, not loaded
+by production. Its local Mac tests skip; no Windows support result inferred.
+Windows project/settings/restore gates, installed6/trust/logging remain unchanged.
+See [process proof](../../proofs/windows-owned-process/README.md) and TEST-LOG.
 
 **Full93-capability product incomplete. Source0.2.0-dev.8; installed0.2.0-dev.6.**
 Human resumed GPT-6.1 Sol Medium from verified0c3413b. Source dev8 adds matching/

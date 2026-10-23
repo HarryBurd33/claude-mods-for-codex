@@ -1,3 +1,17 @@
+# Active High Windows process candidate — 2026-10-23
+
+Resumed travel checkpoint1ae63d1; the historical pause below is no longer active.
+Current source runtime dev8 and installed/trusted6 unchanged. Full93-capability
+product incomplete. A separate candidate under proofs/windows-owned-process now
+uses creation-time job-list+handle-list attributes, eliminating the proposed
+create-then-assign owner-death gap. It is not loaded by product code. Windows CI
+must establish its OS behavior; local Mac test skips do not. High remains required
+for unresolved executable-trust/scratch/traversal/restore work. No Medium gate yet.
+Read proof README, Windows contract and TEST-LOG. No model/API run, installation,
+settings/cache/trust/logging scope edit or public execution operation. Preserve all
+Windows gates. Do not enable from a process proof alone. Update this active summary
+with actual source/CI/readback results before any final switch.
+
 # Travel pause — resume GPT-6.1 Sol, High
 
 2026-10-23. User explicitly paused to close the laptop and travel. Resume the

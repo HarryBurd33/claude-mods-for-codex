@@ -1,9 +1,10 @@
 # Extension architecture and security contracts
 
-Travel pause2026-10-23: High only reviewed Windows execution boundaries. A
-suspended-child/kill-on-close Job Object is an unverified candidate, not a selected
-or implemented contract. See HANDOFF travel section; current runtime/gates unchanged.
-
+High resumed the travel checkpoint1ae63d1 on2026-10-23. An isolated Windows
+creation-time job-list/handle-list candidate is now under OS CI review, not loaded
+by production. Its local Mac tests skip; no Windows support result inferred.
+Windows project/settings/restore gates, installed6/trust/logging remain unchanged.
+See [process proof](../../proofs/windows-owned-process/README.md) and TEST-LOG.
 
 Decision date: 2026-10-23. Development design; outstanding proof gates are explicit.
 Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.

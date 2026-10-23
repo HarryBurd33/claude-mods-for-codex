@@ -1,5 +1,17 @@
 # Continuation verification log
 
+## Resumed High — isolated Windows process proof candidate — 2026-10-23
+
+Clean1ae63d1 travel checkout confirmed. Reviewed current security files/gates and
+primary Microsoft Job Objects, Update/InitializeProcThreadAttributeList,
+CreateProcessW, AssignProcessToJobObject, job limit structures and PeekNamedPipe.
+Creation-time JOB_LIST selected instead of suspended create then assign: the latter
+leaves an owner-death gap. Original MIT unintegrated proof/harness and5real Windows
+OS tests added. node --test test/windows-owned-process.test.mjs on macOS:0pass,
+0fail,5Windows-only skips. Dedicated Node22/24 Windows CI step added; result pending.
+No production/helper/runtime/gate/config/trust/logging change, extra model run,
+REA, installed cache edit or policy bypass. Source runtime stays dev8.
+
 ## High read-only review and travel pause — 2026-10-23
 
 Resumed3e6272d with clean tracked tree. Read current handoff/Windows helper/C#,
