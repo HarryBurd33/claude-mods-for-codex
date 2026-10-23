@@ -40,6 +40,7 @@ test('selected usage file is explicit/private/unlinked/read-only and its CLI ret
   await writeFile(path,'SYNTHETIC_PRIVATE_INVALID\n{broken');const invalid=await readSelectedUsage(path);assert.equal(invalid.available,false);assert.doesNotMatch(JSON.stringify(invalid),/SYNTHETIC_PRIVATE|selected.jsonl/);
   assert.deepEqual((await readdir(dir)).sort(),['selected.jsonl','selected.jsonl.link']);
 });
-test('Windows usage export refuses until private ACL validation exists',{skip:process.platform!=='win32'},async()=>{
-  assert.match((await readSelectedUsage('C:\\private\\selected.jsonl')).reason,/Windows ACL/);
+test('Windows usage rejects network exports without returning content',{skip:process.platform!=='win32'},async()=>{
+  const result=await readSelectedUsage('\\\\synthetic-host\\share\\selected.jsonl');
+  assert.equal(result.available,false);assert.doesNotMatch(JSON.stringify(result),/synthetic-host|selected.jsonl/);
 });

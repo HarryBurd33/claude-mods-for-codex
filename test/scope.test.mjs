@@ -11,8 +11,9 @@ test('scope diagnostic distinguishes parent session from child tool workdir with
   t.after(() => rm(parent, { recursive:true, force:true }));
   const selected = join(parent,'selected'); await mkdir(selected); await mkdir(join(selected,'nested'));
   assert.equal((await resolveMetadataProject(parent,selected)).matches,false);
-  assert.equal((await resolveMetadataProject(join(selected,'nested'),selected)).matches,true);
-  assert.equal((await resolveMetadataProject(selected)).projectId,selected);
+  assert.equal((await resolveMetadataProject(join(selected,'nested'),selected)).matches,process.platform!=='win32');
+  if(process.platform==='win32')await assert.rejects(resolveMetadataProject(selected),/Private Windows/);
+  else assert.equal((await resolveMetadataProject(selected)).projectId,selected);
   let result = '';
   await runCli(['scope','--project',selected,'--session-cwd',parent], {stdout:{write:value => result += value}});
   const data = JSON.parse(result);
@@ -29,7 +30,8 @@ test('scope diagnostic rejects invalid paths and a sibling sharing the selected 
   const selected=join(parent,'project'), sibling=join(parent,'project-other');
   await mkdir(selected); await mkdir(sibling); await writeFile(join(parent,'file'),'fixture');
   assert.equal((await checkMetadataScope(selected,sibling)).matches,false);
-  await assert.rejects(checkMetadataScope(selected,join(parent,'file')),/directory/);
+  if(process.platform==='win32')assert.equal((await checkMetadataScope(selected,join(parent,'file'))).matches,false);
+  else await assert.rejects(checkMetadataScope(selected,join(parent,'file')),/directory/);
   for (const invalid of ['relative', '', selected+'\n', null, 'x'.repeat(4097)]) await assert.rejects(checkMetadataScope(selected,invalid));
   await assert.rejects(runCli(['scope','--project',selected],{}),/requires/);
 });

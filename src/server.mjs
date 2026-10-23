@@ -26,14 +26,14 @@ function scope(settings) {
 }
 const unavailable = reason => ({available:false,reason});
 export function createDashboardHandler(settings) {
-  const usage=()=>settings?.usageExport?readSelectedUsage(settings.usageExport):unavailable('No private usage export selected. Native hooks do not provide context, token or billing counters.');
+  const usage=signal=>settings?.usageExport?readSelectedUsage(settings.usageExport,{signal}):unavailable('No private usage export selected. Native hooks do not provide context, token or billing counters.');
   async function activity(args = {}, signal) {
     if (!args || typeof args !== 'object' || Array.isArray(args) || Object.keys(args).some(k => !['sinceRevision','waitMs'].includes(k))) throw new Error('Invalid activity options');
     if (args.sinceRevision !== undefined && !/^[a-f0-9]{64}$/.test(args.sinceRevision)) throw new Error('Invalid revision');
     if (args.waitMs !== undefined && (!Number.isInteger(args.waitMs) || args.waitMs < 1 || args.waitMs > 2000)) throw new Error('Invalid wait');
     const selected = scope(settings);
     if (!selected) return unavailable('Select a reviewed project and session in runtime settings; cross-session totals require explicit project scope.');
-    const current = await readMetadataState(settings.dataDirectory,selected);
+    const current = await readMetadataState(settings.dataDirectory,selected,{signal});
     if (args.sinceRevision === current.revision && args.waitMs) {
       for await (const next of observeMetadataState(settings.dataDirectory,selected,{durationMs:args.waitMs,intervalMs:100,signal})) {
         if (next.revision !== args.sinceRevision) return {available:true,scope:settings.stateScope,...next,producerHealth:'unknown',captureNote:CAPTURE_NOTE};
@@ -58,8 +58,8 @@ export function createDashboardHandler(settings) {
         if (p.name === 'mods.activity') data = await activity(p.arguments,signal);
         else {
           noArguments(p.arguments);
-          if (p.name === 'mods.dashboard') data = {surface:'plugin-owned MCP App',configured:!!settings,project:settings ? await describeProject(settings.projectRoot) : unavailable('No project selected.'),activity:await activity({},signal),usage:await usage(),access:{network:false,modelCalls:false,changesOptIn:settings?.allowChanges === true}};
-          else if (p.name === 'mods.usage') data = await usage();
+          if (p.name === 'mods.dashboard') data = {surface:'plugin-owned MCP App',configured:!!settings,project:settings ? await describeProject(settings.projectRoot) : unavailable('No project selected.'),activity:await activity({},signal),usage:await usage(signal),access:{network:false,modelCalls:false,changesOptIn:settings?.allowChanges === true}};
+          else if (p.name === 'mods.usage') data = await usage(signal);
           else if (!settings) data = unavailable('No project selected in reviewed runtime settings.');
           else if (p.name === 'mods.files') data = await listProjectFiles(settings.projectRoot,{});
           else if (p.name === 'mods.changes') data = await inspectProjectChanges(settings.projectRoot,{includeDiffs:settings.allowChanges});

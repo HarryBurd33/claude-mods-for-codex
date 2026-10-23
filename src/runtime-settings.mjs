@@ -6,6 +6,9 @@ import { readBoundedFile, parseJsonObject } from './io.mjs';
 // reads and must therefore be reviewed outside the model's project contents.
 export async function loadRuntimeSettings(path) {
   if (!path) return null;
+  // Fail before any filesystem traversal: enabling private reads alone would
+  // also expose unvalidated Windows project/Git and scratch-directory paths.
+  if (process.platform === 'win32') throw new Error('Windows dashboard settings unavailable pending project/Git boundary validation; use explicit storage CLI commands');
   if (!isAbsolute(path)) throw new Error('Settings path must be absolute');
   const file = resolve(path);
   let cursor = file;
@@ -16,7 +19,6 @@ export async function loadRuntimeSettings(path) {
     if (cursor === file && process.platform !== 'win32' && ((info.mode & 0o077) || (process.getuid && info.uid !== process.getuid()))) throw new Error('Settings must be private');
     const parent = dirname(cursor); if (parent === cursor) break; cursor = parent;
   }
-  if (process.platform === 'win32') throw new Error('Private runtime settings need Windows ACL validation');
   const value = parseJsonObject(await readBoundedFile(file, 16384), 'settings');
   if (Object.keys(value).some(key => !['version','projectRoot','dataDirectory','stateScope','sessionId','allowChanges','checkpoints','usageExport'].includes(key)) || value.version !== 1) throw new Error('Unsupported settings');
   for (const key of ['projectRoot','dataDirectory']) {

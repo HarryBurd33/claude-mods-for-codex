@@ -36,6 +36,9 @@ function permitted(path) {
   return safeRelative(path) && path.split("/").every((part) => !EXCLUDED_DIRECTORY.test(part) && !SECRET_NAME.test(part));
 }
 async function selectedRoot(path) {
+  // Do not expose PATH/current-directory executable search, inherited scratch
+  // ACLs or platform-specific traversal through an unvalidated Windows adapter.
+  if (process.platform === 'win32') throw safeError('Windows project views unavailable pending native Git, private scratch and traversal validation');
   if (typeof path !== "string" || !isAbsolute(path) || path.includes("\0")) throw safeError("an explicit absolute project root is required");
   const normalized = resolve(path);
   const stat = await lstat(normalized).catch(() => { throw safeError("selected project is unavailable"); });

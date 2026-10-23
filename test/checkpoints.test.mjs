@@ -22,7 +22,7 @@ async function fixture(t){
   git(root,'add','.');git(root,'commit','-m','Synthetic after');const toCommit=git(root,'rev-parse','HEAD');
   return{root,fromCommit,toCommit};
 }
-test('selected checkpoints are read-only, explicit and unaffected by later working-tree/index edits',async t=>{
+test('selected checkpoints are read-only, explicit and unaffected by later working-tree/index edits',{skip:process.platform==='win32'},async t=>{
   const {root,fromCommit,toCommit}=await fixture(t);
   await writeFile(join(root,'edit.txt'),'unrelated working edit\n');git(root,'add','edit.txt');
   const index=await readFile(join(root,'.git/index')),head=await readFile(join(root,'.git/HEAD'));
@@ -36,7 +36,7 @@ test('selected checkpoints are read-only, explicit and unaffected by later worki
   let output='';await runCli(['checkpoints','--project',root,'--from',fromCommit,'--to',toCommit],{stdout:{write:s=>output+=s}});
   assert.equal(JSON.parse(output).includesDiffs,false);assert.equal(JSON.parse(output).files.every(f=>f.diff===undefined),true);
 });
-test('checkpoint reader rejects refs/revision syntax and non-commit objects, handles bounds and absent objects',async t=>{
+test('checkpoint reader rejects refs/revision syntax and non-commit objects, handles bounds and absent objects',{skip:process.platform==='win32'},async t=>{
   const {root,fromCommit,toCommit}=await fixture(t);
   for(const from of ['HEAD','--help',fromCommit+'~1','a'.repeat(64),null])await assert.rejects(inspectCheckpointChanges(root,{fromCommit:from,toCommit}),/commit IDs/);
   const blob=git(root,'rev-parse',toCommit+':edit.txt');assert.equal((await inspectCheckpointChanges(root,{fromCommit:blob,toCommit})).available,false);

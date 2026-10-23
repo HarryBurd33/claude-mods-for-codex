@@ -8,6 +8,7 @@ import { parseJsonObject, readBoundedStream } from "./io.mjs";
 import { appendJournalEntry } from "./journal.mjs";
 import { recordMetadataEvent } from "./state.mjs";
 import { resolveMetadataProject } from "./scope.mjs";
+import { writeWindowsHookMetadata } from './windows-hook.mjs';
 
 async function metadataScope(event, config) {
   const { projectId, matches } = await resolveMetadataProject(event.cwd, process.env.CODEX_MODS_PROJECT_ROOT);
@@ -59,25 +60,32 @@ async function main() {
   }
   const { output, journal, stateMetadata, diagnostic } = result;
   if (diagnostic !== null) process.stderr.write(`claude-mods-for-codex: ${diagnostic}\n`);
-  if (journal !== null) {
-    try {
-      const dataDirectory = process.env.CODEX_MODS_DATA_DIR ?? process.env.PLUGIN_DATA;
-      if (typeof dataDirectory !== "string" || dataDirectory.length === 0) {
-        throw new Error("a data directory is required when journaling is enabled");
+  if (process.platform === 'win32') {
+    const written = await writeWindowsHookMetadata({event, projectRoot:process.env.CODEX_MODS_PROJECT_ROOT,
+      dataDirectory:process.env.CODEX_MODS_DATA_DIR ?? process.env.PLUGIN_DATA, journal, stateMetadata, stateScope:config.metadataState.scope});
+    if (written.journal === 'unavailable') process.stderr.write('claude-mods-for-codex: activity journal unavailable\n');
+    if (written.state === 'unavailable') process.stderr.write('claude-mods-for-codex: metadata state unavailable\n');
+  } else {
+    if (journal !== null) {
+      try {
+        const dataDirectory = process.env.CODEX_MODS_DATA_DIR ?? process.env.PLUGIN_DATA;
+        if (typeof dataDirectory !== "string" || dataDirectory.length === 0) {
+          throw new Error("a data directory is required when journaling is enabled");
+        }
+        await appendJournalEntry(dataDirectory, journal);
+      } catch {
+        process.stderr.write("claude-mods-for-codex: activity journal unavailable\n");
       }
-      await appendJournalEntry(dataDirectory, journal);
-    } catch {
-      process.stderr.write("claude-mods-for-codex: activity journal unavailable\n");
     }
-  }
-  if (stateMetadata !== null) {
-    try {
-      const dataDirectory = process.env.CODEX_MODS_DATA_DIR ?? process.env.PLUGIN_DATA;
-      await recordMetadataEvent(dataDirectory, await metadataScope(event, config), stateMetadata);
-    } catch {
-      // Telemetry availability never replaces a guard decision, adds arguments,
-      // or echoes an identifier, input, path, prompt or exception to the host.
-      process.stderr.write("claude-mods-for-codex: metadata state unavailable\n");
+    if (stateMetadata !== null) {
+      try {
+        const dataDirectory = process.env.CODEX_MODS_DATA_DIR ?? process.env.PLUGIN_DATA;
+        await recordMetadataEvent(dataDirectory, await metadataScope(event, config), stateMetadata);
+      } catch {
+        // Telemetry availability never replaces a guard decision, adds arguments,
+        // or echoes an identifier, input, path, prompt or exception to the host.
+        process.stderr.write("claude-mods-for-codex: metadata state unavailable\n");
+      }
     }
   }
   process.stdout.write(`${JSON.stringify(output)}\n`);

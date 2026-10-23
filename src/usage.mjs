@@ -1,6 +1,7 @@
 import { constants } from 'node:fs';
 import { lstat,open,realpath } from 'node:fs/promises';
 import { isAbsolute,resolve } from 'node:path';
+import { readWindowsPrivateFile } from './windows-storage.mjs';
 
 const MAX_BYTES=1024*1024,MAX_LINES=4096,MAX_LINE=256*1024;
 const unavailable=reason=>({available:false,source:'selected-codex-exec-jsonl',reason});
@@ -47,9 +48,11 @@ export function summarizeExecUsage(text){
     limits:'Explicit selected export only; not attached to this chat. Source authenticity/completeness is not attested. The host can emit default zero counters when usage was not supplied. Missing fields stay unavailable; cached share is not cache health, TTL, savings or exact cost.'};
 }
 
-export async function readSelectedUsage(input){
+export async function readSelectedUsage(input,{signal}={}){
   try{
-    if(process.platform==='win32')return unavailable('Private usage exports need native Windows ACL validation.');
+    if(signal!==undefined&&!(signal instanceof AbortSignal))throw new Error('Invalid read signal');
+    signal?.throwIfAborted();
+    if(process.platform==='win32')return summarizeExecUsage(await readWindowsPrivateFile(input,MAX_BYTES,{signal}));
     if(typeof input!=='string'||!isAbsolute(input)||input.length>4096||/\p{Cc}/u.test(input))return unavailable('Select an absolute bounded private export path.');
     const path=resolve(input);if(await realpath(path)!==path)return unavailable('Select a canonical export path without links.');
     const prior=await lstat(path);

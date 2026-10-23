@@ -1,18 +1,13 @@
-// Candidate integration: no filesystem scope probing on the guard-response lane.
+// No filesystem scope probing on the guard-response lane.
 // Exact explicitly selected native-session root only, intentionally narrower
 // than POSIX descendant containment. Never infer scope from a shell command.
 import { performance } from 'node:perf_hooks';
-import { validateWindowsPrivatePath, windowsStorageRequest } from './windows-storage.mjs';
+import { windowsStorageRequest } from './windows-storage.mjs';
+import { windowsHookProjectMatches } from './scope.mjs';
+export { windowsHookProjectMatches } from './scope.mjs';
 import { encodeJournalRecord } from './journal.mjs';
 import { metadataScopeKey } from './state.mjs';
 import { recordWindowsMetadata } from './windows-state.mjs';
-
-export function windowsHookProjectMatches(cwd, selected) {
-  try {
-    validateWindowsPrivatePath(cwd); validateWindowsPrivatePath(selected);
-    return cwd === selected; // no case folding: NTFS directories can be case-sensitive
-  } catch { return false; }
-}
 
 export async function writeWindowsHookMetadata({event,projectRoot,dataDirectory,journal,stateMetadata,stateScope}) {
   const result = { journal: journal === null ? 'off' : 'unavailable', state: stateMetadata === null ? 'off' : 'unavailable' };

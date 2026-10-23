@@ -3,6 +3,7 @@ import { lstat, mkdir, opendir, rmdir, unlink } from "node:fs/promises";
 import { isAbsolute, join, parse, resolve, sep } from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
 import { appendJournalEntry, prepareDataDirectory, readJournalEntries, summarizeJournal } from "./journal.mjs";
+import { recordWindowsMetadata, readWindowsMetadata, pruneWindowsMetadata } from './windows-state.mjs';
 
 // This is an opt-in storage primitive, not a hook or a host event subscription.
 // The caller selects the data directory and supplies trusted scope identifiers.
@@ -115,6 +116,7 @@ export async function recordMetadataEvent(dataDirectory, scope, metadata, now = 
   // Reject the full host envelope before any filesystem effects. Only this
   // allowlist crosses the storage boundary; the journal checks value semantics.
   plainRecord(metadata, ["event", "tool", "decision"], "state metadata");
+  if (process.platform === 'win32') return recordWindowsMetadata(dataDirectory, key, metadata, now);
   const root = await stateRoot(dataDirectory, true);
   await withStateLock(root, async () => {
     const names = await scopeDirectories(root);
@@ -132,8 +134,13 @@ function snapshot(entries) {
   };
 }
 
-export async function readMetadataState(dataDirectory, scope) {
+export async function readMetadataState(dataDirectory, scope, options = {}) {
+  plainRecord(options, ['signal', 'timeoutMs'], 'state read options');
+  if (options.signal !== undefined && !(options.signal instanceof AbortSignal)) throw new Error('state read signal must be an AbortSignal');
+  if (options.timeoutMs !== undefined && (!Number.isInteger(options.timeoutMs) || options.timeoutMs < 100 || options.timeoutMs > 15000)) throw new Error('state read deadline must be 100–15000 ms');
+  options.signal?.throwIfAborted();
   const key = metadataScopeKey(scope);
+  if (process.platform === 'win32') return snapshot(await readWindowsMetadata(dataDirectory, key, options));
   const root = await stateRoot(dataDirectory);
   if (root === null || !await inspectDirectory(join(root, key))) return snapshot([]);
   try { return snapshot(await readJournalEntries(join(root, key))); } catch (error) {
@@ -156,7 +163,10 @@ export async function* observeMetadataState(dataDirectory, scope, options = {}) 
   const deadline = performance.now() + durationMs;
   let revision;
   while (!signal?.aborted && performance.now() < deadline) {
-    const current = await readMetadataState(dataDirectory, scope);
+    let current;
+    try {
+      current = await readMetadataState(dataDirectory, scope, { signal, timeoutMs: Math.max(100, Math.min(15000, Math.floor(deadline - performance.now()))) });
+    } catch (error) { if (signal?.aborted) return; throw error; }
     if (signal?.aborted || performance.now() >= deadline) return;
     if (current.revision !== revision) {
       revision = current.revision;
@@ -175,6 +185,7 @@ export async function* observeMetadataState(dataDirectory, scope, options = {}) 
 // steals locks, or deletes unknown files. Nonempty locked scopes are refused.
 export async function pruneMetadataState(dataDirectory, { before } = {}) {
   if (!(before instanceof Date) || Number.isNaN(before.valueOf())) throw new Error("state pruning requires an explicit valid cutoff date");
+  if (process.platform === 'win32') return pruneWindowsMetadata(dataDirectory, before);
   const root = await stateRoot(dataDirectory);
   if (root === null) return { removedScopes: 0 };
   return withStateLock(root, async () => {

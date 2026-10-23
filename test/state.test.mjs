@@ -51,11 +51,11 @@ test("state scope keys isolate projects, sessions, and explicit project-wide sta
   assert.throws(() => metadataScopeKey({ get projectId() { throw new Error("should not execute"); } }), /unsupported field/);
 });
 
-test("Windows state storage is explicitly unavailable until ACL validation exists", { skip: process.platform !== "win32" }, async () => {
-  const directory = join(tmpdir(), "unused-state-proof");
-  await assert.rejects(recordMetadataEvent(directory, scope, { event: "SessionStart" }), /Windows state storage/);
-  await assert.rejects(readMetadataState(directory, scope), /Windows state storage/);
-  await assert.rejects(pruneMetadataState(directory, { before: new Date() }), /Windows state storage/);
+test("Windows state rejects network namespaces before filesystem access", { skip: process.platform !== "win32" }, async () => {
+  const directory = '\\\\synthetic-host\\share';
+  await assert.rejects(recordMetadataEvent(directory, scope, { event: "SessionStart" }), /Private Windows/);
+  await assert.rejects(readMetadataState(directory, scope), /Private Windows/);
+  await assert.rejects(pruneMetadataState(directory, { before: new Date() }), /Private Windows/);
 });
 
 test("state readers create nothing and return an explicit retained-record snapshot", posixOnly, async (t) => {

@@ -1,5 +1,4 @@
-// Candidate integration adapter. Not selected by production state.mjs until
-// exact-source native NTFS tests and security review complete.
+// OS-specific storage only. Scope validation/snapshot contracts stay in state.mjs.
 import { createHash } from 'node:crypto';
 import { windowsStorageRequest } from './windows-storage.mjs';
 import { encodeJournalRecord, parseJournalFiles } from './journal.mjs';
@@ -9,8 +8,8 @@ export async function recordWindowsMetadata(dataDirectory, key, metadata, now, t
   const data = checkKey(key) + ':' + Buffer.from(encodeJournalRecord(metadata, now)).toString('base64');
   await windowsStorageRequest('state-record', dataDirectory, { data, timeoutMs });
 }
-export async function readWindowsMetadata(dataDirectory, key) {
-  const files = await windowsStorageRequest('state-read', dataDirectory, { data: checkKey(key) });
+export async function readWindowsMetadata(dataDirectory, key, { signal, timeoutMs } = {}) {
+  const files = await windowsStorageRequest('state-read', dataDirectory, { data: checkKey(key), signal, timeoutMs });
   return parseJournalFiles(files.map(file => file.toString('utf8')));
 }
 export async function pruneWindowsMetadata(dataDirectory, before) {

@@ -1,17 +1,15 @@
-# Windows private-storage security
+# Windows private storage — development source0.2.0-dev.7
 
-2026-10-23, development source0.2.0-dev.7. **Candidate, not native Codex support.**
-Installed/trusted macOS production remains dev6, unchanged. No logging grants,
-hook registration, host permissions, model selection or human trust are changed.
+Native OS primitive checkpoint f152acb passed all15 tests on Windows Server2025
+Node22/24 in CI40033656920. Current source integrates journal, scoped state and
+explicit selected-usage reads through that adapter; integration CI is pending.
+This is not native Codex/Windows11 acceptance. Installed dev6 is unchanged.
 
-The previous journal relied on POSIX mode bits even on Windows. Source dev7 now
-explicitly refuses Windows journal prepare/read/write before filesystem effects,
-as state/settings/export/restore already did. Node's Windows chmod model does not
-establish current-user-only access. Do not remove these refusals based on portable
-path tests. A separate candidate runs actual NTFS ACL tests in Windows CI before
-any production route is enabled.
+Windows dashboard settings, project/Git views and restore remain explicitly
+unavailable before filesystem traversal. Private read support alone cannot safely
+enable those larger paths. See the separate acceptance gates below.
 
-## Candidate boundary
+## Storage boundary
 
 src/windows-storage.mjs launches only fixed Windows PowerShell5.1 with -NoProfile,
 -NonInteractive and the fixed packaged .ps1 path/cwd. OS profile/runtime variables
@@ -65,21 +63,63 @@ or hostile-same-user defense. Metadata allowlist still belongs to journal.mjs.
 
 ## Evidence and acceptance
 
-Current macOS syntax/path/POSIX tests are not Windows evidence. New Windows Node22/
-24 CI runs real ACL/file APIs: protected current-user reads, broad/inherited/wrong-
-owner refusal, broad allow despite deny, hardlinks/junctions, no-write reports,
-concurrent appends, rotation/unsafe archive and held-lock bounds. Initial two candidate runs hit15s process deadlines; independent C# compilation
-passed on the second run, but no ACL success is inferred. Selected OS environment
-startup diagnosis and scoped-state candidate tests are the next exact-source gates. No native Windows Codex install/events,
-Windows11 desktop, WSL or Windows restore claim. Windows CI is an OS primitive
-proof, not host integration. Runtime state/settings/exports/restore stay refused
-until reviewed integration and corresponding tests are completed.
+Native Windows Server2025 Datacenter10.0.26100, runner image windows-2025-vs2026
+20261021.278.1, Node22/24 CI40033656920: all15 tests passed in each native lane.
+Includes protected private reads, broad/inherited/wrong-owner/null ACL refusal,
+broad allow despite deny, mutable ancestor, hardlinks/junctions, no-write reads,
+concurrent append/rotation/unsafe archive/held lock, scoped state isolation and
+freshness-checked prune, owned process deadline, exact scope and shared telemetry
+budget. Earlier failures and repairs are retained in continuation/TEST-LOG.md.
+No native Windows Codex install/events, Windows11 desktop, WSL or restore claim.
 
-Required next gates: observe exact-source Windows CI; inspect raw descriptor and
-handle/race behavior without printing sensitive fixture data; add null/unsupported
-ACL, unsafe ancestors and helper process-timeout tests; integrate only validated
-operations; rerun POSIX and Windows CI. Scoped-state enum/prune and Windows restore
-need their own contracts. No raw secrets/transcripts or credential-store tests.
+Integration adds public journal/state/report/selected-usage APIs, read cancellation,
+observer signal propagation and a synthetic native hook subprocess with stalled
+telemetry. These new exact-source tests are pending; a subprocess is not native
+Codex event delivery. Default logging/registration remain unchanged. The current
+macOS installed dev6 configuration, human trust and selected data are untouched.
+
+## Explicit Windows boundaries
+
+- Storage requires an explicitly selected local fixed NTFS path, normal helper
+  policy and current-user protected ACLs. No automatic ACL repair, credential
+  discovery, policy bypass or trust action. Data root must leave room for the
+  hashed scoped layout: at most157 UTF-16 code units; all final paths at most240.
+- Hook metadata requires CODEX_MODS_PROJECT_ROOT and exact native cwd equality,
+  without descendant inference/case folding or filesystem scope walking. Journal
+  and scoped metadata share1500ms, plus bounded500ms owned-tree cleanup, below the
+  host5s hook deadline. Slow/unavailable optional storage drops metadata, preserves
+  the dispatcher decision and reports only a fixed diagnostic. Actual Windows
+  host path spelling, sandbox, permissions and throughput remain unverified.
+- Public storage/selected-usage CLI reads use at most15s+500ms cleanup. Cancelled
+  native reads stop the owned helper tree; pre-aborted reads do not spawn. No
+  daemon, watcher, network call or model call. POSIX paths remain as before.
+- Windows runtime settings/dashboard and all workspace/Git entry points refuse
+  before project traversal or execution. Existing POSIX Git execution uses PATH
+  and a private POSIX scratch directory; porting it unchanged could select a
+  project git.exe or expose copied index/refs through inherited Windows ACLs.
+  Safe enabling requires a validated absolute trusted local Git executable,
+  atomically private scratch, trusted cwd/environment, bounded owned Git process
+  tree cleanup, Windows traversal tests and native host acceptance. These are
+  unfinished Windows requirements, not proof that Codex cannot support them.
+- Windows restore remains refused. It needs private plans plus reviewed no-follow
+  project-write/conflict/metadata/interruption/sandbox behavior. The private
+  reader does not establish a safe writer. Use an explicitly reviewed normal
+  host file edit as the practical alternative; no automated Windows restore claim.
+
+## Setup, retention and removal
+
+No installation or machine configuration changed in this source-only stage.
+Use the supported package installation/update workflow and human changed-code
+review before executing a new snapshot; never edit an installed cache or trust
+record. Windows full installation/rollback still requires a native Codex host.
+For OS tests use npm test on POSIX or the dedicated native Windows CI command
+node --test test/windows-storage.test.mjs. Only synthetic disposable fixtures.
+An existing broad/inherited data ACL is refused rather than repaired. A user can
+select a new private data directory; do not weaken or copy shared ACLs blindly.
+State prune requires an explicit valid cutoff and removes only verified expired
+known files/scopes. Locks are never stolen. Removal of source/package does not
+remove user settings/data; stop writers, inspect the explicit selected directory
+and choose separate data deletion. Never delete a live lock to force operation.
 
 ## Primary evidence retrieved2026-10-23
 
@@ -100,11 +140,3 @@ Public [Import-Module](https://learn.microsoft.com/en-us/powershell/module/micro
 
 [CodeDomProvider.CompileAssemblyFromSource](https://learn.microsoft.com/en-us/dotnet/api/system.codedom.compiler.codedomprovider.compileassemblyfromsource?view=netframework-4.8.1) and [CSharpCodeProvider](https://learn.microsoft.com/en-us/dotnet/api/microsoft.csharp.csharpcodeprovider?view=netframework-4.8.1) retrieved2026-10-23; these APIs require .NET Framework. Earlier module-loading experiments were superseded, not shipped as supported routes.
 
-Candidate Windows hook lane uses an overall1500ms telemetry budget plus at most
-500ms cleanup. The two opt-in storage lanes share it; no fresh second deadline.
-It compares only exact explicitly configured native-session root strings, with
-no filesystem scope walk, command-based inference, case folding or descendant
-capture. This narrower Windows approximation avoids scope IO/network traversal
-on a five-second guard path. Start the session at the selected canonical root;
-native-host path spelling still requires actual Windows Codex acceptance. POSIX
-containment and current installed scope remain unchanged. Candidate not wired yet.

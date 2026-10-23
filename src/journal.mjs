@@ -3,6 +3,7 @@ import { lstat, mkdir, open, rename, rm, rmdir, stat } from "node:fs/promises";
 import { dirname, isAbsolute, join, parse, resolve, sep } from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
 import { MAX_JOURNAL_BYTES, MAX_JOURNAL_LINE_BYTES, KNOWN_EVENTS, OBSERVER_EVENTS } from "./constants.mjs";
+import { windowsStorageRequest, validateWindowsPrivatePath } from './windows-storage.mjs';
 
 const JOURNAL_NAME = "activity.jsonl";
 const ARCHIVE_NAME = "activity.previous.jsonl";
@@ -45,7 +46,11 @@ async function assertNoSymlinkComponents(path) {
 }
 
 export async function prepareDataDirectory(input) {
-  if (process.platform === "win32") throw new Error("Windows journal storage requires a reviewed ACL implementation");
+  if (process.platform === 'win32') {
+    validateWindowsPrivatePath(input);
+    await windowsStorageRequest('prepare-directory', input);
+    return input;
+  }
   if (typeof input !== "string" || input.length === 0 || input.length > 4096 || /\p{Cc}/u.test(input)) {
     throw new Error("data directory must be a non-empty path without control characters");
   }
@@ -153,6 +158,10 @@ export function encodeJournalRecord(metadata, now = () => new Date()) {
 
 export async function appendJournalEntry(dataDirectoryInput, metadata, now = () => new Date()) {
   const line = encodeJournalRecord(metadata, now);
+  if (process.platform === 'win32') {
+    await windowsStorageRequest('journal-append', dataDirectoryInput, { data: Buffer.from(line).toString('base64') });
+    return;
+  }
   const lineBytes = Buffer.byteLength(line);
   const dataDirectory = await prepareDataDirectory(dataDirectoryInput);
   return withLock(dataDirectory, async () => {
@@ -240,7 +249,10 @@ export function parseJournalFiles(texts) {
 }
 
 export async function readJournalEntries(dataDirectoryInput) {
-  if (process.platform === "win32") throw new Error("Windows journal storage requires a reviewed ACL implementation");
+  if (process.platform === 'win32') {
+    const files = await windowsStorageRequest('journal-read', dataDirectoryInput);
+    return parseJournalFiles(files.map(file => file.toString('utf8')));
+  }
   const dataDirectory = await openDataDirectoryForRead(dataDirectoryInput);
   const lockPath = join(dataDirectory, LOCK_NAME);
   // Reports remain read-only. Retry if a cooperating writer holds its lock or
