@@ -1,0 +1,23 @@
+{
+  "name": "claude-mods-for-codex",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small, reviewable framework for safe Codex hook mods.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "codex-mods": "./bin/codex-mods.mjs"
+  },
+  "files": [
+    "plugin.json", "bin/", "src/", "config/", "hooks/", "skills/",
+    "examples/", "fixtures/", "test/", "docs/", "SECURITY.md", "CONTRIBUTING.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "validate": "node ./bin/codex-mods.mjs validate",
+    "replay": "node ./bin/codex-mods.mjs replay --fixtures ./fixtures"
+  },
+  "license": "MIT"
+}

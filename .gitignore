@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+*.tgz
+*.zip
+.DS_Store
+.env
+.env.*
+activity.jsonl
+activity.previous.jsonl
+.activity-journal.lock/
