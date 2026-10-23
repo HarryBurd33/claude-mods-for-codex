@@ -21,7 +21,8 @@ try {
     $principal = New-Object System.Security.Principal.SecurityIdentifier('S-1-1-0')
     $acl.AddAccessRule((New-Object System.Security.AccessControl.FileSystemAccessRule($principal,'DeleteSubdirectoriesAndFiles','Allow')))
   } elseif ($request.mode -eq 'broad' -or $request.mode -eq 'deny-and-broad') {
-    $principal = New-Object System.Security.Principal.SecurityIdentifier('S-1-1-0')
+    $identity = if ($request.mode -eq 'deny-and-broad') { 'S-1-5-21-111-222-333-424242' } else { 'S-1-1-0' }
+    $principal = New-Object System.Security.Principal.SecurityIdentifier($identity)
     $acl.AddAccessRule((New-Object System.Security.AccessControl.FileSystemAccessRule($principal,'ReadData','Allow')))
     if ($request.mode -eq 'deny-and-broad') {
       $acl.AddAccessRule((New-Object System.Security.AccessControl.FileSystemAccessRule($principal,'ReadData','Deny')))
