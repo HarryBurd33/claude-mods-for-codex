@@ -3,7 +3,9 @@
 Decision date: 2026-10-23. Development design; outstanding proof gates are explicit.
 Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.
 
-Current checkpoint: installed production0.2.0-dev.4 native dashboard and normal
+Current Medium source0.2.0-dev.6 changes guidance/theme examples/version only;
+reviewed dev5 parser/event contracts are unchanged and not yet installed. No
+optional hooks/storage are enabled. Installed production0.2.0-dev.4 native dashboard and normal
 sandbox-negative rewrite passed after restart; hold0.0.4 confirm/decline/cancel/
 30s timeout observed then supported removal/fresh no-hold inventory. Human MCP
 provenance and infrastructure fail-open remain limits. Source0.2.0-dev.5 adds the

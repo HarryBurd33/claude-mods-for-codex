@@ -614,3 +614,33 @@ and observer pure tests/private-state refusal/skip. Not native Windows Codex,
 private ACL or UI/event delivery certification. The subsequent handoff-record
 commit changes documentation only; final record commit is linked in the model-
 switch response and branch history, avoiding a self-referential commit hash.
+
+
+# Sol Medium source dev6 preparation — 2026-10-23
+
+Human selected GPT-6.1 Sol Medium and resumed verified13ea67b, clean workspace.
+No broader parser/approval/privacy/ACL/routing contract changed. Source0.2.0-dev.6
+batches dev5 implementation with a narrow management-skill correction: reviewed
+exact replacement carrier allowed, bare/PermissionRequest approval still excluded,
+normal permissions, separate storage grants and human changed-hook trust preserved.
+
+Verified installed dev4 CLI scaffolded a synthetic exact print replacement into
+new private output, disabled by default. Inspected access declaration (no writes,
+network/model calls), validated, replayed disabled/match/nonmatch, verified exact
+before/after disclosure and preserved synthetic permission/timeout fields. Replay
+never executed its command. Prepared authored rule for a reviewed fixture update;
+not yet installed. This is selected-model skill-guided work using real CLI, not
+an immediate slash callback or independent skill/model evaluation.
+
+Local npm test164pass/0fail/3Windows-only skips167total; validate3mods/default4
+replay fixtures passed. Focused package/scaffold6pass. Ruby YAML frontmatter parse
+passed. Bundled quick_validate.py was attempted with bundled Python but PyYAML is
+absent; no successful quick_validate claim or system repair. Original tmTheme
+plist parsed with standard-library plistlib, no external entities/assets/code.
+Theme not applied/client not upgraded/native rendering not verified.
+
+Official CLI customization/developer-commands pages searched/opened and relevant
+/theme, custom tmTheme, /statusline and /title sections retrieved2026-10-23.
+Markdown endpoints returned unsupported-content-type, recorded inaccessible for
+that tool; HTML retrieval succeeded. Prior pinned164 prose-release evidence kept
+separate from installed163. No paid/model run or logging expansion.

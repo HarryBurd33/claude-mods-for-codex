@@ -1,5 +1,12 @@
 # Current status — 2026-10-23
 
+Current Medium stage: source0.2.0-dev.6 is prepared, not installed yet. It includes
+unchanged dev5 rendering/observer contracts, corrected management-skill guidance,
+an original optional theme asset and setup/removal documentation corrections.
+Installed dev4 logging scope/trust remain unchanged. Native dev6 acceptance and
+full product completion are not claimed. This current stage supersedes the
+historical model-switch wording below; the human selected Sol Medium.
+
 **Full product incomplete. Source0.2.0-dev.5; installed0.2.0-dev.4.**
 Astra Ultra → Sol Ultra → Sol High stages were human selected. High has resolved
 this milestone's native permission/hold uncertainty and implemented the bounded

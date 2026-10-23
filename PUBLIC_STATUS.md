@@ -1,5 +1,12 @@
 # Project status
 
+Current Medium stage: source0.2.0-dev.6 is prepared, not installed yet. It includes
+unchanged dev5 rendering/observer contracts, corrected management-skill guidance,
+an original optional theme asset and setup/removal documentation corrections.
+Installed dev4 logging scope/trust remain unchanged. Native dev6 acceptance and
+full product completion are not claimed. This current stage supersedes the
+historical model-switch wording below; the human selected Sol Medium.
+
 2026-10-23: **incomplete development source0.2.0-dev.5**, installed test fixture
 0.2.0-dev.4, branch codex/astra-groundwork. Public main is the historical MVP.
 

@@ -1,6 +1,6 @@
 # Claude Mods for Codex
 
-**Development source `0.2.0-dev.5`: the full requested product is incomplete.**
+**Development source `0.2.0-dev.6`: the full requested product is incomplete.**
 Installed test fixture0.2.0-dev.4 has actual macOS desktop covered-hook and owned
 MCP App evidence. Its Activity chart/table, files/Git status, working-tree patch,
 selected-commit Replay and passive reported usage views work on the recorded host.
@@ -11,9 +11,9 @@ production security gate: human provenance is not attested and disconnected hook
 can fail open. See [current status](docs/continuation/STATUS.md) and
 [test log](docs/continuation/TEST-LOG.md) for version-specific evidence/limits.
 
-New source adds [local code/JSON/restricted Mermaid flowchart preview](docs/local-preview.md)
+Source dev6 includes the dev5 [local code/JSON/restricted Mermaid flowchart preview](docs/local-preview.md)
 and [optional observation-only lifecycle events](docs/lifecycle-observation.md).
-They have unit/subprocess/browser-simulation evidence, **not installed dev5 native
+They have unit/subprocess/browser-simulation evidence, **not installed dev6 native
 acceptance**. Default hook registration/logging is unchanged. All callbacks stay
 local; skill/chat use still consumes model usage. Full local suite164pass/three
 Windows-only skips; CI/native platform claims are separate.
@@ -31,7 +31,9 @@ authoring/update/disable/removal/rollback flows, supported themes, optional even
 native delivery and real Windows/Linux/WSL compatibility. Windows private state,
 settings, usage exports and restore refuse pending ACL support. The
 [93-capability ledger](docs/continuation/REQUIREMENTS.md) records every gap and
-alternative. Continue through the [handoff](docs/continuation/HANDOFF.md).
+alternative. An original [theme example and supported setup/rollback guide](docs/themes.md) is
+provided without applying it or upgrading Codex. The management skill now reflects
+the reviewed exact-replacement contract. Continue through the [handoff](docs/continuation/HANDOFF.md).
 
 Claude Mods for Codex is a small, inspectable framework for local Codex lifecycle hooks. It ships three examples: a visible session notice, a deny-only lexical command guard, and an optional metadata activity journal. A fixture replay CLI lets you test the exact hook responses without installing the plugin or signing in.
 

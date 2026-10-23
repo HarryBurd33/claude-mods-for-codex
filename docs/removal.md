@@ -21,7 +21,7 @@ Do not unregister a shared marketplace to remove one plugin. Delete its copied s
 
 ## Optional data
 
-Removal is not evidence that all retained metadata was deleted. If journaling was enabled, its exact selected plugin-data directory may contain `activity.jsonl`, `activity.previous.jsonl`, or a stale `.activity-journal.lock`. The unintegrated scoped-state library can additionally create a `metadata-state-v1/` subtree only when explicitly called. The normal package does not enable it automatically.
+Removal is not evidence that all retained metadata was deleted. If journaling was enabled, its exact selected plugin-data directory may contain `activity.jsonl`, `activity.previous.jsonl`, or a stale `.activity-journal.lock`. The integrated scoped-state library additionally creates a `metadata-state-v1/` subtree only when metadataState is explicitly enabled. The shipped default configuration keeps it off; optional lifecycle events require another explicit event selection and reviewed hook registration.
 
 Locate the exact data directory through the host or your own setup record. Stop all relevant hook/server processes before removing data. Inspect and remove only this plugin's selected data if you no longer need it; preserve unrelated files and the parent directory. Do not infer a data path from the source checkout or search credential/session stores. Never remove an apparently stale lock while a writer may still be active.
 

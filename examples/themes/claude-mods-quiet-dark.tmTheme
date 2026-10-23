@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0"><dict>
+  <key>name</key><string>Claude Mods Quiet Dark</string>
+  <key>author</key><string>Claude Mods for Codex contributors</string>
+  <key>settings</key><array>
+    <dict><key>settings</key><dict>
+      <key>foreground</key><string>#D9E2F1</string>
+      <key>background</key><string>#171B23</string>
+      <key>caret</key><string>#F5F7FC</string>
+      <key>selection</key><string>#2E455C</string>
+    </dict></dict>
+    <dict><key>scope</key><string>comment</string><key>settings</key><dict><key>foreground</key><string>#91A5BD</string><key>fontStyle</key><string>italic</string></dict></dict>
+    <dict><key>scope</key><string>string</string><key>settings</key><dict><key>foreground</key><string>#A6DBA8</string></dict></dict>
+    <dict><key>scope</key><string>keyword, storage</string><key>settings</key><dict><key>foreground</key><string>#B9C9FF</string><key>fontStyle</key><string>bold</string></dict></dict>
+    <dict><key>scope</key><string>constant.numeric, constant.language</string><key>settings</key><dict><key>foreground</key><string>#F8CB8A</string></dict></dict>
+    <dict><key>scope</key><string>entity.name, support.type</string><key>settings</key><dict><key>foreground</key><string>#83D9D1</string></dict></dict>
+    <dict><key>scope</key><string>invalid</string><key>settings</key><dict><key>foreground</key><string>#FFACB3</string><key>fontStyle</key><string>underline</string></dict></dict>
+  </array>
+</dict></plist>
