@@ -55,7 +55,7 @@ test("bundled skill has valid frontmatter", async () => {
 
 test("example configurations all validate", async () => {
   const { loadConfig } = await import("../src/config.mjs");
-  for (const name of ["session-notice.json", "deny-guard.json", "activity-journal-opt-in.json"]) {
+  for (const name of ["session-notice.json", "deny-guard.json", "activity-journal-opt-in.json", "blast-radius-opt-in.json"]) {
     await assert.doesNotReject(loadConfig(join(root, "examples/config", name)));
   }
 });

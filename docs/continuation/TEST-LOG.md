@@ -1,5 +1,43 @@
 # Continuation verification log
 
+## Conservative impact and passive usage source — 2026-10-23
+
+Source0.2.0-dev.4 not installed. New disabled blastRadiusGuard uses six fixed
+lexical classes for bounded conservative denial/impact explanation. No target
+scan/count, command echo, execution, hold/approval or model call. Source tests
+exercise false positives/misses, selected categories, strict configuration,
+no raw synthetic command/target output, disabled/noncovered abstention and
+original/replacement guard preservation. Initial quoted-text test lacked the
+classifier's required boundary; corrected fixture to a real lexical false positive,
+without changing the classifier to satisfy an invented expectation.
+
+Passive usage source reads one explicit private export and returns only known
+numeric fields/provenance/availability. Released0.163.0 source fetched for exact
+semantics (no checkout change): completion uses cumulative ThreadTokenUsage.total,
+not independent per-turn deltas, and can default zeros. Latest snapshot only,
+never sum. Missing fields/zero denominators remain unavailable; no context/billing/
+cache-health/TTL inference. One selected thread boundary, bounded bytes/lines/
+completion/diagnostic counts, malformed/concatenated/counter relations refused.
+Private file ownership/mode/no links enforced; native Windows refuses until ACL.
+No private session discovery or persisted export content.
+
+CLI usage read the earlier authorized native test's existing private export:
+42721 input,54 output,26368 cached,0 cache-write/reasoning output,one completion,
+23 ignored diagnostic lines; cached-input fraction0.6172140165258304. This is a
+reported fresh-run cumulative snapshot, not current context/cache health/cost.
+No new model run was launched. New optional runtime usageExport is an explicit
+outside-project read grant; no-argument mods.usage/dashboard return only summary.
+Access view source presents human-readable counters/unknowns and service access.
+It is not yet installed/native rendered. Metadata logging and retention unchanged.
+
+Latest full npm test: **152 passed,0 failed,3 Windows-only skips(155 total)**.
+Validation3mods and four-fixture replay passed. New tests cover no raw secret/thread/
+command/path output, strict/missing/zero counters, no double-counting, late errors,
+private/hardlink/symlink/no-write file behavior, no arbitrary MCP export argument,
+settings outside-project grant and UI labels. Windows CI adds pure usage/impact
+and explicit export-ACL refusal; no native Windows storage/host certification.
+
+
 ## Selected checkpoint Replay and separate restore source — 2026-10-23
 
 Source0.2.0-dev.3, not installed. inspectCheckpointChanges accepts only two full

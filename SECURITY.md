@@ -30,3 +30,14 @@ No automatic lock stealing, force apply, permission weakening or recovery write
 is provided. See [restore limits and recovery](docs/replay.md). Native Windows
 restore refuses pending private-plan ACL support; same-user races are not an OS
 sandbox. This source is not an installed/released restoration guarantee.
+
+Source0.2.0-dev.4 can optionally read one reviewed private usage export outside the
+selected project. This file may contain prompts/tool output; only whitelisted
+numeric counters and availability/provenance descriptions are returned. No raw
+session discovery, identifier/content logging, network, price lookup or keepalive.
+Reported completion snapshots are not summed, since the released CLI copies
+cumulative thread totals. Source completeness/authenticity is not attested; missing
+values stay unavailable and default zero counters are not evidence of free use.
+The original blast-radius example is disabled by default, lexical and deny-only.
+It neither measures target scope nor approves/holds calls; documented misses and
+false positives remain. See [impact and usage](docs/impact-and-usage.md).

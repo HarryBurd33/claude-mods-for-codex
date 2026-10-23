@@ -1,6 +1,6 @@
 # Project status
 
-**2026-10-23: incomplete full-product development source0.2.0-dev.3** on
+**2026-10-23: incomplete full-product development source0.2.0-dev.4** on
 codex/astra-groundwork. Public main remains the historical experimental baseline.
 This is not a finished release or directory submission.
 
@@ -10,13 +10,18 @@ project also verified native SessionStart/PreToolUse/PostToolUse metadata visibl
 through desktop Refresh. Logging follows the native session directory; setting a
 tool workdir does not select project logging. No scope was expanded.
 
-Source0.2.0-dev.3 adds a no-write scope diagnostic, measured-event SVG chart/table,
+Source0.2.0-dev.4 adds a no-write scope diagnostic, measured-event SVG chart/table,
 collapsible file tree and bounded literal diff display. These source changes are
 not installed; simulated DOM tests are separate from host acceptance. Selected
 commit Replay and a separate explicit POSIX one-file restore CLI are now source
 implementations with conflict/private-plan tests; no restore action in the panel.
 Unsupported restore cases and interruption limits are in docs/replay.md. Full local
-suite144 passed/two Windows-only skips; validation/replay passed.
+suite152 passed/three Windows-only skips; validation/replay passed.
+
+Source0.2.0-dev.4 additionally implements a disabled conservative impact denial
+example and optional one-private-export reported usage adapter. Latest cumulative
+snapshot only (never sum), missing fields unknown; no exact billing/cache health,
+private-session discovery or keepalive. New MCP/UI acceptance pending.
 
 All93 requirements remain scoped. Broader/native replay/restore acceptance, richer rendering, sourced usage/
 cache, theme and complete authoring/lifecycle flows are still partial or absent.

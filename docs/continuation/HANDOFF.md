@@ -14,7 +14,7 @@ upload it. Historical handoffs remain in Git history; this current record wins.
 Repository: [HarryBurd33/claude-mods-for-codex](https://github.com/HarryBurd33/claude-mods-for-codex).
 Branch: [codex/astra-groundwork](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
 Starting verified remote/local commit:
-[3efe179f8cc93584a4ef097a036d6f42d8f5f32d](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3efe179f8cc93584a4ef097a036d6f42d8f5f32d).
+[79a2ea78e9d4011948f2d60360c413d87dfeb70d](https://github.com/HarryBurd33/claude-mods-for-codex/commit/79a2ea78e9d4011948f2d60360c413d87dfeb70d).
 The checkpoint after this record is reported independently after upload/readback,
 not guessed in advance. Stages: Astra Ultra groundwork; human switch to Sol Ultra
 contracts/security/integration; human switch to Sol High authoring/native/features.
@@ -24,7 +24,7 @@ Original local main6c59e98 and equivalent checkpoint branches preserved. Never
 merge private history into public branch or force-push. Terminal push lacks
 credentials: use connected GitHub tree/commit/ref upload, fetch/full-tree comparison
 and independent ls-remote. Root handoff/.local stay ignored, nested public handoff
-tracked. Current source0.2.0-dev.3 is NOT installed; versioned update/human trust
+tracked. Current source0.2.0-dev.4 is NOT installed; versioned update/human trust
 required after code changes. Never edit installed caches or silently reuse trust.
 
 ## Host and installation
@@ -86,9 +86,24 @@ Empty counts do not establish producer health.
 - src/scaffold.mjs / four original skills: disabled declarative config/access/
   review generation; no executable/hot reload/install/automatic trust.
 
+- src/impact.mjs and src/mods/blast-radius-guard.mjs: fixed six lexical signal
+  classes; disabled example config, conservative bounded denial, no scope counts,
+  command echo or execution. Immediate impact --stdin JSON command assessment.
+- src/usage.mjs: summarizeExecUsage/readSelectedUsage. One explicit private export,
+  latest cumulative completion snapshot (never sum), whitelisted counters/nulls,
+  bounded lines/bytes/records, no raw prompt/command/thread/path return or storage.
+  Source CLI read of earlier authorized test export succeeded, no new model run.
+- Runtime settings optional outside-project usageExport; no-argument mods.usage;
+  Access view presents reported counters/unknowns and service access, no JSON dump.
+  src/usage.test.mjs and impact.test.mjs plus bridge/config privacy tests pass.
+- Primary released0.163.0 JSON processor copies ThreadTokenUsage.total and may
+  emit default zeros. Do not call exported completion counts per-turn deltas or
+  sum them; source docs link exact released code. Current context/billing/cache
+  health remain unknown. Actual source MCP/UI rendering still awaits update.
+
 ## Observed checks
 
-npm test:144 passed,0 failed,2 Windows-only skips(146 total).
+npm test:152 passed,0 failed,3 Windows-only skips(155 total).
 npm run validate:3 mods valid; npm run replay:all four fixtures expected.
 Scope/dashboard/contracts/transport targeted regressions pass. Native evidence
 above is separate from changed-source/simulated DOM evidence. Keyboard/resize/
@@ -116,12 +131,12 @@ data cleanup; never overwrite whole current config from old backup.
    xattr behavior remains unverified; don't overstate in-place-write guarantees.
    Add/delete/rename restoration remains unsupported with normal explicit host
    operations as alternative. Broader turn capture needs explicit boundaries.
-2. Original conservative blast-radius explanation/deny-retry alternative. Hold stays
+2. Native acceptance of new conservative impact/deny-review alternative. Hold stays
    unverified proof unless actual human response/provenance works; missing MCP hook
    can fail open, so never present as production enforcement.
-3. Passive usage/cache from explicit selected structured exports only: verified
-   fields/missing values/ratios/attribution, no private-session search, context/bill
-   invention or keepalive. Rich code/Mermaid needs bounded local renderer/license
+3. Native passive usage acceptance and broader explicitly selected source fixtures;
+   preserve latest cumulative snapshot/missing fields and no private-session search,
+   billing/context invention or keepalive. Rich code/Mermaid needs bounded renderer/license
    review; supported native themes remain separate from owned CSS.
 4. Reviewed versioned source update: backup/inspect only owned config delta,
    supported install/update and human changed-hook trust. Verify actual new UI,
@@ -141,7 +156,7 @@ Do not bypass with a subagent or continue in background.
 > docs/runtime.md and ignored root HANDOFF.md. Preserve work/private history.
 > Scope mismatch is resolved by matching the native session directory; never
 > broaden logging or use shell workdir for chat attribution. Installed0.2.0-dev.1
-> has native CLI/desktop evidence; source0.2.0-dev.3 is not installed. Continue all93
+> has native CLI/desktop evidence; source0.2.0-dev.4 is not installed. Continue all93
 > requirements/priorities, keep automated/replay/native claims separate, preserve
 > permissions/human trust, and do not reuse the consumed additional-run permission.
 > Save/verify uploads. Stop for a human switch to Medium once it is sufficient.

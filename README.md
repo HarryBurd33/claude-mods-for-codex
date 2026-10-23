@@ -1,6 +1,6 @@
 # Claude Mods for Codex
 
-**Development source `0.2.0-dev.3`: the full requested product is incomplete.**
+**Development source `0.2.0-dev.4`: the full requested product is incomplete.**
 This branch corrects hook packaging and adds tested building blocks and separate
 native proofs. The dispatcher preserves the three v0.1 examples and adds opt-in exact command
 replacement and scoped metadata. The local dashboard and project views have
@@ -21,6 +21,13 @@ display, read-only selected-commit Replay, and a separate explicit POSIX one-fil
 restore CLI. These are tested with disposable files and simulated DOM; the new
 views/restore workflow await reviewed installed-host acceptance. See
 [checkpoint replay and restore limits](docs/replay.md).
+
+Source0.2.0-dev.4 adds a disabled conservative blast-radius denial example and
+passive reported token/cache counters from one explicitly selected private CLI
+export. It never sums cumulative completion records, discovers private chats,
+infers context/billing/cache health or makes keepalive calls. See
+[impact and usage limits](docs/impact-and-usage.md). These new components are
+tested locally, not installed/native-accepted; the trusted fixture remains0.2.0-dev.1.
 Unit tests and source support are listed separately in the
 [test log](docs/continuation/TEST-LOG.md).
 
@@ -45,6 +52,9 @@ The guard is a policy aid. It is not a sandbox, a shell parser, or complete enfo
 | Deny guard | Tool identifier and command text in memory | Returns a denial for a lexical match; never executes the command |
 | Activity journal (opt-in) | Event and tool identifiers | Writes bounded local metadata files under `PLUGIN_DATA` |
 | Management skill | Verified plugin files and requested local report | Can edit configuration and run the packaged validation/replay/report CLI using ordinary Codex permissions |
+| Source project dashboard | Explicit selected Git project and optional private export | Read-only tools; patch content and usage export separately opt in; no raw export content returned |
+| Source restore CLI | Two selected commits, one existing text file and private plan | Explicit apply only; writes selected file after conflict checks; limits/recovery in docs/replay.md |
+| Source blast-radius guard | Canonical Bash command in memory | Lexical impact explanation/denial only; no command execution, target scan or approval |
 
 ## Try it offline
 

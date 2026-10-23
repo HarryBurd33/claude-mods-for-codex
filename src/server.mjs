@@ -6,6 +6,7 @@ import { readBoundedFile } from './io.mjs';
 import { readMetadataState, observeMetadataState } from './state.mjs';
 import { describeProject, listProjectFiles, inspectProjectChanges, inspectCheckpointChanges } from './workspace.mjs';
 import { CAPTURE_NOTE } from './scope.mjs';
+import { readSelectedUsage } from './usage.mjs';
 
 const URI = 'ui://claude-mods/dashboard';
 const empty = { type: 'object', properties: {}, additionalProperties: false };
@@ -16,6 +17,7 @@ const tools = [
   { name:'mods.files', title:'List selected project files', description:'Read a bounded Git-aware file listing, excluding ignored paths, links and secret filenames.', inputSchema:empty,annotations:readOnly },
   { name:'mods.changes', title:'Inspect selected project changes', description:'Read working-tree changes against HEAD. Patch content requires configuration opt-in; this is not exact per-turn attribution.',inputSchema:empty,annotations:readOnly },
   { name:'mods.checkpoints', title:'Inspect selected checkpoints', description:'Compare only the two commits selected in reviewed runtime settings. Read-only; no automatic turn attribution or restoration.',inputSchema:empty,annotations:readOnly },
+  { name:'mods.usage', title:'Read selected usage snapshot', description:'Read reported counters from only the private export selected in reviewed settings. Not current chat/context, billing or cache health.',inputSchema:empty,annotations:readOnly },
 ];
 function noArguments(value) { if (value !== undefined && (!value || Array.isArray(value) || typeof value !== 'object' || Object.keys(value).length)) throw new Error('Unexpected arguments'); }
 function scope(settings) {
@@ -24,6 +26,7 @@ function scope(settings) {
 }
 const unavailable = reason => ({available:false,reason});
 export function createDashboardHandler(settings) {
+  const usage=()=>settings?.usageExport?readSelectedUsage(settings.usageExport):unavailable('No private usage export selected. Native hooks do not provide context, token or billing counters.');
   async function activity(args = {}, signal) {
     if (!args || typeof args !== 'object' || Array.isArray(args) || Object.keys(args).some(k => !['sinceRevision','waitMs'].includes(k))) throw new Error('Invalid activity options');
     if (args.sinceRevision !== undefined && !/^[a-f0-9]{64}$/.test(args.sinceRevision)) throw new Error('Invalid revision');
@@ -41,7 +44,7 @@ export function createDashboardHandler(settings) {
   return async (request, {signal} = {}) => {
     const p = request.params ?? {};
     switch (request.method) {
-      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.3'}};
+      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.4'}};
       case 'ping': return {};
       case 'tools/list': return {tools};
       case 'resources/list': return {resources:[{uri:URI,name:'Claude Mods dashboard',mimeType:'text/html;profile=mcp-app'}]};
@@ -55,7 +58,8 @@ export function createDashboardHandler(settings) {
         if (p.name === 'mods.activity') data = await activity(p.arguments,signal);
         else {
           noArguments(p.arguments);
-          if (p.name === 'mods.dashboard') data = {surface:'plugin-owned MCP App',configured:!!settings,project:settings ? await describeProject(settings.projectRoot) : unavailable('No project selected.'),activity:await activity({},signal),usage:unavailable('This native hook feed supplies no context, token or billing counters.'),access:{network:false,modelCalls:false,changesOptIn:settings?.allowChanges === true}};
+          if (p.name === 'mods.dashboard') data = {surface:'plugin-owned MCP App',configured:!!settings,project:settings ? await describeProject(settings.projectRoot) : unavailable('No project selected.'),activity:await activity({},signal),usage:await usage(),access:{network:false,modelCalls:false,changesOptIn:settings?.allowChanges === true}};
+          else if (p.name === 'mods.usage') data = await usage();
           else if (!settings) data = unavailable('No project selected in reviewed runtime settings.');
           else if (p.name === 'mods.files') data = await listProjectFiles(settings.projectRoot,{});
           else if (p.name === 'mods.changes') data = await inspectProjectChanges(settings.projectRoot,{includeDiffs:settings.allowChanges});

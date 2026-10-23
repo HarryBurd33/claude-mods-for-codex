@@ -18,7 +18,7 @@ export async function loadRuntimeSettings(path) {
   }
   if (process.platform === 'win32') throw new Error('Private runtime settings need Windows ACL validation');
   const value = parseJsonObject(await readBoundedFile(file, 16384), 'settings');
-  if (Object.keys(value).some(key => !['version','projectRoot','dataDirectory','stateScope','sessionId','allowChanges','checkpoints'].includes(key)) || value.version !== 1) throw new Error('Unsupported settings');
+  if (Object.keys(value).some(key => !['version','projectRoot','dataDirectory','stateScope','sessionId','allowChanges','checkpoints','usageExport'].includes(key)) || value.version !== 1) throw new Error('Unsupported settings');
   for (const key of ['projectRoot','dataDirectory']) {
     if (typeof value[key] !== 'string' || !isAbsolute(value[key]) || value[key].length > 4096 || /\p{Cc}/u.test(value[key])) throw new Error('Settings paths must be absolute and bounded');
   }
@@ -35,6 +35,11 @@ export async function loadRuntimeSettings(path) {
     const selected=value.checkpoints;
     if(!selected||typeof selected!=='object'||Array.isArray(selected)||Object.keys(selected).sort().join()!=='fromCommit,toCommit'||![selected.fromCommit,selected.toCommit].every(id=>typeof id==='string'&&/^[a-f0-9]{40}$/.test(id)))throw new Error('Select exactly two full lowercase commit IDs');
     Object.freeze(selected);
+  }
+  if(value.usageExport!==undefined){
+    if(typeof value.usageExport!=='string'||!isAbsolute(value.usageExport)||value.usageExport.length>4096||/\p{Cc}/u.test(value.usageExport))throw new Error('Select an absolute bounded private usage export');
+    const exportRelative=relative(projectRoot,resolve(value.usageExport));
+    if(exportRelative===''||(!isAbsolute(exportRelative)&&exportRelative!=='..'&&!exportRelative.startsWith(`..${sep}`)))throw new Error('Keep the selected raw usage export outside the project');
   }
   return Object.freeze({ ...value, projectRoot, dataDirectory: resolve(value.dataDirectory), stateScope: value.stateScope ?? 'session', allowChanges: value.allowChanges === true });
 }

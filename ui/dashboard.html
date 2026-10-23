@@ -13,7 +13,7 @@
 <section id="files" hidden><h2>Project files</h2><p>Only the configured project is read. Ignored paths, links and secret filenames are excluded.</p><div id="files-result"></div></section>
 <section id="changes" hidden><h2>Working-tree changes</h2><p>Git changes against HEAD can include concurrent human edits. This view is read-only; it does not attribute changes to a specific turn or restore files.</p><div id="changes-result"></div></section>
 <section id="replay" hidden><h2>Selected Git checkpoints</h2><p>Only the two commits selected in reviewed settings are compared. They may include human edits or multiple turns. Inspection never changes files, creates commits or restores edits.</p><div id="replay-result"></div></section>
-<section id="access" hidden><h2>Access and usage</h2><p>No network or additional model calls. Hooks and the local service run with local process permissions, distinct from the model tool sandbox.</p><p>Context occupancy, token counts, cache health and exact billing are unavailable from this hook feed. Missing data is not zero. There are no paid keepalive calls.</p><div id="access-result"></div></section>
+<section id="access" hidden><h2>Access and usage</h2><p>No network or additional model calls. Hooks and the local service run with local process permissions, distinct from the model tool sandbox.</p><p>Hooks supply no token or context counters. An explicitly selected private export can supply a reported completion snapshot, which may include earlier thread usage. Context occupancy, cache health and exact billing remain unavailable. Missing data is not zero. There are no paid keepalive calls.</p><div id="access-result"></div></section>
 <footer><p class="muted">Development checkpoint. A dashboard button never approves a pending native tool call. Configure access through a reviewed runtime settings file; installation and changed-hook trust remain separate steps.</p></footer></main>
 <script>
 let nextId=1,closed=false,selected='activity',revision,hostReady=false,refreshTask,refreshWanted=false,watchGeneration=0,watchSleep;
@@ -87,7 +87,19 @@ function render(view,data){
     if(data.truncated)text(root,'p','Changes truncated at safety bounds.');
     for(const c of (data.files??[]).slice(0,500)){text(root,'h3',c.path??'Change');text(root,'p',c.status??'');if(c.diff)patch(root,c.diff);else text(root,'p',`Patch: ${c.diffStatus??'unavailable'}`);}
     if(!data.files?.length)text(root,'p','No visible changes or patch content unavailable.');
-  }else text(root,'pre',JSON.stringify(data,null,2));
+  }else{
+    text(root,'h3','Selected access');
+    table(root,[['Project',data.project?.name??'Unavailable'],['Activity scope',data.activity?.scope??'Unavailable'],['Patch content',data.access?.changesOptIn===true?'Explicitly enabled':data.access?.changesOptIn===false?'Off':'Unavailable'],['Service network calls',data.access?.network===false?'None':'Unavailable'],['Service-initiated model calls',data.access?.modelCalls===false?'None':'Unavailable']]);
+    text(root,'p','Local callbacks make no additional model calls. Using this chat or skills still consumes model usage.');
+    text(root,'h3','Selected export counters');const u=data.usage;
+    if(!u?.available)text(root,'p',u?.reason??'No usage export available.');
+    else{
+      text(root,'p',u.semantics);const c=u.counters??{};
+      table(root,[['Reported input tokens',c.inputTokens??'Unavailable'],['Reported output tokens',c.outputTokens??'Unavailable'],['Reported cached input',c.cachedInputTokens??'Unavailable'],['Reported cache writes',c.cacheWriteInputTokens??'Unavailable'],['Reported reasoning output',c.reasoningOutputTokens??'Unavailable'],['Cached share of reported input',typeof u.cachedInputShare==='number'?`${(u.cachedInputShare*100).toFixed(1)}%`:'Unavailable'],['Export stream status',u.streamStatus??'Unavailable']]);
+      text(root,'p',u.limits);
+    }
+    text(root,'p','Current context occupancy, exact billing and cache health are unavailable. These counters do not establish them.');
+  }
 }
 function stopWatch(){
   watchGeneration++;$('#watch').checked=false;
@@ -145,7 +157,7 @@ for(const b of document.querySelectorAll('nav button'))b.onclick=()=>{
 $('#refresh').onclick=()=>refresh();$('#watch').onchange=()=>{if($('#watch').checked&&selected==='activity')void watch();else stopWatch();};
 (async()=>{
   try{
-    const host=await request('ui/initialize',{protocolVersion:'2026-01-26',appInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.3'},appCapabilities:{}});
+    const host=await request('ui/initialize',{protocolVersion:'2026-01-26',appInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.4'},appCapabilities:{}});
     if(closed)return;
     for(const[k,v]of Object.entries(host.hostContext?.styles?.variables??{}))if(/^--[a-z0-9-]+$/i.test(k)&&typeof v==='string')document.documentElement.style.setProperty(k,v);
     hostReady=!!host.hostCapabilities?.serverTools;send({method:'ui/notifications/initialized',params:{}});

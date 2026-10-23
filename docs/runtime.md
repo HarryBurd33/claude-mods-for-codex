@@ -7,7 +7,7 @@ does not establish matching hook scope. Do not automatically broaden logging to
 make counts increase. A synthetic matching replay verified the native Watch
 separately; empty retained counts do not prove the producer is connected/healthy.
 
-Source0.2.0-dev.3 is an incomplete development checkpoint and is not installed.
+Source0.2.0-dev.4 is an incomplete development checkpoint and is not installed.
 The installed0.2.0-dev.1 production dashboard has native rendering/interaction
 evidence; a bounded authorized CLI run in its selected project added three real
 lifecycle/tool events visible through desktop Refresh. This resolves scope without
@@ -23,6 +23,7 @@ node bin/codex-mods.mjs changes --project /absolute/selected/project
 node bin/codex-mods.mjs changes --project /absolute/selected/project --include-diffs
 node bin/codex-mods.mjs scope --project /absolute/selected/project --session-cwd /absolute/native/session/directory
 node bin/codex-mods.mjs checkpoints --project /absolute/selected/project --from FULL_FROM_COMMIT --to FULL_TO_COMMIT
+node bin/codex-mods.mjs usage --export /absolute/private/selected-exec.jsonl
 ```
 
 These are immediate local CLI callbacks and make no model calls. They are not
@@ -135,5 +136,9 @@ bridge lifecycle with synthetic peers. Installed0.2.0-dev.1 rendering/interactio
 were observed; new0.2.0-dev.2 views, keyboard/screen-reader behavior, resizing and
 reopening remain native acceptance work. No button approves a native tool call.
 No network resources are loaded.
-Token/context/cache/billing information is unavailable from the hook feed; the UI
-says so and sends no keepalive/model calls. Skills still consume model usage.
+Token/context/cache/billing information is unavailable from the hook feed.
+Optionally, reviewed settings may select `usageExport` outside the project for
+reported counters from one private exec JSONL export. It is not current context
+or a current-chat attachment. Latest cumulative completion snapshot only, never
+sum; absent data stays unavailable. See [impact and usage](impact-and-usage.md).
+No keepalive or new model call. Skills/chat/tool use still consume model usage.

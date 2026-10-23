@@ -43,6 +43,6 @@ jobs:
       - name: Portable replacement and decision contracts
         run: node --test test/contracts.test.mjs test/hold.test.mjs
       - name: Selected Git and scope contracts; restore privacy refusal
-        run: node --test test/checkpoints.test.mjs test/scope.test.mjs test/restore.test.mjs
+        run: node --test test/checkpoints.test.mjs test/scope.test.mjs test/restore.test.mjs test/usage.test.mjs test/impact.test.mjs
       - run: npm run validate
       - run: npm run replay

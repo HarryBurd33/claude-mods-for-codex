@@ -1,6 +1,8 @@
 import { scaffoldMod } from "./scaffold.mjs";
 import { checkMetadataScope } from "./scope.mjs";
 import { prepareRestorePlan,reviewRestorePlan,applyRestorePlan } from "./restore.mjs";
+import { assessCommandImpact } from "./impact.mjs";
+import { readSelectedUsage } from "./usage.mjs";
 import { readdir } from "node:fs/promises";
 import { basename, dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -23,6 +25,8 @@ Usage:
   codex-mods replay [--config PATH] (--event PATH | --fixtures DIRECTORY | --stdin)
   codex-mods scaffold --spec PATH --output NEW_ABSOLUTE_DIRECTORY
   codex-mods scope --project PATH --session-cwd PATH
+  codex-mods impact --stdin
+  codex-mods usage --export PRIVATE_JSONL
   codex-mods files --project PATH
   codex-mods changes --project PATH [--include-diffs]
   codex-mods checkpoints --project PATH --from COMMIT --to COMMIT [--path FILE] [--include-diffs]
@@ -37,6 +41,10 @@ Commands:
   replay    Replay saved JSON envelopes offline and print restricted responses.
   scaffold  Generate disabled declarative mod configuration and access review.
   scope     Check supplied native session/project containment without logging.
+  impact    Explain fixed lexical signals in a stdin JSON command object;
+            assessment only, never executes or approves the command.
+  usage     Read only reported counters from an explicit private exec export.
+            No private-session discovery, model call, cost or context inference.
   files     List bounded non-secret project filenames and Git status, read-only.
   changes   Inspect Git working-tree changes against HEAD, read-only.
             Patch text requires --include-diffs and may contain sensitive data.
@@ -129,6 +137,17 @@ export async function runCli(argv, streams = process) {
     if (!options.project || !options.session_cwd) throw new Error("scope requires --project and --session-cwd");
     streams.stdout.write(`${JSON.stringify(await checkMetadataScope(options.project, options.session_cwd), null, 2)}\n`);
     return;
+  }
+  if (command === "impact") {
+    const options=parseOptions(args,new Set(["--stdin"]));if(!options.stdin)throw new Error("impact requires --stdin JSON with exactly a command field");
+    const value=parseJsonObject(await readBoundedStream(streams.stdin,MAX_STDIN_BYTES),"impact input");
+    if(Object.keys(value).join()!=="command")throw new Error("impact input requires exactly a command field");
+    streams.stdout.write(`${JSON.stringify(assessCommandImpact(value.command),null,2)}\n`);
+    return;
+  }
+  if(command==="usage"){
+    const options=parseOptions(args,new Set(["--export"]));if(!options.export)throw new Error("usage requires --export PRIVATE_JSONL");
+    streams.stdout.write(`${JSON.stringify(await readSelectedUsage(options.export),null,2)}\n`);return;
   }
   if (command === "files" || command === "changes") {
     const options = parseOptions(args, new Set(["--project", ...(command === "changes" ? ["--include-diffs"] : [])]));

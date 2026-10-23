@@ -433,3 +433,32 @@ the latest commit.
 No REA execution was needed: public released source resolved the concrete
 rewrite and trust questions. The previous metadata/source-map investigation
 remains exactly that; no new semantic/runtime REA result is claimed.
+
+
+## Reported exec usage semantics — released0.163.0, checked2026-10-23
+
+Exact release source (tag/commit already identified above) was fetched into the
+read-only research checkout for this uncertainty; working checkout was not changed.
+The [Usage fields](https://github.com/openai/codex/blob/83086188ae0614bd882818ff1aa23f3194962012/codex-rs/exec/src/exec_events.rs#L59)
+include input, cached input, cache-write input, output and reasoning output.
+The event comments describe a turn, but the released
+[usage_from_last_total](https://github.com/openai/codex/blob/83086188ae0614bd882818ff1aa23f3194962012/codex-rs/exec/src/event_processor_with_jsonl_output.rs#L118)
+copies ThreadTokenUsage.total and defaults to zeros when no usage was supplied.
+[Completion emission](https://github.com/openai/codex/blob/83086188ae0614bd882818ff1aa23f3194962012/codex-rs/exec/src/event_processor_with_jsonl_output.rs#L509)
+uses that snapshot. Therefore do not sum completion events as independent deltas
+or infer actual free usage from reported zeros. A resumed thread can include
+prior usage. The adapter preserves latest reported snapshot semantics and missing
+fields, verifies bounded integer counters/relations and never infers occupancy,
+cache health/TTL, price or exact billing.
+
+The one explicitly authorized fresh ephemeral CLI0.163.0 Sol High test returned
+42721 input/26368 cached/54 output; the passive source adapter subsequently read
+that already-selected private export and returned the same counters, without a
+new run or raw thread/prompt/tool content. JSONL export may contain sensitive
+information; private explicit selection is required, not session-store discovery.
+This establishes released schema plus source semantics plus one actual export;
+it does not establish a native current-chat token feed or new UI rendering.
+
+The same authorized run also establishes explicit model/effort selection for a
+new bounded CLI task on this host. It did not intercept an inference, change this
+chat's selected model, prove custom-subagent routing or authorize further runs.

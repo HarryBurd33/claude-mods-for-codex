@@ -1,5 +1,10 @@
 # Configuration
 
+Development continuation: source0.2.0-dev.4 adds a disabled original
+`blastRadiusGuard` example with explicit known categories. See
+[impact and usage](impact-and-usage.md) for its lexical deny/review limits and
+separate optional private usage-export read grant. Existing defaults are unchanged.
+
 `config/mods.json` is a versioned, strict JSON object. Unknown keys, duplicate IDs, unsupported types, unsafe identifiers, control characters, oversized strings, and more than the documented bounds are rejected.
 
 Mods run in array order inside one dispatcher. Native hook sources outside this package can still run concurrently. A denial from any enabled registered guard is sticky and later mods cannot undo it.

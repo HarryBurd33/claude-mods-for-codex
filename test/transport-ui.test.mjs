@@ -133,6 +133,14 @@ test('replay requests only reviewed settings selection and displays explicit com
   assert.equal(p.messages.some(m=>m.method==='tools/call'&&/restore/.test(m.params.name)),false);
   p.receive({id:100,method:'ui/resource-teardown'});
 });
+test('usage view labels selected reported counters and unknown context/cost rather than current-chat usage (simulated DOM)',async()=>{
+  const p=await dashboard();p.reply(p.latestCall(),{revision,records:0});await tick();
+  p.buttons.find(b=>b.dataset.view==='access').onclick();await tick();
+  p.reply(p.latestCall(),{access:{network:false,modelCalls:false,changesOptIn:false},usage:{available:true,semantics:'Cumulative selected snapshot, not current chat.',counters:{inputTokens:100,outputTokens:20,cachedInputTokens:25},cachedInputShare:.25,streamStatus:'completed',limits:'No bill or cache-health inference.'}});await tick();
+  const text=p.elements.get('#access-result').textContent;
+  assert.match(text,/Cumulative selected snapshot/);assert.match(text,/25.0%/);assert.match(text,/Reported cache writes Unavailable/);assert.match(text,/context occupancy, exact billing and cache health are unavailable/);assert.match(text,/skills still consumes model usage/);
+  p.receive({id:100,method:'ui/resource-teardown'});
+});
 
 test('owned chart shows measured counts with an equivalent table and never fabricates missing values (simulated DOM)',async()=>{
   const p=await dashboard();p.reply(p.latestCall(),{revision,records:4,events:{SessionStart:1,PreToolUse:2,PostToolUse:1,invalid:-5,unknown:null}});await tick();

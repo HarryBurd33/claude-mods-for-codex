@@ -17,6 +17,8 @@ test('dashboard without reviewed settings exposes unavailable data, never guesse
  await assert.rejects(call(h,'mods.files',{root:'/private/synthetic-secret'}));
  assert.equal((await call(h,'mods.changes')).structuredContent.available,false);
  assert.equal((await call(h,'mods.checkpoints')).structuredContent.available,false);
+ assert.equal((await call(h,'mods.usage')).structuredContent.available,false);
+ await assert.rejects(call(h,'mods.usage',{export:'/synthetic-private-export'}));
  await assert.rejects(call(h,'mods.checkpoints',{fromCommit:'a'.repeat(40),toCommit:'b'.repeat(40)}));
  const resource=await h({method:'resources/read',params:{uri:'ui://claude-mods/dashboard'}});
  assert.deepEqual(resource.contents[0]._meta.ui.csp,{connectDomains:[],resourceDomains:[]});
@@ -47,6 +49,8 @@ test('runtime settings require explicit private file and reject links or unknown
   }
   await writeFile(path,JSON.stringify({...value,checkpoints:{fromCommit:'a'.repeat(40),toCommit:'b'.repeat(40)}}));
   assert.equal(Object.isFrozen((await loadRuntimeSettings(path)).checkpoints),true);
+  for(const usageExport of ['relative.jsonl',join(value.projectRoot,'selected.jsonl')]){await writeFile(path,JSON.stringify({...value,usageExport}));await assert.rejects(loadRuntimeSettings(path));}
+  await writeFile(path,JSON.stringify({...value,usageExport:join(dir,'selected.jsonl')}));assert.equal((await loadRuntimeSettings(path)).usageExport,join(dir,'selected.jsonl'));
  const link=join(dir,'linked.json');await symlink(path,link);await assert.rejects(loadRuntimeSettings(link));
 });
 function peer(t,path){const child=spawn(process.execPath,[path],{stdio:['pipe','pipe','pipe']});const messages=[],waiters=[];let buffer='';

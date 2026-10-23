@@ -203,7 +203,8 @@ The UI owns its four views and escapes text; optional observation is bounded to3
 with request cancellation and teardown. Installed0.2.0-dev.1 views were observed
 in the actual host. Source0.2.0-dev.2 chart/tree/diff additions have simulated DOM
 evidence only. Bridge/stdio tests stay distinct from either native panel.
-Token/context/cache/billing data remain unavailable, never fabricated.
+Native-hook token/context/cache/billing data remain unavailable. An optional
+explicit private export supplies only reported counters as described below.
 
 The synchronous MCP-hook probe now has an implemented decision helper/transport.
 Known automatic review denies, a nonempty required-confirm form is used, expected
@@ -229,3 +230,25 @@ the text alternative. File grouping uses Map rather than object prototype keys,
 500 paths/16 path segments at display level. Diff rendering uses textContent,
 visible control/bidi escapes and64Ki character/1,000-line bounds. Color supplements
 literal signs, not vice versa. No new dependency, remote asset or filesystem grant.
+
+
+## Impact and usage contracts — source0.2.0-dev.4
+
+blastRadiusGuard is opt-in, canonical Bash PreToolUse only, with six fixed lexical
+categories. It emits a bounded conservative explanation/denial, no raw command,
+arguments, inferred targets/counts or native approval. Original/revised command
+guards both apply. CLI impact is assessment only. This is the disclosed deny/review
+alternative to the still-unverified hold proof, not an authenticated pending choice.
+No match means no covered lexical signal, not safety; false positives/misses remain.
+
+usageExport is a separate reviewed read grant to one private canonical/unlinked
+outside-project JSONL. No model/UI path parameter, private-session search, content
+persistence, sampling, price lookup or network. readSelectedUsage bounds bytes,
+lines, diagnostics/completions and private ownership/mode; errors don't echo raw
+content or paths. summarizeExecUsage returns known numeric fields/nulls from the
+latest completion only, checks same-thread export and never sums snapshots.
+Released0.163.0 emission copies cumulative thread totals and can emit default zeros;
+source authenticity/completeness is not attested. Cached share requires populated
+numerator/positive denominator and does not estimate cache health/TTL/cost/context.
+No export default; mods.usage has no args. Access view distinguishes service calls
+from normal chat/skill usage and displays unknowns explicitly.

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "mods": [
+    {
+      "id": "impact-review",
+      "type": "blastRadiusGuard",
+      "enabled": false,
+      "categories": ["delete", "git-history", "git-clean", "permissions", "remote-write", "install-scripts"]
+    }
+  ]
+}
