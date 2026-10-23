@@ -1,5 +1,7 @@
 # Capability matrix
 
+> Historical v0.1 record. Current capability assessment, released-format correction and native proof results are in [continuation/STATUS.md](continuation/STATUS.md) and [continuation/REQUIREMENTS.md](continuation/REQUIREMENTS.md). Earlier exclusions and portable-hook packaging claims are superseded; the full product remains incomplete.
+
 Baseline: 2026-10-22. **Documented** means public support; **observed** means a local check; **approximation** means our design translates the intent; **not established** means no supported equivalent was found in the surveyed interfaces. A documented feature is not automatically verified in every host.
 
 | Claude Mods capability | Codex route and status | v0.1 decision |

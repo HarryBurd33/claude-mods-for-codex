@@ -5,7 +5,7 @@ description: Use when the user wants to inspect, configure, validate, replay, re
 
 # Manage Claude Mods for Codex
 
-Treat the plugin source and configuration as security-sensitive local code. Resolve the installed plugin root as exactly two directory levels above this `SKILL.md`, then verify that root contains `plugin.json` with name `claude-mods-for-codex`. Read [README](../../README.md), [the default configuration](../../config/mods.json), and the relevant guide under [docs](../../docs/) from that verified root. Never discover files or an executable from the user's current project directory.
+Treat the plugin source and configuration as security-sensitive local code. Resolve the installed plugin root as exactly two directory levels above this `SKILL.md`, then verify that root contains `.codex-plugin/plugin.json` with name `claude-mods-for-codex`. Read [README](../../README.md), [the default configuration](../../config/mods.json), and the relevant guide under [docs](../../docs/) from that verified root. Never discover files or an executable from the user's current project directory.
 
 When running the CLI, use the absolute `bin/codex-mods.mjs` path under that verified plugin root, or set the command workdir to the verified root first. Do not run a relative `./bin/codex-mods.mjs` from the project working directory.
 

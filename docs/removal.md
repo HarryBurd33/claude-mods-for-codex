@@ -1,12 +1,34 @@
-# Removal
+# Disable, remove, and roll back
 
-Use the same surface through which you installed the plugin.
+Use the supported Plugins controls in the client where the plugin is active to disable it. Do not simulate disabling by editing trust hashes or deleting cached files while the client is running. If that client does not expose a suitable disable control, uninstall the selected plugin with the CLI command below. End affected sessions or restart the client, then verify that new sessions no longer load its hooks.
 
-1. Disable or uninstall `claude-mods-for-codex` in the desktop Plugins Directory.
-2. Remove only its entry from the local `marketplace.json`; preserve every other entry.
-3. Remove the copied plugin folder if you no longer need the source.
-4. Restart the desktop app and inspect `/hooks` to confirm the plugin hook source is gone.
+For the example marketplace from [setup](setup.md), installed CLI 0.163.0 help confirms:
 
-If you enabled journaling, the plugin's data directory can contain `activity.jsonl`, `activity.previous.jsonl`, or a stale `.activity-journal.lock` directory. The plugin never discovers or deletes that directory for you. Locate the exact plugin data directory through the host or your own setup records, inspect it, and remove it only if you no longer need the local metadata.
+```sh
+codex plugin remove claude-mods-for-codex@claude-mods-local --json
+codex plugin list --marketplace claude-mods-local --json
+```
 
-Removing the Git checkout does not necessarily remove a cached marketplace installation. Removing a marketplace entry does not delete journal data. No removal script is provided because automated edits could damage unrelated settings or data.
+The remove command uninstalls the selected plugin and removes its local cache. A source can remain listed as available after removal; inspect installation/enabled state and `/hooks`, not just whether its marketplace listing exists. Confirm that the removed plugin's hook source is absent from a fresh session.
+
+Remove only this plugin's entry from a shared local `marketplace.json`, preserving other entries. If the dedicated marketplace has no other installations you need, unregister it separately:
+
+```sh
+codex plugin marketplace remove claude-mods-local --json
+```
+
+Do not unregister a shared marketplace to remove one plugin. Delete its copied source folder only when you no longer need it for review or rollback. Registration and installation affect the active Codex user home and cache; deleting a Git checkout or a marketplace JSON entry alone does not uninstall a cached plugin.
+
+## Optional data
+
+Removal is not evidence that all retained metadata was deleted. If journaling was enabled, its exact selected plugin-data directory may contain `activity.jsonl`, `activity.previous.jsonl`, or a stale `.activity-journal.lock`. The unintegrated scoped-state library can additionally create a `metadata-state-v1/` subtree only when explicitly called. The normal package does not enable it automatically.
+
+Locate the exact data directory through the host or your own setup record. Stop all relevant hook/server processes before removing data. Inspect and remove only this plugin's selected data if you no longer need it; preserve unrelated files and the parent directory. Do not infer a data path from the source checkout or search credential/session stores. Never remove an apparently stale lock while a writer may still be active.
+
+## Rollback
+
+Keep the previously reviewed source snapshot and private configuration/marketplace backups before updating. Remove the new installation, restore only this plugin's source/marketplace entry from that snapshot, reinstall it through the supported marketplace flow, and repeat cache inspection and human hook trust review. Restore only the affected configuration entries; do not replace a whole shared configuration file if unrelated settings changed after the backup.
+
+The old portable `0.1.0` manifest did not load hooks on the inspected released clients. Restoring that artifact can restore its exact old bytes, but does not restore working native hooks. Prefer the corrected compatibility package when validating hook functionality. On CLI 0.163.0, manually review referenced-code changes even when the host does not automatically invalidate prior trust. See [version-specific trust evidence](continuation/CODEX-CONTRACTS.md#local-installation-updates-trust-and-removal).
+
+The development proof has a separate identity, `claude-mods-native-proof@claude-mods-dev`, and must be removed separately if it was installed. Production removal does not remove that proof or authorize deleting its data.

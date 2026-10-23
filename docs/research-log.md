@@ -1,5 +1,7 @@
 # Research log and reproducibility
 
+> Historical v0.1 record. Current capability assessment, released-format correction and native proof results are in [continuation/STATUS.md](continuation/STATUS.md) and [continuation/REQUIREMENTS.md](continuation/REQUIREMENTS.md). Earlier exclusions and portable-hook packaging claims are superseded; the full product remains incomplete.
+
 Date: 2026-10-22, America/Denver. Public documentation is mutable; Git source and package identities below are pinned. This log contains sanitized summaries, not raw machine diagnostics.
 
 ## Sources and versions

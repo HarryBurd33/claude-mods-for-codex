@@ -1,5 +1,9 @@
 # Implementation handoff
 
+Historical v0.1 plan, completed for that limited MVP. Do not use the model choice
+or exclusions below for the current continuation. See
+[continuation/ARCHITECTURE.md](continuation/ARCHITECTURE.md) and the current handoff.
+
 Prepared by Astra research, 2026-10-22; narrowed by the implementation handoff to declarative built-in handlers instead of dynamic JavaScript loading. The scope is ready for **GPT-5.6 Sol, high reasoning** implementation. Astra must return for final review. No final review is claimed here.
 
 ## First useful proof of concept

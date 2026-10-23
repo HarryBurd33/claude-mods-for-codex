@@ -6,16 +6,28 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
-test("portable manifest declares the package and contained OpenAI resources", async () => {
-  const manifest = JSON.parse(await readFile(join(root, "plugin.json"), "utf8"));
-  assert.equal(manifest.$schema, "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json");
+test("compatibility manifest declares hooks, skills, and contained OpenAI resources", async () => {
+  const manifest = JSON.parse(await readFile(join(root, ".codex-plugin/plugin.json"), "utf8"));
+  const packageInfo = JSON.parse(await readFile(join(root, "package.json"), "utf8"));
+  await assert.rejects(access(join(root, "plugin.json")), { code: "ENOENT" });
+  assert.equal(manifest.$schema, undefined);
   assert.equal(manifest.name, "claude-mods-for-codex");
-  assert.match(manifest.version, /^\d+\.\d+\.\d+$/);
+  assert.match(manifest.version, /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/);
+  assert.equal(manifest.version, packageInfo.version);
   const openai = manifest.extensions["com.openai"];
-  assert.equal(openai.hooks, "./hooks/hooks.json");
-  assert.ok(openai.interface.shortDescription.length <= 30);
-  assert.equal(openai.interface.category, "Developer Tools");
-  for (const relative of [openai.hooks, openai.onboardingSkill]) await access(join(root, relative));
+  assert.equal(manifest.hooks, "./hooks/hooks.json");
+  assert.equal(manifest.skills, "./skills");
+  assert.equal(openai.hooks, undefined);
+  assert.ok(manifest.interface.shortDescription.length <= 30);
+  assert.equal(manifest.interface.category, "Developer Tools");
+  for (const relative of [manifest.hooks, manifest.skills, openai.onboardingSkill]) {
+    assert.ok(relative.startsWith("./") && !relative.split("/").includes(".."));
+    await access(join(root, relative));
+  }
+  assert.ok(packageInfo.files.includes(".codex-plugin/plugin.json"));
+  assert.ok(packageInfo.files.includes("proofs/"));
+  assert.ok(!packageInfo.files.includes("plugin.json"));
+  assert.equal(manifest.mcpServers, undefined, "development proof server must not activate with the production plugin");
 });
 
 test("every packaged hook command quotes the plugin path and uses no network program", async () => {

@@ -1,0 +1,44 @@
+name: Offline contracts and portability
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  posix-offline:
+    name: Full offline suite (${{ matrix.os }}, Node ${{ matrix.node }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node: [22, 24]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+      - run: npm run validate
+      - run: npm run replay
+
+  windows-protocol:
+    name: Windows portable contracts only (native hooks and storage unverified)
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # This intentionally excludes /bin/sh invocation and POSIX file-mode tests.
+      # Passing this job does not establish Windows hook or journal support.
+      - name: Portable dispatch, package, and explicit storage limitation
+        run: node --test --test-name-pattern="session notice|safe tool use|matched command|unknown event|compatibility manifest|every packaged|bundled skill|example configurations|state scope keys|Windows state" test/dispatcher.test.mjs test/package.test.mjs test/state.test.mjs
+      - run: npm run validate
+      - run: npm run replay

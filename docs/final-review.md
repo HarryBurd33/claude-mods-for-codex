@@ -1,5 +1,8 @@
 # Final review
 
+This review covers only the historical v0.1 MVP. It is not approval or completion
+of the expanded product; see the current continuation records.
+
 **Outcome: ready for a public experimental release described as offline-verified. No unresolved actionable review findings remain.**
 
 Date: 2026-10-22. Reviewer: GPT-6 Astra with ultra reasoning, as requested. Starting commit: `2aa4409980460d8dde827946cd1408659bbb9eed`; the final recheck also covers the repair diff described below. The parent release process owns the final commit, rebuilt archive, publication, and public-content verification. This review does not claim those subsequent steps have happened.

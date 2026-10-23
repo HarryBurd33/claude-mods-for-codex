@@ -1,5 +1,20 @@
 # Claude Mods for Codex
 
+**Development checkpoint `0.1.1-dev.1`: the full requested product is incomplete.**
+This branch corrects hook packaging and adds tested building blocks and separate
+native proofs. The production dispatcher still provides the three v0.1 examples
+below. See [current status](docs/continuation/STATUS.md), the
+[requirements ledger](docs/continuation/REQUIREMENTS.md), and the
+[next-stage handoff](docs/continuation/HANDOFF.md).
+
+On macOS14.6 / desktop26.1016.62342, a separately installed proof verified covered
+tool events, a fixed harmless input rewrite, denial, and an actual plugin-owned
+MCP App with local buttons and manual activity refresh. The production package
+has not been installed or independently verified in the host. SessionStart,
+negative permission checks, richer features and native Windows remain unverified.
+Unit tests and source support are listed separately in the
+[test log](docs/continuation/TEST-LOG.md).
+
 Claude Mods for Codex is a small, inspectable framework for local Codex lifecycle hooks. It ships three examples: a visible session notice, a deny-only lexical command guard, and an optional metadata activity journal. A fixture replay CLI lets you test the exact hook responses without installing the plugin or signing in.
 
 This is an independent project. It is not affiliated with, endorsed by, or maintained by Anthropic or OpenAI. It does not run Claude Mods unchanged.
@@ -29,6 +44,7 @@ Node.js 22 or newer is required.
 ```sh
 git clone https://github.com/HarryBurd33/claude-mods-for-codex.git
 cd claude-mods-for-codex
+git switch codex/astra-groundwork
 node ./bin/codex-mods.mjs validate
 node ./bin/codex-mods.mjs replay --fixtures ./fixtures
 node --test
@@ -58,11 +74,26 @@ See [configuration](docs/configuration.md), [wire format](docs/wire-format.md), 
 
 ## Install manually
 
-This release is source-only and does not include an installer. Follow [setup](docs/setup.md) to add it to a local marketplace and review its hooks. Nothing in this repository edits Codex settings, trust decisions, or user configuration automatically. See [removal](docs/removal.md) to undo a manual installation.
+This checkpoint is source-only. Follow [setup](docs/setup.md) to register a local
+marketplace, install the reviewed package and complete human hook trust. It uses
+only `.codex-plugin/plugin.json`: released CLI0.163.0/0.164.0 skip hooks when a
+portable root manifest is selected. Do not restore that root manifest.
+Installation changes the active Codex user's profile/cache; putting marketplace
+files in a project does not make the installed hooks project-only. No automatic
+trust or hot reload is provided. [Setup](docs/setup.md) covers reviewed updates;
+[removal](docs/removal.md) covers disabling, uninstalling and rollback.
 
 ## Privacy and security
 
-The journal is disabled in the shipped config. It does not store commands, prompts, tool arguments or results, transcripts, session IDs, credentials, or paths. Read [privacy](docs/privacy.md) and [security](SECURITY.md) before enabling it or adding a mod.
+The journal is disabled in the shipped config. It does not store commands, prompts,
+tool arguments/results, transcripts, session IDs, credentials or paths. Hooks
+receive event fields in memory and execute as local trusted processes, whose OS
+authority differs from the model tool sandbox. Local MCP proof processes read
+only their explicitly configured aggregate-data directory and static UI file.
+They make no network/model calls. Skills use the selected model and consume usage;
+the whole workflow is not free merely because callbacks are deterministic.
+Read [privacy](docs/privacy.md) and [security](SECURITY.md) before enabling storage
+or adding a mod.
 
 ## Project guides
 

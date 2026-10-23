@@ -1,5 +1,9 @@
 # Verification record
 
+Historical v0.1 verification. Current continuation results are recorded separately
+in [continuation/TEST-LOG.md](continuation/TEST-LOG.md). The prior review and 39-test
+baseline do not certify later changes or native integration.
+
 This file records checks actually completed for v0.1.0. The initial implementation worker hit a usage limit; work continued from the saved checkpoint.
 
 ## Environment

@@ -1,5 +1,7 @@
 # Research findings
 
+> Historical v0.1 record. Current capability assessment, released-format correction and native proof results are in [continuation/STATUS.md](continuation/STATUS.md) and [continuation/REQUIREMENTS.md](continuation/REQUIREMENTS.md). Earlier exclusions and portable-hook packaging claims are superseded; the full product remains incomplete.
+
 Researched 2026-10-22, America/Denver. This is an implementation baseline, not a claim that every host integration has been tested.
 
 ## Decision

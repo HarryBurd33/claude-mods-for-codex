@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Mods Native Proof</title>
+<style>
+:root { color-scheme: light dark; font-family: system-ui,sans-serif; }
+body { margin:0; padding:24px; color:var(--color-text-primary,CanvasText); background:var(--color-background-primary,Canvas); }
+main { max-width:760px; margin:auto; } button { font:inherit; padding:10px 16px; margin:6px 8px 6px 0; border:1px solid currentColor; border-radius:7px; background:transparent; color:inherit; cursor:pointer; } button:focus-visible { outline:3px solid #4285fa; outline-offset:3px; } pre { white-space:pre-wrap; overflow-wrap:anywhere; padding:16px; border:1px solid GrayText; border-radius:8px; } .muted { color:GrayText; }
+</style>
+<main><h1>Claude Mods · native proof</h1><p>This is a plugin-owned MCP App. It does not restyle Codex.</p>
+<p id="connection" role="status">Connecting to the host…</p>
+<button id="count">Test local interaction</button><output id="clicks" aria-live="polite">0 clicks</output>
+<button id="refresh" disabled>Refresh hook activity</button>
+<h2>Observed hook metadata</h2><pre id="activity">No host result yet.</pre>
+<p class="muted">No prompts, commands, transcript content, or credentials are stored. Counts cover retained probe events only. Buttons make no model calls.</p></main>
+<script>
+let id=1, clicks=0, closed=false; const pending=new Map();
+const send=(message)=>parent.postMessage({jsonrpc:'2.0',...message},'*');
+function request(method,params){return new Promise((resolve,reject)=>{const current=id++;const timer=setTimeout(()=>{pending.delete(current);reject(new Error('Host request timed out'));},5000);pending.set(current,{resolve,reject,timer});send({id:current,method,params});});}
+function render(data){document.querySelector('#activity').textContent=JSON.stringify(data,null,2);}
+function style(context){for(const [key,value] of Object.entries(context?.styles?.variables??{})){if(/^--[a-z0-9-]+$/i.test(key)&&typeof value==='string')document.documentElement.style.setProperty(key,value);}}
+addEventListener('message',event=>{if(event.source!==parent||event.data?.jsonrpc!=='2.0')return; const m=event.data;const item=pending.get(m.id);if(item){clearTimeout(item.timer);pending.delete(m.id);m.error?item.reject(new Error('Host rejected request')):item.resolve(m.result);return;} if(m.method==='ui/notifications/tool-result')render(m.params?.structuredContent??{});if(m.method==='ui/notifications/host-context-changed')style(m.params);if(m.method==='ui/resource-teardown'){closed=true;for(const p of pending.values()){clearTimeout(p.timer);p.reject(new Error('View closed'));}pending.clear();send({id:m.id,result:{}});}});
+document.querySelector('#count').onclick=()=>{document.querySelector('#clicks').textContent=`${++clicks} clicks`;};
+document.querySelector('#refresh').onclick=async()=>{const button=document.querySelector('#refresh');if(closed||button.disabled)return;button.disabled=true;try{const r=await request('tools/call',{name:'mods.status',arguments:{}});render(r.structuredContent??{});}catch(e){document.querySelector('#connection').textContent=e.message;}finally{if(!closed)button.disabled=false;}};
+(async()=>{try{const host=await request('ui/initialize',{protocolVersion:'2026-01-26',appInfo:{name:'claude-mods-native-proof',version:'0.0.1'},appCapabilities:{}});style(host.hostContext);send({method:'ui/notifications/initialized',params:{}});document.querySelector('#connection').textContent=`Connected to ${host.hostInfo?.name??'host'} ${host.hostInfo?.version??''}`;document.querySelector('#refresh').disabled=!host.hostCapabilities?.serverTools;}catch(e){document.querySelector('#connection').textContent=e.message+'; plain-text status remains available.';}})();
+</script></html>

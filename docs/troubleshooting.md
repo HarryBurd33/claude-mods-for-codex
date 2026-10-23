@@ -2,7 +2,7 @@
 
 ## The plugin does not appear
 
-Check that `plugin.json` is at the plugin root, the marketplace `source.path` starts with `./` and is relative to the marketplace root, and the desktop app was restarted after the marketplace change. Run `node ./bin/codex-mods.mjs validate` from the plugin source.
+Check that `.codex-plugin/plugin.json` exists and there is no root `plugin.json`. Released CLI 0.163.0/0.164.0 select the portable root format first and skip its bundled hooks; installing it can succeed with an empty hook inventory. This development package uses the supported compatibility format. Check that marketplace `source.path` starts with `./`, resolves from the marketplace root, and that the client loaded the reviewed installed snapshot. Run `node ./bin/codex-mods.mjs validate` from the plugin source. See [setup](setup.md) and [released-source evidence](continuation/CODEX-CONTRACTS.md#released-hook-packaging-contradicts-portable-documentation).
 
 ## Hooks are listed but do not run
 

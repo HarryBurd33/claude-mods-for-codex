@@ -1,5 +1,11 @@
 # Architecture and v0.1 contract
 
+Historical v0.1 design. Current scope and decisions are in
+[continuation/ARCHITECTURE.md](continuation/ARCHITECTURE.md). The v0.1 review was
+completed; references below to a pending final review are historical. Its narrow
+output contract still applies to the production dispatcher, not every supported
+Codex extension capability.
+
 Status: design frozen for implementation, 2026-10-22. The initial Astra design was narrowed during handoff to reviewed built-in handlers rather than dynamic module loading. Final Astra review remains required. Implementation may choose file names, but changes to the safety/output contract require review.
 
 ## Product boundary

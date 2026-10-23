@@ -1,5 +1,12 @@
 # Roadmap
 
+The sections below describe the earlier MVP scope. The expanded requested
+capabilities, including supported tool-input rewriting and owned UI, are now
+required work in [continuation/REQUIREMENTS.md](continuation/REQUIREMENTS.md).
+An old exclusion is not evidence that Codex lacks the capability. Hidden prompt
+changes, permission weakening, automatic approval and unsupported patches remain
+excluded by policy.
+
 ## Candidate next steps
 
 - Verify manual installation, hook trust review, and harmless native events in supported Codex desktop hosts.
