@@ -1,5 +1,5 @@
 # Project status
 
-The v0.1.0 implementation and final Astra review are complete. All 39 offline tests pass, including clean-package checks. The initial public upload contains only the root project files; the remaining source, examples, tests and documentation upload is pending. Do not treat the GitHub checkout as runnable until that upload is verified.
+v0.1.0 is published at https://github.com/HarryBurd33/claude-mods-for-codex. The reviewed framework, examples, tests, skill and documentation are present. An anonymous clone was verified against local source; all 39 tests, configuration validation and fixture replay passed in that clone.
 
-Live Codex installation, hook trust/execution, skill activation, Windows and MCP UI remain unverified. See docs/verification.md and docs/final-review.md when available.
+Astra final review passed after three fixes. Live Codex installation, hook trust/execution, skill activation, Windows and MCP UI remain unverified. See [verification](docs/verification.md) and [final review](docs/final-review.md).

@@ -24,8 +24,8 @@ This file records checks actually completed for v0.1.0. The initial implementati
 - From a different working directory, the extracted native hook entrypoint consumed three fixtures with explicit `PLUGIN_ROOT`, an opt-in journal config, and a temporary `PLUGIN_DATA`. It returned valid JSON without stderr; the report counted three records. This was a subprocess simulation, not a live Codex hook test.
 - The path-with-spaces test constructs its own temporary copy, so the suite also works in ordinary clone directories without spaces.
 
-Final Astra review passed with all three findings repaired; see final-review.md. The first eight root files are verified on public GitHub; the remaining source upload is pending. A package changed after this inspection must be rebuilt and inspected again before delivery.
+Final Astra review passed with all three findings repaired; see final-review.md. The complete source was published and anonymously cloned; all 39 tests, validation and replay passed in that public clone. A package changed after this inspection must be rebuilt and inspected again before delivery.
 
 These are offline checks. No plugin was installed, no hook was trusted, no model or live tool call was made, and no skill or native desktop behavior was exercised. Windows quoting, host hook execution, public-directory ingestion, and any future MCP UI remain unverified.
 
-Final post-review source package rebuilt and inspected: 49 files. All 39 tests, validation and replay passed in a clean extraction containing spaces. Full public source upload remains incomplete due to GitHub integration permissions.
+Final post-review source package rebuilt and inspected: 49 files. All 39 tests, validation and replay passed in a clean extraction containing spaces. Repository access was enabled, the complete source was uploaded, and anonymous clone/content verification succeeded.
