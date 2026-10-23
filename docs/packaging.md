@@ -8,7 +8,7 @@ The runtime requires Node.js 22 or newer and has no dependencies to install. Bui
 npm pack --ignore-scripts --pack-destination /absolute/path/to/output
 ```
 
-This creates a local archive; it does not publish or install the plugin. `package.json` is private to prevent accidental npm publication. The current development version is `0.2.0-dev.1`; match it in the compatibility manifest when changing versions so the installed cache can distinguish reviewed snapshots.
+This creates a local archive; it does not publish or install the plugin. `package.json` is private to prevent accidental npm publication. The current development version is `0.2.0-dev.6`; match it in the compatibility manifest when changing versions so the installed cache can distinguish reviewed snapshots.
 
 The explicit package file list includes `.codex-plugin/plugin.json`, runtime, configuration, hooks, skills, examples, fixtures, tests, public documentation, and development proofs. npm also includes the package metadata, README, and MIT license. The `proofs/` files remain inert unless their separate proof plugin is explicitly installed. Production now registers its own settings-scoped dashboard server via `.mcp.json` and includes `ui/`; it does not register the proof servers or enable replacement by default.
 

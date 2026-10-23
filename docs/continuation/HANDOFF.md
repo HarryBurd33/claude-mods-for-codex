@@ -1,192 +1,166 @@
-# Current Medium continuation — dev6 trusted, restart pending
+# Dev6 native checkpoint — next GPT-6.1 Sol, High
 
-2026-10-23. **Full product incomplete. Stay GPT-6.1 Sol, Medium.** The human
-switched from High and authorized continued bounded implementation. This is a
-restart checkpoint, not another model-switch gate. Do not expand parser/privacy/
-approval/ACL/routing contracts on Medium; save and request stronger reasoning
-if a new hard problem requires it. No subagents/background continuation.
+2026-10-23. **Full product incomplete. Human-controlled stopping point.**
+Current stage completed on GPT-6.1 Sol, Medium. Next requested model:
+**GPT-6.1 Sol, High**, because Windows private-storage/ACL and process boundaries
+need security design beyond routine verification. Do not change model internally,
+spawn a substitute or continue in background after the switch announcement.
 
-## Immediate human step
+## Objective and current checkpoint
 
-User reviewed/trusted all three hooks from production0.2.0-dev.6. Independent
-native inventory confirms three enabled/trusted hooks,zero errors,no model turn.
-All125 cached files match the immutable reviewed fixture. **Restart Codex and
-reopen this same chat**, then continue on Sol Medium. No repeat trust/install for
-unchanged code. Do not send a model test prompt. The earlier single bounded model
-run authorization is consumed; no additional run is authorized.
-
-After restart, open mods.dashboard beside this chat through the supported tool.
-Use only permitted MCP Apps inspection; native app CUA remains restricted. Verify
-Local preview actually appears and works (JSON/plain/flowchart/unsupported syntax/
-Clear), five older views, authored exact-print rewrite and unchanged logging.
-Source/browser/unit evidence does not establish that actual acceptance yet.
-
-## Read and preserve
+Continue the complete93-capability product on codex/astra-groundwork. Medium
+verified the restarted dev6 UI/authored rewrite and supported unchanged removal/
+reinstallation. Next: resolve Windows privacy/portability architecture while
+preserving current fail-closed storage behavior, then implement within reviewed
+contracts and keep absent native-host acceptance explicit.
 
 Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, ../runtime.md,
-../authoring.md, ../local-preview.md, ../lifecycle-observation.md, ../themes.md,
-../setup.md and ../removal.md. Latest ignored root HANDOFF.md has exact private
-snapshot/settings/backups/scripts/log paths. Never upload root handoff/.local/raw
-logs/settings/exports/plans/private history. All93 requirements remain scoped.
+../privacy.md, ../removal.md, ../local-preview.md, ../authoring.md, ../replay.md
+and latest ignored root HANDOFF.md. Root handoff/.local contain private machine
+paths, backups/scripts/screenshots/settings/logs/exports; never upload them.
 
-Repository: https://github.com/HarryBurd33/claude-mods-for-codex
-Branch: codex/astra-groundwork.
-Verified source/local aligned commit1e5fa74c69f38a2a09a82f6cd7de2bbbd2ef53d2,
-tree eb5acc94cdc2a664a317f36ee0c9036a041189d6:
-[GitHub source](https://github.com/HarryBurd33/claude-mods-for-codex/commit/1e5fa74c69f38a2a09a82f6cd7de2bbbd2ef53d2).
-Original equivalent local76b733a210fed08dc0afa2a58a24d140b295f0cd preserved on
-codex/dev6-source-local-checkpoint. Connected GitHub upload matched exact tree;
-fetch/full-tree diff and independent ls-remote verified. The subsequent docs-only
-restart-record commit is identified after upload/readback in the save response.
-No force-push or user-history loss. Preserve original local main and earlier
-checkpoint branches; never merge private history into the public branch.
+Repository https://github.com/HarryBurd33/claude-mods-for-codex
+Branch codex/astra-groundwork. Last verified source
+[1e5fa74c69f38a2a09a82f6cd7de2bbbd2ef53d2](https://github.com/HarryBurd33/claude-mods-for-codex/commit/1e5fa74c69f38a2a09a82f6cd7de2bbbd2ef53d2),
+tree eb5acc94cdc2a664a317f36ee0c9036a041189d6. Prior restart records
+[98f12d03c543a569d2421e08e660a5602462a909](https://github.com/HarryBurd33/claude-mods-for-codex/commit/98f12d03c543a569d2421e08e660a5602462a909),
+tree51c8b8bfb6d96c7660097e7d5d305be4cdc2e366. This docs-only checkpoint's
+local/equivalent remote commit and verification are recorded after upload/readback
+in the final response and ignored handoff. No impossible self-referential hash.
+Preserve original local main/private history and equivalent checkpoint branches;
+never force-push/merge private historical root handoff into public history.
 
-## Host, installation and exact changes
+## Installed state and observed native results
 
-macOS14.6(23G80), arm64, Node24.22.0; system CLI0.163.0; desktop26.1016.62342
-build21477. CLI164 researched, not installed; desktop runtime is separate. No
-native Windows/Linux/WSL host tested. SourceCI/platform tests are not native hosts.
+Host macOS14.6(23G80), arm64, desktop26.1016.62342 build21477, Node24.22.0;
+system CLI0.163.0 separate. CLI164 researched, not installed; no native Windows/
+Linux/WSL tested. Production claude-mods-for-codex@claude-mods-production-dev
+0.2.0-dev.6 user-profile installed/enabled/human-trusted; user restarted this chat.
+All125 cache files matched immutable reviewed snapshot. Original proof0.0.2 kept;
+separate hold0.0.4 removed and its tool namespace absent after restart.
 
-Supported `codex plugin add claude-mods-for-codex@claude-mods-production-dev --json`
-updated only the owned production fixture from dev4 to dev6. User-profile install,
-not project-only merely because its marketplace is local. Preserved old immutable
-dev4 snapshot and private config/owned-marketplace backups. Parsed user config
-unchanged;125 cached files match. Settings byte-for-byte unchanged: same selected
-disposable project, data directory, project metadata scope/retention, selected
-synthetic commits/patch opt-in and previous private usage export. No new grants.
+Actual permitted MCP Apps inspection passed six views, restricted flowchart SVG/
+complete tables, literal highlighted JSON/plain code, unsupported-click fallback,
+Clear, nested selected-project expansion, synthetic working/selected-commit diffs,
+passive selected-export counters. Authored print BEFORE→AFTER, existing rewrite,
+unchanged control and fixed deny passed under normal permissions. Corrected
+installed management skill read/used; synthetic disabled-scaffold/access/replay/
+review/install/trust/restart/native-author effect completed. Not arbitrary plugin
+creation, every-skill invocation or an independent extra model evaluator.
 
-Private fixture changes: remove only completed outside-workspace sandbox probe
-rewrite; merge generated/reviewed exact print rule
-`printf MODS_AUTHOR_BEFORE` → `printf MODS_AUTHOR_AFTER`.
-Existing notice/fixed rewrite/deny stay. No broad blast-radius guard enabled.
-Optional observers are NOT registered/selected. No theme is installed/applied,
-client upgrade or automatic trust. Versioned hook-command comments force human
-review on the old CLI definition-trust behavior; trust hashes/cache never edited.
+Supported production remove/add of identical snapshot passed cache and fresh-hook
+absence during removal;125exact-file restoration,3enabled/trusted hooks/zero errors
+afterward. Parsed config restored exactly, unrelated entries preserved throughout,
+settings hash unchanged. No trust writes/model turn/marketplace removal/data deletion.
+Current desktop service responds, but already-loaded unload/fresh desktop relaunch,
+UI disable and older-version rollback remain unverified. Do not repeat human trust
+for unchanged reviewed bytes; changed code needs real human review, even if CLI
+retains trust. Source code/docs changed now do not alter installed immutable cache.
 
-Dev5 source was never installed separately. Dev6 includes its unchanged local
-preview/observer contracts plus the corrected management skill, original optional
-theme example/setup/rollback guide and setup/removal documentation corrections.
-Original proof0.0.2 retained; separate hold0.0.4 remains removed. Do not invoke the
-removed hold connection. Fresh-host loaded-tool/process absence can be checked
-now after restart; previous fresh CLI inventory already showed no hold hook.
+Same private runtime settings/data/selected project/project scope/retention,
+selected synthetic commits/patch opt-in and previous explicitly selected private
+export. Activity remained4 with identical revision. Native hook cwd means session
+directory, not shell-call workdir; this chat outside child selected project correctly
+adds no records. Never broaden logging or infer cwd from command text to fix this.
+Optional observers off/unregistered; no theme installed/applied/client upgrade.
 
-## Completed source and observed tests
+Earlier dev4 ordinary sandbox rejected rewritten outside-workspace marker (no
+file/elevated retry). Separate holdv4 human-confirmed accept/decline/cancel/30s
+untouched timeout passed then removed. Responder provenance/disconnected fail-open
+remain; production is deny/review approximation, never automatic approval.
 
-- Management skill now permits only explicitly requested registered exact-command
-  configuration and the validated paired rewrite carrier; bare/PermissionRequest
-  approvals/prompt/model/permission mutation remain excluded. Separate telemetry
-  grants and human trust preserved. Skill Creator guidance used, source identity
-  preserved. Native changed-skill loading/invocation awaits restart.
-- Real installed dev4 absolute CLI scaffolded a synthetic exact-print mod disabled;
-  access reviewed (no writes/network/model calls). Disabled/matching/nonmatching
-  replay passed; exact before/after and synthetic permission/timeout fields
-  preserved. Replay never executed a fixture command. The reviewed generated mod
-  is now in dev6 fixture, native effect still pending restart. This was selected-
-  model skill-guided work, not an independent model evaluation or immediate slash
-  callback. No additional model run.
-- Original MIT tmTheme example plist parsed; theme not applied. Official CLI
-  customization/developer-commands HTML retrieved2026-10-23 for /theme/custom files/
-  /statusline/title. Markdown endpoints unsupported-content-type; not claimed read.
-  Native theme/prose/footer behavior remains unverified; prose merge in released
-  CLI164 is not installed. No Prismantis code/theme copied or unmerged fork used.
-- npm test164pass/0fail/3Windows-only skips167total. Validate3mods/default4 replay
-  fixtures passed. Focused package/scaffold6pass. Ruby YAML parse passed; bundled
-  quick_validate.py attempted but missing PyYAML, no successful claim/tool repair.
-- Fresh125-file/722297-byte archive in a path containing spaces:164pass/3skips,
-  validate/replay pass. Required assets present; private root handoff/.local/.git/
-  dependencies/links/traversal/portable manifest/actual machine paths absent.
-- Immutable private fixture validate4mods/replay pass; same settings/grants checked.
-  Supported update125-file cache match. First inventory helper assumed old trust
-  and rejected expected modified state; corrected read-only helper observed3modified
-  hooks/zero errors. Human review followed; independent3trusted/enabled/zero errors.
+## Tests and limits
 
-Source [CI40024252139](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40024252139):
-first attempt four jobs passed, macOS/Node22 failed existing mocked stalled-Git
-cleanup test: generic project-unavailable at175ms instead of3s deadline. Initial
-failure preserved; runtime code unchanged. Targeted local test passed3.069s.
-Requested one failed-job rerun once; GitHub produced five new jobs, all observed
-completed/success. Initial failure/unknown cause retained in TEST-LOG. Do not
-claim a root cause or flake fix without evidence. If repeated, investigate the
-minimal test boundary; checkpoint for stronger reasoning if security/runtime
-contracts need expansion. Prior dev5 CI all5 passed is historical, not inherited.
+Commands actually used this phase: harmless exec_command print fixtures; actual
+mods.dashboard; MCP Apps buttons/fields; supported codex plugin remove/add; fresh
+read-only no-daemon app-server initialize/hooks/list/plugin/read, no model turn.
+Private helper45s child bounds/inventory35s total; process groups cleaned. Public
+TEST-LOG records exact semantic outcomes without private paths/IDs/raw logs.
 
-## Prior native evidence (dev4 only)
+Unchanged source/extracted suite164passed,3Windows-only skips167total; validate3mods/
+4default replay fixtures pass. Source1e5fa74 CI40024252139 initially4pass/1existing
+macOS22 mocked stalled-Git cleanup failure, targeted local pass3.069s. Requested
+failed-job retry yielded5newjobs allsuccess. Unknown cause/no flake fix claimed.
+Fresh125-file documentation archive inspected (724216unpacked bytes), path-with-
+spaces extraction164pass/0fail/3Windows-only skips, validate/default replay pass.
+Final docs-only rebuild and anonymous-public-clone/commit readback identities are
+reported after observation in final response/ignored handoff; no future claim.
 
-Dev4 actual owned five views/chart/table/files/Git/working patch/selected Replay/
-selected export counters worked. Fixed rewrite/deny/control passed. Exact harmless
-rewritten outside-workspace marker write was rejected by normal sandbox, target
-absent, no elevated retry; empty test parent removed. Do not rerun that old marker.
+Keyboard/resize/screen-reader/close-pending unverified; human did not complete the
+optional manual check. Browser DOM is not keyboard/accessibility proof. Optional
+observer native triggers need separate explicit reception/storage opt-ins and fresh
+bounded model-run authorization. Prior single model-run authorization is consumed.
+No additional model/API run or subagent is authorized. Theme choice/native renderer,
+visible SessionStart/resume/full permission matrix and native hosts remain gaps.
 
-Earlier authorized selected-project CLI run produced3native events; desktop
-Refresh1→4. Parent chat outside child logging project stays excluded. Scope follows
-native session directory, not a shell workdir; never broaden logging/parse commands
-for attribution. Retained count4/producer health unknown; visible SessionStart
-notice/resume/desktop start remain unverified. Current dev6 has no new native
-execution/UI acceptance yet.
+## Code contracts and next High tasks
 
-Separate holdv4 human-confirmed accept continued fixed print; decline/cancel/
-30s timeout blocked, then supported removal/private config preservation/fresh no-
-hold inventory. MCP response not human attestation, earlier disconnected fail-open
-retained. Never ship it as a production enforcement gate; keep deny/review fallback.
+1. **Windows privacy boundary (SEC/platform rows):** inspect src/state.mjs,
+   src/runtime-settings.mjs, src/usage.mjs, src/journal.mjs, src/restore.mjs and
+   src/workspace.mjs; corresponding tests and .github/workflows/ci.yml. Current
+   state/settings/export/restore explicitly refuse Windows pending reviewed ACLs;
+   journal/paths/process behavior must be assessed separately. Research official
+   Windows/Node/Codex mechanisms only where concrete uncertainty remains. Design a
+   narrow OS adapter with documented threat model, ownership/principal/inheritance/
+   reparse-point/link/drive/UNC/Unicode/process-cleanup handling. Inspect dependency
+   licenses/authority before choosing helpers; no silent broad grants/install.
+   Acceptance: unauthorized principal/inherited access and unsafe traversal refuse,
+   verified private current-user paths succeed, read/write/lock/rotation/timeout/
+   removal meaningful tests on real Windows CI; existing POSIX tests unchanged.
+   Never replace ACL checks with Windows mode bits, enable on mock-only evidence,
+   collect secrets, scan credentials or erase native-unverified distinctions.
+   If native validation cannot establish a safe adapter, keep refusal and record
+   exact blocker/practical alternative rather than claim Windows support.
+2. **Implement reviewed scope, then native host acceptance:** preserve three
+   default hooks, source observer registration opt-in, scoped metadata, no arbitrary
+   command/path/model/approval mutation. Validate/fixtures/unit/security tests then
+   real platform CI. CI is not native Codex integration. No native Windows host
+   available here; prepare precise separate acceptance requirements.
+3. **Remaining supported features:** finish coherent per-skill invocation/review
+   checks, actual disable/older-version rollback/loaded-session lifecycle, native
+   accessibility/theme selection and optional event delivery. Batch concrete
+   protected human steps; do useful independent work while blocked. No optional
+   telemetry/model test run/theme/client upgrade without the separate user choice.
+4. **Reconcile all93 rows and safe checkpoint:** source/doc/package/public-clone/CI
+   evidence separately; do not silently roadmap supported features/full completion.
+   Request Astra Ultra only for a genuinely harder architecture/security problem;
+   otherwise switch back to Sol Medium once demanding work is resolved, via exact
+   save/upload/fetch/tree/ls-remote/final/stop protocol.
 
-## Stable boundaries and rollback
+Stable contracts: dispatcher v2 abstain/notice/deny/exact command-only replacement,
+validated paired allow+updatedInput continues host permissions; no PermissionRequest
+approvals. Bounded POSIX metadata, read-only selected Git tools, explicit selected
+export, separate one-file POSIX restore (not interruption-atomic). Original restricted
+renderer16nodes/24edges/64lines/4096characters; not full Mermaid. Observer lane{}
+with event/time only, no stop blocks/follow-up/model calls. No app patch/private
+internals/custom client/fork direction, prompt/model change or automatic trust.
 
-High-reviewed parser/resource/observer contracts remain in ARCHITECTURE.md. Local
-preview is restricted flowchart/JSON/plain text, bounded/inert/no tool/model/network
-requests; not full Mermaid/native transcript replacement. Observer lane outputs{}
-and event/time only, separate registration/storage opt-in; no stop blocks/follow-up.
-Git checkpoints may include human edits/multiple turns. Usage is latest reported
-cumulative snapshot, not occupancy/billing/cache health. Restore separate explicit
-POSIX text-file CLI, not interruption-atomic/Windows ACL supported; no MCP writer.
+## Configuration and rollback
 
-Rollback by repointing ONLY owned local marketplace source to preserved dev4,
-supported plugin add, human review/restart. Preserve newer unrelated settings;
-never overwrite whole config/marketplace from backup. Original proof retained.
-Optional removal through supported CLI (only when selected):
+Private backups, immutable dev4/dev6 snapshots/settings/evidence locations are in
+ignored root handoff. Current remove/reinstall changed no surviving config/settings;
+production remains dev6. Older-version rollback is prepared, not executed: repoint
+only owned marketplace to preserved snapshot, supported add, inspect exact cache/
+native inventory, human changed-code review/restart. Never restore entire shared
+config from old backup. Optional removal uses supported plugin remove for owned
+production identity; marketplace removal separate only if dedicated/no other needs.
+Data/settings/plans remain separate; no cleanup inferred or active-lock deletion.
 
-```sh
-codex plugin remove claude-mods-for-codex@claude-mods-production-dev --json
-codex plugin marketplace remove claude-mods-production-dev --json
-```
+No human action required before reading/design. Extra native model runs, optional
+observer data reception/storage and theme/client choices remain separately pending.
+Human must select next model/effort before stronger work.
 
-Data/settings/plans retained separately; no cleanup inferred from uninstall. Do
-not remove active locks or private recovery evidence. Source theme copy/removal
-is separate and optional; restore previous host selection, not whole config.
+## Copy-and-paste resume instruction
 
-## Next tasks in priority order
-
-1. After human restart, verify installed dev6 panel and exact authored rewrite,
-   fixed existing behavior and metadata scope/count. Record actual host versions,
-   renderer limits/unsupported syntax/Clear/table accessibility and failure states.
-   No additional paid/model test run. Human keyboard/screen-reader/resize/close-
-   pending tests where permitted; browser simulation remains separate.
-2. Complete native skill-guided authoring acceptance/review notes and declaration
-   accuracy, keeping generated code disabled until reviewed use. All four coherent
-   skills are model-mediated, not immediate callbacks. Preserve usage disclosures.
-3. Routine owned-fixture disable/remove/reinstall/rollback acceptance through
-   supported UI/CLI; batch protected human steps, preserve unrelated entries and
-   immutable dev4/source/private backups. Fresh native absence/function checks;
-   loaded-process/cache/data claims must be measured, not assumed.
-4. Optional observer native delivery requires separately reviewed reception/storage
-   opt-in and fresh authorization for model-driven triggers. None authorized now;
-   keep exact blocker/tests explicit. Theme setup guide/example prepared; actual
-   picker/code/diff/prose/footer verification needs compatible host/user choice.
-   Never silently upgrade client, select theme, expand logging or invoke extra runs.
-5. Finish93-row docs/package/public-clone/CI records. Native Windows/Linux/WSL and
-   private ACL/restore compatibility remain unverified/unavailable in current
-   implementation. A new ACL/approval/parser/routing architecture is outside
-   routine Medium: save/upload/verify and request stronger setting. No quiet
-   roadmap deferral/full-product completion from this milestone.
-
-## Resume instruction
-
-> I restarted Codex. Continue Claude Mods for Codex on codex/astra-groundwork using
-> GPT-6.1 Sol, Medium. Read docs/continuation/{STATUS,REQUIREMENTS,ARCHITECTURE,
-> TEST-LOG,HANDOFF}.md and latest ignored root HANDOFF.md. Production0.2.0-dev.6
-> is installed and human-trusted;125 cached files matched, three trusted hooks/
-> zero errors. Verify its actual Local preview and authored exact print rewrite
-> after restart, then continue bounded authoring/lifecycle/theme/docs/package work.
-> Preserve logging scope, permissions, human trust and private history. Optional
-> observers remain off; no additional model run is authorized. Keep all93 gaps
-> explicit. Stop/save/upload/verify for a stronger model if new reasoning beyond
-> the reviewed contracts is required; do not claim full product completion.
+> I switched to GPT-6.1 Sol, High. Continue Claude Mods for Codex on
+> codex/astra-groundwork from the verified dev6 native handoff. Read
+> docs/continuation/{STATUS,REQUIREMENTS,ARCHITECTURE,TEST-LOG,HANDOFF}.md and latest
+> ignored root HANDOFF.md. Medium verified actual dev6 Local preview, authored
+> print rewrite, six views, nested explorer and unchanged supported remove/reinstall;
+> three trusted hooks/125 matching files, logging scope/count unchanged. Inspect and
+> design the Windows private-storage/ACL and process boundary, implement only safely
+> validated scope with meaningful Windows CI, and keep native compatibility gaps
+> explicit. Preserve human trust, permissions, private history and default logging;
+> optional observers remain off and no extra model run is authorized. Continue all93
+> requirements without claiming full completion. Stop/checkpoint/upload/verify for
+> Medium when High is no longer needed, or Astra if a new harder problem requires it.

@@ -1,7 +1,11 @@
 # Local code and diagram preview
 
-Source0.2.0-dev.5 adds Local preview inside the plugin-owned dashboard. It is now in installed/human-trusted0.2.0-dev.6, awaiting desktop restart and
-actual-host acceptance; simulated DOM tests are separate.
+Introduced in source0.2.0-dev.5, installed/human-trusted0.2.0-dev.6 was verified
+after restart on macOS14.6 / Codex desktop26.1016.62342. Actual MCP App controls
+rendered the three-node/two-edge example with complete tables, literal JSON and
+plain code, and rejected an unsupported click directive with literal source.
+Clear emptied source/output. Native keyboard, screen-reader, resizing and
+close-pending behavior remain unverified. See [test log](continuation/TEST-LOG.md).
 
 Choose a format, paste source and click Render locally. Highlighted JSON validates
 JSON syntax and marks keys, strings, numbers and literals. Plain code displays

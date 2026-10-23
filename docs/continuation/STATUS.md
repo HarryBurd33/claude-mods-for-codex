@@ -1,126 +1,70 @@
 # Current status — 2026-10-23
 
-**Current stage: GPT-6.1 Sol, Medium. Full product incomplete.**
-Source0.2.0-dev.6 is now user-profile installed/enabled/human-trusted. All125 cache
-files match the reviewed immutable fixture snapshot. Read-only native inventory
-confirms exactly three trusted/enabled hooks,zero errors, no model turn. User
-reviewed all three changed hooks. Desktop restart/new rendering and authored-rule
-native acceptance are pending; do not repeat trust for unchanged code.
+**Full product incomplete. Current human setting: GPT-6.1 Sol, Medium.**
+The bounded dev6 native acceptance below passed. Next requested setting:
+**GPT-6.1 Sol, High**, for Windows private-storage/security design. Do not start
+stronger work until the human switches/continues. No subagents/background work.
 
-Same private runtime settings/project/data/scope/retention/export/patch selection,
-byte-for-byte unchanged settings and parsed user configuration. The new fixture
-removes only the completed sandbox-test rewrite and adds one reviewed generated
-exact print rule. Optional observers remain unregistered/unselected; theme is
-not installed/applied and client version is unchanged. Original proof retained;
-separate hold remains removed. Source dev5 was never installed: dev6 batches its
-unchanged renderer/observer contracts with skill/setup/theme documentation fixes.
+## Current installation and acceptance
 
-Medium completed installed-CLI describe/scaffold/access review/disabled/matching/
-nonmatching replay using synthetic input, no fixture command execution/model call.
-Native authored rewrite remains pending restart. Full source and fresh extracted
-125-file package passed164tests/three Windows-only skips, validation/default replay.
-Ruby YAML/theme plist checks pass; bundled quick_validate unavailable (PyYAML
-absent), not repaired. Theme setup/rollback documented, actual host rendering not
-claimed. Source CI40024252139 initially had one macOS22 test failure; requested targeted
-rerun produced five new jobs, all independently completed/success. Initial failure
-and unknown cause retained in TEST-LOG; no flake-fix claim. Prior dev5 CI historical.
+Production claude-mods-for-codex@claude-mods-production-dev0.2.0-dev.6 is user-
+profile installed/enabled/human-trusted. Human restarted this chat. Host macOS14.6
+arm64, desktop26.1016.62342 build21477, Node24.22.0; system CLI0.163.0 separately.
+No client upgrade/theme selection; optional lifecycle observers unregistered/off.
+
+Actual permitted MCP Apps inspection verified all six owned views: event chart/
+table, files/Git status, nested expansion, synthetic working-tree patch, selected-
+commit diff and passive export counters. Local preview passed restricted three-
+node/two-edge flowchart plus complete tables, highlighted JSON/plain literal code,
+unsupported-click fallback and Clear. It is not full Mermaid/native restyling.
+Temporary nested child/folder removed; existing fixture files/index/HEAD preserved.
+
+Actual authored print rewrite produced reviewed AFTER marker. Existing production
+rewrite/control/deny passed. Corrected installed management skill read/used. This
+completes the reviewed synthetic authoring-to-installed-print example, not every
+skill invocation/evaluation or arbitrary standalone plugin/UI generation.
+
+Supported CLI production remove/reinstall verified cache and fresh-session hook
+absence,125 exact files restored, three trusted/enabled hooks/zero errors. Parsed
+configuration restored exactly, unrelated entries preserved, settings hash unchanged.
+Original proof retained; removed hold namespace absent after restart. Already-loaded
+desktop unload, UI disable and older-version rollback remain unverified. Identical-
+code retained trust does not excuse human changed-code review. Private backups kept.
+
+## Privacy and remaining gaps
+
+Same selected private project/data/settings/scope/retention/patches/commits/export.
+Activity remained4 with identical revision. Hook scope follows native session cwd,
+not shell workdir; this chat is outside selected child logging project. No broader
+logging, extra model run, raw event logs, new grant or session discovery. Local
+callbacks make no model calls; selected chat/skills still consume usage.
+
+Historical dev4 sandbox-negative rewrite and separate holdv4 accept/decline/cancel/
+30s timeout remain version-specific. Hold removed; human provenance and disconnected
+fail-open prevent production gate claims. Production uses deny/review fallback.
+Native keyboard/screen-reader/resize/close-pending not verified; manual check was
+not completed. Optional native observer triggers need separate explicit reception/
+storage opt-ins and fresh bounded model-run authorization; none added. Theme
+example/guide remains unapplied. Visible SessionStart/resume and full native
+permission/platform matrix remain incomplete.
+
+Unchanged dev6 source/extracted full suite164pass/three Windows-only skips,
+validation/default replay pass. Source1e5fa74 CI40024252139 initially4jobs pass/
+1existing macOS22 mocked-Git failure; targeted local test passed and requested
+retry yielded5successful new jobs. Unknown cause/no fix claim. Current final
+package/anonymous-clone evidence and exact verified commit are recorded after
+readback in TEST-LOG/final response; private paths/logs remain ignored.
+
+All93 ledger rows remain scoped. Native Windows/Linux/WSL hosts unavailable;
+portable CI is not native integration. Windows state/settings/export/restore
+currently refuse pending reviewed ACL support. Next High work must design and
+validate OS-specific privacy/access contracts before enabling that behavior;
+never replace ACL validation with mode-bit assumptions or weaken refusal to pass
+CI. Native validation remains separate. Full skill/theme/lifecycle/accessibility,
+disable/rollback and platform acceptance remain incomplete, not quietly deferred.
 
 Verified source [1e5fa74](https://github.com/HarryBurd33/claude-mods-for-codex/commit/1e5fa74c69f38a2a09a82f6cd7de2bbbd2ef53d2),
-tree eb5acc94cdc2a664a317f36ee0c9036a041189d6; exact fetch/diff/ls-remote matched.
-The following native evidence is historical dev4, not transferred to dev6.
-
-## Actual installed state and native evidence
-
-Production0.2.0-dev.4 was the earlier installed/trusted snapshot. Its108 cached
-files matched the reviewed snapshot; no cache edits. User restarted this chat.
-New mods.checkpoints/usage tools connected. Actual owned panel displayed Activity
-chart/table, two selected files/Git status, working-tree synthetic patch, selected
-commit Replay diff and passive export counters with accurate unknowns. Five view
-buttons worked. Keyboard/screen reader/resize/close-pending remain unverified.
-The permitted MCP Apps interface was used; native app control remains restricted.
-
-Fixed rewrite produced the expected AFTER marker; fixed deny blocked; unchanged
-control stayed unchanged. A separate exact rewrite attempted a fixed marker file
-in one owner-writable0700 disposable directory outside the allowed workspace.
-The ordinary use_default sandbox rejected it, exit1/operation not permitted;
-no file was created. No elevated retry. Only the empty test directory was removed.
-This proves one normal sandbox-negative rewrite case, not every approval mode.
-
-Separate hold0.0.4 (mods-hold-v4) was installed and human trusted, then connected:
-confirm allowed the fixed print after5.419s (human confirmed personally submitting),
-decline blocked, cancellation blocked after27.145s, unanswered30.013s denied with
-the decision-deadline message. One attempted cancel was actually a second decline;
-it is not double-counted as cancellation. No automatic approval was used.
-MCP acceptance is not authenticated human provenance; prior disconnected-hook
-fail-open still applies. Hold remains a separate proof, not production enforcement.
-
-Supported CLI removed only the hold plugin/dedicated marketplace afterward.
-Parsed config comparison confirmed unrelated entries preserved. Fresh read-only
-native inventory: three trusted/enabled production hooks, no hold hook, zero
-errors, no model turn. Loaded desktop connection/process absence needs a fresh
-host; do not invoke the removed tool. Original native proof0.0.2 is retained.
-Private backups/evidence/rollback paths stay in ignored root HANDOFF.md.
-
-Logging project/data/scope/retention unchanged; counts remain4. Native hook scope
-is the session directory, not shell workdir. Earlier one authorized CLI0.163.0
-Sol High read-only run in the selected project added SessionStart/PreToolUse/
-PostToolUse metadata visible in desktop Refresh1→4; first record was synthetic.
-That extra-run authorization is consumed. No additional model run this milestone.
-Visible SessionStart notice, resume semantics and desktop SessionStart unverified.
-
-## Reviewed source contracts; dev6 native acceptance pending
-
-Source0.2.0-dev.5 introduced Local preview (now in installed dev6, pending restart): local plain code, highlighted JSON and an
-original restricted Mermaid-compatible flowchart subset. Fixed offline assets,
-4,096-character input;16 nodes/24 edges/64 lines, literal labels, SVG plus complete
-tables, no HTML/link/directive interpretation or model/tool/network calls. Clear
-and teardown discard panel source/output. Unsupported syntax shows escaped source;
-this is not the full Mermaid library/layout or a native transcript replacement.
-See docs/local-preview.md. Browser preview is simulation, not Codex host evidence.
-
-Optional observer source covers Stop/Interrupt/PreCompact/PostCompact/SubagentStart/
-SubagentStop/SessionEnd with output exactly{} and event/time-only scoped metadata.
-Default hooks remain the existing three; each observer needs explicit reviewed
-hook registration plus metadataState.observerEvents selection. No raw messages,
-IDs/transcript content, stop blocks, follow-up/model calls or default logging
-expansion. Exact released0.163.0 source corroborates schemas. Native delivery of
-these new events is unverified; see docs/lifecycle-observation.md.
-
-Full local suite: **164 passed,0 failed,3 Windows-only skips (167 total)**.
-Default config3 mods/four replay fixtures passed. New observer config validated,
-seven synthetic envelopes replayed to{}. Targeted rendering/UI/dashboard28 pass;
-observer/contracts/journal/state45 pass/one Windows-only skip. Geometry refinement
-then rendering6 pass. Source5a4ecd7 all5 CI jobs passed, run40022914501: Ubuntu/macOS Node22/24
-full suites and Windows portable lane. Exact source/tree verified by fetch/diff/
-ls-remote and clean anonymous public clone. No native Windows compatibility claim.
-
-Existing one-file POSIX restore was tested through six CLI processes with exact
-synthetic reverse/preserved notes,index,HEAD,inode,mode,owner. It remains non-atomic
-under interruption; no extended ACL/xattr/disk-failure/native Windows claim. No
-panel/MCP writer. Conservative impact guard remains disabled by default; native
-impact-specific fixture acceptance still needed. Selected usage counters are latest
-reported cumulative snapshot only, never occupancy/billing/cache health.
-
-## Incomplete requirements and next bounded work
-
-All93 capabilities remain in REQUIREMENTS.md. Medium should verify the new source
-through a reviewed versioned update/human trust/restart, complete routine authoring
-and install/update/disable/remove/rollback acceptance, fix stale skill guidance,
-prepare supported theme setup without silently upgrading a client, rebuild/test
-packages and reconcile remaining documentation/evidence. Keep native accessibility,
-optional observer delivery and unsupported renderer/restore cases explicit.
-
-Native Windows/WSL/Linux hosts unavailable. Windows private state/settings/export/
-restore refuse pending reviewed ACL support. CI is portable code evidence only.
-A new ACL adapter, broader parser/runtime, model routing or human-approval gate is
-outside the routine Medium phase: preserve a checkpoint and request a stronger
-setting/user decision before expanding those contracts. These gaps stay incomplete,
-not silently moved to a roadmap or declared impossible. No extra model run without
-fresh visible bounded authorization; no separate client/fork/app patch direction.
-
-Public main remains the historical MVP; codex/astra-groundwork is incomplete
-safe development. Root HANDOFF.md/.local remain ignored, historical local commits
-preserved. Next-stage handoff records exact commits after verified upload.
-
-Verified source: [5a4ecd74a0f543db511a572c92547c714cfc6e5b](https://github.com/HarryBurd33/claude-mods-for-codex/commit/5a4ecd74a0f543db511a572c92547c714cfc6e5b).
-Final handoff-record commit is docs-only; identity reported after readback.
+restart records [98f12d0](https://github.com/HarryBurd33/claude-mods-for-codex/commit/98f12d03c543a569d2421e08e660a5602462a909).
+Development branch codex/astra-groundwork; main remains historical MVP. Private
+local history/root handoff preserved; final checkpoint identity only after upload/
+fetch/tree-diff/ls-remote verification. Read HANDOFF.md for exact next tasks.

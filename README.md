@@ -1,22 +1,28 @@
 # Claude Mods for Codex
 
 **Development source `0.2.0-dev.6`: the full requested product is incomplete.**
-Installed test fixture0.2.0-dev.6 is human-trusted and awaiting desktop restart.
-Earlier0.2.0-dev.4 has actual macOS desktop covered-hook and owned
-MCP App evidence. Its Activity chart/table, files/Git status, working-tree patch,
-selected-commit Replay and passive reported usage views work on the recorded host.
-Normal sandboxing rejected a rewritten marker-file write outside the workspace;
-no target was created or elevated retry used. A separate harmless hold proof
-verified confirm/decline/cancel/30s timeout and was then removed. It is not a
-production security gate: human provenance is not attested and disconnected hooks
-can fail open. See [current status](docs/continuation/STATUS.md) and
-[test log](docs/continuation/TEST-LOG.md) for version-specific evidence/limits.
+Installed test fixture `0.2.0-dev.6` has actual macOS desktop evidence after
+human trust and restart: six owned views, local flowchart/JSON/plain-code preview,
+Clear, nested project browsing, selected-commit diffs and passive usage counters.
+The reviewed authored print rewrite, existing rewrite, unchanged control and deny
+rule passed. Supported removal/reinstallation restored all125 reviewed files and
+three trusted hooks; fresh-session absence during removal was verified. This does
+not establish immediate unload in an already-open desktop process.
 
-Source dev6 includes the dev5 [local code/JSON/restricted Mermaid flowchart preview](docs/local-preview.md)
-and [optional observation-only lifecycle events](docs/lifecycle-observation.md).
-They have unit/subprocess/browser-simulation evidence, **no dev6 native acceptance yet**. Default hook registration/logging is unchanged. All callbacks stay
-local; skill/chat use still consumes model usage. Full local suite164pass/three
-Windows-only skips; CI/native platform claims are separate.
+The earlier dev4 normal sandbox rejected a rewritten marker-file write outside
+the workspace; no target or elevated retry. Separate harmless hold tests verified
+confirm/decline/cancel/30s timeout and were removed. The hold proof is not a
+production gate: human provenance is not attested and disconnected hooks can fail
+open. See [current status](docs/continuation/STATUS.md) and
+[test log](docs/continuation/TEST-LOG.md) for version-specific limits.
+
+The [local preview](docs/local-preview.md) is an original restricted flowchart
+approximation, not full Mermaid or native transcript restyling. Optional
+[observation-only lifecycle events](docs/lifecycle-observation.md) remain source-
+tested, unregistered and native-unverified. Default hook registration/logging
+is unchanged. Local callbacks make no additional model calls; skill/chat use
+consumes usage. Full local suite164pass/three Windows-only skips; CI and native
+platform evidence are separate.
 
 Replay compares only explicit selected Git commits, which may include human edits
 or multiple turns; it is not automatic previous-turn attribution. A separate
@@ -26,9 +32,9 @@ checks and documented non-atomic interruption limits; no panel/MCP restore actio
 latest cumulative counters, never summed or called current context/billing/cache
 health. No private-session discovery or paid keepalive.
 
-Remaining incomplete work includes new-source native acceptance, full accessibility,
-authoring/update/disable/removal/rollback flows, supported themes, optional event
-native delivery and real Windows/Linux/WSL compatibility. Windows private state,
+Remaining incomplete work includes full accessibility, broader skill invocation,
+disable/older-version rollback and loaded-process lifecycle, supported themes,
+optional event native delivery and real Windows/Linux/WSL compatibility. Windows private state,
 settings, usage exports and restore refuse pending ACL support. The
 [93-capability ledger](docs/continuation/REQUIREMENTS.md) records every gap and
 alternative. An original [theme example and supported setup/rollback guide](docs/themes.md) is

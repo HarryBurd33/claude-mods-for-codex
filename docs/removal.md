@@ -32,3 +32,16 @@ Keep the previously reviewed source snapshot and private configuration/marketpla
 The old portable `0.1.0` manifest did not load hooks on the inspected released clients. Restoring that artifact can restore its exact old bytes, but does not restore working native hooks. Prefer the corrected compatibility package when validating hook functionality. On CLI 0.163.0, manually review referenced-code changes even when the host does not automatically invalidate prior trust. See [version-specific trust evidence](continuation/CODEX-CONTRACTS.md#local-installation-updates-trust-and-removal).
 
 The development proof has a separate identity, `claude-mods-native-proof@claude-mods-dev`, and must be removed separately if it was installed. Production removal does not remove that proof or authorize deleting its data.
+
+## Observed dev6 lifecycle check
+
+On2026-10-23, supported CLI0.163.0 removal of the owned production development
+fixture removed its cache and fresh read-only app-server inventory showed no
+production/hold hooks. Reinstalling the same unchanged immutable snapshot restored
+all125 files byte-for-byte and three enabled/trusted hooks, zero errors. Parsed
+user configuration was restored exactly, unrelated entries preserved throughout,
+and runtime settings hash unchanged. No model turn, trust-file edit, marketplace
+removal or data deletion. The existing human trust was retained for identical bytes;
+changed source still requires human review even if the host retains trust.
+Already-loaded desktop process unload, UI disable and older-version rollback were
+not established by this fresh-session check. Private backups are retained.

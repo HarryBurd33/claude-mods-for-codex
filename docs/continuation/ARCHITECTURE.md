@@ -3,14 +3,21 @@
 Decision date: 2026-10-23. Development design; outstanding proof gates are explicit.
 Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.
 
-Current Medium source0.2.0-dev.6 changes guidance/theme examples/version only;
-reviewed dev5 parser/event contracts are unchanged and now installed in human-
-trusted dev6, awaiting restart/native acceptance. No
-optional hooks/storage are enabled. Earlier production0.2.0-dev.4 native dashboard and normal
-sandbox-negative rewrite passed after restart; hold0.0.4 confirm/decline/cancel/
-30s timeout observed then supported removal/fresh no-hold inventory. Human MCP
-provenance and infrastructure fail-open remain limits. Source0.2.0-dev.5 adds the
-contracts below; not installed/native accepted. Defaults/logging scope unchanged.
+Current dev6 contracts are unchanged. After human trust/restart, the actual
+owned panel verified restricted flowchart/JSON/plain-code, unsupported fallback,
+Clear and all six views; reviewed authored print rewrite passed. Optional observers
+remain unregistered/unselected; logging settings/scope unchanged. Same-version
+supported production remove/reinstall verified fresh hook/cache absence and exact
+125-file restoration with preserved human trust/configuration. This is not already-
+loaded desktop unload/older-version rollback evidence. No extra model run.
+
+Earlier dev4 normal sandbox-negative rewrite and separate hold0.0.4 confirm/
+decline/cancel/30s timeout remain version-specific. Hold removed; no remaining tool
+namespace after restart. Human provenance/infrastructure fail-open limits remain.
+Next security work needs human-controlled Sol High checkpoint: review Windows
+private storage/ACL contracts before changing current refusal. Native platform
+validation remains mandatory and separate from code/CI. Do not weaken checks or
+infer OS access from POSIX mode bits on Windows.
 
 ## New bounded contracts (source0.2.0-dev.5)
 

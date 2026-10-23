@@ -1,5 +1,56 @@
 # Continuation verification log
 
+## Dev6 restarted native acceptance and unchanged reinstall — 2026-10-23
+
+**Current summary supersedes earlier pending notes below.** Human restarted after
+personally trusting three dev6 hooks. Same macOS14.6 arm64 / desktop26.1016.62342
+build21477 / Node24.22.0; system CLI0.163.0 separate. No additional model run.
+
+- Actual mods.dashboard/MCP Apps inspection: all six views loaded. Selected files/
+  Git status, new synthetic nested folder expansion/child, notes working patch,
+  two selected commit diff and passive selected-export counters displayed. Only
+  newly created nested child/folder removed; existing selected fixtures preserved.
+- Local preview rendered sample3nodes/2edges SVG plus complete tables, JSON with
+  script-like text and plain code with img-like text literally. Unsupported click
+  directive rejected with explanation/literal source, no partial graph. Clear
+  emptied source/output; Refresh/Watch disabled in preview. No-request assertions
+  are automated/code evidence, not independent network tracing. Visible screenshot
+  evidence private; full-page capture unsupported. Two guessed wait selectors
+  timed out; subsequent DOM showed correct loaded data, no product defect inferred.
+  Manual keyboard/resize check not completed; full accessibility remains unverified.
+- Actual exec_command: authored BEFORE print became reviewed AFTER marker, exit0;
+  original production rewrite became AFTER, unchanged control unchanged, exit0;
+  configured fixed deny marker blocked by PreToolUse before execution. Harmless
+  prints only, ordinary permissions. A later documentation shell write quoting
+  that marker was also lexically denied; no files changed by the blocked call.
+  Subsequent documentation omits that unnecessary literal; no hook/trust changes.
+- Corrected installed management skill read/used. Prior disabled scaffold/access/
+  disabled-match-nonmatch replay, reviewed merge/versioned install/human trust/
+  restart and current exact native effect complete this synthetic authoring case.
+  No independent skill evaluator, immediate slash callback or every-skill claim.
+- Bounded private helper backed up config, ran supported production plugin remove/
+  add only. Removed cache absent; fresh no-daemon app-server initialize/hooks/list
+  had no production/hold hooks. Reinstalled125files exactly matched baseline;
+  fresh inventory3trusted/enabled hooks/zero errors. Parsed config exact baseline,
+  unrelated entries preserved throughout, settings hash unchanged. No model turn,
+  trust write, marketplace removal/data deletion. Original proof retained. Current
+  desktop service still responds; already-loaded unload/fresh desktop relaunch and
+  older-version rollback not established. Identical immutable code/trust only.
+- Activity count4/same revision/project scope throughout. Current chat outside
+  selected logging child project. Removed hold namespace absent from tool inventory.
+  No logging expansion/new grant/observer reception/storage/theme/client upgrade.
+
+Unchanged source/extracted suite164pass/three Windows-only skips and source CI/
+retry records below remain version-specific. Fresh documentation archive125files/724216unpacked bytes inspected: no links/
+traversal/private paths/root handoff/.local/.git/dependencies/portable manifest;
+renderer/theme/public handoff present. Fresh path-with-spaces extraction full suite
+164passed/0failed/3Windows-only skips (167total), validate/default replay passed;
+mocked stalled-Git cleanup test passed3.053s. Subsequent final docs-only edits require
+final rebuild/inspection. Exact final package and anonymous-clone/remote verification
+are reported after readback in the final response/ignored handoff; no future result
+is asserted here. Private evidence/scripts/paths stay ignored.
+
+
 ## Versioned fixture update and human trust — 2026-10-23, restart pending
 
 Saved source3d959ea was prepared as immutable production0.2.0-dev.4 snapshot.

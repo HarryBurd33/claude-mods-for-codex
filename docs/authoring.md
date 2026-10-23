@@ -44,5 +44,12 @@ hot reload or automatically trust generated output.
 The four original model-mediated skills are mod-scaffolding, systematic-debugging,
 verify-mod-completion and prepare-mod-review. They define narrow triggers, scope,
 model usage and stop conditions in their SKILL.md files. These are skills, not
-immediate native slash callbacks. Native skill discovery/invocation and a full
-human authoring-to-install acceptance remain unverified.
+immediate native slash callbacks. The dev6 selected-model workflow scaffolded a disabled synthetic exact print rule
+using the verified installed CLI, inspected access and replayed disabled/matching/
+nonmatching cases. The rule was merged into a reviewed versioned fixture, human-
+trusted, and after restart actually changed `printf MODS_AUTHOR_BEFORE` to
+`printf MODS_AUTHOR_AFTER`. No additional model run or executable generation.
+The corrected installed management skill was read/used in this chat; independent
+invocation/evaluation of every skill and unsupported authoring shapes remain
+unverified. This is framework configuration authoring, not arbitrary plugin/UI
+generation or an immediate slash-command callback.
