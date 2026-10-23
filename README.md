@@ -1,7 +1,8 @@
 # Claude Mods for Codex
 
 **Development source `0.2.0-dev.6`: the full requested product is incomplete.**
-Installed test fixture0.2.0-dev.4 has actual macOS desktop covered-hook and owned
+Installed test fixture0.2.0-dev.6 is human-trusted and awaiting desktop restart.
+Earlier0.2.0-dev.4 has actual macOS desktop covered-hook and owned
 MCP App evidence. Its Activity chart/table, files/Git status, working-tree patch,
 selected-commit Replay and passive reported usage views work on the recorded host.
 Normal sandboxing rejected a rewritten marker-file write outside the workspace;
@@ -13,8 +14,7 @@ can fail open. See [current status](docs/continuation/STATUS.md) and
 
 Source dev6 includes the dev5 [local code/JSON/restricted Mermaid flowchart preview](docs/local-preview.md)
 and [optional observation-only lifecycle events](docs/lifecycle-observation.md).
-They have unit/subprocess/browser-simulation evidence, **not installed dev6 native
-acceptance**. Default hook registration/logging is unchanged. All callbacks stay
+They have unit/subprocess/browser-simulation evidence, **no dev6 native acceptance yet**. Default hook registration/logging is unchanged. All callbacks stay
 local; skill/chat use still consumes model usage. Full local suite164pass/three
 Windows-only skips; CI/native platform claims are separate.
 

@@ -1,22 +1,37 @@
 # Current status — 2026-10-23
 
-Current Medium stage: source0.2.0-dev.6 is prepared, not installed yet. It includes
-unchanged dev5 rendering/observer contracts, corrected management-skill guidance,
-an original optional theme asset and setup/removal documentation corrections.
-Installed dev4 logging scope/trust remain unchanged. Native dev6 acceptance and
-full product completion are not claimed. This current stage supersedes the
-historical model-switch wording below; the human selected Sol Medium.
+**Current stage: GPT-6.1 Sol, Medium. Full product incomplete.**
+Source0.2.0-dev.6 is now user-profile installed/enabled/human-trusted. All125 cache
+files match the reviewed immutable fixture snapshot. Read-only native inventory
+confirms exactly three trusted/enabled hooks,zero errors, no model turn. User
+reviewed all three changed hooks. Desktop restart/new rendering and authored-rule
+native acceptance are pending; do not repeat trust for unchanged code.
 
-**Full product incomplete. Source0.2.0-dev.5; installed0.2.0-dev.4.**
-Astra Ultra → Sol Ultra → Sol High stages were human selected. High has resolved
-this milestone's native permission/hold uncertainty and implemented the bounded
-rendering/observer contracts. Next setting: **GPT-6.1 Sol, Medium**, for reviewed
-update/acceptance, authoring/lifecycle workflows, documentation and packaging.
-This is a human-controlled switch checkpoint, not a finished release.
+Same private runtime settings/project/data/scope/retention/export/patch selection,
+byte-for-byte unchanged settings and parsed user configuration. The new fixture
+removes only the completed sandbox-test rewrite and adds one reviewed generated
+exact print rule. Optional observers remain unregistered/unselected; theme is
+not installed/applied and client version is unchanged. Original proof retained;
+separate hold remains removed. Source dev5 was never installed: dev6 batches its
+unchanged renderer/observer contracts with skill/setup/theme documentation fixes.
+
+Medium completed installed-CLI describe/scaffold/access review/disabled/matching/
+nonmatching replay using synthetic input, no fixture command execution/model call.
+Native authored rewrite remains pending restart. Full source and fresh extracted
+125-file package passed164tests/three Windows-only skips, validation/default replay.
+Ruby YAML/theme plist checks pass; bundled quick_validate unavailable (PyYAML
+absent), not repaired. Theme setup/rollback documented, actual host rendering not
+claimed. Source CI40024252139 initially had one macOS22 test failure; requested targeted
+rerun produced five new jobs, all independently completed/success. Initial failure
+and unknown cause retained in TEST-LOG; no flake-fix claim. Prior dev5 CI historical.
+
+Verified source [1e5fa74](https://github.com/HarryBurd33/claude-mods-for-codex/commit/1e5fa74c69f38a2a09a82f6cd7de2bbbd2ef53d2),
+tree eb5acc94cdc2a664a317f36ee0c9036a041189d6; exact fetch/diff/ls-remote matched.
+The following native evidence is historical dev4, not transferred to dev6.
 
 ## Actual installed state and native evidence
 
-Production0.2.0-dev.4 remains user-profile installed/enabled/trusted. Its108 cached
+Production0.2.0-dev.4 was the earlier installed/trusted snapshot. Its108 cached
 files matched the reviewed snapshot; no cache edits. User restarted this chat.
 New mods.checkpoints/usage tools connected. Actual owned panel displayed Activity
 chart/table, two selected files/Git status, working-tree synthetic patch, selected
@@ -53,9 +68,9 @@ PostToolUse metadata visible in desktop Refresh1→4; first record was synthetic
 That extra-run authorization is consumed. No additional model run this milestone.
 Visible SessionStart notice, resume semantics and desktop SessionStart unverified.
 
-## New source, not installed or natively accepted
+## Reviewed source contracts; dev6 native acceptance pending
 
-Source0.2.0-dev.5 adds Local preview: local plain code, highlighted JSON and an
+Source0.2.0-dev.5 introduced Local preview (now in installed dev6, pending restart): local plain code, highlighted JSON and an
 original restricted Mermaid-compatible flowchart subset. Fixed offline assets,
 4,096-character input;16 nodes/24 edges/64 lines, literal labels, SVG plus complete
 tables, no HTML/link/directive interpretation or model/tool/network calls. Clear

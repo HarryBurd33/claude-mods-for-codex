@@ -1,8 +1,7 @@
 # Local code and diagram preview
 
-Source0.2.0-dev.5 adds Local preview inside the plugin-owned dashboard. The
-installed0.2.0-dev.4 snapshot does not contain it. It needs a normal reviewed
-update/restart and actual-host acceptance; simulated DOM tests are separate.
+Source0.2.0-dev.5 adds Local preview inside the plugin-owned dashboard. It is now in installed/human-trusted0.2.0-dev.6, awaiting desktop restart and
+actual-host acceptance; simulated DOM tests are separate.
 
 Choose a format, paste source and click Render locally. Highlighted JSON validates
 JSON syntax and marks keys, strings, numbers and literals. Plain code displays

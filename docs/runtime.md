@@ -7,12 +7,13 @@ does not establish matching hook scope. Do not automatically broaden logging to
 make counts increase. A synthetic matching replay verified the native Watch
 separately; empty retained counts do not prove the producer is connected/healthy.
 
-Production0.2.0-dev.4 is installed/trusted and verified after restart: five owned
+Current dev6 is installed/human-trusted, awaiting desktop restart; project/data/
+settings/scope/retention unchanged, optional observers off. Earlier dev4 was verified after restart: five owned
 views, synthetic patches/selected Replay, scoped activity chart and selected-export
 usage display. A normal sandbox rejected an exact rewritten marker write outside
 the workspace; no file/elevated retry. Source0.2.0-dev.5 adds
 [local preview](local-preview.md) and [optional lifecycle observation](lifecycle-observation.md),
-not installed or native accepted. The default three hooks/logging remain unchanged.
+now included in installed dev6, with native acceptance pending restart. The default three hooks/logging remain unchanged.
 
 ## Read-only commands
 

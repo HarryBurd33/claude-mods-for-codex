@@ -1,10 +1,10 @@
 # Optional observation-only lifecycle events
 
 Source0.2.0-dev.5 adds event-only observation for `Stop`, `Interrupt`, `PreCompact`,
-`PostCompact`, `SubagentStart`, `SubagentStop` and `SessionEnd`. **Not installed or
-native-host verified.** Default package hooks remain exactly SessionStart,
+`PostCompact`, `SubagentStart`, `SubagentStop` and `SessionEnd`. **Observer registration/storage not enabled or native-host verified.**
+The observer implementation is packaged in installed dev6; optional hooks are not registered. Default package hooks remain exactly SessionStart,
 PreToolUse and PostToolUse, and existing metadata settings do not enable new
-events. There is no new logging in the current installed dev4 fixture.
+events. There is no new logging in the current installed dev6 fixture.
 
 Released CLI0.163.0 provides these event names in its
 [event list](https://github.com/openai/codex/blob/83086188ae0614bd882818ff1aa23f3194962012/codex-rs/hooks/src/lib.rs#L23)

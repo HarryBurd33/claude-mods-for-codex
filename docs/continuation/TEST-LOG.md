@@ -644,3 +644,45 @@ Official CLI customization/developer-commands pages searched/opened and relevant
 Markdown endpoints returned unsupported-content-type, recorded inaccessible for
 that tool; HTML retrieval succeeded. Prior pinned164 prose-release evidence kept
 separate from installed163. No paid/model run or logging expansion.
+
+
+## Dev6 installation and human trust
+
+Prepared immutable125-file fixture from local76b733a (remote equivalent1e5fa74),
+backed up current config/owned marketplace privately. Reused exact reviewed dev4
+settings without edits. New fixture removed completed sandbox probe rule, merged
+only generated/reviewed exact-print mod; default observer hooks not registered,
+no broad impact guard or logging expansion. Fixture validate4mods/replay passed.
+Supported codex plugin add updated only owned production ID to0.2.0-dev.6.
+All125 cached files byte-match fixture; parsed user config/settings unchanged.
+Old trusted-only inspector assertion failed on expected modified trust; corrected
+read-only helper reported three modified hooks/zero errors. Human reviewed all
+three; independent inventory then confirmed trusted/enabled/zero errors/no turn.
+No trust hash writes/cache edits or extra model run. Desktop restart/UI/authoring
+native execution remain pending. Private snapshots/backups/results local only.
+
+Dev6 package125files/722297 unpacked bytes, required renderer/theme/public records
+present; private root handoff/.local/.git/dependencies/links/traversal/portable
+manifest and actual machine paths excluded. Fresh path-with-spaces extraction
+passed164tests/three Windows-only skips, validate/default replay. Runtime code
+matches installed source except three declared private fixture overrides; later
+public installation/CI records are documentation only.
+
+Source1e5fa74 fetched/full-tree diff empty and independent ls-remote matched;
+original local76b733a preserved on codex/dev6-source-local-checkpoint, soft aligned
+only after exact tree comparison. Tree eb5acc94cdc2a664a317f36ee0c9036a041189d6.
+CI40024252139 first attempt: four jobs passed, macOS/Node22 failed the existing
+mocked-stalled-Git test (generic project-unavailable instead of deadline after
+175ms, before3s timeout). Failure retained; no runtime changes/weakening made.
+Same targeted local test passed3.069s. Re-ran only failed CI job once; outcome
+will be recorded independently. Cause not established; no claim of a flake fix.
+
+
+Requested failed-job rerun via job120656301616. GitHub returned a new set of five
+jobs for run40024252139, all completed/success: macOS22 job120657413175,
+Ubuntu22 120657414341, macOS24 120657415034, Windows portable120657470247,
+Ubuntu24 120657483355. Do not describe this as only one job actually executing.
+Initial attempt remains4pass/1fail; no root cause/reliability fix is claimed.
+Native trust reread after human confirmation:3trusted/enabled/0errors/no model
+turn. Current milestone awaits human desktop restart for native6 acceptance;
+no further trust/install needed for this unchanged snapshot.

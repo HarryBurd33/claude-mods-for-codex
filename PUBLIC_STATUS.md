@@ -1,14 +1,15 @@
 # Project status
 
-Current Medium stage: source0.2.0-dev.6 is prepared, not installed yet. It includes
-unchanged dev5 rendering/observer contracts, corrected management-skill guidance,
-an original optional theme asset and setup/removal documentation corrections.
-Installed dev4 logging scope/trust remain unchanged. Native dev6 acceptance and
-full product completion are not claimed. This current stage supersedes the
-historical model-switch wording below; the human selected Sol Medium.
-
-2026-10-23: **incomplete development source0.2.0-dev.5**, installed test fixture
-0.2.0-dev.4, branch codex/astra-groundwork. Public main is the historical MVP.
+2026-10-23: **incomplete development source0.2.0-dev.6**, now installed and
+human-trusted as the user-profile development fixture;125 cached files match the
+reviewed snapshot, three trusted/enabled hooks/zero errors in native inventory.
+Desktop restart/native dev6 UI and generated print-rule acceptance pending.
+Logging settings/project/data/scope unchanged; optional observers off. Theme
+example/setup supplied but not applied; no client upgrade or new model run.
+Installed-CLI authoring replay and source/extracted-package164tests/three skips
+pass. CI first attempt had one existing test failure; all five rerun jobs passed. The
+failure/unknown cause remains recorded; no runtime change or flake fix claimed. Current setting Sol
+Medium; this is a restart checkpoint, not another model-switch gate.
 
 On macOS14.6 / desktop26.1016.62342, dev4 covered rewrite/deny/control and owned
 Activity/files/changes/selected-commit Replay/passive usage views were observed.
@@ -23,7 +24,7 @@ confirmed no hold hook. MCP response provenance and disconnected fail-open preve
 production-enforcement claims; production keeps the deny/review alternative.
 
 New dev5 source adds local code/JSON/restricted flowchart preview and separately
-opt-in, observation-only lifecycle metadata. Neither is installed/native accepted.
+opt-in, observation-only lifecycle metadata. Their contracts are now installed in dev6; native acceptance awaits restart.
 Default three hooks and logging selection are unchanged. Full local suite164pass,
 three Windows-only skips; validation/default and seven observer replays pass.
 No added model run, upstream code copy, dependency or paid keepalive.
@@ -40,7 +41,7 @@ Read [current status](docs/continuation/STATUS.md),
 [test log](docs/continuation/TEST-LOG.md),
 [architecture](docs/continuation/ARCHITECTURE.md) and
 [handoff](docs/continuation/HANDOFF.md).
-Next human-selected phase: **GPT-6.1 Sol, Medium** for bounded routine verification,
+Current human-selected setting: **GPT-6.1 Sol, Medium** for bounded routine verification,
 reviewed update/authoring/lifecycle/docs/packaging. Stronger new security/architecture
 work needs another checkpoint/switch; no automatic delegation/continuation.
 
