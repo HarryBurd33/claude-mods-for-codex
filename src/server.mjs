@@ -5,6 +5,7 @@ import { loadRuntimeSettings } from './runtime-settings.mjs';
 import { readBoundedFile } from './io.mjs';
 import { readMetadataState, observeMetadataState } from './state.mjs';
 import { describeProject, listProjectFiles, inspectProjectChanges } from './workspace.mjs';
+import { CAPTURE_NOTE } from './scope.mjs';
 
 const URI = 'ui://claude-mods/dashboard';
 const empty = { type: 'object', properties: {}, additionalProperties: false };
@@ -31,15 +32,15 @@ export function createDashboardHandler(settings) {
     const current = await readMetadataState(settings.dataDirectory,selected);
     if (args.sinceRevision === current.revision && args.waitMs) {
       for await (const next of observeMetadataState(settings.dataDirectory,selected,{durationMs:args.waitMs,intervalMs:100,signal})) {
-        if (next.revision !== args.sinceRevision) return {available:true,scope:settings.stateScope,...next};
+        if (next.revision !== args.sinceRevision) return {available:true,scope:settings.stateScope,...next,producerHealth:'unknown',captureNote:CAPTURE_NOTE};
       }
     }
-    return {available:true,scope:settings.stateScope,...current};
+    return {available:true,scope:settings.stateScope,...current,producerHealth:'unknown',captureNote:CAPTURE_NOTE};
   }
   return async (request, {signal} = {}) => {
     const p = request.params ?? {};
     switch (request.method) {
-      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.1'}};
+      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.2'}};
       case 'ping': return {};
       case 'tools/list': return {tools};
       case 'resources/list': return {resources:[{uri:URI,name:'Claude Mods dashboard',mimeType:'text/html;profile=mcp-app'}]};

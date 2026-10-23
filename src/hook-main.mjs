@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import { realpath, stat } from "node:fs/promises";
-import { isAbsolute, join, relative, sep } from "node:path";
+import { join } from "node:path";
 import process from "node:process";
 import { loadConfig } from "./config.mjs";
 import { dispatch, validateEventEnvelope } from "./dispatcher.mjs";
@@ -8,19 +7,11 @@ import { MAX_STDIN_BYTES } from "./constants.mjs";
 import { parseJsonObject, readBoundedStream } from "./io.mjs";
 import { appendJournalEntry } from "./journal.mjs";
 import { recordMetadataEvent } from "./state.mjs";
+import { resolveMetadataProject } from "./scope.mjs";
 
 async function metadataScope(event, config) {
-  const cwd = await realpath(event.cwd);
-  if (!(await stat(cwd)).isDirectory()) throw new Error("hook cwd must be a directory");
-  let projectId = cwd;
-  const selected = process.env.CODEX_MODS_PROJECT_ROOT;
-  if (selected !== undefined) {
-    if (!isAbsolute(selected) || selected.length > 4096 || /\p{Cc}/u.test(selected)) throw new Error("selected project must be an absolute bounded path");
-    projectId = await realpath(selected);
-    if (!(await stat(projectId)).isDirectory()) throw new Error("selected project must be a directory");
-    const child = relative(projectId, cwd);
-    if (child === ".." || child.startsWith(`..${sep}`) || isAbsolute(child)) throw new Error("hook cwd is outside the selected project");
-  }
+  const { projectId, matches } = await resolveMetadataProject(event.cwd, process.env.CODEX_MODS_PROJECT_ROOT);
+  if (!matches) throw new Error("hook cwd is outside the selected project");
   return { projectId, ...(config.metadataState.scope === "project" ? {} : { sessionId: event.session_id }) };
 }
 

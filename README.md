@@ -1,18 +1,24 @@
 # Claude Mods for Codex
 
-**Development checkpoint `0.2.0-dev.1`: the full requested product is incomplete.**
+**Development source `0.2.0-dev.2`: the full requested product is incomplete.**
 This branch corrects hook packaging and adds tested building blocks and separate
 native proofs. The dispatcher preserves the three v0.1 examples and adds opt-in exact command
-replacement and scoped metadata. The new local dashboard and project views are
-source implementations awaiting native acceptance. See [runtime access and use](docs/runtime.md). See [current status](docs/continuation/STATUS.md), the
+replacement and scoped metadata. The local dashboard and project views have
+partial native acceptance for the installed0.2.0-dev.1 snapshot; new source
+rendering/diagnostics are not installed. See [runtime access and use](docs/runtime.md), [current status](docs/continuation/STATUS.md), the
 [requirements ledger](docs/continuation/REQUIREMENTS.md), and the
 [next-stage handoff](docs/continuation/HANDOFF.md).
 
-On macOS14.6 / desktop26.1016.62342, a separately installed proof verified covered
-tool events, a fixed harmless input rewrite, denial, and an actual plugin-owned
-MCP App with local buttons and manual activity refresh. The production package
-has not been installed or independently verified in the host. SessionStart,
-negative permission checks, richer features and native Windows remain unverified.
+On macOS14.6 / desktop26.1016.62342, production0.2.0-dev.1 verified covered tool
+events, a fixed harmless rewrite, denial and an actual plugin-owned MCP App with
+files/Git status, change metadata and manual refresh. A separately authorized
+CLI0.163.0 read-only test in the selected project verified native SessionStart,
+PreToolUse and PostToolUse metadata reaching that panel. Hook scope follows the
+session directory, not a shell workdir. Negative sandbox approval checks,
+full accessibility, hold acceptance, remaining features and native Windows are
+still unverified. Source0.2.0-dev.2 adds a no-write scope diagnostic, bounded event
+chart, collapsible file tree and literal diff display; these new views are tested
+with simulated DOM and await a reviewed install/host check.
 Unit tests and source support are listed separately in the
 [test log](docs/continuation/TEST-LOG.md).
 

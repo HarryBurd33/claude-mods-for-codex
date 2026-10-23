@@ -26,7 +26,7 @@ test('dashboard reads only selected scope and bounded observer sees independent 
  await recordMetadataEvent(data,scope,{event:'PreToolUse',tool:'Bash'});
  await recordMetadataEvent(data,{projectId:dir,sessionId:'other-session'},{event:'PreToolUse',decision:'deny'});
  const h=await handler({projectRoot:dir,dataDirectory:data,stateScope:'session',sessionId:scope.sessionId});
- const first=(await call(h,'mods.activity')).structuredContent;assert.equal(first.records,1);assert.equal(first.denials,0);
+ const first=(await call(h,'mods.activity')).structuredContent;assert.equal(first.records,1);assert.equal(first.denials,0);assert.equal(first.producerHealth,'unknown');assert.match(first.captureNote,/session directory/);
  const next=call(h,'mods.activity',{sinceRevision:first.revision,waitMs:1000});
  await recordMetadataEvent(data,scope,{event:'PostToolUse',tool:'Bash'});
  assert.equal((await next).structuredContent.records,2);

@@ -1,5 +1,51 @@
 # Continuation verification log
 
+## Scoped native CLI acceptance and source0.2.0-dev.2 — 2026-10-23
+
+The human explicitly authorized one bounded additional native model run. Before
+launch, read-only app-server model/list confirmed gpt-6.1-sol and High support.
+The actual invocation was codex --no-daemon exec --model gpt-6.1-sol with
+model_reasoning_effort=high, --ephemeral, --json, --sandbox read-only and -C set to
+the already-selected disposable project. Exactly one fixed print command was
+requested; no read/edit/other tool/retry was requested. A private wrapper enforced
+90s/2MiB limits and process-group cleanup. It completed8.8s, exit0, exactly one
+command_execution start/completion, expected rewritten fixed output and exit0.
+No second model run was made. Permission/sandbox settings were not bypassed.
+
+Retained selected-project activity before1(synthetic), after4: SessionStart1,
+PreToolUse2 and PostToolUse1. Thus three new real CLI events entered the existing
+scope. Actual desktop MCP App Refresh displayed4 and the same event counts.
+The first record stays labeled synthetic. This establishes standalone CLI native
+capture plus desktop view of shared state, not current-parent-chat attribution,
+full permission-negative acceptance or visible SessionStart notice presentation.
+No notice literal appeared in the selected JSON output. Raw log and screenshot
+remain ignored/private. Hook/session data retention and logging unchanged.
+
+Reported usage:42721 input,26368 cached input,0 cache-write input,54 output,
+0 reasoning-output tokens. These are this single run's reported counters, not
+current context occupancy, exact billing, cache health or a whole-system-free claim.
+The additional-run authorization is consumed.
+
+Native scope follows session cwd; the exec adapter provides command only, not a
+trustworthy per-call workdir. Starting in the selected project resolves the mismatch
+without broadening logging. Source0.2.0-dev.2 centralizes unchanged containment in
+src/scope.mjs, adds no-write/no-identifier scope diagnostics and producer-health
+unknown text. UI source adds bounded measured-event SVG/table, collapsible file
+status tree and literal diff lines with control/bidi escaping. No dependency,
+network, file-content access or installed-cache/trust change. New views have
+simulated DOM evidence only until a reviewed update/host acceptance.
+
+Commands actually run: targeted node --test scope/dashboard/contracts/transport;
+full npm test: **134 passed,0 failed,1 Windows-only skip(135 total)**;
+npm run validate:3 mods valid; npm run replay:all four fixtures expected.
+New tests exercise parent/sibling exclusion, nested containment, invalid paths,
+no writes/identifier output, hostile literal markup/control characters, missing
+counts, SVG/table data and UI display bounds. Existing permission/state/transport
+regressions passed. This checkpoint does not certify native Windows, new UI
+accessibility, sandbox escalation or human hold acceptance.
+
+Earlier entries below describe their stage/date; current status is above.
+
 ## Production native acceptance after restart — 2026-10-23
 
 Production0.2.0-dev.1 tools and skills loaded after the human restarted Codex.

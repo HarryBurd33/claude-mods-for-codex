@@ -1,6 +1,6 @@
 {
   "name": "claude-mods-for-codex",
-  "version": "0.2.0-dev.1",
+  "version": "0.2.0-dev.2",
   "private": true,
   "description": "Reviewable local Codex hooks, scoped activity, and read-only project tools.",
   "type": "module",

@@ -1,230 +1,129 @@
-# Current continuation — Sol High, awaiting host restart
+# Current continuation — GPT-6.1 Sol, High
 
-**Latest2026-10-23: restart completed.** Do not request another restart for this
-unchanged snapshot. Production0.2.0-dev.1 tools loaded; native fixed BEFORE→AFTER,
-DENY blocked and CONTROL unchanged verified. Dashboard opened beside current chat
-and real file/status, change metadata/patch-off and unavailable usage views checked.
-Watch updated0→1 after labeled synthetic installed-hook replay only. Native
-current-chat metadata stayed0: child-project selection and hook context differ.
-No scope was broadened. Specific OS-denied cwd check rejected normal print;
-sandbox/approval-specific checks remain pending. Earlier restart instructions
-below are superseded. Source unchanged; automated baseline129pass/1skip.
+2026-10-23. **In-stage checkpoint; full product incomplete.** No Medium switch yet:
+remaining replay/restore, hold and feature integration needs substantive reasoning.
+The user selected Sol High and authorized one bounded additional native model run;
+that run completed. No further model run is implicitly authorized.
 
-Next on SolHigh: align an explicitly selected native session/project for real
-activity/SessionStart acceptance, complete permission/hold cases, then remaining
-features. Never silently broaden metadata scope or launch a model test turn.
-Full product incomplete; Medium is not yet requested. TEST-LOG records exact
-observations and the lexical guard's documentation false positive.
+Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, docs/runtime.md and
+docs/authoring.md. Ignored root HANDOFF.md supplies private setup/log paths; never
+upload it. Historical handoffs remain in Git history; this current record wins.
 
-2026-10-23. This is an in-stage checkpoint, not a model-switch gate. Continue
-with GPT-6.1 Sol High; Medium is not yet justified for unresolved native integration.
-Starting verified commit5bc8ef7a7433189e8b5f1701d9fd4f1324f0ed2a.
+## Identity and history
 
-Read current STATUS/REQUIREMENTS/ARCHITECTURE/TEST-LOG and docs/authoring.md. Root
-HANDOFF.md is private and has exact installation/config/fixture paths. Preserve
-history and unrelated changes. All93 requirements remain incomplete as recorded.
+Repository: [HarryBurd33/claude-mods-for-codex](https://github.com/HarryBurd33/claude-mods-for-codex).
+Branch: [codex/astra-groundwork](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
+Starting verified remote/local commit:
+[3c61ca4ca75ca81eb1584381f1edd0d7e9ee87bd](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3c61ca4ca75ca81eb1584381f1edd0d7e9ee87bd).
+The checkpoint after this record is reported independently after upload/readback,
+not guessed in advance. Stages: Astra Ultra groundwork; human switch to Sol Ultra
+contracts/security/integration; human switch to Sol High authoring/native/features.
+No automatic cross-stage delegation or background continuation at switch gates.
 
-New source: src/scaffold.mjs; CLI scaffold --spec PATH --output NEW_ABSOLUTE_DIR;
-four new skills under skills/; test/scaffold.test.mjs; proofs/prepare-production.mjs.
-Templates produce disabled config/access/review only. Ruby validated frontmatter;
-Python validator unavailable (PyYAML missing). Full suite129 pass/1 Windows skip.
+Original local main6c59e98 and equivalent checkpoint branches preserved. Never
+merge private history into public branch or force-push. Terminal push lacks
+credentials: use connected GitHub tree/commit/ref upload, fetch/full-tree comparison
+and independent ls-remote. Root handoff/.local stay ignored, nested public handoff
+tracked. Current source0.2.0-dev.2 is NOT installed; versioned update/human trust
+required after code changes. Never edit installed caches or silently reuse trust.
 
-New fixture installation: claude-mods-for-codex@claude-mods-production-dev0.2.0-dev.1
-is user-profile installed, human-trusted, three trusted hooks independently in
-native inventory,94 cache files equal reviewed snapshot. Current desktop chat
-still has no new MCP dashboard tool, and production BEFORE/DENY markers both ran
-unchanged. Do not claim actual execution or panel rendering. Human asked to restart
-Codex and reopen this same chat. Next: after restart inspect tools, open actual
-mods.dashboard here (user expands inline app if necessary), observe new panel,
-run fixed marker/control tests in disposable project and verify scoped metadata.
-No new model turn needed. Do not reinstall/retrust unchanged snapshot repeatedly.
+## Host and installation
 
-Config backup/selected synthetic-project settings remain private. Production
-fixture explicitly enables project metadata scope, fixed harmless rewrite/deny,
-no patch contents. Original proof0.0.2 unchanged; hold-only proof removed. Rollback:
+macOS14.6(23G80), Node24.22.0, CLI0.163.0; desktop26.1016.62342 build21477.
+CLI0.164 researched, not installed. No native Windows host.
+Production0.2.0-dev.1 user-profile installed/trusted as
+claude-mods-for-codex@claude-mods-production-dev;94 cache files matched reviewed
+snapshot, three hooks trusted in inventory. Human restarted; MCP tools and skills
+now loaded. Do not request another restart/retrust for this unchanged snapshot.
+Original proof0.0.2 retained. Hold-only0.0.3 and its marketplace removed;
+reviewed hold source0.0.4 not installed. Private paths/backups in root handoff.
+
+Actual desktop production rewrite/deny/control and owned panel passed. Earlier
+synthetic replay established Watch0→1, not native capture. One authorized CLI exec
+run then started in the selected project: gpt-6.1-sol, High, ephemeral, read-only,
+exactly one fixed command,90s watchdog. Completed8.8s/exit0 with expected rewritten
+output. Activity1→4: three new native SessionStart/PreToolUse/PostToolUse records.
+Desktop Refresh displayed4. SessionStart notice presentation and negative sandbox
+approval not established. Usage42721 input,26368 cached input,54 output; no bill
+inference. No second run authorized. Installed configuration and logging unchanged.
+
+Scope mismatch resolved through matching native session/project context. Do not
+map shell workdir or command text to project identity or broaden logging. Current
+parent chat is outside selected child logging project; exclusions remain expected.
+Empty counts do not establish producer health.
+
+## Code and contracts
+
+- src/scope.mjs: resolveMetadataProject(sessionCwd,selectedProject?) returns canonical
+  identity/containment; checkMetadataScope returns path-free diagnostic. Same hook
+  containment, no new telemetry/storage fields. CLI scope --project --session-cwd.
+- src/server.mjs: activity adds producerHealth:unknown and captureNote.
+- ui/dashboard.html: bounded SVG event chart/table, collapsible file listing and
+  literal diff rendering, no network/dependency/read-access expansion.
+- test/scope.test.mjs / test/transport-ui.test.mjs: no-write/private containment,
+  malformed paths, hostile text/controls, missing values and rendering bounds.
+- src/dispatcher.mjs: immutable v2 abstain/notice/deny/command-only proposal;
+  denial/conflict precedence, original/revised guards. Paired allow+updatedInput
+  continues ordinary permissions; never elevated approval.
+- src/workspace.mjs: isolated bounded read-only Git, ordinary in-project .git,
+  no helpers/user config/network, conservative file exclusions, opt-in patches.
+  Working tree vsHEAD is not previous-turn history. No restore implemented.
+- src/scaffold.mjs / four original skills: disabled declarative config/access/
+  review generation; no executable/hot reload/install/automatic trust.
+
+## Observed checks
+
+npm test:134 passed,0 failed,1 Windows-only skip(135 total).
+npm run validate:3 mods valid; npm run replay:all four fixtures expected.
+Scope/dashboard/contracts/transport targeted regressions pass. Native evidence
+above is separate from changed-source/simulated DOM evidence. Keyboard/resize/
+close/reopen, changed source host acceptance, negative sandbox permissions and
+hold human accept/decline/cancel remain unverified. No dependencies added.
+
+## Rollback
+
+Only owned production fixture installed; disposable selected project/private
+settings, explicit project metadata, fixed print/deny rules, patches off. No
+installed config/cache/trust/retention/scope change this milestone. Removal:
 
 ```sh
 codex plugin remove claude-mods-for-codex@claude-mods-production-dev --json
 codex plugin marketplace remove claude-mods-production-dev --json
 ```
 
-Stop affected clients before optional data cleanup; do not overwrite unrelated
-config from backup. Installed fixture snapshot is immutable; later source/doc
-changes are not automatically installed. Version/review/retrust changed code.
-
-Resume: “Continue on GPT-6.1 Sol High after restarting Codex. Read current
-continuation records and private local handoff, verify the new production MCP
-connection and actual hook/panel behavior, then continue all93 requirements.
-Keep source/mock/native claims separate. Stop for Medium only when the remaining
-work is routine enough, after saving/uploading/verifying its handoff.”
-
-The prior Ultra→High handoff below is historical; installation state above wins.
-
----
-
-# Sol Ultra → Sol High handoff
-
-2026-10-23. Full product incomplete. **Next model GPT-6.1 Sol; effort High.**
-The human completed the Astra→Sol Ultra switch before this implementation stage.
-Reviewed contracts/transport/workspace boundaries and focused proofs now make
-remaining feature construction and empirical host checks suitable for High.
-If a new hard architecture/security issue emerges, checkpoint and request Ultra
-or Astra explicitly. Never bypass human model switches through subagents.
-
-Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md and this file under
-docs/continuation; docs/runtime.md describes current source setup/access. Refer to
-CODEX-CONTRACTS/CLAUDE-RESEARCH/STATE-PROOF for existing primary evidence. Root
-HANDOFF.md is ignored/private and has local paths/backups/logs; never upload it.
-
-## Identity and objective
-
-Repository [HarryBurd33/claude-mods-for-codex](https://github.com/HarryBurd33/claude-mods-for-codex),
-branch [codex/astra-groundwork](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
-Starting verified commit bf2960eb5b0fc74c794dcd05955c42670b603163.
-Verified source checkpoint: [c6e4656beb39d8318701d3191cd84c8c06ea1a8c](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c6e4656beb39d8318701d3191cd84c8c06ea1a8c).
-Local HEAD was aligned to that remote commit after a full tree match and
-independent ls-remote readback. Tree4c12b4d99dadc25d2fd4536f879e7d6232af653b
-matches original local30904bc00ed3e7f5dfd90a7dd67265eaf3c18ef4, preserved on
-codex/sol-ultra-local-checkpoint. The final documentation-only handoff-record
-commit is independently reported in the switch message/private record.
-Original user local main6c59e98 and original Astra checkpoint branch preserved.
-No force push or private local-history merge. Terminal Git lacks credentials;
-use connected GitHub tree/commit/ref workflow, fetch and compare exact trees.
-
-Milestone: production0.2.0-dev.1 integrates foundations; next build the coherent
-useful collection and verify actual production host behavior. All93 ledger rows
-remain in scope. Do not call this finished because a larger test suite passes.
-
-## Implemented this stage
-
-- src/dispatcher.mjs: strict v2 union + v1 adapter; immutable inputs; denial wins;
-  replacement conflict rejection and original/revised guard evaluation.
-  assertSafeOutput(output,event) validates paired allow+updatedInput, command-only
-  difference and mandatory full before/after. No PermissionRequest approval.
-- src/mods/exact-command-rewrite.mjs: explicitly enabled exact Bash rules,
-  max200-character commands, no dynamic module/regex/security/model/prompt fields.
-- src/config.mjs, src/hook-main.mjs: metadataState default off/session scope,
-  explicit data/project boundary and native session ID; writes metadata only.
-  Structural preparation failure after valid PreToolUse explicitly denies.
-- src/workspace.mjs: describeProject, listProjectFiles, inspectProjectChanges.
-  Ordinary selected in-project Git only, sanitized temporary metadata/config,
-  read-only operations, bounded processes/output, safe paths and opt-in patches.
-- src/cli.mjs: immediate local files --project and changes --project [--include-diffs].
-  Commands execute deterministic local code; they are not native slash callbacks.
-- src/mcp-stdio.mjs: bounded input/active/output queues, concurrent response
-  handling for elicitation, cancel/EOF cleanup, no network/sampling/model API.
-- src/runtime-settings.mjs: reviewed private unlinked settings outside selected
-  project; explicit project/data/session or opted-in project scope, default no
-  patches. Native Windows private settings refuse pending ACL implementation.
-- src/server.mjs, ui/dashboard.html, .mcp.json: production owned UI/service with
-  activity/files/changes/access; bounded opt-in watch, unavailable usage data.
-  Tools accept no arbitrary paths/commands/writes. Not native-host verified yet.
-- proofs/hold.mjs/hold-server.mjs/prepare-hold.mjs: bounded exact-marker human
-  decision candidate. Known auto_review rejects; decline/cancel/failure deny;
-  accept+confirm:true abstains. Generic response is not human authentication.
-- Tests: contracts/workspace/dashboard/hold/transport-ui plus preserved baseline;
-  CI Windows adds portable contracts, with native host/storage gaps still stated.
-
-## Observed native behavior and installation
-
-Host: macOS14.6, Node24.22.0, CLI0.163.0, desktop26.1016.62342 build21477.
-CLI0.164 researched, not installed. Do not assign CLI version to desktop runtime.
-Astra proof0.0.2 remains installed/trusted; covered fixed rewrite/deny and owned
-MCP App were proved then. New production0.2.0-dev.1 is NOT installed/verified.
-
-Sol installed separate hold0.0.3 through supported marketplace/plugin commands;
-human trusted its single MCP hook. Disconnected-start marker ran unchanged;
-after MCP connection, exact marker held30s then denied timeout. Human reported
-answering the form, but accept/decline delivery and cause remain unverified.
-No extra model turn, prompt rewrite, permission weakening or app patch occurred.
-
-Hold0.0.3 and its dedicated marketplace were removed through supported CLI.
-Private config backup made before removal; only owned entries changed. Snapshot/
-evidence retained privately; fresh-host process/tool absence remains unverified.
-Reviewed source0.0.4 includes transport/UI fixes and is NOT installed. Preparing
-it currently refuses an existing snapshot destination: archive the reviewed old
-private hold marketplace first, then prepare/review/install and obtain human trust.
-Do not edit installed caches or silently retain old code trust.
-
-Rollback/removal identifiers:
-
-```sh
-codex plugin remove claude-mods-hold-proof@claude-mods-hold-dev --json
-codex plugin marketplace remove claude-mods-hold-dev --json
-codex plugin remove claude-mods-native-proof@claude-mods-dev --json
-codex plugin marketplace remove claude-mods-dev --json
-```
-
-The first pair already succeeded. The second pair applies only if removing the
-retained original proof. Stop affected clients before optional data cleanup;
-preserve unrelated config and never restore whole backups over newer settings.
-Production setup/removal uses separate identifiers in docs/setup.md/removal.md.
-
-## Results, limits and known gaps
-
-Exact commands/results are in TEST-LOG. Final local suite127 passed/one Windows
-skip; validation/replay passed. Verified87-file package (522820 unpacked bytes)
-passed fresh space-path extraction test/validate/replay and privacy boundaries.
-[CI run40011272508](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40011272508)
-was in progress at handoff-record creation; do not infer its success. Check the
-actual conclusion before any compatibility claim. This final record changes
-documentation only. Native new-dashboard rendering/watch,
-negative permission preservation, SessionStart, human hold accept/decline/cancel,
-model-routing runtime and native Windows remain unverified. No per-turn attribution
-from Git working tree; restoring is a separate explicit action, not implemented.
-Git supports no linked worktrees/external objects/alternates/SHA256/split index.
-Global ignore settings are not loaded; secret filename filters do not guarantee
-secret-free patch contents. Same-user races are not an OS sandbox.
-
-UI tool requests have bounded bridge waits; Git calls are3s each/context10s after
-bounded metadata preflight. Preflight is count bounded rather than a strict wall
-clock filesystem timeout. Timeout can report unavailable while a read-only server
-operation completes its cleanup. Visual form cancellation requires native proof.
-The original installed native proof still reports old MCP internal version0.0.1
-with package0.0.2; align only through a later reviewed update if retained.
+Preserve original proof/unrelated entries. Stop affected clients before optional
+data cleanup; never overwrite whole current config from old backup.
 
 ## Next tasks and acceptance
 
-1. Install reviewed production source in a disposable selected Git project using
-   supported compatibility/local marketplace flow; configure private settings and
-   matching hook project/session state explicitly. Human trust after code changes.
-   Verify cache, real events, exact replacement permission-negative case, scoped
-   activity watch, files/changes rendering, close/reopen/resizing/accessibility.
-   Do not use old proof H results as new production H evidence.
-2. Retest hold source0.0.4 only after reviewed update. Capture human accept,
-   decline/cancel, timeout/disconnect and host-review behavior. Investigate form
-   answer/timeout discrepancy without private app internals. If blocked, record
-   exact blocker and provide explanation+deny+explicit retry approximation.
-3. Build useful coherent authoring/debugging/verification/review skills and safe
-   scaffolding flow: describe→components/permissions→validate/replay→review→
-   supported installation/update/human trust. No auto-trust/hot reload. Each skill
-   declares triggers, permissions, model usage and limits; not instant callbacks.
-4. Complete richer bounded UI (tables/chart/text/code/diff; Mermaid only after safe
-   local renderer/license review), lexical blast-radius explanations, selected
-   checkpoint/turn export replay, explicit restore workflow, passive usage/cache
-   adapters where real data exists, and supported theme flow. No invented billing,
-   cache health or keepalive. Native styling gaps remain distinct from owned UI.
-5. Windows ACL/settings/state design plus real native installation/process checks;
-   CI protocol success is not full compatibility. Test production updates,
-   disable/removal/restoration and public clean clone/package at final revision.
-   Reconcile all93 requirements and final independent review before release.
+1. Selected-checkpoint read-only replay with explicit attribution; separate restore
+   plan/action with fresh diff/conflict check and preservation of unselected work.
+2. Original conservative blast-radius explanation/deny-retry alternative. Hold stays
+   unverified proof unless actual human response/provenance works; missing MCP hook
+   can fail open, so never present as production enforcement.
+3. Passive usage/cache from explicit selected structured exports only: verified
+   fields/missing values/ratios/attribution, no private-session search, context/bill
+   invention or keepalive. Rich code/Mermaid needs bounded local renderer/license
+   review; supported native themes remain separate from owned CSS.
+4. Reviewed versioned source update: backup/inspect only owned config delta,
+   supported install/update and human changed-hook trust. Verify actual new UI,
+   permissions/lifecycle/accessibility and full skill authoring workflow. No extra
+   model run without separately visible bounded authorization.
+5. Windows ACL design/real host validation; Linux/WSL distinct from CI. Test update/
+   disable/remove/restore, final public clone/package; reconcile all93 rows/review.
 
-No extra paid/API run is authorized merely by a test helper. Any additional model
-run must be visible, bounded and authorized; do not change the user's selected
-model. A major separate app-server client needs user agreement. The current
-immediate user action is switching to Sol High; no trust review is pending now.
+No protected human action pending. Once remaining work fits Medium, save exact
+handoff, commit/upload/independently verify, request GPT-6.1 Sol Medium and STOP.
+Do not bypass with a subagent or continue in background.
 
-## Copy-and-paste resume
+## Resume instruction
 
-> Continue Claude Mods for Codex using GPT-6.1 Sol, High, on codex/astra-groundwork.
-> Read docs/continuation/STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md,
-> HANDOFF.md and docs/runtime.md, plus ignored local HANDOFF.md for machine setup.
-> Preserve private history and user changes. Integrate and verify production
-> 0.2.0-dev.1 in the actual supported host, follow prioritized tasks and all93
-> requirements, and keep source/mock/native evidence distinct. Finish the useful
-> authoring/skills/UI/examples collection without calling partial work complete.
-> Preserve normal permissions, explicit sensitive-data opt-ins and human trust.
-> Upload meaningful safe checkpoints and verify remote contents. When Medium is
-> sufficient, save a precise handoff, commit/upload/verify, then stop for me to
-> switch; request stronger effort if a new hard security/architecture problem
-> appears. Do not delegate or continue in the background past model-switch gates.
+> Continue Claude Mods for Codex on codex/astra-groundwork using GPT-6.1 Sol, High.
+> Read docs/continuation/{STATUS,REQUIREMENTS,ARCHITECTURE,TEST-LOG,HANDOFF}.md,
+> docs/runtime.md and ignored root HANDOFF.md. Preserve work/private history.
+> Scope mismatch is resolved by matching the native session directory; never
+> broaden logging or use shell workdir for chat attribution. Installed0.2.0-dev.1
+> has native CLI/desktop evidence; source0.2.0-dev.2 is not installed. Continue all93
+> requirements/priorities, keep automated/replay/native claims separate, preserve
+> permissions/human trust, and do not reuse the consumed additional-run permission.
+> Save/verify uploads. Stop for a human switch to Medium once it is sufficient.

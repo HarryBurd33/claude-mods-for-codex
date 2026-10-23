@@ -1,4 +1,5 @@
 import { scaffoldMod } from "./scaffold.mjs";
+import { checkMetadataScope } from "./scope.mjs";
 import { readdir } from "node:fs/promises";
 import { basename, dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -20,6 +21,7 @@ Usage:
   codex-mods validate [--config PATH]
   codex-mods replay [--config PATH] (--event PATH | --fixtures DIRECTORY | --stdin)
   codex-mods scaffold --spec PATH --output NEW_ABSOLUTE_DIRECTORY
+  codex-mods scope --project PATH --session-cwd PATH
   codex-mods files --project PATH
   codex-mods changes --project PATH [--include-diffs]
   codex-mods report --data-dir PATH
@@ -29,6 +31,7 @@ Commands:
   validate  Check the local mod configuration without running a hook.
   replay    Replay saved JSON envelopes offline and print restricted responses.
   scaffold  Generate disabled declarative mod configuration and access review.
+  scope     Check supplied native session/project containment without logging.
   files     List bounded non-secret project filenames and Git status, read-only.
   changes   Inspect Git working-tree changes against HEAD, read-only.
             Patch text requires --include-diffs and may contain sensitive data.
@@ -107,6 +110,12 @@ export async function runCli(argv, streams = process) {
     if (!options.spec || !options.output) throw new Error("scaffold requires --spec and --output");
     const spec = parseJsonObject(await readBoundedFile(options.spec, 16384), "scaffold spec");
     streams.stdout.write(`${JSON.stringify(await scaffoldMod(spec, options.output), null, 2)}\n`);
+    return;
+  }
+  if (command === "scope") {
+    const options = parseOptions(args, new Set(["--project", "--session-cwd"]));
+    if (!options.project || !options.session_cwd) throw new Error("scope requires --project and --session-cwd");
+    streams.stdout.write(`${JSON.stringify(await checkMetadataScope(options.project, options.session_cwd), null, 2)}\n`);
     return;
   }
   if (command === "files" || command === "changes") {

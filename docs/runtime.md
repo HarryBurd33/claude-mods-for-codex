@@ -7,9 +7,11 @@ does not establish matching hook scope. Do not automatically broaden logging to
 make counts increase. A synthetic matching replay verified the native Watch
 separately; empty retained counts do not prove the producer is connected/healthy.
 
-Version0.2.0-dev.1 is an incomplete development checkpoint. New production
-contracts/service/UI are tested offline; only the separate Astra proof has native
-MCP App rendering evidence. Do not attribute its results to this new dashboard.
+Source0.2.0-dev.2 is an incomplete development checkpoint and is not installed.
+The installed0.2.0-dev.1 production dashboard has native rendering/interaction
+evidence; a bounded authorized CLI run in its selected project added three real
+lifecycle/tool events visible through desktop Refresh. This resolves scope without
+broader logging. New source chart/tree/diff views still need reviewed host acceptance.
 
 ## Read-only commands
 
@@ -19,6 +21,7 @@ From a reviewed package, use the absolute CLI path or run from its verified root
 node bin/codex-mods.mjs files --project /absolute/selected/project
 node bin/codex-mods.mjs changes --project /absolute/selected/project
 node bin/codex-mods.mjs changes --project /absolute/selected/project --include-diffs
+node bin/codex-mods.mjs scope --project /absolute/selected/project --session-cwd /absolute/native/session/directory
 ```
 
 These are immediate local CLI callbacks and make no model calls. They are not
@@ -26,6 +29,14 @@ native slash-command callbacks. Changes default to filenames/status only;
 `--include-diffs` explicitly requests patch content, which may contain secrets
 even when sensitive filenames are excluded. Keep that output private unless
 reviewed for publication. Nothing restores files or executes project commands.
+
+The `scope` command checks only the two supplied directories. It returns containment
+and a path-free explanation, makes no writes and does not attest installation,
+trust or current producer health. Use the native session directory, not a proposed
+tool workdir. Start a CLI session with `codex -C /absolute/selected/project` or open
+that project in the intended host. Never automatically expand selection to a parent
+directory to make records appear. Empty counts and retained records do not prove
+that hooks are connected now. This diagnostic does not launch a model run.
 
 Git provenance is working tree against HEAD, including possible concurrent human
 edits. It cannot establish changes from exactly the previous assistant turn.
@@ -104,9 +115,16 @@ prompts/models/permission fields or emit PermissionRequest approval.
 The new owned dashboard has Activity, Project files, Changes and Access views.
 It uses local tools only, with escaped text. Watch is explicit, bounded to30s,
 and reads only the configured scope. Each observation request waits at most2s.
+Source0.2.0-dev.2 includes an SVG event-distribution chart with the same measured
+values in an accessible table, a native-HTML collapsible file tree and bounded
+literal diff lines. The tree reads no file contents. Diff signs carry meaning
+independently of colors; control/bidirectional characters are visible escapes.
+Diff display stops at64Ki characters or1,000 lines; listing display at500 paths/
+16 segments. These are display bounds in addition to backend limits.
 Cancellation, close and navigation must clean up pending work; tests exercise the
-bridge lifecycle with synthetic peers. Actual new-dashboard rendering,
-keyboard/screen-reader behavior, resizing and reopening remain native acceptance
-work. No button approves a native tool call. No network resources are loaded.
+bridge lifecycle with synthetic peers. Installed0.2.0-dev.1 rendering/interactions
+were observed; new0.2.0-dev.2 views, keyboard/screen-reader behavior, resizing and
+reopening remain native acceptance work. No button approves a native tool call.
+No network resources are loaded.
 Token/context/cache/billing information is unavailable from the hook feed; the UI
 says so and sends no keepalive/model calls. Skills still consume model usage.

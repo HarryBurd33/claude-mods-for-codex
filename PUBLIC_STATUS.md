@@ -1,21 +1,28 @@
 # Project status
 
-**2026-10-23: incomplete full-product development checkpoint0.2.0-dev.1** on
-codex/astra-groundwork. Public main remains the earlier experimental baseline.
-This is neither a finished release nor a plugin directory submission.
+**2026-10-23: incomplete full-product development source0.2.0-dev.2** on
+codex/astra-groundwork. Public main remains the historical experimental baseline.
+This is not a finished release or directory submission.
 
-Sol Ultra added production contracts for opt-in exact command replacement,
-scoped metadata, a local MCP dashboard service, and bounded read-only project/
-Git change views. Automated checks and independent reviews are recorded in the
-[verification log](docs/continuation/TEST-LOG.md). Native acceptance of this new
-production source remains incomplete. Astra's separate native proof established
-covered rewrite/deny and owned UI interaction; those results are not transferred
-to the new dashboard. A separate native hold probe timed out/denied even though
-the user reported answering its form; it was removed after testing.
+Installed production0.2.0-dev.1 has actual macOS desktop rewrite/deny/control and
+owned-panel evidence. A single authorized read-only CLI0.163.0 run in the selected
+project also verified native SessionStart/PreToolUse/PostToolUse metadata visible
+through desktop Refresh. Logging follows the native session directory; setting a
+tool workdir does not select project logging. No scope was expanded.
 
-See [current status](docs/continuation/STATUS.md), the
-[93-row ledger](docs/continuation/REQUIREMENTS.md),
-[runtime setup and access](docs/runtime.md), and
-[model-switch handoff](docs/continuation/HANDOFF.md).
-Skills/authoring, rich rendering, usage/theme flows and native Windows remain
-incomplete or unverified as recorded there. The full request is not complete.
+Source0.2.0-dev.2 adds a no-write scope diagnostic, measured-event SVG chart/table,
+collapsible file tree and bounded literal diff display. These source changes are
+not installed; simulated DOM tests are separate from host acceptance. Full local
+suite134 passed/one Windows-only skip; validation/replay passed.
+
+All93 requirements remain scoped. Replay/restore, richer rendering, sourced usage/
+cache, theme and complete authoring/lifecycle flows are still partial or absent.
+Negative sandbox approvals, native hold acceptance, full UI accessibility and
+native Windows remain unverified. Hold-only probe was removed after timeout; a
+reported form answer is not evidence of acceptance. No paid keepalive is added.
+
+See [current status](docs/continuation/STATUS.md),
+[requirements ledger](docs/continuation/REQUIREMENTS.md),
+[test log](docs/continuation/TEST-LOG.md),
+[runtime access](docs/runtime.md) and [handoff](docs/continuation/HANDOFF.md).
+Current selected setting remains GPT-6.1 Sol High; no Medium switch yet.

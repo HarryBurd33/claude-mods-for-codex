@@ -17,12 +17,11 @@ Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.
 
 ## Stable boundaries
 
-The current production dispatcher remains deny-only until the integrated v2
-contract is reviewed. `proofs/rewrite.mjs` is deliberately separate, matching
-only fixed harmless commands. Do not merely remove output validation to enable
-arbitrary hook fields.
+The production dispatcher implements the reviewed v2 contract below. The separate
+proof remains fixed-marker evidence, not arbitrary production-field permission.
+Do not remove output validation to enable additional hook fields.
 
-Proposed v2 internal result is a discriminated union: abstain, visible notice,
+The implemented v2 internal result is a discriminated union: abstain, visible notice,
 denial, or a typed tool-input proposal. Only the adapter emits host wire fields.
 A denial always wins. Multiple distinct proposals are an error/denial, not
 last-writer-wins. A transformation is opt-in per exact tool and rule, size bounded,
@@ -70,6 +69,14 @@ no-follow/link checks, serialized writes and explicit pruning are current limits
 The process-user boundary is not protection from hostile same-user code.
 Windows storage refuses operation until an ACL-backed adapter is reviewed.
 
+Native scope is the session directory supplied by Codex. A tool workdir is not a
+trustworthy per-call identity in the covered hook adapter (it supplies command
+only). src/scope.mjs centralizes canonical containment and the path-free no-write
+CLI diagnostic. Never parse commands for project identity, map parent-chat events
+into a selected child, expand logging automatically or scan private session stores.
+A matching selected-project CLI run established native three-event capture;
+producer health still remains unknown from retained counts alone.
+
 A later read-only changes lane must be separate and explicitly opted in because
 patches may contain secrets. Prefer user-selected Git checkpoints or exported
 structured events. Never discover private chat/session files. Label provenance:
@@ -116,8 +123,9 @@ uses supported installation/trust; it never automatically trusts generated code.
 
 Use compatibility-only `.codex-plugin/plugin.json` with no root `plugin.json`.
 The released 0.163/0.164 portable loader skips hooks; adding a compatibility
-overlay beside it does not fix discovery. Production source is now migrated to
-0.1.1-dev.1; only the separate proof has live installation/execution evidence.
+overlay beside it does not fix discovery. Production source0.2.0-dev.2 is not
+installed; production snapshot0.2.0-dev.1 has native installation/execution/UI
+evidence on the recorded macOS host. Keep version-specific acceptance separate.
 Legacy MCP uses `.mcp.json`, relative `cwd: "."` and script arguments; it does
 not inject portable plugin variables. Pass a shared data location explicitly
 through reviewed configuration to both hook and server. Never assume a local
@@ -132,9 +140,10 @@ registration/cache, marketplace registration and separately retained data.
 
 ## Main implementation milestones after proof review
 
-1. Native proof gates partly passed: proof install/trust, covered tool events,
-   fixed rewrite/deny and MCP App interaction verified. SessionStart, negative
-   permission-boundary checks and synchronous MCP elicitation remain pending.
+1. Native gates partly passed: production install/trust, covered tool events,
+   fixed rewrite/deny and MCP App interaction verified. Selected-project standalone
+   CLI SessionStart/tool metadata reached desktop Refresh. Visible start notice,
+   negative sandbox approvals and synchronous MCP human elicitation remain pending.
 2. Integrate event projection/state/MCP status and lifecycle controls with versioned
    contracts; add covered event types and validate timeout/error behavior.
 3. Build useful bounded explorer, changes inspector, risk explanation and passive
@@ -174,8 +183,9 @@ Patch content is separately opted in. Working-tree provenance is explicit and
 must not be relabeled previous-turn replay. Unsupported Git layouts abstain.
 
 The UI owns its four views and escapes text; optional observation is bounded to30s
-with request cancellation and teardown. It remains unverified in the actual host.
-Synthetic bridge/stdio tests are separate from Astra's different native panel.
+with request cancellation and teardown. Installed0.2.0-dev.1 views were observed
+in the actual host. Source0.2.0-dev.2 chart/tree/diff additions have simulated DOM
+evidence only. Bridge/stdio tests stay distinct from either native panel.
 Token/context/cache/billing data remain unavailable, never fabricated.
 
 The synchronous MCP-hook probe now has an implemented decision helper/transport.
@@ -195,3 +205,10 @@ a template access declaration. No generated code, install, settings mutation or
 trust. Skills are model-mediated and declare scope/usage/limits. Production
 fixture setup remains separate from public defaults and requires actual host
 delivery after installation/trust; CLI inventory alone is insufficient.
+
+Source0.2.0-dev.2 rendering keeps all data local and inert: SVG uses fixed tags and
+numeric attributes, event values are nonnegative safe integers and a table remains
+the text alternative. File grouping uses Map rather than object prototype keys,
+500 paths/16 path segments at display level. Diff rendering uses textContent,
+visible control/bidi escapes and64Ki character/1,000-line bounds. Color supplements
+literal signs, not vice versa. No new dependency, remote asset or filesystem grant.

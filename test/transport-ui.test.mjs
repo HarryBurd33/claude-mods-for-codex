@@ -111,7 +111,7 @@ async function dashboard() {
   const buttons = ['activity', 'files', 'changes', 'access'].map(view => { const element = new Element('button'); element.dataset.view = view; return element; });
   const parent = { postMessage: message => messages.push(message) };
   runInNewContext(script, {
-    parent, document: { querySelector: selector => elements.get(selector), querySelectorAll: selector => selector === 'nav button' ? buttons : ['activity', 'files', 'changes', 'access'].map(id => elements.get('#' + id)), createElement: tag => new Element(tag), documentElement: { style: { setProperty() {} } } },
+    parent, document: { querySelector: selector => elements.get(selector), querySelectorAll: selector => selector === 'nav button' ? buttons : ['activity', 'files', 'changes', 'access'].map(id => elements.get('#' + id)), createElement: tag => new Element(tag), createElementNS: (_namespace, tag) => new Element(tag), documentElement: { style: { setProperty() {} } } },
     addEventListener: (name, callback) => listeners.set(name, callback), Date: { now: () => now },
     setTimeout: (callback, delay) => { const id = ++nextTimer; timers.set(id, { callback, delay }); return id; }, clearTimeout: id => timers.delete(id),
   }, { timeout: 1000 });
@@ -123,6 +123,41 @@ async function dashboard() {
   return { messages, timers, elements, buttons, receive, reply, latestCall, fire };
 }
 const revision = 'a'.repeat(64);
+function descendants(node){return [node,...node.children.flatMap(descendants)];}
+
+test('owned chart shows measured counts with an equivalent table and never fabricates missing values (simulated DOM)',async()=>{
+  const p=await dashboard();p.reply(p.latestCall(),{revision,records:4,events:{SessionStart:1,PreToolUse:2,PostToolUse:1,invalid:-5,unknown:null}});await tick();
+  const nodes=descendants(p.elements.get('#activity-result')),svg=nodes.find(n=>n.tagName==='svg');
+  assert.equal(svg.attributes.role,'img');assert.match(svg.attributes['aria-label'],/table/);
+  assert.deepEqual(nodes.filter(n=>n.tagName==='rect').map(n=>n.attributes.width),['150','300','150']);
+  const refresh=p.elements.get('#refresh').onclick();p.reply(p.latestCall(),{revision});await refresh;
+  assert.match(p.elements.get('#activity-result').textContent,/Unavailable/);
+  assert.equal(descendants(p.elements.get('#activity-result')).some(n=>n.tagName==='svg'),false);
+  p.receive({id:100,method:'ui/resource-teardown'});
+});
+
+test('file tree bounds nesting, exposes literal hostile names and Git state without reading file content (simulated DOM)',async()=>{
+  const p=await dashboard();p.reply(p.latestCall(),{revision,records:0});await tick();
+  p.buttons.find(b=>b.dataset.view==='files').onclick();await tick();
+  p.reply(p.latestCall(),{files:[{path:'src/<script>\u202e.js',status:' M',bytes:20},{path:'__proto__/safe.txt',status:'??',bytes:0},{path:'../escape'},{path:'deep/'.repeat(18)+'file'}]});await tick();
+  const root=p.elements.get('#files-result'),nodes=descendants(root);
+  assert.match(root.textContent,/<script>\\u\{202e\}\.js/);assert.match(root.textContent,/Git: M · 20 bytes/);assert.match(root.textContent,/__proto__/);assert.match(root.textContent,/omitted/);
+  assert.equal(nodes.some(n=>n.tagName==='script'),false);assert.equal(nodes.filter(n=>n.tagName==='details').length,2);
+  assert.equal(p.latestCall().params.name,'mods.files');assert.deepEqual(Object.keys(p.latestCall().params.arguments),[]);
+  p.receive({id:100,method:'ui/resource-teardown'});
+});
+
+test('patch rendering is read-only literal text, retains sign semantics and caps hostile content (simulated DOM)',async()=>{
+  const p=await dashboard();p.reply(p.latestCall(),{revision,records:0});await tick();
+  p.buttons.find(b=>b.dataset.view==='changes').onclick();await tick();
+  p.reply(p.latestCall(),{files:[{path:'fixture.txt',status:' M',diff:'@@ -1 +1 @@\n- old\n+ <img src=x onerror=alert(1)>\u001b\u202e\n'+('+line\n'.repeat(1100))}]});await tick();
+  const root=p.elements.get('#changes-result'),nodes=descendants(root);
+  assert.match(root.textContent,/<img src=x onerror=alert\(1\)>\\u\{1b\}\\u\{202e\}/);
+  assert.match(root.textContent,/truncated/);assert.ok(nodes.some(n=>n.attributes.class==='diff-remove'));
+  assert.equal(nodes.filter(n=>n.tagName==='span').length,1000);assert.equal(nodes.some(n=>n.tagName==='img'),false);
+  assert.match(nodes.find(n=>n.tagName==='pre').attributes['aria-label'],/plus is addition/);
+  p.receive({id:100,method:'ui/resource-teardown'});
+});
 
 test('dashboard teardown handles an ID collision with a pending UI call and clears all timers (simulated DOM)', async () => {
   const p = await dashboard(), pending = p.latestCall();
