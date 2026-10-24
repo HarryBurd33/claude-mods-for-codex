@@ -1,5 +1,11 @@
 # Requirements ledger
 
+Current High source11 candidate2026-10-23: unintegrated private scratch-content
+proof under review/test; source10 stays installed/human-trusted. Creation-time
+private delete-on-close files, bounded slots/bytes and exact-handle cleanup;
+no recursive adoption, project/Git copies or gate activation. Native Windows
+host unavailable here; CI result pending. See DEV11-REVIEW and TEST-LOG.
+
 ## Native source10 focus verified — 2026-10-23
 
 After restart, real panel Render/focus outline (3px/3px offset) passed. Human

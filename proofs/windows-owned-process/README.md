@@ -1,5 +1,21 @@
 # Windows owned-process research candidate
 
+## Source11 content extension — not installed or integrated
+
+ScratchContent.cs adds a bounded flat synthetic-content proof using private
+CREATE_NEW + DELETE_ON_CLOSE from creation and retained noninherited handles.
+It tests normal cleanup, existing/unexpected entry refusal, count/byte bounds,
+external owner death and owned descendant reader lifetime. No recursive recovery,
+project/index/ref copying or Git launch. Compatible readers need read/write/delete
+sharing; this is not established for installed Git. Empty private roots can remain.
+Source11 is uninstalled; source10 remains human-trusted on macOS. Production compiles
+only PrivateStorage.cs; Windows settings/project/restore gates stay closed.
+See [source11 review](../../docs/continuation/DEV11-REVIEW.md) for contract, sources,
+limits and exact remaining gates; actual Windows results belong in TEST-LOG.
+
+Earlier source9-only empty-scratch descriptions below are historical; this proof
+extends synthetic content handling, not production access or native compatibility.
+
 Original MIT proof, 2026-10-23. **Not loaded by any production hook, tool, CLI or
 server.** No new public execution operation, selected project access, installation,
 configuration/trust edit or model/API call. Source version dev9 tightens directory sharing without activating project paths; installed

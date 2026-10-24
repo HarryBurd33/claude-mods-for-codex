@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
-import { mkdtemp, readFile, rm, rmdir, access, realpath, mkdir, copyFile, symlink, link } from 'node:fs/promises';
+import { mkdtemp, readFile, writeFile, readdir, rm, rmdir, access, realpath, mkdir, copyFile, symlink, link } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, win32 } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -157,4 +157,104 @@ test('Windows directory pins tolerate a short sharing lease and refuse a held le
   assert.equal(await run(exe,['run','transient-pin',data]),'pinned');
   assert.equal(await run(exe,['run','held-pin',data]),'refused');
   await windowsStorageRequest('prepare-directory',data);
+});
+
+// Private synthetic paths stay inside this disposable fixture; no project/index/
+// refs/credentials are copied. The helper never scans for abandoned directories.
+async function scratchHolder(mode, marker) {
+  const {data,exe}=await setup();
+  const child=spawn(exe,['run',mode,data,...(marker?[marker]:[])],{windowsHide:true,stdio:['pipe','pipe','pipe']});
+  let text='',error='';
+  const closed=new Promise((resolve,reject)=>{child.once('close',resolve);child.once('error',reject);});
+  const first=new Promise((resolve,reject)=>{
+    const timer=setTimeout(()=>{child.kill();reject(new Error('Synthetic content readiness deadline'));},5000);
+    child.stdout.setEncoding('utf8');child.stdout.on('data',value=>{
+      text+=value;
+      if(text.length>8192){child.kill();reject(new Error('Synthetic content output bound'));}
+      if(text.includes('\n')){clearTimeout(timer);resolve(text.split(/\r?\n/)[0]);}
+    });
+    child.stderr.on('data',value=>{error+=value;if(error.length>8192)child.kill();});
+    child.once('error',e=>{clearTimeout(timer);reject(e);});
+    child.once('close',()=>{clearTimeout(timer);if(!text.includes('\n'))reject(new Error('Synthetic content closed before readiness'));});
+  });
+  try {
+    const paths=(await first).split('|').map(value=>Buffer.from(value,'base64').toString());
+    assert.ok(paths[0].startsWith(data+win32.sep+'owned-'));
+    if(paths.length===2)assert.equal(paths[1],join(paths[0],'slot-0000.bin'));
+    return {child,closed,paths,output:()=>text};
+  } catch(e) {child.kill();await closed;throw e;}
+}
+async function finishHolder(holder, kill=false) {
+  if(kill)holder.child.kill();else holder.child.stdin.end('\n');
+  const code=await holder.closed;
+  if(!kill)assert.equal(code,0);
+}
+async function absent(path) {
+  for(let n=0;n<100;n++) {
+    try {await access(path);}catch(e){assert.equal(e.code,'ENOENT');return;}
+    await new Promise(resolve=>setTimeout(resolve,10));
+  }
+  assert.fail('Owned synthetic content survived cleanup');
+}
+test('Windows scratch content is private, readable by a compatible process, write-excluded and removed on close',native,async()=>{
+  const {exe,data}=await setup(),h=await scratchHolder('scratch-content');
+  const [root,file]=h.paths;
+  try {
+    assert.equal(result(await run(exe,['run','scratch-read',data,file])).out,'verified');
+    await assert.rejects(writeFile(file,'must-not-write'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+    assert.equal(result(await run(exe,['run','scratch-read',data,file])).out,'verified');
+    await finishHolder(h);assert.match(h.output(),/removed/);await absent(root);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows scratch content refuses count and byte bounds, retains unexpected entries and never adopts an existing slot',native,async()=>{
+  const {exe,data}=await setup();assert.equal(await run(exe,['run','scratch-bounds',data]),'bounded');
+  const h=await scratchHolder('scratch-collision'),root=h.paths[0],collision=join(root,'slot-0000.bin');
+  try {
+    await writeFile(collision,'unowned-synthetic');
+    await finishHolder(h);assert.match(h.output(),/refused-slot/);assert.match(h.output(),/retained-root/);
+    assert.equal(await readFile(collision,'utf8'),'unowned-synthetic');
+    assert.deepEqual(await readdir(root),['slot-0000.bin']);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+  const outside=join(data,'foreign synthetic target');await mkdir(outside);await writeFile(join(outside,'keep'),'unchanged');
+  const second=await scratchHolder('scratch-content'),[secondRoot,owned]=second.paths;
+  try {
+    await symlink(outside,join(secondRoot,'unexpected junction'),'junction');
+    await finishHolder(second);assert.match(second.output(),/retained-root/);await absent(owned);
+    assert.deepEqual(await readdir(secondRoot),['unexpected junction']);
+    assert.equal(await readFile(join(outside,'keep'),'utf8'),'unchanged');
+  } finally {if(second.child.exitCode===null){second.child.kill();await second.closed;}}
+});
+test('Windows scratch content is deleted after external owner death without recursive recovery',native,async()=>{
+  const h=await scratchHolder('scratch-content'),[root,file]=h.paths;
+  try {
+    await finishHolder(h,true);await absent(file);
+    assert.deepEqual(await readdir(root),[],'only an empty private root may remain');
+    await windowsStorageRequest('prepare-directory',root);
+    await rmdir(root); // Explicit test-fixture cleanup, not product recovery.
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows job death closes descendant scratch readers before owned content disappears',native,async()=>{
+  const {data}=await setup(),marker=join(data,'scratch-job');
+  const h=await scratchHolder('scratch-job',marker),[root,file]=h.paths;
+  try {
+    let ready=false;
+    for(let n=0;n<300;n++) {
+      try {await access(marker+'.reader');ready=true;break;}catch{}
+      await new Promise(resolve=>setTimeout(resolve,10));
+    }
+    assert.ok(ready,'The descendant must hold a real compatible file handle');
+    await finishHolder(h,true);await dead(marker+'.root');await dead(marker+'.reader');await absent(file);
+    assert.deepEqual(await readdir(root),[]);await rmdir(root);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows successful root exit also removes scratch content held by an owned descendant',native,async()=>{
+  const {data}=await setup(),marker=join(data,'scratch-job-exit');
+  const h=await scratchHolder('scratch-job-exit',marker),[root,file]=h.paths;
+  try {
+    assert.equal(await h.closed,0);await dead(marker+'.root');await dead(marker+'.reader');await absent(file);
+    // Job termination is asynchronous. Empty-only removal may have refused
+    // before the reader closed; either absence or an empty private root is safe.
+    try {assert.deepEqual(await readdir(root),[]);await rmdir(root);}catch(e){if(e.code!=='ENOENT')throw e;}
+    assert.match(h.output(),/removed|retained-root/);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
 });

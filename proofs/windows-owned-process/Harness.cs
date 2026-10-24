@@ -29,6 +29,21 @@ public static class Harness {
    case "args": for(int i=2;i<a.Length;i++)Console.WriteLine(B64(a[i]));return 0;
    case "env": Console.Write(B64(Environment.GetEnvironmentVariable("MODS_SYNTHETIC_ALLOWED")??""));Console.Write("|");Console.Write(B64(Environment.GetEnvironmentVariable("MODS_SYNTHETIC_FORBIDDEN")??""));return 0;
    case "stdin": Console.Write(Console.In.Read()==-1?"eof":"unexpected-input");return 0;
+   case "scratch-read": Console.Write(CodexMods.PrivateStorage.ScratchReadProof(a[2])?"verified":"mismatch");return 0;
+   case "scratch-reader":
+    // Keep a compatible read handle open in an owned descendant. No raw content
+    // is printed; the parent test checks actual object cleanup after job death.
+    using(var file=new FileStream(a[2],FileMode.Open,FileAccess.Read,FileShare.ReadWrite|FileShare.Delete)) {
+     File.WriteAllText(a[3]+".reader",Process.GetCurrentProcess().Id.ToString());Thread.Sleep(60000);
+    }return 0;
+   case "scratch-fork": case "scratch-fork-exit":
+    using(var reader=Process.Start(new ProcessStartInfo(Exe,"child scratch-reader \""+a[2]+"\" \""+a[3]+"\""){UseShellExecute=false,CreateNoWindow=true})) { }
+    File.WriteAllText(a[3]+".root",Process.GetCurrentProcess().Id.ToString());
+    if(a[1]=="scratch-fork-exit") {
+     for(int i=0;i<200 && !File.Exists(a[3]+".reader");i++)Thread.Sleep(5);
+     if(!File.Exists(a[3]+".reader"))throw new IOException();return 0;
+    }
+    Thread.Sleep(60000);return 0;
    // Numeric handles can be reused by the child's CLR. The parent checks the
    // original event object, never infers inheritance from this return value.
    case "handle": SetEvent(new IntPtr(Int64.Parse(a[2])));Console.Write("attempted");return 0;
@@ -60,6 +75,45 @@ public static class Harness {
      Console.WriteLine(B64(scratch.Path));Console.Out.Flush();Console.In.ReadLine();
     }
     Console.WriteLine("removed");return 0;
+   }
+   if(mode=="scratch-bounds") {
+    var scratch=new CodexMods.PrivateStorage.ScratchContentProof(directory);
+    string path=scratch.Path;
+    using(scratch) {
+     int refused=0;
+     try {scratch.Add(null);}catch(IOException){refused++;}
+     try {scratch.Add(new byte[262145]);}catch(IOException){refused++;}
+     for(int i=0;i<4;i++)scratch.Add(new byte[262144]);
+     try {scratch.Add(new byte[1]);}catch(IOException){refused++;}
+     for(int i=4;i<16;i++)scratch.Add(new byte[0]);
+     try {scratch.Add(new byte[0]);}catch(IOException){refused++;}
+     if(refused!=4 || System.IO.Directory.GetFiles(path).Length!=16)throw new IOException();
+    }
+    scratch.Dispose(); // idempotent; Add must refuse after disposal.
+    try {scratch.Add(new byte[1]);throw new InvalidOperationException();}catch(IOException){}
+    if(System.IO.Directory.Exists(path))throw new IOException();
+    Console.WriteLine("bounded");return 0;
+   }
+   if(mode=="scratch-content" || mode=="scratch-collision" || mode=="scratch-job" || mode=="scratch-job-exit") {
+    var scratch=new CodexMods.PrivateStorage.ScratchContentProof(directory);
+    try {
+     if(mode=="scratch-collision") {
+      Console.WriteLine(B64(scratch.Path));Console.Out.Flush();Console.In.ReadLine();
+      try {scratch.Add(Encoding.UTF8.GetBytes("synthetic-private-content"));Console.WriteLine("unexpected-adoption");}
+      catch(IOException){Console.WriteLine("refused-slot");}
+     } else {
+      string file=scratch.Add(Encoding.UTF8.GetBytes("synthetic-private-content"));
+      Console.WriteLine(B64(scratch.Path)+"|"+B64(file));Console.Out.Flush();
+      if(mode=="scratch-job" || mode=="scratch-job-exit") {
+       var env=new Dictionary<string,string>();env.Add("SystemRoot",Environment.GetEnvironmentVariable("SystemRoot"));
+       var result=OwnedProcess.Run(Exe,new string[]{"child",mode=="scratch-job"?"scratch-fork":"scratch-fork-exit",file,a[3]},scratch.Path,env,15000,1024,CancellationToken.None);
+       if(result.ExitCode!=0)throw new IOException();
+      } else Console.In.ReadLine();
+     }
+    } finally {
+     try {scratch.Dispose();Console.WriteLine("removed");}catch(IOException){Console.WriteLine("retained-root");}
+    }
+    return 0;
    }
    var args=new List<string>();args.Add("child");args.Add(mode=="cancel"||mode=="outer-kill"?"fork":mode);
    for(int i=3;i<a.Length;i++)args.Add(a[i]);

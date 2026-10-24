@@ -1,5 +1,10 @@
 # Project status — source10 restart checkpoint — 2026-10-23
 
+Current development source0.2.0-dev.11 adds an unintegrated Windows private
+scratch-content proof; installed0.2.0-dev.10 remains unchanged and human-trusted.
+No project/Git/restore gate is enabled. The full product remains incomplete.
+See [security review](docs/continuation/DEV11-REVIEW.md) for limits and test status.
+
 Current2026-10-23: after restart, the native source10 panel rendered the sample;
 its3px focus outline/3px offset was observed. The human confirmed clear keyboard
 focus through source→Render→Clear and Enter cleared; native inspection confirmed

@@ -1,5 +1,15 @@
 # Continuation verification log
 
+## High source11 scratch candidate — 2026-10-23
+
+Resumed clean1b11d14. Added proof-only ScratchContent.cs plus fixed compilation,
+synthetic harness and five real-Windows tests (13proof cases total). Initial local
+full suite after first four cases:170pass/0fail/32Windows-only skips202total;
+validate3mods/replay4fixtures passed. After fifth case, local proof13skipped/0fail; final full suite170pass/0fail/33Windows-only skips203total.
+No Windows result claimed before CI. Source package/manifest/server version11,
+installed10 unchanged. Production storage/gates/defaults/UI/hooks/skills unchanged;
+no config/trust/logging/model-run change. See DEV11-REVIEW for security contract.
+
 ## Native source10 focus verified — 2026-10-23
 
 Human resumed GPT-6.1 Sol Medium from936e210 after restarting Codex. Read-only
