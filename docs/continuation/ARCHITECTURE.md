@@ -1,15 +1,45 @@
 # Extension architecture and security contracts
 
-Source0.2.0-dev.9 adds proof-only executable/scratch checks using a partial
-extension of the existing helper. Production compiles only its original source, with corrected directory sharing
-rights (FILE_LIST_DIRECTORY); no enumeration, new operation or gate removal. Installed dev6 unchanged. See proof
-README and current TEST-LOG for pending/current actual OS evidence.
+## Current source9 Windows boundary — 2026-10-23
 
-High resumed the travel checkpoint1ae63d1 on2026-10-23. An isolated Windows
-creation-time job-list/handle-list candidate is now under OS CI review, not loaded
-by production. Its local Mac tests skip; no Windows support result inferred.
-Windows project/settings/restore gates, installed6/trust/logging remain unchanged.
-See [process proof](../../proofs/windows-owned-process/README.md) and TEST-LOG.
+Production NTFS directory pins now request FILE_LIST_DIRECTORY alongside metadata
+rights, with no share-delete. Metadata-only opens did not participate in the needed
+sharing conflict; actual rmdir witness failed on both Windows lanes before repair.
+No ancestor enumeration or extra metadata collection; missing list rights refuse.
+Sharing violation32 alone retries10attempts/90ms sleep per handle, with unchanged
+whole-request/telemetry deadlines. No ACL repair/lock stealing. Production compiles
+only original PrivateStorage.cs; partial declaration permits fixed proof reuse.
+
+Proofs/windows-owned-process is **unintegrated**, not a public runtime extension.
+Original .NETFramework candidate uses mandatory creation-time JOB_LIST+HANDLE_LIST
+and kill-on-close job, explicit CRT argv/env, EOF stdin, bounded pipes/deadline/
+cancellation, root/descendant/owner-death cleanup. A suspended create then assign
+sequence was rejected because owner death can leave an unassigned child. No shell,
+PATH/project lookup, breakaway or uncontained fallback. This is process lifetime,
+not a sandbox or protection from malicious broker/same-user/admin activity.
+
+Proof ProgramPins reuses native same-handle ACL/parser/pins, explicit separate
+code/project roots and rejects project alias/overlap, foreign mutation/creation,
+links/streams/aliases. No code provenance or DLL dependency closure claim. Private
+empty scratch has atomic descriptor, verification/pin and empty-only normal removal;
+external death can leave an empty private directory. No index/refs/content copies,
+real Git launch or project-file reads. No exact-owned content cleanup design yet.
+
+Windows configured settings/project/Git/restore remain before-IO refused. Native
+Windows11 host is available later, not presently tested. Its actual installed
+client/Git/dependencies/ACL/sandbox must be inventoried before activation. No implicit
+Git discovery, vendoring/download, live-tree/snapshot choice, custom client/fork or
+application patch. Future security/traversal/content/restore changes require High
+and native acceptance; routine packaging/preparation is suitable for Medium.
+
+Installed trusted6 remains unchanged, same logging/retention/scope/export. No new
+wire operation/observer registration/model/API call. Existing dispatcher/permission/
+metadata contracts retained. See [proof](../../proofs/windows-owned-process/README.md),
+[Windows](../windows-storage.md), [review](DEV9-REVIEW.md) and TEST-LOG for exact
+source/CI and candidate failures. All93capabilities remain accounted and incomplete.
+
+The versioned design sections below retain earlier contracts/history; source9
+sharing correction supersedes earlier claims that metadata-only handles pin names.
 
 Decision date: 2026-10-23. Development design; outstanding proof gates are explicit.
 Read CODEX-CONTRACTS.md and CLAUDE-RESEARCH.md for dated primary evidence.

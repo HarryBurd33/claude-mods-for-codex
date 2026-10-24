@@ -1,4 +1,4 @@
-# Windows private storage — development source0.2.0-dev.7
+# Windows private storage — development source0.2.0-dev.9
 
 Native OS primitive checkpoint f152acb passed all15 tests on Windows Server2025
 Node22/24 in CI40033656920. Current source integrates journal, scoped state and

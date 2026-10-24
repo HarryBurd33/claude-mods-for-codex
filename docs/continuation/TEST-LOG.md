@@ -1,5 +1,38 @@
 # Continuation verification log
 
+## Verified source9 security proof — 2026-10-23
+
+Runnable source[a3a9c2598455a858bbfec6c3b1ecb6d7b14e62e0](https://github.com/HarryBurd33/claude-mods-for-codex/commit/a3a9c2598455a858bbfec6c3b1ecb6d7b14e62e0),
+tree8eb617c6e5e27c4a8451bf5f25877dd7f2f9f0bb.
+[CI40043152081](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40043152081)
+all7jobs success: all4POSIX full suites, portable Windows and both NTFS lanes.
+Each native Windows Node22/24 lane passed existing storage20/20 and separate
+process/object proof8/8, no skips/failures. Actual job logs read for both lanes.
+Windows Server2025 Datacenter10.0.26100, imagewindows-2025-vs2026
+20261021.278.1; Node22.23.4/npm10.9.9 and24.22.1/npm11.19.1.
+
+Commands observed: npm test170pass/0fail/28Windows-only skips198total;
+node --test test/windows-owned-process.test.mjs on macOS skips (never a Windows
+pass). Windows CI runs that command8/8 and node --test
+test/windows-storage.test.mjs20/20 plus fixed startup/compile/IPC probes.
+Local node ./bin/codex-mods.mjs validate passed3mods; local node
+./bin/codex-mods.mjs replay --fixtures ./fixtures passed all4fixtures. Exact-source
+CI validate/replay also passed. No extra model/native event run.
+
+Diagnostic1b830d6/CI40042964427 also passed all7jobs/20+7each. The earlier
+cec94d6 Node24 public-state failure did not recur, but its exact cause remains
+unestablished; don't call it conclusively fixed by the sharing retry. The new
+controlled transient/held lease test proves that bounded sharing behavior
+independently. All failed candidates/corrections remain below. No repeated broad
+testing after notes-only final records implied. Final notes commit's exact
+identity is reported after readback; it keeps tested executable/test bytes.
+
+Installed6 actual activity4/same revision; invalid waitMs0 call refused, empty
+options returned existing metadata. No logging/config/trust/install change.
+Human confirms Windows11 Codex host available later; its client/install/hooks/
+permissions/UI remain unverified. Medium next only for routine packaging and
+acceptance preparation; High before gated Windows integration/security changes.
+
 ## Resumed High — isolated Windows process proof candidate — 2026-10-23
 
 Clean1ae63d1 travel checkout confirmed. Reviewed current security files/gates and

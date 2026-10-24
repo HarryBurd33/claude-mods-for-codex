@@ -2,7 +2,7 @@
 
 Original MIT proof, 2026-10-23. **Not loaded by any production hook, tool, CLI or
 server.** No new public execution operation, selected project access, installation,
-configuration/trust edit or model/API call. Source version dev9 keeps the runtime behavior of dev8; installed
+configuration/trust edit or model/API call. Source version dev9 tightens directory sharing without activating project paths; installed
 human-trusted dev6 remains unchanged. Windows project/settings/restore gates stay.
 
 ## Contract under test

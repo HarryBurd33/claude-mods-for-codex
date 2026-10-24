@@ -1,94 +1,67 @@
 # Current status — 2026-10-23
 
-Source0.2.0-dev.9 adds proof-only executable/scratch checks using a partial
-extension of the existing helper. Production compiles only its original source, with corrected directory sharing
-rights (FILE_LIST_DIRECTORY); no enumeration, new operation or gate removal. Installed dev6 unchanged. See proof
-README and current TEST-LOG for pending/current actual OS evidence.
+**Full93-capability product incomplete. Source0.2.0-dev.9; installed0.2.0-dev.6.**
+Human resumed Sol High from travel1ae63d1. Source9 corrects Windows directory pins
+and adds an isolated process/object-security proof; no Windows project/settings/
+restore activation. User has a Windows11 Codex computer available **later**.
+Exact source/CI/remote identities belong in TEST-LOG and the final checkpoint reply.
 
-High resumed the travel checkpoint1ae63d1 on2026-10-23. An isolated Windows
-creation-time job-list/handle-list candidate is now under OS CI review, not loaded
-by production. Its local Mac tests skip; no Windows support result inferred.
-Windows project/settings/restore gates, installed6/trust/logging remain unchanged.
-See [process proof](../../proofs/windows-owned-process/README.md) and TEST-LOG.
+## High Windows results
 
-**Full93-capability product incomplete. Source0.2.0-dev.8; installed0.2.0-dev.6.**
-Human resumed GPT-6.1 Sol Medium from verified0c3413b. Source dev8 adds matching/
-nonmatching offline fixtures and a review sequence to disabled declarative mod
-scaffolds. It does not install or enable them. The current selected-chat skills
-were applied to disposable synthetic data without an additional model evaluator.
-Local full suite170pass/0fail/20Windows-only skips190total; focused author/package
-7pass. Source8[d7fafbb](https://github.com/HarryBurd33/claude-mods-for-codex/commit/d7fafbb2444f50be6c05993b53365760aad6e93e)
-[CI40037382500](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40037382500)
-passed all7jobs:4POSIX full, portable Windows including generated CLI fixtures,
-and2NTFS lanes20/20 each. See[authoring](../authoring.md) and
-[skill workflows](../skill-workflows.md). Installed dev6 remains unchanged.
+Metadata-only directory handles did not prevent live rmdir in Windows CI. The
+production NTFS helper now requests FILE_LIST_DIRECTORY alongside metadata rights,
+while still omitting share-delete. It does not enumerate ancestors. Insufficient
+rights refuse; no ACL repair. Sharing violation32 alone has10attempts/90ms sleep
+per handle; the existing whole-request/optional telemetry deadlines remain.
 
-Human confirmed the installed preview's source → Tab → Render → Enter path;
-permitted MCP Apps inspection confirmed3nodes/2edges and complete tables. Resize
-was also human-confirmed at narrower/wider widths. This is partial accessibility
-acceptance, not a full keyboard/screen-reader audit.
-[Native acceptance](../native-acceptance.md) gives remaining concrete checks.
-No work on gated Windows paths occurred. After verified publication/readback,
-select GPT-6.1 Sol High before the next Windows Git/scratch/process/project-write
-implementation work. Current Medium work stops at that boundary.
+The original MIT unintegrated proof uses mandatory creation-time JOB_LIST and
+HANDLE_LIST, kill-on-close ownership, explicit argv/environment, EOF stdin,
+bounded output/deadline/cancellation and owned descendant cleanup including owner
+death. A proof-only partial helper extension checks executable object ACLs/handles,
+separate code/project roots, no-follow project-root metadata and private empty
+scratch. No product code loads it, no new public execution operation, no Git run.
+See [review](DEV9-REVIEW.md), [proof](../../proofs/windows-owned-process/README.md)
+and [Windows boundary](../windows-storage.md). Failed candidates are retained in
+TEST-LOG, including a corrected handle-number test and intermittent state failure.
 
-## Source Windows security milestone
+Local full suite170pass/0fail/28Windows-only skips198total. [Source9 CI40043152081](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40043152081)
+all7jobs passed: each Windows lane20storage+8proof, all4POSIX and portable Windows.
+These OS results remain separate from native host acceptance. Native Codex
+Windows11/WSL installation/events/UI/permissions remain unverified.
 
-Fixed local PowerShell5.1/.NETFramework original C# helper verifies pinned no-
-reparse ancestors, local fixed NTFS, same-handle owner/protected non-null DACL,
-regular single-link file and bounds. Private user/SYSTEM/Administrators descriptor
-at creation; unsafe existing ACLs refused, never repaired. No policy bypass,
-elevation, profile/module discovery, network, secret discovery or model call.
+## Unchanged installed host and authority
 
-Journal/state/report and explicit selected-export reads now use that adapter.
-State retains hash-only project/session layout,64scopes/two1MiB files, strict
-metadata and explicit freshness-checked prune. Cancellation stops only owned helper
-tree. Optional hook lanes share1500ms+500ms cleanup under the host5s deadline;
-Windows requires exact explicitly selected native-session root, no descendants/
-casefold/tool-workdir inference. Defaults/three hook registrations unchanged.
+Human-trusted dev6 remains installed/enabled in the macOS user profile. Previous
+host macOS14.6arm64, desktop26.1016.62342build21477/Node24.22.0; systemCLI0.163.0
+separate. No installation, machine settings/cache/trust, theme, observers, client
+upgrade, selected model or logging scope/retention/export change. Actual installed
+activity read returned4records/same revision. This chat is outside the selected
+child logging project; never infer scope from a shell workdir/command or broaden it.
+No extra model/API evaluation, subagent, REA or tool repair. Old single-run grant
+is consumed. Local deterministic callbacks make no additional model calls;
+ordinary selected-chat skill use consumes selected-model usage.
 
-Source[f63ebab](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f63ebabec8730cbfaa2e39a7f5e3ae2f58438838),
-tree5d521c5133bba1620ea39d038544ef1986575d5e,
-[CI40035478192](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40035478192):
-all7jobs passed. Each native Windows Server2025 Node22/24 lane20pass/0fail/0skip
-(17Windows-only tests+3portable predicates). Includes public API/CLI, ACL negatives,
-concurrency/retention, cancellation/owned child cleanup, exact scope/no effects and
-synthetic hook-subprocess deny under stalled telemetry. Local full suite169pass/
-0fail/20Windows-only skips189total; validate/default replay pass.
+Installed6 native evidence remains six owned views/local preview/Clear, nested
+files, selected diffs/passive counters, authored print rewrite/control/deny and
+same-version remove/reinstall with125exact files/three trusted hooks. One preview
+keyboard path and narrow/wide usability were human-confirmed. Full accessibility,
+close-pending/reopen/loaded unload/disable/older rollback remain incomplete.
+Earlier dev4 sandbox-negative and separate hold0.0.4 results are version-specific;
+hold proof is removed and not a production approval gate. Optional observers off.
 
-These are OS/process tests, **not** native Codex/Windows11 installation, events,
-permissions/sandbox/UI compatibility. Windows settings/dashboard and every project/
-Git entry refuse before traversal/spawn; Windows restore remains refused. Absolute
-trusted Git, private scratch, traversal/child-tree cleanup and safe project writes
-need their own stronger review/native host. See[Windows contract](../windows-storage.md).
-They remain unfinished requirements; ordinary reviewed host edits and explicit
-storage CLI are the practical alternatives. No unsupported-Codex conclusion.
+## Next milestone and model boundary
 
-## Installed macOS and preserved choices
+After final CI/readback, routine package/public-clone verification and native
+acceptance preparation are suitable for **GPT-6.1 Sol, Medium**. Do not spend High
+on those once the checkpoint is verified. Windows activation remains incomplete,
+awaiting the later host's exact client/Git/ACL/dependency/sandbox inventory and
+security/native acceptance. **Return to High before any Windows integration,
+traversal, scratch-content cleanup or restore design/change.** The isolated proofs
+are not a grant to remove a gate. No custom client/fork/app patch direction chosen.
 
-Immutable human-trusted production dev6 remains user-profile installed/enabled.
-macOS14.6arm64, desktop26.1016.62342build21477, Node24.22.0; systemCLI0.163.0 separate.
-Actual six owned views, restricted local flowchart/JSON/plain code/Clear, nested
-explorer, synthetic working/selected-commit patches and passive export counters
-were observed in prior dev6 phase. Reviewed authored print rewrite/control/deny
-passed. Supported unchanged remove/reinstall restored125exact files/three trusted
-hooks/zero errors and fresh-session absence during removal. Already-loaded unload,
-UI disable/older-version rollback remain unverified. Neither source7 nor8 is installed.
-
-No installation/config/trust changes during the High storage or Medium authoring stages. Same selected private project,
-data/settings/scope/retention/patches/commits/export. Actual installed activity
-read after source integration:4records/same revision. Current chat outside selected
-child logging project; no capture is correct. Optional observers unregistered/off,
-original proof retained, removed hold namespace absent, theme unapplied/client
-unchanged. No additional model/API evaluation, session discovery or raw event log.
-
-## Remaining work
-
-All93rows stay in scope. Full native accessibility/close-pending, broader safe
-skill invocation, supported disable/older rollback/loaded lifecycle, theme choice,
-optional observer delivery and full platform acceptance remain incomplete. Human
-protected steps must be concrete; no extra model run, optional telemetry or theme/
-client selection inferred. Prior separate holdv4/sandbox-negative results stay
-version-specific; human provenance/disconnected fail-open forbid production gate
-claims. Full-product completion is not claimed. Read[HANDOFF.md](HANDOFF.md) for
-exact next tasks, tests, contracts, rollback and human-controlled resume instruction.
+Other incomplete rows remain in REQUIREMENTS: authoring/skill workflow gaps,
+accessibility/lifecycle/rollback, user-selected themes and optional native event/
+platform checks. Native checks requiring new model runs/optional registrations/
+settings choices still need their own explicit authorization. Full product is not
+finished; main remains the historical experimental MVP. Root HANDOFF/.local stay
+private; original local history preserved; no force-push.

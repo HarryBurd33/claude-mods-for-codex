@@ -1,54 +1,40 @@
 # Project status — 2026-10-23
 
-High Windows work adds an isolated, unintegrated process/object-security proof:
-creation-time job ownership, executable handle/ACL checks and private empty scratch.
-Real Windows CI results and limits are in [the proof](proofs/windows-owned-process/README.md)
-and [verification log](docs/continuation/TEST-LOG.md). No project/settings/restore
-activation or installation; installed dev6, logging scope and human trust unchanged.
+**Development source0.2.0-dev.9; full93-capability product incomplete.** Human
+resumed Sol High from travel1ae63d1. Windows directory handles now request the list
+right needed to block deletion while pinned; no ancestor enumeration/logging.
+Bounded sharing-conflict retry retains all ordinary ACL/path refusals and deadlines.
+An original isolated proof covers creation-time job ownership, inherited handle/
+environment isolation, argv/stdio/bounds/deadline/cancel/owner-death cleanup,
+executable object checks and private empty scratch. It is not integrated as Git or
+an execution API. No Windows settings/project/Git/restore gate removal.
 
-**Development source0.2.0-dev.9; full requested product incomplete.**
-Human resumed Sol Medium from verified0c3413b. Source8 adds self-contained
-matching/control replay fixtures to disabled generated mods, with review steps.
-Real CLI regression/local170pass/20Windows-only skips and all7source8 CI jobs
-passed. Installed dev6/logging/trust unchanged. One native preview keyboard
-path was human-confirmed/inspected, and narrower/wider usability human-confirmed;
-full accessibility remains incomplete.
+[Sourcea3a9c25](https://github.com/HarryBurd33/claude-mods-for-codex/commit/a3a9c2598455a858bbfec6c3b1ecb6d7b14e62e0),
+[CI40043152081](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40043152081):
+all7jobs success; both native Windows Server2025 Node22/24 lanes20storage+8proof
+passed, all4POSIX full/portableWindows passed. Local170pass/0fail/28Windows-only
+skips198total. Candidate failures/corrections and earlier intermittent state
+failure retained in TEST-LOG; no claim its exact cause was established. OS CI is
+not native Codex/Windows11/WSL acceptance. A Windows11 Codex host is available later.
 
-The High Windows private-storage milestone now has real Windows Server2025 NTFS
-CI: all20tests passed on both Node22/24, plus all4POSIX and portable Windows jobs.
-[f63ebab source](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f63ebabec8730cbfaa2e39a7f5e3ae2f58438838),
-[CI40035478192](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40035478192).
-Local full suite169pass/20Windows-only skips; validate/default replay passed.
+Installed human-trusted macOS dev6 remains unchanged: six owned views/restricted
+preview/Clear/nested files/selected diffs/passive counters, reviewed print rewrite/
+control/deny, same-version removal/reinstall125files/3hooks observed. One keyboard
+path and narrow/wide usability accepted; full accessibility, loaded unload/disable/
+older rollback and broader native lifecycle remain incomplete. Source8 authoring
+fixtures retained; source9 is not installed. Activity4/same revision/scope/retention,
+no config/cache/trust/logging edit, optional observer/theme/client change or extra
+model/API evaluation. Original proof retained; separate hold removed, not a
+production approval-gate claim. Independent project/MIT unchanged.
 
-Source7 implements handle/ACL-checked private journal/state/selected-export reads,
-private creation, bounded retention, owned-helper cancellation and short-budget
-optional hook telemetry with exact selected Windows session root. No ACL repair,
-execution-policy bypass, additional model call or broader logging. Windows settings/
-dashboard, project/Git and restore refuse before IO pending their separate security/
-native-host gates. NTFS CI and a synthetic hook subprocess do not establish native
-Codex, Windows11 installation/events/sandbox/UI or WSL compatibility.
+Next human setting **GPT-6.1 Sol, Medium** for routine package/public-clone checks
+and native-host acceptance preparation. Windows activation remains blocked on its
+later host inventory and High security/native review. Return High before gated
+Windows code, traversal/content cleanup/restore or another hard security problem.
+No background or subagent model-switch substitute; all93requirements stay in scope.
 
-The installed human-trusted macOS production fixture remains dev6: six owned views,
-restricted local preview/Clear, nested explorer, selected diffs/passive counters and
-reviewed authored print rewrite/control/deny observed. Supported identical remove/
-reinstall passed fresh-session absence,125matching files and configuration/trust
-preservation. Already-loaded unload/UI disable/older rollback remain unverified.
-No installation/config/trust/logging change in the High storage/Medium authoring stages; activity4/same revision.
-Optional observers off, theme unapplied, client unchanged, no extra model run.
-
-Current human setting Sol Medium. This phase covers authoring/skill/verification
-and concrete native acceptance preparation. After verified publication/readback, select GPT-6.1 Sol High before addressing
-gated Windows dashboard/Git/restore paths; no background/subagent substitute.
-
-Remaining full-product work includes accessibility, broader skills, lifecycle/
-rollback, themes, optional event/native platform acceptance and the gated Windows
-features. Restricted flowcharts are not full Mermaid; explicit Git checkpoints
-are not automatic turn capture; passive counters are not context/cache health/
-billing. Separate removed hold proof does not establish a production approval gate.
-
-Current authoritative records:[STATUS](docs/continuation/STATUS.md),
-[93-capability ledger](docs/continuation/REQUIREMENTS.md),
-[architecture](docs/continuation/ARCHITECTURE.md),
+Current authoritative records: [STATUS](docs/continuation/STATUS.md),
+[ledger](docs/continuation/REQUIREMENTS.md),[architecture](docs/continuation/ARCHITECTURE.md),
 [test log](docs/continuation/TEST-LOG.md),[handoff](docs/continuation/HANDOFF.md),
-[Windows security and acceptance](docs/windows-storage.md).
-Historical experimental MVP/main and earlier logs are not full-product status.
+[review](docs/continuation/DEV9-REVIEW.md),[proof](proofs/windows-owned-process/README.md).
+Historical experimental main and earlier handoff statements do not establish completion.

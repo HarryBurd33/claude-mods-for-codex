@@ -35,7 +35,7 @@ approximation, not full Mermaid or native transcript restyling. Optional
 [observation-only lifecycle events](docs/lifecycle-observation.md) remain source-
 tested, unregistered and native-unverified. Default hook registration/logging
 is unchanged. Local callbacks make no additional model calls; skill/chat use
-consumes usage. Current source local suite170pass/20Windows-only skips (190total); CI and native
+consumes usage. Current source local suite170pass/28Windows-only skips (198total); CI and native
 platform evidence are separate.
 
 Replay compares only explicit selected Git commits, which may include human edits

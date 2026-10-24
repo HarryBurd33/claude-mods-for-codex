@@ -1,47 +1,28 @@
 # Requirements ledger
 
-Source0.2.0-dev.9 adds proof-only executable/scratch checks using a partial
-extension of the existing helper. Production compiles only its original source, with corrected directory sharing
-rights (FILE_LIST_DIRECTORY); no enumeration, new operation or gate removal. Installed dev6 unchanged. See proof
-README and current TEST-LOG for pending/current actual OS evidence.
+Assessment2026-10-23. **Full93-capability product incomplete. Source0.2.0-dev.9;
+installed human-trusted0.2.0-dev.6 unchanged.** High resumed travel1ae63d1. Source9
+corrects Windows metadata-only directory pinning (list right needed for sharing),
+adds a bounded sharing-only retry and an isolated process/object/empty-scratch
+proof. No Windows settings/project/Git/restore gate removal, installed update,
+logging/retention change, extra model run, automatic approval or trust edit.
 
-High resumed the travel checkpoint1ae63d1 on2026-10-23. An isolated Windows
-creation-time job-list/handle-list candidate is now under OS CI review, not loaded
-by production. Its local Mac tests skip; no Windows support result inferred.
-Windows project/settings/restore gates, installed6/trust/logging remain unchanged.
-See [process proof](../../proofs/windows-owned-process/README.md) and TEST-LOG.
+All93rows retained. Platform mechanism support is not feature completion. Real
+Windows Server CI and proof/subprocess results are separate from native Codex/
+Windows11/WSL. Failures/corrections/exact final CI are in TEST-LOG. User's native
+Windows11 Codex computer is available **later**; activation waits for its actual
+client/executable/dependency/ACL/sandbox inventory and High security/native review.
+No public executor/new client/fork/app patch or snapshot design selected.
 
-Assessment date: **2026-10-23**. The full product is **incomplete**. This ledger
-supersedes the earlier MVP's exclusions; an earlier implementation choice is
-neither proof of host support nor proof that a capability is impossible.
+Installed dev6 actual activity remains4/same revision and scope; six owned views,
+restricted local preview, authored print rewrite/control/deny and same-version
+remove/reinstall evidence remain version-specific. Keyboard path/resize partial;
+full accessibility/lifecycle/disable/older rollback, optional events/themes and
+native platform acceptance remain incomplete. Source8 authoring fixtures retained.
 
-## Current source/installed distinction — 2026-10-23
-
-Human resumed Sol Medium from0c3413b. Source8 adds self-contained authoring fixtures
-and concrete disabled/temporary-enabled review instructions. Real CLI regression
-covers templates/control collisions/no execution. Selected-chat installed-skill
-application diagnosed a disposable literal mismatch, corrected only a temporary
-config and preserved the disabled original. This is not an independent evaluator,
-a native slash callback or a new model run. One native preview keyboard path was
-human-confirmed and inspected; narrower/wider preview usability was human-confirmed. Full accessibility remains
-separate.
-
-Human selected Sol High from23888dd for Windows private-storage security. Source
-0.2.0-dev.7 now integrates fixed local NTFS handle/ACL journal/state/explicit usage
-reads, short-budget exact-root optional hook telemetry and owned-tree cancellation.
-Windows primitive f152acb/CI40033656920 passed15/15 on Node22/24 Windows Server2025.
-Integrated exact-source CI and counts are in TEST-LOG; never infer native Codex/
-Windows11 compatibility from OS primitives or a synthetic hook subprocess.
-Windows settings/dashboard, project/Git and restore explicitly refuse before IO;
-their concrete security/native gates remain unfinished, with host-edit/explicit-
-storage alternatives. See [Windows contract](../windows-storage.md).
-
-Installed immutable human-trusted dev6 remains unchanged: macOS six owned views,
-restricted preview, authored harmless print rewrite and supported unchanged remove/
-reinstall observed. Activity4/same revision, same selected project/retention/export,
-no broader logging, optional observers off, theme unapplied, no extra model run.
-Manual accessibility, loaded-session disable/older rollback, broader skill/native
-lifecycle/platform acceptance remain incomplete. All93 rows stay in scope.
+After final CI/upload/readback, routine source9 packaging and native acceptance
+preparation use Sol Medium. It must stop for High before gated Windows integration,
+traversal, scratch-content cleanup or restore changes. See HANDOFF and DEV9-REVIEW.
 
 ## Reading the ledger
 
@@ -201,13 +182,13 @@ issues are reports/leads, not reproductions by this project.
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SEC-01 Understand each process's authority | Mod code and API can run as OS user outside Bash sandbox | Hook process, MCP server, UI bridge and model tool are distinct boundaries | All | C-DEV; CX-H command runner; CX-UI; LOCAL | supported | Architecture and dashboard source describe hook/MCP local-process authority separately from model-tool sandbox | Review actual manifests/settings/launch environment/access table; no additional authority hidden behind UI read-only hints | Declarative read-only hints and CSP do not sandbox arbitrary local process code |
 | SEC-02 Keep filesystem operations selected-project scoped | Mod filesystem/process APIs | Trusted explicit root and bounded path traversal | NodeMac; POSIX-CI; Win separately | C-DEV; FILETREE; LOCAL | supported | Bounded selected-project Git adapter; native dev4 files/status/patch/Replay observed; no arbitrary UI path argument | Traversal/link/special/helper/bounds tests and synthetic selected-project native display pass; platform/full workflow gaps remain | No file-content explorer preview; patch/usage reads explicitly separate |
-| SEC-03 Bound subprocesses and cleanup | Mod process API outside tool sandbox | Explicit argv and sanitized environment, time/output/process limits | NodeMac; POSIX-CI; Win | C-DEV; SAMPLES issues; LOCAL | supported | Bounded sanitized Git/MCP transport; native readonly inventory cleanup used no model turn; dev5 preview has no process action | Existing malicious-helper/stall/overflow/transport tests pass; Windows owned-helper deadline/cancellation have NTFS CI; native client/Git cleanup remains unverified | Source browser test uses a separately bounded loopback-only fixed-resource server, not product network mode |
+| SEC-03 Bound subprocesses and cleanup | Mod process API outside tool sandbox | Explicit argv and sanitized environment, time/output/process limits | NodeMac; POSIX-CI; Win | C-DEV; SAMPLES issues; LOCAL | supported | Bounded sanitized Git/MCP transport; native readonly inventory cleanup used no model turn; dev5 preview has no process action | Existing malicious-helper/stall/overflow/transport tests pass; Windows owned-helper deadline/cancellation have NTFS CI; source9 isolated creation-time job/stdio/owner-death proof is separate from unverified production Git/native cleanup | Source browser test uses a separately bounded loopback-only fixed-resource server, not product network mode |
 | SEC-04 Make network access explicit | Mod external requests/process calls | Local stdio server, no listener or remote UI assets by default | NodeMac; UIhost | C-DEV; CX-UI; LOCAL | supported | Production local stdio with empty network/resource CSP; dev5 fixed offline asset bundle and no-request preview | Source no network/HTML-sink and actual readonly panel evidence; browser test loopback server temporary/explicit | CSP is not OS network confinement of trusted local processes |
 | SEC-05 Minimize event fields and context access | Rich event, session and usage APIs | Allowlisted event projection; explicit context input | CLI163; Desk; NodeMac | C-EVT; CX-H; CX-RUN; LOCAL | supported | Event state stores only event/tool/deny; optional selected-export adapter reads raw file in bounded memory but returns no thread IDs/prompts/commands/paths | Synthetic privacy/default-off tests and native selected-project capture passed; optional adapter privacy tested and one real export read | Transcript path receipt never authorizes reading it; optional raw export read is separate explicit selection; hashes not anonymization |
 | SEC-06 Do not collect secrets/environment values | Environment/settings/process access exists | Treat inherited env as sensitive, do not enumerate credentials | All | C-DEV; CX-H; User instruction | deliberately excluded by policy | No credential-store search or secret telemetry | Synthetic secret env/input values do not appear in public logs, reports or UI; minimal configured env | Need only availability flags if justified, never secret values |
 | SEC-07 Keep prompts/transcripts private | Session/message APIs | Explicit sanitized exported input only where feature needs it | All | C-EVT; CX-H; CX-RUN; LOCAL | supported | No private session discovery; changes adapter reads explicit selected Git working tree, patch text only when opted in | Preserve privacy fixtures, verify default metadata-only changes and no session-path reads in production host | Git patches may contain secrets even when sensitive filenames are excluded; review opt-in/scope separately |
 | SEC-08 Opt in to metadata and sensitive telemetry separately | Store/event handlers | Default-off journal/state; stronger consent for content capture | NodeMac; CLI163/Desk | C-EVT; LOCAL | supported | Existing default-off/session metadata; explicit project aggregate and patch/export opt-ins preserved; new observer names default absent | Dev4 count4 unchanged after parent-chat tests; dev5 observer default-off/no-write/scope tests pass | Optional observer hook reception can contain sensitive payload in memory; registration/storage reviewed separately |
-| SEC-09 Preserve private storage under concurrency | Store persistence lacks general transaction guarantee | Private POSIX root, owned locks, bounded append/prune | NodeMac; POSIX-CI; Windows Server2025 NTFS-CI (Node22/24) | C-EVT; LOCAL STATE-PROOF | supported | Original journal/state plus source7 handle/ACL adapter, public APIs and bounded hook lane | Concurrent writes, private ACL/refusal/link/retention/owned-tree tests on real Windows CI; native client acceptance separate | Hostile same-user/administrator outside claim; Windows project/restore unavailable pending separate gates |
+| SEC-09 Preserve private storage under concurrency | Store persistence lacks general transaction guarantee | Private POSIX root, owned locks, bounded append/prune | NodeMac; POSIX-CI; Windows Server2025 NTFS-CI (Node22/24) | C-EVT; LOCAL STATE-PROOF | supported | Original journal/state plus source7 handle/ACL adapter/public APIs/bounded hook lane; source9 corrects directory sharing pins and bounds transient sharing retries | Concurrent writes, private ACL/refusal/link/retention/owned-tree tests on real Windows CI; native client acceptance separate | Hostile same-user/administrator outside claim; Windows project/restore unavailable pending separate gates |
 | SEC-10 Maintain UI accessibility and lifecycle | Host UI components and callbacks | Semantic HTML, focus/keyboard, teardown, bounded requests | UIhost; NodeMac simulation | C-UI; CX-UI; LOCAL | supported | Native dev6 controls/chart/table/diff and preview labels/tables/Clear observed; teardown source removal tested in simulation | Synthetic transport/teardown/privacy tests and browser preview pass; one preview keyboard path/narrower-wider usability human-confirmed; full keyboard/focus/screen-reader/close-pending remain | Browser preview does not establish Codex accessibility or memory erasure |
 
 ## Practical collection and original skills
@@ -234,15 +215,15 @@ issues are reports/leads, not reproductions by this project.
 | PL-01 Usable native macOS CLI installation | Claude CLI Mods | Supported Codex CLI plugins/hooks/MCP with format gate | CLI163 | CX-PKG; CX-FORMAT; CX-H; NATIVE-PROOF | unverified | CLI163 supported install/update/trust/cache; fresh removal hook/cache absence and125-file exact reinstall passed | Three trusted hooks/zero errors after unchanged reinstall; disable/older-version rollback/permission matrix still pending | CLI and desktop results recorded separately; optional lifecycle hooks unregistered |
 | PL-02 Usable actual desktop integration | Claude desktop Mods | Official desktop plugin and MCP App extension | Desk | CX-UI; CX-PKG; NATIVE-PROOF | supported | Dev6 actual six-view dashboard/local preview/authored rewrite/control/deny passed; dev4 sandbox-negative separate | Native rendering/nested expansion/Clear passed; accessibility/lifecycle/desktop SessionStart remain | MCP Apps inspection permitted; native app CUA blocked and not bypassed |
 | PL-03 Linux portability | Claude CLI on Linux | Node package plus supported Codex Linux hooks/MCP | POSIX-CI; Linux Codex version TBD | CX-PKG; LOCAL CI | unverified | Source8 d7fafbb four POSIX Node22/24 Ubuntu/macOS CI jobs passed; no native Linux Codex host | Observe exact-source Linux CI and separately native Linux install/events/cleanup when host available | No Linux Codex host tested; Node CI is not native integration |
-| PL-04 Native Windows compatibility | Claude sample/version-specific Windows support | Codex native Windows plus platform command/storage adapter | Win | CX-WIN; SAMPLES issues; LOCAL | unverified | Source7 NTFS journal/state/selected-export APIs and exact-root bounded telemetry; Windows Server2025 OS CI, no native Codex host acceptance; dashboard/project/restore refused before IO | Native ACL/private root, shell quoting, drives/UNC/Unicode/junctions, lock/rename, timeout cleanup, install/trust/update/remove | No full compatibility claim; do not remove privacy checks to pass |
+| PL-04 Native Windows compatibility | Claude sample/version-specific Windows support | Codex native Windows plus platform command/storage adapter | Win | CX-WIN; SAMPLES issues; LOCAL | unverified | Source9 NTFS directory-sharing correction and unintegrated job/executable/empty-scratch proof, existing journal/state/selected-export APIs; no native Codex host, project/settings/restore refused before IO | Native ACL/private root, shell quoting, drives/UNC/Unicode/junctions, lock/rename, timeout cleanup, install/trust/update/remove | No full compatibility claim; do not remove privacy checks to pass |
 | PL-05 WSL compatibility separately | Claude desktop WSL plugin restrictions differ | Codex Linux path under WSL2 | WSL | C-UI; CX-WIN | unverified | Not tested | Record distro/Windows/client; host interoperability/path and hook tests | WSL does not certify native Windows; Claude restriction not transferred blindly |
-| PL-06 CI separates platform contracts from host tests | Mocked test framework | GitHub Actions matrices with explicit test scopes | POSIX-CI; Win | LOCAL `.github/workflows/ci.yml` | supported | Source8 d7fafbb CI40037382500 all7jobs success; NTFS20/20 each,4POSIX full, portable Windows authoring2pass/1POSIX-only skip | Preserve earlier candidate/legacy failure history; distinguish OS APIs, subprocess replay and actual Codex host | No native Windows/Windows11/WSL installation/event/UI claim; source/extraction/private ACL CI recorded separately |
+| PL-06 CI separates platform contracts from host tests | Mocked test framework | GitHub Actions matrices with explicit test scopes | POSIX-CI; Win | LOCAL `.github/workflows/ci.yml` | supported | Source8 full CI retained; source9 OS suites and separate process/object proof recorded with failures/corrections/exact source in TEST-LOG | Preserve earlier candidate/legacy failure history; distinguish OS APIs, subprocess replay and actual Codex host | No native Windows/Windows11/WSL installation/event/UI claim; source/extraction/private ACL CI recorded separately |
 | GOV-01 Review full requested primary documentation | Entire Mods section/index and official Codex docs | Requirements/evidence records with version/date and retrieval gaps | Research date 2026-10-23 | C-UI/C-EVT/C-DEV; CX-*; CLAUDE-RESEARCH | supported | Ten Claude Mods pages retrieved, relevant security/admin, primary examples and Codex release source reviewed | Keep each row linked to evidence; record inaccessible pages/videos rather than invent review | Current docs mutable; recheck changed claims before release |
 | GOV-02 Use REA only for concrete unresolved questions | Not applicable | Scoped optional investigation after setup/safety/config review | Local environment; REA 6.7.0 earlier | [REA pinned source](https://github.com/morluto/rea/tree/6dc0f60faa0928e20b2395ba1a93ff8e497143f7); `docs/research.md`; CODEX-CONTRACTS | supported | Earlier limited metadata/source-map work; no new REA execution | Name concrete uncertainty, read guidance, inspect proposed config, isolate harmless run and record actual semantic/runtime result if needed | Released public source resolved rewrite/trust questions; no need to repair unrelated tools; prior limited study not semantic proof |
 | GOV-03 Preserve MIT and independent-project status | Upstream example licenses vary | Original implementation, own MIT license, truthful attribution | Repository/all packages | LOCAL LICENSE; PRISM/FILETREE/CACHE MIT; SAMPLES Apache-2.0 | supported | MIT/disclaimer preserved; no upstream mod code copied | License/dependency audit on every new library/template; no implied endorsement | Feature ideas are leads; copied code would require separate license/notice review |
 | GOV-04 Preserve local history and user work | Not applicable | Development branch from public snapshot, retain local main | Git repository | LOCAL STATUS | supported | `codex/astra-groundwork` from public main; original local history retained | Compare safe public files; no force-push/private-history merge; inspect staged diff for unrelated changes | Old historical public handoff exposure is not erased by new ignore rule |
 | GOV-05 Publish sanitized durable checkpoints | Not applicable | `docs/continuation/` public records; ignored root handoff for local details | Git/GitHub | User protocol; LOCAL STATUS | supported | Source8 d7fafbb exact uploaded/fetched tree verified; source7 final0c3413b preserved; current native/CLI results public, private evidence excluded | Current checkpoint must be uploaded/fetched/tree-diffed/ls-remote verified before switch stop | Current checkpoint hash reported only after independent readback; no private history force-push |
-| GOV-06 Honor human-controlled model switches | Not applicable | Stop at saved/verified checkpoint; user changes selected model | Human-selected GPT-6.1 Sol Medium; High required before gated Windows work | User mandatory protocol; LOCAL STATUS | supported | Human selected Astra Ultra, Sol Ultra, High, Medium, High for storage, now Medium from0c3413b for authoring/verification | Save/upload/fetch/tree/remote verification before human-controlled High switch for gated Windows paths; no subagent/background switch | Return to High before any new project/restore security enabling; full product remains incomplete |
+| GOV-06 Honor human-controlled model switches | Not applicable | Stop at saved/verified checkpoint; user changes selected model | Human-selected GPT-6.1 Sol High; next Medium for routine work, High before Windows activation | User mandatory protocol; LOCAL STATUS | supported | Human selected Astra Ultra, Sol Ultra/High/Medium, High for storage, Medium for authoring, then High from1ae63d1 for process/object security | Save/upload/fetch/tree/remote verification before next human Medium switch; return High for later host security/integration; no subagent/background switch | Return to High before any new project/restore security enabling; full product remains incomplete |
 | GOV-07 Account for every capability before full completion | Not applicable | Ledger + feature tests + truthful README/final report | All stated targets | User completion criteria; LOCAL | supported | 93-row ledger updated for integrated source foundations and limited hold observation; product remains incomplete | Every supported row still needs stated implementation/native or explicitly reported gap; eventual report covers setup/tests/models/commit/removal | Neither Astra proof nor Sol foundation checkpoint is full product completion |
 
 ## Dependencies and next acceptance gates

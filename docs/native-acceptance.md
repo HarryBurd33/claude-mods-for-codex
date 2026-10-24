@@ -1,6 +1,6 @@
 # Remaining native acceptance
 
-Source dev8 is not installed. These steps concern the immutable human-trusted
+Source dev9 is not installed. These steps concern the immutable human-trusted
 dev6 macOS fixture unless a reviewed update is explicitly selected. No additional
 model/API evaluation, optional hook registration, broader logging, client upgrade
 or theme selection is implied. Keep other plugins and existing data unchanged.
@@ -56,7 +56,10 @@ synthetic events/tests do not establish native delivery.
 
 ## Windows, Linux and WSL
 
-Windows Server2025 NTFS/owned-process CI is separate from native Codex acceptance.
+Source9 Windows Server2025 NTFS20/20 plus isolated process/object proof8/8 per
+Node22/24 lane is separate from native Codex acceptance. The user has a Windows11
+Codex computer available later; prepare read-only client/executable inventory,
+keep machine paths/raw output local and do not assume its Git/DLL/ACL/sandbox policy.
 Configured Windows dashboard/project/Git/restore remain refused before IO. Work
 on those paths requires the human-controlled High switch and their explicit
 [security/native gates](windows-storage.md); do not remove them on Medium.
