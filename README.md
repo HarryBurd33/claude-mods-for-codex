@@ -1,6 +1,18 @@
 # Claude Mods for Codex
 
-**Development source0.2.0-dev.13; the full93-capability product is incomplete.**
+## Source14 current checkpoint — same-helper metadata capture
+
+Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
+capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
+copied directly into private named scratch inside one helper. No public IPC byte
+transfer or bridge expansion. Seven new OS tests added; Windows results pending
+until CI logs are read. Production settings/project/Git/restore gates unchanged;
+installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
+loader/native acceptance claim. See docs/continuation/DEV14-REVIEW.md and TEST-LOG.md. Full93product
+incomplete. Source13 records below describe the previous verified foundation.
+
+
+**Development source0.2.0-dev.14; the full93-capability product is incomplete.**
 Current expanded work is on codex/astra-groundwork; default branch remains the
 historical experimental MVP. MIT and independent-project status are preserved.
 

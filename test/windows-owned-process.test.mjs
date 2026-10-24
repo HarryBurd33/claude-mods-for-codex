@@ -161,11 +161,12 @@ test('Windows directory pins tolerate a short sharing lease and refuse a held le
 
 // Private synthetic paths stay inside this disposable fixture; no project/index/
 // refs/credentials are copied. The helper never scans for abandoned directories.
-async function scratchHolder(mode, marker) {
+async function scratchHolder(mode, marker, commandArgs) {
   const {data,exe}=await setup();
-  const child=spawn(exe,['run',mode,data,...(marker?[marker]:[])],{windowsHide:true,stdio:['pipe','pipe','pipe']});
+  const child=spawn(exe,commandArgs??['run',mode,data,...(marker?[marker]:[])],{windowsHide:true,stdio:['pipe','pipe','pipe']});
   let text='',error='';
   const closed=new Promise((resolve,reject)=>{child.once('close',resolve);child.once('error',reject);});
+  const deadline=setTimeout(()=>child.kill(),20000);child.once('close',()=>clearTimeout(deadline));
   const first=new Promise((resolve,reject)=>{
     const timer=setTimeout(()=>{child.kill();reject(new Error('Synthetic content readiness deadline'));},5000);
     child.stdout.setEncoding('utf8');child.stdout.on('data',value=>{
@@ -179,7 +180,7 @@ async function scratchHolder(mode, marker) {
   });
   try {
     const paths=(await first).split('|').map(value=>Buffer.from(value,'base64').toString());
-    assert.ok(paths[0].startsWith(data+win32.sep+'owned-'));
+    assert.ok(paths[0].startsWith((commandArgs?commandArgs[3]:data)+win32.sep+'owned-'));
     if(paths.length===2)assert.equal(paths[1],join(paths[0],'slot-0000.bin'));
     return {child,closed,paths,output:()=>text};
   } catch(e) {child.kill();await closed;throw e;}
@@ -460,4 +461,108 @@ test('Windows metadata scratch reports a live unowned reader and does not claim 
     assert.deepEqual([...bytes],[68,73,82,67,0,255]);
     await reader.close();reader=null;await metadataFilesAbsent(root);assert.deepEqual(await readdir(root),[]);
   } finally {if(reader)await reader.close();if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+
+// Source14: explicit synthetic metadata roots only; bytes remain inside the
+// compiled helper. No Git discovery, valid index parser or real user project.
+let captureNumber=0;
+async function captureFixture() {
+  const {data,exe}=await setup(),id=++captureNumber;
+  const source=join(data,`capture source ${id}`),parent=join(data,`capture parent ${id}`);
+  await windowsStorageRequest('prepare-directory',source);await windowsStorageRequest('prepare-directory',parent);
+  await mkdir(join(source,'info'));
+  await writeFile(join(source,'index'),Buffer.from([68,73,82,67,0,255]));
+  await writeFile(join(source,'info','exclude'),'synthetic-ignore\n');
+  return {source,parent,exe};
+}
+async function captureHolder(f,selection='both',mode='capture-hold') {
+  return scratchHolder(mode,undefined,['run',mode,f.source,f.parent,selection]);
+}
+test('Windows metadata capture retains exact source handles and composes private scratch without bridge content',native,async()=>{
+  const f=await captureFixture();await writeFile(join(f.source,'config'),'unselected-config-sentinel');
+  const h=await captureHolder(f),root=h.paths[0];
+  try {
+    assert.deepEqual(await readFile(join(root,'index')),await readFile(join(f.source,'index')));
+    assert.equal(await readFile(join(root,'info','exclude'),'utf8'),'synthetic-ignore\n');
+    assert.doesNotMatch(await readFile(join(root,'config'),'utf8'),/sentinel/);
+    for(const path of [join(f.source,'index'),join(f.source,'info','exclude')]) {
+      await assert.rejects(writeFile(path,'must-not-write'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+      await assert.rejects(rename(path,path+'.moved'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+    }
+    await finishHolder(h);assert.match(h.output(),/verified-capture/);await absent(root);
+    assert.deepEqual([...await readFile(join(f.source,'index'))],[68,73,82,67,0,255]);
+    assert.equal(await readFile(join(f.source,'config'),'utf8'),'unselected-config-sentinel');
+    await writeFile(join(f.source,'index'),'released-after-dispose');
+    assert.deepEqual(await readdir(f.parent),[]);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows metadata capture copies full 32MiB index and 1MiB exclude locally and refuses either oversize before scratch',native,async()=>{
+  const f=await captureFixture(),index=Buffer.alloc(33554432,0xa5),exclude=Buffer.alloc(1048576,0x5a);
+  index[0]=68;index[index.length-1]=255;
+  await writeFile(join(f.source,'index'),index);await writeFile(join(f.source,'info','exclude'),exclude);
+  const h=await captureHolder(f),root=h.paths[0];
+  try {
+    assert.deepEqual(await readFile(join(root,'index')),index);assert.deepEqual(await readFile(join(root,'info','exclude')),exclude);
+    await finishHolder(h);assert.match(h.output(),/verified-capture/);await absent(root);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+  for(const [path,bytes] of [[join(f.source,'index'),Buffer.alloc(33554433)],[join(f.source,'info','exclude'),Buffer.alloc(1048577)]]) {
+    await writeFile(path,bytes);
+    assert.equal(await run(f.exe,['run','capture',f.source,f.parent,'both']),'refused');
+    assert.deepEqual(await readdir(f.parent),[]);
+    await writeFile(path,path.endsWith('index')?index:exclude);
+  }
+});
+test('Windows metadata capture selection is explicit: missing selected file refuses, omitted source is untouched',native,async()=>{
+  const f=await captureFixture();await rm(join(f.source,'info','exclude'));
+  assert.equal(await run(f.exe,['run','capture',f.source,f.parent,'both']),'refused');
+  assert.deepEqual(await readdir(f.parent),[]);await writeFile(join(f.source,'index'),'released-on-partial-failure');
+  const h=await captureHolder(f,'index'),root=h.paths[0];
+  try {
+    await assert.rejects(access(join(root,'info','exclude')),{code:'ENOENT'});
+    await finishHolder(h);assert.match(h.output(),/verified-capture/);await absent(root);
+    await assert.rejects(access(join(f.source,'info','exclude')),{code:'ENOENT'});
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows metadata capture refuses overlapping roots, aliases, hardlinks and junction ancestors without scratch residue',native,async()=>{
+  const f=await captureFixture();
+  for(const [source,parent] of [[f.source,f.source],[f.source,join(f.source,'child')],[f.source,f.source+win32.sep+'..'+win32.sep+'alias'],['\\\\synthetic-host\\share',f.parent]]) {
+    assert.equal(await run(f.exe,['run','capture',source,parent,'both']),'refused');
+  }
+  const original=join(f.source,'index'),linked=join(f.source,'index-linked');await link(original,linked);
+  assert.equal(await run(f.exe,['run','capture',f.source,f.parent,'index']),'refused');await rm(linked);
+  const target=join(f.source,'info-original');await rename(join(f.source,'info'),target);
+  await symlink(target,join(f.source,'info'),'junction');
+  assert.equal(await run(f.exe,['run','capture',f.source,f.parent,'both']),'refused');
+  assert.equal(await readFile(join(target,'exclude'),'utf8'),'synthetic-ignore\n');
+  assert.deepEqual(await readdir(f.parent),[]);
+});
+test('Windows metadata capture refuses foreign write grants and an existing writer, without repairing source ACLs',native,async()=>{
+  const f=await captureFixture(),file=join(f.source,'index');
+  for(const mode of ['code-write','deny-code-write']) {
+    await fixtureAcl(file,mode);assert.equal(await run(f.exe,['run','capture',f.source,f.parent,'both']),'refused');
+  }
+  await fixtureAcl(file,'private');
+  const writer=await open(file,'r+');
+  try {assert.equal(await run(f.exe,['run','capture',f.source,f.parent,'both']),'refused');}
+  finally {await writer.close();}
+  assert.deepEqual(await readdir(f.parent),[]);
+  assert.match(await run(f.exe,['run','capture',f.source,f.parent,'both']),/verified-capture/);
+});
+test('Windows metadata capture cancels before IO and after capture, releases source pins and removes owned scratch',native,async()=>{
+  const f=await captureFixture();
+  assert.equal(await run(f.exe,['run','capture-cancel',f.source,f.parent,'both']),'cancelled');
+  assert.deepEqual(await readdir(f.parent),[]);
+  const h=await captureHolder(f,'both','capture-cancel-after'),root=h.paths[0];
+  try {
+    await finishHolder(h);assert.match(h.output(),/cancelled/);await absent(root);
+    await writeFile(join(f.source,'index'),'released-on-cancel');assert.deepEqual(await readdir(f.parent),[]);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows metadata capture owner death deletes owned scratch bytes and releases retained source handles',native,async()=>{
+  const f=await captureFixture(),h=await captureHolder(f),root=h.paths[0];
+  try {
+    await finishHolder(h,true);await metadataFilesAbsent(root);await emptyMetadataHierarchy(root);
+    assert.equal(await readFile(join(f.source,'info','exclude'),'utf8'),'synthetic-ignore\n');
+    await writeFile(join(f.source,'index'),'released-on-owner-death');
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
 });

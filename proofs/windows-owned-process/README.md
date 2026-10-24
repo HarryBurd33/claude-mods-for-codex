@@ -1,5 +1,13 @@
 # Windows owned-process research candidate
 
+Source14 GitMetadataCapture.cs adds an **unintegrated same-helper fixed source
+capture** proof: retained explicit index/info-exclude objects,32MiB/1MiB bounds,
+metadata+byte verification and direct private scratch composition. No raw-byte IPC,
+Git discovery/parser/launch, ignore engine, production activation or host acceptance.
+Seven new real Windows tests pending log review. See
+[source14 review](../../docs/continuation/DEV14-REVIEW.md). Installed10 unchanged.
+Source13 and older results below are versioned foundations.
+
 Source13 GitMetadataScratch.cs adds an **unintegrated fixed named metadata**
 layout/private creation/delete-on-close/empty-only cleanup proof. Generated config/
 HEAD, optional32MiB index/1MiB exclude; flat/read-set/bridge bounds unchanged.

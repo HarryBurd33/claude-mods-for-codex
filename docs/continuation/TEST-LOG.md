@@ -1,5 +1,26 @@
 # Continuation verification log
 
+## Source14 current checkpoint — same-helper metadata capture
+
+Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
+capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
+copied directly into private named scratch inside one helper. No public IPC byte
+transfer or bridge expansion. Seven new OS tests added; Windows results pending
+until CI logs are read. Production settings/project/Git/restore gates unchanged;
+installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
+loader/native acceptance claim. See DEV14-REVIEW.md and TEST-LOG.md. Full93product
+incomplete. Source13 records below describe the previous verified foundation.
+
+
+## Local source14 candidate — 2026-10-23
+
+`npm test`:170pass/0fail/55Windows-only skips225total, local macOS. `npm run
+validate`:3mods; `npm run replay`:4fixtures. `git diff --check` clean. Seven new
+Windows cases skipped locally, not simulated or counted as OS passes. No install/
+config/trust/logging/model-run change. Candidate CI identity/results recorded next
+when observed; no production gate activation. High source/ownership review in
+DEV14-REVIEW. Build compiles fixed original public sources only.
+
 ## Source13 Medium package verification — 2026-10-23
 
 Human resumed clean69e8bb3/tree3471e32 on Sol Medium. Exact anonymous public

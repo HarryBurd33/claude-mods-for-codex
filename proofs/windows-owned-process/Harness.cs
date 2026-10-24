@@ -102,6 +102,22 @@ public static class Harness {
     if(System.IO.Directory.Exists(path))throw new IOException();
     Console.WriteLine("bounded");return 0;
    }
+   if(mode=="capture" || mode=="capture-hold" || mode=="capture-cancel" || mode=="capture-cancel-after") {
+    using(var cancellation=new CancellationTokenSource()) {
+     if(mode=="capture-cancel")cancellation.Cancel();
+     try {
+      using(var capture=new CodexMods.PrivateStorage.GitMetadataCaptureProof(directory,a[3],new string('a',40),a[4]=="index" || a[4]=="both",a[4]=="exclude" || a[4]=="both",cancellation.Token)) {
+       Console.WriteLine(B64(capture.Path));Console.Out.Flush();
+       if(mode=="capture-hold" || mode=="capture-cancel-after")Console.In.ReadLine();
+       if(mode=="capture-cancel-after")cancellation.Cancel();
+       capture.Verify();Console.WriteLine("verified-capture");
+       capture.Dispose();
+       try {capture.Verify();throw new InvalidOperationException();}catch(IOException){}
+      }
+     } catch(OperationCanceledException){Console.WriteLine("cancelled");}
+       catch(IOException){Console.WriteLine("refused");}
+    }return 0;
+   }
    if(mode=="metadata-bounds") {
     int refused=0;
     foreach(string head in new string[]{"HEAD",new string('A',40),new string('a',40)+"\n","ref: refs/heads/other"}) {

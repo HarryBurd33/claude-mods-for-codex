@@ -1,4 +1,16 @@
-# Windows private storage — source13 proof / unchanged production boundary
+# Windows private storage — source14 proof / unchanged production boundary
+
+## Source14 current checkpoint — same-helper metadata capture
+
+Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
+capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
+copied directly into private named scratch inside one helper. No public IPC byte
+transfer or bridge expansion. Seven new OS tests added; Windows results pending
+until CI logs are read. Production settings/project/Git/restore gates unchanged;
+installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
+loader/native acceptance claim. See docs/continuation/DEV14-REVIEW.md and TEST-LOG.md. Full93product
+incomplete. Source13 records below describe the previous verified foundation.
+
 
 Source13 adds an unintegrated fixed named-metadata lifetime proof, not an actual
 Git invocation/project capture/production operation. Source15e388e CI40058125353

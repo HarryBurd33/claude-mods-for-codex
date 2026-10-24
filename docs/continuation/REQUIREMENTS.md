@@ -1,5 +1,17 @@
 # Requirements ledger
 
+## Source14 current checkpoint — same-helper metadata capture
+
+Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
+capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
+copied directly into private named scratch inside one helper. No public IPC byte
+transfer or bridge expansion. Seven new OS tests added; Windows results pending
+until CI logs are read. Production settings/project/Git/restore gates unchanged;
+installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
+loader/native acceptance claim. See DEV14-REVIEW.md and TEST-LOG.md. Full93product
+incomplete. Source13 records below describe the previous verified foundation.
+
+
 Assessment2026-10-23. **All93requirements retained; full product incomplete.**
 Source13 uninstalled fixed synthetic metadata-layout/private lifetime proof;
 installed10/human trust/logging unchanged. Source15e388e CI40058125353 all7jobs
@@ -202,7 +214,7 @@ issues are reports/leads, not reproductions by this project.
 | PL-01 Usable native macOS CLI installation | Claude CLI Mods | Supported Codex CLI plugins/hooks/MCP with format gate | CLI163 | CX-PKG; CX-FORMAT; CX-H; NATIVE-PROOF | unverified | CLI163 supported install/update/trust/cache; fresh removal hook/cache absence and125-file exact reinstall passed | Three trusted hooks/zero errors after unchanged reinstall; disable/older-version rollback/permission matrix still pending | CLI and desktop results recorded separately; optional lifecycle hooks unregistered |
 | PL-02 Usable actual desktop integration | Claude desktop Mods | Official desktop plugin and MCP App extension | Desk | CX-UI; CX-PKG; NATIVE-PROOF | supported | Dev6 actual six-view dashboard/local preview/authored rewrite/control/deny passed; dev4 sandbox-negative separate | Native rendering/nested expansion/Clear passed; accessibility/lifecycle/desktop SessionStart remain | MCP Apps inspection permitted; native app CUA blocked and not bypassed |
 | PL-03 Linux portability | Claude CLI on Linux | Node package plus supported Codex Linux hooks/MCP | POSIX-CI; Linux Codex version TBD | CX-PKG; LOCAL CI | unverified | Source8 d7fafbb four POSIX Node22/24 Ubuntu/macOS CI jobs passed; no native Linux Codex host | Observe exact-source Linux CI and separately native Linux install/events/cleanup when host available | No Linux Codex host tested; Node CI is not native integration |
-| PL-04 Native Windows compatibility | Claude sample/version-specific Windows support | Codex native Windows plus platform command/storage adapter | Win | CX-WIN; SAMPLES issues; LOCAL | unverified | Source9–13 NTFS/job/read-set/named-metadata synthetic OS proofs (CI40058125353,28/28 each Windows lane), existing storage APIs; no native Codex host, project/settings/restore refused before IO | Native ACL/private root, shell quoting, drives/UNC/Unicode/junctions, lock/rename, timeout cleanup, install/trust/update/remove | No full compatibility claim; do not remove privacy checks to pass |
+| PL-04 Native Windows compatibility | Claude sample/version-specific Windows support | Codex native Windows plus platform command/storage adapter | Win | CX-WIN; SAMPLES issues; LOCAL | unverified | Source9–13 NTFS/job/read-set/named-metadata synthetic OS proofs (CI40058125353,28/28 each Windows lane); source14 same-helper fixed metadata capture tests pending, existing storage APIs; no native Codex host, project/settings/restore refused before IO | Native ACL/private root, shell quoting, drives/UNC/Unicode/junctions, lock/rename, timeout cleanup, install/trust/update/remove | No full compatibility claim; do not remove privacy checks to pass |
 | PL-05 WSL compatibility separately | Claude desktop WSL plugin restrictions differ | Codex Linux path under WSL2 | WSL | C-UI; CX-WIN | unverified | Not tested | Record distro/Windows/client; host interoperability/path and hook tests | WSL does not certify native Windows; Claude restriction not transferred blindly |
 | PL-06 CI separates platform contracts from host tests | Mocked test framework | GitHub Actions matrices with explicit test scopes | POSIX-CI; Win | LOCAL `.github/workflows/ci.yml` | supported | Source8 full CI retained; source9 OS suites and separate process/object proof recorded with failures/corrections/exact source in TEST-LOG | Preserve earlier candidate/legacy failure history; distinguish OS APIs, subprocess replay and actual Codex host | No native Windows/Windows11/WSL installation/event/UI claim; source/extraction/private ACL CI recorded separately |
 | GOV-01 Review full requested primary documentation | Entire Mods section/index and official Codex docs | Requirements/evidence records with version/date and retrieval gaps | Research date 2026-10-23 | C-UI/C-EVT/C-DEV; CX-*; CLAUDE-RESEARCH | supported | Ten Claude Mods pages retrieved, relevant security/admin, primary examples and Codex release source reviewed | Keep each row linked to evidence; record inaccessible pages/videos rather than invent review | Current docs mutable; recheck changed claims before release |

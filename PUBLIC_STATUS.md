@@ -1,4 +1,16 @@
-# Project status — source13 fixed metadata proof — 2026-10-23
+# Project status — source14 same-helper capture proof — 2026-10-23
+
+## Source14 current checkpoint — same-helper metadata capture
+
+Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
+capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
+copied directly into private named scratch inside one helper. No public IPC byte
+transfer or bridge expansion. Seven new OS tests added; Windows results pending
+until CI logs are read. Production settings/project/Git/restore gates unchanged;
+installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
+loader/native acceptance claim. See docs/continuation/DEV14-REVIEW.md and TEST-LOG.md. Full93product
+incomplete. Source13 records below describe the previous verified foundation.
+
 
 **Full93-capability product incomplete. Source13 uninstalled; installed10/human
 trust/logging scope preserved.** Human resumed Sol High fromd7d3b84. Windows11
