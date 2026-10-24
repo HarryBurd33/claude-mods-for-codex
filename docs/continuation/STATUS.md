@@ -1,5 +1,20 @@
 # Current status — source15 strict index proof — 2026-10-23
 
+## Source15 Medium package verification — 2026-10-23
+
+Human resumed verified44daf8a/treeb7275dd on GPT-6.1 Sol Medium. Exact anonymous
+public clone full suite170pass/0fail/64Windows-only skips234total. Reviewed164-file
+archive1,102,881unpacked/335,424compressed bytes, SHA256
+f4e79153428394eb71790d40359baf3f4bd0e4c327fb843bed64143aa6da3b2e.
+All bytes equal public clone/checkpoint; hygiene/MIT/version15/default-off storage
+passed. Fresh spaced extraction validate3/replay4/package-scaffolding7/7,0fail/0skip.
+macOS14.6/Node24.22.0/npm11.19.1; no Windows compilation/installation/model run.
+Installed10/cache149files/settings hash unchanged; no native observation/trust claim.
+All93IDs retained, no gate or logging/trust/config change. Next human Sol High
+before further gated work. See PACKAGE-DEV15.md; final notes-only artifact identity
+recorded after actual readback in reply/private handoff. Full product incomplete.
+
+
 **The full 93-capability product is incomplete. Development source0.2.0-dev.15
 is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
 Human resumed GPT-6.1 Sol High from verified65743d9.
@@ -36,7 +51,6 @@ Installed dev10 remains149reviewed files/settings hash unchanged, no new native
 hook/trust/UI claim. Last High3enabled/human-trusted/0errors and Activity4/same
 scope/revision, health unknown. No extra model/API run or logging/config/cache/
 trust/observer/theme/client change. All93IDs kept. Prior failures remain in TEST-LOG.
-Source14 public clone/package/spaced extraction passed; see PACKAGE-DEV14.
-OS proof verified; next human Sol Medium for source15 packaging. Return to
-High before further Windows security/integration/loader/parser/metadata/ignore/
+Source15 public clone/package/spaced extraction passed; see PACKAGE-DEV15.
+Next human Sol High before further Windows security/integration/loader/parser/metadata/ignore/
 cleanup/gate/writer work. Full native/accessibility/lifecycle/platform gaps remain.

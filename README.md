@@ -34,9 +34,9 @@ per latest reply; do not repeat its availability question without a state change
 
 Expanded development remains on codex/astra-groundwork; default branch is the
 historical experimental MVP. MIT and independent-project status preserved.
-Source14 [package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV14.md)
-passed; source15 packaging is the next Medium task after its security proof. No
-source15 installation or Windows compatibility claim.
+Source15 [package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV15.md)
+passed:164files/all-byte checks, validate3/replay4/package-scaffolding7/7. Source15
+remains uninstalled. Next human Sol High before further gated Windows work.
 
 Installed dev10 remains149 reviewed files and the same private settings/mod rules/
 data/project/scope/retention/patch/export grants. Last High inventory3enabled/
