@@ -1,5 +1,52 @@
 # Continuation verification log
 
+## Source24 Astra reliability review — 2026-10-24
+
+Human selected GPT-6 Astra Ultra from9becda0. Production behavior/permissions/
+deadlines/gates, installed human-trusted dev10 and logging scope remain unchanged;
+source24 is uninstalled, full93-capability product incomplete. Only runtime-reported
+version changed. [Detailed review](DEV24-REVIEW.md) preserves all experiment limits.
+
+Tested [5fa65b5](https://github.com/HarryBurd33/claude-mods-for-codex/commit/5fa65b562d96b2737e54b73573fc699b8aca8119),
+[CI40118125538](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40118125538):
+all7 jobs passed. Actual Windows22/24 decoded logs120943628996/120943629060:
+each22 existing storage/observer checks +3 lock fixtures (two diagnostic modes),
+plus75 process/security proofs, zero failures/skips. Both access-mask observations
+created/acquired successfully after owner release while old handle remained open;
+the proposed deleted-name contention explanation is refuted on this tested host.
+Held-owner refusal preserved identity; fresh acquisition/cleanup after release
+passed. No permission/lock repair follows. Copied state trace9writes per lane,
+3fresh roots with3records each, no refusal labels; old exact failure remains unknown.
+
+Actual four POSIX logs (mac22/24:120943628910/120943629031;
+Ubuntu22/24:120943629123/120943628950) each189pass/0fail/98Windows-only skips287total.
+The8-by-4 slow-sync fixture now controls ONLY its copied acquisition clock while
+retaining real sync/all32 records; original real-clock32 and separate budget/held-
+lock/expiry tests remain. Mac positive listing/diff and independent helper sentinel
+absence passed all4; old refusal cause unproved. Portable120943628814 success
+conclusion only. WindowsServer2025/NTFS/PowerShell5.1 is not Windows11 Codex/WSL.
+
+Preserved new failure:5b1854f/CI40117615834, both Windows23pass/1fail/0skip24total;
+our first experiment asserted its unmeasured deletion hypothesis and exited1,
+stage unlogged690.2222/831.9914ms. Existing22/held-lock passed;75proofs skipped.
+Revised diagnostic observations above refuted that hypothesis. Not a runtime bug
+fix or retry/erasure. Four decoded POSIX189/0/97skips and portable passed then.
+Source23 missing-observer, Windows initial-write, POSIX busy and macOS unavailable
+failures remain below and in DEV23-REVIEW; exact old causes are not invented.
+
+Local macOS14.6/Node24.22.0/npm11.19.1: focused contention/budget5pass;
+workspace15pass; initial full189/0/97skips286total (before third Windows-only case);
+validate3/replay4/syntax/diff-check passed. Final code full counts come from CI;
+no repeat solely for documentation. All149 installed bytes/settings hash/93 IDs
+preserved. No native install/trust/UI/event/model/API run or config/logging change.
+README/status/ledger now show a current summary; previous history remains here,
+in versioned reviews and Git. Source24 packaging is outstanding.
+
+Next human **GPT-6.1 Sol Medium** for exact public clone/package/extraction and
+routine docs; **High before gated Windows security or consequential runtime repair**.
+Save/upload/full-tree/independent-ref verification, then stop; no background work.
+The full product remains incomplete. Earlier model-next statements are historical.
+
 
 ## Source23 High checkpoint — observer tests corrected; reliability incomplete — 2026-10-24
 

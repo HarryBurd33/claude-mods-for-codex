@@ -166,3 +166,19 @@ call, background watcher, deadline extension or automatic retry is implied.
 Source23 tests live delivery and expiry with a clock controlled only inside a
 throwaway test process using actual storage; they are not native client or
 real-time delivery guarantees. The production observer/read/write code is unchanged.
+
+## Contention and unavailable state
+
+Scoped activity is bounded, best-effort telemetry. A writer can refuse when lock
+acquisition or its helper budget is exhausted; an unavailable result is not proof
+that no bytes were committed. Do not automatically retry an event after an
+ambiguous failure. Counts report retained metadata and do not attest complete
+event delivery or producer health. Refusal never overrides a guard denial.
+
+The POSIX lock permits1000ms idle and2500ms total acquisition scheduling, with
+idle renewal only after a validated lock-object change. Already-pending IO and
+critical-section sync are not forcibly interrupted by that schedule. Windows
+locks attempt creation50times with10ms between collisions; this is not a hard
+500ms method deadline. Neither policy promises success under arbitrary load.
+Source24 separates slow-sync concurrency correctness, expiry/refusal and observed
+OS handle lifetime in tests, without increasing production budgets.

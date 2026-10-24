@@ -128,3 +128,64 @@ must be distinguished from a runtime fix, and exact old causes remain unproved.
 Current README/status/ledger introductions now replace repeated historical model-
 next text with a clear current summary. Full prior records remain in TEST-LOG and
 versioned reviews/Git history. All93 IDs and implementation rows are retained.
+
+## Corrected observations and final decision
+
+Tested source [5fa65b5](https://github.com/HarryBurd33/claude-mods-for-codex/commit/5fa65b562d96b2737e54b73573fc699b8aca8119),
+tree `679ff15f56bf837c520d8ed01a42526182a534e5`,
+[CI40118125538](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40118125538):
+all seven jobs passed. Actual decoded logs for both Windows and all four POSIX
+lanes were read, not inferred from job conclusions.
+
+| Lane / job | Observed result |
+| --- | --- |
+| Windows Node22 / 120943628996 | 25 checks: 22 existing storage/observer checks and 3 lock fixtures; plus 75 process/security proofs. Zero failures/skips. |
+| Windows Node24 / 120943629060 | Same 25 plus75, zero failures/skips. |
+| macOS Node22 / 120943628910 | 189 passes, zero failures,98 Windows-only skips,287 total. |
+| macOS Node24 / 120943629031 | Same189/0/98; hostile-helper sentinel absent. |
+| Ubuntu Node22 / 120943629123 | Same189/0/98; hostile-helper sentinel absent. |
+| Ubuntu Node24 / 120943628950 | Same189/0/98; hostile-helper sentinel absent. |
+| Windows portable / 120943628814 | Successful job conclusion; separate from native host acceptance. |
+
+Windows Server2025/NTFS/PowerShell5.1, not Windows11 Codex. In BOTH lanes and
+BOTH handle modes, direct creation returned success/error0 and the actual lock
+contender acquired while the old metadata handle remained open. Explicit release
+then permitted another fresh acquisition and empty cleanup. The proposed
+delete-pending-name explanation is **refuted for these tested schedules/host**.
+Do not remove LockExists or change retries/permissions based on that hypothesis.
+No universal Windows filesystem behavior is inferred from the samples, and
+generic API deletion wording alone does not establish pathname reuse behavior.
+
+The separate unchanged-owner fixture required the actual contender to refuse,
+preserved the owner's identity, then acquired after explicit owner release. The
+two access-mask modes are diagnostic observations, not two new production
+availability guarantees; report the25 count with that distinction. Current
+copied-helper state tracing again observed9 successful writes per lane across
+3 fresh roots, count3 each, with no refusal labels. The original initial-write
+failure remains unlocalized; this run does not retrospectively explain it.
+
+All four POSIX lanes passed both the controlled-clock slow-sync32-write case
+and the original real-clock32-write case. The existing hostile-repository
+availability/diff assertions and independent sentinel absence passed in all four.
+The older macOS failure's reason and old POSIX schedule remain unknown. Sanitized
+future refusal evidence is available; no blind retries or runtime repair is justified.
+
+All production observer/storage/lock/Git behavior is byte-identical to9becda0;
+only reported version24 changed. Installed149-file dev10/private settings and all
+93 requirement identities are preserved. No user action/config rollback needed.
+Following final records change documentation only, so no new full-suite run is
+needed solely for those notes. Source24 package/archive verification is outstanding.
+
+## Human-controlled next stage
+
+**GPT-6.1 Sol, Medium** is sufficient for exact public-clone/archive verification
+and routine documentation reconciliation. Do not keep Astra running for packaging.
+Before any gated Windows authority/loader/Git/writer work, or a consequential
+runtime/security repair, save/verify and request human **Sol High**. Lack of the
+old exact failure timings is explicit uncertainty, not a reason for endless
+speculative policy changes or repeated model-switch proofs. Preserve those failed
+runs, the refuted hypothesis and existing strict functionality assertions.
+
+Native Windows11/WSL, remaining macOS lifecycle/theme/event coverage and every
+unfinished ledger acceptance stay incomplete. Do not declare the full product
+finished or install source24 as part of routine package verification.

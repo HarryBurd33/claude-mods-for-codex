@@ -12,7 +12,10 @@ limited to the deliberately selected disposable project. Source24 is uninstalled
 This milestone separates concurrency correctness from finite wait budgets, adds
 actual Windows lock-lifetime experiments, and improves failure evidence for Git
 inspection. [Review and observed results](docs/continuation/DEV24-REVIEW.md).
-Windows CI is still being evaluated; no native Windows Codex or WSL acceptance.
+All seven CI jobs passed. Both Windows lanes passed22 existing storage/observer
+checks,3 lock fixtures (two diagnostic), and75 process/security proofs. All four
+POSIX lanes passed189 tests with98 Windows-only skips. This is not native Windows
+Codex or WSL acceptance. No production lock change was justified by the experiment.
 Windows dashboard settings, project/Git views and restore still refuse before IO.
 The prior macOS availability refusal and exact older storage failure causes
 remain unproved. No logging, trust, permission or production deadline expansion.

@@ -1,30 +1,33 @@
 # Extension architecture and security contracts
 
 
-## Source23 High checkpoint — observer tests corrected; reliability incomplete — 2026-10-24
+## Current reliability contracts — source24 Astra review
 
-The observer test now respects absolute lifetime across consumer pauses. Actual-
-storage controlled-clock cases require live3→4/cancel AND expiry/no yield/fresh4.
-Production observer/storage/deadlines/permissions are unchanged. Strict concurrent
-initialization waits every writer before requiring all3 successes; no assertion
-weakening, event retry, lock-budget increase or production logging expansion.
+The installed human-trusted snapshot remains dev10; source24 is uninstalled.
+All Windows settings/project/Git/restore gates, authority checks and production
+storage/observer/lock deadlines remain unchanged. Historical sections below are
+versioned evidence, not instructions to change the selected model or install.
+See [current review](DEV24-REVIEW.md) and [handoff](HANDOFF.md).
 
-Latest source [ccf6fbc](https://github.com/HarryBurd33/claude-mods-for-codex/commit/ccf6fbc6dc19ccd932db10a082ec54d15adabb43),
-[CI40075868007](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40075868007):
-both Windows lanes22storage+75proof passed; copied-helper diagnostic9writes each
-passed with3records per fresh root, no refusal labels. Three POSIX lanes188/0/95skips;
-macOS22 failed an existing available:true assertion (187/1/95), reason unlogged,
-sentinel assertion not reached. No helper-execution inference. Earlier Windows
-concurrent refusal and POSIX slow-sync busy failures remain unresolved and preserved.
-Own diagnostic CRLF matcher failure was fixed in copied-source preparation only.
+Correctness and availability are separate contracts. Exclusive creation owns a
+lock; a metadata observation never does. A bounded contender may refuse under a
+paused owner or heavy IO. Never infer that a refused operation committed nothing
+unless its actual stage establishes that, and never automatically replay it.
+The POSIX slow-sync fixture now proves all32 durable events with a controlled
+acquisition clock; scheduler/actual held-lock tests separately prove bounded
+refusal and unchanged existing data. The original real-clock32-write case stays.
 
-Local188pass/0fail/95Windows-only skips283total; validate3/replay4. Source23
-uninstalled; dev10 human trust/private settings/logging scope/all93requirements/
-production Windows gates unchanged. Full product incomplete. See [DEV23-REVIEW](DEV23-REVIEW.md).
-Next human GPT-6 Astra Ultra for remaining private-storage/locking/inspection
-reliability review; Medium is insufficient. Earlier records below are historical.
+Observer duration includes consumer pauses. Iteration closure is valid; the
+for-await consumer handles it, and fresh scoped reads retrieve retained events.
+These guarantees do not establish producer health, exactly-once delivery or
+permanent live subscriptions. No logging scope is expanded for a test.
 
-
+Windows lock handle lifetime is measured by access mask, not inferred from a
+share flag alone. The test-only partial compiles with the actual unchanged helper;
+metadata-only and directory-data observations remain separate. These fixtures
+provide no new private/executable authority or native Codex acceptance. The exact
+old Windows refusal stage remains unproved. Mac inspection keeps positive view
+and helper-nonexecution assertions, now with sanitized refusal evidence.
 
 ## Source22 Medium package verification — 2026-10-24
 

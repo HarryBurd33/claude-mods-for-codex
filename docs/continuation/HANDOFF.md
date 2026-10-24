@@ -1,185 +1,196 @@
-# Source23 handoff — human GPT-6 Astra Ultra required
+# Source24 handoff — GPT-6.1 Sol Medium
 
-2026-10-24. Human selected GPT-6.1 Sol High from verifiedd11a4a6 on
-`codex/astra-groundwork`. Observer test assumption corrected and tested on Windows.
-Separate persistence/locking/inspection reliability questions remain. Medium is
-insufficient; strongest-model review is needed before security or deadline changes.
-Source23 is uninstalled; full93-capability product remains incomplete.
+2026-10-24. Astra Ultra resumed verified9becda0 on codex/astra-groundwork.
+Reliability review and decisive OS investigation are complete for this milestone.
+**The full93-capability product remains incomplete.** No production permission,
+logging, storage, observer, Git or deadline behavior changed. Source24 is uninstalled.
 
-## Read first, without restarting research
+## Read first
 
-Read this file; STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md,
-DEV23-REVIEW.md, PACKAGE-DEV22.md, DEV22-REVIEW.md, DEV21-REVIEW.md,
-DEV20-REVIEW.md, DEV19-REVIEW.md, ../runtime.md, ../windows-storage.md,
-../windows-native-acceptance.md; latest ignored root HANDOFF.md.
-Do not repeat the whole Claude/Codex survey or repair unrelated tools. Investigate
-these concrete failures first. Private machine paths/config/raw logs stay ignored.
-Historical model-next statements below current summaries do not override this file.
+Read this file, STATUS.md, DEV24-REVIEW.md, REQUIREMENTS.md, ARCHITECTURE.md,
+the latest TEST-LOG.md entry, PACKAGE-DEV22.md and ../packaging.md. Read the latest
+ignored root HANDOFF.md for exact local artifacts and final checkpoint identity.
+Consult DEV23-REVIEW.md for the original failures; do not restart the entire
+Claude/Codex/REA survey. Historical model-next statements do not override this file.
 
-## Exact source and observed latest run
+## Verified code checkpoint and observed checks
 
 Repository: https://github.com/HarryBurd33/claude-mods-for-codex
-Branch: `codex/astra-groundwork`.
-Latest tested source:
-[ccf6fbc6dc19ccd932db10a082ec54d15adabb43](https://github.com/HarryBurd33/claude-mods-for-codex/commit/ccf6fbc6dc19ccd932db10a082ec54d15adabb43),
-tree `ebdf2bf9de47edd60ca371e3be46553ce70db4fd`.
-[CI40075868007](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40075868007):
-6jobs passed, macOS Node22 failed. Actual decoded logs read:
+Branch: codex/astra-groundwork.
+Local and verified remote tested code:
+[5fa65b562d96b2737e54b73573fc699b8aca8119](https://github.com/HarryBurd33/claude-mods-for-codex/commit/5fa65b562d96b2737e54b73573fc699b8aca8119).
+Tree: 679ff15f56bf837c520d8ed01a42526182a534e5.
+Equivalent local bddf86ac2210694953fd5780a5af4326d2e05845 retained on
+codex/dev24-lifetime-diagnostic-local-checkpoint.
+Expected-parent/nonforce upload, fetched full-tree equality observed.
 
-- Windows22 job120818952009 and Windows24 job120818951871: each22storage+
-  75process/security proof passes, zero failures/cancellations/skips. Real NTFS/
-  Server2025/PowerShell5.1, not Windows11 native Codex. New controlled observer
-  live3→4/cancel and expiry/no yield/old TypeError/fresh4 cases passed.
-- Each Windows copied-helper diagnostic:3fresh roots×3concurrent writes, all9
-  responses successful, each root fresh count3, no refusal labels. It did NOT
-  reproduce or explain the older concurrent-creation refusal.
-- Ubuntu22/24 jobs120818951986/120818951990 and macOS24 job120818952014:
-  each188pass/0fail/95Windows-only skips283total.
-- macOS22 job120818951996:187pass/1fail/95skips. Existing hostile-repository test
-  at workspace.test.mjs188 received listProjectFiles.available:false instead of
-  true, duration130.797042ms. Reason not logged; diff and negative sentinel
-  assertion192 were NOT reached. No helper-execution or sentinel-absence claim.
-- Windows portable120818952065:successful conclusion, not native acceptance.
+Earlier source24 code:
+[5b1854f7bd5b07016b390146e43fdcf48bc2ba07](https://github.com/HarryBurd33/claude-mods-for-codex/commit/5b1854f7bd5b07016b390146e43fdcf48bc2ba07),
+tree828d97055f5aa1e6ef44f7b3acc501f215f7bddb.
+Equivalent local c92281bfca02ddaf3c7e2f32d206952587646043 retained on
+codex/dev24-reliability-local-checkpoint. Its anonymous public ref was verified.
+No force-push or lost commits. Following final handoff commit changes documentation
+only; its actual identity is read back after upload in the checkpoint reply and
+ignored handoff, avoiding a self-referential hash. Verify current HEAD/ref before work.
 
-Fresh local macOS14.6/Node24.22.0/npm11.19.1: npm test188/0/95skips283total;
-state+boundary targeted15/0/1skip; boundary2/0/0skip; validate3mods/replay4fixtures;
-node --check diagnostic and --shape-only synthetic CRLF preparation40callsites
-passed. These source-shape/logical-clock checks are not Windows support. Diff clean.
+[CI40118125538](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40118125538)
+on5fa65b5 passed all seven jobs. Both Windows and all four POSIX decoded logs read:
 
-Source local equivalents retained:45a416f (observer) on
-codex/dev23-observer-local-checkpoint;1d0b585 (diagnostic) on
-codex/dev23-state-trace-local-checkpoint;c95441c (CRLF/cleanup) on
-codex/dev23-trace-crlf-local-checkpoint. Expected-parent/nonforce uploads and full
-remote-tree/anonymous-ref checks observed. Following notes-only handoff commit's
-actual local/remote/tree identities belong in checkpoint reply/ignored handoff
-after readback, avoiding self-hash claims. Next model must verify HEAD/ref.
-No force-push/lost history. Source23 packaging remains unverified/separate.
+- Windows Node22 job120943628996 and Node24 job120943629060: each25 checks
+  (22 existing storage/observer plus3 lock fixtures, including TWO diagnostic
+  modes), plus75 process/security proofs, zero failures/cancellations/skips.
+- Actual NTFS/Windows Server2025/PowerShell5.1; not Windows11 Codex acceptance.
+  Both access-mask diagnostic modes observed create-error0/contender-acquired
+  while old handle remained open. Held owner: refused, same identity; after
+  explicit release: fresh acquisition and empty cleanup.
+- Each copied state diagnostic:9 successful writes across3 fresh roots, count3
+  each, no refusal labels. Not an explanation of the older unlocalized refusal.
+- Ubuntu22 job120943629123, Ubuntu24 job120943628950, macOS22 job120943628910,
+  macOS24 job120943629031: each189 passes/0 failures/98 Windows-only skips,
+  287 total. Controlled slow-sync32, original real-clock32 and strict hostile-
+  repository listing/diff passed; helper sentinel absence observed in all four.
+- Windows portable job120943628814: success conclusion only, separate scope.
 
-## Failure ledger — preserve each, no retry/erasure
+Local macOS14.6, Node24.22.0/npm11.19.1:
+node --test test/state-contention.test.mjs test/state-lock-budget.test.mjs:
+5 passes/0fail/0skip.
+node --test test/workspace.test.mjs:15/0/0skip.
+Initial source24 npm test:189/0/97 Windows-only skips,286 total (before the third
+Windows-only diagnostic was added). Final code's current full counts are the
+actual four CI lanes above. npm run validate:3 mods; npm run replay:4 fixtures.
+Node syntax and git diff --check passed. No extra full run solely for final notes.
+Source24 clean-clone/archive/extraction verification remains outstanding.
 
-1. e44dd93 notes CI40073187216 Windows22 job120810857964:19storage pass/1fail,
-   missing second observer value at windows-storage.test.mjs227,22595.0689ms.
-   First snapshot3 and awaited write completed. Exact per-phase times/result not
-   logged. Valid absolute expiry reproduces error shape, not old host timing.
-2. a70f90b CI40075058916 Windows22 job120816524685:21storage pass/1fail/22,
-   INITIAL concurrent3writes refused at220,1097.918ms, generic native unavailable.
-   Both controlled observer cases passed; original state case never reached them.
-   Proof step skipped; Windows24 passed22+75. Exact native refusal point unproved.
-3. 90375af CI40075581270:both Windows storage22passed; own diagnostic then failed
-   Script diagnostic shape on CRLF checkout before native tracing, process proofs
-   skipped. Fixed by normalizing copied source only, preserved failed run.
-   Same run Ubuntu22 job120818082991:existing slow-sync32-event case failed
-   4199.936832ms, one child busy/completed0 vs all8×4expected;187/1/95skips.
-   No post-assertion retained-count claim. Exact host delay/handoff cause unproved.
-4. ccf6fbc latest macOS22 availability failure above. No root cause or claim that
-   malicious helper ran, and no claim sentinel absent when assertion was not run.
+## Decisions and exact code contracts
 
-Do not conflate these with source20 old38848a8/CI40068264694 contention failure,
-source21 b16a749/CI40071218873 fixture inheritance failure/correction in4b99ac1,
-or source22's passing46c417d/CI40072785589 OS proof. All remain version-specific.
-Later d11 notes CI40073546538 concluded success; no new decoded counts/cause claim.
-No manual retry of any failed run; new source/diagnostic runs are distinct commits.
+1. POSIX correctness versus availability:
+   src/state-lock-budget.mjs remains1000ms idle/2500ms absolute acquisition
+   scheduling, no FIFO or arbitrary-load success guarantee. The old injected
+   stress case serializes at least1920ms before real IO; its unconditional
+   success demand under all host schedules was stronger than this contract.
+   test/state-contention.test.mjs controls ONLY the one acquisition-clock
+   callsite in its owned source copy.8 children times4 events,60ms before every
+   REAL fsync, all32 retained with correct counters and no locks remain required.
+   The group watchdog is real and finite. No production clock seam, event replay,
+   lock stealing, dropped sync or relaxed count. A separate original-budget
+   controlled expiry after a real collision requires same held lock identity/
+   permissions, exact prior journal bytes/snapshot and no new files.
+   Existing production-clock32 and real held-lock tests remain unchanged.
 
-## Code contracts and implemented scope
+2. Windows hypothesis refuted:
+   proofs/windows-lock-contention.cs/.ps1 and
+   test/windows-lock-contention.test.mjs compile an original test-only partial
+   with actual unchanged PrivateStorage.cs. They measure exact LockExists
+   metadata-only rights versus added FILE_LIST_DIRECTORY, both share7.
+   Both measured modes permitted name recreation/acquisition on this host.
+   Thus do NOT remove LockExists or alter retry/error/ACL policy based on the
+   proposed deletion-lifetime explanation. It was not reproduced.
+   The two modes are diagnostic observations, not accept-either storage
+   acceptance. The separate held-owner test has strict refusal/identity/release
+   invariants. Closed failure stages and numeric results only; no raw errors,
+   paths, ACLs, SIDs, environment, session or journal content.
+   Fixed OS helper, bounded owned-process/output cleanup; no native client run.
+   Original50 acquisition attempts with10ms sleeps are not a hard500ms method bound.
 
-Production state.mjs/windows-state.mjs/windows-storage.mjs/PrivateStorage.cs/
-state-lock-budget.mjs/ProgramBoundary/OwnedProcess/CodeAncestorAssessment/Lease are
-byte-identical to d11a4a6. Only package/manifest/server version23 changes in production.
-No increased observer/helper/sharing/lock budgets, disabled sync, event replay or
-permission/logging expansion. All Windows settings/project/Git/restore before-IO
-gates remain. No original Git-pin change, candidate executable read/run or loader
-provenance claim. Source22 retained metadata is not atomic ACL/code/private authority.
+3. macOS inspection:
+   test/workspace.test.mjs keeps mandatory positive listing/diff checks and now
+   reports the existing sanitized API reason on refusal. Finally checks helper
+   nonexecution even if availability fails. No production Git, timeout, traversal
+   or permission repair. Old failure reason remains unknown.
 
-Observer duration is absolute from first iteration, including consumer pauses.
-Server uses for-await and handles closure. Original unsafe dereference was in test.
-proofs/state-observer-clock.mjs imports actual functions/storage; overrides ONLY
-child process global performance while next pending, restores in finally. Writes/
-lock budgets use real clock; timers/helper deadlines unmodified. Closed modes live/
-expired, fixed synthetic metadata/root, sanitized counters/timings only. No installed
-app injection, copied observer implementation or production clock option.
-Test/state-observer-boundary.test.mjs has2cases, bounded child/output/cleanup;
-Windows test uses direct fresh4read plus same scope/prune/strict metadata assertions.
-Initial3writes still start concurrently; Promise.allSettled waits EVERY helper
-before requiring ALL3fulfilled and tearing down. No serialization/fewer writers/
-optional success branch or weakened32-event assertion.
+4. Observer review:
+   Source23's isolated clock tests correctly distinguish absolute lifetime
+   (including consumer pauses) from persisted writes. Production for-await
+   consumer handles closure. No runtime patch needed; not real-time/native delivery.
 
-proofs/windows-state-trace.mjs copies public C#/PowerShell/bridge into own temporary
-root. Forty numbered Refuse callsites mapped to original source lines, closed
-exception/compiler categories, bounded labels/timing frames; no paths/SID/ACL/
-environment/content/session logs. Original API/deadlines remain, temporary copies
-normalize CRLF before matching. --shape-only simulates CRLF preparation without
-Windows execution. Three fresh roots only; reports refusal as refusal, never
-acceptance. Current9/9perlane success leaves old failure unknown. Instrumentation
-can change timing and later labels classify that sample, not old atomic cause.
-CI diagnostic always runs after storage and cannot clear earlier failures.
+5. Reporting:
+   README/PUBLIC_STATUS/STATUS/REQUIREMENTS introductions now show current state
+   instead of repeated historical model-next text. All93 IDs retained.
+   Prior records survive in TEST-LOG/versioned reviews/Git. Runtime docs explain
+   bounded best-effort telemetry and prohibit automatic replay of ambiguous writes.
 
-## Status, installation, privacy and rollback
+Primary Microsoft sources and retrieval date are in DEV24-REVIEW. Generic
+RemoveDirectory wording alone did not establish pathname-reuse behavior.
+No new permission, authority, installer trust, code admission or loader decision.
 
-Completed: observer contract/probe/test correction, actual Windows observer cases,
-fixture await-all cleanup, diagnostic preparation/execution. Partial/unresolved:
-Windows concurrent creation refusal, POSIX finite-budget32-write reliability,
-macOS read-only inspection availability, source23 package. Unverified: Windows11
-Codex installation/trust/hooks/sandbox/dashboard, WSL, executable/loader/source
-provenance and remaining gates. PL-04 unverified; all93 IDs/order retained.
+## Preserve failed evidence and uncertainty
 
-Installed human-trusted dev10 stays byte-equal to149-file immutable fixture;
-private settings unchanged. Logging selected disposable child only; this chat
-outside it. No source23 install/update, native inventory/hook/UI/trust observation,
-config/cache/retention/export/observer/theme/client/model/API-run change. No secrets,
-paid keepalive, automatic approval/model switch or prompt rewriting. Windows11
-latest unavailable; do not ask again until availability changes. Any extra native/
-model/API test needs separate visible bounded user authorization.
-No machine rollback needed; remove only own ignored artifacts after children exit.
-Never remove live locks, patch installed cache/trust hashes, repair system ACLs,
-restore shared config wholesale or globally trust Installer. Existing selective
-supported dev10 disable/removal/rollback separate; settings/data preserved. Future
-installed changed code requires human trust review. No protected user action or
-restart needed for source investigation.
+- Source23 e44dd93/CI40073187216: missing second observer value; precise phases
+  unlogged. Controlled expiry is valid error shape, not retrospective timing proof.
+- a70f90b/CI40075058916: initial Windows three-writer generic refusal; exact stage
+  unknown. Current diagnostic success does not prove that cause fixed.
+- 90375af/CI40075581270: copied diagnostic's CRLF setup bug (corrected separately);
+  Ubuntu22 slow-sync case had one busy child. Exact old scheduling unknown.
+- ccf6fbc/CI40075868007: macOS22 available:false; old reason and sentinel state
+  unobserved because original assertion stopped early. No malicious-execution claim.
+- New5b1854f/CI40117615834: both Windows lanes23pass/1fail/24total because our
+  first lock experiment ASSERTED its unmeasured deletion hypothesis. Stage
+  unlogged,690.2222/831.9914ms. Existing22 checks/held-lock passed;75 proofs skipped.
+  Four actual POSIX lanes189/0/97skip; portable success. Revised measurements on
+  5fa65b5 refuted the hypothesis. No runtime fix, retry or erasure.
 
-## Exact next model and priority tasks
+These are bounded-availability uncertainties, not proof of corrupted storage.
+A refusal after an unknown stage does not prove no commit; do not retry events.
+No identified security/runtime defect justifies speculative repair at this point.
+A new reproducible failure may need High; never silently weaken its assertion.
 
-**GPT-6 Astra, Ultra.** Remaining issues cross private persistence, lock ownership,
-bounded-completion claims and trusted Git inspection. Medium is insufficient;
-strongest review is warranted before any policy/deadline repair. Human switch only.
+## Installation, scope and rollback
 
-1. Verify checkpoint/ref, read this ledger and actual failure records. Review
-   observer correction and isolated fixture cleanup/clock limits; do not redo all
-   Claude/Codex/REA research or assume latest green Windows means old issue fixed.
-2. Investigate Windows initial3-writer refusal: original PrivateStorage Pins/State/
-   JournalLock/open-sharing/create protocol vs Node helper bounds. Current trace
-   did not reproduce it. Define a controlled harmless owned-fixture experiment
-   with fixed-stage diagnostics before altering production. No ACL repair/global
-   Installer exception/PATH-project executable fallback or blind retry/budget bump.
-3. Review POSIX conditional1000ms idle/2500ms total schedule versus actual32×60ms
-   sync-latency test under scheduler/IO load. Keep exact old CI delay unproved.
-   Preserve meaningful32-write verification and real sync; don't merely accept
-   fewer writes, steal locks, replay events or assert arbitrary-load success.
-4. Investigate macOS22 available:false at workspace.test.mjs188. Capture bounded
-   sanitized refusal reason at the synthetic boundary and ensure sentinel checks
-   can establish nonexecution even on availability refusal. Preserve positive
-   functionality and hostile-config defenses; do not remove either assertion.
-   No helper-execution inference from title, no private project/session discovery.
-5. Prioritize a coherent contract/fix, complete decisive controlled proofs and
-   appropriate actual CI, preserve failures and privacy. If no cause reproduced,
-   say exactly what remains unverified; do not manufacture certainty from samples.
-6. Save runnable progress/public required records, upload expected-parent/nonforce,
-   independently verify full tree/anonymous ref. Choose exact next least expensive
-   model/effort suitable for remaining work, then STOP for human switch. Sol Medium
-   only when remaining work is routine; no delegation/background/scheduled bypass.
+Installed human-trusted dev10 remains byte-equal to its149-file reviewed fixture.
+Private settings hash and explicitly selected disposable project logging scope are
+unchanged; this chat is outside that scope. Exact private paths stay ignored.
+No install/update/native inventory/hook/UI/trust/config/cache/retention/export/
+observer/theme/client/model-selection change and no extra native/model/API run.
+Prior native host versions/results remain historical, not refreshed by this stage.
+All Windows settings/dashboard/project/Git/restore before-IO gates remain closed.
+Windows11 availability was last answered unavailable; do not ask again until changed.
+Native Windows11 and WSL acceptance remain unverified.
 
-All supported unfinished requested capabilities remain in scope. No custom-client/
-fork/installed-app patch direction without user agreement. This is not a release.
+No protected user action or restart is required for packaging. No machine rollback
+is needed. Remove only owned test/package artifacts after child exit. Never remove
+live locks, repair system ACLs, patch installed cache/trust hashes, globally trust
+Installer or restore shared config wholesale. Existing supported selective dev10
+disable/removal/rollback instructions remain in ../removal.md; settings/data separate.
+Future installed changed code requires supported update and human trust review.
 
-## Complete resume instruction
+## Next exact model, effort and tasks
 
-I've switched to GPT-6 Astra, Ultra. Continue from the verified source23 High
-checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and listed
-files plus latest ignored root HANDOFF.md; verify exact remote HEAD. Review the
-observer test correction and investigate remaining Windows concurrent-creation,
-POSIX slow-sync contention and macOS inspection-availability failures. Preserve
-all failed runs, exact-cause uncertainty, actual OS versus logical-clock/native-host
-distinctions, logging scope, human trust, installed dev10/private settings, all93
-requirements and every production gate. No blind timeout/permission repair, weaker
-assertions, old-run retry, global Installer trust, system ACL repair, candidate Git
-execution or extra native/model/API test. Save/upload/verify a runnable checkpoint
-and stop for the next human-controlled model switch when sufficient.
+**GPT-6.1 Sol, Medium.** Remaining immediate work is routine packaging/documentation,
+not policy repair. Stop for human Sol High BEFORE gated Windows authority/loader/
+Git/writer changes or consequential runtime/security repair. Do not spend Astra
+on repeated packaging. Same-setting source reviewers assisted this Astra review;
+no model switch was delegated.
+
+1. Verify final checkpoint/branch and preserve dirty user work. Clone the exact
+   public branch anonymously into an ignored owned directory, verify commit/tree,
+   and follow PACKAGE-DEV22/../packaging.md for source24.
+2. Verify package allowlist, MIT/disclaimer, version24 consistency, no private
+   paths/root handoff/logs/credentials/binaries/links/unsafe archive paths, no
+   lifecycle scripts/network dependency fetch, unchanged default-off logging.
+   Include new original lock proof sources; production wrapper must still load
+   only production helper source, not proof partials. Compare every packaged byte.
+3. Fresh spaced extraction: validate3, replay4, relevant package/scaffold/state
+   tests. Current full public clone should match189passes/98Windows-only skips
+   on POSIX, but record observed counts, not a hardcoded pass claim. Actual Windows
+   compilation/OS proof evidence is CI above, not local skips. Do not retry a
+   failed run to erase it. Capture any new failure before requesting needed High work.
+4. Reconcile routine documentation/version-specific records and ledger gaps.
+   No speculative Windows activation, user model run, new install or trust action.
+   Remaining native lifecycle/theme/events/accessibility and Windows gates stay
+   explicitly incomplete; prepare concrete reviewable steps if useful.
+5. Save sanitized required records and ignored local evidence, commit/upload without
+   force, read back exact full tree and independent public ref. Select exact next
+   model/effort for remaining work and STOP for human switch. High is required
+   before more gated Windows security; full product is not complete.
+
+## Copy-and-paste resume instruction
+
+I've switched to GPT-6.1 Sol, Medium. Continue from the verified source24 Astra
+checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and its
+read list plus the latest ignored root HANDOFF.md. Verify the exact public clone,
+source24 package and spaced extraction. Preserve logging scope, human trust,
+installed dev10, all93 requirements, production Windows gates, failure history
+and the refuted lock-lifetime hypothesis. Do not install, replay ambiguous events,
+change deadlines/permissions or run extra model/native tests. Stop for human Sol
+High before gated Windows security or consequential runtime repair. Save, upload
+and independently verify a runnable checkpoint before the next model-switch stop.

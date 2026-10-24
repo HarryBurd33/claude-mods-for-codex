@@ -1,4 +1,14 @@
-# Windows private storage — source21 assessment / unchanged production gates
+# Windows private storage — current source24 contract review
+
+Source24 changes no production storage, permissions, deadlines or Windows gates.
+Its actual Server2025 NTFS experiment refuted the proposed lock-handle lifetime
+cause on the tested host; the precise older concurrent-write refusal remains
+unknown. Both Windows CI lanes passed22 existing storage/observer checks,3 lock
+fixtures (two diagnostic), and75 process/security proofs. This is not native
+Windows11 Codex acceptance. Installed human-trusted dev10 and logging are unchanged.
+See [source24 review](continuation/DEV24-REVIEW.md) and the current handoff.
+The following foundations are version-specific historical evidence.
+
 
 Source22 isolates retained code-ancestor metadata sampling, no production policy
 change or private authority. CI40072785589 passed both OS lanes, each20storage+
