@@ -170,7 +170,8 @@ export function dispatch(event, config, resolveDefinition = getModDefinition) {
     // Do not clone or retain last_assistant_message, prompts, agent IDs or paths.
     return {
       output: {}, journal: null, diagnostic: null,
-      stateMetadata: config.metadataState?.enabled === true && config.metadataState.observerEvents?.includes(event.hook_event_name)
+      stateMetadata: (config.metadataState?.enabled === true && config.metadataState.observerEvents?.includes(event.hook_event_name)
+        || config.metadataState?.componentObserverEvents?.includes(event.hook_event_name))
         ? { event: event.hook_event_name } : null,
     };
   }

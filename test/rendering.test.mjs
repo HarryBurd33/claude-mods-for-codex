@@ -110,3 +110,17 @@ test('export outcomes render separately from hook counts with literal accessible
   assert.equal(descendants(parent).some(n => n.textContent === 'Failed turn records'), false);
   assert.ok(descendants(parent).some(n => n.textContent === 'No observation export selected.'));
 });
+
+test('authored status displays literal selected values, bounds and unavailable source before the Activity fallback (simulated DOM)', async () => {
+  const html=await loadDashboardHtml(),parent=new Element('div');
+  const helpers=html.slice(html.indexOf('function visible('),html.indexOf('function eventChart('));
+  const render=html.slice(html.indexOf('function render(view,data)'),html.indexOf('function stopWatch('));
+  const draw=runInNewContext(helpers+'\n'+render+'\n;render',{document:doc,$:()=>parent,eventChart:()=>{}});
+  draw('activity',{available:false,reason:'Scope not selected',statusComponents:[{title:'<img src=x onerror=alert(1)>',rows:[{event:'Stop',deliveries:null}],total:null}]});
+  let nodes=descendants(parent);assert.ok(nodes.some(n=>n.textContent==='<img src=x onerror=alert(1)>'));assert.ok(nodes.some(n=>n.textContent==='Unavailable'));assert.ok(nodes.some(n=>n.textContent==='Scope not selected'));
+  assert.equal(nodes.some(n=>['img','script','a'].includes(n.tagName)),false);assert.ok(nodes.some(n=>n.tagName==='th'&&n.scope==='row'));
+  draw('activity',{available:true,events:{},statusComponents:[{title:'Turn weather',rows:[{event:'Stop',deliveries:3},{event:'Interrupt',deliveries:1}],total:4}]});
+  nodes=descendants(parent);assert.ok(nodes.some(n=>n.textContent==='4'));assert.equal(nodes.some(n=>n.textContent==='Scope not selected'),false);
+  draw('activity',{available:true,events:{},statusComponents:Array.from({length:12},()=>({title:'bounded',rows:Array.from({length:20},()=>({event:'Stop',deliveries:1})),total:20}))});
+  assert.equal(descendants(parent).filter(n=>n.tagName==='h3').length,8);
+});

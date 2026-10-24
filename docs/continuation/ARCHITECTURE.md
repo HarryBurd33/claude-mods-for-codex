@@ -1,5 +1,38 @@
 # Extension architecture and security contracts
 
+## Source28 component authoring — current — 2026-10-24
+
+[DEV28-REVIEW](DEV28-REVIEW.md) and [workflow](../component-authoring.md) define new
+version1 observer/status/activity data contracts. Generated private bundles start
+reception/retention/display false; no automatic hook registration, runtime loading,
+installation or trust. Fixed source templates only, no arbitrary code/HTML/modules.
+POSIX exclusive private output/known files/completion hash marker, bounded stable
+private reads, exact content and intent-only booleans prevent accidental drift.
+Partial artifacts remain for inspection; no cleanup/retry or crash/same-user sandbox
+promise. New Windows IO refuses before argv/spec/path; all previous gates unchanged.
+
+A separate componentObserverEvents per-event storage list was chosen over toggling
+metadataState.enabled or a global observer switch: it cannot activate core or
+otherwise dormant legacy capture. Dispatcher projects event-only metadata when
+legacy opt-in OR authored event selection permits it, once per delivery. Existing
+config semantics/state/journal schema unchanged. Plans never supply new scope/data
+or change legacy enabled/observer choices. Shared event selections require review.
+
+Inline runtime statusComponents are bounded/disabled, no file path grants. New
+no-argument mods.status reads only existing selected scope while enabled; inactive
+avoids IO. Activity decorates its existing snapshot, not another read/subscription.
+Unavailable/invalid/overflow remains unavailable. Owned literal bounded tables are
+not native chrome, success/unique turns or producer health. Source28 not installed;
+current27 native evidence remains separate, settings/capture/trust/cache preserved.
+
+Skill now routes between legacy rules and new component commands, with usage/
+access/review/install limits. Local full228/0fail/111Windows skips; final related
+18/0/1. CLI demos and subprocess/VM tests are synthetic, not native28. Next Medium
+for CI/package and display-only native preparation; High before new source/security
+changes. Full93request remains incomplete. Earlier next-High authoring statements
+below are historical planning; this source milestone is implemented.
+
+
 ## Source27 restarted native observation — current — 2026-10-24
 
 [NATIVE-DEV27](NATIVE-DEV27.md): actual new observation tool and owned table

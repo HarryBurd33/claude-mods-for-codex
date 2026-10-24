@@ -41,6 +41,13 @@ function request(method,params){
 function visible(value){return String(value).replace(/[\u0000-\u0008\u000b-\u001f\u007f-\u009f\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/g,c=>'\\u{'+c.codePointAt(0).toString(16)+'}');}
 function text(parent,tag,value){const e=document.createElement(tag);e.textContent=visible(value);parent.append(e);return e;}
 function table(parent,rows){const t=document.createElement('table'),head=t.createTHead().insertRow();for(const v of ['Item','Value'])text(head,'th',v).scope='col';const b=t.createTBody();for(const[key,value]of rows){const r=b.insertRow();text(r,'th',key).scope='row';text(r,'td',value);}parent.append(t);}
+function authoredStatus(parent,components){
+  for(const c of (Array.isArray(components)?components:[]).slice(0,8)){
+    text(parent,'h3',c.title??'Authored status');
+    table(parent,[...((Array.isArray(c.rows)?c.rows:[]).slice(0,8).map(r=>[r.event,Number.isSafeInteger(r.deliveries)&&r.deliveries>=0?r.deliveries:'Unavailable'])),['Selected retained deliveries',Number.isSafeInteger(c.total)&&c.total>=0?c.total:'Unavailable']]);
+    text(parent,'p',c.semantics??'Retained deliveries only; display never enables capture.');
+  }
+}
 function eventChart(parent,events){
   const rows=Object.entries(events??{}).filter(([label,count])=>label.length<=80&&Number.isSafeInteger(count)&&count>=0).slice(0,32);
   if(!rows.length)return;
@@ -83,6 +90,7 @@ function patch(parent,value){
 }
 function render(view,data){
   const root=$('#'+view+'-result');root.replaceChildren();
+  if(view==='activity')authoredStatus(root,data.statusComponents);
   if(data.available===false){text(root,'p',data.reason??'Unavailable');return;}
   if(view==='activity'){
     revision=data.revision;table(root,[['Retained events',data.records??'Unavailable'],['Denials',data.denials??'Unavailable'],['Scope',data.scope??'Unavailable'],...Object.entries(data.events??{})]);eventChart(root,data.events);if(data.retention)text(root,'p',data.retention);if(data.captureNote)text(root,'p',data.captureNote);
@@ -177,7 +185,7 @@ $('#preview-clear').onclick=()=>{$('#preview-source').value='';$('#preview-resul
 $('#refresh').onclick=()=>refresh();$('#watch').onchange=()=>{if($('#watch').checked&&selected==='activity')void watch();else stopWatch();};
 (async()=>{
   try{
-    const host=await request('ui/initialize',{protocolVersion:'2026-01-26',appInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.27'},appCapabilities:{}});
+    const host=await request('ui/initialize',{protocolVersion:'2026-01-26',appInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.28'},appCapabilities:{}});
     if(closed)return;
     for(const[k,v]of Object.entries(host.hostContext?.styles?.variables??{}))if(/^--[a-z0-9-]+$/i.test(k)&&typeof v==='string')document.documentElement.style.setProperty(k,v);
     hostReady=!!host.hostCapabilities?.serverTools;send({method:'ui/notifications/initialized',params:{}});

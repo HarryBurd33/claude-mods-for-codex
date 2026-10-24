@@ -1,62 +1,42 @@
-# Current project status — source27 — 2026-10-24
+# Current project status — source28 — 2026-10-24
 
-macOS acceptance is the current priority. Source **0.2.0-dev.27** adds explicit
-read-only [command/turn export observations](docs/event-observation.md), a separate
-runtime read opt-in and an owned-panel outcome table. It distinguishes command
-status, nonzero exit, failed turns and stream errors without retaining raw content.
-There is no released failure hook in the reviewed CLI163/164 interface; the export
-is a disclosed snapshot approximation. Optional Stop/Interrupt observers remain off.
-Configured source27 is installed and human-trusted; bounded post-restart27
-[native acceptance passed](docs/continuation/NATIVE-DEV27.md): new synthetic outcome
-tool/table, six owned views and harmless pre-hook rewrite/control/deny behavior. [Package/install record](docs/continuation/PACKAGE-DEV27.md).
-The only new read opt-in is an explicitly authorized public synthetic fixture;
-logging scope/rules/usage selection and optional-hook defaults are unchanged.
+macOS acceptance is the current priority. Source **0.2.0-dev.28** adds a useful
+[observer/status-component authoring workflow](docs/component-authoring.md): describe,
+generate disabled private data, inspect access, validate, replay synthetic cases
+and print reviewed merge fragments. Existing notice/deny/replacement authoring is
+preserved. It creates no standalone plugin, arbitrary code or native host UI patch.
 
-Source26's POSIX [selected-scope retention CLI](docs/retention.md) remains available:
-read-only preview followed by explicit fingerprint-confirmed cleanup. No production
-cleanup, automatic recovery or Windows gate change. [Prior review](docs/continuation/DEV26-REVIEW.md).
+Source28 is **not installed or natively verified**. Local macOS tests:228pass/
+0fail/111Windows-only skips339total; final related checks18pass/0fail/1skip.
+CI/package/native28 checks remain separate. [Review](docs/continuation/DEV28-REVIEW.md).
+The new per-event authored-storage allowlist does not enable ordinary or dormant
+legacy logging. Reception, retention and display are independent choices, all off.
 
 Independent MIT-licensed project; not affiliated with or endorsed by Anthropic or OpenAI.
 
 This is a development checkpoint on `codex/astra-groundwork`, not a finished release.
 The default branch retains the MVP; the [93-capability ledger](docs/continuation/REQUIREMENTS.md)
-remains incomplete. Configured dev27 is installed in the local Codex user profile, with217verified
-cache files and three hooks personally reviewed/trusted. **Bounded restart/native27
-checks passed; wider lifecycle/platform acceptance is incomplete.** Earlier bounded
-dev26 results remain historical below.
-Existing logging scope/rules/usage selection are unchanged; the authorized
-359-byte synthetic observation fixture is selected through a new private settings
-copy. No production cleanup. Reviewed26/10 remain for selective rollback.
+remains incomplete. Installed human-reviewed27 remains unchanged:217verified files,
+existing capture scope/rules/data/retention, selected public synthetic export and
+old usage selection preserved. [Bounded native27 checks](docs/continuation/NATIVE-DEV27.md)
+passed for its synthetic table, six owned views and covered pre-hook checks; they
+do not certify source28, all events/accessibility, platforms or the full product.
 
-Prior source26 public clone:208tests passed/0failed/109Windows-only skips. Inspected210-file
-archive and fresh spaced extraction:33focused passes/0fail/1skip plus validate3/
-replay4. [Package/install record](docs/continuation/PACKAGE-DEV26.md). CI40128013186:
-four POSIX lanes pass; Windows portable passes; both Windows storage lanes retain
-the known failed image check. Packaging is not native-host or full-platform proof.
+The public defaults keep metadata off and register only three hooks. New authored
+status entries default absent; a display never enables capture. No new installation,
+trust/config write, production cleanup, event opt-in or additional model/API run.
+All old extra-run grants remain consumed. Local callbacks add no model calls;
+using this chat/skills still consumes selected-model usage.
 
-[Native dev26 results](docs/continuation/NATIVE-DEV26.md): two harmless exact
-rewrites, unchanged control and expected denial passed; six owned views/local
-preview rendered. One freshly authorized Sol Medium read-only run completed in
-7.3s; Watch showed4→7records in the unchanged selected scope. Grant consumed,
-Watch stopped; no production cleanup or further model run authorized. Full
-lifecycle/accessibility/events and the93-capability product remain incomplete.
+Windows remains in scope and later. New component IO refuses before options/path
+access; current Windows settings/project/Git/restore/retention guards and the known
+mandatory image-inventory failure remain unchanged. Prior27CI had four POSIX passes/
+portable Windows success but both Windows storage jobs failed that positive before
+bytes (links2 vs one-link guard). No native Windows11/WSL or all-green claim.
 
-Windows stays in scope and deferred. Its unchanged mandatory real-image check
-previously failed before bytes (observed2links versus the one-link guard). No
-candidate Git execution, image hash/import/version or native Windows11/WSL result.
-All production Windows gates remain closed. [Failure record](docs/continuation/DEV25-REVIEW.md).
-
-Source27 packaging/CI readback and supported update/human trust are recorded in
-[PACKAGE-DEV27](docs/continuation/PACKAGE-DEV27.md):217-file archive,46focused
-passes/0fail/2skips; four POSIX CI lanes217pass each and portable Windows pass.
-Both Windows storage jobs retain the known failed image check. The new outcome
-table shows only its authorized public synthetic snapshot; Activity remains in
-the unchanged selected scope. No extra model run/event opt-in or production cleanup.
-Next: human Sol High before [broader component authoring](docs/continuation/AUTHORING-NEXT.md).
-No native UI restyling, automatic trust, extra model/API run or full-product
-completion is implied. The [delivery plan](docs/continuation/DELIVERY-PLAN.md) retains remaining work.
-
-Use [setup](docs/setup.md), [runtime access](docs/runtime.md) and
-[privacy](docs/privacy.md) for the implemented tools and their access. Current
-continuation instructions are in the [handoff](docs/continuation/HANDOFF.md);
-historical results and failures remain in the [test log](docs/continuation/TEST-LOG.md).
+Next: human **GPT-6.1 Sol Medium** for exact source28 CI/package checks and concrete
+display-only native review preparation against existing selected metadata. Optional
+observer reception/storage, changed-code trust/restart and any separate model-run
+usage remain explicit human steps. See [handoff](docs/continuation/HANDOFF.md),
+[delivery plan](docs/continuation/DELIVERY-PLAN.md), [setup](docs/setup.md),
+[runtime access](docs/runtime.md) and [privacy](docs/privacy.md).

@@ -1,5 +1,59 @@
 # Continuation verification log
 
+## Source28 component authoring — 2026-10-24 — Sol High
+
+Human resumed a2f76b4. [DEV28-REVIEW](DEV28-REVIEW.md) gives exact implementation,
+security decisions and limits; [workflow](../component-authoring.md). New data-only
+observer/status/activity bundles, private completion/integrity/intent validation,
+synthetic CLI replay/plans, independent per-event componentObserverEvents and
+literal owned status projection. Existing legacy scaffold/guards/default hooks/
+state/journal/Windows runtime unchanged. Source28 not installed or natively tested.
+
+Node24.22.0/macOS14.6. Commands actually observed:
+- Initial focused components/scaffold/observers/dashboard/rendering32total:
+  30pass/1fail/1Windows skip. New test used incomplete direct factory settings and
+  hit invalid scope; corrected to real unavailable-session settings, no source
+  guard relaxation. Expanded related33total32pass/0fail/1Windows skip.
+- Full npm test339total228pass/0fail/111Windows-only skips. Final structural
+  hardening full repeat same228/0/111,7.1seconds. Final fixed relative fixture-label
+  refinement related19total18pass/0fail/1Windows skip. No broad repeat solely docs.
+- npm run validate3mods valid; npm run replay4legacy responses unchanged.
+  node --check new modules passed. git diff --check after EOF whitespace correction.
+- Two private source-CLI demos from public paired/status specs: scaffold-component,
+  validate-component, disabled replay, separate temporary boolean intent replay and
+  component-plan; synthetic totals5, originals unchanged. No installation, native
+  event, model/API call, production state or fixture command execution.
+- Skill quick_validate.py attempted with system and configured bundled Python;
+  both ModuleNotFoundError yaml. Helper unavailable/not passed; no install/system
+  repair. Frontmatter/routing/references manually inspected; source CLI workflows
+  and existing package metadata tests are distinct evidence, no independent model
+  skill evaluation/native28 claim.
+
+New coverage: independent reception/storage/display, no core/dormant legacy
+activation, overlap-once/legacy compatibility, valid/malformed/unknown projection,
+private/bounded/no-overwrite/link/hardlink/traversal/extra/tampered/partial bundle,
+max events, copied-source fault before marker (no cleanup/retry), real CLI intent/
+access plan, selected state isolation/no inactive IO, unavailable/zero/overflow,
+array/accessor rejection, actual synthetic hook subprocess only event+recordedAt,
+literal bounded accessible simulated UI. Windows actual before-input/argv/IO test
+added to portable CI; skips locally. No Windows IO/native-host claim.
+
+Preservation check: all93IDs/order, default hooks, legacy scaffold, state/journal/
+hook-main/retention/Windows helpers and settings early refusal unchanged. Installed
+27all217bytes exact candidate; old settings SHA/new authorized settings/fixture/
+usage/capture unchanged. Same three prior human-owned trust entries only vs backup,
+all other config/trust fields equal; no agent trust/cache/config write. Existing
+service Activity still7/same revision; no new observer storage/event opt-in/model
+run/production cleanup/background watcher. All previous extra-run grants consumed.
+
+Source28 CI/package/native checks pending. Prior27CI four POSIX217passes/portable
+success and both Windows storage jobs25passes/84of85process proofs; same mandatory
+installed-image positive failed before bytes. Do not hide/skip/weaken it or resume
+Windows proof loop. No new image hash/import/version/execution/native Windows11/WSL.
+Next exact human Sol Medium for readback/package/display-only native preparation;
+High before new correctness/security/consequential code. Full93product incomplete.
+
+
 ## Dev27 restarted native acceptance — 2026-10-24 — Sol Medium
 
 Human restarted/resumed75a0d6f. [NATIVE-DEV27](NATIVE-DEV27.md) records exact scope.

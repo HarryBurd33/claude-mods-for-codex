@@ -1,5 +1,12 @@
 # Dev27 native handoff — next GPT-6.1 Sol High
 
+Current source28 follow-up: the High component-authoring implementation is now
+runnable and tested; see DEV28-REVIEW.md, STATUS.md and ../component-authoring.md.
+Installed27/capture/trust/Windows guards unchanged. Next human Sol Medium for
+CI/package/display-only native review preparation. The earlier next-High planning
+below is historical; a precise source checkpoint handoff follows upload verification.
+
+
 2026-10-24. Human restarted and resumed Sol Medium from75a0d6f. The requested
 bounded native27 batch is verified: new synthetic observation tool/table, six owned
 views and harmless ordinary pre-hook rewrite/control/deny. No source/config/install/

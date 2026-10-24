@@ -38,6 +38,12 @@ extra model run. Original Hnow table below remains historical, not retroactively
 rewritten. New component authoring is the next High milestone; AU-06/07/10 and
 SK-04 remain partial. Full accessibility/lifecycle/platform gaps remain unchanged.
 
+Source28 follow-up: [DEV28-REVIEW](DEV28-REVIEW.md) implements broader bounded
+observer/status authoring and explicit per-event storage without scope/legacy
+capture widening. Source CLI tests/demos pass, native28 and review-to-install are
+pending. AU-06/07/10/SK-04 remain incomplete across their full target environments;
+original Hnow assessment stays historical. No native evidence silently inherited.
+
 ## Evidence and classification
 
 - **Hnow:** this Medium stage's actual installed dev10 MCP tools/owned panel,

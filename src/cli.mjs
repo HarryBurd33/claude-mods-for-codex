@@ -1,4 +1,5 @@
 import { scaffoldMod } from "./scaffold.mjs";
+import { runComponentCli } from "./component-authoring.mjs";
 import { runRetentionCli } from "./retention.mjs";
 import { checkMetadataScope } from "./scope.mjs";
 import { prepareRestorePlan,reviewRestorePlan,applyRestorePlan } from "./restore.mjs";
@@ -26,6 +27,10 @@ Usage:
   codex-mods validate [--config PATH]
   codex-mods replay [--config PATH] (--event PATH | --fixtures DIRECTORY | --stdin)
   codex-mods scaffold --spec PATH --output NEW_ABSOLUTE_DIRECTORY
+  codex-mods scaffold-component --spec PRIVATE_JSON --output NEW_ABSOLUTE_DIRECTORY
+  codex-mods validate-component --bundle PRIVATE_DIRECTORY
+  codex-mods component-plan --bundle PRIVATE_DIRECTORY [--intent PRIVATE_JSON]
+  codex-mods replay-component --bundle PRIVATE_DIRECTORY [--intent PRIVATE_JSON]
   codex-mods scope --project PATH --session-cwd PATH
   codex-mods impact --stdin
   codex-mods usage --export PRIVATE_JSONL
@@ -46,6 +51,12 @@ Commands:
   replay    Replay saved JSON envelopes offline and print restricted responses.
   scaffold  Generate disabled declarative configuration, access review and
             matching/nonmatching offline replay fixtures. Never executes them.
+  scaffold-component  Create a disabled observer/status bundle with access review,
+                      integrity marker and synthetic tests (new POSIX output only).
+  validate-component  Verify private complete bundle data; hashes are not trust.
+  component-plan      Print separate registration/storage/display merge fragments.
+  replay-component    Test synthetic event/summary projections; never execute or
+                      install. Optional intent changes only activation booleans.
   scope     Check supplied native session/project capture boundary without logging.
             Windows requires the exact explicitly selected root string.
   impact    Explain fixed lexical signals in a stdin JSON command object;
@@ -130,6 +141,7 @@ export async function runCli(argv, streams = process) {
     streams.stdout.write(`${HELP}\n`);
     return;
   }
+  if (["scaffold-component", "validate-component", "component-plan", "replay-component"].includes(command)) return runComponentCli(command, args, streams);
   if (command === "validate") {
     const options = parseOptions(args, new Set(["--config"]));
     const config = await loadConfig(options.config || DEFAULT_CONFIG);

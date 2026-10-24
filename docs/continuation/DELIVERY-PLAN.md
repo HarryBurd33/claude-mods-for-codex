@@ -1,5 +1,13 @@
 # Delivery order and remaining acceptance — 2026-10-24
 
+Source28 now implements [bounded component authoring](DEV28-REVIEW.md), preserving
+legacy rules and installed27. Next exact Medium: source CI/public package/spaced
+extraction and concrete display-only native review against existing metadata.
+No optional lifecycle capture/model-run grant included. High before new consequential
+code/failures; Windows remains later. Earlier next-High authoring direction below
+is historical; full93capability acceptance remains incomplete.
+
+
 Current native27 batch passed as scoped in [NATIVE-DEV27](NATIVE-DEV27.md): new
 synthetic snapshot tool/table, six owned views and ordinary pre-hook checks;
 logging remains7/same revision and optional events off. Next **human Sol High**

@@ -65,7 +65,7 @@ export function validateConfig(raw) {
   const metadataState = { enabled: false, scope: "session" };
   if (raw.metadataState !== undefined) {
     if (raw.metadataState === null || typeof raw.metadataState !== "object" || Array.isArray(raw.metadataState)) fail("metadataState must be an object");
-    assertOnlyKeys(raw.metadataState, new Set(["enabled", "scope", "observerEvents"]), "metadataState");
+    assertOnlyKeys(raw.metadataState, new Set(["enabled", "scope", "observerEvents", "componentObserverEvents"]), "metadataState");
     if (typeof raw.metadataState.enabled !== "boolean") fail("metadataState.enabled must be boolean");
     if (raw.metadataState.scope !== undefined && !["session", "project"].includes(raw.metadataState.scope)) fail("metadataState.scope must be session or project");
     metadataState.enabled = raw.metadataState.enabled;
@@ -74,6 +74,14 @@ export function validateConfig(raw) {
       const events = raw.metadataState.observerEvents;
       if (!Array.isArray(events) || events.length > OBSERVER_EVENTS.size || events.some(event => !OBSERVER_EVENTS.has(event)) || new Set(events).size !== events.length) fail("metadataState.observerEvents must contain unique supported observer events");
       metadataState.observerEvents = [...events];
+    }
+    if (raw.metadataState.componentObserverEvents !== undefined) {
+      const events = raw.metadataState.componentObserverEvents;
+      if (!Array.isArray(events) || Object.getPrototypeOf(events) !== Array.prototype || events.length > OBSERVER_EVENTS.size
+        || Reflect.ownKeys(events).length !== events.length + 1
+        || Array.from({length:events.length},(_,i)=>Object.getOwnPropertyDescriptor(events,String(i))).some(d=>!d || !Object.hasOwn(d,'value'))
+        || events.some(event => !OBSERVER_EVENTS.has(event)) || new Set(events).size !== events.length) fail("metadataState.componentObserverEvents must contain unique supported observer events");
+      metadataState.componentObserverEvents = [...events];
     }
   }
   return { version: 1, mods: raw.mods.map((mod, index) => validateMod(mod, index, ids)), metadataState };

@@ -8,6 +8,7 @@ import { describeProject, listProjectFiles, inspectProjectChanges, inspectCheckp
 import { CAPTURE_NOTE } from './scope.mjs';
 import { readSelectedUsage } from './usage.mjs';
 import { readSelectedObservations } from './observations.mjs';
+import { projectStatusComponents, validateStatusComponents } from './component-contract.mjs';
 
 const URI = 'ui://claude-mods/dashboard';
 const empty = { type: 'object', properties: {}, additionalProperties: false };
@@ -20,6 +21,7 @@ const tools = [
   { name:'mods.checkpoints', title:'Inspect selected checkpoints', description:'Compare only the two commits selected in reviewed runtime settings. Read-only; no automatic turn attribution or restoration.',inputSchema:empty,annotations:readOnly },
   { name:'mods.usage', title:'Read selected usage snapshot', description:'Read reported counters from only the private export selected in reviewed settings. Not current chat/context, billing or cache health.',inputSchema:empty,annotations:readOnly },
   { name:'mods.observations', title:'Read selected command and turn outcomes', description:'Read record counts from only the private exec export separately selected in reviewed settings. POSIX read-only approximation; not live hooks, unique executions or cancellation detection.',inputSchema:empty,annotations:readOnly },
+  { name:'mods.status', title:'Read authored status components', description:'Read enabled authored counters from the existing selected metadata scope. No path arguments, new capture, writes or model calls. Retained deliveries are not unique successful calls or turns.',inputSchema:empty,annotations:readOnly },
 ];
 function noArguments(value) { if (value !== undefined && (!value || Array.isArray(value) || typeof value !== 'object' || Object.keys(value).length)) throw new Error('Unexpected arguments'); }
 function scope(settings) {
@@ -28,6 +30,8 @@ function scope(settings) {
 }
 const unavailable = reason => ({available:false,reason});
 export function createDashboardHandler(settings) {
+  const definitions = validateStatusComponents(settings?.statusComponents);
+  const withStatus = data => ({...data,statusComponents:projectStatusComponents(data,definitions)});
   const usage=signal=>settings?.usageExport?readSelectedUsage(settings.usageExport,{signal}):unavailable('No private usage export selected. Native hooks do not provide context, token or billing counters.');
   const observations=signal=>settings?.observationExport?readSelectedObservations(settings.observationExport,{signal}):unavailable('No observation export selected. This separate read opt-in never follows the usage export or live hook scope.');
   async function activity(args = {}, signal) {
@@ -35,19 +39,19 @@ export function createDashboardHandler(settings) {
     if (args.sinceRevision !== undefined && !/^[a-f0-9]{64}$/.test(args.sinceRevision)) throw new Error('Invalid revision');
     if (args.waitMs !== undefined && (!Number.isInteger(args.waitMs) || args.waitMs < 1 || args.waitMs > 2000)) throw new Error('Invalid wait');
     const selected = scope(settings);
-    if (!selected) return unavailable('Select a reviewed project and session in runtime settings; cross-session totals require explicit project scope.');
+    if (!selected) return withStatus(unavailable('Select a reviewed project and session in runtime settings; cross-session totals require explicit project scope.'));
     const current = await readMetadataState(settings.dataDirectory,selected,{signal});
     if (args.sinceRevision === current.revision && args.waitMs) {
       for await (const next of observeMetadataState(settings.dataDirectory,selected,{durationMs:args.waitMs,intervalMs:100,signal})) {
-        if (next.revision !== args.sinceRevision) return {available:true,scope:settings.stateScope,...next,producerHealth:'unknown',captureNote:CAPTURE_NOTE};
+        if (next.revision !== args.sinceRevision) return withStatus({available:true,scope:settings.stateScope,...next,producerHealth:'unknown',captureNote:CAPTURE_NOTE});
       }
     }
-    return {available:true,scope:settings.stateScope,...current,producerHealth:'unknown',captureNote:CAPTURE_NOTE};
+    return withStatus({available:true,scope:settings.stateScope,...current,producerHealth:'unknown',captureNote:CAPTURE_NOTE});
   }
   return async (request, {signal} = {}) => {
     const p = request.params ?? {};
     switch (request.method) {
-      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.27'}};
+      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.28'}};
       case 'ping': return {};
       case 'tools/list': return {tools};
       case 'resources/list': return {resources:[{uri:URI,name:'Claude Mods dashboard',mimeType:'text/html;profile=mcp-app'}]};
@@ -64,6 +68,7 @@ export function createDashboardHandler(settings) {
           if (p.name === 'mods.dashboard') data = {surface:'plugin-owned MCP App',configured:!!settings,project:settings ? await describeProject(settings.projectRoot) : unavailable('No project selected.'),activity:await activity({},signal),usage:await usage(signal),observations:await observations(signal),access:{network:false,modelCalls:false,changesOptIn:settings?.allowChanges === true}};
           else if (p.name === 'mods.usage') data = await usage(signal);
           else if (p.name === 'mods.observations') data = await observations(signal);
+          else if (p.name === 'mods.status') data = {components: definitions.some(c=>c.enabled) ? (await activity({},signal)).statusComponents : []};
           else if (!settings) data = unavailable('No project selected in reviewed runtime settings.');
           else if (p.name === 'mods.files') data = await listProjectFiles(settings.projectRoot,{});
           else if (p.name === 'mods.changes') data = await inspectProjectChanges(settings.projectRoot,{includeDiffs:settings.allowChanges});

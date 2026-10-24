@@ -1,5 +1,13 @@
 # Development dashboard and immediate local commands
 
+Current source28: [component authoring](component-authoring.md) provides disabled
+private observer/status bundles and strict offline validate/replay/plans. Independent
+componentObserverEvents does not enable ordinary/dormant legacy logging. New
+bounded inline authored counters use only existing selected metadata; no extra
+paths/capture. [Review/tests](continuation/DEV28-REVIEW.md). Source28 not installed;
+reviewed27/logging/trust unchanged. Next Medium CI/package/native preparation.
+
+
 Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)
 passed for the selected synthetic outcome tool/table, six owned views and harmless
 ordinary pre-hook behavior. Logging scope/settings/trust selection/fixture remain

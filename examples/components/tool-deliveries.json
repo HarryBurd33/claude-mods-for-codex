@@ -1,0 +1,1 @@
+{"name":"tool-deliveries","kind":"status","title":"Tool deliveries","events":["PreToolUse","PostToolUse"]}
