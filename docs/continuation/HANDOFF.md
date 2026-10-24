@@ -32,3 +32,14 @@ concurrentwrites, counts observationsonly, NOTacceptance. Originalpolicy/deadlin
 unchanged. CIstepalwaysrunsafterstoragefailurewithoutclearingit. Results pending
 upload; Highinspectconcretefailurestagebeforeprivatefix. Deepersecuritymayrequire
 Astrahumancheckpoint, notautomaticdelegation. Alllogging/trust/productiongatesheld.
+
+
+Diagnostic90375af/CI40075581270 failed3jobs: bothWindows22storagePASS then own
+CRLF/LFScriptdiagnosticshape guard failed before native trace; 75proofskipped.
+Ubuntu22existing32slow-sync busy/completed0 failure187/1/95skips; exactcauseunproved.
+Other4jobssuccess. Alllogsread. Normalizecopiedsourcesonly; localshape-onlysynthetic
+CRLFpreparation40callsites/noWindowsexecution passed. Windows3writersnowallSettled
+beforestrictallfulfilledassertion/teardown, noserialization/fewerwriters/weakening.
+No productionpolicy/deadline/runtimechange. ActualdiagnosticnewCIpending; preserve
+allfailures. Newprivate-concurrency/lockbudgetquestions may need human AstraUltra,
+notblindfixes or Medium handoff while stronger reasoning remains.

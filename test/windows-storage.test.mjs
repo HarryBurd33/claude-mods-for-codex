@@ -217,7 +217,10 @@ test('native Windows public state isolates sessions, reads completed changes and
   const {root}=await directory(t),data=join(root,'state'),scope={projectId:'synthetic-project',sessionId:'one'},other={...scope,sessionId:'two'};
   assert.equal((await readMetadataState(data,scope)).records,0);assert.equal((await readdir(root)).includes('state'),false);
   const fixed=()=>new Date('2026-10-23T12:00:00Z');
-  await assert.doesNotReject(Promise.all(Array.from({length:3},()=>recordMetadataEvent(data,scope,{event:'SessionStart'},fixed))), 'concurrent public state initial directory creation');
+  // Wait for EVERY helper before assertion/teardown, including on refusal.
+  // All three writes still start concurrently and must all succeed.
+  const initialWrites=await Promise.allSettled(Array.from({length:3},()=>recordMetadataEvent(data,scope,{event:'SessionStart'},fixed)));
+  assert.deepEqual(initialWrites.map(value=>value.status),Array(3).fill('fulfilled'),'concurrent public state initial directory creation');
   await assert.doesNotReject(recordMetadataEvent(data,other,{event:'PreToolUse',tool:'Bash',decision:'deny'},()=>new Date('2026-10-24T12:00:00Z')), 'other session record');
   const before=await readMetadataState(data,scope);assert.equal(before.records,3);
   assert.equal((await readMetadataState(data,other)).records,1);

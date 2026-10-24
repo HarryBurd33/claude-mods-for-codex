@@ -142,3 +142,31 @@ steps. It is a new diagnostic experiment on fresh roots, not a retry of the old 
 Actual diagnostic results pending upload. High must inspect labels before any
 private-storage change or model switch. If a deeper architecture/security issue
 requires Astra, checkpoint and request that human switch rather than speculate.
+
+
+## Diagnostic candidate failure and minimal preparation correction
+
+Source90375af / CI40075581270: both Windows storage suites passed22/0/0skip,
+including observer cases, but diagnostic setup threw Script diagnostic shape before
+any native trace/request rounds. Both process-proof steps skipped. Actual logs
+120818082748(Node22)/120818082965(Node24) read. Windows checkout CRLF failed the
+literal LF source matcher. Fix normalizes ONLY copied source text before inserting
+labels. A local --shape-only mode synthesizes CRLF inputs, prepares all three copies
+and reports40callsites/noWindowsExecution; it is source preparation, not Windows
+runtime/semantic support. Failed run preserved, not retried; no production change.
+
+Same run Ubuntu Node22 job120818082991:187pass/1fail/95skips283total. Existing
+POSIX32-event slow-sync test failed4199.936832ms: one writer reported busy/completed0
+instead of all8writers completed4. No final count inferred past its failed assertion.
+Other three full POSIX lanes and portable job concluded success. Exact host delay/
+handoff-budget cause unproved. Do not conflate with old observer expiry, Windows
+concurrent creation, source20's earlier failure or the diagnostic line-ending bug.
+No lock-budget increase, sync removal, event replay or weakened32-write assertion.
+
+The Windows integration test now uses Promise.allSettled before asserting all3
+statuses fulfilled. All3still start concurrently and must succeed; waiting every
+helper prevents teardown racing unfinished siblings after one refusal. This is a
+cleanup correction, not an explanation or fix for the initial native refusal.
+Actual new Windows diagnostic results pending upload. Private storage/locking
+questions remain unresolved; if source-only samples don't resolve them, use a
+verified checkpoint and human Astra Ultra review, not speculative policy repair.
