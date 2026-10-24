@@ -85,6 +85,14 @@ Existing original ProgramPins, private storage/ACL, code ancestor, job, scratch,
 metadata/state, observer and reliability tests remain. No assertion/deadline is
 weakened. New Windows tests skip locally; local syntax is not Windows evidence.
 
+Before final acceptance, the original private-reader negative check was tightened:
+its1MiB bound is proven sufficient for the compiled fixture, and a positive
+original-reader/ProgramPins control precedes the scoped Installer grant. Refusal
+therefore cannot pass merely because an undersized read limit was used. The known-
+scope negative also supplies a valid fixed-relative Git image name under an owned
+non-SDK anchor, separating wrong scope from wrong candidate name. These are test
+precondition corrections, not permission or runtime changes.
+
 ## Primary evidence retrieved2026-10-24
 
 - [KNOWNFOLDERID](https://learn.microsoft.com/en-us/windows/win32/shell/knownfolderid)

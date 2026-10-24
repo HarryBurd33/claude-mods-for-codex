@@ -225,10 +225,16 @@ async function imageReadFixture(name) {
 }
 const imageReadFrames=state=>['inventory-read-held','inventory-read-'+state,'inventory-read-disposed-refused','inventory-read-released'];
 test('Windows scoped installed-image read policy samples content while original code and private-data policies still refuse',native,async()=>{
-  const f=await imageReadFixture('positive');await fixtureAcl(f.anchor,'installer-control');
+  const f=await imageReadFixture('positive');
+  const expected=await readFile(f.target);assert.ok(expected.length<=1024*1024,'fixture fits original private-reader bound');
+  assert.equal(await run(f.exe,['run','pin',f.data,f.target,f.code,f.project]),'pinned');
+  const privateControl=(await windowsStorageRequest('private-read',f.target,{limit:1024*1024}))[0];
+  try {assert.ok(privateControl.equals(expected),'original private-reader control must match the fixture');}
+  finally {privateControl.fill(0);}
+  await fixtureAcl(f.anchor,'installer-control');
   try {
     assert.equal(await run(f.exe,['run','pin',f.data,f.target,f.code,f.project]),'refused','original ProgramPins unchanged');
-    await assert.rejects(windowsStorageRequest('private-read',f.target,{limit:1024}),/Private Windows/);
+    await assert.rejects(windowsStorageRequest('private-read',f.target,{limit:1024*1024}),/Private Windows/);
     const result=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{read:true,during:async()=>{
       await assert.rejects(open(f.target,'r+'));await assert.rejects(rename(f.target,f.target+'.moved'));
       await assert.rejects(rename(f.code,f.code+'.moved'));await assert.rejects(rename(f.anchor,f.anchor+'.moved'));
@@ -262,6 +268,8 @@ test('Windows installed-image known scope cannot be supplied by a synthetic path
   }
   const result=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{known:true,read:true});
   assert.deepEqual(result.frames,['inventory-read-refused|Scope']);assert.equal(result.dataRead,false);
+  const fixedName=await installedImageRead(f.exe,f.data,join(f.code,'cmd','git.exe'),f.code,f.project,{known:true,read:true});
+  assert.deepEqual(fixedName.frames,['inventory-read-refused|Scope']);assert.equal(fixedName.dataRead,false);
 });
 test('Windows scoped installed-image read detects descriptor changes and releases partially acquired handles',native,async()=>{
   const f=await imageReadFixture('changed');await fixtureAcl(f.anchor,'installer-control');
