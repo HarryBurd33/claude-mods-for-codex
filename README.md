@@ -19,7 +19,9 @@ Both mapping tests refused before read-set acceptance, so mutated-byte/restored-
 mtime branch remains unverified. Local170pass/0fail/41Windows-only skips211total,
 validate3/replay4 passed. Windows Server CI is not native Codex/Windows11/WSL
 acceptance. The human confirmed Windows11 host is not available yet. Source12
-archive/public-clone/spaced extraction is next; source11 package results are separate.
+[archive/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV12.md) passed:
+154files/all-byte checks, validate3/replay4/package-scaffolding7/7. Source12 is
+still uninstalled; packaging does not establish Windows native compatibility.
 
 Configured macOS fixture0.2.0-dev.10 remains installed,149files matching its reviewed
 immutable snapshot and three human-trusted hooks. Existing settings/mod rules/
@@ -38,8 +40,8 @@ host fail-open limits remain. No destructive demonstration used.
 Source11 [package verification](docs/continuation/PACKAGE-DEV11.md) passed; it does
 not certify the new12 proof. Full accessibility/backend close-pending cleanup,
 loaded disable/older rollback, optional native events/themes and Linux/Windows/WSL
-acceptance remain incomplete. Next Medium for routine source12 package checks;
-human High switch before further Windows security/integration/writer work. See
+acceptance remain incomplete. Routine source12 package checks are complete; next human Sol High before further
+Windows security/integration/writer work. See
 [handoff](docs/continuation/HANDOFF.md), [ledger](docs/continuation/REQUIREMENTS.md),
 [Windows boundary](docs/windows-storage.md) and [native kit](docs/windows-native-acceptance.md).
 

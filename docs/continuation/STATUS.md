@@ -24,14 +24,32 @@ snapshot; unselected entries may appear, byte checks don't defend hostile same-u
 admin change-and-restore races, synchronous blocked IO needs an outer helper deadline.
 See DEV12-REVIEW and TEST-LOG for actual evidence and scoped review.
 
+## Source12 Medium package verification — 2026-10-23
+
+Human resumed clean dd9a6e4/treee114e2c on GPT-6.1 Sol Medium. Exact anonymous
+public clone/full suite170pass/0fail/41Windows-only skips211total. Reviewed154-file
+archive1002571unpacked/308425compressed bytes, SHA256
+1e51214ef295fe1125b1f86a85fb0c57a060e52602931db81740df8e51e4be51.
+Every packaged byte matches public clone/checkpoint; no private roots/links/
+traversal/special/set-ID/case collisions/dependencies/root portable manifest.
+MIT/version12/default-off storage verified. Spaced extraction validate3/replay4/
+package-scaffolding7pass/0fail/0skip. macOS14.6/Node24.22.0/npm11.19.1; no Windows
+proof compiled here. NotesCI40048910909 all7job conclusions read as success, no new
+log-count/conditional-branch claim. Actual proof e55ed71/CI40048345934 remains separate.
+
+Fresh bounded no-model inventory3enabled/human-trusted/0errors; installed10/cache/
+settings preserved, actual activity4/same scope/revision. No configuration/trust/
+logging/model-run or gated-code change. All93IDs kept. Both prior mapping witnesses
+refused before acceptance; altered-byte/restored-mtime branch remains unverified.
+Next human Sol High before further gated Windows implementation. See PACKAGE-DEV12.
+
 ## Next model boundary
 
-**GPT-6.1 Sol, Medium** for exact-source public clone/archive/spaced extraction,
-documentation consistency and read-only host-kit preparation. Source12 packaging
-not yet verified; prior source11 archive does not certify12. No new installation
-needed merely for this proof. High before ignore-aware selection, named Git layout/
-loader integration, production activation or separate restore/writer changes.
-Windows11 native install/events/UI/sandbox acceptance remains incomplete.
+Source12 public-clone/archive/spaced extraction checks are complete; source12
+remains uninstalled. Next **GPT-6.1 Sol, High** for remaining ignore-aware selection,
+named Git layout/loader integration, production activation or separate writer work.
+All Windows before-IO gates remain. Native Windows11 host still unavailable; no
+repeat availability request until state changes or real inventory is required.
 
 ## Preserved evidence and remaining requirements
 

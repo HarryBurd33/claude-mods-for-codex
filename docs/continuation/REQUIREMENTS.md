@@ -6,9 +6,10 @@ human-trusted10/logging unchanged. Sourcee55ed71 CI40048345934 all7jobs passed;
 both actual Windows logs20storage+21proof each. Mapping refused before acceptance,
 so changed-bytes/restored-mtime branch remains unverified. No ignore engine/real
 project/Git read or production gate activation. Windows11 host still unavailable,
-per fresh human reply. See DEV12-REVIEW/STATUS/TEST-LOG; package12 checks pending.
+per human reply. See DEV12-REVIEW/STATUS/TEST-LOG; exact dd9a6e4 package/public
+clone/spaced extraction verified in PACKAGE-DEV12.
 Prior11 package/native10 UI evidence remains version-specific. Mechanism support
-is not completion. Next Medium for packaging, High before gated implementation.
+is not completion. Next human Sol High before further gated implementation.
 
 ## Reading the ledger
 
