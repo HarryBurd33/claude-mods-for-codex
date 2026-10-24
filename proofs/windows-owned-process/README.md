@@ -2,11 +2,13 @@
 
 Source13 GitMetadataScratch.cs adds an **unintegrated fixed named metadata**
 layout/private creation/delete-on-close/empty-only cleanup proof. Generated config/
-HEAD, optional32MiB index/1MiB exclude; prior flat/read-set bounds unchanged.
-Synthetic compatible reader only, no actual Git/project/loader/native Codex proof.
-External owner death can leave private empty hierarchy; live unowned readers can
-retain bytes until close. See [source13 review](../../docs/continuation/DEV13-REVIEW.md).
-Production compiles only PrivateStorage.cs; all Windows gates and installed10 stay.
+HEAD, optional32MiB index/1MiB exclude; flat/read-set/bridge bounds unchanged.
+Source15e388e CI40058125353 all7jobs passed; actual Windows20storage+28proof each,
+0fail/skip. Compatible/incompatible readers and live unowned-reader retention tested.
+No actual Git/project/loader/native Codex; future unknown child-created files could
+retain data and are not recursively cleaned. Owner death may leave private empty
+hierarchy. See [review](../../docs/continuation/DEV13-REVIEW.md) for all limits.
+Production compiles only PrivateStorage.cs; all Windows gates/installed10 preserved.
 
 Source12 adds ProjectReadSet.cs, an **unintegrated explicit synthetic read-set**
 proof: retained no-follow handles, bounded captured bytes, metadata+byte verification,

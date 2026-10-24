@@ -1,10 +1,29 @@
 # Continuation verification log
 
-Local source13 npm test170pass/0fail/48Windows-only skips218total; validate3/
-replay4 passed. Source13 High candidate2026-10-23: unintegrated fixed private Git-metadata layout
-proof under test. Source13 uninstalled; installed10/human trust/logging unchanged.
-No real project/Git execution or production gate activation; native Windows11
-unavailable. See DEV13-REVIEW.md for closed names/bounds, cleanup/reader limits and acceptance.
+## Verified High source13 named metadata proof — 2026-10-23
+
+Source[15e388e](https://github.com/HarryBurd33/claude-mods-for-codex/commit/15e388e3403f7d73a8f6bf2b41df66c6dd7bfa3c),
+tree014998207439329718d8fa97e99296606619ced3, branchcodex/astra-groundwork.
+[CI40058125353](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40058125353)
+all7jobs success. Both actual Windows logs120765539100(Node22)/120765538855(Node24)
+read:20storage+28proof each/0fail/0skip. All4full POSIX/portableWindows jobs passed.
+Both old mapping diagnostics still mapping-refused; changed-byte/mtime branch not
+observed. Windows Server2025 is OS evidence, not native Windows11 Codex/Git.
+Local npm test170pass/0fail/48Windows-only skips218total; validate3/replay4 pass.
+
+Seven new named-metadata cases passed: fixed optional layout/compatible owned reader/
+incompatible read+write refusal/private pins,32MiB index+1MiB exclude boundaries,
+unexpected entry/junction preservation, owner death/owned reader/cancellation and
+unowned-reader delayed deletion. Shared file-creation refactor regressed all prior
+21proof cases. Flat-slot/read-set bounds and production bridge/gates unchanged.
+No actual Git/parser/source-index capture or child-created-content cleanup claim.
+
+Human resumed GPT-6.1 Sol High fromd7d3b84. Original local4c33e0eafa578af3ac9c2b17f19a37c67e4d8587
+retained on codex/dev13-metadata-local-checkpoint; nonforce expected-parent upload,
+fetch and whole-tree equality passed. Final following notes-only identity recorded
+after actual readback in reply/private handoff; proof/test/code match this CI source.
+Source13 uninstalled, Windows11 unavailable. Next Medium package check; High before
+remaining real Git/loader/ignore/production/writer gates. All93product incomplete.
 
 ## Source12 Medium package verification — 2026-10-23
 

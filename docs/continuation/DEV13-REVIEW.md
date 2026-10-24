@@ -104,3 +104,34 @@ The current production bridge has32KiB requests/3MiB responses; this in-memory
 composition must stay inside a reviewed helper or use separately bounded framing;
 never put private index/exclude bytes in process arguments, environment or logs.
 This stage's process arguments contain only selected synthetic fixture locations.
+
+A future child can create additional files without this class's delete-on-close
+flag. Those unknown files would be deliberately preserved by empty-only cleanup,
+possibly retaining private bytes. The empty-hierarchy owner-death witness applies
+only to this constructor and fixed read-only test descendants. No general child-
+created-content cleanup guarantee: actual Git write/lock/cache/temp behavior must
+be checked before integration, with a separate explicit ownership protocol or
+refusal. Do not turn unknown-file retention into recursive deletion to pass a test.
+
+## Observed result and scoped High review
+
+Tested source15e388e3403f7d73a8f6bf2b41df66c6dd7bfa3c/
+tree014998207439329718d8fa97e99296606619ced3; CI40058125353 all7jobs passed.
+Actual Windows Node22/24 logs read20storage+28proof each/0fail/0skip. Local
+170pass/0fail/48Windows-only skips218total, validate3/replay4. Both mapping
+diagnostics remain mapping-refused; the old altered-byte/mtime branch is unverified.
+
+High reviewed closed names, all input/type limits, private ancestor/directory/file
+handles, shared creation ownership transfer/failure, compatible sharing, normal/
+cancellation/owner-death lifecycle and nonrecursive unexpected-entry retention.
+A live unowned reader actually retained its bytes/handle; root cleanup reported
+refusal, then bytes disappeared after reader close with no automatic root retry.
+No PID-based kill of unrelated readers. Future child-created unknown files may
+remain; actual Git behavior and source/IPC trust remain explicit independent gates.
+Production helper/settings/project/restore/defaults/UI/hooks/skills unchanged; only
+package/manifest/server version metadata13. No install/config/trust/logging change.
+
+Immediate work is routine exact-source public clone/archive/spaced extraction and
+record consistency: GPT-6.1 Sol Medium. Return to human-selected High before any
+real Git/dependency/loader/ignore-aware capture, bridge expansion, production
+activation, child-content cleanup protocol or separate restore/writer change.

@@ -1,4 +1,13 @@
-# Windows private storage — source12 proof / unchanged production boundary
+# Windows private storage — source13 proof / unchanged production boundary
+
+Source13 adds an unintegrated fixed named-metadata lifetime proof, not an actual
+Git invocation/project capture/production operation. Source15e388e CI40058125353
+all7jobs passed, actual Windows20storage+28proof each. Live unowned readers retain
+bytes until close; unknown child-created files preserved, no recursive cleanup.
+32MiB index/1MiB exclude are typed in-memory fixtures, not a32KiB-request/3MiB-
+response bridge expansion. Real Git/loader/ignore/IPC/native/writer gates remain;
+installed10/logging/trust unchanged. See [review](continuation/DEV13-REVIEW.md).
+Earlier source12/11 foundations follow; no native Windows11 acceptance.
 
 Source12 adds only an unintegrated explicit synthetic read-set proof, not a
 production reader operation: retained handles/captured bytes, no enumeration or

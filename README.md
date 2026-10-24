@@ -1,54 +1,47 @@
 # Claude Mods for Codex
 
-Source13 High candidate2026-10-23: unintegrated fixed private Git-metadata layout
-proof under test. Source13 uninstalled; installed10/human trust/logging unchanged.
-No real project/Git execution or production gate activation; native Windows11
-unavailable. See [review](docs/continuation/DEV13-REVIEW.md) for closed names/bounds, cleanup/reader limits and acceptance.
+**Development source0.2.0-dev.13; the full93-capability product is incomplete.**
+Current expanded work is on codex/astra-groundwork; default branch remains the
+historical experimental MVP. MIT and independent-project status are preserved.
 
-**Development source0.2.0-dev.12; the full93-capability product is incomplete.**
-The default branch remains the historical experimental MVP. Current expanded work
-is on codex/astra-groundwork; MIT/independent-project status remain unchanged.
+Source13 adds an unintegrated fixed private Git-metadata layout proof: generated
+config/HEAD, optional index/info-exclude and known objects/refs/info directories.
+Owned file handles use private create-new/delete-on-close; directory cleanup is
+empty-only. It tests compatible and incompatible readers, explicit32MiB index/1MiB
+exclude bounds, unexpected-entry preservation, owner death/cancellation and delayed
+deletion while an unowned reader stays open. Prior flat/read-set bounds unchanged.
+No actual Git/project/index capture, loader/ignore engine, public helper operation
+or production Windows gate activation. See [review](docs/continuation/DEV13-REVIEW.md).
 
-Source12 adds an unintegrated Windows **explicit synthetic read-set proof**: retained
-no-follow readonly handles, bounded captured bytes and identity/metadata/byte
-re-verification. It tests path/link/ACL/bounds/pin/cancellation behavior and composes
-one captured synthetic file with source11 private delete-on-close slots. No project
-enumeration, ignore engine, real project/Git read, public helper operation or gate
-activation. It is not an atomic whole-directory snapshot or a Windows release.
-See [security review](docs/continuation/DEV12-REVIEW.md) and
-[test log](docs/continuation/TEST-LOG.md).
+Source15e388e [CI40058125353](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40058125353)
+all7jobs passed; both Windows logs read20storage+28proof each/0fail/0skip. Local
+170pass/0fail/48Windows-only skips218total; validate3/replay4. Server CI is not
+native Codex/Windows11/WSL acceptance. Both earlier mapping tests still refused
+before acceptance; altered-byte/mtime branch remains unverified. Source13 public
+clone/archive/spaced extraction is next. Windows11 host remains unavailable.
 
-Sourcee55ed71 [CI40048345934](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40048345934)
-passed all7jobs; both Windows logs read20storage+21proof each/0fail/0skip.
-Both mapping tests refused before read-set acceptance, so mutated-byte/restored-
-mtime branch remains unverified. Local170pass/0fail/41Windows-only skips211total,
-validate3/replay4 passed. Windows Server CI is not native Codex/Windows11/WSL
-acceptance. The human confirmed Windows11 host is not available yet. Source12
-[archive/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV12.md) passed:
-154files/all-byte checks, validate3/replay4/package-scaffolding7/7. Source12 is
-still uninstalled; packaging does not establish Windows native compatibility.
+Compatible live readers can retain bytes; unknown child-created files would be
+preserved, not recursively deleted. Empty private hierarchy may remain after owner
+death. Real Git reader/write/temp/lock behavior, executable/DLL trust, ignore-aware
+selection, metadata provenance, IPC and native integration remain separate gates.
+The in-memory32MiB fixture does not expand the32KiB request/3MiB response bridge.
+No private bytes in arguments/environment/logs, secure-erasure or arbitrary-process
+sandbox guarantee. All Windows settings/project/Git/restore still refuse before IO.
 
-Configured macOS fixture0.2.0-dev.10 remains installed,149files matching its reviewed
-immutable snapshot and three human-trusted hooks. Existing settings/mod rules/
-project/data/scope/retention/export and unrelated entries are preserved. Actual
-source10 panel/render/focus/keyboard-Clear passed after restart. Activity remains
-four scoped records/same revision. No source12 install, cache/trust/config/logging
-change or additional model/API run. Inventory/trust is separate from event delivery.
+Installed macOS fixture0.2.0-dev.10 remains149reviewed files, human-trusted3hooks,
+same settings/mod rules/data/project/scope/retention/export. Native source10 focus/
+render/keyboard-Clear passed earlier; activity four retained records/same revision.
+No install13/cache/config/trust/logging change, extra model/API evaluation or optional
+observer/theme/client upgrade. Inventory/trust is separate from event delivery.
 
-Earlier native dev6 evidence covers six views, nested files, selected diffs, passive
-usage, restricted local preview/Clear, reviewed print rewrites/control/deny and
-same-version removal/reinstall. Dev4 separately verified sandbox rejection of a
-rewritten out-of-workspace marker write. Removed hold proof exercised human
-confirm/decline/cancel/deadline but is not a production gate; human provenance and
-host fail-open limits remain. No destructive demonstration used.
-
-Source11 [package verification](docs/continuation/PACKAGE-DEV11.md) passed; it does
-not certify the new12 proof. Full accessibility/backend close-pending cleanup,
-loaded disable/older rollback, optional native events/themes and Linux/Windows/WSL
-acceptance remain incomplete. Routine source12 package checks are complete; next human Sol High before further
-Windows security/integration/writer work. See
+Earlier native dev6 six views/preview/files/diffs/usage/rewrites/deny/removal-reinstall
+and dev4 sandbox-negative/removed hold evidence stay version-specific. Hold is not
+a production approval gate; human provenance/host fail-open limits remain. Full
+accessibility/lifecycle/loaded disable/older rollback/Linux/Windows/WSL incomplete.
+Next Medium for routine package checks; human High before more gated work. See
 [handoff](docs/continuation/HANDOFF.md), [ledger](docs/continuation/REQUIREMENTS.md),
-[Windows boundary](docs/windows-storage.md) and [native kit](docs/windows-native-acceptance.md).
+[test log](docs/continuation/TEST-LOG.md), [Windows boundary](docs/windows-storage.md)
+and [native kit](docs/windows-native-acceptance.md).
 
 ## What it does
 

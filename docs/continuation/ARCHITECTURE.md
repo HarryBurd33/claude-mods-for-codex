@@ -1,9 +1,30 @@
 # Extension architecture and security contracts
 
-Source13 High candidate2026-10-23: unintegrated fixed private Git-metadata layout
-proof under test. Source13 uninstalled; installed10/human trust/logging unchanged.
-No real project/Git execution or production gate activation; native Windows11
-unavailable. See DEV13-REVIEW.md for closed names/bounds, cleanup/reader limits and acceptance.
+## Current source13 fixed metadata lifetime — 2026-10-23
+
+Proof-only GitMetadataScratchProof(parent,headCommit,index,exclude,token), Path/
+Dispose. Closed generated config/HEAD/optional index+exclude and objects/refs/info;
+no arbitrary names/adoption.32MiB index/1MiB exclude, no expansion of flat/read-set
+bounds or32KiB request/3MiB response bridge. Common proof-only creation extracted
+from ScratchContent, same private descriptor/CREATE_NEW/delete-on-close/retained
+handle and safe list ownership transfer. Directory creation/pins protected; disposal
+closes exact created files, releases pins, removes only known empty dirs/root.
+No enumeration, recursion, unknown entry deletion, stale-root adoption or ACL repair.
+
+Fixed compatible reader only; unowned readers can retain bytes until close and
+cause cleanup refusal. Owner death with owned readers leaves private empty hierarchy.
+Unknown child-created files would be preserved and may retain data. No claim of
+arbitrary Git/child cleanup, secure erasure or hostile same-user/admin race defense.
+5s checks cannot interrupt blocked IO; future owned-helper deadline required.
+Actual Git/dependency/loader/readers/writes, ignore selection/provenance and bridge/
+production/native/writer integration remain High gates. See DEV13-REVIEW.
+
+Source15e388e CI40058125353 all7jobs passed; actual Windows20storage+28proof each,
+0fail/skip. Prior mapping branch still mapping-refused; byte/mtime negative branch
+unverified. Production compiles only PrivateStorage.cs, no operation/gate change.
+Source13 uninstalled; installed10/logging/human trust preserved. Next Medium for
+packaging, High before more gated security. All93product incomplete. Versioned
+foundations below are historical and superseded where current status differs.
 
 ## Current source12 explicit positive read set — 2026-10-23
 
