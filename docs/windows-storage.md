@@ -1,8 +1,9 @@
 # Windows private storage — source19 proof-only diagnosis / unchanged gates
 
 Source19 adds only a non-authorizing repeat metadata probe after original pin
-refusal. No admission/production gate/installed10/logging/trust change. CI candidate
-pending, no native diagnosis or compatibility claim. See
+refusal. No admission/production gate/installed10/logging/trust change. CI40067892456 all7passed, actual Windows20storage+66proof each.
+Both candidates still refused; repeat observer sees Installer-matching mutation
+grant at Program Files ancestor. Not an atomic causal trace/native compatibility. See
 [review](continuation/DEV19-REVIEW.md). Earlier versioned foundations follow.
 
 Source18 adds only a read-only installed-code/static import inventory behind existing

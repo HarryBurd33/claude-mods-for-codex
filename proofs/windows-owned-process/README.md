@@ -3,7 +3,8 @@
 Source19 adds ProgramDiagnostics.cs and a closed wire decoder: observation-only
 metadata after original refusal, no fallback/read/launch even if probe completes.
 Original admission/production primitives unchanged. Local181pass/0fail/86Win-skips;
-Windows CI candidate pending. See [review](../../docs/continuation/DEV19-REVIEW.md).
+CI40067892456 all7passed, both Windows20storage+66proof each; refused candidates
+repeat-observe CodeAncestor/ForeignInstallerGrant/segment1, no authority or reads. See [review](../../docs/continuation/DEV19-REVIEW.md).
 Earlier versioned foundation evidence follows.
 
 ## Source18 static inventory (unintegrated)

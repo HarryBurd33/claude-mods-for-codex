@@ -90,8 +90,17 @@ and revised15s harness result remain preserved in PACKAGE-DEV18.
 
 Local node --test test/pin-diagnostic-frame.test.mjs test/windows-owned-process.test.mjs:
 3pass/0fail/66Windows-only skips69total. npm test181pass/0fail/86Windows-only skips
-267total; validate3mods/replay4fixtures; diff-check clean. Windows CI candidate
-pending upload; no real Windows diagnosis/compatibility claim until logs read.
+267total; validate3mods/replay4fixtures; diff-check clean. Source [ce81171](https://github.com/HarryBurd33/claude-mods-for-codex/commit/ce81171ec851750d559c636bec2a77dbcc58cace),
+[CI40067892456](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40067892456):
+all7jobs passed. Both decoded Windows Node22/24 logs read:20storage+66proof each,
+0fail/0skip. Both fixed Git candidates remain pin=refused/dataRead=false, with
+repeat observation CodeAncestor/ForeignInstallerGrant/segment1/authority=false.
+That segment is Program Files for these fixed paths. Foreign means outside the
+existing policy allowlist, not malicious. Later metadata sample is not an atomic
+original-failure trace; no executable leaf presence/hash/import/version/trust/native
+compatibility established. No policy or system ACL repair. Prior mapping-refused/
+byte-mtime/8.3 gaps remain; full93product incomplete.
+
 
 ## Remaining scope and rollback
 
@@ -107,3 +116,58 @@ Installed dev10 removal/rollback stays separate in native acceptance records;
 never patch cache/trust hashes/shared config/live locks. After actual CI observation
 and a verified checkpoint, stop for human Sol Medium to package source19. Further
 gated security decisions require High; no background/delegated model-switch bypass.
+
+## Observed Windows results and security decision
+
+Candidate sourcece81171ec851750d559c636bec2a77dbcc58cace,
+tree20ec147fa82019c8c19a2fc6003cd8c99a043921. Expected-parent/nonforce upload,
+fetch/full-tree equality and anonymous ls-remote verified; equivalent local
+8cab7e5b39abe1723cf9d7ca3ab16042547c4c36 retained on
+codex/dev19-diagnosis-local-checkpoint.
+
+CI40067892456 all7jobs success. Actual decoded Windows job120794873776(Node24)
+and120794874079(Node22) logs both read20storage+66proof/0fail/0skip each.
+WindowsServer2025 imagewindows-2025-vs2026 version20261021.278.1. No retry/fix.
+Both fixed candidates report:
+CodeAncestor / ForeignInstallerGrant / segment1 / authority=false, with original
+pin=refused/dataRead=false. Segment1 of these fixed C: paths is Program Files.
+This reports a later descriptor sample's mutation grant matching the existing
+Installer constant, excluded by the unchanged Trusted predicate. The label foreign
+means outside this policy's allowlist, not malicious activity or corrupt Git.
+
+The predicate is observable in shared original Access plus a new descriptor sample;
+it is not an atomic trace of the original failure. Both original inventory attempts
+remain refused. No executable leaf presence/hash/import/version/provenance verified,
+since the repeat observation stops at the ancestor. No image bytes, DLL loading,
+Git invocation, ACL repair or extra model call in the proof. Normal CI checkout
+Git is unrelated existing infrastructure, not this inventory's execution claim.
+
+**Decision:** preserve the conservative refusal. Do not remove or deny system
+updater grants, modify installed Git/Program Files ACLs, or add Installer to the
+production global Trusted set merely to pass this proof. Private data ACL authority
+must remain separate from a future reviewed code-installation policy. A later High
+stage may design a narrowly scoped code trust contract and test unchanged private
+storage refusal before considering integration. This diagnostic alone cannot
+justify any trust expansion. Actual native Windows11 host still unavailable.
+
+Node22 independently reports the same repeat categories. Prior mapping output in
+both logs remains mapping-refused; changed-byte/
+restored-mtime/8.3 acceptance unverified. Synthetic new missing/sharing/link/ACL and
+lease restoration tests passed. Unknown/unwitnessed decoder reason categories are
+schema support only, not native behavior coverage. Full93product incomplete.
+
+## Final checkpoint and model-switch boundary
+
+Local macOS14.6/Node24.22.0/npm11.19.1; original admission/production helper/owned
+runner byte-identical to c37d744; production source change only MCP version19.
+Installed149files/private settings unchanged; no fresh native inventory/event/UI/
+trust/model/API run. All93requirement identities/order retained. Source19 uninstalled.
+Final notes-only commit identity is recorded after independent readback in reply/
+latest ignored handoff. No machine rollback required; new uninstalled source/fixtures
+can be removed, existing supported dev10 removal remains separate.
+
+Next human GPT-6.1 Sol Medium for exact anonymous clone/package/extraction/hygiene.
+No further High security implementation after announcing the switch. A later High
+stage must review code-specific installation authority separately from private-data
+trust; current diagnostic is not authorization to add an allowlisted principal or
+modify system updater ACLs. Every production Windows gate remains closed.

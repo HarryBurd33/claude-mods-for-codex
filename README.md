@@ -1,6 +1,6 @@
 # Claude Mods for Codex
 
-## Source19 High candidate — repeat metadata diagnosis
+## Source19 verified High checkpoint — repeat metadata diagnosis
 
 Human resumed verifiedc37d744 on GPT-6.1 Sol High. Source19 uninstalled; installed
 human-trusted dev10/cache149files/private settings/logging scope unchanged. Full93
@@ -8,8 +8,17 @@ product incomplete. Original ProgramPins/production helper/owned runner unchange
 all Windows gates closed. Proof-only metadata repeat probe reports closed categories
 after refusal, never authorizes reads or execution even on NoRepeatRefusal. No
 image content/raw ACL/SID/path/env/session output. Local181pass/0fail/86Windows-only
-skips267total; validate3/replay4. Windows CI candidate pending; no actual diagnosis
-or native compatibility claimed. See [DEV19 review](docs/continuation/DEV19-REVIEW.md). Earlier records below are historical.
+skips267total; validate3/replay4. Source [ce81171](https://github.com/HarryBurd33/claude-mods-for-codex/commit/ce81171ec851750d559c636bec2a77dbcc58cace),
+[CI40067892456](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40067892456):
+all7jobs passed. Both decoded Windows Node22/24 logs read:20storage+66proof each,
+0fail/0skip. Both fixed Git candidates remain pin=refused/dataRead=false, with
+repeat observation CodeAncestor/ForeignInstallerGrant/segment1/authority=false.
+That segment is Program Files for these fixed paths. Foreign means outside the
+existing policy allowlist, not malicious. Later metadata sample is not an atomic
+original-failure trace; no executable leaf presence/hash/import/version/trust/native
+compatibility established. No policy or system ACL repair. Prior mapping-refused/
+byte-mtime/8.3 gaps remain; full93product incomplete.
+ See [DEV19 review](docs/continuation/DEV19-REVIEW.md). Earlier records below are historical.
 
 
 Source18 packaging verified on GPT-6.1 Sol Medium. Exact public c42f7cb clone:
