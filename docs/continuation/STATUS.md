@@ -1,24 +1,29 @@
-# Current status — source22 retained metadata — 2026-10-24
+# Current status — source23 observer/reliability checkpoint — 2026-10-24
 
 
-## Source23 High candidate — observer deadline test boundary — 2026-10-24
+## Source23 High checkpoint — observer tests corrected; reliability incomplete — 2026-10-24
 
-Controlled-clock actual-storage probes reproduce valid iterator expiry and the
-old TypeError while a fresh read still sees4records; live same-iterator3→4/cancel
-also passes. Windows storage test now reads completed writes directly; separate
-observer cases require both live delivery and expiry. Production observer/storage/
-deadlines/privacy/gates unchanged. Source23 uninstalled, dev10 human-trusted/logging
-scope unchanged, all93requirements retained; full product incomplete.
+The observer test now respects absolute lifetime across consumer pauses. Actual-
+storage controlled-clock cases require live3→4/cancel AND expiry/no yield/fresh4.
+Production observer/storage/deadlines/permissions are unchanged. Strict concurrent
+initialization waits every writer before requiring all3 successes; no assertion
+weakening, event retry, lock-budget increase or production logging expansion.
 
-Local188pass/0fail/95Windows-only skips283total, targeted15pass/0fail/1skip,
-validate3/replay4. First CI40075058916: new observer cases passed in both Windows lanes; Node24
-22storage+75proof passed, Node22 failed a separate initial concurrent3write refusal
-(storage21/1, proof skipped). Diagnostic90375af/CI40075581270: bothWindows22storage passed, then copied-helper
-LF matcher failed on CRLF before tracing; Ubuntu22 slow-sync32 also returned busy.
-Copied-source normalization/strict3writer await-all cleanup prepared, no production
-policy/budget change or retry; actual diagnostic results pending. Old CI40073187216 failure preserved,
-exact old host timing unproved, no retry/timeout increase/assertion weakening.
-See [DEV23-REVIEW](DEV23-REVIEW.md); earlier model-next statements are historical.
+Latest source [ccf6fbc](https://github.com/HarryBurd33/claude-mods-for-codex/commit/ccf6fbc6dc19ccd932db10a082ec54d15adabb43),
+[CI40075868007](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40075868007):
+both Windows lanes22storage+75proof passed; copied-helper diagnostic9writes each
+passed with3records per fresh root, no refusal labels. Three POSIX lanes188/0/95skips;
+macOS22 failed an existing available:true assertion (187/1/95), reason unlogged,
+sentinel assertion not reached. No helper-execution inference. Earlier Windows
+concurrent refusal and POSIX slow-sync busy failures remain unresolved and preserved.
+Own diagnostic CRLF matcher failure was fixed in copied-source preparation only.
+
+Local188pass/0fail/95Windows-only skips283total; validate3/replay4. Source23
+uninstalled; dev10 human trust/private settings/logging scope/all93requirements/
+production Windows gates unchanged. Full product incomplete. See [DEV23-REVIEW](DEV23-REVIEW.md).
+Next human GPT-6 Astra Ultra for remaining private-storage/locking/inspection
+reliability review; Medium is insufficient. Earlier records below are historical.
+
 
 
 ## Source22 Medium package verification — 2026-10-24

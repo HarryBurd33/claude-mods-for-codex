@@ -1,24 +1,29 @@
 # Requirements ledger
 
 
-## Source23 High candidate — observer deadline test boundary — 2026-10-24
+## Source23 High checkpoint — observer tests corrected; reliability incomplete — 2026-10-24
 
-Controlled-clock actual-storage probes reproduce valid iterator expiry and the
-old TypeError while a fresh read still sees4records; live same-iterator3→4/cancel
-also passes. Windows storage test now reads completed writes directly; separate
-observer cases require both live delivery and expiry. Production observer/storage/
-deadlines/privacy/gates unchanged. Source23 uninstalled, dev10 human-trusted/logging
-scope unchanged, all93requirements retained; full product incomplete.
+The observer test now respects absolute lifetime across consumer pauses. Actual-
+storage controlled-clock cases require live3→4/cancel AND expiry/no yield/fresh4.
+Production observer/storage/deadlines/permissions are unchanged. Strict concurrent
+initialization waits every writer before requiring all3 successes; no assertion
+weakening, event retry, lock-budget increase or production logging expansion.
 
-Local188pass/0fail/95Windows-only skips283total, targeted15pass/0fail/1skip,
-validate3/replay4. First CI40075058916: new observer cases passed in both Windows lanes; Node24
-22storage+75proof passed, Node22 failed a separate initial concurrent3write refusal
-(storage21/1, proof skipped). Diagnostic90375af/CI40075581270: bothWindows22storage passed, then copied-helper
-LF matcher failed on CRLF before tracing; Ubuntu22 slow-sync32 also returned busy.
-Copied-source normalization/strict3writer await-all cleanup prepared, no production
-policy/budget change or retry; actual diagnostic results pending. Old CI40073187216 failure preserved,
-exact old host timing unproved, no retry/timeout increase/assertion weakening.
-See [DEV23-REVIEW](DEV23-REVIEW.md); earlier model-next statements are historical.
+Latest source [ccf6fbc](https://github.com/HarryBurd33/claude-mods-for-codex/commit/ccf6fbc6dc19ccd932db10a082ec54d15adabb43),
+[CI40075868007](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40075868007):
+both Windows lanes22storage+75proof passed; copied-helper diagnostic9writes each
+passed with3records per fresh root, no refusal labels. Three POSIX lanes188/0/95skips;
+macOS22 failed an existing available:true assertion (187/1/95), reason unlogged,
+sentinel assertion not reached. No helper-execution inference. Earlier Windows
+concurrent refusal and POSIX slow-sync busy failures remain unresolved and preserved.
+Own diagnostic CRLF matcher failure was fixed in copied-source preparation only.
+
+Local188pass/0fail/95Windows-only skips283total; validate3/replay4. Source23
+uninstalled; dev10 human trust/private settings/logging scope/all93requirements/
+production Windows gates unchanged. Full product incomplete. See [DEV23-REVIEW](DEV23-REVIEW.md).
+Next human GPT-6 Astra Ultra for remaining private-storage/locking/inspection
+reliability review; Medium is insufficient. Earlier records below are historical.
+
 
 
 ## Source22 Medium package verification — 2026-10-24
@@ -460,7 +465,7 @@ issues are reports/leads, not reproductions by this project.
 | PL-01 Usable native macOS CLI installation | Claude CLI Mods | Supported Codex CLI plugins/hooks/MCP with format gate | CLI163 | CX-PKG; CX-FORMAT; CX-H; NATIVE-PROOF | unverified | CLI163 supported install/update/trust/cache; fresh removal hook/cache absence and125-file exact reinstall passed | Three trusted hooks/zero errors after unchanged reinstall; disable/older-version rollback/permission matrix still pending | CLI and desktop results recorded separately; optional lifecycle hooks unregistered |
 | PL-02 Usable actual desktop integration | Claude desktop Mods | Official desktop plugin and MCP App extension | Desk | CX-UI; CX-PKG; NATIVE-PROOF | supported | Dev6 actual six-view dashboard/local preview/authored rewrite/control/deny passed; dev4 sandbox-negative separate | Native rendering/nested expansion/Clear passed; accessibility/lifecycle/desktop SessionStart remain | MCP Apps inspection permitted; native app CUA blocked and not bypassed |
 | PL-03 Linux portability | Claude CLI on Linux | Node package plus supported Codex Linux hooks/MCP | POSIX-CI; Linux Codex version TBD | CX-PKG; LOCAL CI | unverified | Source8 d7fafbb four POSIX Node22/24 Ubuntu/macOS CI jobs passed; no native Linux Codex host | Observe exact-source Linux CI and separately native Linux install/events/cleanup when host available | No Linux Codex host tested; Node CI is not native integration |
-| PL-04 Native Windows compatibility | Claude sample/version-specific Windows support | Codex native Windows plus platform command/storage adapter | Win | CX-WIN; SAMPLES issues; LOCAL | unverified | Source9–13 NTFS/job/read-set/named-metadata synthetic OS proofs (CI40058125353,28/28 each Windows lane); source14 same-helper fixed synthetic metadata capture (CI40059849695,35/35 proofs each Windows lane), source15 strict SHA1/v2 index projection (CI40060887884,44/44 proofs each lane), source16 positive HEAD/loose-ref source binding (CI40061829694,53/53 proofs each lane), source17 fixed owned metadata helper (CI40063228451,62/62 proofs each lane; child timer excludes parent preflight), source18 CI40064711984 static inventory:64/64proofs per lane, both fixed Git candidates refused before content reads (no hash/import/version), generic preflight cause undiagnosed; source19 CI40067892456 repeat-probe CodeAncestor/ForeignInstallerGrant/segment1 after original refusal (no authority or atomic causal claim),66proofs each lane; source21 CI40071604769: 69/69 proofs per lane, exact OS-known ancestor draft descriptor assessment only, original Git pins/private-data trust unchanged; source22 CI40072785589: 75/75 proofs per lane, retained ancestor metadata/descriptor-change/cleanup proof only, no atomic ACL snapshot or admission; first fixture failure CI40071218873 preserved and corrected; existing storage APIs; no native Codex host, project/settings/restore refused before IO | Native ACL/private root, shell quoting, drives/UNC/Unicode/junctions, lock/rename, timeout cleanup, install/trust/update/remove | No full compatibility claim; do not remove privacy checks to pass |
+| PL-04 Native Windows compatibility | Claude sample/version-specific Windows support | Codex native Windows plus platform command/storage adapter | Win | CX-WIN; SAMPLES issues; LOCAL | unverified | Source9–13 NTFS/job/read-set/named-metadata synthetic OS proofs (CI40058125353,28/28 each Windows lane); source14 same-helper fixed synthetic metadata capture (CI40059849695,35/35 proofs each Windows lane), source15 strict SHA1/v2 index projection (CI40060887884,44/44 proofs each lane), source16 positive HEAD/loose-ref source binding (CI40061829694,53/53 proofs each lane), source17 fixed owned metadata helper (CI40063228451,62/62 proofs each lane; child timer excludes parent preflight), source18 CI40064711984 static inventory:64/64proofs per lane, both fixed Git candidates refused before content reads (no hash/import/version), generic preflight cause undiagnosed; source19 CI40067892456 repeat-probe CodeAncestor/ForeignInstallerGrant/segment1 after original refusal (no authority or atomic causal claim),66proofs each lane; source21 CI40071604769: 69/69 proofs per lane, exact OS-known ancestor draft descriptor assessment only, original Git pins/private-data trust unchanged; source22 CI40072785589: 75/75 proofs per lane, retained ancestor metadata/descriptor-change/cleanup proof only, no atomic ACL snapshot or admission; first fixture failure CI40071218873 preserved and corrected; existing storage APIs; no native Codex host, project/settings/restore refused before IO | Native ACL/private root, shell quoting, drives/UNC/Unicode/junctions, lock/rename, timeout cleanup, install/trust/update/remove | Source23 controlled observer22storage/75proof latest OS passes, prior concurrent-creation refusal unresolved; no full compatibility claim; do not remove privacy checks to pass |
 | PL-05 WSL compatibility separately | Claude desktop WSL plugin restrictions differ | Codex Linux path under WSL2 | WSL | C-UI; CX-WIN | unverified | Not tested | Record distro/Windows/client; host interoperability/path and hook tests | WSL does not certify native Windows; Claude restriction not transferred blindly |
 | PL-06 CI separates platform contracts from host tests | Mocked test framework | GitHub Actions matrices with explicit test scopes | POSIX-CI; Win | LOCAL `.github/workflows/ci.yml` | supported | Source8 full CI retained; source9 OS suites and separate process/object proof recorded with failures/corrections/exact source in TEST-LOG | Preserve earlier candidate/legacy failure history; distinguish OS APIs, subprocess replay and actual Codex host | No native Windows/Windows11/WSL installation/event/UI claim; source/extraction/private ACL CI recorded separately |
 | GOV-01 Review full requested primary documentation | Entire Mods section/index and official Codex docs | Requirements/evidence records with version/date and retrieval gaps | Research date 2026-10-23 | C-UI/C-EVT/C-DEV; CX-*; CLAUDE-RESEARCH | supported | Ten Claude Mods pages retrieved, relevant security/admin, primary examples and Codex release source reviewed | Keep each row linked to evidence; record inaccessible pages/videos rather than invent review | Current docs mutable; recheck changed claims before release |

@@ -170,3 +170,57 @@ cleanup correction, not an explanation or fix for the initial native refusal.
 Actual new Windows diagnostic results pending upload. Private storage/locking
 questions remain unresolved; if source-only samples don't resolve them, use a
 verified checkpoint and human Astra Ultra review, not speculative policy repair.
+
+
+## Corrected diagnostic run and remaining failure
+
+Source [ccf6fbc6dc19ccd932db10a082ec54d15adabb43](https://github.com/HarryBurd33/claude-mods-for-codex/commit/ccf6fbc6dc19ccd932db10a082ec54d15adabb43),
+tree `ebdf2bf9de47edd60ca371e3be46553ce70db4fd`,
+[CI40075868007](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40075868007):
+6jobs passed, macOS Node22 failed. Actual decoded Windows and full-suite logs read:
+
+| Job | Observed result |
+| --- | --- |
+| Windows22, 120818952009 | 22storage +75proof passes, zero failures/cancellations/skips |
+| Windows24, 120818951871 | Same22+75/0; controlled live/expired observer cases pass |
+| Ubuntu22, 120818951986 | 188pass/0fail/95Windows-only skips283total |
+| Ubuntu24, 120818951990 | Same188/0/95 |
+| macOS24, 120818952014 | Same188/0/95 |
+| macOS22, 120818951996 | 187pass/1fail/95skips283total |
+| Windows portable, 120818952065 | Successful job conclusion, not native host |
+
+Windows Server2025 NTFS/PowerShell5.1; CI remains separate from Windows11 Codex.
+The corrected copied helper compiled/executed, three fresh roots per lane with3
+concurrent writes each: all9responses successful, each fresh read counted3records,
+no Refuse labels or exception categories. This does NOT reproduce or explain the
+older initial-creation refusal. Source-copy instrumentation can affect timing;
+a later labeled refusal would classify that new sample, not the old atomic cause.
+No native Codex client install/hook/UI/sandbox test or extra model/API run.
+
+macOS22 failed existing hostile-repository test at workspace.test.mjs188:
+listProjectFiles.available was false instead of true, duration130.797042ms. The
+sanitized reason was not logged. Later inspect-diff and negative sentinel check
+at192 were not reached. Do NOT infer a repository helper executed, or claim the
+sentinel remained absent, from an assertion that did not run. No project/Git code
+changed in source23. Failure preserved, no retry or weakened availability/sentinel
+assertion. Full functionality/security reliability review remains incomplete.
+
+Fresh final local full suite188pass/0fail/95skips283total; new boundary2/0/0skip,
+targetedstate+boundary15/0/1skip, validate3/replay4/diff-check clean. Production
+observer/storage/state budget/Windows helper/C# lease/admission remain byte-identical
+to d11a4a6. All149installed dev10 bytes/private settings/93IDs freshly preserved.
+
+## Stronger-model gate
+
+Observer semantics are now explicitly tested, but Windows concurrent creation
+refusal, POSIX finite-budget32-write reliability and macOS inspection availability
+are unresolved. These touch private persistence, lock ownership and trusted Git
+inspection. Medium is not sufficient, and blind High timeout/permission repairs
+would be unjustified. Next exact human setting: GPT-6 Astra, Ultra. Ask it to review
+contracts and targeted evidence before altering security/deadline policy. No
+unrelated research, private-session discovery, app patch/client fork or system repair.
+
+Following final handoff changes documentation only. Actual final local/remote/tree
+identities are independently read back after upload, recorded in checkpoint reply
+and ignored handoff; no circular self-hash claim. No new full suite solely for notes.
+No background/delegated/scheduled continuation after model-switch stop.
