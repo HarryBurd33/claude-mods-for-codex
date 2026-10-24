@@ -1,5 +1,38 @@
 # Continuation verification log
 
+## Medium source9 packaging and source10 focus continuation — 2026-10-23
+
+Clean09518fd confirmed. Anonymous credential/config-disabled public clone exact
+commit/tree, full npm test170pass/0fail/28Windows-only skips198total. Source9
+pack147files/914844bytes/SHA2567866423d04dfeee0f8a19fe4ad646c1fa5f0fe350d5b16e24570547842bdeb1d;
+allbytes match clone/checkpoint, no private roots/links/traversal/portable manifest.
+Spaced extraction validate3mods/replay4fixtures/package+scaffold7/7. Source9
+notesCI40043554441 all7jobs success (jobs actually read). PACKAGE-DEV9 has scope.
+
+Installed6 activity4/same revision. Watched panel checked; human closed; permitted
+MCP Apps tabs empty. Service returned same metadata, human reopened, new panel
+connected, project scope/4counts/Watch off. Closing timing relative to watch deadline
+not measured; no backend-cancellation claim. Human first reported keyboard issue,
+then clarified Clear worked but focus was unclear. Live DOM showed active Clear,
+empty source/no preview. Source controls stay in DOM; no render focus-reset bug
+established. Source10 CSS applies3px currentColor outline with3px offset to focused
+buttons/input/textarea/select/summary, including mouse focus. No JS/tab-order change.
+Version package/manifest/server10. Installed6 remains unchanged, update unverified.
+
+Relevant rendering/observer/package tests15/15. Existing bounded loopback server
+first failed sandbox bindEPERM; authorized escalation ran127.0.0.1 only, one fixed
+resource,3minute bound, no external assets/network/model. Isolated IAB source10
+(not native plugin): Render→ShiftTab source→Tab Render→Tab Clear→Enter cleared
+source+preview; active element IDs and computed3px black outline/3px offset observed,
+screenshot retained privately. Host bridge unavailable as expected in this separate
+browser; no native source10 claim. No test mirroring CSS added for this small style
+change. All Windows gated code/defaults/hook registration/config/trust unchanged.
+
+Official Windows sandbox, Developer commands, Hooks and plugin packaging pages
+searched and actually opened2026-10-23. Prepared docs/windows-native-acceptance.md;
+no inventory/install/launcher/sandbox change on an unavailable Windows host. Current
+docs support mechanisms; actual target release still needs inventory/native tests.
+
 ## Verified source9 security proof — 2026-10-23
 
 Runnable source[a3a9c2598455a858bbfec6c3b1ecb6d7b14e62e0](https://github.com/HarryBurd33/claude-mods-for-codex/commit/a3a9c2598455a858bbfec6c3b1ecb6d7b14e62e0),

@@ -1,6 +1,6 @@
 # Remaining native acceptance
 
-Source dev9 is not installed. These steps concern the immutable human-trusted
+Source dev10 is not installed. These steps concern the immutable human-trusted
 dev6 macOS fixture unless a reviewed update is explicitly selected. No additional
 model/API evaluation, optional hook registration, broader logging, client upgrade
 or theme selection is implied. Keep other plugins and existing data unchanged.
@@ -11,10 +11,10 @@ or theme selection is implied. Keep other plugins and existing data unchanged.
 | --- | --- | --- |
 | Preview keyboard | Click Preview source, press Tab once, then Enter. Focus should reach Render locally and render the sample. | Human confirmed2026-10-23; permitted MCP Apps inspection saw3nodes/2edges and complete tables. One keyboard path only. |
 | Preview resize | Drag the divider between this chat and Claude Mods narrower, then wider. Source and Render/Clear should remain usable. | Human confirmed both narrower and wider widths remained usable2026-10-23; exact widths not measured. |
-| Other keyboard controls | From Render locally, Shift-Tab should return to source; Tab should reach Clear. Use the labeled Format select to change format. | Not established. Preserve any user-entered source before Clear. |
+| Other keyboard controls | From Render locally, Shift-Tab should return to source; Tab should reach Clear. Use the labeled Format select to change format. | Human confirmed Clear worked but focus was unclear; live DOM showed focused Clear/empty source. Source10 strengthens focus outline; isolated browser sequence passed. Actual updated native focus visibility remains unverified. |
 | Screen reader/zoom/contrast | Inspect labels, equivalent node/edge tables, meaningful diff signs and visible focus in the actual host/settings chosen by the user. | Not established. Do not change OS accessibility/preferences silently. |
-| Close/reopen | Close only the Claude Mods panel, preserving this chat. Reopen through the installed entry or ask for mods.dashboard in this same chat. It should reconnect with the same selected scope/counts; local source need not persist. | Native reopen/loaded-session behavior not established. This does not alone prove pending requests were cancelled. |
-| Close while observing | Select Activity and Watch, then close only that panel. Reopen and check responsiveness and unchanged scope. | Separate explicit UI test needed. Source simulation covers cancellation/teardown; visible closure alone is not backend cleanup evidence. |
+| Close/reopen | Close only the Claude Mods panel, preserving this chat. Reopen through the installed entry or ask for mods.dashboard in this same chat. It should reconnect with the same selected scope/counts; local source need not persist. | Human closed the panel; permitted inventory became empty. After human reopened, a new panel connected with scope project/4records/same revision, Watch off. Backend cancellation/loaded-session unload still unverified. |
+| Close while observing | Select Activity and Watch, then close only that panel. Reopen and check responsiveness and unchanged scope. | Separate explicit UI test needed. Source simulation covers cancellation/teardown. Watch was checked before human closure in the source9 packaging stage; closure timing relative to its deadline was not measured, so backend cancellation remains unverified. |
 
 The current chat is outside the selected child logging project. Counts need not
 increase during these checks. Never broaden logging or launch another model run
@@ -65,3 +65,5 @@ on those paths requires the human-controlled High switch and their explicit
 [security/native gates](windows-storage.md); do not remove them on Medium.
 Linux Node CI and WSL are also separate from native installation/event/UI proof.
 All these incomplete requirements remain in the93-row ledger.
+
+The [later Windows native acceptance kit](windows-native-acceptance.md) records current official references, read-only inventory and the High/security/human-review gates. It is not a Windows result.

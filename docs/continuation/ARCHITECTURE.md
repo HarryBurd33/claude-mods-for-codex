@@ -1,5 +1,19 @@
 # Extension architecture and security contracts
 
+## Current Medium package/native continuation — source0.2.0-dev.10
+
+Human resumed09518fd on Sol Medium. Source9 anonymous clone/full offline suite,
+147-file archive and spaced extraction verified; see PACKAGE-DEV9.md. Source10
+adds only a stronger owned-UI focus outline plus matching version metadata;
+all gated Windows/security/runtime logic remains byte-equal the reviewed source9.
+Installed trusted6/logging/retention/config unchanged, activity4/same revision.
+Human closed the watched panel; permitted inventory became empty. Human reopened;
+new panel connected with same scope/counts and Watch off. Backend cancellation
+not established. Human clarified Clear worked, focus was unclear. Source10 isolated
+browser keyboard order/Enter-Clear and3px current-color outline observed; not native
+source10 or full accessibility acceptance. Windows kit prepared from retrieved
+primary docs; native Windows11 host available later. No Windows gate change.
+
 ## Current source9 Windows boundary — 2026-10-23
 
 Production NTFS directory pins now request FILE_LIST_DIRECTORY alongside metadata

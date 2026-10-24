@@ -1,5 +1,19 @@
 # Requirements ledger
 
+## Current Medium package/native continuation — source0.2.0-dev.10
+
+Human resumed09518fd on Sol Medium. Source9 anonymous clone/full offline suite,
+147-file archive and spaced extraction verified; see PACKAGE-DEV9.md. Source10
+adds only a stronger owned-UI focus outline plus matching version metadata;
+all gated Windows/security/runtime logic remains byte-equal the reviewed source9.
+Installed trusted6/logging/retention/config unchanged, activity4/same revision.
+Human closed the watched panel; permitted inventory became empty. Human reopened;
+new panel connected with same scope/counts and Watch off. Backend cancellation
+not established. Human clarified Clear worked, focus was unclear. Source10 isolated
+browser keyboard order/Enter-Clear and3px current-color outline observed; not native
+source10 or full accessibility acceptance. Windows kit prepared from retrieved
+primary docs; native Windows11 host available later. No Windows gate change.
+
 Assessment2026-10-23. **Full93-capability product incomplete. Source0.2.0-dev.9;
 installed human-trusted0.2.0-dev.6 unchanged.** High resumed travel1ae63d1. Source9
 corrects Windows metadata-only directory pinning (list right needed for sharing),
@@ -108,8 +122,8 @@ issues are reports/leads, not reproductions by this project.
 | ID / intended experience | Claude mechanism | Possible Codex mechanism / surface | Target | Evidence | Status | Current implementation | Dependencies and concrete acceptance test | Remaining gap / practical alternative |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | UI-01 Open a mod-owned pane | `ui.open` / Pane | MCP App resource in official host | UIhost / Desk | C-UI; CX-UI; NATIVE-PROOF | supported | Installed dev6 owned MCP App connected after restart; six views including Local preview verified | Basic rendering/view buttons and source→Tab→Render→Enter passed on Desk; narrower/wider preview usability passed; persistence/full keyboard/screen-reader/close-pending remain | Owned component; native chrome replacement not implied |
-| UI-02 Open a persistent side panel | Pane and docking | Documented Extensions sidebar/entrypoint where exposed | UIhost / Desk | C-UI; CX-UI | unverified | Actual dev4 MCP App was inspected in this chat side panel through permitted MCP Apps interface | Existing side-panel rendering passed; persistence/reopen/resize/close-pending need actual host acceptance | Host manages docking/navigation; no arbitrary host-tab API claim |
-| UI-03 Use tabs within a mod | Mod-owned component layout | Accessible tabs inside owned HTML; native host tab creation separately host-owned | UIhost / Desk | C-UI; CX-UI | supported | Six dev6 owned view buttons worked in actual host | Native six-view switching and simulated teardown pass; keyboard/focus/reopen still pending | Owned views do not create arbitrary host tabs |
+| UI-02 Open a persistent side panel | Pane and docking | Documented Extensions sidebar/entrypoint where exposed | UIhost / Desk | C-UI; CX-UI | unverified | Actual dev4 MCP App was inspected in this chat side panel through permitted MCP Apps interface | Installed6 human close→empty inventory→reopen/new connected panel with same scope/4counts observed; persistence/close-pending backend cleanup/full resize remain | Host manages docking/navigation; no arbitrary host-tab API claim |
+| UI-03 Use tabs within a mod | Mod-owned component layout | Accessible tabs inside owned HTML; native host tab creation separately host-owned | UIhost / Desk | C-UI; CX-UI | supported | Six dev6 owned view buttons worked in actual host | Native six-view switching/reopen and simulated teardown pass; source10 stronger focus ring tested in isolated browser, native updated focus/full keyboard pending | Owned views do not create arbitrary host tabs |
 | UI-04 Click buttons locally | Mod UI callbacks / Client messages | Owned HTML callback; explicit narrow MCP tool for host data | NodeMac; Desk | C-UI; CX-UI; LOCAL; NATIVE-PROOF | supported | Dev6 native Render/Clear/view interactions verified; literal JSON/plain code/flowchart and unsupported fallback passed | Actual native local rendering/Clear observed; automated no-tool/model/network assertion separate; lifecycle gaps remain | Buttons never approve native calls |
 | UI-05 Enter fields and choose options | Input/Select plus local callbacks | Owned form controls and validated tool schemas | UIhost | C-UI; CX-UI | supported | Installed dev6 preview Format/source fields and watch checkbox verified; no general authoring UI fields | Label/keyboard/cancellation/teardown and no implicit model call; verify in actual host | Watch replay0→1 observed; no native composer replacement |
 | UI-06 See status and activity | Reactive state and UI displays | Owned status region and read-only MCP tool | NodeMac; Desk | C-UI; CX-UI; LOCAL; NATIVE-PROOF | supported | Installed dev6 chart/table/scoped count4 rechecked on Medium; earlier native selected-project CLI capture displayed1→4 | Native shared write/Refresh and current dev4 rendering pass; active-Watch native timing/full accessibility remain | Retained delivery counts are not success/lifetime totals/producer health |

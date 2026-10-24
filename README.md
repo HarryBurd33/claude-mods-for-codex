@@ -1,12 +1,18 @@
 # Claude Mods for Codex
 
+Source10 strengthens the owned dashboard's focus outline for mouse and keyboard
+focus. It follows a human report that Clear worked but focus was unclear. The
+isolated browser check is separate from installed dev6; no native source10 result
+or full accessibility claim. [Source9 packaging](docs/continuation/PACKAGE-DEV9.md)
+passed anonymous-clone/archive/extraction checks; source10 requires its own archive.
+
 High Windows work adds an isolated, unintegrated process/object-security proof:
 creation-time job ownership, executable handle/ACL checks and private empty scratch.
 Real Windows CI results and limits are in [the proof](proofs/windows-owned-process/README.md)
 and [verification log](docs/continuation/TEST-LOG.md). No project/settings/restore
 activation or installation; installed dev6, logging scope and human trust unchanged.
 
-**Development source `0.2.0-dev.9`: the full requested product is incomplete.**
+**Development source `0.2.0-dev.10`: the full requested product is incomplete.**
 Source dev8 adds matching/nonmatching offline fixtures to each generated mod and
 keeps its configuration disabled. The reviewed dev7 foundation provides handle-checked private Windows NTFS journal/state and explicit
 selected-usage reads, with bounded optional hook telemetry and cancellation.

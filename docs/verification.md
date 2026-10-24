@@ -4,8 +4,8 @@ Historical v0.1 verification. Current continuation results are recorded separate
 in [continuation/TEST-LOG.md](continuation/TEST-LOG.md). The prior review and 39-test
 baseline do not certify later changes or native integration.
 
-Current source7 Windows NTFS integration passed20/20 tests on each real Windows
-Node22/24 CI lane; all7jobs passed. This is OS/subprocess evidence, not native Codex
+Current source9 Windows CI passed20/20 storage plus8/8 isolated process/object
+proofs on each real Windows Node22/24 lane; all7jobs passed. This is OS/subprocess evidence, not native Codex
 Windows11 acceptance. Installed dev6 native Local preview/authored rewrite and
 same-snapshot removal/reinstallation remain version-specific; logging unchanged.
 See the current continuation summary and Windows contract.

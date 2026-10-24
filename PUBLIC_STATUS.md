@@ -1,6 +1,12 @@
 # Project status — 2026-10-23
 
-**Development source0.2.0-dev.9; full93-capability product incomplete.** Human
+Medium verified source9 public-clone/package/extraction, prepared the later Windows
+native kit and observed installed6 close/reopen with unchanged scope/counts. Human
+reported unclear focus while Clear worked; source10 strengthens the owned focus
+outline and passed an isolated browser keyboard check. Source10 is not installed,
+full accessibility remains incomplete. Windows/security code unchanged from9.
+
+**Development source0.2.0-dev.10; full93-capability product incomplete.** Human
 resumed Sol High from travel1ae63d1. Windows directory handles now request the list
 right needed to block deletion while pinned; no ancestor enumeration/logging.
 Bounded sharing-conflict retry retains all ordinary ACL/path refusals and deadlines.

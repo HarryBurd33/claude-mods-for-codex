@@ -1,3 +1,83 @@
+# Medium source10 focus/package checkpoint — native update still pending
+
+2026-10-23. Human resumed Sol Medium from09518fd. Keep Sol Medium for the remaining
+routine package/native macOS review; **stop for Sol High before any gated Windows
+security/integration work**. User's Windows11 host remains available later.
+Full93-capability product incomplete. Installed/trusted dev6 and logging unchanged.
+
+## This continuation
+
+- Source9 exact09518fd public clone verified anonymously; full170pass/28Windows-only
+  skips, no failures. Archive147files/914844bytes/SHA256
+  7866423d04dfeee0f8a19fe4ad646c1fa5f0fe350d5b16e24570547842bdeb1d;
+  allbytes match clone/checkpoint, spaced extraction validate3mods/replay4fixtures/
+  package+scaffold7/7. See PACKAGE-DEV9.md. Initial archive preserved privately.
+- Source9 notesCI40043554441 all7jobs success; Windows foundation exacta3a9c25/
+  CI40043152081 remains separate20storage+8proof per native Server lane.
+- Prepared ../windows-native-acceptance.md from official pages actually searched/
+  opened2026-10-23. It requests small read-only inventory and explicit High,
+  executable/DLL/project/scratch/restore/native gates; no automatic installation,
+  PATH fallback, sandbox setup, trust writes or model run. Current generic docs
+  are not proof a target release loads this package or Windows launcher.
+- Installed6 Watch checked, human closed panels, permitted inventory empty. Human
+  reopened, new panel connected/project scope/4records/same revision, Watch off.
+  Close timing vs deadline not measured; backend request cancellation unverified.
+- Human clarified Clear worked but focus was unclear. Source controls are stable
+  DOM; no focus-reset/Clear functionality bug established. Source10 CSS now applies
+  a3px currentColor outline/3px offset to focused button/input/textarea/select/
+  summary, including mouse focus. No JS/tab-order/permission/logging change.
+  Package/manifest/server version10. All Windows/security/gate code byte-equal9.
+- Relevant tests15/15; full local170pass/0fail/28Windows-only skips198total.
+  Isolated bounded loopback IAB: Render→ShiftTab source→Tab Render→Tab Clear→Enter
+  cleared source/preview and computed3px current-color ring. This separate browser
+  had no host bridge, not source10 native Codex acceptance. Screenshots local only.
+
+Source10 must receive its own uploaded source/CI/archive/clone verification;
+record after observation, never reuse source9 archive hash. Do not install merely
+because package tests pass. No source10 changed-code review, update or native test
+has occurred. Source6 remains the actual host target. Read TEST-LOG and STATUS for
+subsequent observed checkpoint identities/results; private root handoff has paths.
+
+## Next tasks and protected boundary
+
+1. Finish source10 exact-source CI/public-clone/package/extraction/readback; no
+   repeat full suites after only notes unless a new failure/change justifies it.
+2. Prepare a concrete immutable source10 update and dev6 rollback/source/access
+   diff through the existing supported local marketplace workflow. Preserve other
+   entries/config/settings/data/retention. Do not edit installed cache/trust hashes.
+   Real human changed-code/hook review and restart remain required; do not infer
+   trust from unchanged hook JSON or referenced-code changes. Prepare exact step
+   before asking human. Retest focus in native panel only after reviewed update.
+3. Source10 native focus visibility/full accessibility, close-pending backend
+   cleanup, loaded disable/older rollback, optional events/themes and native Linux/
+   Windows/WSL remain incomplete. Optional registration/theme/client changes or an
+   additional model run need separate explicit choice/authorization. Existing
+   selected-chat skill use consumes selected-model usage; no extra evaluator.
+4. When Windows host is ready, checkpoint/upload/verify and stop for Sol High
+   **before** Windows security/integration, executable/DLL/project traversal,
+   content-scratch cleanup or restore work. The kit is preparation, not activation.
+
+No major custom-client/fork/app-patch direction, extra model test, scope expansion,
+cache/trust/config/install change. All93requirements remain in scope. Root HANDOFF
+and.local stay private. Existing High source/security contracts below are retained
+reference; their old next-Medium instruction has already been fulfilled.
+
+## Copy-and-paste resume instruction
+
+> Continue on GPT-6.1 Sol, Medium from the verified source10 focus/package checkpoint
+> on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,ARCHITECTURE,
+> TEST-LOG,HANDOFF}.md, PACKAGE-DEV9.md, docs/windows-native-acceptance.md and latest
+> ignored root HANDOFF.md. Preserve installed trusted dev6, logging scope/settings
+> and all Windows gates. Finish exact-source package/native macOS update preparation
+> and real human changed-code/hook review before loading source10; its isolated
+> focus/browser result is not native acceptance. No extra model/API run, observer/
+> theme/client change or trust automation is authorized. Stop for Sol High before
+> any gated Windows security/integration work, especially when the later Windows11
+> host is available. Keep all93requirements explicitly incomplete where unverified;
+> save/upload/read back safe checkpoints and preserve private history.
+
+---
+
 # Source9 Windows security checkpoint — next GPT-6.1 Sol, Medium
 
 2026-10-23. **Full93-capability product incomplete.** Human selected Sol High from
