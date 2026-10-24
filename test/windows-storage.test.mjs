@@ -9,7 +9,7 @@ import test from 'node:test';
 import { windowsHookProjectMatches } from '../src/windows-hook.mjs';
 import { validateWindowsPrivatePath, windowsStorageRequest, readWindowsPrivateFile, parseWindowsStorageResponse } from '../src/windows-storage.mjs';
 import { appendJournalEntry, prepareDataDirectory, readJournalEntries } from '../src/journal.mjs';
-import { recordMetadataEvent, readMetadataState, pruneMetadataState, observeMetadataState } from '../src/state.mjs';
+import { recordMetadataEvent, readMetadataState, pruneMetadataState } from '../src/state.mjs';
 import { loadRuntimeSettings } from '../src/runtime-settings.mjs';
 import { readSelectedUsage } from '../src/usage.mjs';
 import { describeProject, listProjectFiles, inspectProjectChanges, inspectCheckpointChanges, readCheckpointPair } from '../src/workspace.mjs';
@@ -213,7 +213,7 @@ test('Windows private bridge rejects malformed, mismatched, noncanonical, oversi
   assert.throws(()=>parseWindowsStorageResponse(Buffer.alloc(3*1024*1024+1),'journal-append'),/Private Windows/);
 });
 
-test('native Windows public state isolates sessions, observes changes and prunes by explicit cutoff',native,async t=>{
+test('native Windows public state isolates sessions, reads completed changes and prunes by explicit cutoff',native,async t=>{
   const {root}=await directory(t),data=join(root,'state'),scope={projectId:'synthetic-project',sessionId:'one'},other={...scope,sessionId:'two'};
   assert.equal((await readMetadataState(data,scope)).records,0);assert.equal((await readdir(root)).includes('state'),false);
   const fixed=()=>new Date('2026-10-23T12:00:00Z');
@@ -221,10 +221,11 @@ test('native Windows public state isolates sessions, observes changes and prunes
   await assert.doesNotReject(recordMetadataEvent(data,other,{event:'PreToolUse',tool:'Bash',decision:'deny'},()=>new Date('2026-10-24T12:00:00Z')), 'other session record');
   const before=await readMetadataState(data,scope);assert.equal(before.records,3);
   assert.equal((await readMetadataState(data,other)).records,1);
-  const controller=new AbortController(),observed=observeMetadataState(data,scope,{durationMs:10000,intervalMs:100,signal:controller.signal});
-  assert.equal((await observed.next()).value.records,3);
+  // A consumer pause spends the observer's absolute lifetime. Keep this real
+  // storage check independent of wall-clock latency; the clock-controlled real
+  // storage observer tests assert BOTH live delivery and legitimate expiry.
   await recordMetadataEvent(data,scope,{event:'PostToolUse',tool:'Bash'},fixed);
-  assert.equal((await observed.next()).value.records,4);controller.abort();assert.equal((await observed.next()).done,true);
+  assert.equal((await readMetadataState(data,scope)).records,4);
   const names=await readdir(data);
   await assert.rejects(recordMetadataEvent(data,scope,{event:'SessionStart',prompt:'SYNTHETIC_PRIVATE'}),/unsupported/);
   await assert.rejects(pruneMetadataState(data,{}),/explicit/);

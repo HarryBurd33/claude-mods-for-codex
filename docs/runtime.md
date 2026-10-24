@@ -153,3 +153,16 @@ reported counters from one private exec JSONL export. It is not current context
 or a current-chat attachment. Latest cumulative completion snapshot only, never
 sum; absent data stays unavailable. See [impact and usage](impact-and-usage.md).
 No keepalive or new model call. Skills/chat/tool use still consume model usage.
+
+
+## Scoped observer lifetime
+
+The metadata observer's duration is absolute from its first iteration and includes
+pauses while its consumer processes a yielded snapshot or writes an event. An
+expired observer can return `{done:true,value:undefined}` without another snapshot;
+consumers must check `done` or use `for await`. Expiry does not remove recorded
+metadata. A fresh explicitly scoped read can retrieve completed writes. No model
+call, background watcher, deadline extension or automatic retry is implied.
+Source23 tests live delivery and expiry with a clock controlled only inside a
+throwaway test process using actual storage; they are not native client or
+real-time delivery guarantees. The production observer/read/write code is unchanged.

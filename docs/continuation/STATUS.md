@@ -1,6 +1,21 @@
 # Current status — source22 retained metadata — 2026-10-24
 
 
+## Source23 High candidate — observer deadline test boundary — 2026-10-24
+
+Controlled-clock actual-storage probes reproduce valid iterator expiry and the
+old TypeError while a fresh read still sees4records; live same-iterator3→4/cancel
+also passes. Windows storage test now reads completed writes directly; separate
+observer cases require both live delivery and expiry. Production observer/storage/
+deadlines/privacy/gates unchanged. Source23 uninstalled, dev10 human-trusted/logging
+scope unchanged, all93requirements retained; full product incomplete.
+
+Local188pass/0fail/95Windows-only skips283total, targeted15pass/0fail/1skip,
+validate3/replay4. Actual Windows CI pending. Old CI40073187216 failure preserved,
+exact old host timing unproved, no retry/timeout increase/assertion weakening.
+See [DEV23-REVIEW](DEV23-REVIEW.md); earlier model-next statements are historical.
+
+
 ## Source22 Medium package verification — 2026-10-24
 
 Exact anonymous public clone e44dd93 passed186 tests, zero failures,95Windows-only
