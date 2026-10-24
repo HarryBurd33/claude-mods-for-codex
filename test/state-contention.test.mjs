@@ -1,18 +1,23 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
-import { mkdtemp, mkdir, readFile, writeFile, realpath, readdir, rm } from 'node:fs/promises';
+import { mkdtemp, mkdir, readFile, writeFile, realpath, readdir, lstat, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import test from 'node:test';
 
-test('POSIX state preserves 32 concurrent events with injected sync latency and leaves no lock', {
+test('POSIX state preserves all 32 concurrent slow-sync events with a controlled acquisition clock and leaves no lock', {
   skip:process.platform==='win32', timeout:15000,
 }, async t => {
   const root=await mkdtemp(join(await realpath(tmpdir()),'mods-state-latency-'));
   t.after(()=>rm(root,{recursive:true,force:true}));
   // Two explicit source copies only. Inject latency before (never replace) the
-  // real fsync. This is a source-instrumented OS fixture, not a native host test.
+  // real fsync. Control only the acquisition scheduler's clock, keeping its
+  // budget open while these eight writers contend. Actual filesystem operations,
+  // lock admission, timers and cleanup stay real. The group watchdog is finite.
+  // This checks preservation under contention, not production wall-clock
+  // capacity or native-host delivery. Controlled budget expiry is tested below;
+  // state.test.mjs retains the real-clock held-lock and eight-writer/32-event cases.
   let journal=await readFile(new URL('../src/journal.mjs',import.meta.url),'utf8');
   assert.equal(journal.split('await handle.sync();').length,2);
   journal=journal.replace('await handle.sync();','await delay(60); await handle.sync();');
@@ -21,6 +26,8 @@ test('POSIX state preserves 32 concurrent events with injected sync latency and 
     return JSON.stringify(new URL('../src/'+name,import.meta.url).href);
   });
   let state=await readFile(new URL('../src/state.mjs',import.meta.url),'utf8');
+  assert.equal(state.split('const budget = createStateLockBudget();').length,2);
+  state=state.replace('const budget = createStateLockBudget();','const budget = createStateLockBudget(() => 0);');
   state=state.replace(/(["'])\.\/([^"']+)\1/g,(all,q,name)=>{
     if(name==='journal.mjs')return all;
     assert.ok(['windows-state.mjs','state-lock-budget.mjs'].includes(name),'review new fixture import');
@@ -65,4 +72,52 @@ test('POSIX state preserves 32 concurrent events with injected sync latency and 
   const stateRoot=join(data,'metadata-state-v1');
   assert.deepEqual(await readdir(stateRoot),[metadataScopeKey(scope)]);
   assert.deepEqual(await readdir(join(stateRoot,metadataScopeKey(scope))),['activity.jsonl']);
+});
+
+test('POSIX acquisition expiry after a real collision preserves the held lock and committed bytes', {
+  skip:process.platform==='win32', timeout:10000,
+},async t=>{
+  const root=await mkdtemp(join(await realpath(tmpdir()),'mods-state-expiry-'));
+  t.after(()=>rm(root,{recursive:true,force:true}));
+  const data=join(root,'private data');
+  const scope={projectId:'synthetic-expiry',sessionId:'synthetic-expiry'};
+  const actual=await import('../src/state.mjs');
+  await actual.recordMetadataEvent(data,scope,{event:'SessionStart'},()=>new Date('2026-10-24T00:00:00Z'));
+  const stateRoot=join(data,'metadata-state-v1');
+  const lock=join(stateRoot,'.state.lock');
+  const journal=join(stateRoot,actual.metadataScopeKey(scope),'activity.jsonl');
+  await mkdir(lock,{mode:0o700});
+  const beforeLock=await lstat(lock,{bigint:true});
+  const beforeBytes=await readFile(journal);
+  const beforeSnapshot=await actual.readMetadataState(data,scope);
+
+  // Original production budget and storage functions. Only this owned module
+  // copy supplies clock values: construct, attempt, validated collision, expiry.
+  // No global clock, filesystem or timer replacement; no live lock is removed.
+  let state=await readFile(new URL('../src/state.mjs',import.meta.url),'utf8');
+  assert.equal(state.split('const budget = createStateLockBudget();').length,2);
+  state=state.replace('const budget = createStateLockBudget();',`const times = [0,0,999,1000];
+  const budget = createStateLockBudget(() => {
+    const value = times.shift();
+    if(value === undefined) throw new Error('controlled acquisition clock exhausted');
+    fixtureClockCalls.push(value); return value;
+  });`);
+  state=state.replace(/(["'])\.\/([^"']+)\1/g,(_,q,name)=>{
+    assert.ok(['journal.mjs','windows-state.mjs','state-lock-budget.mjs'].includes(name),'review new fixture import');
+    return JSON.stringify(new URL('../src/'+name,import.meta.url).href);
+  });
+  state+='\nexport const fixtureClockCalls = [];\n';
+  const modulePath=join(root,'state-expiry.mjs');
+  await writeFile(modulePath,state,{flag:'wx',mode:0o600});
+  const controlled=await import(pathToFileURL(modulePath).href);
+  await assert.rejects(controlled.recordMetadataEvent(data,scope,{event:'PostToolUse',tool:'Bash'}),/metadata state is busy/);
+  assert.deepEqual(controlled.fixtureClockCalls,[0,0,999,1000]);
+  const afterLock=await lstat(lock,{bigint:true});
+  assert.ok(afterLock.isDirectory());
+  for(const key of ['dev','ino','birthtimeNs','mode','uid'])assert.equal(afterLock[key],beforeLock[key],`held lock ${key}`);
+  assert.deepEqual(await readFile(journal),beforeBytes);
+  assert.deepEqual(await actual.readMetadataState(data,scope),beforeSnapshot);
+  assert.equal(beforeSnapshot.records,1);
+  assert.deepEqual((await readdir(stateRoot)).sort(),['.state.lock',actual.metadataScopeKey(scope)].sort());
+  assert.deepEqual(await readdir(join(stateRoot,actual.metadataScopeKey(scope))),['activity.jsonl']);
 });

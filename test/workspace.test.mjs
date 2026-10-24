@@ -185,11 +185,18 @@ test("repository config, includes, fsmonitor, diff commands, textconv and hooks 
   const config = await readFile(join(root, ".git", "config"), "utf8");
   await writeFile(join(root, ".git", "config"), config + '\n[core]\nfsmonitor = "' + join(root, "helper.sh") + '"\nhooksPath = "' + root + '"\n[diff]\nexternal = "' + join(root, "helper.sh") + '"\n[diff "synthetic"]\ncommand = "' + join(root, "helper.sh") + '"\ntextconv = "' + join(root, "helper.sh") + '"\n[include]\npath = /synthetic/not/a/real/config\n');
   await writeFile(join(root, "hello.txt"), "new\n");
-  assert.equal((await listProjectFiles(root)).available, true);
-  const changes = await inspectProjectChanges(root, { includeDiffs: true });
-  assert.equal(changes.available, true);
-  assert.match(changes.files.find((entry) => entry.path === "hello.txt").diff, /\+new/);
-  await assert.rejects(lstat(sentinel), /ENOENT/);
+  // Check nonexecution even when availability refuses. Report only the API's
+  // fixed, sanitized reason; never print a Git stderr/path or patch payload.
+  try {
+    const files = await listProjectFiles(root);
+    assert.equal(files.available, true, files.reason);
+    const changes = await inspectProjectChanges(root, { includeDiffs: true });
+    assert.equal(changes.available, true, changes.reason);
+    assert.match(changes.files.find((entry) => entry.path === "hello.txt").diff, /\+new/);
+  } finally {
+    await assert.rejects(lstat(sentinel), { code: 'ENOENT' });
+    t.diagnostic('synthetic repository helper sentinel absent after inspection');
+  }
 });
 
 test("external Git stores and linked metadata fail closed with sanitized reasons", { skip: process.platform === "win32" }, async (t) => {

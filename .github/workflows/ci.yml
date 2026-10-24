@@ -75,7 +75,7 @@ jobs:
       - name: Synthetic copied-helper fixed-stage IPC trace (no file content or env values)
         run: node test/windows-ipc.mjs
       - name: Real NTFS ACL, public storage APIs, cancellation and synthetic hook subprocess
-        run: node --test test/windows-storage.test.mjs test/state-observer-boundary.test.mjs
+        run: node --test test/windows-storage.test.mjs test/state-observer-boundary.test.mjs test/windows-lock-contention.test.mjs
       - name: Copied-helper state refusal trace (diagnosis only, fixed labels, fresh synthetic roots)
         if: always()
         run: node proofs/windows-state-trace.mjs
