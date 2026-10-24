@@ -6,16 +6,17 @@ That retention source milestone is implemented on High; routine verification is 
 
 Source26 now implements the High-reviewed POSIX selected-scope retention preview/
 explicit cleanup CLI; [DEV26-REVIEW](DEV26-REVIEW.md) records tests and limits.
-No production data cleaned;26uninstalled, installed10/scope/trust unchanged.
-Next Medium: exact packaging/docs and concrete native step preparation; High
+No production data cleaned;26now installed/human-trusted, restart/native26 pending;
+settings/scope unchanged and reviewed10 retained for rollback.
+Continue Medium after human restart for native read-only acceptance; High
 before further consequential code/security. Native/event/accessibility/lifecycle/
 authoring/platform gaps remain; no package-version-only or Windows-proof loop.
 
 ## What is usable, and what is unfinished
 
 The installed human-reviewed dev10 has recorded macOS native dashboard, covered
-hook, exact rewrite/deny, preview/focus and basic authoring observations. Source26
-is uninstalled. Its offline macOS suite passed208 tests with109 Windows-only skips.
+hook, exact rewrite/deny, preview/focus and basic authoring observations. Configured source26
+is installed/human-trusted, with restart/native acceptance pending. Its offline macOS suite passed208 tests with109 Windows-only skips.
 Neither result is full-product acceptance. Native checks belong to the snapshot
 and client version actually observed; unsupported behavior and approximations
 must be disclosed rather than counted as implemented exact equivalents.

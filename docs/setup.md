@@ -4,9 +4,12 @@ This development package uses **only `.codex-plugin/plugin.json`**. Released Cod
 
 The current source package is `0.2.0-dev.26` (explicit POSIX selected-scope retention CLI; unintegrated Windows read-inventory proofs and retained source10 panel/authoring components), a development checkpoint, not a completed product release. Its registered components include the session notice, lexical guard, opt-in metadata journal/state, exact-command replacement and management skill, plus the local dashboard MCP service. Default configuration does not enable replacement or metadata storage. See [runtime access](runtime.md) before configuring its project/session scope. The included `proofs/` directory contains separate development harnesses and the unintegrated Windows OS proof. Installing the main package does not register those proof servers, panels, probes or an arbitrary execution tool. Actual host results and remaining blockers are recorded in the [continuation test log](continuation/TEST-LOG.md).
 
-The configured macOS fixture10 is installed with149verified files and its3hooks
-human-reviewed/trusted; native focus/render/keyboard-Clear verified after restart.
-Source26 remains uninstalled; its mandatory Windows real-image read check fails before bytes. Source changes alone never update a cache or establish trust. See [current native acceptance](native-acceptance.md).
+The configured macOS fixture26 is now installed with210verified cache files and
+three hooks personally reviewed/trusted; fresh inventory confirms enabled/trusted,
+zero errors/no model turn. Desktop restart/native26 execution remains pending.
+Settings/rules/logging unchanged; no optional observers or production cleanup.
+Reviewed10 retained for selective rollback. [Current package/install record](continuation/PACKAGE-DEV26.md).
+Source edits alone never update caches or establish trust.
 
 ## Requirements and installation scope
 

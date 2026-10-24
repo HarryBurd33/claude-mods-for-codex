@@ -1,12 +1,11 @@
 # Development dashboard and immediate local commands
 
-Current source26/macOS acceptance note2026-10-24: human-trusted dev10 is unchanged
-and was rechecked through the actual MCP tools/owned panel. Source26 is uninstalled;
-its new retention CLI and prior state-lock change do not inherit native dev10 acceptance.
-The installed desktop app bundle is now26.1021.22027/build21747; the exact running
-panel host version was not independently attested. Native history below belongs
-to each recorded snapshot/client. See [macOS audit](continuation/MACOS-ACCEPTANCE.md),
-[batch results](continuation/MACOS-BATCH.md) and [status](continuation/STATUS.md).
+Current source26 note2026-10-24: configured26 is now installed/human-trusted after
+exact package verification.210cache files match the immutable reviewed snapshot,
+existing settings/rules/logging unchanged. Desktop restart/native26 behavior remains
+pending; earlier native results below are version-specific. No production cleanup,
+optional hooks or extra model/API run. [Package/install](continuation/PACKAGE-DEV26.md),
+[current handoff](continuation/HANDOFF.md) and [macOS audit](continuation/MACOS-ACCEPTANCE.md).
 
 Native acceptance note2026-10-23: new dashboard views and fixed production
 rewrite/deny/control were verified after restart. Activity scope must align with
@@ -198,5 +197,5 @@ private settings, then requires its unchanged fingerprint for explicit cleanup.
 No automatic data deletion, sibling-scope discovery, MCP writer or lock reaping.
 Both journals remain when any retained record is too recent. Deletion may partially
 complete or leave locks after interruption; inspect after stopping writers, do not
-retry automatically. Windows refuses before IO. Source26 is uninstalled; no cleanup
+retry automatically. Windows refuses before IO. Configured26 is installed/human-trusted with restart/native acceptance pending; no cleanup
 of installed production records was performed by this milestone.

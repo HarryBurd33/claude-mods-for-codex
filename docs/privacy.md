@@ -29,5 +29,5 @@ private settings, then requires its unchanged fingerprint for explicit cleanup.
 No automatic data deletion, sibling-scope discovery, MCP writer or lock reaping.
 Both journals remain when any retained record is too recent. Deletion may partially
 complete or leave locks after interruption; inspect after stopping writers, do not
-retry automatically. Windows refuses before IO. Source26 is uninstalled; no cleanup
+retry automatically. Windows refuses before IO. Configured source26 is installed/human-trusted; desktop restart and native acceptance remain pending; no cleanup
 of installed production records was performed by this milestone.

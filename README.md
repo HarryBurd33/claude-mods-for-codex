@@ -7,25 +7,25 @@ cleanup, MCP writer or lock recovery. [Design and tests](docs/continuation/DEV26
 
 Independent MIT-licensed project; not affiliated with or endorsed by Anthropic or OpenAI.
 
-This is an uninstalled development checkpoint on `codex/astra-groundwork`, not a
-finished release. The default branch retains the experimental MVP. The full
-[93-capability ledger](docs/continuation/REQUIREMENTS.md) and [macOS audit](docs/continuation/MACOS-ACCEPTANCE.md)
-remain incomplete. Installed human-trusted dev10, its149reviewed files and logging
-scope are unchanged; no installed production metadata was cleaned.
+This is a development checkpoint on `codex/astra-groundwork`, not a finished release.
+The default branch retains the MVP; the [93-capability ledger](docs/continuation/REQUIREMENTS.md)
+remains incomplete. Configured dev26 is installed in the local Codex user profile,
+with210verified cache files and three hooks personally reviewed/trusted. **Desktop
+restart and native dev26 acceptance are pending.** Existing settings/rules/logging
+scope are unchanged; no production data cleanup. Reviewed10 remains for rollback.
 
-Local source26:208tests passed,0failed,109Windows-only skips; new retention suite
-19passed/0failed/1Windows-only skip; validate3mods/replay4fixtures. CI40128013186 is in progress; decoded Ubuntu22/24 and macOS24 logs each
-passed208 with109Windows-only skips. Remaining jobs are unverified. Synthetic/OS subprocess tests do not certify native Codex delivery.
-[Last completed source24 package check](docs/continuation/PACKAGE-DEV24.md); source26 packaging
-and installed native acceptance remain separate.
+Exact public clone:208tests passed/0failed/109Windows-only skips. Inspected210-file
+archive and fresh spaced extraction:33focused passes/0fail/1skip plus validate3/
+replay4. [Package/install record](docs/continuation/PACKAGE-DEV26.md). CI40128013186:
+four POSIX lanes pass; Windows portable passes; both Windows storage lanes retain
+the known failed image check. Packaging is not native-host or full-platform proof.
 
 Windows stays in scope and deferred. Its unchanged mandatory real-image check
 previously failed before bytes (observed2links versus the one-link guard). No
 candidate Git execution, image hash/import/version or native Windows11/WSL result.
 All production Windows gates remain closed. [Failure record](docs/continuation/DEV25-REVIEW.md).
 
-The next setting is Sol Medium for packaging and concrete native acceptance-step
-preparation, with High before new consequential runtime/security/writer changes.
+After a human desktop restart, continue on Sol Medium for native read-only checks, with High before new consequential runtime/security/writer changes.
 No native UI restyling, automatic trust, extra model/API run or full-product
 completion is implied. The [delivery plan](docs/continuation/DELIVERY-PLAN.md) retains remaining work.
 

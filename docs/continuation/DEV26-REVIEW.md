@@ -136,3 +136,14 @@ The old unchanged Windows image failure remains explicit even if its new lane
 result has not finished. No further implementation investigation is required to
 justify keeping High selected while waiting for routine evidence. Final notes-only
 checkpoint identity is read back after upload in the reply/private handoff.
+
+## Medium completed CI readback — 2026-10-24
+
+CI40128013186 has five successful jobs/two Windows storage failures. Actual decoded
+remaining logs: macOS22job120973491548208pass/0fail/109Windows-only skips317total;
+Windows22job120973491585 and Windows24job120973491304 each25storage passes,84/85
+process/security proofs. Same unchanged cmd/git.exe Image refusal before bytes,
+post-refusal links2, no sample/execution/hash/import/version. No new failure found;
+Windows work remains deferred, guard/test intact. Portablejob120973491662 passed;
+retention guard1pass/0fail/19POSIX-only skips20total, not Windows cleanup support.
+See [PACKAGE-DEV26](PACKAGE-DEV26.md) for source/archive/install/human review results.

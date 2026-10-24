@@ -1,12 +1,18 @@
 # Remaining native acceptance
 
-Current2026-10-24: [macOS audit](continuation/MACOS-ACCEPTANCE.md) covers all93
-requirements and [bounded batch](continuation/MACOS-BATCH.md) records fresh read-only
-dev10 inventory/six-view/Format/JSON/Clear/flowchart/Watch checks. Same149reviewed
-cache files/settings/selected scope/four records; no new trust/model run. Source25
-is uninstalled/package-unverified, and its real Windows image-read positive fails
-before bytes. No production Windows gate is changed. Human priority is macOS first,
-Windows later. Next High is selected-scope retention workflow, not Windows research.
+Current2026-10-24: configured dev26 is installed through the supported user-profile
+update,210cache files byte-equal immutable public789a417 plus three private unchanged-
+selection overlays. Human reviewed/trusted the three changed hook definitions;
+fresh inventory enabled/trusted/zero errors/no model turn. **Desktop restart and
+native26 rendering/event delivery remain pending.** Settings/rules/logging scope
+unchanged; no production cleanup, optional hooks, agent trust writes or model/API
+run. Reviewed10 preserved for supported selective rollback. [Package/install record](continuation/PACKAGE-DEV26.md).
+
+The earlier [macOS audit](continuation/MACOS-ACCEPTANCE.md)/[bounded batch](continuation/MACOS-BATCH.md)
+retain dated dev10 UI evidence, not new26 acceptance. Source26 retention has source/
+OS synthetic CLI proof, not permission to clean production records. Windows stays
+in scope/later with the original failed image read and guards intact. Continue
+Sol Medium after restart; High before consequential code/security changes.
 
 The installed desktop app bundle is now26.1021.22027/build21747. Actual panel says
 chatgpt; exact running host/bundled runtime not independently attested. Older native

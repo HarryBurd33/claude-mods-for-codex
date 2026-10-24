@@ -12,6 +12,12 @@ preview/explicit cleanup CLI; see [DEV26-REVIEW](DEV26-REVIEW.md) and [workflow]
 This does not install26, close the remaining native/lifecycle acceptance or alter
 this audit's dated Hnow evidence. Other93row identities/observations stay preserved.
 
+Current Medium follow-up: [PACKAGE-DEV26](PACKAGE-DEV26.md) verifies the public
+archive/spaced extraction and configured210-file user-profile update. Human
+reviewed all three changed hooks; fresh inventory trusted. Desktop restart/native26
+acceptance pending. The Hnow evidence below remains the historical dev10 batch;
+no new production cleanup, logging scope/event opt-in or model run.
+
 ## Evidence and classification
 
 - **Hnow:** this Medium stage's actual installed dev10 MCP tools/owned panel,

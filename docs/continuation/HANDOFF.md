@@ -1,181 +1,139 @@
-# Source26 handoff — next GPT-6.1 Sol Medium
+# Dev26 restart handoff — continue GPT-6.1 Sol Medium
 
-2026-10-24. Human selected Sol High from verifiedc234d5c and authorized scoped
-retention implementation. macOS acceptance first; Windows later/incomplete.
-This runnable source26 milestone adds POSIX selected-scope preview/explicit
-cleanup; no installed production data was cleaned, no logging/trust change.
-Full93-capability product incomplete. Installed human-trusted dev10 preserved.
+2026-10-24. Human resumed Medium from verified789a417. CI and exact public source26
+packaging verified. Supported same-ID user-profile update installed the immutable
+configured26; human reviewed/trusted all three changed hooks and fresh inventory
+confirmed them. **Human desktop restart/reopen is next.** Stay on Sol Medium for
+native read-only checks; High before consequential code/security/writer changes.
+MacOS acceptance first, Windows later. Full93-capability product incomplete.
 
 ## Read first
 
-STATUS.md, DEV26-REVIEW.md, ../retention.md, MACOS-ACCEPTANCE.md, MACOS-BATCH.md,
-REQUIREMENTS.md, DELIVERY-PLAN.md, current ARCHITECTURE.md and latest TEST-LOG.md.
-Read latest ignored root HANDOFF.md for exact final checkpoint/private evidence.
-PACKAGE-DEV24.md is last completed package check; source26 packaging outstanding.
-DEV25-REVIEW.md preserves the Windows blocker. Older next-model/Windows directions
-are historical and do not override macOS priority or this handoff.
+STATUS.md, PACKAGE-DEV26.md, DEV26-REVIEW.md, ../retention.md, ../native-acceptance.md,
+MACOS-ACCEPTANCE.md, MACOS-BATCH.md, REQUIREMENTS.md, DELIVERY-PLAN.md, current
+ARCHITECTURE.md and latest TEST-LOG.md. Read latest ignored root HANDOFF.md for
+final checkpoint identity/private artifacts/backups/paths. Older installed10/
+uninstalled26/nextHigh-Windows statements are historical and superseded here.
 
 Repo https://github.com/HarryBurd33/claude-mods-for-codex
-Branch codex/astra-groundwork. Startc234d5c7e6f3bc85ae1bb60b0e750034daa750d4,
-tree9a9534134bcf4a39a2b7844916a62cb039a9beb2. Exact new source/final checkpoint
-and CI evidence are recorded after actual remote readback; no self-hash claim.
-Verify local HEAD/ref before work. No force-push or overwritten user history.
+Branch codex/astra-groundwork. Stage start789a417bf2800489805ef2c50495e2b5df4d020f,
+tree455acb997fa9218d9cb50f5de58636e8d249c02a, clean/remote independently matched.
+Installed immutable configured snapshot is from that exact public archive plus
+three private overlays below. Final public documentation checkpoint hash is
+reported after upload/full-tree/ref readback in reply/private handoff. Notes-only
+archives are separate and never silently installed over the reviewed snapshot.
 
-## Uploaded code and CI handoff snapshot
+## Completed CI and package verification
 
-Runnable source [b66f2fbdaeaaca5b350ecb229b769b90a0da675e](https://github.com/HarryBurd33/claude-mods-for-codex/commit/b66f2fbdaeaaca5b350ecb229b769b90a0da675e),
-tree41e60bcaa33c4c5a00a6b015dcf205920e4e5d2f, expected-parent/nonforce uploaded.
-Fetched full-tree equality and independent connector/anonymous public ref matched;
-equivalent local062d51f95de5f96636efd8d936343db647701642 retained on named backup.
-[CI40128013186](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40128013186)
-was in progress when this handoff snapshot was made. Actual decoded completed logs:
-Ubuntu24job120973491527, Ubuntu22job120973491569, macOS24job120973491589 each
-208pass/0fail/109Windows-only skips317total. New retention/actual-CLI/interruption
-checks passed there. Windows portable retention before-IO step concluded success
-(counts not decoded yet). macOS22job120973491548, Windows22job120973491585,
-Windows24job120973491304 and portablejob120973491662 were still in progress in the
-last snapshot. This is not an all-green CI or new Windows storage/host claim.
+Tested codeb66f2fb / CI40128013186: five successful jobs/two failed Windows jobs.
+All four POSIX decoded logs208pass/0fail/109Windows-only skips317total. Remaining
+macOS22job120973491548 read this stage; Ubuntu22/24/macOS24 read on prior High.
+Windows22job120973491585 and Windows24job120973491304 each25storage passes,
+84/85process proofs: unchanged cmd/git.exe Image refusal before bytes, post-sample
+links2 violates original one-link guard, no data/sample/execution authority/hash/
+imports/version. No new failure; do not fix/retry/weaken it on Medium or resume
+Windows research. Portablejob120973491662 passed; new retention refusal1pass/
+0fail/19POSIX-only skips20total, not Windows cleanup/host compatibility.
+Notes789CI40128249622 initially in progress, not decoded for new counts; same code.
 
-Remaining CI readback and exact packaging are routine **Medium** work. Read the
-run/decoded logs first; a new correctness/security failure needs a human High
-checkpoint, not weakened assertions/retries or an attempted Medium runtime fix.
-The old unchanged Windows image failure remains explicit even if its new lane
-result has not finished. No further implementation investigation is required to
-justify keeping High selected while waiting for routine evidence. Final notes-only
-checkpoint identity is read back after upload in the reply/private handoff.
+Exact anonymous credential/config/prompt-disabled single-branch clone789a417/tree
+455acb997 clean/byte-equal workspace. macOS14.6/Node24.22.0/npm11.19.1: npm test
+208pass/0fail/109Windows-only skips317total. Separate empty user/global npm config,
+dedicated cache, npm pack --ignore-scripts --offline --json; no dependencies/account/
+network package fetch/lifecycle scripts.210regular files/1,610,063unpacked/
+480,635compressed bytes, SHA25684668fc17a16fa11b27745d1c8a2009819bd842dd22289f1dd639e74355e9e11.
+Every packaged byte matches clone/workspace. Privacy/link/traversal/special-file/
+version26/MIT/default-off/compatibility/proof-production separation passed.
+Fresh spaced extraction: node --test test/retention.test.mjs test/package.test.mjs
+ test/scaffold.test.mjs test/state-lock-budget.test.mjs test/state-contention.test.mjs
+ test/state-observer-boundary.test.mjs:33pass/0fail/1Windows-only skip34total.
+Validate3mods/replay4fixtures passed. All cleanup only owned synthetic test data.
+No product code/test/CI changes in this Medium stage; no notes-only full-suite repeat.
 
-## Implemented contracts and code
+## What was installed and trusted
 
-- src/retention.mjs: previewRetention/cleanupRetention/runRetentionCli. Private
-  canonical settings path, existing reviewed project/session scope; no sibling
-  discovery. Data root disjoint from project. Explicit real canonical UTC cutoff
-  with milliseconds, not future. Windows refuses before path/option/IO access.
-- Preview creates no directories/locks/plan. Two bounded journals only; reports
-  retained count/bytes/oldest/newest/status, no paths/IDs/event names/content. Whole
-  selected scope eligible only if every record precedes cutoff; empty eligible,
-  absent no fingerprint, mixed age retained. Legacy/root-wide journals untouched.
-- SHA256 conflict fingerprint binds settings location/identity/config, selection,
-  cutoff, directory samples and exact file samples/digests. Not secret/human
-  authentication/anonymization/native approval. Changed data/settings require
-  new preview/review; no automatic retry or another model/API call.
-- Cleanup exclusively creates existing global state and selected journal locks,
-  no wait/steal/reap. Re-snapshot under locks, check fingerprint, reread settings,
-  recheck directory/file identity before known-file unlink. Handles retained and
-  buffers cleared. Empty-directory rmdir only; never recursive deletion or parent/
-  sibling cleanup. Existing state writers serialize; future writes can recreate.
-- Failure after deletion starts reports completed file removals/scope-removal
-  status; inspect after stopping writers, no automatic retry. Kill can leave locks;
-  never reap by age. Not crash-atomic/secure erasure/power-loss durability or OS
-  confinement against hostile same-user/admin races. See user recovery limits.
-- src/cli.mjs registers two immediate commands/help, no MCP/hook/UI writer.
-  package/compatibility manifest/server version26; original state/journal/settings/
-  Windows/project/restore modules and budgets unchanged. No optional hooks added.
-- test/retention.test.mjs:20tests. Source-copy controlled fault/barrier cases are
-  explicitly synthetic; no production injection option. .github/workflows/ci.yml
-  adds Windows portable before-IO guard test (POSIX deletion cases skip there).
+Prepared210-file immutable local26 snapshot from exact789archive. Three deliberate
+private overlays only: existing .mcp settings selection copied unchanged; existing
+config/rules/metadata project scope copied unchanged; old three hook definitions
+with only inert version review comment10→26. Same data/project/export/patch grants,
+no optional events/new MCP tool/network/model call/automatic cleanup or permissions.
+Runtime diff from reviewed10: version metadata, prior state.mjs/state-lock-budget,
+new retention module/CLI and inert hook review comment. Source26 High contracts/
+fault tests in DEV26-REVIEW; new CLI never invoked by panel/hook automatically.
 
-## Local commands and observed results
+Private config/marketplace backups saved mode0600. Only owned marketplace source
+entry10→26 changed; supported CLI0.163.0 plugin add same production identity.
+Installed210cache files match immutable snapshot byte-for-byte. Parsed user config
+remained equal before/after install. Human review then changed only the three
+owned hook trust records; all unrelated root/hook fields and other hook states
+remain equal, settings hash unchanged. Installation is Codex user-profile/cache scope, not
+project-only. Selected logging remains the existing disposable child; this chat
+is outside. Do not broaden it to make counters rise. No production cleanup run.
 
-macOS14.6/Node24.22.0/npm11.19.1. No new Codex native/model/API run.
+First fresh no-daemon read-only inventory: three modified production hooks, zero
+errors/no model turn. Human explicitly reviewed/trusted three dev26 hooks, then
+independent fresh inventory three enabled/trusted/zero errors/no model turn.
+No agent trust hashes/cache edits. Original separate proof retained, hold/optional
+observers absent. **Inventory does not prove actual desktop reload/event delivery.**
 
-- Initial retention9pass/7fail/1skip: six message-prefix expectations and one
-  directory mtime after our lock bookkeeping. Prefix made consistent; file identity/
-  time/content and directory identity/entries still asserted, only directory mtime
-  excluded for that lock-taking refusal. Next16pass/0fail/1Windows-only skip.
-- After three additional fault/CLI cases: node --test test/retention.test.mjs
-  test/state.test.mjs test/state-lock-budget.test.mjs test/state-contention.test.mjs
-  37pass/0fail/2Windows-only skips39total.
-- First full run207pass/1fail/109Windows-only skips317total. Interruption fixture's
-  promise alone did not keep Node alive while parent descheduled; unsettled-await
-  warning. Fixed fixture IPC listener before ready marker; no production/deadline/
-  assertion suppression. Failure log retained. Retention19/0/1, full208/0/109.
-- Canonical settings-path guard and targeted regression19pass/0fail/1skip; exact
-  final source26 npm test208pass/0fail/109Windows-only skips317total. validate3mods,
-  replay4fixtures, JS/diff-check pass. Node/OS subprocess evidence, not native host.
-- Project/session isolation/others/index/HEAD/settings and no-create preview;
-  age/confirmation/stale/replacement/settings/cutoff; links/FIFO/private/malformed/
-  oversized/unknown entries; held locks; writer collision/new-event preservation;
-  partial unlink/new-byte/new-file preservation; real CLI and killed owned child.
-  All cleanup data is owned synthetic scratch. Never installed production records.
+No native dev26 execution/rendering, separate model/API run, optional observer,
+retention cleanup, export/theme/client/parent model/prompt change. Existing installed
+snapshot is frozen; do not reinstall it merely because public docs later changed.
+Human restart now, not another trust request for already-reviewed unchanged bytes.
 
-Actual CI evidence follows after upload/readback in DEV26-REVIEW/TEST-LOG/private
-handoff; no future success implied. Known unrelated Windows image test unchanged.
+## Protected next step / bounded acceptance
 
-## Installation, privacy and rollback
+1. After verified save, human restarts Codex and reopens this same chat. Continue
+   GPT-6.1 Sol Medium. No additional model run is authorized by the restart.
+2. Read latest private checkpoint, verify source/ref/current210cache/settings and
+   fresh trusted inventory. Open actual Claude Mods dashboard beside this chat via
+   supported tool/entry and permitted MCP Apps inspection. Verify connection and
+   all six views/selected files/diff/Replay/access/unknown counters/local preview.
+   Preserve user local drafts and scope; no synthetic events in production journal.
+   Host bundle/runtime/version measured independently; cache is not loaded-source
+   attestation. Keep prior dev10 human keyboard/resize evidence versioned.
+3. Verify harmless covered rewrite/deny/control only through ordinary permissions
+   if warranted after restart, without destructive commands/permission escalation.
+   New CLI source is already synthetic-tested; do not run retention-cleanup against
+   the selected production settings/data for acceptance. No cleanup needed there.
+4. Changed-state native write/Watch/SessionStart needs a selected-project session;
+   shell workdir alone is not native scope. Prepare one concrete bounded harmless
+   additional run, fixed marker/read-only sandbox/explicit usage limit+watchdog, and
+   ask fresh human authorization. The prior single-run grant was consumed. Do not
+   silently launch a model/API task, register optional hooks or change selected
+   parent model. Keep visible notice/resume/failure/Stop claims separate until tested.
+5. Continue routine acceptance that needs no new code. Full keyboard/VoiceOver/
+   zoom/contrast/backend close-pending/loaded disable/older rollback/themes/routing/
+   current-context/broader authoring/platforms remain incomplete. High checkpoint
+   before consequential runtime/security/writer changes or a newly observed
+   correctness failure; never weaken tests/Windows guards or call product finished.
+6. Save/upload/full-tree/independent-ref verify each meaningful checkpoint. Human
+   protected actions occur only with concrete reviewed steps. No automatic trust,
+   approvals, background/delegated/scheduled continuation after a stopping message.
 
-Installed human-trusted dev10:149files remain byte-equal reviewed immutable fixture;
-private settings hash/selected child project/logging scope unchanged. Current chat
-outside that logging scope. No config/cache/trust/retention/export/observer/theme/
-client/model-selection mutation. No native UI call or model/API run in this High
-stage. Source26 uninstalled/package-unverified; source24 last completed package.
-No protected user action/restart or machine rollback required now.
+## Rollback/removal and privacy
 
-Earlier read-only native batch: CLI0.163.0/macOS14.6, installed desktop app bundle
-26.1021.22027/build21747; connected panel says chatgpt, exact running host/bundled
-runtime not independently attested. Older observations stay version-specific.
-New26CLI/prior changed state locks do not inherit installed10 host acceptance.
+Preserved immutable reviewed10 remains rollback source. If explicitly needed,
+selectively restore only the owned marketplace source to10 and supported plugin
+add same identity, verify149cache/loaded version and human review if required.
+Do not overwrite concurrent unrelated config, restore old trust hashes or swap
+cache files. Restart only after reviewed rollback. Data/settings retained separately;
+removal is not data deletion. No rollback executed this stage. Public guide setup/
+removal documents the generic supported flow, exact local paths stay private.
 
-Root HANDOFF/raw logs/private paths/settings/synthetic logs ignored. Remove only
-owned scratch after children exit. Never live-lock deletion, system ACL repair,
-cache/trust patch, broad settings restore or automatic approval. Future installation
-needs supported immutable update/access review and real human changed-hook trust.
-No cleanup of installed production data authorized by this implementation milestone.
+Root HANDOFF, raw logs, machine paths/config/backups/private overlays remain ignored.
+Remove only owned scratch after child exit; never delete live locks, repair system
+ACLs or globally trust Installer. Windows11/WSL native acceptance unverified; last
+Windows host unavailable, no repeated availability request. All production Windows
+settings/dashboard/project/Git/restore/retention gates closed before IO.
 
-## Windows failure preserved, no work on it next
+## Copy-and-paste resume after restart
 
-Source25 tested3ce44fc/CI40122363235: both Windows lanes25storage passes,
-84/85process proofs; actual cmd Git image refused before bytes. New samplelinks2
-violates unchanged one-link guard, not an atomic original-cause trace. No image
-hash/import/version or candidate execution. Four POSIX lanes189/0/108skips.
-Every Windows settings/dashboard/project/Git/restore gate stays closed. Native
-Windows11/WSL untested, last unavailable; no repeated availability question or
-alias/Installer/loader policy change. Source26 new command Windows refusal is
-separate evidence, not Windows cleanup/native compatibility.
-
-## Next exact model and tasks
-
-**GPT-6.1 Sol Medium**. Source/tree/ref verified; completed CI logs read as above.
-Finish pending CI readback as routine work; do not keep High merely to wait.
-Remaining work is routine packaging/docs and concrete native step preparation.
-High before new consequential runtime/security/writer changes. Preserve macOS
-priority; do not return to a Windows-proof/package-version-only loop.
-
-1. Verify HEAD/ref; first read CI40128013186/decoded remaining logs. New correctness/
-   security failure requires a human High stop; preserve the known old Windows
-   image failure without restarting that investigation. Then exact source26 public
-   clone/archive/spaced extraction using
-   docs/packaging.md/PACKAGE-DEV24 workflow. Retention module/test/docs included;
-   compatibility-only manifest/MIT/defaults/proof-production separation intact;
-   no private handoff/log/config/link/traversal. No dependency install or scripts.
-2. Run warranted exact-package CLI/retention tests on private synthetic data; no
-   production cleanup. Keep original Windows failed positive/guard and all93IDs.
-   Packaging does not certify native execution or make the full CI green.
-3. Prepare a concrete immutable macOS snapshot/source+access diff if needed for
-   remaining native acceptance. Installed10 is preserved until supported update
-   steps and human changed-hook review are concrete; no cache patch/autotrust.
-   Do not register optional hooks or broaden logging/data selection silently.
-4. Prepare the next bounded native test plan for changed-state acceptance, visible
-   SessionStart/harmless nonzero/success tool events/active Watch and chosen optional
-   triggers. A separate model run needs fresh explicit bounded authorization; the
-   previous grant was consumed. Human trust/restart stays protected. No blind
-   production cleanup, destructive demonstrations, permission escalation or parent
-   model/prompt rewrite. Direct CLI synthetic tests need no extra model call.
-5. Remaining accessibility/close-pending/loaded disable/older rollback/themes/
-   routing/current-context/broader component authoring and native platforms remain
-   incomplete. Reuse only exact versioned unchanged evidence. Any consequential
-   code needed to close a gap requires a human High switch first.
-6. Save/upload/full-tree/independent-ref verify safe progress; stop for the exact
-   human setting warranted by the next concrete task. No delegated/background/
-   scheduled continuation or automatic model switch after the stop.
-
-## Complete resume instruction
-
-I've switched to GPT-6.1 Sol, Medium. Continue from the verified source26 retention
-checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
-DEV26-REVIEW.md and docs/retention.md plus the latest ignored root HANDOFF.md.
-Verify exact source26 packaging and synthetic CLI behavior, then prepare concrete
-macOS native acceptance steps. Preserve logging scope, human trust, installed10,
-unrelated data/all93 requirements and the deferred Windows guards/failed image
-check. No production cleanup, automatic trust or additional model/API run. Stop
-for High before consequential runtime/security changes. Save, upload and
-independently verify the next checkpoint before a model-switch stop.
+I've restarted Codex. Continue on GPT-6.1 Sol Medium from the verified dev26 restart
+checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and
+PACKAGE-DEV26.md plus the latest ignored root HANDOFF.md. Dev26 is installed and
+human-trusted; verify the loaded dashboard and harmless native hooks after restart.
+Preserve logging scope, existing rules/settings, unrelated data, human trust and
+Windows guards. No production cleanup, optional hooks or extra model/API run
+without fresh explicit bounded authorization. Stop for High before consequential
+runtime/security changes or a new correctness failure.

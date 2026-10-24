@@ -1,5 +1,18 @@
 # Extension architecture and security contracts
 
+## Source26 Medium package/install checkpoint — 2026-10-24
+
+[PACKAGE-DEV26](PACKAGE-DEV26.md) records exact public clone/archive/spaced-path
+verification, CI readback with unchanged Windows failure and supported same-ID
+user-profile update. Human reviewed three changed hooks; fresh inventory enabled/
+trusted, zero errors/no model turn.210cache files match prepared789a417 plus only
+unchanged private settings/config and inert hook review-comment overlays. No new
+access/event/observer/network/model grant or production cleanup. Only owned local
+marketplace source changed; settings/unrelated config preserved, reviewed10 retained.
+Desktop restart/native26 execution remain pending. Historical uninstalled26/installed10
+statements below refer to earlier checkpoints, not current installation. Notes-only
+public archives never silently overwrite the human-reviewed immutable snapshot.
+
 ## Source26 selected-scope retention — current
 
 The new [retention CLI](../retention.md) is immediate POSIX maintenance only, not

@@ -1,5 +1,10 @@
 # Bounded macOS acceptance and next milestone — 2026-10-24
 
+Current Medium checkpoint: configured26 installed and human-trusted after exact
+package checks; restart/native26 acceptance pending. [PACKAGE-DEV26](PACKAGE-DEV26.md)
+records install/rollback/evidence. No production cleanup or additional model run.
+Earlier BatchA/B descriptions below preserve their dated context and criteria.
+
 Human priority: finish macOS feature acceptance, then Windows. This batch starts
 from c5bd658/source25 with human-trusted dev10 installed; it changes no runtime,
 installation, logging, data selection, trust, theme or model configuration.

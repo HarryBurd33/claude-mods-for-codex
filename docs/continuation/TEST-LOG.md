@@ -1,5 +1,30 @@
 # Continuation verification log
 
+## Source26 Medium package/install/human trust — 2026-10-24
+
+Exact anonymous public789a417/tree455acb997 clone clean, full208pass/0fail/109Windows-only
+skips317total. Separate empty npm config/cache, ignore-scripts/offline pack210files,
+1,610,063unpacked/480,635compressed bytes, SHA25684668fc17a16fa11b27745d1c8a2009819bd842dd22289f1dd639e74355e9e11.
+All bytes equal clone/workspace; hygiene/version26/MIT/default-off/separation checks
+passed. Fresh spaced extraction focused33pass/0fail/1skip34total; validate3/replay4.
+No dependency install/network package fetch/scripts or production cleanup.
+
+Prepared immutable210-file dev26 with only existing MCP settings/config copied
+unchanged and inert hook version comment updated; no optional hooks/grants. Private
+backups, only owned marketplace entry10→26 and supported same-ID plugin add;
+210cache bytes match, parsed config equal before human trust/unrelated entries and
+settings hash preserved. Fresh inventory three modified hooks/zero errors/no turns.
+Human explicitly reviewed/trusted three dev26 hooks; independent fresh inventory
+three enabled/trusted/zero errors/no turns. No agent trust writes/cache patches.
+
+Desktop restart/dev26 event/UI acceptance pending. Source10 historical native
+results do not certify26. No agent-started model/API run, scope expansion,
+retention deletion, optional observer/theme/client/model-selection change. Any
+events from the human CLI review were not measured or attributed as acceptance. Actual
+completed CI readback below retains Windows failure; no all-green/platform claim.
+[Package and rollback details](PACKAGE-DEV26.md). Public notes may be repackaged
+without runtime/full-suite repetition; installed immutable789snapshot unchanged.
+
 ## Source26 High — selected-scope retention implementation — 2026-10-24
 
 Human resumed c234d5c on Sol High for macOS scoped retention. New POSIX CLI
@@ -2011,3 +2036,14 @@ The old unchanged Windows image failure remains explicit even if its new lane
 result has not finished. No further implementation investigation is required to
 justify keeping High selected while waiting for routine evidence. Final notes-only
 checkpoint identity is read back after upload in the reply/private handoff.
+
+## Medium completed CI readback — 2026-10-24
+
+CI40128013186 has five successful jobs/two Windows storage failures. Actual decoded
+remaining logs: macOS22job120973491548208pass/0fail/109Windows-only skips317total;
+Windows22job120973491585 and Windows24job120973491304 each25storage passes,84/85
+process/security proofs. Same unchanged cmd/git.exe Image refusal before bytes,
+post-refusal links2, no sample/execution/hash/import/version. No new failure found;
+Windows work remains deferred, guard/test intact. Portablejob120973491662 passed;
+retention guard1pass/0fail/19POSIX-only skips20total, not Windows cleanup support.
+See [PACKAGE-DEV26](PACKAGE-DEV26.md) for source/archive/install/human review results.

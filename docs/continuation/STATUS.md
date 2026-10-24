@@ -1,6 +1,6 @@
 # Current status — source26 selected-scope retention — 2026-10-24
 
-Source **0.2.0-dev.26** is an uninstalled development checkpoint on
+Source **0.2.0-dev.26** is a development checkpoint on
 `codex/astra-groundwork`. The full [93-capability ledger](REQUIREMENTS.md) remains
 incomplete; the default branch retains the earlier experimental MVP.
 
@@ -11,20 +11,22 @@ storage locks, refuses unsafe entries and reports partial deletion. No automatic
 cleanup, MCP writer, lock reaping or Windows enabling. [Design/tests](DEV26-REVIEW.md).
 No installed production metadata was deleted.
 
-Exact local source26 full suite208pass/0fail/109Windows-only skips317total;
-new retention suite19pass/0fail/1Windows-only skip; validate3mods/replay4fixtures.
-Codeb66f2fb/tree41e60bc uploaded and independently verified. CI40128013186 is
-in progress: decoded Ubuntu22/24 and macOS24 each208/0/109skips; portable retention
-before-IO step success (counts not decoded), remaining jobs unverified. These are offline/OS synthetic/subprocess
-checks, not Codex host delivery. Original state/journal/settings/Windows/project/
-restore code and deadlines remain unchanged.
+Exact public789a417 clone passed208/0fail/109Windows-only skips317total. Its
+210-file archive was inspected byte-for-byte and a fresh spaced extraction passed
+33focused checks/0fail/1Windows-only skip plus validate3/replay4. [Package record](PACKAGE-DEV26.md).
+CI40128013186 completed: all four POSIX lanes208/0/109skips; Windows portable
+passed (retention refusal1/0/19POSIX-skips). Both Windows storage jobs retain the
+same real-image failure:25storage passes,84/85process proofs each. Not all-green.
 
-Installed human-trusted **dev10**,149reviewed cache files, private settings and
-selected logging scope remain unchanged. Source26 is uninstalled/package-unverified;
-[PACKAGE-DEV24](PACKAGE-DEV24.md) is the last completed package record. No new native
-or separate model/API run. The previous [macOS acceptance audit](MACOS-ACCEPTANCE.md)
-and [bounded native batch](MACOS-BATCH.md) retain dated unchanged-dev10 evidence;
-no transfer of that evidence to changed source26.
+Configured **dev26 is now installed in the Codex user profile and human-trusted**.
+All210cache files equal the immutable prepared789a417 snapshot plus three private
+existing-selection overlays. User reviewed all three changed hooks; independent
+fresh inventory shows enabled/trusted, zero errors, no model turn. **Desktop
+restart and native dev26 execution/rendering remain pending.** No production
+cleanup, logging expansion, optional observer, theme or additional model/API run.
+Preserved immutable10 is rollback source. Settings hash and unrelated config stay
+unchanged; only owned marketplace source points to26. Do not infer loaded desktop
+version from cache/trust inventory. See the restart [HANDOFF](HANDOFF.md).
 
 Human priority remains macOS acceptance first, Windows later. Source25's known
 Windows real-image positive fails before bytes: post-refusal linkcount2 versus
@@ -34,8 +36,8 @@ not hidden or repaired by26. No actual Git image hash/import/version/execution o
 native Windows11/WSL acceptance; every production Windows gate remains closed.
 [Preserved Windows review](DEV25-REVIEW.md).
 
-Next human setting after verified checkpoint: **GPT-6.1 Sol Medium** for exact
-source26 packaging/docs and concrete native acceptance step preparation. High before
+Next: human restart, then continue **GPT-6.1 Sol Medium** for native read-only
+dev26 acceptance. No model switch is needed for that routine work. High before
 any new consequential runtime/security/writer change. Remaining accessibility,
 loaded lifecycle/rollback, native triggers/active Watch, themes/routing/context,
 broader authoring and platform work stay incomplete. See [HANDOFF](HANDOFF.md).

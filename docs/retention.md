@@ -1,7 +1,7 @@
 # Preview and explicitly clean selected metadata
 
 Source26 adds immediate local POSIX CLI commands. They are not registered hooks,
-MCP tools, native slash commands or scheduled cleanup. Source26 is uninstalled;
+MCP tools, native slash commands or scheduled cleanup. Configured source26 is installed/human-trusted; desktop restart and native acceptance remain pending;
 these checks are not native Codex acceptance. Installed human-trusted dev10 and
 its selected logging scope are unchanged. Windows commands refuse before reading
 settings or any selected path; all existing Windows gates remain closed.
