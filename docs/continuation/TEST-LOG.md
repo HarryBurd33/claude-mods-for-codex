@@ -1,5 +1,34 @@
 # Continuation verification log
 
+## Native source10 focus verified — 2026-10-23
+
+Human resumed GPT-6.1 Sol Medium from936e210 after restarting Codex. Read-only
+native inventory confirms three enabled, human-trusted hooks, zero errors and
+zero model turns started. All149 installed cache files match the retained reviewed
+immutable fixture. The actual owned MCP App is connected after restart. Native
+Render locally displays the three-node/two-edge sample and a visible3px foreground-
+color outline with3px offset. Human confirmed Shift-Tab to source, Tab to Render,
+Tab to Clear: focus is clear and Enter clears. Subsequent native DOM inspection
+confirms Clear focused, empty source and no rendered tables, with the same outline.
+This closes the specific focus visibility check, not full accessibility acceptance.
+
+Retained activity is still four records, project scope and the same revision.
+No logging/settings/config/cache/trust changes, extra model run, optional observer,
+theme/client upgrade or Windows activation. Native inventory is not fresh event
+execution evidence. Prior source10 automated/CI/package results remain unchanged;
+no product/test code changed or redundant suite rerun for this evidence-only update.
+Full93-capability product remains incomplete, including screen reader/zoom/contrast,
+backend close-pending cleanup, loaded disable/older rollback and platform acceptance.
+
+Next human-controlled setting: **GPT-6.1 Sol, High** before gated Windows security
+or integration. Read the current handoff, Windows boundary/native kit and source9
+review/proof. The later Windows11 host remains a prerequisite to native acceptance;
+its availability was not reconfirmed in this macOS check. No gate may be relaxed
+from Server CI or an executable version command. Save/upload/read back this
+notes-only checkpoint and stop; no background continuation.
+
+Earlier versioned evidence below is historical; this current summary supersedes pending-restart/focus statements.
+
 ## Verified Medium source10 install/restart checkpoint — 2026-10-23
 
 Source9d8fb42/tree2eb418341a1c723d3dbba5cbef844815570eceff,

@@ -1,5 +1,17 @@
 # Current status — source10 restart checkpoint — 2026-10-23
 
+## Native source10 focus verified — 2026-10-23
+
+After restart, real panel Render/focus outline (3px/3px offset) passed. Human
+confirmed source→Render→Clear keyboard focus and Enter-Clear; native DOM confirmed
+focused Clear/empty source/output. Cache149 matches reviewed fixture; inventory
+3enabled/human-trusted,0errors/0model turns. Same project scope/four records/revision;
+settings hash unchanged. No configuration/trust/logging/code changes. Full93-product
+and broader accessibility/platform acceptance remain incomplete. See TEST-LOG.
+Next **GPT-6.1 Sol, High** before gated Windows security/integration; no gate enabled.
+
+Earlier versioned evidence below is historical; this current summary supersedes pending-restart/focus statements.
+
 **Full93-capability product incomplete. Source and installed0.2.0-dev.10.**
 Human selected Sol Medium from09518fd. Source10 is installed through the supported
 local marketplace flow,149cached files equal the prepared immutable fixture.

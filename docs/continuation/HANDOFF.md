@@ -1,3 +1,71 @@
+# Native source10 focus checkpoint — next Sol High
+
+## Native source10 focus verified — 2026-10-23
+
+Human resumed GPT-6.1 Sol Medium from936e210 after restarting Codex. Read-only
+native inventory confirms three enabled, human-trusted hooks, zero errors and
+zero model turns started. All149 installed cache files match the retained reviewed
+immutable fixture. The actual owned MCP App is connected after restart. Native
+Render locally displays the three-node/two-edge sample and a visible3px foreground-
+color outline with3px offset. Human confirmed Shift-Tab to source, Tab to Render,
+Tab to Clear: focus is clear and Enter clears. Subsequent native DOM inspection
+confirms Clear focused, empty source and no rendered tables, with the same outline.
+This closes the specific focus visibility check, not full accessibility acceptance.
+
+Retained activity is still four records, project scope and the same revision.
+No logging/settings/config/cache/trust changes, extra model run, optional observer,
+theme/client upgrade or Windows activation. Native inventory is not fresh event
+execution evidence. Prior source10 automated/CI/package results remain unchanged;
+no product/test code changed or redundant suite rerun for this evidence-only update.
+Full93-capability product remains incomplete, including screen reader/zoom/contrast,
+backend close-pending cleanup, loaded disable/older rollback and platform acceptance.
+
+Next human-controlled setting: **GPT-6.1 Sol, High** before gated Windows security
+or integration. Read the current handoff, Windows boundary/native kit and source9
+review/proof. The later Windows11 host remains a prerequisite to native acceptance;
+its availability was not reconfirmed in this macOS check. No gate may be relaxed
+from Server CI or an executable version command. Save/upload/read back this
+notes-only checkpoint and stop; no background continuation.
+
+## Exact next tasks and acceptance
+
+1. On High, read docs/continuation/{STATUS,REQUIREMENTS,ARCHITECTURE,TEST-LOG,HANDOFF}.md,
+   DEV9-REVIEW.md, docs/windows-storage.md, docs/windows-native-acceptance.md and
+   proofs/windows-owned-process/README.md, plus latest ignored root HANDOFF.md.
+2. Prioritize the remaining Windows executable/dependency trust, private content
+   scratch cleanup, project/Git read semantics and separate restore boundaries.
+   Do not enable a gate until its threat model, bounded implementation, real OS
+   adversarial tests and actual-host acceptance are established. The proof remains
+   unintegrated; no project Git binary/PATH fallback or dependency download.
+3. If the Windows11 host is still unavailable, retain all native checks as blocked
+   and continue independent High design/proof work. Ask only for actual missing
+   inventory or a concrete user decision. No extra model-driven test is authorized.
+4. Preserve installed dev10 and human trust/settings/scope. No new installation is
+   needed for this documentation-only evidence. Selective rollback remains below;
+   never restore all shared config, mutate cache or write trust hashes.
+5. Stop for Medium once difficult security/integration work is resolved and only
+   routine packaging/documentation/acceptance remains; upload and verify first.
+
+## Copy-and-paste resume instruction
+
+> I switched to GPT-6.1 Sol, High. Continue from the verified native source10 focus
+> checkpoint on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
+> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV9-REVIEW.md, docs/windows-storage.md,
+> docs/windows-native-acceptance.md, proofs/windows-owned-process/README.md and the
+> latest ignored root HANDOFF.md. Native dev10 focus/render/keyboard-Clear passed;
+> installed149files and three human-trusted hooks verified, logging scope unchanged.
+> Resume gated Windows security work while preserving all before-IO refusals until
+> their acceptance gates pass. Windows11 host is available later, not yet tested.
+> No additional model/API test run, trust automation, broader logging, optional
+> observers, theme/client change or major new client direction is authorized.
+> Keep all93 requirements in scope and full product incomplete. Stop for Medium
+> when sufficient, after saving/uploading/verifying a durable checkpoint.
+
+Prior restart/source9 handoffs below remain historical reference. Their pending
+source10 focus statements are superseded by the native observation above.
+
+---
+
 # Source10 installed and human-trusted — restart handoff
 
 2026-10-23. **Full93-capability product incomplete.** Human resumed Sol Medium

@@ -1,5 +1,16 @@
 # Claude Mods for Codex
 
+Current2026-10-23: after restart, the native source10 panel rendered the sample;
+its3px focus outline/3px offset was observed. The human confirmed clear keyboard
+focus through source→Render→Clear and Enter cleared; native inspection confirmed
+Clear focused and empty source/output. Three hooks remain enabled/human-trusted,
+zero inventory errors;149cache files match the reviewed fixture. Same four activity
+records/project scope/revision. No configuration, logging, trust or product-code
+changes. Full accessibility/platform/product completion remains unverified.
+Next: human-controlled **GPT-6.1 Sol, High** for gated Windows security work;
+retain refusals until acceptance passes. Earlier pending-restart statements below
+are historical and superseded by this observation. See the current handoff.
+
 **Development source0.2.0-dev.10; the full requested product is incomplete.**
 Source10 makes the owned dashboard's focus ring stronger for mouse and keyboard
 focus. The isolated browser sequence passed; actual updated native visibility
