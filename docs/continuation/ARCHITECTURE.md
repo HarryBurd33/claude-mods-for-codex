@@ -1,5 +1,18 @@
 # Extension architecture and security contracts
 
+## Medium package/update follow-up — 2026-10-24
+
+[PACKAGE-DEV28](PACKAGE-DEV28.md) supersedes earlier CI/package-pending wording.
+Exact public archive227files passed byte/hygiene/version/MIT checks; spaced package
+54pass/0fail/2Windows-only skips. Four POSIX CI jobs each228pass/0fail/111skips;
+portable Windows passed new before-IO guard; both known Windows image failures
+remain intact. Human authorized the single display-only Tool deliveries entry and
+supported source28 update. Installed227files match reviewed candidate; unchanged
+scope/rules/exports/old settings, optional observers off, no extra model run.
+After human review, inventory confirms3enabled trusted hooks/0errors;
+restart/loaded28 checks pending. Installed does not mean native accepted. Full93 product incomplete.
+
+
 ## Source28 component authoring — current — 2026-10-24
 
 [DEV28-REVIEW](DEV28-REVIEW.md) and [workflow](../component-authoring.md) define new

@@ -1,11 +1,45 @@
 # Source28 component authoring handoff — next GPT-6.1 Sol Medium
 
+## Medium package/update follow-up — 2026-10-24
+
+[PACKAGE-DEV28](PACKAGE-DEV28.md) supersedes earlier CI/package-pending wording.
+Exact public archive227files passed byte/hygiene/version/MIT checks; spaced package
+54pass/0fail/2Windows-only skips. Four POSIX CI jobs each228pass/0fail/111skips;
+portable Windows passed new before-IO guard; both known Windows image failures
+remain intact. Human authorized the single display-only Tool deliveries entry and
+supported source28 update. Installed227files match reviewed candidate; unchanged
+scope/rules/exports/old settings, optional observers off, no extra model run.
+After human review, inventory confirms3enabled trusted hooks/0errors;
+restart/loaded28 checks pending. Installed does not mean native accepted. Full93 product incomplete.
+
+
 2026-10-24. Human resumed Sol High froma2f76b4. Bounded observer/status/activity
 component authoring is implemented and runnable, preserving legacy three kinds.
 Demanding source/permission/contract work is complete for this milestone; remaining
 CI readback/package/native-review preparation is routine. Stop for human
 **GPT-6.1 Sol Medium**. Full93-capability product remains incomplete. macOS first,
 Windows later; do not resume the deferred Windows proof/package-only loop.
+
+## Immediate next step — restart checkpoint
+
+Stay **GPT-6.1 Sol Medium**. Human authorized display-only counter/update, then
+reviewed the3changed hooks. Native inventory now3trusted/0errors/0model turns.
+Current checkpoint contains documentation only; immutable installed source28 remains
+from1d67922. Restart Codex and reopen this same chat after upload verification.
+
+Resume with: “I've restarted Codex. Continue on Sol Medium from the verified
+source28 restart checkpoint on codex/astra-groundwork. Read this handoff and
+PACKAGE-DEV28.md. Verify loaded dev28 dashboard, authored Tool deliveries table,
+mods.status and skill plus harmless ordinary hooks against fresh selected metadata.
+Preserve logging scope, human trust, existing exports and Windows guards. No extra
+model run, optional lifecycle enrollment or cleanup. Stop for High before
+consequential code/security changes.”
+
+Compare fresh native counter with selected activity; last scope7records had3pre/
+2post/2session deliveries, but do not force that historical count. Do not treat
+old connection27 or synthetic projection as loaded28. Use permitted MCP Apps
+inspection for an open panel; no private native APIs or application patch.
+Broader93gaps remain incomplete. Earlier source-only notes below are historical.
 
 ## Read first
 
