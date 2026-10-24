@@ -1,30 +1,49 @@
-# Current status — source11 private scratch proof — 2026-10-23
+# Current status — source12 explicit read-set proof — 2026-10-23
 
-Source12 High candidate2026-10-23: unintegrated explicit synthetic Windows read-set
-proof under test. Source12 is uninstalled; installed human-trusted10/logging and all
-production Windows before-IO gates stay unchanged. No project enumeration/ignore
-engine/Git execution; Windows11 host is still unavailable per fresh human reply.
-See DEV12-REVIEW.md for contract, risks and acceptance; actual results go in TEST-LOG.
+**Full93-capability product incomplete. Source0.2.0-dev.12 is uninstalled;
+human-trusted source10 remains installed on macOS.** Human resumed GPT-6.1 Sol High
+frome8557f7. Fresh reply: Windows11 computer is not available yet; continue proofs.
+No production Windows gate, configuration, logging scope or trust change.
 
-**Full93-capability product incomplete. Source0.2.0-dev.11 is uninstalled;
-configured source10 remains installed and human-trusted on macOS.** Human resumed
-Sol High from1b11d14. No production Windows gate, configuration or trust change.
+## Current verified result
 
-## New High result
+Original unintegrated ProjectReadSet.cs captures1–20explicit synthetic files through
+retained no-follow handles:16segments,256KiB/file/1MiB aggregate, path/sensitive/
+link/type/ACL bounds, ordinary writer/delete sharing refusal, same-handle identity/
+metadata+byte re-verification, copy-return and cancellation/disposal. No enumeration,
+ignore engine, real project/Git metadata read or public helper operation. Captured
+synthetic bytes compose with source11 private delete-on-close slots. Production
+compiles only original PrivateStorage.cs; all Windows before-IO gates remain.
 
-Original unintegrated ScratchContent.cs reuses the fixed helper's ACL/path/volume/
-private descriptor/pinned-directory checks. Up to16flat created slots,256KiB each,
-1MiB total, no caller paths/adoption. CREATE_NEW/private ACL/DELETE_ON_CLOSE are one
-creation operation before bytes; verified/flushed handles remain noninherited.
-Close touches only owned handles; root removal is empty-only. Unexpected entries
-remain intact; readers can delay deletion and leave an empty private root.
-No recursive recovery or secure-erasure promise, no real Git/project/index/ref copy.
+Sourcee55ed71/CI40048345934 all7jobs passed; actual Node22/24 Windows logs each
+20storage+21proof/0fail/0skip. Local170/0/41Windows-only skips211total; validate3/
+replay4 passed. Both mapping tests reported mapping-refused before acceptance;
+changed-bytes/restored-mtime branch was not exercised and remains unverified.
+8.3-specific witness also absent. This positive read-set is not an atomic directory
+snapshot; unselected entries may appear, byte checks don't defend hostile same-user/
+admin change-and-restore races, synchronous blocked IO needs an outer helper deadline.
+See DEV12-REVIEW and TEST-LOG for actual evidence and scoped review.
 
-Five new real-Windows tests extend the isolated proof to13cases. Local final suite
-170pass/0fail/33Windows-only skips203total; validate3/replay4 pass. Source392fc04 CI40046690213 passed all7jobs; both actual native job logs
-read20storage+13proof each,0fail/0skip. See TEST-LOG. No native Windows Codex/Windows11/WSL
-result. No new public operation; production compiles only original PrivateStorage.cs.
-See DEV11-REVIEW for architecture, actual primary references and remaining gates.
+## Next model boundary
+
+**GPT-6.1 Sol, Medium** for exact-source public clone/archive/spaced extraction,
+documentation consistency and read-only host-kit preparation. Source12 packaging
+not yet verified; prior source11 archive does not certify12. No new installation
+needed merely for this proof. High before ignore-aware selection, named Git layout/
+loader integration, production activation or separate restore/writer changes.
+Windows11 native install/events/UI/sandbox acceptance remains incomplete.
+
+## Preserved evidence and remaining requirements
+
+Installed10 cache/settings/data/project/scope/retention/export and human trust stay
+unchanged; latest actual activity four records/same project revision. Earlier native
+source10 focus/keyboard-Clear and versioned dev6/dev4 hook/rewrite/hold/sandbox
+observations remain separate from this source-only proof. Optional observers off;
+no theme/client upgrade or extra model/API run. Full accessibility/backend close-
+pending cleanup/loaded disable/older rollback/Linux/Windows/WSL acceptance incomplete.
+
+Earlier versioned packaging/security history below remains reference; current
+source12 summary supersedes its next-model/current-source statements.
 
 ## Source11 Medium package verification
 

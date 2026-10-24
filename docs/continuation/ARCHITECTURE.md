@@ -1,10 +1,27 @@
 # Extension architecture and security contracts
 
-Source12 High candidate2026-10-23: unintegrated explicit synthetic Windows read-set
-proof under test. Source12 is uninstalled; installed human-trusted10/logging and all
-production Windows before-IO gates stay unchanged. No project enumeration/ignore
-engine/Git execution; Windows11 host is still unavailable per fresh human reply.
-See DEV12-REVIEW.md for contract, risks and acceptance; actual results go in TEST-LOG.
+## Current source12 explicit positive read set — 2026-10-23
+
+Proof-only ProjectReadSetProof(root,relativePaths,token), Count/Verify/Bytes/Dispose
+keeps original no-follow NTFS pins and readonly source handles. Whole input set
+validated before IO,1–20files/16segments/256KiB each/1MiB total; foreign mutation
+rights refused, ordinary read grants allowed. Same-handle identity/time/size/ACL
+and native-byte rereads precede cloned captured bytes. Cleanup releases only owned
+handles/arrays; no content persistence or source writes.5s per-operation checks
+cannot interrupt synchronous kernel IO; outer owned-helper deadline remains needed.
+
+Explicit positive read-set only: no enumeration/ignore engine/negative lookup/
+whole-directory snapshot. Windows read layout, trusted selection and Git execution
+still gated. Source11 private-slot composition uses fixed synthetic bytes only.
+Both mapping witnesses refused before acceptance; negative mutated-byte/restored-
+mtime branch and8.3-specific behavior remain unverified. No hostile same-user/admin
+isolation or secure erasure. See DEV12-REVIEW for stable contract/limits/sources.
+
+Sourcee55ed71 CI40048345934 all7jobs passed; actual Windows20storage+21proof each,
+0fail/skip, both logs read. Native Windows11 unavailable per human, not certified.
+Source12 uninstalled; installed10/logging/trust and production gates unchanged.
+Next Medium for package checks, High before new gated security/integration. All93
+requirements remain incomplete as applicable. Versioned foundations follow.
 
 ## Source11 private synthetic content boundary — 2026-10-23
 

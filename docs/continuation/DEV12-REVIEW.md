@@ -14,8 +14,10 @@ owner, explicit selected files only, no enumeration or automatic discovery.
 
 Validate the entire input set before filesystem calls:1–20 portable forward-slash
 relative paths, at most16segments; no duplicates under ordinal case-insensitive
-comparison. Existing helper path rules refuse control/format characters, traversal,
-empty/normalized/drive/UNC/device/ADS/long/short-name aliases. Original workspace
+comparison. Existing helper input rules refuse control/format characters, traversal,
+empty/normalized/drive/UNC/device/ADS and overlong paths. Native8.3 aliases are
+checked later through final normalized handle paths; no8.3-specific OS witness was
+added in this stage. Original workspace
 sensitive/directory-name exclusions apply to every segment. No caller code/import,
 no fallback, missing-file/directory creation, ACL repair or credential access.
 
@@ -108,3 +110,41 @@ need High review and real OS tests before any production activation. Restore is 
 separate explicit writer: identity/content conflict, metadata/interruption and
 normal native sandbox/permissions. Native Windows installation/hooks/UI/unload
 remain unverified. No automatic trust, paid model run or new client direction.
+
+## Observed result and scoped High review
+
+Tested sourcee55ed71cd5725127c71b04406b4cf374096a4ef9,
+tree412832a11f34288e039c7084f6ff8913e9a8dd7e.
+[CI40048345934](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40048345934)
+all7jobs passed. Both actual Windows logs120735108886(Node22)/120735108901(Node24)
+read: each20storage+21proof,0fail/0skip. Local170pass/0fail/41Windows-only skips,
+211total, validate3/replay4. Windows Server2025 OS evidence only.
+
+Both mapping diagnostics were **mapping-refused**. The constructor refused before
+an accepted read set with the live writable view; exact refusal reason was not
+instrumented. Therefore the changed-refused/restored-mtime branch was NOT observed;
+no negative byte-mutation detection claim from these passes. Ordinary positive
+capture/reverification, writer/pin refusal, cancellation and private-slot composition
+were observed. Native8.3-specific, ACL/metadata changes during a held read and
+mapped-byte mutation detection remain separate future witnesses if needed.
+
+[SetFileTime](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-setfiletime)
+was additionally retrieved for the test design; it requires FILE_WRITE_ATTRIBUTES.
+[Microsoft reference-source File.cs](https://referencesource.microsoft.com/mscorlib/system/io/file.cs.html)
+was inaccessible through the research tool;
+no claim to have read the framework timestamp implementation. The branch using
+File.SetLastWriteTimeUtc was not reached in either observed mapping test.
+
+High reviewed all-set validation, handle ownership and constructor-failure cleanup,
+no-follow/final identity checks, foreign mutation grants, byte bounds before reads,
+same-handle native reads, clone/disposal semantics, cooperative cancellation and
+explicit snapshot limits. Existing Pins uses a synthetic unused leaf to validate
+root; its240-character final-path bound can conservatively refuse a long root that
+would otherwise fit a short filename. No fallback or path alias is introduced.
+Production helper/gates/hooks/config/UI/skills remain byte-equal source11; only
+source package/manifest/server metadata moved to12. Source12 is not installed.
+
+Immediate next work is routine source12 public-clone/archive/spaced-path checks
+and documentation consistency on Sol Medium. High remains mandatory before new
+ignore-aware selection, Git named-layout/loader integration or writer work. The
+human confirmed Windows11 host remains unavailable; keep native checks incomplete.

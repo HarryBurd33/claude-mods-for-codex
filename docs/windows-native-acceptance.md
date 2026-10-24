@@ -4,7 +4,9 @@ Prepared2026-10-23 from official documentation retrieved that day. This is a
 checklist, not a Windows compatibility result or an installation script. Source9
 OS CI passed20storage+8proof tests on each Windows Server2025 Node22/24 lane;
 no native Windows Codex was tested. The user's Windows11 computer is available
-later. Source10 retains the source9 Windows foundation and is installed/human-
+later (freshly reconfirmed unavailable during source12 High work). Source12
+CI40048345934 passed20storage+21proof each Windows lane, not native Codex.
+Source10 retains the source9 Windows foundation and is installed/human-
 trusted on macOS, native focus verified after restart; this is not a Windows installation result.
 
 **Use Sol High before gated Windows security or integration work.** Medium may
@@ -66,7 +68,7 @@ Inventory is a prerequisite, not permission to activate a gate. Reuse the
 | --- | --- | --- |
 | Executable and dependencies | Reviewed absolute installed Git and dependency locations; object/parent ACLs and no-follow identities held during execution; trusted cwd/environment; no project executable/DLL/helper/config/network launch. | Synthetic object pins and owned-process lifetime proved separately; real Git/DLL closure unverified. |
 | Private content scratch | Protected descriptor at creation, verified files/index/refs, explicit bounds, freshness/provenance, exact owned cleanup and owner-death recovery. | Source11 flat synthetic content/delete-on-close proof, no project/index/refs copied or Git-compatible layout; no recursive cleanup/adoption. |
-| Project reads | Selected root, ignores/secrets/case/Unicode/link/special-file bounds; no junction/alternate object-store escape; concurrency and immutable identity checks. | Windows views refuse before IO. No live-tree/snapshot design selected. |
+| Project reads | Selected root, ignores/secrets/case/Unicode/link/special-file bounds; no junction/alternate object-store escape; concurrency and immutable identity checks. | Windows views refuse before IO. Source12 explicit synthetic positive read-set proof only; no enumeration/ignore engine/real Git or whole-directory snapshot design. |
 | Restore | Separate explicit intent, private plan, fresh content/identity conflict checks, metadata/interruption/concurrency, ordinary host write permissions. | Windows restore refuses. Normal reviewed host edit is the practical alternative. |
 | Host boundary | Harmless hooks and MCP launch in the actual client/sandbox, correct output handling and cleanup. | Windows native hook installation, launch, permissions and panel unverified. |
 

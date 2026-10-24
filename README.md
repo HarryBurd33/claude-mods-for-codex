@@ -1,53 +1,47 @@
 # Claude Mods for Codex
 
-Source12 High candidate2026-10-23: unintegrated explicit synthetic Windows read-set
-proof under test. Source12 is uninstalled; installed human-trusted10/logging and all
-production Windows before-IO gates stay unchanged. No project enumeration/ignore
-engine/Git execution; Windows11 host is still unavailable per fresh human reply.
-See [DEV12-REVIEW](docs/continuation/DEV12-REVIEW.md) for contract, risks and acceptance; actual results go in TEST-LOG.
-
-**Development source0.2.0-dev.11; the full93-capability product is incomplete.**
+**Development source0.2.0-dev.12; the full93-capability product is incomplete.**
 The default branch remains the historical experimental MVP. Current expanded work
-is on codex/astra-groundwork; it is not a stable release or a Windows compatibility
-claim. MIT and the independent-project disclaimer remain unchanged.
+is on codex/astra-groundwork; MIT/independent-project status remain unchanged.
 
-The source11 Windows proof creates bounded private synthetic scratch files with
-creation-time delete-on-close, retained handles and no recursive cleanup/adoption.
-It is not loaded by the production helper, does not copy project/Git data and does
-not enable Windows settings/project/Git/restore. Empty private roots can remain.
-See [source11 review](docs/continuation/DEV11-REVIEW.md) and
-[verification log](docs/continuation/TEST-LOG.md) for actual test scope/results.
-Local suite170pass/0fail/33Windows-only skips203total; validate3/replay4 passed.
-Source392fc04 [CI40046690213](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40046690213) passed all7jobs; both actual
-Windows job logs read20storage+13proof each,0fail/0skip.
-[Source11 packaging](docs/continuation/PACKAGE-DEV11.md): exact88e8895 anonymous
-clone170pass/33Windows-only skips,151-file archive, byte/hygiene inspection and
-spaced extraction validate3/replay4/package-scaffold7/7 passed. Source11 remains
-uninstalled. Real Windows CI is separate; POSIX skips are not Windows passes.
+Source12 adds an unintegrated Windows **explicit synthetic read-set proof**: retained
+no-follow readonly handles, bounded captured bytes and identity/metadata/byte
+re-verification. It tests path/link/ACL/bounds/pin/cancellation behavior and composes
+one captured synthetic file with source11 private delete-on-close slots. No project
+enumeration, ignore engine, real project/Git read, public helper operation or gate
+activation. It is not an atomic whole-directory snapshot or a Windows release.
+See [security review](docs/continuation/DEV12-REVIEW.md) and
+[test log](docs/continuation/TEST-LOG.md).
 
-The configured macOS test fixture0.2.0-dev.10 remains installed in the user profile,
-149files equal its immutable reviewed snapshot, three hooks human-trusted/zero
-inventory errors. Its existing settings/mod rules/project/data/scope/retention/
-export grants are preserved. After restart, the actual owned panel rendered its
-sample and stronger3px focus outline; the human confirmed source→Render→Clear
-keyboard focus and Enter-Clear. Retained activity remains four records, same project
-scope/revision. No new model run, logging/trust/configuration change or source11
-installation was made. Installation/trust inventory is separate from event delivery.
+Sourcee55ed71 [CI40048345934](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40048345934)
+passed all7jobs; both Windows logs read20storage+21proof each/0fail/0skip.
+Both mapping tests refused before read-set acceptance, so mutated-byte/restored-
+mtime branch remains unverified. Local170pass/0fail/41Windows-only skips211total,
+validate3/replay4 passed. Windows Server CI is not native Codex/Windows11/WSL
+acceptance. The human confirmed Windows11 host is not available yet. Source12
+archive/public-clone/spaced extraction is next; source11 package results are separate.
+
+Configured macOS fixture0.2.0-dev.10 remains installed,149files matching its reviewed
+immutable snapshot and three human-trusted hooks. Existing settings/mod rules/
+project/data/scope/retention/export and unrelated entries are preserved. Actual
+source10 panel/render/focus/keyboard-Clear passed after restart. Activity remains
+four scoped records/same revision. No source12 install, cache/trust/config/logging
+change or additional model/API run. Inventory/trust is separate from event delivery.
 
 Earlier native dev6 evidence covers six views, nested files, selected diffs, passive
 usage, restricted local preview/Clear, reviewed print rewrites/control/deny and
 same-version removal/reinstall. Dev4 separately verified sandbox rejection of a
-rewritten out-of-workspace marker write. Removed hold proofs exercised human
-confirm/decline/cancel/deadline, but are not a production approval gate: human
-provenance and host fail-open limits remain. No destructive demonstration was used.
+rewritten out-of-workspace marker write. Removed hold proof exercised human
+confirm/decline/cancel/deadline but is not a production gate; human provenance and
+host fail-open limits remain. No destructive demonstration used.
 
-Full accessibility, backend close-pending cleanup, loaded disable/older rollback,
-optional native lifecycle/themes and Linux/Windows/WSL acceptance remain incomplete.
-Windows Server NTFS CI is OS evidence, not native Codex/Windows11 acceptance.
-Gated Windows security/integration requires human-selected Sol High; routine
-packaging/preparation can use Medium. See the [current handoff](docs/continuation/HANDOFF.md),
-[ledger](docs/continuation/REQUIREMENTS.md), [Windows boundary](docs/windows-storage.md)
-and [native kit](docs/windows-native-acceptance.md).
+Source11 [package verification](docs/continuation/PACKAGE-DEV11.md) passed; it does
+not certify the new12 proof. Full accessibility/backend close-pending cleanup,
+loaded disable/older rollback, optional native events/themes and Linux/Windows/WSL
+acceptance remain incomplete. Next Medium for routine source12 package checks;
+human High switch before further Windows security/integration/writer work. See
+[handoff](docs/continuation/HANDOFF.md), [ledger](docs/continuation/REQUIREMENTS.md),
+[Windows boundary](docs/windows-storage.md) and [native kit](docs/windows-native-acceptance.md).
 
 ## What it does
 

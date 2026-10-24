@@ -1,12 +1,14 @@
 # Windows owned-process research candidate
 
 Source12 adds ProjectReadSet.cs, an **unintegrated explicit synthetic read-set**
-proof: retained no-follow handles, bounded captured bytes, fresh metadata+byte
-verification, mutation/share/path refusals and source11 private-slot composition.
-No enumeration/ignore engine/real project/Git/DLL launch or gate activation.
-Windows11 host remains unavailable; native Codex is unverified. See
-[source12 review](../../docs/continuation/DEV12-REVIEW.md); actual CI/branch results
-are recorded in TEST-LOG after observation. Production compiles only PrivateStorage.cs.
+proof: retained no-follow handles, bounded captured bytes, metadata+byte verification,
+path/ACL/share/cancel refusals and one private-slot composition. No enumeration/
+ignore engine/real project/Git/DLL launch or gate activation. Sourcee55ed71
+CI40048345934 all7jobs passed; both Windows logs20storage+21proof/0fail/0skip.
+Both mapping cases refused before acceptance; changed-bytes/restored-mtime branch
+unverified. Windows11 host unavailable; no native Codex claim. See
+[source12 review](../../docs/continuation/DEV12-REVIEW.md). Production still compiles
+only PrivateStorage.cs. Source11 history below remains a separate foundation.
 
 ## Source11 content extension — not installed or integrated
 

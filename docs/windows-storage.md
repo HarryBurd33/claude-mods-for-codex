@@ -1,4 +1,12 @@
-# Windows private storage — source11 proof / unchanged production boundary
+# Windows private storage — source12 proof / unchanged production boundary
+
+Source12 adds only an unintegrated explicit synthetic read-set proof, not a
+production reader operation: retained handles/captured bytes, no enumeration or
+ignore engine/Git. CI40048345934 all7jobs passed, both Windows logs20storage+
+21proof each read. Both live-mapping cases refused before acceptance; mutation/
+restored-mtime branch remains unverified. Native Windows11 still unavailable.
+No settings/project/Git/restore gate, installed snapshot, trust or logging change.
+See [source12 review](continuation/DEV12-REVIEW.md). Earlier source11 history follows.
 
 Source11 adds only an **unintegrated** bounded synthetic scratch-content proof:
 private create-new/delete-on-close, retained handles, no recursive cleanup/adoption,

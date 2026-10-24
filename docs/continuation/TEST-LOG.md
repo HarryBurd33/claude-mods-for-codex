@@ -1,11 +1,30 @@
 # Continuation verification log
 
-Local source12 npm test170pass/0fail/41Windows-only skips211total; validate3/
-replay4 passed. Source12 High candidate2026-10-23: unintegrated explicit synthetic Windows read-set
-proof under test. Source12 is uninstalled; installed human-trusted10/logging and all
-production Windows before-IO gates stay unchanged. No project enumeration/ignore
-engine/Git execution; Windows11 host is still unavailable per fresh human reply.
-See DEV12-REVIEW.md for contract, risks and acceptance; actual results go in TEST-LOG.
+## Verified High source12 explicit read-set proof — 2026-10-23
+
+Source[e55ed71](https://github.com/HarryBurd33/claude-mods-for-codex/commit/e55ed71cd5725127c71b04406b4cf374096a4ef9),
+tree412832a11f34288e039c7084f6ff8913e9a8dd7e, branchcodex/astra-groundwork.
+[CI40048345934](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40048345934)
+all7jobs success. Both actual Windows logs120735108886(Node22)/120735108901(Node24)
+read:20storage+21proof each/0fail/0skip. All4POSIX full suites/portableWindows pass.
+Local npm test170pass/0fail/41Windows-only skips211total, validate3/replay4 pass.
+Original local69681b4612ada98c7385fe00acef9d9bfe0f944b retained on
+codex/dev12-readset-local-checkpoint; nonforce expected-parent upload/fetch/whole-
+tree equality passed. Final following notes-only identity reported after readback.
+
+Eight new OS cases passed. Both fixed mapping diagnostics were mapping-refused,
+not changed-refused: constructor refused before acceptance with live writable view,
+exact cause not instrumented. Mutated-byte/restored-mtime negative branch and
+native8.3-specific behavior not established. Do not infer them from pass counts.
+Positive capture/normal reread, bounds/path/link/writer/pin/cancel and private-slot
+composition observed. No actual project/Git read, ignore engine or native host.
+
+Human resumed Sol High frome8557f7; fresh reply confirms Windows11 still unavailable.
+No subagent/extra model/evaluator, installed snapshot/trust/logging change or Windows
+gate activation. Public source12 uninstalled; proof-only new source/compiler/harness/
+tests and version metadata. See DEV12-REVIEW for limits and actually retrieved
+primary sources, including inaccessible reference-source page. Next Medium for
+routine packaging; High before any remaining gated implementation.
 
 ## Medium source11 package verification — 2026-10-23
 
