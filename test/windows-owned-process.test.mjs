@@ -650,3 +650,112 @@ test('Windows projected metadata capture owner death removes owned projection an
     await writeFile(join(f.source,'index'),'released-on-owner-death');
   } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
 });
+
+// Source16: positive source HEAD/one loose ref, never a real Git discovery API.
+async function selectedFixture(head='b'.repeat(40)+'\n') {
+  const f=await captureFixture();await writeFile(join(f.source,'index'),indexFixture());
+  await writeFile(join(f.source,'HEAD'),head);await mkdir(join(f.source,'refs','heads'),{recursive:true});return f;
+}
+async function selectedHolder(f,{exclude=false,mode='selected-metadata'}={}) {
+  return scratchHolder(mode,undefined,['run',mode,f.source,f.parent,exclude?'exclude':'index']);
+}
+async function selectedRefused(f) {
+  assert.equal(await run(f.exe,['run','selected-metadata',f.source,f.parent,'index']),'refused');
+  assert.deepEqual(await readdir(f.parent),[]);
+}
+test('Windows selected metadata binds detached source HEAD with exact LF, CRLF or no newline and strict projected index',native,async()=>{
+  for(const ending of ['', '\n', '\r\n']) {
+    const f=await selectedFixture('b'.repeat(40)+ending),h=await selectedHolder(f,{exclude:true}),root=h.paths[0];
+    try {
+      assert.equal(await readFile(join(root,'HEAD'),'utf8'),'b'.repeat(40)+'\n');
+      assert.deepEqual(await readFile(join(root,'index')),indexFixture());
+      assert.equal(await readFile(join(root,'info','exclude'),'utf8'),'synthetic-ignore\n');
+      assert.equal(await readFile(join(f.source,'HEAD'),'utf8'),'b'.repeat(40)+ending);
+      await finishHolder(h);assert.match(h.output(),/verified-source-head/);await absent(root);
+    } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+  }
+});
+test('Windows selected metadata resolves only the pinned loose branch source and excludes ordinary source replacement',native,async()=>{
+  const f=await selectedFixture('ref: refs/heads/topic/main\r\n');
+  await mkdir(join(f.source,'refs','heads','topic'));const ref=join(f.source,'refs','heads','topic','main');
+  await writeFile(ref,'c'.repeat(40)+'\n');await writeFile(join(f.source,'refs','heads','other'),'d'.repeat(40)+'\n');
+  const h=await selectedHolder(f),root=h.paths[0];
+  try {
+    assert.equal(await readFile(join(root,'HEAD'),'utf8'),'c'.repeat(40)+'\n');
+    for(const path of [join(f.source,'HEAD'),ref]) {
+      await assert.rejects(writeFile(path,'must-not-change'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+      await assert.rejects(rename(path,path+'.moved'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+    }
+    const parent=join(f.source,'refs','heads','topic');
+    await assert.rejects(rename(parent,parent+'.moved'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+    await finishHolder(h);assert.match(h.output(),/verified-source-head/);await absent(root);
+    assert.equal(await readFile(ref,'utf8'),'c'.repeat(40)+'\n');
+    assert.equal(await readFile(join(f.source,'refs','heads','other'),'utf8'),'d'.repeat(40)+'\n');
+    await writeFile(ref,'released-after-dispose');await writeFile(join(f.source,'HEAD'),'released-after-dispose');
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows selected metadata refuses malformed or ambiguous HEAD bytes without scratch',native,async()=>{
+  const f=await selectedFixture();
+  for(const value of ['', 'A'.repeat(40), '0'.repeat(40), 'a'.repeat(64), ' '+ 'a'.repeat(40), 'a'.repeat(40)+' ',
+    'a'.repeat(40)+'\n\n','a'.repeat(40)+'\r','a'.repeat(40)+'\nref: refs/heads/main',Buffer.from([0xff]),'a'.repeat(40)+'\0', 'x'.repeat(513),Buffer.alloc(262145,65)]) {
+    await writeFile(join(f.source,'HEAD'),value);await selectedRefused(f);
+  }
+});
+test('Windows selected metadata confines symbolic names to narrow literal heads paths without normalization',native,async()=>{
+  const f=await selectedFixture();
+  for(const ref of ['../escape','refs/tags/tag','refs/heads/../escape','refs/heads/a..b','refs/heads/a.lock','refs/heads/a.LOCK','refs/heads/.hidden','refs/heads/a.','refs/heads/a//b','refs/heads/a/','refs/heads/CON','refs/heads/a:stream','refs/heads/a\\b','refs/heads/a b','refs/heads/Ω','refs/heads/@{-1}','refs/heads/git~1','refs/heads/'+'a'.repeat(161), 'refs/heads/secrets']) {
+    await writeFile(join(f.source,'HEAD'),'ref: '+ref+'\n');await selectedRefused(f);
+  }
+});
+test('Windows selected metadata refuses missing, packed-only and chained refs rather than inferring an unborn head',native,async()=>{
+  const f=await selectedFixture('ref: refs/heads/main\n'),ref=join(f.source,'refs','heads','main');
+  await writeFile(join(f.source,'packed-refs'),'# synthetic packed fallback forbidden\n'+'d'.repeat(40)+' refs/heads/main\n');
+  await selectedRefused(f);
+  for(const value of ['', 'ref: refs/heads/other\n', 'a'.repeat(40)+'\nextra', '0'.repeat(40), 'a'.repeat(64), 'a'.repeat(40)+' ',Buffer.from([0xff])]) {
+    await writeFile(ref,value);await selectedRefused(f);
+  }
+  assert.match(await readFile(join(f.source,'packed-refs'),'utf8'),/forbidden/);
+  await writeFile(join(f.source,'HEAD'),'released-on-ref-failure');
+});
+test('Windows selected metadata refuses linked HEAD/ref ancestors, foreign mutation ACLs and existing writers without scratch',native,async()=>{
+  const f=await selectedFixture('ref: refs/heads/main\n'),head=join(f.source,'HEAD'),ref=join(f.source,'refs','heads','main');
+  await writeFile(ref,'c'.repeat(40)+'\n');
+  for(const path of [head,ref]) {
+    const alias=path+'.linked';await link(path,alias);await selectedRefused(f);await rm(alias);
+    for(const mode of ['code-write','deny-code-write']){await fixtureAcl(path,mode);await selectedRefused(f);}
+    await fixtureAcl(path,'private');
+    const writer=await open(path,'r+');try {await selectedRefused(f);}finally {await writer.close();}
+  }
+  const target=join(f.source,'refs-original');await rename(join(f.source,'refs'),target);
+  await symlink(target,join(f.source,'refs'),'junction');await selectedRefused(f);
+  assert.equal(await readFile(join(target,'heads','main'),'utf8'),'c'.repeat(40)+'\n');
+  await writeFile(head,'released-after-ancestor-failure');
+});
+test('Windows selected metadata releases HEAD/ref pins if strict index projection refuses',native,async()=>{
+  const f=await selectedFixture('ref: refs/heads/main\n'),ref=join(f.source,'refs','heads','main');
+  await writeFile(ref,'c'.repeat(40)+'\n');await writeFile(join(f.source,'index'),'invalid-index');
+  await selectedRefused(f);
+  await writeFile(join(f.source,'HEAD'),'released-head');await writeFile(ref,'released-ref');
+  assert.deepEqual(await readdir(f.parent),[]);
+});
+test('Windows selected metadata validates root syntax and cancellation before IO, then cancels after capture with source release',native,async()=>{
+  const f=await selectedFixture('ref: refs/heads/main\n'),ref=join(f.source,'refs','heads','main');
+  await writeFile(ref,'c'.repeat(40)+'\n');
+  assert.equal(await run(f.exe,['run','selected-metadata-cancel',f.source,f.parent,'index']),'cancelled');
+  for(const [source,parent] of [['\\\\synthetic-host\\share',f.parent],[f.source,f.source],[f.source,join(f.source,'child')],[f.source,f.parent+'\\..\\alias']])assert.equal(await run(f.exe,['run','selected-metadata',source,parent,'index']),'refused');
+  assert.deepEqual(await readdir(f.parent),[]);
+  const h=await selectedHolder(f,{mode:'selected-metadata-cancel-after'}),root=h.paths[0];
+  try {
+    await finishHolder(h);assert.match(h.output(),/cancelled/);await absent(root);
+    await writeFile(ref,'released-on-cancel');await writeFile(join(f.source,'HEAD'),'released-on-cancel');
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows selected metadata owner death removes owned scratch and releases HEAD/ref source leases',native,async()=>{
+  const f=await selectedFixture('ref: refs/heads/main\n'),ref=join(f.source,'refs','heads','main');
+  await writeFile(ref,'c'.repeat(40)+'\n');const h=await selectedHolder(f),root=h.paths[0];
+  try {
+    await finishHolder(h,true);await metadataFilesAbsent(root);await emptyMetadataHierarchy(root);
+    assert.equal(await readFile(ref,'utf8'),'c'.repeat(40)+'\n');
+    await writeFile(ref,'released-on-death');await writeFile(join(f.source,'HEAD'),'released-on-death');
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});

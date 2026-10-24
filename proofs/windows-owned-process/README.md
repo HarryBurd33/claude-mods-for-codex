@@ -1,5 +1,17 @@
 # Windows owned-process research candidate
 
+## Source16 candidate — positive source HEAD binding
+
+Original isolated GitSelectedMetadataProof binds detached HEAD or one existing
+loose branch ref through retained source handles, then composes strict projected
+index/private scratch. Missing/packed-only/unborn/chained/unsupported forms refuse;
+no caller commit override/fallback. Nine new Windows tests pending CI; local
+170pass/0fail/73Windows-only skips243total, validate3/replay4. No production gate/
+operation/install/logging/trust change. Source16 uninstalled; full93product and
+native Windows/Git/loader/provenance/ignore/writer gaps remain. See [review](../../docs/continuation/DEV16-REVIEW.md)
+and TEST-LOG. Source15 records below are the previous verified foundation.
+
+
 ## Source15 verified strict index proof — strict index projection
 
 Original unintegrated SHA1/v2 index projection proof: bounded checksum/entry/path/

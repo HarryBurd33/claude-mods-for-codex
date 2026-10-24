@@ -1,5 +1,17 @@
 # Continuation verification log
 
+## Source16 candidate — positive source HEAD binding
+
+Original isolated GitSelectedMetadataProof binds detached HEAD or one existing
+loose branch ref through retained source handles, then composes strict projected
+index/private scratch. Missing/packed-only/unborn/chained/unsupported forms refuse;
+no caller commit override/fallback. Nine new Windows tests pending CI; local
+170pass/0fail/73Windows-only skips243total, validate3/replay4. No production gate/
+operation/install/logging/trust change. Source16 uninstalled; full93product and
+native Windows/Git/loader/provenance/ignore/writer gaps remain. See DEV16-REVIEW.md
+and TEST-LOG.md. Source15 records below are the previous verified foundation.
+
+
 ## Source15 Medium package verification — 2026-10-23
 
 Human resumed verified44daf8a/treeb7275dd on GPT-6.1 Sol Medium. Exact anonymous

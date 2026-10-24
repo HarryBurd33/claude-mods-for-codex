@@ -1,6 +1,18 @@
 # Project status — source15 strict index proof — 2026-10-23
 
-**The full 93-capability product is incomplete. Development source0.2.0-dev.15
+## Source16 candidate — positive source HEAD binding
+
+Original isolated GitSelectedMetadataProof binds detached HEAD or one existing
+loose branch ref through retained source handles, then composes strict projected
+index/private scratch. Missing/packed-only/unborn/chained/unsupported forms refuse;
+no caller commit override/fallback. Nine new Windows tests pending CI; local
+170pass/0fail/73Windows-only skips243total, validate3/replay4. No production gate/
+operation/install/logging/trust change. Source16 uninstalled; full93product and
+native Windows/Git/loader/provenance/ignore/writer gaps remain. See docs/continuation/DEV16-REVIEW.md
+and TEST-LOG.md. Source15 records below are the previous verified foundation.
+
+
+**The full 93-capability product is incomplete. Development source0.2.0-dev.16
 is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
 Human resumed GPT-6.1 Sol High from verified65743d9.
 

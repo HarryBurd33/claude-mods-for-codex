@@ -102,6 +102,21 @@ public static class Harness {
     if(System.IO.Directory.Exists(path))throw new IOException();
     Console.WriteLine("bounded");return 0;
    }
+   if(mode=="selected-metadata" || mode=="selected-metadata-cancel" || mode=="selected-metadata-cancel-after") {
+    using(var cancellation=new CancellationTokenSource()) {
+     if(mode=="selected-metadata-cancel")cancellation.Cancel();
+     try {
+      using(var selected=new CodexMods.PrivateStorage.GitSelectedMetadataProof(directory,a[3],a[4]=="exclude",cancellation.Token)) {
+       Console.WriteLine(B64(selected.Path));Console.Out.Flush();Console.In.ReadLine();
+       if(mode=="selected-metadata-cancel-after")cancellation.Cancel();
+       selected.Verify();Console.WriteLine("verified-source-head");
+       selected.Dispose();
+       try {selected.Verify();throw new InvalidOperationException();}catch(IOException){}
+      }
+     } catch(OperationCanceledException){Console.WriteLine("cancelled");}
+       catch(IOException){Console.WriteLine("refused");}
+    }return 0;
+   }
    if(mode=="index-project" || mode=="index-project-cancel") {
     using(var cancellation=new CancellationTokenSource()) {
      if(mode=="index-project-cancel")cancellation.Cancel();
