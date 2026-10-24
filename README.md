@@ -1,33 +1,39 @@
 # Claude Mods for Codex
 
-Source10 strengthens the owned dashboard's focus outline for mouse and keyboard
-focus. It follows a human report that Clear worked but focus was unclear. The
-isolated browser check is separate from installed dev6; no native source10 result
-or full accessibility claim. [Source9 packaging](docs/continuation/PACKAGE-DEV9.md)
-passed anonymous-clone/archive/extraction checks; source10 requires its own archive.
+**Development source0.2.0-dev.10; the full requested product is incomplete.**
+Source10 makes the owned dashboard's focus ring stronger for mouse and keyboard
+focus. The isolated browser sequence passed; actual updated native visibility
+awaits desktop restart. It does not restyle native Codex chrome or change themes.
 
-High Windows work adds an isolated, unintegrated process/object-security proof:
-creation-time job ownership, executable handle/ACL checks and private empty scratch.
-Real Windows CI results and limits are in [the proof](proofs/windows-owned-process/README.md)
-and [verification log](docs/continuation/TEST-LOG.md). No project/settings/restore
-activation or installation; installed dev6, logging scope and human trust unchanged.
+The configured macOS test fixture10 is installed in the user profile with149files
+matching its reviewed immutable snapshot. The human reviewed its3changed hooks;
+fresh inventory confirms3enabled/trusted/0errors. Settings/mod rules, project/data/
+scope/retention/export and unrelated configuration were preserved. Human review
+changed only the3owned trust records; the agent wrote none. Latest retained
+activity4/same revision. **Installation/trust is not native execution/UI proof.**
+Restart/reopen is still required to verify the new panel. See [current handoff](docs/continuation/HANDOFF.md).
 
-**Development source `0.2.0-dev.10`: the full requested product is incomplete.**
-Source dev8 adds matching/nonmatching offline fixtures to each generated mod and
-keeps its configuration disabled. The reviewed dev7 foundation provides handle-checked private Windows NTFS journal/state and explicit
-selected-usage reads, with bounded optional hook telemetry and cancellation.
-Windows dashboard settings, project/Git views and restore explicitly refuse before
-project traversal until their separate security/host gates pass. See
-[Windows storage](docs/windows-storage.md). Native Windows CI is storage/process
-evidence, not Codex/Windows11 compatibility. Installed dev6/trust/logging unchanged.
+[Package verification](docs/continuation/PACKAGE-DEV9.md) passed for sources9/10:
+anonymous public clones, bounded archive inspection, extraction in a spaced path,
+validation/replay and offline tests. Source10[CI40044819664](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40044819664)
+passed all7jobs, including20storage+8proof cases on each Windows Node22/24 lane.
+Local/public clone170pass/0fail/28Windows-only skips198total. Windows Server CI
+is OS/process evidence, not native Codex/Windows11/WSL compatibility.
 
-Installed test fixture `0.2.0-dev.6` has actual macOS desktop evidence after
-human trust and restart: six owned views, local flowchart/JSON/plain-code preview,
-Clear, nested project browsing, selected-commit diffs and passive usage counters.
-The reviewed authored print rewrite, existing rewrite, unchanged control and deny
-rule passed. Supported removal/reinstallation restored all125 reviewed files and
-three trusted hooks; fresh-session absence during removal was verified. This does
-not establish immediate unload in an already-open desktop process.
+The source9 Windows directory-sharing correction and isolated process/object/
+empty-scratch proof remain unchanged. Windows settings/dashboard/project/Git/
+restore refuse before IO pending their separate security/native gates. No real Git
+or arbitrary executor is activated by the proof. See [Windows boundary](docs/windows-storage.md)
+and [later Windows native kit](docs/windows-native-acceptance.md). Stop for Sol High
+before gated Windows work; routine post-restart macOS UI checks remain Sol Medium.
+
+Earlier dev6 actual macOS evidence includes six owned views, local restricted
+flowchart/JSON/plain-code preview/Clear, nested files, selected diffs, passive usage,
+reviewed print rewrites/control/deny and same-version removal/reinstall125files/
+3hooks. A human confirmed a preview keyboard path/resize and later Clear; focus
+was unclear. Human close→empty panel inventory→reopen preserved scope/counts.
+These results are version-specific; full accessibility and backend cancellation
+remain incomplete and are not transferred to10 merely by installation.
 
 The earlier dev4 normal sandbox rejected a rewritten marker-file write outside
 the workspace; no target or elevated retry. Separate harmless hold tests verified

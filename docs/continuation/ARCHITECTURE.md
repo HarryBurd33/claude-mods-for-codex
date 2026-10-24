@@ -1,20 +1,26 @@
 # Extension architecture and security contracts
 
-## Current Medium package/native continuation — source0.2.0-dev.10
+## Current source10 Medium continuation — 2026-10-23
 
-Human resumed09518fd on Sol Medium. Source9 anonymous clone/full offline suite,
-147-file archive and spaced extraction verified; see PACKAGE-DEV9.md. Source10
-adds only a stronger owned-UI focus outline plus matching version metadata;
-all gated Windows/security/runtime logic remains byte-equal the reviewed source9.
-Installed trusted6/logging/retention/config unchanged, activity4/same revision.
-Human closed the watched panel; permitted inventory became empty. Human reopened;
-new panel connected with same scope/counts and Watch off. Backend cancellation
-not established. Human clarified Clear worked, focus was unclear. Source10 isolated
-browser keyboard order/Enter-Clear and3px current-color outline observed; not native
-source10 or full accessibility acceptance. Windows kit prepared from retrieved
-primary docs; native Windows11 host available later. No Windows gate change.
+Only owned-control focus CSS and version metadata change product behavior after
+source9:3px currentColor outline/3px offset for mouse/keyboard focus, no JS/tab-order
+change. Isolated browser keyboard/Clear/style checks pass; native10 pending restart.
+Public package/clone/extraction and CI40044819664 all7jobs pass. Windows/privacy/
+model/dispatcher/gates/default registration remain equal reviewed source9.
 
-## Current source9 Windows boundary — 2026-10-23
+Source10 installed149-file immutable configured fixture through supported local
+marketplace CLI, same settings/mods/MCP/data/scope/retention/export. Private hook
+commands differ only by inert version review comments. Human reviewed3modified
+hooks; fresh inventory3trusted/0errors. No agent trust writes. Install config equal;
+human changed only3owned hook state records, other config preserved. Current counts
+4/same revision. Source6 native close/reopen observed; source10 UI not yet verified.
+
+Stay Sol Medium for post-restart native UI, Sol High before later Windows security/
+integration. Windows kit is preparation; no gate activation/snapshot/client/fork
+choice. Full93product incomplete. Source9 foundation below is retained and supersedes
+older metadata-only pin assumptions; its original installed6 status is historical.
+
+## Reviewed source9 Windows boundary — 2026-10-23
 
 Production NTFS directory pins now request FILE_LIST_DIRECTORY alongside metadata
 rights, with no share-delete. Metadata-only opens did not participate in the needed

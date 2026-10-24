@@ -1,7 +1,8 @@
 # Remaining native acceptance
 
-Source dev10 is not installed. These steps concern the immutable human-trusted
-dev6 macOS fixture unless a reviewed update is explicitly selected. No additional
+Source10 is installed with149verified fixture files and its3hooks human-trusted.
+Restart/reopen is pending. Earlier dev6 native evidence below is version-specific;
+verify updated focus/controls in10 after restart. No additional
 model/API evaluation, optional hook registration, broader logging, client upgrade
 or theme selection is implied. Keep other plugins and existing data unchanged.
 

@@ -4,8 +4,9 @@ This development package uses **only `.codex-plugin/plugin.json`**. Released Cod
 
 The current source package is `0.2.0-dev.10` (stronger owned-panel focus outline, retained source9 Windows directory-sharing correction/proofs and authoring fixtures), a development checkpoint, not a completed product release. Its registered components include the session notice, lexical guard, opt-in metadata journal/state, exact-command replacement and management skill, plus the local dashboard MCP service. Default configuration does not enable replacement or metadata storage. See [runtime access](runtime.md) before configuring its project/session scope. The included `proofs/` directory contains separate development harnesses and the unintegrated Windows OS proof. Installing the main package does not register those proof servers, panels, probes or an arbitrary execution tool. Actual host results and remaining blockers are recorded in the [continuation test log](continuation/TEST-LOG.md).
 
-The installed human-reviewed macOS fixture remains dev6; source changes do not
-update the cache or trust. See [current native acceptance](native-acceptance.md).
+The configured macOS fixture10 is installed with149verified files and its3hooks
+human-reviewed/trusted, pending desktop restart/native UI verification. Source
+changes alone never update a cache or establish trust. See [current native acceptance](native-acceptance.md).
 
 ## Requirements and installation scope
 

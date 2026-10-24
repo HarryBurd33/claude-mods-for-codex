@@ -4,7 +4,8 @@ Prepared2026-10-23 from official documentation retrieved that day. This is a
 checklist, not a Windows compatibility result or an installation script. Source9
 OS CI passed20storage+8proof tests on each Windows Server2025 Node22/24 lane;
 no native Windows Codex was tested. The user's Windows11 computer is available
-later. Source9 remains uninstalled; macOS trusted dev6 is unchanged.
+later. Source10 retains the source9 Windows foundation and is installed/human-
+trusted on macOS, pending restart; this is not a Windows installation result.
 
 **Use Sol High before gated Windows security or integration work.** Medium may
 prepare records/package and collect explicitly selected read-only inventory. It

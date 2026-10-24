@@ -1,24 +1,52 @@
-# Current status — 2026-10-23
+# Current status — source10 restart checkpoint — 2026-10-23
 
-## Current Medium package/native continuation — source0.2.0-dev.10
+**Full93-capability product incomplete. Source and installed0.2.0-dev.10.**
+Human selected Sol Medium from09518fd. Source10 is installed through the supported
+local marketplace flow,149cached files equal the prepared immutable fixture.
+Human reviewed/trusted the three changed hooks; fresh read-only inventory confirms
+3enabled/trusted,0errors,0model turns. **Desktop restart and source10 native focus
+verification remain pending.** Stay Sol Medium for that routine check; stop for
+Sol High before gated Windows security/integration. Windows11 host available later.
 
-Human resumed09518fd on Sol Medium. Source9 anonymous clone/full offline suite,
-147-file archive and spaced extraction verified; see PACKAGE-DEV9.md. Source10
-adds only a stronger owned-UI focus outline plus matching version metadata;
-all gated Windows/security/runtime logic remains byte-equal the reviewed source9.
-Installed trusted6/logging/retention/config unchanged, activity4/same revision.
-Human closed the watched panel; permitted inventory became empty. Human reopened;
-new panel connected with same scope/counts and Watch off. Backend cancellation
-not established. Human clarified Clear worked, focus was unclear. Source10 isolated
-browser keyboard order/Enter-Clear and3px current-color outline observed; not native
-source10 or full accessibility acceptance. Windows kit prepared from retrieved
-primary docs; native Windows11 host available later. No Windows gate change.
+## Current Medium results
 
-**Full93-capability product incomplete. Source0.2.0-dev.10; installed0.2.0-dev.6.**
-Human resumed Sol High from travel1ae63d1. Source9 corrects Windows directory pins
-and adds an isolated process/object-security proof; no Windows project/settings/
-restore activation. User has a Windows11 Codex computer available **later**.
-Exact source/CI/remote identities belong in TEST-LOG and the final checkpoint reply.
+Source9 anonymous public clone/full suite and147-file package/spaced extraction
+verified. Source10[9d8fb42](https://github.com/HarryBurd33/claude-mods-for-codex/commit/9d8fb42ebf8b09caea5c7893a91e895398d430a5),
+[CI40044819664](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40044819664)
+all7jobs success; both Windows20storage+8proof,0fail/0skip, all4POSIX/portable
+Windows passed. Local and anonymous source10 clone170pass/0fail/28Windows-only
+skips198total; extracted validate3mods/replay4fixtures/package+scaffold7/7.
+Source10 first reviewed archive149files939257bytes, exact clone/checkpoint bytes;
+final notes-only rebuild identity is recorded after readback. See PACKAGE-DEV9.md.
+
+Source10 strengthens owned-control focus:3px currentColor outline/3px offset on
+mouse and keyboard focus. Human clarified installed6 Clear worked, focus was
+unclear. Isolated source10 browser keyboard order/Enter-Clear/computed outline
+passed; **not native source10 or full accessibility acceptance**. Native6 human
+close→empty panel inventory→reopen/new connected panel preserved project/4records/
+same revision/Watch off. Timing/backend cancellation not proved. A later Windows
+native kit is prepared from actually retrieved official pages.
+
+## Preserved authority and install scope
+
+User-profile installation via existing claude-mods-production-dev marketplace;
+only its owned local source pointer changed6→10. Private before-config/marketplace
+backups and immutable125-file dev6 rollback retained. Native fixture reuses exact
+settings, config/mod rules, data/project/scope/retention/patch/commit/export grants.
+Only three private overlays differ from the public149-file snapshot: existing
+MCP settings reference, existing mods config, and inert hook version comments.
+No agent trust writes. Install preserved parsed config exactly; human review then
+changed only this plugin's3hooks.state trust records. Other hook states and all
+non-hook-state config preserved. Latest activity4/same revision; optional observers
+off, theme/client/model unchanged. This chat remains outside selected child scope.
+No extra model/API run, credential/session search, dependency install or system
+repair. Temporary loopback source-test server exited and its browser tab closed.
+Native Windows/gated code byte-equal reviewed source9; no gate activation.
+
+Earlier native6 six views/rewrite/deny/keyboard/resize evidence remains version-
+specific. Updated desktop UI/skill/native hook execution has not yet been verified
+on10; inventory/trust is not delivery. Source9 Windows foundation/history below is
+retained separately, never native Codex/Windows11 support proof.
 
 ## High Windows results
 
@@ -43,39 +71,13 @@ all7jobs passed: each Windows lane20storage+8proof, all4POSIX and portable Windo
 These OS results remain separate from native host acceptance. Native Codex
 Windows11/WSL installation/events/UI/permissions remain unverified.
 
-## Unchanged installed host and authority
+## Remaining work
 
-Human-trusted dev6 remains installed/enabled in the macOS user profile. Previous
-host macOS14.6arm64, desktop26.1016.62342build21477/Node24.22.0; systemCLI0.163.0
-separate. No installation, machine settings/cache/trust, theme, observers, client
-upgrade, selected model or logging scope/retention/export change. Actual installed
-activity read returned4records/same revision. This chat is outside the selected
-child logging project; never infer scope from a shell workdir/command or broaden it.
-No extra model/API evaluation, subagent, REA or tool repair. Old single-run grant
-is consumed. Local deterministic callbacks make no additional model calls;
-ordinary selected-chat skill use consumes selected-model usage.
-
-Installed6 native evidence remains six owned views/local preview/Clear, nested
-files, selected diffs/passive counters, authored print rewrite/control/deny and
-same-version remove/reinstall with125exact files/three trusted hooks. One preview
-keyboard path and narrow/wide usability were human-confirmed. Full accessibility,
-close-pending/reopen/loaded unload/disable/older rollback remain incomplete.
-Earlier dev4 sandbox-negative and separate hold0.0.4 results are version-specific;
-hold proof is removed and not a production approval gate. Optional observers off.
-
-## Next milestone and model boundary
-
-After final CI/readback, routine package/public-clone verification and native
-acceptance preparation are suitable for **GPT-6.1 Sol, Medium**. Do not spend High
-on those once the checkpoint is verified. Windows activation remains incomplete,
-awaiting the later host's exact client/Git/ACL/dependency/sandbox inventory and
-security/native acceptance. **Return to High before any Windows integration,
-traversal, scratch-content cleanup or restore design/change.** The isolated proofs
-are not a grant to remove a gate. No custom client/fork/app patch direction chosen.
-
-Other incomplete rows remain in REQUIREMENTS: authoring/skill workflow gaps,
-accessibility/lifecycle/rollback, user-selected themes and optional native event/
-platform checks. Native checks requiring new model runs/optional registrations/
-settings choices still need their own explicit authorization. Full product is not
-finished; main remains the historical experimental MVP. Root HANDOFF/.local stay
-private; original local history preserved; no force-push.
+Restart/reopen this chat on Sol Medium, open the updated owned panel and verify
+focus visibility and same scope/counts. Native backend cancellation, full screen
+reader/zoom/contrast, loaded disable/older rollback, optional events/themes and
+Linux/Windows/WSL acceptance remain incomplete. No extra model run or optional
+observer/theme/client change is authorized. High before Windows executable/DLL/
+project traversal/content cleanup/restore work when the later host is available.
+All93requirements remain accounted. No custom client/fork/app patch direction or
+full-product finish claim. See HANDOFF for exact commands/rollback/resume.

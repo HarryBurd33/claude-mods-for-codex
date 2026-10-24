@@ -1,5 +1,40 @@
 # Continuation verification log
 
+## Verified Medium source10 install/restart checkpoint — 2026-10-23
+
+Source9d8fb42/tree2eb418341a1c723d3dbba5cbef844815570eceff,
+[CI40044819664](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40044819664)
+all7jobs success. Both native Windows job logs actually read20storage+8proof/0fail/
+0skip. All4POSIX/portableWindows pass. Fresh anonymous clone exactsource; npm test
+170pass/0fail/28Windows-only skips198total. Source10 first archive149files939257bytes/
+SHA256fb089146606604e9166279aebc076b906e5a9635481802c57a3fea8900dd0f26;
+allbytes match clone/source, no private roots/links/traversal/dependencies/portable
+manifest. Spaced extraction validate3/replay4/package+scaffold7/7. Relevant UI15/15.
+
+Temporary loopback server exited0 and owned IAB tab closed. Source10 browserfocus
+sequence/computed ring is separate from native UI. Human clarified native6 Clear
+worked/focus unclear, no functional Clear bug/focus-reset proven. Native6 human
+close/reopen observed, deadline/cancellation timing unverified. Source code Windows/
+privacy/gates/default hooks unchanged; CSS/versions only product delta after9.
+
+Prepared immutable149-file configured target from that archive; copied exact current
+mods/MCP reference, only inert hook version comment6→10. Private config/marketplace
+backups and125-file rollback verified. Existing trusted Homebrew CLI0.163.0 plugin
+add --json installed10; all149cache files byte-equal prepared fixture, settings hash
+unchanged, parsed config equal, unrelated entries preserved. Owned local marketplace
+source pointer changed6→10, no other entry. No direct cache/trust edits or model run.
+
+Read-only app-server inventory first checker expected untrusted; actually reported
+3enabled **modified**,0errors. Corrected diagnostic retained status, no bypass.
+Human explicitly reviewed/trusted3dev10hooks through /hooks. Fresh read-only inventory
+3enabled/trusted/0errors/0model turns. Cache149/settings hash still match. A post-human
+whole-config-equality assertion failed because legitimate human trust updated only
+3owned hooks.state records; all8keys retained, other5states/non-hook-state config
+exactly equal. Agent wrote none. Activity4/same revision/project scope. No optional
+observers/theme/client upgrade or additional native model run. Desktop restart/
+actual source10 panel focus remains pending. Stay Medium for that, High before
+any Windows gated security/integration. Private paths/raw logs/backups remain local.
+
 ## Medium source9 packaging and source10 focus continuation — 2026-10-23
 
 Clean09518fd confirmed. Anonymous credential/config-disabled public clone exact

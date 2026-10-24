@@ -1,42 +1,27 @@
 # Requirements ledger
 
-## Current Medium package/native continuation — source0.2.0-dev.10
+Assessment2026-10-23. **Full93-capability product incomplete. Source/installed10;
+source10 desktop restart/native focus verification pending.** Human resumed Sol
+Medium from09518fd. Source9 and source10 public-clone/archive/extraction checks pass;
+source10 CI40044819664 all7jobs pass (Windows20+8each,0fail/skip). See TEST-LOG and
+PACKAGE-DEV9. Source10 stronger owned focus outline passed isolated browser keys/
+computed style; not native10/full accessibility proof. All Windows code/gates equal9.
 
-Human resumed09518fd on Sol Medium. Source9 anonymous clone/full offline suite,
-147-file archive and spaced extraction verified; see PACKAGE-DEV9.md. Source10
-adds only a stronger owned-UI focus outline plus matching version metadata;
-all gated Windows/security/runtime logic remains byte-equal the reviewed source9.
-Installed trusted6/logging/retention/config unchanged, activity4/same revision.
-Human closed the watched panel; permitted inventory became empty. Human reopened;
-new panel connected with same scope/counts and Watch off. Backend cancellation
-not established. Human clarified Clear worked, focus was unclear. Source10 isolated
-browser keyboard order/Enter-Clear and3px current-color outline observed; not native
-source10 or full accessibility acceptance. Windows kit prepared from retrieved
-primary docs; native Windows11 host available later. No Windows gate change.
+Supported local marketplace update installed149verified fixture files with same
+settings/mods/MCP/scope/data/retention/export. Only inert hook version comments
+changed definitions; human explicitly reviewed/trusted all3. Fresh read-only
+inventory3enabled/trusted/0errors/0model turns. Config preserved at install; human
+review changed only3owned hook state records, other config/hooks preserved.
+Current activity4/same revision. Native6 close/reopen preserved scope/counts; Clear
+worked/focus unclear. Source10 actual panel loading/visibility still pending restart.
 
-Assessment2026-10-23. **Full93-capability product incomplete. Source0.2.0-dev.9;
-installed human-trusted0.2.0-dev.6 unchanged.** High resumed travel1ae63d1. Source9
-corrects Windows metadata-only directory pinning (list right needed for sharing),
-adds a bounded sharing-only retry and an isolated process/object/empty-scratch
-proof. No Windows settings/project/Git/restore gate removal, installed update,
-logging/retention change, extra model run, automatic approval or trust edit.
-
-All93rows retained. Platform mechanism support is not feature completion. Real
-Windows Server CI and proof/subprocess results are separate from native Codex/
-Windows11/WSL. Failures/corrections/exact final CI are in TEST-LOG. User's native
-Windows11 Codex computer is available **later**; activation waits for its actual
-client/executable/dependency/ACL/sandbox inventory and High security/native review.
-No public executor/new client/fork/app patch or snapshot design selected.
-
-Installed dev6 actual activity remains4/same revision and scope; six owned views,
-restricted local preview, authored print rewrite/control/deny and same-version
-remove/reinstall evidence remain version-specific. Keyboard path/resize partial;
-full accessibility/lifecycle/disable/older rollback, optional events/themes and
-native platform acceptance remain incomplete. Source8 authoring fixtures retained.
-
-After final CI/upload/readback, routine source9 packaging and native acceptance
-preparation use Sol Medium. It must stop for High before gated Windows integration,
-traversal, scratch-content cleanup or restore changes. See HANDOFF and DEV9-REVIEW.
+All93rows retained. Mechanism support is not feature completion. Prior versioned
+native6 evidence below stays historical; do not transfer it to10. Full accessibility,
+backend close-pending cleanup, loaded disable/older rollback, optional events/themes
+and real Linux/Windows/WSL acceptance remain incomplete. Windows11 host is available
+later; actual inventory/High/security/native gates remain required. No extra model
+run, approval/trust automation, broader logging, app patch/custom-client direction.
+Stay Medium for post-restart native UI; stop High before Windows gated code.
 
 ## Reading the ledger
 

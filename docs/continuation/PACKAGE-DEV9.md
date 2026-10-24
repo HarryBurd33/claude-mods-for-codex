@@ -1,4 +1,4 @@
-# Source9 package verification — 2026-10-23
+# Development package verification — sources9/10 — 2026-10-23
 
 Human selected Sol Medium from09518fd. No installation/config/cache/trust/logging
 change. The full product remains incomplete; source9 OS/native claims are separate.
@@ -36,3 +36,37 @@ Local archive, extraction, file hashes and raw logs are ignored/private. This is
 an inspectable development artifact, not a public plugin-directory submission or
 finished release. Source10's focus style is a later change and does not inherit
 this artifact hash; its own archive/readback must be recorded separately.
+
+## Source10 follow-up
+
+Public source9d8fb42ebf8b09caea5c7893a91e895398d430a5,
+tree2eb418341a1c723d3dbba5cbef844815570eceff. Fresh anonymous clone exact commit/
+tree; full suite170pass/0fail/28Windows-only skips198total. First reviewed source10
+archive149files939257unpacked bytes, SHA256
+fb089146606604e9166279aebc076b906e5a9635481802c57a3fea8900dd0f26.
+All packaged bytes equal public clone/working source; same no-links/traversal/private-
+roots/dependencies/root-portable-manifest checks. Spaced extraction validate3mods,
+replay4fixtures, package/scaffold7/7. Source10 CI40044819664 all7jobs passed; native
+Windows logs read:20storage+8proof each/0fail/0skip. Relevant local UI tests15/15.
+No Windows/native source10 panel inference. Final notes-only archive is rebuilt/
+read back separately; its hash belongs in the final reply/private record after
+observation, not as an impossible self-hash. Tested runtime/test bytes unchanged.
+
+## Configured native fixture differs from the default archive
+
+Supported user-profile local marketplace update installed149files, byte-equal the
+prepared immutable source10 snapshot. Exactly3private overlays differ from the
+reviewed public archive: retained .mcp.json settings reference, retained mods.json
+and inert hook version comments for fresh human review. No new rules/events/grants.
+The existing settings/data/scope/retention/commits/export remain exact. Do not call
+the configured fixture identical to the default-off public archive.
+
+Private config/marketplace backups and125-file immutable dev6 rollback retained.
+Install preserved parsed config exactly; subsequent human review changed only3
+owned hooks.state trusted hashes, other5states and non-hook-state config unchanged.
+Agent wrote no trust record. Read-only inventory first returned3modified/0errors
+(the checker initially expected literal untrusted, a diagnostic assertion error).
+After human review:3enabled/trusted/0errors/0model turns. Cache149files/settings
+hash rechecked. Native source10 UI/delivery still pending desktop restart; full
+product incomplete. Rollback restores only owned source pointer through supported
+install, requires fresh human review as needed, never full-config/trust restoration.

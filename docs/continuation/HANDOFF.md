@@ -1,80 +1,127 @@
-# Medium source10 focus/package checkpoint — native update still pending
+# Source10 installed and human-trusted — restart handoff
 
-2026-10-23. Human resumed Sol Medium from09518fd. Keep Sol Medium for the remaining
-routine package/native macOS review; **stop for Sol High before any gated Windows
-security/integration work**. User's Windows11 host remains available later.
-Full93-capability product incomplete. Installed/trusted dev6 and logging unchanged.
+2026-10-23. **Full93-capability product incomplete.** Human resumed Sol Medium
+from09518fd. Source10 package/UI change verified and installed; human completed
+changed-code review. **Stop after saving/readback so the human can restart Codex.**
+Next setting remains **GPT-6.1 Sol, Medium**, not a model change. Gated Windows
+security/integration still requires a human-controlled Sol High switch; the native
+Windows11 computer is available later. No background continuation/model run.
 
-## This continuation
+## Read and exact source
 
-- Source9 exact09518fd public clone verified anonymously; full170pass/28Windows-only
-  skips, no failures. Archive147files/914844bytes/SHA256
-  7866423d04dfeee0f8a19fe4ad646c1fa5f0fe350d5b16e24570547842bdeb1d;
-  allbytes match clone/checkpoint, spaced extraction validate3mods/replay4fixtures/
-  package+scaffold7/7. See PACKAGE-DEV9.md. Initial archive preserved privately.
-- Source9 notesCI40043554441 all7jobs success; Windows foundation exacta3a9c25/
-  CI40043152081 remains separate20storage+8proof per native Server lane.
-- Prepared ../windows-native-acceptance.md from official pages actually searched/
-  opened2026-10-23. It requests small read-only inventory and explicit High,
-  executable/DLL/project/scratch/restore/native gates; no automatic installation,
-  PATH fallback, sandbox setup, trust writes or model run. Current generic docs
-  are not proof a target release loads this package or Windows launcher.
-- Installed6 Watch checked, human closed panels, permitted inventory empty. Human
-  reopened, new panel connected/project scope/4records/same revision, Watch off.
-  Close timing vs deadline not measured; backend request cancellation unverified.
-- Human clarified Clear worked but focus was unclear. Source controls are stable
-  DOM; no focus-reset/Clear functionality bug established. Source10 CSS now applies
-  a3px currentColor outline/3px offset to focused button/input/textarea/select/
-  summary, including mouse focus. No JS/tab-order/permission/logging change.
-  Package/manifest/server version10. All Windows/security/gate code byte-equal9.
-- Relevant tests15/15; full local170pass/0fail/28Windows-only skips198total.
-  Isolated bounded loopback IAB: Render→ShiftTab source→Tab Render→Tab Clear→Enter
-  cleared source/preview and computed3px current-color ring. This separate browser
-  had no host bridge, not source10 native Codex acceptance. Screenshots local only.
+Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, PACKAGE-DEV9.md,
+../native-acceptance.md, ../windows-native-acceptance.md, ../windows-storage.md and
+latest ignored root HANDOFF.md. Private paths/raw logs/backups/snapshots never
+published. Source[9d8fb42ebf8b09caea5c7893a91e895398d430a5](https://github.com/HarryBurd33/claude-mods-for-codex/commit/9d8fb42ebf8b09caea5c7893a91e895398d430a5),
+tree2eb418341a1c723d3dbba5cbef844815570eceff, branchcodex/astra-groundwork.
+[CI40044819664](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40044819664)
+all7jobs success; each real Windows lane20storage+8proof,0fail/0skip. Both Windows
+job-log counts actually read. All4POSIX and portable Windows pass. Final following
+notes-only commit is reported after remote readback in reply/private handoff; no
+executable changes after tested source. Main remains historical experimental MVP.
 
-Source10 must receive its own uploaded source/CI/archive/clone verification;
-record after observation, never reuse source9 archive hash. Do not install merely
-because package tests pass. No source10 changed-code review, update or native test
-has occurred. Source6 remains the actual host target. Read TEST-LOG and STATUS for
-subsequent observed checkpoint identities/results; private root handoff has paths.
+## Completed Medium work
 
-## Next tasks and protected boundary
+- Source9 exact09518fd anonymous clone/full170pass/28Windows-only skips;147-file
+  archive914844bytes/hash in PACKAGE-DEV9. Spaced extraction validate3/replay4/
+  package+scaffold7/7; allbytes match public tree, no private roots/links/traversal/
+  dependencies/root portable manifest. NotesCI40043554441 all7jobs passed.
+- Source10 CSS focus ring3px currentColor/3px offset includes mouse/keyboard for
+  button/input/textarea/select/summary. Only CSS and version metadata changed in
+  product code. No JS/tab-order change, no Windows/gate/runtime privacy change.
+  Human clarified Clear worked/focus unclear; no Clear/focus-reset bug established.
+  Isolated IAB Render→ShiftTab source→Tab Render→Tab Clear→Enter clears, computed
+  outline observed. Host bridge absent in separate browser; native10 still pending.
+- Local relevant15/15, full170pass/0fail/28Windows-only skips198total. Anonymous
+  source10 clone repeated170/0/28;149-file archive939257bytes/hash in PACKAGE-DEV9,
+  allbytes match clone/source, safe spaced extraction validate3/replay4/7tests.
+  Final notes-only archive rebuilt/read back separately after observation, not as
+  an invented self-hash. Do not repeat full tests after notes-only rebuild.
+- Installed6 native Watch checked; human closed, MCP Apps inventory empty, human
+  reopened/new panel connected/project scope/4records/same revision/Watch off.
+  Close timing vs deadline not measured; no backend-cancellation proof. User's
+  Clear result confirmed, focus unclear. Old native results stay version-specific.
+- Windows native kit prepared from actually searched/opened official sources.
+  Read-only inventory first, High/executable/DLL/project/scratch/restore gates and
+  actual host permissions. No guessed launcher/PATH Git, sandbox setup or install
+  on an unavailable host. No new model run authorized; prior single grant consumed.
 
-1. Finish source10 exact-source CI/public-clone/package/extraction/readback; no
-   repeat full suites after only notes unless a new failure/change justifies it.
-2. Prepare a concrete immutable source10 update and dev6 rollback/source/access
-   diff through the existing supported local marketplace workflow. Preserve other
-   entries/config/settings/data/retention. Do not edit installed cache/trust hashes.
-   Real human changed-code/hook review and restart remain required; do not infer
-   trust from unchanged hook JSON or referenced-code changes. Prepare exact step
-   before asking human. Retest focus in native panel only after reviewed update.
-3. Source10 native focus visibility/full accessibility, close-pending backend
-   cleanup, loaded disable/older rollback, optional events/themes and native Linux/
-   Windows/WSL remain incomplete. Optional registration/theme/client changes or an
-   additional model run need separate explicit choice/authorization. Existing
-   selected-chat skill use consumes selected-model usage; no extra evaluator.
-4. When Windows host is ready, checkpoint/upload/verify and stop for Sol High
-   **before** Windows security/integration, executable/DLL/project traversal,
-   content-scratch cleanup or restore work. The kit is preparation, not activation.
+## Actual local installation and human trust
 
-No major custom-client/fork/app-patch direction, extra model test, scope expansion,
-cache/trust/config/install change. All93requirements remain in scope. Root HANDOFF
-and.local stay private. Existing High source/security contracts below are retained
-reference; their old next-Medium instruction has already been fulfilled.
+Existing user-profile ID claude-mods-for-codex@claude-mods-production-dev updated
+through supported CLI0.163.0 plugin add --json, not a cache patch. Immutable private
+source10 fixture has149files copied from the verified public archive, with exactly
+three reviewed private overlays: same .mcp.json settings reference, same mods config,
+existing native env-scoped hook commands with inert version review comment10.
+The comments intentionally change definitions for real human review; they do not
+change executed commands/grants. Default3events, optional observers unregistered.
 
-## Copy-and-paste resume instruction
+Native inventory initially reported3enabled **modified** hooks/0errors. First
+checker wrongly expected literal untrusted; corrected diagnosis retained modified,
+not misreported as trusted or bypassed. Human explicitly reviewed/trusted the3
+source10hooks via /hooks. Fresh read-only app-server inventory confirmed3enabled/
+trusted/0errors and0model turns. Installed cache149bytes/hashes equal prepared
+fixture; no cache/trust record written by agent. Current desktop source10 loading/
+rendering/native delivery still needs restart/observation; don't infer from install.
 
-> Continue on GPT-6.1 Sol, Medium from the verified source10 focus/package checkpoint
-> on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,ARCHITECTURE,
-> TEST-LOG,HANDOFF}.md, PACKAGE-DEV9.md, docs/windows-native-acceptance.md and latest
-> ignored root HANDOFF.md. Preserve installed trusted dev6, logging scope/settings
-> and all Windows gates. Finish exact-source package/native macOS update preparation
-> and real human changed-code/hook review before loading source10; its isolated
-> focus/browser result is not native acceptance. No extra model/API run, observer/
-> theme/client change or trust automation is authorized. Stop for Sol High before
-> any gated Windows security/integration work, especially when the later Windows11
-> host is available. Keep all93requirements explicitly incomplete where unverified;
-> save/upload/read back safe checkpoints and preserve private history.
+Private config/marketplace before-backups and immutable125-file dev6 snapshot
+retained. Only owned marketplace source pointer6→10 changed. Install parsed config
+was exactly equal before; human review subsequently changed only this plugin's3
+hooks.state trust records (same8record keys, no removals). Other hook states/all
+non-hook-state config unchanged. Settings/mod rules/data/project/scope/retention/
+patch/commit/export exact bytes/hash unchanged. Current activity4/same revision.
+No extra model/API evaluation, observer/theme/client upgrade, logging expansion,
+credential/session search, dependency install or system repair. No scope inference
+from shell command/workdir. Temporary loopback source test server exited; tab closed.
+
+## Exact next actions after restart — Sol Medium
+
+1. Confirm cache149files/version10/trusted3 inventory still matches reviewed target,
+   without starting a model turn. Reconnect/open mods.dashboard beside this chat;
+   use permitted MCP Apps only. Native app CUA remains blocked; don't bypass it.
+2. Verify updated panel focus: click Render locally, inspect visible stronger ring,
+   ShiftTab source/Tab Render/Tab Clear/Enter; preserve any user source first. Check
+   native computed outline/display, human focus visibility and same activity scope/
+   counts. Source10 currentColor style is a browser result until this observation.
+   No need repeat print rewrite/model event tests merely for CSS. Same native
+   permissions/metadata grants remain; normal selected-chat use consumes its usage.
+3. Continue routine accessibility/lifecycle/rollback preparation. Full screen reader/
+   zoom/contrast, close-pending backend cleanup and loaded disable/older rollback
+   remain incomplete. Do not silently change preferences or claim cleanup from
+   visible closure. Prepare concrete owned backups/diffs before protected actions.
+4. **Stop for Sol High before any gated Windows security/integration change**;
+   later Windows11 host inventory must precede executable/DLL/project/snapshot/
+   exact-owned scratch-content cleanup/restore activation. All before-IO refusals
+   remain. No custom client/fork/app patch/silent API routing direction selected.
+
+## Rollback/removal
+
+No immediate rollback needed; source10 human-trusted/pending desktop restart.
+To roll back, selectively point only this owned local marketplace entry at the
+retained immutable dev6 snapshot, use supported plugin add, verify125exact files,
+then human review of old changed definitions and restart if required. Do not assume
+old trust, write hashes or restore the full old shared config. Preserve all unrelated
+entries and current human trust changes. A supported remove affects only this ID;
+settings/data/export/plans retained separately, never delete a live lock. Exact
+machine paths/backups/commands are in ignored root HANDOFF/.local. Source public
+archive uses default-off storage; configured native fixture grants are separate.
+
+## Complete copy-and-paste resume instruction
+
+> I restarted Codex. Continue on GPT-6.1 Sol, Medium from the verified source10
+> restart checkpoint on codex/astra-groundwork. Read docs/continuation/{STATUS,
+> REQUIREMENTS,ARCHITECTURE,TEST-LOG,HANDOFF}.md, PACKAGE-DEV9.md and latest private
+> root HANDOFF.md. Source10 is installed with149verified fixture files; I reviewed
+> and trusted its3hooks, and fresh inventory confirmed trusted/zero errors. Verify
+> the updated native focus ring/panel after restart, preserving the same logging
+> scope/settings/data and human trust. The source browser result is not yet native
+> UI acceptance. No extra model/API run, optional observer/theme/client change or
+> trust automation is authorized. Stop for Sol High before any gated Windows work;
+> the Windows11 host is available later. Keep all93requirements explicitly accounted
+> and full product incomplete. Save/upload/read back safe progress before any switch.
+
+The earlier High foundation handoff below remains reference; its source9/installed6
+status was historical and is superseded by this current installed10 summary.
 
 ---
 
