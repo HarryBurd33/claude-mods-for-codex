@@ -2322,3 +2322,7 @@ Skill quick_validate unavailable: system Python lacks PyYAML, same known blocker
 no repair/install or validator pass. Frontmatter/reference/CLI manually checked.
 No independent semantic evaluation. Source tests are not installed/native29 UI,
 keyboard, accessibility, end-to-end impact guard or Windows host certification.
+
+## Source29 uploaded checkpoint — 2026-10-24
+
+Local/remote source514e88276836d5cccad59059196999d666641f3d tree796475b2ca8238982f17339ec1f0a674d4a15114 verified by connector tree/ref update, fetched tree equality and anonymous public ls-remote. Source [CI40140487633](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40140487633) in progress at last read, job counts not decoded; no CI success/native29 claim. Local235pass/0fail/111Windows-only skips346total, exact source tests described above. Final handoff notes do not change runtime/tests. Medium next for CI/package and review preparation.

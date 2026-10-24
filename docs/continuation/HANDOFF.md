@@ -22,6 +22,22 @@ source checkpoint identity is verified/read back in reply and private handoff,
 not guessed as a self-referential hash. Preserve equivalent local commits before
 aligning an identical connector-authored remote tree. No force push/private upload.
 
+## Verified source29 upload and exact CI
+
+Runnable local/remote source:
+[514e88276836d5cccad59059196999d666641f3d](https://github.com/HarryBurd33/claude-mods-for-codex/commit/514e88276836d5cccad59059196999d666641f3d),
+tree796475b2ca8238982f17339ec1f0a674d4a15114, parentbfc7cf5. Equivalent local
+777d4f7581f865ee55cfd879afae828d7b82dac7 preserved on
+codex/dev29-high-source-local-checkpoint. Connector/local tree equality,
+expected-parent/nonforce ref update, fetched full-tree equality and anonymous
+public ls-remote all matched. No force push/history loss/private upload.
+
+[Source CI40140487633](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40140487633)
+head514e882 was in progress at last read; no job results decoded yet. Medium must
+read this exact source run, preserving known Windows failures. This final handoff
+notes revision changes only documentation, not the runnable source/runtime/tests.
+Final notes commit/ref verification recorded in reply/private handoff after upload.
+
 ## Completed and partial
 
 - Source CLI impact-review --stdin: strict bounded data-only input, redacted fixed
