@@ -61,8 +61,8 @@ junction ancestors, foreign write ACLs and existing writers; source lease releas
 on index parser failure; pre/post capture cancellation/root validation; external
 owner death/source release. All fixtures synthetic private NTFS roots, no real
 Git/project/credential/session/model/network access. Existing44proof+20storage
-regress on Windows Node22/24. Local skips do not establish Windows success.
-Exact observed CI source/results belong in TEST-LOG; this draft claims no OS pass.
+regressed on Windows Node22/24. Local skips do not establish Windows success.
+Actual observed CI source/results are recorded below and in TEST-LOG.
 
 No production event, tool, UI, setting, permissions or logging scope changed. Version
 metadata16 only in package/manifest/server. No source16 install or human trust/restart
@@ -107,3 +107,38 @@ for routine public-clone/archive/spaced-path verification; High before more gate
 - Previously retrieved Microsoft no-follow/handle/ACL/sharing/lifetime evidence
  remains in proofs/windows-owned-process/README.md and source12–15 reviews.
  No upstream code copied; original MIT implementation, independent-project status.
+
+## Observed result and completed High review
+
+Source[26d8090](https://github.com/HarryBurd33/claude-mods-for-codex/commit/26d8090e17e031b187afb22f7f73a32b5d888c53),
+[CI40061829694](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40061829694):
+all7jobs passed. Both actual WindowsServer2025 Node22/24 logs read:20storage+
+53proof each/0fail/0skip. All9new HEAD-binding cases passed. Both prior mapping
+diagnostics still mapping-refused; altered-byte/mtime branch and8.3 unverified.
+OS evidence is separate from native Windows11 Codex/Git acceptance.
+
+Tested tree253a7050b6db7ffe2e38c2f5a44b41399fbfac9e. Actual decoded Windows logs
+120776807304(Node22)/120776807311(Node24), both read. All4full POSIX suites and
+portable Windows job also passed. Local npm test170pass/0fail/73Windows-only skips
+243total; validate3mods/replay4fixtures; diff-check clean. No CI retry/correction.
+Earlier failed candidates/intermittent storage issue remain in TEST-LOG; these
+passes do not establish a cause or fix for that separate history.
+
+High reviewed controlled/dynamic path phases, exact line/ref grammar and unsupported
+forms, positive held source objects/byte checks, strict-index composition, every
+failure/disposal ownership path and no negative absence or caller-commit fallback.
+Native leases actually rejected ordinary source writes/replacements/ancestor rename;
+constructor/parser failure, cancel and owner death released source handles. Not
+hostile same-user/admin/mapping isolation, repository authenticity or atomic full-
+snapshot proof. Future caller must bound these read leases to one short operation,
+not a persistent panel/session lifetime, and satisfy native permissions separately.
+
+Installed10 still149reviewed files/private settings hash unchanged. No new native
+inventory/event/UI/trust/model-run claim or config/cache/logging/observer/theme/
+client change. All93IDs retained. Production helper/hooks/settings/project/restore/
+UI/skills unchanged, only package/manifest/server version16 metadata. No machine
+rollback/trust/restart step for this uninstalled source.
+
+Next human GPT-6.1 Sol Medium for routine exact-source public clone/archive/spaced
+extraction/records. High required before further parser/ref/metadata/provenance/
+loader/ignore/helper/cleanup/gate/native/writer integration. Full product incomplete.

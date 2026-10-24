@@ -1,11 +1,37 @@
 # Continuation verification log
 
-## Source16 candidate — positive source HEAD binding
+## Verified High source16 — 2026-10-23
+
+Source[26d8090](https://github.com/HarryBurd33/claude-mods-for-codex/commit/26d8090e17e031b187afb22f7f73a32b5d888c53),
+[CI40061829694](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40061829694):
+all7jobs passed. Both actual WindowsServer2025 Node22/24 logs read:20storage+
+53proof each/0fail/0skip. All9new HEAD-binding cases passed. Both prior mapping
+diagnostics still mapping-refused; altered-byte/mtime branch and8.3 unverified.
+OS evidence is separate from native Windows11 Codex/Git acceptance.
+
+Tested tree253a7050b6db7ffe2e38c2f5a44b41399fbfac9e. Actual decoded logs
+120776807304(Node22)/120776807311(Node24); all4full POSIX/portable Windows jobs
+also passed. Local npm test170pass/0fail/73Windows-only skips243total, validate3/
+replay4/diff-check clean. No CI retry/correction needed. Earlier failures/unknown
+intermittent storage cause remain separate, no cause/fix inferred from these passes.
+
+Source files/ancestor leases, exact parsing/refusal, index-failure cleanup,
+pre/post cancellation and owner death actually tested with synthetic private NTFS
+fixtures. No Git process or native Windows Codex host. Source/root/hash-format/
+object provenance/ignore/loader/native/writer remain unverified; positive object
+binding is not an atomic repository snapshot. See DEV16-REVIEW and HANDOFF.
+Installed10/cache149files equal reviewed fixture; private settings hash unchanged.
+No native inventory/event/UI/model run or config/cache/trust/logging/observer/theme/
+client change. All93IDs retained. Next human Medium for packaging; High before
+further gated Windows work. Source16 remains uninstalled.
+
+## Source16 verified positive HEAD binding — positive source HEAD binding
 
 Original isolated GitSelectedMetadataProof binds detached HEAD or one existing
 loose branch ref through retained source handles, then composes strict projected
 index/private scratch. Missing/packed-only/unborn/chained/unsupported forms refuse;
-no caller commit override/fallback. Nine new Windows tests pending CI; local
+no caller commit override/fallback. Source26d8090/CI40061829694 all7jobs passed; actual Windows20storage+53proof
+per Node22/24 lane/0fail/0skip, both logs read. Local
 170pass/0fail/73Windows-only skips243total, validate3/replay4. No production gate/
 operation/install/logging/trust change. Source16 uninstalled; full93product and
 native Windows/Git/loader/provenance/ignore/writer gaps remain. See DEV16-REVIEW.md

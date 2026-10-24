@@ -1,64 +1,49 @@
 # Claude Mods for Codex
 
-## Source16 candidate — positive source HEAD binding
-
-Original isolated GitSelectedMetadataProof binds detached HEAD or one existing
-loose branch ref through retained source handles, then composes strict projected
-index/private scratch. Missing/packed-only/unborn/chained/unsupported forms refuse;
-no caller commit override/fallback. Nine new Windows tests pending CI; local
-170pass/0fail/73Windows-only skips243total, validate3/replay4. No production gate/
-operation/install/logging/trust change. Source16 uninstalled; full93product and
-native Windows/Git/loader/provenance/ignore/writer gaps remain. See docs/continuation/DEV16-REVIEW.md
-and TEST-LOG.md. Source15 records below are the previous verified foundation.
-
-
-**The full 93-capability product is incomplete. Development source0.2.0-dev.16
+**The full93-capability product is incomplete. Development source0.2.0-dev.16
 is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
-Human resumed GPT-6.1 Sol High from verified65743d9.
+Human resumed GPT-6.1 Sol High from verifiedfbce126.
 
-Source15 adds an original isolated SHA1/v2 index projection: bounded structure,
-checksum, names/order and frame checks; optional extension payloads omitted and
-checksum regenerated. An explicit source14 capture overload composes it inside
-one helper before private scratch. Unsupported flags/modes/formats/mandatory
-extensions refuse; no fallback to raw bytes after strict refusal. No production
-helper/operation/settings/project/Git/restore gate is enabled.
+Source16 adds an original isolated positive source HEAD binding proof. A detached
+HEAD or one existing loose branch ref is held and verified through source handles,
+then composed with the strict projected index/private scratch. No caller commit
+override, packed fallback, unborn inference or raw-index fallback. No production
+operation/settings/project/Git/restore gate is enabled.
 
-Local npm test:170pass/0fail/64Windows-only skips234total, validate3mods/replay4.
-Source[4933f28](https://github.com/HarryBurd33/claude-mods-for-codex/commit/4933f28b82e16e29d14d24a5e3222037113afee8),
-[CI40060887884](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40060887884):
+Local suite170pass/0fail/73Windows-only skips243total; validate3mods/replay4.
+Source[26d8090](https://github.com/HarryBurd33/claude-mods-for-codex/commit/26d8090e17e031b187afb22f7f73a32b5d888c53),
+[CI40061829694](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40061829694):
 all7jobs passed. Both actual WindowsServer2025 Node22/24 logs read:20storage+
-44proof each/0fail/0skip. All9new index cases passed, including10000entries,
-32MiB input, malformed/mandatory framing and projected-source cleanup. Both prior
-mapping diagnostics still mapping-refused; altered-byte/mtime and8.3 unverified.
-OS evidence is not native Windows11 Codex or Windows Git acceptance. A deterministic192-byte index
-was produced/read using macOS Git2.39.5 with synthetic data/zero stat fields, not
-Windows Git. See [review](docs/continuation/DEV15-REVIEW.md) and
-[verification log](docs/continuation/TEST-LOG.md).
+53proof each/0fail/0skip. All9new HEAD-binding cases passed. Both prior mapping
+diagnostics still mapping-refused; altered-byte/mtime branch and8.3 unverified.
+OS evidence is separate from native Windows11 Codex/Git acceptance. See
+[review](docs/continuation/DEV16-REVIEW.md) and [test log](docs/continuation/TEST-LOG.md).
 
-Strict format checks are not repository/hash-format/HEAD/ref/object provenance,
-ignore-aware selection, whole-tree freshness, loader trust or native Windows11
-acceptance. Root syntax uses a dummy path, not an actual selected-root identity.
-Five-second cooperative checks cannot interrupt hashing/kernel IO. Prior mapping
-outcomes remain mapping-refused; altered-byte/mtime branch and8.3 unverified.
-Live readers/unknown child-created content can retain bytes; no recursive cleanup,
-secure erasure or hostile same-user/admin isolation. Windows11 remains unavailable
-per latest reply; do not repeat its availability question without a state change.
+This binds positive files, not repository identity/hash format/object provenance or
+an atomic repository snapshot. Ref support is deliberately narrower than Git;
+missing/packed-only/unborn/chained/unsupported forms refuse. Inherited reader cap
+256KiB/file, parser cap512bytes, actual-root syntax/handles checked. No Git launch,
+ignore engine, loader trust, native Windows11 or restore acceptance. Five-second
+cooperative checks cannot interrupt kernel IO. Earlier mapping-refused/altered-byte-
+mtime/8.3 gaps remain. Live readers/unknown child content can retain bytes; no
+recursive cleanup, secure erasure or hostile same-user/admin isolation. Windows11
+remains unavailable per latest reply; do not repeat that availability question.
 
-Expanded development remains on codex/astra-groundwork; default branch is the
+Expanded development stays on codex/astra-groundwork; default branch is the
 historical experimental MVP. MIT and independent-project status preserved.
 Source15 [package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV15.md)
-passed:164files/all-byte checks, validate3/replay4/package-scaffolding7/7. Source15
-remains uninstalled. Next human Sol High before further gated Windows work.
+passed; source16 packaging is the next Medium task after its OS proof. Source16
+remains uninstalled, with no full-product/Windows compatibility claim.
 
-Installed dev10 remains149 reviewed files and the same private settings/mod rules/
-data/project/scope/retention/patch/export grants. Last High inventory3enabled/
-human-trusted hooks/0errors and Activity4/same scope/revision are prior versioned
-observations, not new source15 event/UI evidence. Source10 focus/render/keyboard-
-Clear and dev6/dev4 hook/rewrite/deny/hold/sandbox evidence remain separate.
-Full accessibility/lifecycle/loaded disable/older rollback/Linux/Windows/WSL
-acceptance incomplete. No config/cache/trust/logging/optional observer/theme/client
-change or additional model/API run. See [handoff](docs/continuation/HANDOFF.md),
-[ledger](docs/continuation/REQUIREMENTS.md) and [native kit](docs/windows-native-acceptance.md).
+Installed dev10 remains149reviewed files/same private settings/mod rules/data/
+project/scope/retention/patch/export. Prior High3enabled/human-trusted hooks/0errors,
+Activity4/same scope/revision/health unknown and source10 focus/render/keyboard-
+Clear remain versioned observations. Dev6/dev4 hooks/deny/rewrite/hold/sandbox
+results stay separate. Full accessibility/lifecycle/loaded disable/older rollback/
+Linux/Windows/WSL gaps remain. No new native inventory/event/UI/model run or trust/
+config/cache/logging/observer/theme/client change. See
+[handoff](docs/continuation/HANDOFF.md), [ledger](docs/continuation/REQUIREMENTS.md)
+and [native kit](docs/windows-native-acceptance.md).
 
 ## What it does
 

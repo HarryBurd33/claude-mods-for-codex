@@ -1,11 +1,12 @@
 # Extension architecture and security contracts
 
-## Source16 candidate — positive source HEAD binding
+## Source16 verified positive HEAD binding — positive source HEAD binding
 
 Original isolated GitSelectedMetadataProof binds detached HEAD or one existing
 loose branch ref through retained source handles, then composes strict projected
 index/private scratch. Missing/packed-only/unborn/chained/unsupported forms refuse;
-no caller commit override/fallback. Nine new Windows tests pending CI; local
+no caller commit override/fallback. Source26d8090/CI40061829694 all7jobs passed; actual Windows20storage+53proof
+per Node22/24 lane/0fail/0skip, both logs read. Local
 170pass/0fail/73Windows-only skips243total, validate3/replay4. No production gate/
 operation/install/logging/trust change. Source16 uninstalled; full93product and
 native Windows/Git/loader/provenance/ignore/writer gaps remain. See DEV16-REVIEW.md
@@ -27,7 +28,7 @@ before further gated work. See PACKAGE-DEV15.md; final notes-only artifact ident
 recorded after actual readback in reply/private handoff. Full product incomplete.
 
 
-## Source15 verified strict index proof — strict index projection
+## Source15 foundation: strict index proof — strict index projection
 
 Original unintegrated SHA1/v2 index projection proof: bounded checksum/entry/path/
 frame validation, optional accelerator stripping and explicit same-helper scratch
