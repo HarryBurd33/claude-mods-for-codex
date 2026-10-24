@@ -1,5 +1,11 @@
 # Extension architecture and security contracts
 
+Source12 High candidate2026-10-23: unintegrated explicit synthetic Windows read-set
+proof under test. Source12 is uninstalled; installed human-trusted10/logging and all
+production Windows before-IO gates stay unchanged. No project enumeration/ignore
+engine/Git execution; Windows11 host is still unavailable per fresh human reply.
+See DEV12-REVIEW.md for contract, risks and acceptance; actual results go in TEST-LOG.
+
 ## Source11 private synthetic content boundary — 2026-10-23
 
 Source392fc04/CI40046690213 all7jobs passed; native Windows20storage+13proof each,

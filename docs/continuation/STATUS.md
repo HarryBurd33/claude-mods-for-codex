@@ -1,5 +1,11 @@
 # Current status — source11 private scratch proof — 2026-10-23
 
+Source12 High candidate2026-10-23: unintegrated explicit synthetic Windows read-set
+proof under test. Source12 is uninstalled; installed human-trusted10/logging and all
+production Windows before-IO gates stay unchanged. No project enumeration/ignore
+engine/Git execution; Windows11 host is still unavailable per fresh human reply.
+See DEV12-REVIEW.md for contract, risks and acceptance; actual results go in TEST-LOG.
+
 **Full93-capability product incomplete. Source0.2.0-dev.11 is uninstalled;
 configured source10 remains installed and human-trusted on macOS.** Human resumed
 Sol High from1b11d14. No production Windows gate, configuration or trust change.

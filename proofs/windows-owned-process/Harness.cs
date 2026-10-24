@@ -15,6 +15,10 @@ public static class Harness {
  [DllImport("kernel32.dll")] static extern bool ResetEvent(IntPtr handle);
  [DllImport("kernel32.dll")] static extern uint WaitForSingleObject(IntPtr handle,uint milliseconds);
  [DllImport("kernel32.dll")] static extern bool CloseHandle(IntPtr handle);
+ [DllImport("kernel32.dll",CharSet=CharSet.Unicode)] static extern IntPtr CreateFileMappingW(Microsoft.Win32.SafeHandles.SafeFileHandle file,IntPtr security,uint protection,uint high,uint low,IntPtr name);
+ [DllImport("kernel32.dll")] static extern IntPtr MapViewOfFile(IntPtr mapping,uint access,uint high,uint low,UIntPtr bytes);
+ [DllImport("kernel32.dll")] static extern bool FlushViewOfFile(IntPtr address,UIntPtr bytes);
+ [DllImport("kernel32.dll")] static extern bool UnmapViewOfFile(IntPtr address);
  static string Exe { get {return System.Reflection.Assembly.GetExecutingAssembly().Location;} }
  static string B64(string value) { return Convert.ToBase64String(Encoding.UTF8.GetBytes(value)); }
  static Process Spawn(string mode,string path) {
@@ -93,6 +97,59 @@ public static class Harness {
     try {scratch.Add(new byte[1]);throw new InvalidOperationException();}catch(IOException){}
     if(System.IO.Directory.Exists(path))throw new IOException();
     Console.WriteLine("bounded");return 0;
+   }
+   if(mode=="readset" || mode=="readset-hold" || mode=="readset-cancel" || mode=="readset-cancel-after") {
+    string[] paths=new string[a.Length-3];Array.Copy(a,3,paths,0,paths.Length);
+    using(var cancellation=new CancellationTokenSource()) {
+     if(mode=="readset-cancel")cancellation.Cancel();
+     try {
+      using(var selected=new CodexMods.PrivateStorage.ProjectReadSetProof(directory,paths,cancellation.Token)) {
+       int count=selected.Count,total=0;
+       for(int i=0;i<count;i++)total+=selected.Bytes(i).Length;
+       Console.WriteLine("captured|"+count+"|"+total);Console.Out.Flush();
+       if(mode=="readset-hold" || mode=="readset-cancel-after")Console.In.ReadLine();
+       if(mode=="readset-cancel-after")cancellation.Cancel();
+       selected.Verify();Console.WriteLine("verified");
+       // Disposal releases every pin; reading a disposed object must refuse.
+       selected.Dispose();
+       try {selected.Bytes(0);throw new InvalidOperationException();}catch(IOException){}
+      }
+     } catch(OperationCanceledException){Console.WriteLine("cancelled");}
+       catch(IOException){Console.WriteLine("refused");}
+    }return 0;
+   }
+   if(mode=="readset-mapping") {
+    string path=Path.Combine(directory,"sample.txt");DateTime time=File.GetLastWriteTimeUtc(path);
+    IntPtr mapping=IntPtr.Zero,view=IntPtr.Zero;
+    try {
+     using(var file=new FileStream(path,FileMode.Open,FileAccess.ReadWrite,FileShare.ReadWrite|FileShare.Delete)) {
+      mapping=CreateFileMappingW(file.SafeFileHandle,IntPtr.Zero,4,0,0,IntPtr.Zero);
+      if(mapping==IntPtr.Zero)throw new IOException();
+      view=MapViewOfFile(mapping,2,0,0,UIntPtr.Zero);if(view==IntPtr.Zero)throw new IOException();
+     }
+     // A writable view can outlive its original file handle. If the OS refuses
+     // our subsequent read handle, that is also a safe bounded outcome.
+     CodexMods.PrivateStorage.ProjectReadSetProof selected;
+     try {selected=new CodexMods.PrivateStorage.ProjectReadSetProof(directory,new string[]{"sample.txt"},CancellationToken.None);}
+     catch(IOException){Console.WriteLine("mapping-refused");return 0;}
+     using(selected) {
+      time=File.GetLastWriteTimeUtc(path);
+      Marshal.WriteByte(view,0,88);if(!FlushViewOfFile(view,new UIntPtr(1)))throw new IOException();
+      File.SetLastWriteTimeUtc(path,time);
+      if(File.GetLastWriteTimeUtc(path)!=time)throw new IOException();
+      try {selected.Verify();Console.WriteLine("unexpected-stale-read");}
+      catch(IOException){Console.WriteLine("changed-refused");}
+     }
+    } finally {if(view!=IntPtr.Zero)UnmapViewOfFile(view);if(mapping!=IntPtr.Zero)CloseHandle(mapping);}
+    return 0;
+   }
+   if(mode=="readset-scratch") {
+    using(var selected=new CodexMods.PrivateStorage.ProjectReadSetProof(directory,new string[]{"sample.txt"},CancellationToken.None))
+    using(var scratch=new CodexMods.PrivateStorage.ScratchContentProof(a[3])) {
+     string target=scratch.Add(selected.Bytes(0));
+     selected.Verify();
+     Console.WriteLine(CodexMods.PrivateStorage.ScratchReadProof(target)?"verified-copy":"mismatch");
+    }return 0;
    }
    if(mode=="scratch-content" || mode=="scratch-collision" || mode=="scratch-job" || mode=="scratch-job-exit") {
     var scratch=new CodexMods.PrivateStorage.ScratchContentProof(directory);

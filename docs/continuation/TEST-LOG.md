@@ -1,5 +1,12 @@
 # Continuation verification log
 
+Local source12 npm test170pass/0fail/41Windows-only skips211total; validate3/
+replay4 passed. Source12 High candidate2026-10-23: unintegrated explicit synthetic Windows read-set
+proof under test. Source12 is uninstalled; installed human-trusted10/logging and all
+production Windows before-IO gates stay unchanged. No project enumeration/ignore
+engine/Git execution; Windows11 host is still unavailable per fresh human reply.
+See DEV12-REVIEW.md for contract, risks and acceptance; actual results go in TEST-LOG.
+
 ## Medium source11 package verification — 2026-10-23
 
 Resumed clean88e8895/tree2a6916fd39fac62f19f149b3bc7417613ae7ff0b. Anonymous

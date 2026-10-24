@@ -1,5 +1,11 @@
 # Claude Mods for Codex
 
+Source12 High candidate2026-10-23: unintegrated explicit synthetic Windows read-set
+proof under test. Source12 is uninstalled; installed human-trusted10/logging and all
+production Windows before-IO gates stay unchanged. No project enumeration/ignore
+engine/Git execution; Windows11 host is still unavailable per fresh human reply.
+See [DEV12-REVIEW](docs/continuation/DEV12-REVIEW.md) for contract, risks and acceptance; actual results go in TEST-LOG.
+
 **Development source0.2.0-dev.11; the full93-capability product is incomplete.**
 The default branch remains the historical experimental MVP. Current expanded work
 is on codex/astra-groundwork; it is not a stable release or a Windows compatibility

@@ -1,5 +1,13 @@
 # Windows owned-process research candidate
 
+Source12 adds ProjectReadSet.cs, an **unintegrated explicit synthetic read-set**
+proof: retained no-follow handles, bounded captured bytes, fresh metadata+byte
+verification, mutation/share/path refusals and source11 private-slot composition.
+No enumeration/ignore engine/real project/Git/DLL launch or gate activation.
+Windows11 host remains unavailable; native Codex is unverified. See
+[source12 review](../../docs/continuation/DEV12-REVIEW.md); actual CI/branch results
+are recorded in TEST-LOG after observation. Production compiles only PrivateStorage.cs.
+
 ## Source11 content extension — not installed or integrated
 
 ScratchContent.cs adds a bounded flat synthetic-content proof using private

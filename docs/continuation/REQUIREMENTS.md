@@ -1,5 +1,11 @@
 # Requirements ledger
 
+Source12 High candidate2026-10-23: unintegrated explicit synthetic Windows read-set
+proof under test. Source12 is uninstalled; installed human-trusted10/logging and all
+production Windows before-IO gates stay unchanged. No project enumeration/ignore
+engine/Git execution; Windows11 host is still unavailable per fresh human reply.
+See DEV12-REVIEW.md for contract, risks and acceptance; actual results go in TEST-LOG.
+
 Assessment2026-10-23. **All93requirements retained; full product incomplete.**
 Source11 is an uninstalled proof-only Windows scratch-content extension; source10
 remains installed/human-trusted. Production Windows settings/project/Git/restore

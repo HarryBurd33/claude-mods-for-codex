@@ -14,6 +14,7 @@ try {
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'OwnedProcess.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'ProgramBoundary.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'ScratchContent.cs')),
+    [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'ProjectReadSet.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'../../src/windows/PrivateStorage.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'Harness.cs')))
   $compiler = [Microsoft.CSharp.CSharpCodeProvider]::new()

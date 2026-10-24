@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
-import { mkdtemp, readFile, writeFile, readdir, rm, rmdir, access, realpath, mkdir, copyFile, symlink, link } from 'node:fs/promises';
+import { mkdtemp, readFile, writeFile, readdir, rm, rmdir, access, realpath, mkdir, copyFile, symlink, link, open, rename } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, win32 } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -8,7 +8,7 @@ import test from 'node:test';
 import { windowsStorageRequest } from '../src/windows-storage.mjs';
 
 // Real Windows OS tests only. No mocked paths, model calls, Codex installation,
-// production API integration, project traversal or executable-trust claim.
+// production API integration, user project traversal or executable-trust claim.
 const native = { skip: process.platform !== 'win32', timeout: 45000 };
 let fixture;
 async function run(exe, args, options = {}) {
@@ -257,4 +257,115 @@ test('Windows successful root exit also removes scratch content held by an owned
     try {assert.deepEqual(await readdir(root),[]);await rmdir(root);}catch(e){if(e.code!=='ENOENT')throw e;}
     assert.match(h.output(),/removed|retained-root/);
   } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+
+async function readsetProject(name) {
+  const {data,exe}=await setup(),project=join(data,'selected '+name);
+  await windowsStorageRequest('prepare-directory',project);return {data,exe,project};
+}
+async function readsetHolder(project,paths,mode='readset-hold') {
+  const {exe}=await setup();let text='';
+  const child=spawn(exe,['run',mode,project,...paths],{windowsHide:true,stdio:['pipe','pipe','ignore']});
+  const closed=new Promise((resolve,reject)=>{child.once('close',resolve);child.once('error',reject);});
+  const deadline=setTimeout(()=>child.kill(),20000);child.once('close',()=>clearTimeout(deadline));
+  try {
+    await new Promise((resolve,reject)=>{
+      const timer=setTimeout(()=>reject(new Error('Synthetic read-set readiness deadline')),5000);
+      child.stdout.setEncoding('utf8');child.stdout.on('data',value=>{
+        text+=value;if(text.length>8192){child.kill();reject(new Error('Synthetic read-set output bound'));}
+        if(text.includes('\n')){clearTimeout(timer);resolve();}
+      });
+      child.once('error',e=>{clearTimeout(timer);reject(e);});
+      child.once('close',()=>{clearTimeout(timer);if(!text.includes('\n'))reject(new Error('Synthetic read-set closed before readiness'));});
+    });
+    assert.match(text,/^captured\|\d+\|\d+/);return {child,closed,output:()=>text};
+  } catch(e){child.kill();await closed;throw e;}
+}
+test('Windows read-set captures only explicit bounded Unicode paths and keeps source and Git sentinel bytes unchanged',native,async()=>{
+  const {project,exe}=await readsetProject('literal Ω');
+  await mkdir(join(project,'nested'));await mkdir(join(project,'.git'));
+  const contents=new Map([['sample.txt','alpha'],['nested/Ω space.txt','beta'],['.git/index','untouched-index'],['.git/HEAD','untouched-head']]);
+  for(const [path,value] of contents)await writeFile(join(project,path),value);
+  assert.equal(await run(exe,['run','readset',project,'sample.txt','nested/Ω space.txt']),'captured|2|9\r\nverified');
+  for(const [path,value] of contents)assert.equal(await readFile(join(project,path),'utf8'),value);
+  // A completed read-set releases pins and never leaves a helper lock/sidecar.
+  await writeFile(join(project,'sample.txt'),'changed-after-release');
+  assert.deepEqual((await readdir(project)).sort(),['.git','nested','sample.txt']);
+});
+test('Windows read-set rejects traversal, sensitive segments, namespaces, aliases and case-colliding selections',native,async()=>{
+  const {project,exe}=await readsetProject('invalid');await writeFile(join(project,'sample.txt'),'alpha');
+  const invalid=['../sample.txt','/sample.txt','nested//sample.txt','nested/./sample.txt','nested/../sample.txt',
+    'nested\\sample.txt','sample.txt:stream','sample.txt.','sample.txt ','C:/elsewhere.txt','//server/share/file','CON.txt',
+    '.ENV','nested/credentials.json','auth.json','id_ed25519','private.key','.git/index','node_modules/file.txt','x/\u202Ehidden.txt'];
+  for(const path of invalid)assert.equal(await run(exe,['run','readset',project,path]),'refused');
+  assert.equal(await run(exe,['run','readset',project,'sample.txt','SAMPLE.TXT']),'refused');
+  assert.equal(await run(exe,['run','readset',project,Array(17).fill('x').join('/')]),'refused');
+  assert.equal(await readFile(join(project,'sample.txt'),'utf8'),'alpha');
+  assert.deepEqual(await readdir(project),['sample.txt']);
+});
+test('Windows read-set refuses linked roots, junction ancestors, hardlinks, missing and directory leaves',native,async()=>{
+  const {project,data,exe}=await readsetProject('links');await mkdir(join(project,'nested'));await writeFile(join(project,'nested','sample.txt'),'alpha');
+  const rootAlias=join(data,'selected alias');await symlink(project,rootAlias,'junction');
+  assert.equal(await run(exe,['run','readset',rootAlias,'nested/sample.txt']),'refused');
+  const nestedAlias=join(project,'linked');await symlink(join(project,'nested'),nestedAlias,'junction');
+  for(const path of ['linked/sample.txt','linked','nested','absent.txt'])assert.equal(await run(exe,['run','readset',project,path]),'refused');
+  const hard=join(project,'hard.txt');await link(join(project,'nested','sample.txt'),hard);
+  assert.equal(await run(exe,['run','readset',project,'hard.txt']),'refused');await rm(hard);
+  assert.equal(await run(exe,['run','readset',project,'nested/sample.txt']),'captured|1|5\r\nverified');
+  await rm(rootAlias);await rm(nestedAlias);
+});
+test('Windows read-set enforces entry, file and aggregate byte bounds and pre-cancellation',native,async()=>{
+  const {project,exe}=await readsetProject('bounds');
+  assert.equal(await run(exe,['run','readset',project]),'refused');
+  const paths=Array.from({length:21},(_,n)=>`file-${n}.txt`);
+  for(const path of paths)await writeFile(join(project,path),'x');
+  assert.equal(await run(exe,['run','readset',project,...paths.slice(0,20)]),'captured|20|20\r\nverified');
+  assert.equal(await run(exe,['run','readset',project,...paths]),'refused');
+  await writeFile(join(project,paths[0]),Buffer.alloc(262145));
+  assert.equal(await run(exe,['run','readset',project,paths[0]]),'refused');
+  for(const path of paths.slice(0,5))await writeFile(join(project,path),Buffer.alloc(262144));
+  assert.equal(await run(exe,['run','readset',project,...paths.slice(0,4)]),'captured|4|1048576\r\nverified');
+  assert.equal(await run(exe,['run','readset',project,...paths.slice(0,5)]),'refused');
+  assert.equal(await run(exe,['run','readset-cancel',project,'missing.txt']),'cancelled');
+});
+test('Windows read-set refuses foreign mutation grants and pre-existing writers while allowing ordinary read sharing',native,async()=>{
+  const {project,exe}=await readsetProject('access'),file=join(project,'sample.txt');await writeFile(file,'alpha');
+  for(const mode of ['code-write','deny-code-write']) {
+    await fixtureAcl(file,mode);assert.equal(await run(exe,['run','readset',project,'sample.txt']),'refused');
+    await fixtureAcl(file,'private');
+  }
+  await fixtureAcl(file,'broad'); // Public read access is allowed for project data, not private scratch.
+  assert.equal(await run(exe,['run','readset',project,'sample.txt']),'captured|1|5\r\nverified');
+  await fixtureAcl(file,'private');
+  const writer=await open(file,'r+');
+  try {assert.equal(await run(exe,['run','readset',project,'sample.txt']),'refused');}finally{await writer.close();}
+  assert.equal(await run(exe,['run','readset',project,'sample.txt']),'captured|1|5\r\nverified');
+});
+test('Windows read-set retains source and ancestor pins, permits unrelated entries and releases on cancellation',native,async()=>{
+  const {project,exe}=await readsetProject('pins'),file=join(project,'sample.txt');await writeFile(file,'alpha');
+  for(const mode of ['readset-hold','readset-cancel-after']) {
+    const h=await readsetHolder(project,['sample.txt'],mode);
+    try {
+      for(const action of [()=>writeFile(file,'must-not-write'),()=>rename(file,file+'.moved'),()=>rename(project,project+'.moved')]) {
+        await assert.rejects(action(),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+      }
+      await writeFile(join(project,'unselected.txt'),'outside-read-set');
+      await finishHolder(h);assert.match(h.output(),mode==='readset-hold'?/verified/:/cancelled/);
+      assert.equal(await readFile(file,'utf8'),'alpha');
+    } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+    await writeFile(file,'alpha'); // Proof that failure/cancellation released its own handles.
+  }
+  assert.equal(await run(exe,['run','readset',project,'sample.txt']),'captured|1|5\r\nverified');
+});
+test('Windows read-set re-verification refuses writable-mapping changes even with restored modification time',native,async t=>{
+  const {project,exe}=await readsetProject('mapping'),file=join(project,'sample.txt');await writeFile(file,'alpha');
+  const outcome=await run(exe,['run','readset-mapping',project]);
+  assert.ok(['changed-refused','mapping-refused'].includes(outcome));t.diagnostic(outcome);
+  assert.equal(await readFile(file,'utf8'),outcome==='changed-refused'?'Xlpha':'alpha');
+});
+test('Windows read-set copies only captured synthetic bytes into private delete-on-close slots without changing sources',native,async()=>{
+  const {project,data,exe}=await readsetProject('copy'),file=join(project,'sample.txt');await writeFile(file,'synthetic-private-content');
+  const before=(await readdir(data)).sort();
+  assert.equal(await run(exe,['run','readset-scratch',project,data]),'verified-copy');
+  assert.equal(await readFile(file,'utf8'),'synthetic-private-content');assert.deepEqual((await readdir(data)).sort(),before);
 });
