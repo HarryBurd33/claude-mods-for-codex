@@ -1,37 +1,33 @@
-# Current project status — source25 — 2026-10-24
+# Current project status — source26 — 2026-10-24
 
-macOS acceptance is the current priority. The [93-row audit](docs/continuation/MACOS-ACCEPTANCE.md)
-and [bounded native batch](docs/continuation/MACOS-BATCH.md) record what is verified
-on unchanged installed dev10 and what remains incomplete. Next is High review of
-selected-scope retention management; Windows remains incomplete and deferred.
+macOS acceptance is the current priority. Source **0.2.0-dev.26** adds an
+explicit POSIX [selected-scope retention CLI](docs/retention.md): read-only preview,
+then fingerprint-confirmed cleanup with fresh selection/data checks. No automatic
+cleanup, MCP writer or lock recovery. [Design and tests](docs/continuation/DEV26-REVIEW.md).
 
-Source **0.2.0-dev.25** is a development checkpoint on `codex/astra-groundwork`.
-The full [93-capability ledger](docs/continuation/REQUIREMENTS.md) remains incomplete;
-the default branch retains the earlier experimental MVP.
+Independent MIT-licensed project; not affiliated with or endorsed by Anthropic or OpenAI.
 
-The source25 code milestone was a proof-only installed-image read inventory. It retains
-the original strict-code profile and adds an explicitly named Installer inventory
-profile for fixed images beneath the fresh SDK-bound Program Files/Git location.
-Neither profile grants execution or private-data authority. No candidate Git is
-launched, and all production Windows settings/project/Git/restore gates stay closed.
-[Design, tests and observed results](docs/continuation/DEV25-REVIEW.md).
+This is an uninstalled development checkpoint on `codex/astra-groundwork`, not a
+finished release. The default branch retains the experimental MVP. The full
+[93-capability ledger](docs/continuation/REQUIREMENTS.md) and [macOS audit](docs/continuation/MACOS-ACCEPTANCE.md)
+remain incomplete. Installed human-trusted dev10, its149reviewed files and logging
+scope are unchanged; no installed production metadata was cleaned.
 
-Installed human-trusted **dev10** and its logging scope remain unchanged. Source25
-is uninstalled. Earlier macOS native UI/hooks/preview observations do not certify
-this source. Native Windows11 Codex and WSL acceptance remain unverified.
+Local source26:208tests passed,0failed,109Windows-only skips; new retention suite
+19passed/0failed/1Windows-only skip; validate3mods/replay4fixtures. CI awaits actual
+upload/readback. Synthetic/OS subprocess tests do not certify native Codex delivery.
+[Last completed source24 package check](docs/continuation/PACKAGE-DEV24.md); source26 packaging
+and installed native acceptance remain separate.
 
-macOS acceptance is the human-selected priority; the audit/current native batch
-is recorded above. Historical latest full-source test evidence follows:
-Local and four POSIX CI lanes passed189 tests with108 Windows-only skips.
-Windows storage checks passed25 per lane; process checks passed84/85. The mandatory
-real-image read is still refused (observed2links versus the one-link guard).
-No real image bytes/hash/imports were obtained. This experiment remains incomplete.
-The [delivery plan](docs/continuation/DELIVERY-PLAN.md) gives the remaining work and next macOS batch.
-The latest reviewed source24 archive is documented in
-[PACKAGE-DEV24](docs/continuation/PACKAGE-DEV24.md); source25 packaging is outstanding.
-Static read samples do not establish binary authenticity, loader/dependency trust,
-version or native compatibility. Keep the original execution/private-data policies
-and normal Codex permissions separate.
+Windows stays in scope and deferred. Its unchanged mandatory real-image check
+previously failed before bytes (observed2links versus the one-link guard). No
+candidate Git execution, image hash/import/version or native Windows11/WSL result.
+All production Windows gates remain closed. [Failure record](docs/continuation/DEV25-REVIEW.md).
+
+The next setting is Sol Medium for packaging and concrete native acceptance-step
+preparation, with High before new consequential runtime/security/writer changes.
+No native UI restyling, automatic trust, extra model/API run or full-product
+completion is implied. The [delivery plan](docs/continuation/DELIVERY-PLAN.md) retains remaining work.
 
 Use [setup](docs/setup.md), [runtime access](docs/runtime.md) and
 [privacy](docs/privacy.md) for the implemented tools and their access. Current

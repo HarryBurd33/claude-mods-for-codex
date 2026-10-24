@@ -45,3 +45,13 @@ removal or data deletion. The existing human trust was retained for identical by
 changed source still requires human review even if the host retains trust.
 Already-loaded desktop process unload, UI disable and older-version rollback were
 not established by this fresh-session check. Private backups are retained.
+
+## Explicit selected-scope retention (source26)
+
+The POSIX [retention CLI](retention.md) previews only the scope selected by reviewed
+private settings, then requires its unchanged fingerprint for explicit cleanup.
+No automatic data deletion, sibling-scope discovery, MCP writer or lock reaping.
+Both journals remain when any retained record is too recent. Deletion may partially
+complete or leave locks after interruption; inspect after stopping writers, do not
+retry automatically. Windows refuses before IO. Source26 is uninstalled; no cleanup
+of installed production records was performed by this milestone.

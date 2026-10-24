@@ -1,8 +1,8 @@
 # Development dashboard and immediate local commands
 
-Current source25/macOS acceptance note2026-10-24: human-trusted dev10 is unchanged
-and was rechecked through the actual MCP tools/owned panel. Source25 is uninstalled;
-its changed state-lock implementation does not inherit native dev10 acceptance.
+Current source26/macOS acceptance note2026-10-24: human-trusted dev10 is unchanged
+and was rechecked through the actual MCP tools/owned panel. Source26 is uninstalled;
+its new retention CLI and prior state-lock change do not inherit native dev10 acceptance.
 The installed desktop app bundle is now26.1021.22027/build21747; the exact running
 panel host version was not independently attested. Native history below belongs
 to each recorded snapshot/client. See [macOS audit](continuation/MACOS-ACCEPTANCE.md),
@@ -190,3 +190,13 @@ locks attempt creation50times with10ms between collisions; this is not a hard
 500ms method deadline. Neither policy promises success under arbitrary load.
 Source24 separates slow-sync concurrency correctness, expiry/refusal and observed
 OS handle lifetime in tests, without increasing production budgets.
+
+## Explicit selected-scope retention (source26)
+
+The POSIX [retention CLI](retention.md) previews only the scope selected by reviewed
+private settings, then requires its unchanged fingerprint for explicit cleanup.
+No automatic data deletion, sibling-scope discovery, MCP writer or lock reaping.
+Both journals remain when any retained record is too recent. Deletion may partially
+complete or leave locks after interruption; inspect after stopping writers, do not
+retry automatically. Windows refuses before IO. Source26 is uninstalled; no cleanup
+of installed production records was performed by this milestone.

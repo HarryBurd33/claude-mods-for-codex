@@ -5,6 +5,12 @@ from c5bd658/source25 with human-trusted dev10 installed; it changes no runtime,
 installation, logging, data selection, trust, theme or model configuration.
 [All93 row assessments](MACOS-ACCEPTANCE.md) accompany this record.
 
+Source26 High follow-up: BatchB's selected-scope CLI is now implemented and tested
+on synthetic POSIX data; [DEV26-REVIEW](DEV26-REVIEW.md) records the exact contract,
+failures/corrections and observed runs. No production cleanup or native update.
+The BatchB text below preserves the accepted implementation criteria; next Medium
+is packaging and concrete native acceptance-step preparation, not more Windows.
+
 ## Batch A — observed now, unchanged installed dev10
 
 Target: macOS14.6, CLI0.163.0, Node24.22.0. Installed desktop app bundle

@@ -1,4 +1,5 @@
 import { scaffoldMod } from "./scaffold.mjs";
+import { runRetentionCli } from "./retention.mjs";
 import { checkMetadataScope } from "./scope.mjs";
 import { prepareRestorePlan,reviewRestorePlan,applyRestorePlan } from "./restore.mjs";
 import { assessCommandImpact } from "./impact.mjs";
@@ -34,6 +35,8 @@ Usage:
   codex-mods restore-review --plan PRIVATE_FILE
   codex-mods restore-apply --plan PRIVATE_FILE --confirm-plan SHA256
   codex-mods report --data-dir PATH
+  codex-mods retention-preview --settings PRIVATE_FILE --before UTC_TIMESTAMP
+  codex-mods retention-cleanup --settings PRIVATE_FILE --before UTC_TIMESTAMP --confirm-preview SHA256
   codex-mods help
 
 Commands:
@@ -58,6 +61,9 @@ Commands:
   restore-apply  Explicit mutation: restore only the reviewed file after a fresh
                 conflict check. Never call automatically from inspection.
   report    Summarize the opt-in metadata journal. Raw records are not printed.
+  retention-preview  Read-only age/count/size preview for the exact reviewed scope.
+  retention-cleanup  Explicit POSIX deletion of that unchanged eligible scope;
+                     requires its preview fingerprint. No automatic cleanup.
 
 The default config is config/mods.json in this plugin. Journaling is disabled by
 default and report requires an explicit --data-dir path.`;
@@ -127,6 +133,7 @@ export async function runCli(argv, streams = process) {
     return;
   }
   if (command === "replay") return replay(args, streams);
+  if (command === "retention-preview" || command === "retention-cleanup") return runRetentionCli(command, args, streams);
   if (command === "scaffold") {
     const options = parseOptions(args, new Set(["--spec", "--output"]));
     if (!options.spec || !options.output) throw new Error("scaffold requires --spec and --output");

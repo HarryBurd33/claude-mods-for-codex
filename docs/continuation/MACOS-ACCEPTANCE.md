@@ -7,6 +7,11 @@ or a completion percentage. It supersedes the unaudited queue for macOS planning
 Windows remains in scope, incomplete and later in the human-selected order.
 No product/runtime changes, installation, trust change or added logging in this stage.
 
+Source26 follow-up: EV-13/SEC-09 now have a tested source-only selected-scope
+preview/explicit cleanup CLI; see [DEV26-REVIEW](DEV26-REVIEW.md) and [workflow](../retention.md).
+This does not install26, close the remaining native/lifecycle acceptance or alter
+this audit's dated Hnow evidence. Other93row identities/observations stay preserved.
+
 ## Evidence and classification
 
 - **Hnow:** this Medium stage's actual installed dev10 MCP tools/owned panel,
@@ -84,7 +89,7 @@ state acceptance for these changes. Source25 remains uninstalled/package-unverif
 | EV-10 Handle allow/deny/cancel/timeout/malformed/failure safely | I | H hold0.0.4 response paths; A transport/malformed/failure; disconnected failure recorded | Production native failure matrix incomplete; infrastructure advisory/fail-open limitation remains. |
 | EV-11 Share metadata across hook processes | I | H1: selected CLI write/Desktop Refresh read; A25 focused state tests | Source25 changed state lock schedule versus installed10; native changed-state acceptance not inherited. |
 | EV-12 Isolate sessions and deliberately share projects | V | A scope/two-session/parent/sibling tests; Hnow unchanged settings/four records | Verified configured isolation semantics on POSIX; no scope expansion or private session discovery. |
-| EV-13 Bound retention and cleanup | I | A bounded journals/scopes/prune; source exports pruneMetadataState only | No usable retention dry-run/cleanup CLI/UI. Next High must design explicit selected-data workflow and refusals. |
+| EV-13 Bound retention and cleanup | I | A bounded journals/scopes/prune; source exports pruneMetadataState only | Source26 adds POSIX selected-scope preview/explicit cleanup CLI with synthetic fault/concurrency tests; package/installed-native acceptance remains. No MCP writer; Windows refused before IO. |
 | EV-14 Show event-driven live updates | I | H6 synthetic replay Watch; H1 native Refresh; Hnow Watch off at31.7s sample | Native event during Watch and backend close-pending remain. Bounded polling is an approximation, not permanent push. |
 | EV-15 Route a new explicitly configured agent/task | W | D custom agents; H1 authorized new explicit Sol High CLI run | Configured subagent routing and host availability separate; any additional run needs visible bounded authorization. |
 | EV-16 Intercept/change current selected model or rewrite prompts | P | No prompt/selected-model interception; forbidden-field tests and source review | Human switches models; explicit new task is distinct and consumes allowance. |
@@ -148,9 +153,9 @@ state acceptance for these changes. Source25 remains uninstalled/package-unverif
 The current read-only batch verifies the unchanged installed UI and scope without
 new trust/model actions. It does not close native active-event delivery or source25.
 See [MACOS-BATCH](MACOS-BATCH.md) for observed steps and the next concrete milestone.
-The first consequential implementation gap is a usable selected-data retention
-workflow: a prune library exists but no immediate CLI/UI command exposes it. That
-workflow removes data and must be reviewed on **GPT-6.1 Sol High** before code.
+That gap is now addressed in source26 by the High-reviewed selected-scope CLI.
+The code remains uninstalled; packaging and actual changed-snapshot acceptance
+remain separate. No production metadata was cleaned. See DEV26-REVIEW.
 Do not resume the deferred Windows alias/loader investigation on that switch.
 
 Basic callbacks/preview/selected Git/usage already work. Remaining macOS work is

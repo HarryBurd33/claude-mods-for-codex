@@ -1,5 +1,28 @@
 # Extension architecture and security contracts
 
+## Source26 selected-scope retention — current
+
+The new [retention CLI](../retention.md) is immediate POSIX maintenance only, not
+MCP/hook/UI automation. src/retention.mjs loads a private canonical settings path,
+uses the existing exact project/session hash selection, requires disjoint data/
+project locations and refuses Windows before path access. Preview is read-only:
+no root/scope/lock/plan creation or sibling enumeration. Entire selected scope is
+eligible only if all retained metadata precedes the explicit UTC cutoff.
+
+Cleanup uses a SHA256 conflict fingerprint over settings/selection/cutoff/retained
+objects and bytes; no human authentication or native permission is implied. It
+exclusively takes global state and selected journal locks without waiting/stealing,
+re-snapshots, rereads settings and verifies identities before known-file unlinks.
+No recursive delete/root-wide prune/lock recovery/MCP writer. Concurrent package
+state writers serialize; later data may recreate the scope. Partial removal/kill
+can leave journals or locks; report progress and inspect, never retry automatically.
+Private POSIX path/handle samples do not sandbox hostile same-user/admin races.
+
+Original state/journal/settings/Windows/project/restore modules and budgets remain
+unchanged. Source26 is uninstalled; trusted dev10/logging scope preserved. Exact
+code, tests, fault-copy labels and limits: [DEV26-REVIEW](DEV26-REVIEW.md). Earlier
+macOS native observations do not certify source26. Windows failure remains intact.
+
 ## macOS acceptance / next retention boundary — 2026-10-24
 
 [MACOS-ACCEPTANCE](MACOS-ACCEPTANCE.md) audits all93 rows; [MACOS-BATCH](MACOS-BATCH.md)

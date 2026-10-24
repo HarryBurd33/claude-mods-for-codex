@@ -1,5 +1,43 @@
 # Continuation verification log
 
+## Source26 High — selected-scope retention implementation — 2026-10-24
+
+Human resumed c234d5c on Sol High for macOS scoped retention. New POSIX CLI
+retention-preview/retention-cleanup selects only reviewed settings' exact scope,
+requires all-old data and matching fresh fingerprint, locks/rechecks before known-
+file deletion, preserves other scopes and refuses Windows before IO. No MCP writer,
+automatic cleanup/retry/reaping, production-data cleanup or installed-code change.
+[Contract and tests](DEV26-REVIEW.md), [usage/limits](../retention.md).
+
+Initial retention9pass/7fail/1skip: six prefix-expectation failures and directory
+mtime assertion after legitimate lock-taking. Prefix consistent; test preserves
+all file identity/time/bytes and directory identity/entries while excluding only
+lock-bookkeeping directory mtime. Next16pass/0fail/1skip. After added fault/CLI
+cases, state+retention+budget/contention37pass/0fail/2Windows-only skips39total.
+
+First full source26 run207pass/1fail/109Windows-only skips317total: interrupted
+child could warn unsettled top-level await because unresolved promise alone kept
+no event-loop work. Test fixture registers IPC listener before ready marker now;
+no production cleanup logic/deadline/assertion removed. Failed run retained.
+Corrected retention19pass/0fail/1skip; full208pass/0fail/109skips. Final canonical
+settings-path guard/targeted suite passed19/0/1, then exact final full source26
+208pass/0fail/109skips317total. Validate3mods/replay4fixtures/diff-check passed.
+
+Selected scope (project/session)/other scopes/index/HEAD/settings, no-create
+preview, cutoff/stale/settings/file/root changes, private/link/special/malformed/
+size bounds, held locks, partial failure/new bytes/unknown-file preservation,
+actual CLI and killed-owned-child tested on synthetic data. Source-copy barrier/
+fault cases explicitly labeled; controlled writer collision uses real filesystem
+locks and preserves its later new record. Not native Codex/Windows acceptance.
+
+Installed10all149cache files byte-equal immutable fixture; settings hash/scope
+unchanged. Original state/journal/settings/Windows/project/restore/budgets bytes
+matchc234d5c. No native/model/API run, trust/config/cache/export/observer/theme/
+client/model-selection change or subagents. Source26uninstalled/package-unverified;
+all93IDs retained. Windows failed real-image positive/guard unchanged; new Windows
+before-IO test is added to portable CI. CI results pending source upload/readback;
+no future green claim. Next human Medium when only routine checks/packaging remain.
+
 ## macOS Medium acceptance audit — 2026-10-24
 
 Started clean c5bd658; remote ref matched through independent connector readback.

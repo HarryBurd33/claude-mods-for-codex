@@ -21,3 +21,13 @@ unsafe ACLs refuse without repair. Windows dashboard/project/Git/restore paths
 remain gated before traversal. Windows mode bits are not privacy evidence. See [Windows storage](windows-storage.md).
 
 Filesystem metadata can still reveal that the plugin was used and when a journal file changed. Anyone with access to the plugin data directory can read its records. Enable it only when that local metadata is acceptable.
+
+## Explicit selected-scope retention (source26)
+
+The POSIX [retention CLI](retention.md) previews only the scope selected by reviewed
+private settings, then requires its unchanged fingerprint for explicit cleanup.
+No automatic data deletion, sibling-scope discovery, MCP writer or lock reaping.
+Both journals remain when any retained record is too recent. Deletion may partially
+complete or leave locks after interruption; inspect after stopping writers, do not
+retry automatically. Windows refuses before IO. Source26 is uninstalled; no cleanup
+of installed production records was performed by this milestone.

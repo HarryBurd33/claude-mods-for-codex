@@ -2,13 +2,14 @@
 
 The human selected **finish macOS feature acceptance first, then Windows**.
 Windows stays in scope and explicitly incomplete. The Medium acceptance audit and bounded unchanged-dev10 checks are recorded below.
-High is next before the selected-scope retention deletion workflow. Do not start another Windows proof loop.
+That retention source milestone is implemented on High; routine verification is next. Do not start another Windows proof loop.
 
-The next-stage audit is now recorded in [MACOS-ACCEPTANCE](MACOS-ACCEPTANCE.md): all93
-rows individually classified against evidence. [MACOS-BATCH](MACOS-BATCH.md) records
-a completed bounded unchanged-dev10 native batch and proposes a usable selected-
-scope retention milestone for High. That is the next implementation priority;
-no new Windows proof/package-version loop. No elapsed-time/percentage promise.
+Source26 now implements the High-reviewed POSIX selected-scope retention preview/
+explicit cleanup CLI; [DEV26-REVIEW](DEV26-REVIEW.md) records tests and limits.
+No production data cleaned;26uninstalled, installed10/scope/trust unchanged.
+Next Medium: exact packaging/docs and concrete native step preparation; High
+before further consequential code/security. Native/event/accessibility/lifecycle/
+authoring/platform gaps remain; no package-version-only or Windows-proof loop.
 
 ## What is usable, and what is unfinished
 
@@ -39,21 +40,20 @@ credible completion percentage or finish date.
 | Windows and WSL follow-on | PL-04–05 | Actual NTFS/process/security OS proofs; source25 scoped read prototypes | Actual installed Git read remains refused: observed link count2 violates current one-link guard. Mandatory positive test fails in both lanes. Keep failure and guard visible; later High review required. Native Windows11 host unavailable; WSL separately unverified. |
 | Linux, governance and final report | PL-03, PL-06; GOV-01–07 | Linux/macOS Node CI, primary research, MIT/disclaimer and durable checkpoints | Native Linux acceptance remains separate. Recheck only relevant mutable sources, preserve all93 rows, and produce the requested capability/setup/update/removal/models/tests/commit report without calling the incomplete product finished. |
 
-## Completed audit and next bounded macOS batch
+## Completed retention source and next macOS batch
 
-Medium completed all93 row classifications and the unchanged dev10 native read-only
-checks in [MACOS-BATCH BatchA](MACOS-BATCH.md). The next High milestone is BatchB:
-selected-scope retention preview/explicit cleanup. The existing library-only prune
-API scans root scopes; it must not be exposed unchanged when one project/session
-was selected. This is a consequential deletion/security contract, so Medium stops
-before code. No production metadata deletion is authorized for that milestone.
+Source26 CLI implementation and synthetic fault/concurrency/actual-CLI checks are
+recorded in [DEV26-REVIEW](DEV26-REVIEW.md). Medium should verify exact package and
+spaced extraction, preserve proof/production separation and prepare a reviewed
+immutable native acceptance snapshot only when concrete steps warrant it. Do not
+run cleanup on installed production data. Keep optional hooks off and current
+logging selection unchanged. Human changed-code trust/restart and any new separate
+model-run authorization remain distinct protected steps.
 
-Afterward, native active-event/optional-trigger/failure/start, supported loaded
-lifecycle/older rollback, accessibility/theme/routing/current-context and broader
-component authoring remain. Several substantial batches and later native platform
-work remain; no reliable elapsed-time estimate follows from current evidence.
-Prepare exact human trust/restart/model-run steps only when needed for a concrete
-reviewed test. Do not broaden logging or resume Windows policy work on this switch.
+Remaining active-event/optional-trigger/failure/start, supported loaded lifecycle/
+older rollback, accessibility/theme/routing/current-context and broader component
+authoring require further batches. Several substantial batches and native platform
+work remain; no defensible elapsed-time/percentage estimate from test counts.
 
 ## Current Windows checkpoint, explicitly incomplete
 
