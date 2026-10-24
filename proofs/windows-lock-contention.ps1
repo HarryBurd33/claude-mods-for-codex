@@ -6,7 +6,7 @@ $ProgressPreference = 'SilentlyContinue'
 $PSModuleAutoLoadingPreference = 'None'
 try {
   if ($PSVersionTable.PSVersion.Major -ne 5 -or $PSVersionTable.PSVersion.Minor -lt 1) { throw 'Windows PowerShell5.1 required' }
-  if ($Mode -cnotin @('delete-pending','held-lock')) { throw 'Closed lock proof mode required' }
+  if ($Mode -cnotin @('metadata-only','directory-data','held-lock')) { throw 'Closed lock proof mode required' }
   $parameters = [System.CodeDom.Compiler.CompilerParameters]::new()
   $parameters.GenerateInMemory = $true
   $parameters.CompilerOptions = '/noconfig'
@@ -22,6 +22,12 @@ try {
   $result = $native.GetMethod('LockContentionProof').Invoke($null,[object[]]@($Directory,$Mode))
   [Console]::WriteLine([string]$result)
 } catch {
-  [Console]::WriteLine('lock-proof-refused')
+  # Test-only closed stage/numeric result. Never print exception messages or paths.
+  $stage = 0; $createError = -1
+  if ($null -ne $native) {
+    $stage = [int]$native.GetField('LockProofStage').GetValue($null)
+    $createError = [int]$native.GetField('LockProofCreateError').GetValue($null)
+  }
+  [Console]::WriteLine('lock-proof-refused|stage|'+$stage+'|create-error|'+$createError)
   exit 1
 }

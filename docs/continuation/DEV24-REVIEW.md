@@ -46,7 +46,9 @@ held-lock cases and pure scheduler tests remain unchanged. Local focused5/0/0ski
 The actual `JournalLock` retries50 collisions with10ms sleeps. Its discarded
 `LockExists` probe opens a metadata handle with delete sharing, and retains it
 during identity/ACL validation even though its result/errors are ignored. That
-can prolong deletion if its owner releases concurrently. A real reader uses the
+was hypothesized to prolong deletion if its owner releases concurrently. This
+requires actual OS observation, including the metadata-only access distinction.
+A real reader uses the
 same probe, so an acquisition-only change cannot eliminate reader contention.
 
 Microsoft documents deletion-on-last-close in [RemoveDirectoryW](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-removedirectoryw)
@@ -92,3 +94,37 @@ assisted this Astra turn; no model-switch delegation. Windows11 remains unavaila
 per the last answer. No protected user step/restart or machine rollback is needed.
 Remove only owned test artifacts after children exit; never remove live locks or
 repair system ACLs. Every earlier failure remains in the public verification log.
+
+## First Windows experiment — hypothesis not established
+
+Source [5b1854f](https://github.com/HarryBurd33/claude-mods-for-codex/commit/5b1854f7bd5b07016b390146e43fdcf48bc2ba07),
+tree828d97055f5aa1e6ef44f7b3acc501f215f7bddb,
+[CI40117615834](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40117615834).
+Both actual Windows logs read: Node22 job120942100291 and Node24 job120942100303
+each23pass/1fail/0skip24total. The new delete-pending experiment exited1 at its
+closed invariant boundary (690.2222ms/831.9914ms), without recording which stage.
+The actual held-lock refusal/unchanged-owner/release check passed. The existing22
+storage/observer cases passed;75-process-proof step skipped after the failure.
+Copied-helper trace: each lane9successful writes across3fresh roots, count3each,
+no refusal labels. This does not explain the old three-writer failure.
+
+Four POSIX and portable jobs concluded success; detailed POSIX logs still to be
+read before claiming exact counts. No manual rerun or production change. The
+experiment had assumed its proposed mechanism before measuring it, so failure is
+not evidence for that mechanism or a storage regression.
+
+The original Pins comment already distinguishes metadata-only access from actual
+directory-data access. The revised experiment measures both separately: exact
+LockExists rights, and those rights plus FILE_LIST_DIRECTORY, each with share7.
+It records the immediate numeric create error and actual JournalLock outcome,
+then strictly requires fresh acquisition/empty cleanup after release. These two
+observations are diagnostic-only, not relaxed production acceptance; original
+all3/4writer tests remain strict. The held-owner case still requires refusal and
+identity preservation. Closed numeric failure stages were added to the proof;
+no paths/errors/content or production telemetry. Do not remove LockExists unless
+the actual observation establishes an avoidable hazard. A corrected hypothesis
+must be distinguished from a runtime fix, and exact old causes remain unproved.
+
+Current README/status/ledger introductions now replace repeated historical model-
+next text with a clear current summary. Full prior records remain in TEST-LOG and
+versioned reviews/Git history. All93 IDs and implementation rows are retained.

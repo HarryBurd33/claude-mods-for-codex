@@ -40,16 +40,22 @@ async function fixture(t,mode) {
   child.stdout.on('data',chunk=>{output+=chunk;if(output.length>1024){output=output.slice(0,1024);overflow=true;stop();}});
   child.stderr.on('data',chunk=>{stderr+=chunk;if(stderr.length>1024){stderr=stderr.slice(0,1024);overflow=true;stop();}});
   try {
-    assert.equal(await closed,0,'Owned native lock proof must complete');
+    const code=await closed;
+    const refusal=/^lock-proof-refused\|stage\|[0-9]{1,2}\|create-error\|-?[0-9]{1,5}$/.exec(output.trim());
+    if(refusal)t.diagnostic(refusal[0]);
+    assert.equal(code,0,'Owned native lock proof must complete');
     assert.equal(expired,false,'Owned native lock proof deadline');assert.equal(overflow,false);assert.equal(stderr,'');
     const fields=output.trim().split('|');
     assert.deepEqual(fields.slice(0,3),['lock-proof',mode,'create-error']);
-    assert.deepEqual(fields.slice(4),['contender','refused','released','acquired','empty','true']);
+    assert.equal(fields[4],'contender');assert.ok(['refused','acquired'].includes(fields[5]));
+    assert.deepEqual(fields.slice(6),['released','acquired','empty','true']);
     assert.match(fields[3],/^(0|[1-9][0-9]{0,4})$/);const createError=Number(fields[3]);
-    if(mode==='held-lock')assert.equal(createError,0);
-    else assert.ok([5,183].includes(createError),'Observed pending-name create result must be access-denied or already-exists');
+    if(mode==='held-lock') {assert.equal(createError,0);assert.equal(fields[5],'refused');}
+    // The two access-mask modes are diagnostics of a previously unobserved OS
+    // boundary, not an accept-either production storage assertion. Their exact
+    // outcomes are reported before deciding whether a runtime fix is justified.
     assert.deepEqual(await readdir(data),[]);
-    t.diagnostic(JSON.stringify({diagnosticOnly:true,mode,createError,contender:'refused',afterRelease:'acquired',empty:true,oldFailureCauseEstablished:false}));
+    t.diagnostic(JSON.stringify({diagnosticOnly:true,mode,createError,contender:fields[5],afterRelease:'acquired',empty:true,oldFailureCauseEstablished:false}));
   } finally {
     clearTimeout(deadline);stop();
     try {await closed;} finally {
@@ -62,5 +68,6 @@ async function fixture(t,mode) {
   }
 }
 
-test('native Windows retained lock metadata observes delete-pending refusal and release without authority changes',native,t=>fixture(t,'delete-pending'));
+test('native Windows metadata-only lock handle lifetime diagnostic preserves cleanup',native,t=>fixture(t,'metadata-only'));
+test('native Windows directory-data lock handle lifetime diagnostic preserves cleanup',native,t=>fixture(t,'directory-data'));
 test('native Windows held lock refuses bounded acquisition without stealing its owner and succeeds after release',native,t=>fixture(t,'held-lock'));
