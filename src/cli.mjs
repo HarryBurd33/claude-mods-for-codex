@@ -3,6 +3,7 @@ import { runComponentCli } from "./component-authoring.mjs";
 import { runRetentionCli } from "./retention.mjs";
 import { checkMetadataScope } from "./scope.mjs";
 import { prepareRestorePlan,reviewRestorePlan,applyRestorePlan } from "./restore.mjs";
+import { createImpactReview, MAX_IMPACT_REVIEW_BYTES } from './impact-review.mjs';
 import { assessCommandImpact } from "./impact.mjs";
 import { readSelectedUsage } from "./usage.mjs";
 import { readSelectedObservations } from "./observations.mjs";
@@ -33,6 +34,7 @@ Usage:
   codex-mods replay-component --bundle PRIVATE_DIRECTORY [--intent PRIVATE_JSON]
   codex-mods scope --project PATH --session-cwd PATH
   codex-mods impact --stdin
+  codex-mods impact-review --stdin
   codex-mods usage --export PRIVATE_JSONL
   codex-mods observations --export PRIVATE_JSONL
   codex-mods files --project PATH
@@ -61,6 +63,8 @@ Commands:
             Windows requires the exact explicitly selected root string.
   impact    Explain fixed lexical signals in a stdin JSON command object;
             assessment only, never executes or approves the command.
+  impact-review  Print bounded impact and explicit review/retry guidance from stdin;
+                 no command echo, execution, policy edit or approval.
   usage     Read only reported counters from an explicit private exec export.
             No private-session discovery, model call, cost or context inference.
   observations  Summarize structured command/turn records in one selected private
@@ -161,6 +165,13 @@ export async function runCli(argv, streams = process) {
     const options = parseOptions(args, new Set(["--project", "--session-cwd"]));
     if (!options.project || !options.session_cwd) throw new Error("scope requires --project and --session-cwd");
     streams.stdout.write(`${JSON.stringify(await checkMetadataScope(options.project, options.session_cwd), null, 2)}\n`);
+    return;
+  }
+  if (command === "impact-review") {
+    const options = parseOptions(args, new Set(["--stdin"]));
+    if (!options.stdin) throw new Error("impact-review requires --stdin JSON with exactly a command field");
+    const value = parseJsonObject(await readBoundedStream(streams.stdin, MAX_IMPACT_REVIEW_BYTES), "impact review input");
+    streams.stdout.write(`${JSON.stringify(createImpactReview(value), null, 2)}\n`);
     return;
   }
   if (command === "impact") {

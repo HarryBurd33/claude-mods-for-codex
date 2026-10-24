@@ -10,7 +10,7 @@ const signals = [
 ];
 export const IMPACT_CATEGORIES=Object.freeze(signals.map(([id])=>id));
 export function assessCommandImpact(command,categories=IMPACT_CATEGORIES){
-  if(typeof command!=='string'||Buffer.byteLength(command)>1024*1024)throw new Error('Impact assessment requires a bounded command string');
+  if(typeof command!=='string'||command.length>1024*1024||new TextEncoder().encode(command).byteLength>1024*1024)throw new Error('Impact assessment requires a bounded command string');
   if(!Array.isArray(categories)||!categories.length||categories.length>IMPACT_CATEGORIES.length||categories.some(c=>!IMPACT_CATEGORIES.includes(c))||new Set(categories).size!==categories.length)throw new Error('Select known, unique impact categories');
   const matches=signals.filter(([id,pattern])=>categories.includes(id)&&pattern.test(command)).map(([category,,impact])=>({category,impact}));
   return{source:'fixed-lexical-signals',assessmentOnly:true,matches,targetScope:'unknown',
@@ -18,6 +18,6 @@ export function assessCommandImpact(command,categories=IMPACT_CATEGORIES){
 }
 
 export function impactDenial(assessment){
-  const impacts=assessment.matches.slice(0,2).map(m=>m.impact).join(' ');
-  return `Impact review: ${impacts} Targets and extent are unknown; lexical signals can be wrong. This covered call is denied, not held for approval. Review a safer operation or an explicit narrow policy decision, then retry through normal host permissions.`;
+  const impact=assessment.matches[0]?.impact ?? 'The covered command needs review.';
+  return `Impact review: ${impact} Targets and extent are unknown; lexical signals can be wrong. This covered call is denied, not held for approval. Stop or choose a safer request. A policy change needs a separate narrow human review; do not rerun unchanged or disable this guard automatically. Any new request uses normal host permissions.`;
 }

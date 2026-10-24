@@ -107,12 +107,12 @@ class Element {
 async function dashboard() {
   const html = await loadDashboardHtml(), script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
   const messages = [], listeners = new Map(), timers = new Map(), elements = new Map(); let nextTimer = 0, now = 0;
-  const views = ['activity', 'files', 'changes', 'replay', 'access', 'preview'];
-  for (const id of ['connection', 'refresh', 'watch', 'notice', ...views, ...views.map(v=>v+'-result'), 'preview-source', 'preview-format', 'preview-render', 'preview-clear']) { const element = new Element(); element.id = id; elements.set('#' + id, element); }
+  const views = ['activity', 'files', 'changes', 'replay', 'access', 'preview', 'impact'];
+  for (const id of ['connection', 'refresh', 'watch', 'notice', ...views, ...views.map(v=>v+'-result'), 'preview-source', 'preview-format', 'preview-render', 'preview-clear', 'impact-source', 'impact-assess', 'impact-clear']) { const element = new Element(); element.id = id; elements.set('#' + id, element); }
   const buttons = views.map(view => { const element = new Element('button'); element.dataset.view = view; return element; });
   const parent = { postMessage: message => messages.push(message) };
   runInNewContext(script, {
-    parent, document: { querySelector: selector => elements.get(selector), querySelectorAll: selector => selector === 'nav button' ? buttons : views.map(id => elements.get('#' + id)), createElement: tag => new Element(tag), createElementNS: (_namespace, tag) => new Element(tag), documentElement: { style: { setProperty() {} } } },
+    parent, TextEncoder, document: { querySelector: selector => elements.get(selector), querySelectorAll: selector => selector === 'nav button' ? buttons : views.map(id => elements.get('#' + id)), createElement: tag => new Element(tag), createElementNS: (_namespace, tag) => new Element(tag), documentElement: { style: { setProperty() {} } } },
     addEventListener: (name, callback) => listeners.set(name, callback), Date: { now: () => now },
     setTimeout: (callback, delay) => { const id = ++nextTimer; timers.set(id, { callback, delay }); return id; }, clearTimeout: id => timers.delete(id),
   }, { timeout: 1000 });

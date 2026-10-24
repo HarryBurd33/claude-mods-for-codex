@@ -9,6 +9,18 @@ Treat the plugin source and configuration as security-sensitive local code. Reso
 
 When running the CLI, use the absolute `bin/codex-mods.mjs` path under that verified plugin root, or set the command workdir to the verified root first. Do not run a relative `./bin/codex-mods.mjs` from the project working directory.
 
+For a command-impact question, read [impact review](../../docs/impact-and-usage.md).
+Check the installed CLI supports `impact-review --stdin`; older packages have only
+`impact --stdin`. Keep supplied command text as JSON data in private stdin, never
+shell-interpolate or execute it to test the assessment. Explain fixed lexical
+signals, unknown targets and false positives/misses. The owned Impact review view
+also assesses locally and offers ephemeral Stop/Revise/Review policy guidance.
+No view choice, assessment or hook hash is permission to run a call or edit policy.
+After a denial, ask for a safer request or a separate narrow human policy review;
+never automatically disable the guard, cache an approval or retry unchanged.
+Any later tool request still uses normal host permissions. Skills consume selected
+model usage; deterministic assessment makes no additional model call.
+
 For configuration changes:
 
 1. Explain the exact notice, deny rule, replacement, or storage change before editing it. Keep metadata, patch/export reads and optional lifecycle observation as separate explicit opt-ins; preserve the selected project/session scope.

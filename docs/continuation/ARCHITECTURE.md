@@ -1,5 +1,15 @@
 # Extension architecture and security contracts
 
+## Source29 follow-up — current — 2026-10-24
+
+[DEV29-REVIEW](DEV29-REVIEW.md) records local impact assessment/explicit guidance,
+no execution/approval/policy edit and the existing deny/review alternative. Local
+235pass/0fail/111Windows skips; native29/package/CI pending. Installed28/native28,
+logging scope, human trust, exports and Windows guards stay unchanged. No new guard
+selection/model run. Next Medium routine packaging/review preparation. All93 gaps
+remain accounted for; earlier next-High impact directions are historical.
+
+
 ## Native28 follow-up — current — 2026-10-24
 
 [NATIVE-DEV28](NATIVE-DEV28.md) records actual loaded authored counter/tool/table:

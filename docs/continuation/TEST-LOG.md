@@ -2294,3 +2294,31 @@ exports unchanged, three hooks trusted, optional observers off, no extra model r
 Earlier28 native-pending wording is historical. Full93 product remains incomplete.
 Next **GPT-6.1 Sol High** for [production impact decision flow](IMPACT-NEXT.md);
 stop before consequential source/security changes. No restart/trust action now.
+
+## Source29 High observed verification — 2026-10-24
+
+Initial existing impact/rendering11pass. Expanded focused36total35pass/1fail:
+simulated renderer used host-realm validator on VM-realm object, correctly rejected
+prototype. Test now crosses explicit JSON data boundary, no production relaxation;
+focused36pass/0fail. Full first346:224pass/11fail/111Windows skips; all11failures
+were existing simulated-dashboard fixtures missing new controls. Added accurate
+Impact elements/TextEncoder to fixture, no runtime null-check/guard workaround.
+Expanded transport/UI25pass. Final full346:235pass/0fail/111Windows-only skips,
+about7s. Validate3mods/replay4legacy fixtures passed. Actual source CLI synthetic
+quoted-print input returned signals-found/not-executed and omitted marker text.
+
+New seven tests cover strict bounds/UTF8, redaction/false positives/misses, CLI
+malformed/options/extra/bounds/no output, all3choices, editing/Clear/disposal/stale
+controls, actual bundled script with disconnected host and teardown/no tool calls,
+unchanged repeated guard denial and replacement in either registration order,
+real Node CLI/hook subprocess matched/control/missing-config/malformed behavior.
+All commands inside fixtures remain data; only fixed Node modules executed. Invalid
+JSON exits1 with no response, documented as possible host fail-open, not denial.
+No new pending decision/process so cancellation/deadline/auto-review are not a new
+approval interface. Existing hold tests remain separate. Ordinary permissions
+recheck relies on unchanged released replacement contract, no new native claim.
+
+Skill quick_validate unavailable: system Python lacks PyYAML, same known blocker;
+no repair/install or validator pass. Frontmatter/reference/CLI manually checked.
+No independent semantic evaluation. Source tests are not installed/native29 UI,
+keyboard, accessibility, end-to-end impact guard or Windows host certification.

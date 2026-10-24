@@ -1,38 +1,61 @@
-# Conservative impact review and passive usage
+# Command impact review and passive usage
 
-Development source0.2.0-dev.4. No component below launches a model, executes the
-assessed command, discovers private sessions or sends a network request. Skills
-and ordinary chat/tool use still consume the selected model's usage.
+Source0.2.0-dev.29. Installed28 remains unchanged until reviewed update. No assessed
+command is executed. No extra model run, network request, transcript lookup, policy
+write or production logging occurs in this workflow. Chat/skills consume usage.
 
-## blast-radius equivalent: explanation plus denial
+## Review locally, then choose a separate next step
 
-Review examples/config/blast-radius-opt-in.json before enabling any category.
-It is disabled by default. The original fixed lexical classifier recognizes six
-categories: deletion, Git history/working-file changes, Git clean, permissions,
-remote writes/transfers and package operations that may execute install scripts.
-Categories are explicit, known and unique; no dynamic regex/module/script fields.
+The owned **Impact review** view accepts up to4,096 UTF-16 characters. Press
+**Assess locally** to see fixed lexical impact signals and uncertainty. Choose
+**Stop here**, **Revise request**, or **Review policy separately** for guidance.
+The choice stays in the panel; it sends no prompt/tool request, approves nothing,
+and does not cancel a running call. Editing the command clears the assessment and
+choice. Clear/host teardown clears source/results and invalidates old controls.
+No persistent storage or new service/path/export/capture grant. The host controls
+its webview; avoid credentials. The field starts empty. This is an owned component
+inside the official host after installation, not native approval chrome.
 
-Only canonical Bash PreToolUse command strings are covered. Matching calls receive
-a bounded denial explaining likely classes of impact. Commands, target arguments,
-secrets, file counts and inferred paths are not echoed or stored. The classifier
-does not parse shell syntax, expand paths, inspect a filesystem or claim semantic
-coverage. Help/dry-run/quoted text may be false positives; aliases, wrappers,
-intervening flags and obfuscation may be missed. No match does not mean safe.
-Enabled guards recheck a proposed exact command replacement before it is emitted.
-Denials never approve a call or weaken normal host permissions.
+For an immediate local equivalent, use the verified absolute plugin CLI:
+`node ABSOLUTE_PLUGIN/bin/codex-mods.mjs impact-review --stdin` with exactly a
+JSON object containing a command string. Supply it as private stdin data, never
+shell-interpolate the command or execute it to test classification. JSON input
+is bounded32KiB and the command4,096characters. The result omits command/targets
+and prints all matching explanations plus next-step guidance. No user decision is
+stored or inferred. CLI stdin/shell history have their own privacy. Existing
+`impact --stdin` retains its assessment-only response and prior1MiB limit.
+These are local CLI commands, not immediate native slash callbacks. Management
+skill routes the installed feature and consumes the selected model's usage.
 
-For immediate local assessment, send exactly a JSON object with a command field
-to `node bin/codex-mods.mjs impact --stdin`. A saved **synthetic** JSON file can
-be redirected to stdin; the command inside it is data and is never executed.
-The result is assessment only, not approval or complete policy enforcement.
+## Denial and retry boundary
 
-This is a **deny-and-review approximation**, not a native pending confirmation.
-The separate MCP human-hold proof timed out despite a reported form answer, and
-could fail open before connection. It is not a production gate. A denial requires
-an explicit new decision: choose a safer operation, or review a narrow policy
-decision and retry through normal permissions. No silent allow, automatic rule
-disabling, cached approval, prompt rewrite or panel approval button is provided.
-Native hook infrastructure itself can fail open; this guard is not a sandbox.
+The disabled-by-default `examples/config/blast-radius-opt-in.json` selects six
+fixed lexical categories: deletion, Git history/working files, Git clean,
+permissions, remote writes/transfers and package operations. Choose categories
+explicitly. Canonical Bash PreToolUse only; no dynamic code/regex or filesystem
+scan/shell parsing, path expansion, target/file-count or safe-command inference.
+Quoted documentation/help/dry-run may match; wrappers/aliases/flags may be missed.
+No matches does not mean safe. Even a harmless print containing an example may
+match: assess it as data; never use destructive demonstrations.
+
+An enabled guard denies matching original/revised commands with a bounded first
+impact explanation and next-step guidance. It returns no allow/ask/approval token,
+command echo or updated permissions. A local choice does not override that denial.
+Stop, describe a safer operation in chat, or explicitly request a separate narrow
+human configuration review. Never rerun unchanged or automatically disable the
+guard. Any subsequent tool request uses normal host permissions. Guard selection
+applies to covered calls wherever that installed hook runs; logging scope does not
+scope the guard. A new guard selection requires separate exact review/consent.
+
+This is a **deny-and-review/retry approximation**. Current official documentation
+still excludes PreToolUse ask; PermissionRequest runs only for calls already needing
+host approval. Callback failure/missing service is advisory. See [official hooks](https://learn.chatgpt.com/docs/hooks),
+retrieved2026-10-24. Separate removed hold0.0.4 exercised confirmed response paths
+but remains unsuitable as production approval authority: disconnected fail-open
+and response provenance limits. Do not reinstall it or promote its form to a
+sandbox/security boundary. Invalid-envelope/process-timeout/disconnected failure
+is not guaranteed denial. The local view works without a host service connection
+but does not change the safety of a separate tool call.
 
 ## token-weather/cache-tax equivalent: selected reported counters
 

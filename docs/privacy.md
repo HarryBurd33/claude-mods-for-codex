@@ -1,11 +1,11 @@
 # Privacy
 
-Current source28: [component authoring](component-authoring.md) provides disabled
-private observer/status bundles and strict offline validate/replay/plans. Independent
-componentObserverEvents does not enable ordinary/dormant legacy logging. New
-bounded inline authored counters use only existing selected metadata; no extra
-paths/capture. [Review/tests](continuation/DEV28-REVIEW.md). Source28 not installed;
-reviewed27/logging/trust unchanged. Next Medium CI/package/native preparation.
+Current2026-10-24: source29 adds local impact assessment/ephemeral guidance;
+[DEV29-REVIEW](continuation/DEV29-REVIEW.md) separates source tests and pending
+CI/package/native29 acceptance. Installed28/native counter checks are recorded in
+[NATIVE-DEV28](continuation/NATIVE-DEV28.md). Existing logging scope/exports/trust
+stay unchanged; no guard opt-in/model run granted. Next Medium package/review
+preparation, High before consequential changes. Earlier dated notes are historical.
 
 
 Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)

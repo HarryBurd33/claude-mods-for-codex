@@ -1,14 +1,21 @@
 import { readBoundedFile } from './io.mjs';
 import { fileURLToPath } from 'node:url';
 
-// Bundle two fixed trusted package assets into a single offline resource. Never
-// resolve asset paths from runtime settings, project contents or tool arguments.
+// Bundle only fixed trusted package assets; no settings/project/argument paths.
 export async function loadDashboardHtml() {
-  const [html, rendering] = await Promise.all([
-    readBoundedFile(fileURLToPath(new URL('../ui/dashboard.html', import.meta.url)), 128 * 1024),
-    readBoundedFile(fileURLToPath(new URL('../ui/rendering.js', import.meta.url)), 64 * 1024),
+  const asset = (path, limit) => readBoundedFile(fileURLToPath(new URL(path, import.meta.url)), limit);
+  const [html, rendering, impact, review, impactUi] = await Promise.all([
+    asset('../ui/dashboard.html', 128 * 1024), asset('../ui/rendering.js', 64 * 1024),
+    asset('./impact.mjs', 16 * 1024), asset('./impact-review.mjs', 16 * 1024),
+    asset('../ui/impact-review.js', 16 * 1024),
   ]);
+  // These exact installed modules are also used by the CLI. Strip their static
+  // module declarations for the single offline script, never execute user code.
+  const importLine = "import { assessCommandImpact } from './impact.mjs';";
+  if (review.split(importLine).length !== 2) throw Error('Invalid packaged UI assets');
+  const local = [impact, review.replace(importLine, ''), impactUi].join('\n').replace(/^export (?=(?:const|function) )/gm, '');
   const marker = '/* LOCAL_RENDERING */';
-  if (html.split(marker).length !== 2 || /<\/script/i.test(rendering)) throw Error('Invalid packaged UI assets');
-  return html.replace(marker, () => rendering);
+  if (html.split(marker).length !== 2 || /<\/script/i.test(rendering + local)
+    || /(?:^|\n)\s*(?:import|export)\s/.test(local)) throw Error('Invalid packaged UI assets');
+  return html.replace(marker, () => rendering + '\n' + local);
 }
