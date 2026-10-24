@@ -8,7 +8,10 @@ product incomplete, all Windows gates closed. Proof-only draft descriptor assess
 is scoped to the exact OS-known ProgramFilesX64 directory, never executable/private-
 data admission. No global Installer trust/ACL repair/image read/Git launch. Original
 ProgramPins/production Trusted/state20 unchanged. Local186pass/0fail/89Windows-only
-skips275total; validate3/replay4. Windows CI candidate pending. See [DEV21 review](docs/continuation/DEV21-REVIEW.md).
+skips275total; validate3/replay4. FirstCI40071218873 passed5jobs but both Windows lanes failed a new fixture sentinel
+read/cleanup after inheritance replacement. SDK/18descriptor cases passed. Own
+sentinel now explicitly private before parent mutation; no policy change. Corrected
+candidate CI pending. Failure retained in DEV21-REVIEW. See [DEV21 review](docs/continuation/DEV21-REVIEW.md).
 Earlier source/package/failure records remain version-specific historical evidence.
 
 

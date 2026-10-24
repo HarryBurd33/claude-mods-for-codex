@@ -263,6 +263,9 @@ test('Windows code-ancestor assessment does not accept private roots or change p
   const {data,exe}=await setup(), root=join(data,'private policy boundary');
   await windowsStorageRequest('prepare-directory',root);
   const marker=join(root,'synthetic.txt');await writeFile(marker,'unchanged',{mode:0o600});
+  // This test replaces the parent's inheriting ACL. Keep the own sentinel's
+  // grants explicit/protected so Windows propagation cannot strip them.
+  await fixtureAcl(marker,'private');
   await fixtureAcl(root,'installer-control');
   try {
     assert.equal(await run(exe,['run','code-ancestor-case',data,'installer']),'MatchesDraftRule');

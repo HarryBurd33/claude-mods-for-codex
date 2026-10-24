@@ -111,3 +111,30 @@ can be removed; installed dev10 selective supported rollback remains separate. N
 cache/trust hash edits, shared-config restore, live-lock removal or logging expansion.
 After actual CI verification checkpoint/upload/readback, stop for human Sol Medium
 for source21 packaging. Further gated security decisions require High.
+
+## First CI candidate and fixture correction (preserved failure)
+
+Sourceb16a7495656c0968103605cd623121f624c18494,
+tree72998f1d8f2619dac4eefa5cce73ea1c00617bb0,
+[CI40071218873](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40071218873):
+5jobs passed; both Windows OS lanes failed. Actual decoded logs120804866914(Node24)
+and120804866990(Node22) read. Each storage20pass; proof report68pass/2fail/70total
+including after-hook cleanup error.18constructed cases and exact known-folder SDK/
+legacy pin-refusal case passed. The private-root scope/API rejection assertions
+were reached, then the own sentinel read failed EPERM; its teardown unlink also
+failed. No raw host paths/ACLs published in these records.
+
+The new sentinel inherited from its parent; fixtureAcl replaces that parent's
+inheriting descriptor with non-inheriting rules. Read/delete refusal is consistent
+with propagated removal of inherited grants. The fixture now explicitly applies
+its existing protected private file ACL BEFORE parent replacement. No assessment/
+production policy/assertion/budget changed; no system ACL repair. Child content
+assertion and complete teardown must still pass. This is an isolated own-fixture
+setup correction, not permission repair to the installed Git/system directory.
+
+[Microsoft SetSecurityInfo](https://learn.microsoft.com/en-us/windows/win32/api/aclapi/nf-aclapi-setsecurityinfo),
+retrieved2026-10-24, documents propagation of inheritable ACE changes to existing
+children. We did not dump the old child descriptor, so propagation is the supported
+mechanism/inference rather than a retrospective raw-ACL observation. Corrected
+candidate verification pending; preserve the failed run even if later CI passes.
+No manual retry of40071218873, no hidden failure erasure or weakened assertion.

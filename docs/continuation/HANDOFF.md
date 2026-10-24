@@ -18,3 +18,16 @@ human GPT-6.1 Sol Medium to package source21. Further gated security requires Hi
 No native/model/API run/install/trust/ACL repair. Windows11 unavailable per latest
 reply; do not repeat availability question. No background/delegated model-switch
 bypass; original failure/precise old delay uncertainty preserved.
+
+## First candidate failed — correction pending
+
+b16a749/CI40071218873 passed5jobs; both Windows69case suites reported68pass/
+2fail70including teardown error. Actual logs120804866914/120804866990 read:
+18descriptor/SDKscope+legacyrefusal groups passed; private-root sentinel readEPERM
+and unlinkEPERM after parent fixture inheritance replacement. Sentinel now gets
+explicit protected private ACL first, existing fixtureAcl(marker,private), no
+production/assessment/permission/assertion/budget change. Corrected candidate must
+be uploaded/verified before model stop. Preserve first failure. SDKmatch notcode
+trust; no imagebytes or globalInstallerallowlist. See DEV21-REVIEW for source and
+primary inheritance documentation; old raw child ACL not dumped, precise removal
+inferred from fixture semantics. Windows11 availability unchanged.
