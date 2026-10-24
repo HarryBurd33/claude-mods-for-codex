@@ -123,3 +123,26 @@ system-tool repair, global Installer authority or candidate Git execution.
 After actual CI review and safe checkpoint upload/readback, stop for human Sol
 Medium for packaging when only routine work remains. Further execution/loader/
 private-plan/writer activation stays High. Do not call this the completed product.
+
+## First actual OS result and next refusal boundary
+
+Source7d8c3f532ce324ff7d2554e9b8411b8c77d9cba2,
+[CI40120193894](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40120193894):
+all seven jobs concluded success. Actual Windows logs120949871587(Node22) and
+120949871626(Node24) each25 storage/observer/lock checks plus81 process/security
+proofs passed, zero failures/skips. All six new cases ran; synthetic positive
+composition worked without changing original policies.
+
+Both real fixed Git candidates instead returned inventory-read-refused|CodeDirectory,
+dataRead:false/sampleAccepted:false/executionAuthority:false. No actual image hash,
+imports, version or loader result was obtained. The exact child directory and
+refusing descriptor predicate were not exposed by that frame. Do not call these
+diagnostic attempts successful inventory or relax the child policy to force reads.
+
+The new sample-capture wrapper now optionally emits a CLOSED repeated metadata
+observation after a refusal, while the same object handle is still retained.
+It reuses the original source19 ProbeAccessDetail, with code-root-relative segment
+ordinal and fixed reason enum only. This is a NEW sample, not an atomic trace of
+the original policy check and never authority. Readiness remains refused and no
+image content is read. No path/ACL/SID/environment value or policy change.
+Actual results for the tightened positive controls and explanation remain pending.

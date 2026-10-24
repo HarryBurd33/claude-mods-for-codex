@@ -208,10 +208,16 @@ async function installedImageRead(exe,data,target,codeRoot,project,{known=false,
     const exited=await closed;
     assert.equal(timedOut,false);assert.equal(errors,0);
     if(terminate)assert.notEqual(exited.signal,null);else assert.equal(exited.code,0);
-    const frames=output.trim().split(/\r?\n/);
+    let frames=output.trim().split(/\r?\n/);let repeatObservation;
+    if(frames.length===2&&frames[1].startsWith('inventory-read-repeat|')) {
+      assert.match(frames[0],/^inventory-read-refused\|(CodeDirectory|Image)$/);
+      const m=/^inventory-read-repeat\|(0|[1-9][0-9]?)\|(DescriptorPolicy|OwnerPolicy|AcePolicy|ForeignInstallerGrant|ForeignMutationGrant|AccessUnclassified)$/.exec(frames[1]);
+      assert.ok(m,'closed repeated metadata observation');assert.ok(Number(m[1])<=32);
+      repeatObservation={segment:Number(m[1]),reason:m[2],authority:false,atomicCause:false};frames=frames.slice(0,1);
+    }
     const accepted=frames[1]==='inventory-read-unchanged'&&frames.at(-1)==='inventory-read-released';
     // Never return content-derived results after changed/refused/cancelled samples.
-    return {frames,dataRead,sampleAccepted:accepted&&dataRead,...(accepted&&dataRead?{sample}:{}),executionAuthority:false};
+    return {frames,dataRead,sampleAccepted:accepted&&dataRead,...(accepted&&dataRead?{sample}:{}),...(repeatObservation?{repeatObservation}:{}),executionAuthority:false};
   } finally {
     clearTimeout(timer);if(p.exitCode===null&&p.signalCode===null)p.kill();await closed;
   }

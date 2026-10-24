@@ -23,7 +23,15 @@ namespace CodexMods {
     CodeAccess(h); // ORIGINAL strict code policy on every child and image.
     var sd=Descriptor(h);var bytes=new byte[sd.BinaryLength];sd.GetBinaryForm(bytes,0);return bytes;
    }
-   public InstalledImageRead(string target,string codeRoot,string anchor,string selectedProject,ref ImageReadPhase phase) {
+   static byte[] CaptureSample(SafeFileHandle h,int segment,ref string observation) {
+    try {return Sample(h);}
+    catch(IOException) {
+     // NEW descriptor observation after refusal, not an atomic cause or authority.
+     observation="inventory-read-repeat|"+segment.ToString(System.Globalization.CultureInfo.InvariantCulture)+"|"+ProbeAccessDetail(h,true);
+     throw;
+    }
+   }
+   public InstalledImageRead(string target,string codeRoot,string anchor,string selectedProject,ref ImageReadPhase phase,ref string observation) {
     try {
      phase=ImageReadPhase.Project;
      project=new Pins(Path.Combine(selectedProject,".unused-inventory-leaf"),false,false);
@@ -33,7 +41,7 @@ namespace CodexMods {
      phase=ImageReadPhase.CodeDirectory;
      while(true) {
       var h=CreateFileW(cursor,ReadControl|Attributes|1,3,IntPtr.Zero,3,Backup|OpenReparse,IntPtr.Zero);
-      handles.Add(h);var info=Info(h,cursor,true);var bytes=Sample(h);
+      handles.Add(h);var info=Info(h,cursor,true);var bytes=CaptureSample(h,paths.Count,ref observation);
       paths.Add(cursor);identities.Add(info);descriptors.Add(bytes);
       if(String.Equals(cursor,directory,StringComparison.OrdinalIgnoreCase))break;
       string remaining=directory.Substring(cursor.Length+1);int slash=remaining.IndexOf('\\');
@@ -44,7 +52,7 @@ namespace CodexMods {
      handles.Add(image);var imageInfo=Info(image,target,false);
      long size=((long)imageInfo.SizeHigh<<32)|imageInfo.SizeLow;
      if(size<64 || size>32*1024*1024)throw Refuse();
-     var imageBytes=Sample(image);
+     var imageBytes=CaptureSample(image,0,ref observation);
      paths.Add(target);identities.Add(imageInfo);descriptors.Add(imageBytes);
      Verify();
     } catch {Dispose();throw;}
@@ -80,7 +88,7 @@ namespace CodexMods {
     || target.Substring(3).Split('\\').Length>32)throw Refuse();
   }
   static void ImageReadHarness(string target,string codeRoot,string selectedProject,bool synthetic) {
-   ImageReadPhase phase=ImageReadPhase.Input;IDisposable parent=null;
+   ImageReadPhase phase=ImageReadPhase.Input;IDisposable parent=null;string observation=null;
    try {
     ImageReadInputs(target,codeRoot,selectedProject);
     string anchor=Path.GetDirectoryName(codeRoot);
@@ -97,7 +105,7 @@ namespace CodexMods {
       || !String.Equals(target,Path.Combine(codeRoot,"cmd","git.exe"),StringComparison.OrdinalIgnoreCase)
        && !String.Equals(target,Path.Combine(codeRoot,"mingw64","bin","git.exe"),StringComparison.OrdinalIgnoreCase))throw Refuse();
     }
-    using(var inventory=new InstalledImageRead(target,codeRoot,anchor,selectedProject,ref phase)) {
+    using(var inventory=new InstalledImageRead(target,codeRoot,anchor,selectedProject,ref phase,ref observation)) {
      Console.WriteLine("inventory-read-held");Console.Out.Flush();
      // Parent alone performs a bounded read/hash/static parse. Readiness is not
      // an execution permission, and it cannot be reused after this lifetime.
@@ -112,7 +120,7 @@ namespace CodexMods {
      catch(IOException){Console.WriteLine("inventory-read-disposed-refused");}
     }
     Console.WriteLine("inventory-read-released");
-   } catch(IOException){Console.WriteLine("inventory-read-refused|"+phase);}
+   } catch(IOException){Console.WriteLine("inventory-read-refused|"+phase);if(observation!=null)Console.WriteLine(observation);}
    finally {if(parent!=null)parent.Dispose();}
   }
   public static void KnownInstalledImageReadHarnessProof(string target,string codeRoot,string selectedProject) {
