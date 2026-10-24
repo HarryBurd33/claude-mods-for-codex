@@ -1,8 +1,8 @@
-# Source13 fixed metadata checkpoint — next Sol Medium
+# Source13 package checkpoint — next Sol High
 
 2026-10-23. **Full93-capability product incomplete.** Human resumed GPT-6.1 Sol
-High fromd7d3b84. Added/reviewed an original unintegrated fixed private named Git
-metadata lifetime proof. Source13 uninstalled; installed human-trusted10/logging
+High fromd7d3b84 added/reviewed an original unintegrated fixed private named Git
+metadata lifetime proof. Human then resumed Sol Medium from69e8bb3 for packaging. Source13 uninstalled; installed human-trusted10/logging
 scope and every production Windows gate unchanged. Windows11 host still unavailable
 per latest reply; do not repeat the availability question without a state change.
 
@@ -28,13 +28,14 @@ Original local4c33e0eafa578af3ac9c2b17f19a37c67e4d8587 retained on
 codex/dev13-metadata-local-checkpoint. Nonforce expected-parent upload/fetch/whole-
 tree equality verified. Final following notes-only checkpoint identity recorded
 after readback in reply/latest private handoff; proof/test/code match this CI source.
-**Source13 archive/public-clone/spaced extraction not yet checked.** Prior12 package
-history in PACKAGE-DEV12 does not certify13. No source13 install/trust step implied.
+**Source13 exact69e8bb3 archive/public-clone/spaced extraction verified.** See
+PACKAGE-DEV13. Final notes-only artifact identity is recorded after actual readback
+in reply/private handoff; no code/test change after tested source. No install implied.
 
 ## Read first
 
 Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, DEV13-REVIEW.md,
-DEV12-REVIEW.md, PACKAGE-DEV12.md, ../windows-storage.md,
+DEV12-REVIEW.md, PACKAGE-DEV13.md, PACKAGE-DEV12.md, ../windows-storage.md,
 ../windows-native-acceptance.md, ../native-acceptance.md,
 ../../proofs/windows-owned-process/README.md and latest ignored root HANDOFF.md.
 Private paths/raw logs/settings/backups/snapshots never uploaded. Earlier failures
@@ -106,42 +107,72 @@ supported owned marketplace pointer to retained immutable dev6 + plugin add, ver
 trust hashes or restore whole shared config. Data/settings separate; no live-lock
 removal. Machine paths/backups in ignored handoff only.
 
-## Exact next tasks — Medium
+## Completed Medium checks
 
-1. Verify source13 anonymous exact public clone/archive. Reuse safe package workflow:
-   separate empty npm configs/local cache, ignore-scripts/offline pack/no dependencies.
-   No links/traversal/special/set-ID/private paths/case collisions/root HANDOFF/
-   .local/cache/dependencies/root portable manifest; compare all bytes against exact
-   public tree. Record version/MIT/default-off grants/hash/counts. Spaced extraction
-   validate3/replay4/package-scaffolding checks. Prior12 archive not a13 result.
-2. Reconcile current docs/all93IDs. Preserve real Git/native gaps, conditional mapping
-   outcome and child-created-content/live-reader limits. No new execution/host claim
-   from package tests. Final docs-only archive rebuild/readback once after upload;
-   no redundant full-suite repeat solely for notes.
-3. Native kit is prepared; Windows11 unavailable. Read-only actual host inventory
-   first when available, no repeated availability request here. Paths/raw config
-   private, no credential/env dump/PATH Git/download/policy or sandbox setup/model run.
-4. **Stop for human GPT-6.1 Sol High before further gated implementation**: actual
-   Git/loader/ignore/source metadata/bridge/child-content cleanup/production/writer
-   changes or any new hard security defect. Preserve every refusal. Independent
-   synthetic High work may proceed at the next human switch if host remains absent.
+Exact anonymous public clone69e8bb3/tree3471e32, full170pass/0fail/48Windows-only
+skips218total. Reviewed157-file archive1033715unpacked/316972compressed bytes,
+SHA25611a5f0bdd3634c0cc9f3a6279106bc43051c34429556e40031291e62cb1ee41b.
+All bytes equal clone/checkpoint; hygiene/MIT/version/default-off storage pass.
+Spaced extraction validate3/replay4/package-scaffolding7pass/0fail/0skip.
+macOS14.6/Node24.22.0/npm11.19.1, no Windows proof compilation locally.
+NotesCI40058562429 all7job conclusions read as success; no new native count/branch
+claim from that run. Prior proof15e388e actual OS evidence remains separate.
+
+Fresh bounded read-only inventory3enabled/human-trusted/0errors/0model turns;
+installed10/cache149/settings hash preserved. Actual activity four records/same
+scope/revision, producer health unknown. No install/config/trust/cache/logging/
+model-run/gated-code change. All93IDs kept. Final docs-only archive rebuilt/read
+back once after upload, validate/replay its spaced extraction; no full-suite repeat
+solely for notes. See PACKAGE-DEV13; source13 stays uninstalled, no trust action.
+
+## Exact next tasks — human-selected High
+
+1. Read DEV13-REVIEW and preserve all actual lifetime limits. The named layout used
+   fixed synthetic bytes/readers, not Git. A live unowned reader retained bytes;
+   arbitrary child-created files are not owned by the delete-on-close protocol and
+   may remain. No recursive cleanup/adoption or secure-erasure promise.
+2. Choose a bounded next unresolved gate: executable/parent/dependency/loader trust,
+   actual Git sharing/write/temp/lock behavior, ignore-aware selection/repository
+   metadata provenance/freshness or same-helper capture/IPC composition. Existing
+  32KiB request/3MiB response does not transport32MiB index, and source12 read-set
+   bounds cannot capture it. Never put private bytes in arguments/environment/logs.
+3. Windows11 host remains unavailable per latest human reply. Do not repeat its
+   availability question until a state change or actual inventory is required.
+   Independent synthetic High work can proceed, with real Git/native acceptance
+   still unverified. Later target-host read-only kit inventory precedes executable/
+   dependency decisions; no guessed PATH/project Git, binary download, system repair,
+   policy override, sandbox setup, credential/env dump or model prompt as inventory.
+4. Keep every Windows settings/project/Git/restore before-IO refusal until its own
+   security/OS/native acceptance passes. Restore is a separate explicit writer with
+   conflict/identity/metadata/interruption/concurrency and ordinary host permissions.
+   Source12 mapping byte/mtime negative branch and8.3-specific witness remain
+   unverified; add targeted witnesses only to resolve a concrete integration question.
+5. Preserve installed10/human trust/data/project/scope/retention/export and unrelated
+   entries. No new paid model/API test, automatic trust/approval, broader logging,
+   optional observer/theme/client change, whole-project copy or major new client
+   direction authorized. Full93-product and native/accessibility/lifecycle/rollback
+   platform gaps stay explicit. Independent-project/MIT status preserved.
+6. Stop for Medium when another meaningful security/integration milestone leaves
+   routine packaging/docs/acceptance. Save/upload/verify first; no internal model
+   delegation/background continuation around the human-controlled stopping point.
 
 ## Exact next model and complete resume instruction
 
-**GPT-6.1 Sol, Medium** for exact-source packaging, record consistency and read-only
-acceptance preparation. This bounded High milestone is reviewed/OS-tested; remaining
-integration contracts still require High. Full93-product remains incomplete.
+**GPT-6.1 Sol, High** for remaining Windows security/integration contracts. Routine
+source13 packaging is complete. Source13 remains uninstalled; no human trust/restart
+step needed for these documentation-only records. Full product incomplete.
 
-> I switched to GPT-6.1 Sol, Medium. Continue from the verified source13 named
-> metadata checkpoint on codex/astra-groundwork. Read docs/continuation/{STATUS,
-> REQUIREMENTS,ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV13-REVIEW.md, DEV12-REVIEW.md,
-> PACKAGE-DEV12.md, docs/windows-storage.md, docs/windows-native-acceptance.md and
-> latest ignored root HANDOFF.md. Verify source13 package/public clone/spaced
-> extraction and documentation. Preserve installed human-trusted dev10 and logging
-> scope. Fixed reader only; real Git/native/unknown child-created content cleanup
-> remain gated, live readers may retain bytes, mapping mutation branch unverified.
-> Windows11 host unavailable; don't repeat the availability question. No extra
-> model/API run, trust automation, broader logging, optional observers, theme/client
-> change or new direction authorized. Keep all93requirements incomplete as applicable.
-> Stop for human Sol High before further gated Windows implementation, after saving/
-> uploading/verifying a durable checkpoint.
+> I switched to GPT-6.1 Sol, High. Continue from the verified source13 package
+> checkpoint on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
+> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV13-REVIEW.md, PACKAGE-DEV13.md,
+> docs/windows-storage.md, docs/windows-native-acceptance.md and latest ignored
+> root HANDOFF.md. Source13 package/public clone/spaced extraction passed; preserve
+> installed human-trusted dev10 and logging scope. Resume the next gated Windows
+> security proof/integration, retaining all production refusals until acceptance.
+> Fixed readers only; real Git/loader/ignore/source metadata/IPC/unknown child-content
+> cleanup/native/writer behavior remains gated. Live readers may retain bytes and
+> mapping byte/mtime branch is unverified. Windows11 unavailable; don't repeat its
+> availability question. No extra model/API run, trust automation, broader logging,
+> observer/theme/client change or new direction authorized. Keep all93requirements
+> incomplete as applicable; stop for Medium when sufficient after checkpoint/upload/
+> verification.

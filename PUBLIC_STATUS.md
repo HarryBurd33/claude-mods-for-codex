@@ -20,8 +20,9 @@ No actual Git/parser/loader/ignore/source-index capture or public operation. Unk
 child-created files can retain data; no recursive cleanup or secure-erasure claim.
 Actual Git sharing/write/temp/lock/loader, provenance, IPC/native integration and
 separate restore remain High gates. All Windows before-IO refusals preserved.
-Source13 package/public-clone/spaced extraction pending; next Sol Medium for those
-routine checks, human High before further gated implementation.
+Source13 exact69e8bb3 package/public-clone/spaced extraction passed:157files/
+all-byte checks, validate3/replay4/package-scaffolding7/7. Source13 uninstalled;
+next human Sol High before further gated implementation.
 
 Installed10 immutable149files/settings/scope/retention/export unchanged; prior
 native focus/render/keyboard-Clear and versioned dev6/4 hook/hold/sandbox evidence

@@ -22,8 +22,9 @@ production/native/writer integration remain High gates. See DEV13-REVIEW.
 Source15e388e CI40058125353 all7jobs passed; actual Windows20storage+28proof each,
 0fail/skip. Prior mapping branch still mapping-refused; byte/mtime negative branch
 unverified. Production compiles only PrivateStorage.cs, no operation/gate change.
-Source13 uninstalled; installed10/logging/human trust preserved. Next Medium for
-packaging, High before more gated security. All93product incomplete. Versioned
+Source13 uninstalled; installed10/logging/human trust preserved. Exact69e8bb3
+package/public-clone/spaced extraction passed; see PACKAGE-DEV13. Next human High
+before more gated security. All93product incomplete. Versioned
 foundations below are historical and superseded where current status differs.
 
 ## Current source12 explicit positive read set — 2026-10-23

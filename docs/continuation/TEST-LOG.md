@@ -1,5 +1,25 @@
 # Continuation verification log
 
+## Source13 Medium package verification — 2026-10-23
+
+Human resumed clean69e8bb3/tree3471e32 on Sol Medium. Exact anonymous public
+clone/full suite170pass/0fail/48Windows-only skips218total. Reviewed157-file archive
+1033715unpacked/316972compressed bytes, SHA256
+11a5f0bdd3634c0cc9f3a6279106bc43051c34429556e40031291e62cb1ee41b.
+All packaged bytes equal clone/checkpoint; no links/traversal/special/set-ID/private
+roots/case collisions/dependencies/root portable manifest. MIT/version13/default-
+off storage verified. Spaced extraction validate3/replay4/package-scaffolding7/7,
+0fail/0skip. macOS14.6/Node24.22.0/npm11.19.1; no Windows compilation/installation.
+NotesCI40058562429 all7job conclusions read as success, no new log-count/branch
+claim. Actual proof15e388e/CI40058125353 evidence remains separate.
+
+Fresh bounded no-model inventory3enabled/human-trusted/0errors; installed10/cache/
+settings unchanged. Activity4/same scope/revision. No logging/trust/config/model-run
+or gated-code change. All93IDs retained. Real Git/native/unknown child-content
+cleanup/live-reader limits persist; mapping mutation branch unverified. Next human
+Sol High before further gated implementation. See PACKAGE-DEV13.
+
+
 ## Verified High source13 named metadata proof — 2026-10-23
 
 Source[15e388e](https://github.com/HarryBurd33/claude-mods-for-codex/commit/15e388e3403f7d73a8f6bf2b41df66c6dd7bfa3c),

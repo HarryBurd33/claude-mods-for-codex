@@ -39,12 +39,31 @@ actual Git semantics/child writes, production integration and separate restore/n
 permissions still require High and their OS/host tests. All Windows settings/project/
 Git/restore before-IO refusals remain. Windows11 native acceptance incomplete.
 
+## Source13 Medium package verification — 2026-10-23
+
+Human resumed clean69e8bb3/tree3471e32 on Sol Medium. Exact anonymous public
+clone/full suite170pass/0fail/48Windows-only skips218total. Reviewed157-file archive
+1033715unpacked/316972compressed bytes, SHA256
+11a5f0bdd3634c0cc9f3a6279106bc43051c34429556e40031291e62cb1ee41b.
+All packaged bytes equal clone/checkpoint; no links/traversal/special/set-ID/private
+roots/case collisions/dependencies/root portable manifest. MIT/version13/default-
+off storage verified. Spaced extraction validate3/replay4/package-scaffolding7/7,
+0fail/0skip. macOS14.6/Node24.22.0/npm11.19.1; no Windows compilation/installation.
+NotesCI40058562429 all7job conclusions read as success, no new log-count/branch
+claim. Actual proof15e388e/CI40058125353 evidence remains separate.
+
+Fresh bounded no-model inventory3enabled/human-trusted/0errors; installed10/cache/
+settings unchanged. Activity4/same scope/revision. No logging/trust/config/model-run
+or gated-code change. All93IDs retained. Real Git/native/unknown child-content
+cleanup/live-reader limits persist; mapping mutation branch unverified. Next human
+Sol High before further gated implementation. See PACKAGE-DEV13.
+
 ## Next setting and preserved installation
 
-**GPT-6.1 Sol, Medium** for exact-source public-clone/archive/spaced-path checks and
-routine documentation/acceptance preparation. Source13 packaging not yet checked;
-prior12 package does not certify13. No install/retrust/restart implied for this proof.
-High before any gated implementation or new hard security issue.
+Routine source13 public-clone/archive/spaced-path checks complete. Next setting
+**GPT-6.1 Sol, High** before remaining real Git/loader/ignore/capture/IPC/child-content/
+production/writer implementation. Source13 stays uninstalled; no retrust/restart
+needed for this notes-only milestone. Windows11 unavailable, no repeated question.
 
 Installed10 immutable149files/settings/data/project/scope/retention/export and human
 trust remain. Latest actual activity four records/same project revision, not producer

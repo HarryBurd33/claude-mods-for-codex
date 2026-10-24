@@ -7,8 +7,9 @@ passed, actual Windows20storage+28proof each. Fixed compatible reader only; real
 Git/loader/ignore/source capture/child-created content cleanup/native integration
 remain gated. Live unowned-reader retention observed, no recursive cleanup. Prior
 mapping-refused outcome persists; negative byte/mtime branch unverified. Windows11
-unavailable. See DEV13-REVIEW/STATUS/TEST-LOG. Package13 checks pending; next Medium
-for routine packaging, High before gated implementation. Mechanism is not completion.
+unavailable. See DEV13-REVIEW/STATUS/TEST-LOG; exact69e8bb3 package/public clone/
+spaced extraction passed in PACKAGE-DEV13. Next human High before further gated
+implementation. Mechanism is not completion.
 
 ## Reading the ledger
 

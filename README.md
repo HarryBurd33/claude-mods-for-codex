@@ -17,8 +17,10 @@ Source15e388e [CI40058125353](https://github.com/HarryBurd33/claude-mods-for-cod
 all7jobs passed; both Windows logs read20storage+28proof each/0fail/0skip. Local
 170pass/0fail/48Windows-only skips218total; validate3/replay4. Server CI is not
 native Codex/Windows11/WSL acceptance. Both earlier mapping tests still refused
-before acceptance; altered-byte/mtime branch remains unverified. Source13 public
-clone/archive/spaced extraction is next. Windows11 host remains unavailable.
+before acceptance; altered-byte/mtime branch remains unverified. Source13
+[package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV13.md) passed:
+157files/all-byte checks, validate3/replay4/package-scaffolding7/7. Source13 remains
+uninstalled. Windows11 host remains unavailable.
 
 Compatible live readers can retain bytes; unknown child-created files would be
 preserved, not recursively deleted. Empty private hierarchy may remain after owner
@@ -38,7 +40,7 @@ Earlier native dev6 six views/preview/files/diffs/usage/rewrites/deny/removal-re
 and dev4 sandbox-negative/removed hold evidence stay version-specific. Hold is not
 a production approval gate; human provenance/host fail-open limits remain. Full
 accessibility/lifecycle/loaded disable/older rollback/Linux/Windows/WSL incomplete.
-Next Medium for routine package checks; human High before more gated work. See
+Routine package checks complete; next human Sol High before more gated work. See
 [handoff](docs/continuation/HANDOFF.md), [ledger](docs/continuation/REQUIREMENTS.md),
 [test log](docs/continuation/TEST-LOG.md), [Windows boundary](docs/windows-storage.md)
 and [native kit](docs/windows-native-acceptance.md).
