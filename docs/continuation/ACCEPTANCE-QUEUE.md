@@ -1,10 +1,9 @@
 # Capability acceptance queue — macOS first — 2026-10-24
 
-This is the93-row ledger's remaining-gap view, not an independently verified
-completion score. Some checks already have dated evidence for specific snapshots;
-others are incomplete or inapplicable to macOS. Next Sol Medium must audit each
-row against source/version/host evidence and record closure before giving a delivery
-estimate. Windows remains in scope for the later phase. See DELIVERY-PLAN.md.
+The [macOS audit](MACOS-ACCEPTANCE.md) now individually classifies all93 rows
+against dated source/test/host evidence. Use it and [MACOS-BATCH](MACOS-BATCH.md)
+for the next work. This older table is only the ledger's limit/gap projection;
+it is not a closure score. Windows remains in scope for the later phase.
 
 | Capability | Target recorded in ledger | Remaining gap / limit requiring audit |
 | --- | --- | --- |

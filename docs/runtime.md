@@ -1,9 +1,12 @@
 # Development dashboard and immediate local commands
 
-Current source24 packaging note2026-10-24: installed human-trusted dev10 remains
-unchanged; source24 is uninstalled. Native results below describe the recorded
-versions when tested, not fresh acceptance of source24. Current state is in
-[STATUS](continuation/STATUS.md) and [HANDOFF](continuation/HANDOFF.md).
+Current source25/macOS acceptance note2026-10-24: human-trusted dev10 is unchanged
+and was rechecked through the actual MCP tools/owned panel. Source25 is uninstalled;
+its changed state-lock implementation does not inherit native dev10 acceptance.
+The installed desktop app bundle is now26.1021.22027/build21747; the exact running
+panel host version was not independently attested. Native history below belongs
+to each recorded snapshot/client. See [macOS audit](continuation/MACOS-ACCEPTANCE.md),
+[batch results](continuation/MACOS-BATCH.md) and [status](continuation/STATUS.md).
 
 Native acceptance note2026-10-23: new dashboard views and fixed production
 rewrite/deny/control were verified after restart. Activity scope must align with
@@ -149,7 +152,7 @@ Preview source reached Render locally and Enter rendered the diagram; permitted
 MCP Apps inspection confirmed the resulting3nodes/2edges and complete tables.
 This establishes that one keyboard path, not full focus/screen-reader/lifecycle
 accessibility. The human also confirmed narrower/wider preview usability; exact widths were not
-measured. Close/reopen and close-pending remain separate acceptance checks. Synthetic bridge cancellation/teardown tests remain distinct
+measured. Human close/reopen preserved the same scope/four records in the earlier dev10 continuation; backend close-pending remains a separate acceptance check. Synthetic bridge cancellation/teardown tests remain distinct
 from actual host lifecycle behavior. No button approves a native tool call.
 
 Token/context/cache/billing information is unavailable from the hook feed.

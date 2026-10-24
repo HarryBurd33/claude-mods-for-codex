@@ -1,15 +1,23 @@
-# Current status — source25 read inventory — 2026-10-24
+# Current status — macOS acceptance audit / source25 — 2026-10-24
 
 Source **0.2.0-dev.25** is a development checkpoint on `codex/astra-groundwork`.
 The full [93-capability ledger](REQUIREMENTS.md) remains incomplete;
 the default branch retains the earlier experimental MVP.
 
-The current milestone is a proof-only installed-image read inventory. It retains
-the original strict-code profile and adds an explicitly named Installer inventory
-profile for fixed images beneath the fresh SDK-bound Program Files/Git location.
-Neither profile grants execution or private-data authority. No candidate Git is
-launched, and all production Windows settings/project/Git/restore gates stay closed.
-[Design, tests and observed results](DEV25-REVIEW.md).
+The human-prioritized macOS audit now individually classifies all93 capabilities
+in [MACOS-ACCEPTANCE](MACOS-ACCEPTANCE.md). A fresh bounded read-only native batch
+verified unchanged installed dev10 inventory/six views/selected project and usage/
+Format/JSON/Clear/flowchart/Watch deadline sampling, plus36focused offline passes.
+See [MACOS-BATCH](MACOS-BATCH.md) for exact observations and remaining gaps.
+Next **GPT-6.1 Sol High** is selected-scope retention preview/explicit cleanup,
+a consequential data-deletion workflow that is not yet exposed by the CLI.
+Windows remains in scope and deferred; no further Windows policy experiment now.
+
+Source25's isolated installed-image read inventory is still incomplete. Its
+mandatory real-image positive fails before bytes; post-refusal link count2 violates
+the original one-link contract. All production Windows gates remain closed;
+no candidate Git execution or image hash/import/version was obtained.
+[Windows design and preserved failures](DEV25-REVIEW.md).
 
 Installed human-trusted **dev10** and its logging scope remain unchanged. Source25
 is uninstalled. Earlier macOS native UI/hooks/preview observations do not certify

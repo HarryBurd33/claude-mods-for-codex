@@ -1,5 +1,23 @@
 # Extension architecture and security contracts
 
+## macOS acceptance / next retention boundary — 2026-10-24
+
+[MACOS-ACCEPTANCE](MACOS-ACCEPTANCE.md) audits all93 rows; [MACOS-BATCH](MACOS-BATCH.md)
+records the unchanged installed dev10 UI/tool/inventory evidence and next milestone.
+Human priority is macOS first, Windows later. Medium made documentation changes
+only; runtime/settings/cache/trust/logging unchanged. The installed app bundle is
+newer than earlier native evidence; exact running host version not independently
+attested. Native dev10 state evidence does not certify source25's lock change.
+
+The first consequential macOS gap is retention management. Existing library-only
+pruneMetadataState scans root scopes; a user-facing workflow must not infer
+root-wide deletion authority from selecting one project/session. High must review
+an exact selected-scope read-only preview and explicit fresh cleanup contract,
+private-path/age/lock/entry refusals, race/partial-failure behavior and tests before
+implementation. No automatic cleanup/retry/lock deletion, MCP writer or Windows
+gate activation is authorized by this plan. Any changed installation still needs
+supported update, human source/hook review and loaded-snapshot verification.
+
 ## Source25 read-inventory boundary — current
 
 The isolated InstalledImageRead composition has two explicitly named policies.

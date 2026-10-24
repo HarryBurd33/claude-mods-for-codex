@@ -1,20 +1,19 @@
 # Remaining native acceptance
 
-Current2026-10-23: after restart, the native source10 panel rendered the sample;
-its3px focus outline/3px offset was observed. The human confirmed clear keyboard
-focus through source→Render→Clear and Enter cleared; native inspection confirmed
-Clear focused and empty source/output. Three hooks remain enabled/human-trusted,
-zero inventory errors;149cache files match the reviewed fixture. Same four activity
-records/project scope/revision. No configuration, logging, trust or product-code
-changes. Full accessibility/platform/product completion remains unverified.
-Source20 remains uninstalled; exact public clone/archive/spaced extraction passed
-locally as recorded in continuation/PACKAGE-DEV20.md. No native/runtime change in
-this Medium stage. Earlier failure and controlled contention-class fix remain
-versioned in PACKAGE-DEV19/DEV20-REVIEW; exact old host delay cause remains unproved.
-No new model run, optional hook registration, logging expansion, theme/client change
-or trust mutation. Human-selected High remains required before gated Windows work.
-Earlier dev6 native evidence is version-specific; no event delivery is inferred
-from source10 trust inventory or a UI check.
+Current2026-10-24: [macOS audit](continuation/MACOS-ACCEPTANCE.md) covers all93
+requirements and [bounded batch](continuation/MACOS-BATCH.md) records fresh read-only
+dev10 inventory/six-view/Format/JSON/Clear/flowchart/Watch checks. Same149reviewed
+cache files/settings/selected scope/four records; no new trust/model run. Source25
+is uninstalled/package-unverified, and its real Windows image-read positive fails
+before bytes. No production Windows gate is changed. Human priority is macOS first,
+Windows later. Next High is selected-scope retention workflow, not Windows research.
+
+The installed desktop app bundle is now26.1021.22027/build21747. Actual panel says
+chatgpt; exact running host/bundled runtime not independently attested. Older native
+results below remain tied to their snapshots/client. Full keyboard/VoiceOver/zoom/
+contrast/backend-close/loaded-disable/older-rollback remain incomplete. The current
+Watch check observed it off at31.7s without new events; this is not native active-event
+delivery or precise deadline/backend cancellation proof.
 
 ## Small user-visible checks
 

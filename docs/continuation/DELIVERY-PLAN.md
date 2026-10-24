@@ -1,9 +1,14 @@
 # Delivery order and remaining acceptance — 2026-10-24
 
 The human selected **finish macOS feature acceptance first, then Windows**.
-Windows stays in scope and explicitly incomplete. The next stage is Sol Medium
-for an acceptance audit and bounded macOS verification, with High before a
-consequential runtime/security change. Do not start another Windows proof loop.
+Windows stays in scope and explicitly incomplete. The Medium acceptance audit and bounded unchanged-dev10 checks are recorded below.
+High is next before the selected-scope retention deletion workflow. Do not start another Windows proof loop.
+
+The next-stage audit is now recorded in [MACOS-ACCEPTANCE](MACOS-ACCEPTANCE.md): all93
+rows individually classified against evidence. [MACOS-BATCH](MACOS-BATCH.md) records
+a completed bounded unchanged-dev10 native batch and proposes a usable selected-
+scope retention milestone for High. That is the next implementation priority;
+no new Windows proof/package-version loop. No elapsed-time/percentage promise.
 
 ## What is usable, and what is unfinished
 
@@ -17,8 +22,7 @@ must be disclosed rather than counted as implemented exact equivalents.
 The [93-row ledger](REQUIREMENTS.md) accounts for the whole requested scope.
 [ACCEPTANCE-QUEUE](ACCEPTANCE-QUEUE.md) exposes each row's remaining check/gap in a
 shorter view. Mechanism status such as supported is NOT a completion count.
-The next audit must record per-target closure and evidence before estimating the
-remaining work. A test count or development version number cannot supply a
+The macOS audit now records narrow per-target closure and remaining gaps. A test count or development version number cannot supply a
 credible completion percentage or finish date.
 
 | Work package | Requirements | Recorded foundation | Remaining acceptance / next action |
@@ -35,22 +39,21 @@ credible completion percentage or finish date.
 | Windows and WSL follow-on | PL-04–05 | Actual NTFS/process/security OS proofs; source25 scoped read prototypes | Actual installed Git read remains refused: observed link count2 violates current one-link guard. Mandatory positive test fails in both lanes. Keep failure and guard visible; later High review required. Native Windows11 host unavailable; WSL separately unverified. |
 | Linux, governance and final report | PL-03, PL-06; GOV-01–07 | Linux/macOS Node CI, primary research, MIT/disclaimer and durable checkpoints | Native Linux acceptance remains separate. Recheck only relevant mutable sources, preserve all93 rows, and produce the requested capability/setup/update/removal/models/tests/commit report without calling the incomplete product finished. |
 
-## Next bounded macOS batch
+## Completed audit and next bounded macOS batch
 
-1. Audit the queue against current sources and dated native evidence. Assign each
-   macOS-applicable requirement: verified exact, verified disclosed approximation,
-   unsupported with evidence/alternative, incomplete, or awaiting user action.
-   Do not copy the mechanism-status column into a completion column.
-2. Read-only inspect the installed host/plugin/version/settings selection. Keep
-   private paths/raw logs local. Prepare one concrete macOS acceptance batch and
-   immutable snapshot if an update is needed, with exact expected observations.
-3. Continue already-authorized read-only/offline checks. Human trust/restart and
-   any additional separate model/API run must follow the existing review and bounded
-   usage rules; prepare the exact steps before requesting the required action.
-4. Publish the resulting closure table, remaining implementation tasks and a
-   conditional delivery estimate. Ask for High only when a concrete integration/
-   runtime/security change warrants it. Preserve the Windows failed test; do not
-   fix, hide or broaden its policy during the Medium macOS audit.
+Medium completed all93 row classifications and the unchanged dev10 native read-only
+checks in [MACOS-BATCH BatchA](MACOS-BATCH.md). The next High milestone is BatchB:
+selected-scope retention preview/explicit cleanup. The existing library-only prune
+API scans root scopes; it must not be exposed unchanged when one project/session
+was selected. This is a consequential deletion/security contract, so Medium stops
+before code. No production metadata deletion is authorized for that milestone.
+
+Afterward, native active-event/optional-trigger/failure/start, supported loaded
+lifecycle/older rollback, accessibility/theme/routing/current-context and broader
+component authoring remain. Several substantial batches and later native platform
+work remain; no reliable elapsed-time estimate follows from current evidence.
+Prepare exact human trust/restart/model-run steps only when needed for a concrete
+reviewed test. Do not broaden logging or resume Windows policy work on this switch.
 
 ## Current Windows checkpoint, explicitly incomplete
 

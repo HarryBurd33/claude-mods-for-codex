@@ -1,5 +1,50 @@
 # Continuation verification log
 
+## macOS Medium acceptance audit — 2026-10-24
+
+Started clean c5bd658; remote ref matched through independent connector readback.
+Human priority: macOS acceptance first, Windows later. No product code changed.
+[All93-row audit](MACOS-ACCEPTANCE.md) and [batch/action plan](MACOS-BATCH.md).
+
+- Native bounded read-only no-daemon inventory: three production hooks enabled/
+  human-trusted, zero errors, no model turn. Two default-sandbox invocations closed before
+  inventory and cleanup permission failed; the second was an unnecessary repeat
+  while writing notes. Between them, the reviewed elevated read-only helper
+  succeeded; that successful evidence remains retained. No failure is erased or hook
+  delivery inferred. No model turn/trust/config change.
+- Installed dev10 all149files byte-equal fixture; private settings hash/root/scope
+  unchanged. Source25 uninstalled. UI/skills/hooks/config/MCP source unchanged;
+  server-version/state/new budget differ from10, so native state is not inherited.
+- macOS14.6, CLI0.163.0, Node24.22.0. Installed desktop bundle26.1021.22027/build21747;
+  panel name chatgpt. Exact running host/bundled runtime not independently attested.
+- Actual dashboard/activity/usage tools and six native owned views: project/four
+  records/same revision; selected files and synthetic working/commit diffs; reported
+  selected-export counters, context/billing/cache unknown; accurate process/model
+  access labels. No new events/model/API run or selection change.
+- Native labeled Format select changed to JSON, img-like text rendered literally;
+  Clear emptied source, original flowchart restored/rendered3nodes/2edges plus
+  complete tables. Focused Render has3px outline/3px offset; aria-current follows
+  view. Synthetic locator clicks are not native keyboard or VoiceOver acceptance.
+- Watch checked; at31,737ms sample unchecked/Refresh enabled, project/fourrecords
+  unchanged. No native event generated and no exact deadline/backend-cancel claim.
+- node --test test/transport-ui.test.mjs test/rendering.test.mjs
+  test/dashboard.test.mjs test/scaffold.test.mjs test/state-lock-budget.test.mjs
+  test/state-observer-boundary.test.mjs:36pass/0fail/0skip. Node/simulated bridge,
+  not native execution. validate3mods, replay4fixtures passed; no command execution.
+
+Source25 mandatory Windows image positive remains failed, guard/old evidence
+unchanged; no new Windows experiment, package-only version bump, full-suite repeat,
+installation/cache/trust/settings/retention/export/observer/theme/client/model change.
+Private screenshot/logs/inventory remain ignored. Audit reconciles stale dev5/dev6
+pending wording rather than transferring old host evidence to source25.
+
+Next human **GPT-6.1 Sol High** for selected-scope retention CLI/API/security review
+and implementation, not deferred Windows. Native full accessibility/close-pending,
+active-event Watch, failure/optional hooks, loaded disable/older rollback/theme/
+routing/current-context/broader component authoring remain incomplete. Save/upload/
+full-tree/independent-ref verification required before switch stop. Final identity
+is reported after readback; no all-green CI or full-product completion claim.
+
 ## Source25 High checkpoint — incomplete Windows experiment; macOS first — 2026-10-24
 
 Human selected Sol High from804a7ef, then explicitly chose finish macOS feature

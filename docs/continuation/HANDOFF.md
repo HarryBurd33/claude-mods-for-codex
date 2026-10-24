@@ -1,175 +1,133 @@
-# Source25 handoff — macOS acceptance first — GPT-6.1 Sol Medium
+# macOS-first handoff — next GPT-6.1 Sol High
 
-2026-10-24. The human selected **finish macOS feature acceptance first, then Windows**
-after asking how much work remains. Windows remains in scope and incomplete.
-Do not start another Windows investigation during the next Medium stage.
-The full93-capability product is incomplete; source25 is uninstalled.
+2026-10-24. Human resumed Medium from verified c5bd658 on codex/astra-groundwork.
+The human-selected order remains **macOS feature acceptance first, then Windows**.
+This Medium milestone is a93-row evidence audit and a bounded actual-host batch
+on unchanged installed dev10, plus corrected operational/current status docs.
+No runtime/version/installation/trust/logging change. Full product incomplete.
 
 ## Read first
 
-Read STATUS.md, DELIVERY-PLAN.md, ACCEPTANCE-QUEUE.md, REQUIREMENTS.md,
-the current ARCHITECTURE.md section, latest TEST-LOG.md and DEV25-REVIEW.md.
-Read the latest ignored root HANDOFF.md for final checkpoint identity/private
-artifacts. PACKAGE-DEV24.md is the last completed package check, not source25.
-Older model-next statements do not override this handoff or the human priority.
-Do not repeat the full Claude/Codex/REA survey or rediscover private sessions.
-
-## Exact code and observed result
+MACOS-ACCEPTANCE.md (all93 independently classified rows), MACOS-BATCH.md (actual
+checks/next retention milestone), STATUS.md, REQUIREMENTS.md, DELIVERY-PLAN.md,
+current ARCHITECTURE.md and latest TEST-LOG.md. Read the latest ignored root
+HANDOFF.md for exact final checkpoint, private evidence and preservation identity.
+DEV25-REVIEW.md retains the Windows failures; PACKAGE-DEV24.md is last verified
+source package, not source25. Old model-next Windows statements are historical.
 
 Repository: https://github.com/HarryBurd33/claude-mods-for-codex
-Branch: codex/astra-groundwork.
-Latest tested source:
-[3ce44fc76561b11051c610894fa38338bdfafd50](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3ce44fc76561b11051c610894fa38338bdfafd50),
-tree e4e0dd98d54731bc685489608cdde3c066198b43.
-Local equivalent2f17ce018ee60211ee6ee77fe0d478f0ad57347c retained on
-codex/dev25-image-object-local-checkpoint. Fetched full-tree equality and
-expected-parent/nonforce upload observed. Final documentation checkpoint's exact
-local/remote/tree/ref identity is read back in the reply and ignored handoff.
-No self-hash claim, force-push or lost local history; verify HEAD/ref before work.
+Branch: codex/astra-groundwork. Starting commit:
+c5bd6587d3f24b14592c892e3d5e0ae4ab28cc00,
+tree b852cdc88951a84535c461654d0bb4981f620510.
+Final documentation checkpoint identity is reported only after remote readback
+in the final reply/private handoff; verify HEAD/ref before work. No self-hash claim.
 
-[CI40122363235](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40122363235):
-five jobs passed; both Windows OS jobs FAILED. Actual decoded logs read.
+## Actual completed work and commands
 
-- Windows Node22 job120956483161 and Node24 job120956483033: each25 storage/
-  observer/lock checks passed. Process/security proofs84pass/1fail/0skip85total.
-- Mandatory real-image positive for cmd/git.exe failed before bytes. Post-refusal
-  metadata: opened/queried/disk/selected-name-match true, reparse/directory false,
-  links2. That observed state violates the current one-link contract. A new
-  sample is not an atomic trace of the prior Info call.
-- No actual image hash/imports/version was obtained. The second real image was
-  not reached by that positive test. No Git candidate was executed.
-- Ubuntu24 job120956483105, Ubuntu22 job120956483148, macOS24 job120956483166,
-  macOS22 job120956483260: each189pass/0fail/108Windows-only skips297total.
-- Windows portable120956483220: successful conclusion, separate from native host.
-- Windows Server2025/NTFS/PowerShell5.1 is OS evidence, not Windows11 Codex/WSL.
+- Audited all93 requirements into exact narrow verified/verified approximation/
+  incomplete/awaiting human/unsupported reviewed interface/policy/nonmacOS closure.
+  Mechanism supported is not completion. Each row retains evidence and next gap.
+  Corrected stale current dev5/dev6/source13/20 wording; historical evidence retained.
+- Fresh bounded no-daemon initialize/hooks/list/plugin/read: three production hooks
+  enabled/human-trusted, zero errors, zero model turns. Two default-sandbox invocations
+  closed early and cleanup permission failed (the latter was an unnecessary
+  repeated invocation while writing notes). Between them, approved elevated
+  read-only inventory succeeded; that successful evidence remains retained. No trust/config action or event delivery inferred from inventory.
+- Current trusted dev10:149installed cache files byte-identical to reviewed fixture;
+  private settings hash and selected child/project scope unchanged. Current chat
+  outside logging scope. No additional model/API run, observer/theme/client change.
+- Actual mods.dashboard/activity/usage and owned six-view panel: same four retained
+  events/revision/project; selected synthetic files/working patch/two-commit Replay;
+  reported selected-export counters and unknown context/exact billing/cache health;
+  process/model/surface/provenance labels. No project mutations.
+- Native labeled Format selection/JSON literal markup/Clear/original sample
+  restoration and flowchart3nodes/2edges with complete tables. Focused Render3px
+  outline/3px offset. aria-current follows view. Synthetic locator clicks are not
+  new human keyboard/screen-reader evidence. Watch checked, unchecked at31,737ms
+  sample; same counts/scope. No native event during Watch/backend-close proof.
+- node --test test/transport-ui.test.mjs test/rendering.test.mjs
+  test/dashboard.test.mjs test/scaffold.test.mjs test/state-lock-budget.test.mjs
+  test/state-observer-boundary.test.mjs:36pass/0fail/0skip. validate3mods/replay4.
+  These are Node/simulated bridge tests, not native event execution. No repeated
+  full suite solely for notes; no fresh full CI/native Windows success claim.
 
-The failed positive and one-link guard remain intact. Do not hide/skip/weaken
-the test, remove the guard or retry an old failed run to claim green. Windows
-read inventory is incomplete. A purpose-specific alias policy needs later High
-review; it is not implemented by this checkpoint.
+## Host, installation and risk limits
 
-Local macOS14.6/Node24.22.0/npm11.19.1:
-initial source25 npm test189pass/0fail/104Windows-only skips293total;
-later Installer-profile full189/0/107skips296total;
-final source25 full189/0/108skips297total.
-Validate3mods/replay4fixtures, JS syntax and diff-check passed.
-Latest object observation changed only Windows proof code/tests; actual four
-POSIX lanes above read. Following final records change documentation only;
-no repeated full suite solely for notes. Source25 packaging remains unverified.
+macOS14.6/Node24.22.0/npm11.19.1/CLI0.163.0. Installed desktop app bundle now
+26.1021.22027/build21747, newer than earlier26.1016.62342/build21477 evidence.
+Current panel reports connected to chatgpt; exact running host/bundled runtime not
+independently attested. UI/skills/hooks/config/MCP source bytes unchanged from
+installed10. Source25 has server-version/state.mjs/new state-lock-budget.mjs
+changes: native dev10 state acceptance does not certify them. Source25 remains
+uninstalled/package-unverified. No code bump merely for docs/audit.
 
-## Implemented code contracts and locations
+No config/cache/trust/retention/export/scope/theme/client/selected-model changes.
+No protected human action/restart or machine rollback needed for this stage.
+Private screenshots/raw logs/paths/settings/root handoff remain ignored. Remove
+only owned scratch after child exit, never live locks or shared user data/config.
+Future changed installation requires supported update/source diff/human hook
+review and actual loaded-cache verification; no automatic trust/cache patch.
 
-- proofs/windows-owned-process/InstalledImageRead.cs: isolated read composition.
-  Known wrapper requires fresh SDK ProgramFilesX64 parent, immediate Git root
-  and exactly cmd/git.exe or mingw64/bin/git.exe before target IO.
-  Synthetic wrapper is an explicit owned/private-parent assumption, not SDK scope.
-  Original source22 CodeAncestorLease remains held; all child/image handles,
-  identities and owner/DACL samples retained/rechecked before/after read.
-- StrictCode profile uses original CodeAccess. It still refuses Installer mutation
-  on code children. InstallerInventory is a SEPARATELY named READ policy applying
-  the reviewed descriptor predicate per validated object. Unknown mutation grants,
-  mixed allow/deny, invalid owner/ACE/descriptor still refuse. It is not global
-  Installer trust, execution admission or a change to private-data policies.
-- Fixed frames distinguish inventory-read versus installer-read. sampleAccepted
-  validates data only, never human approval or execution permission. Original
-  CodeAccess/ProgramPins/Trusted/Access/Info and production helper are unchanged.
-  Constructor/disposal/cancel/EOF/bad-control/owner-death and object guards tested.
-- test/windows-owned-process.test.mjs: bounded parent reads up to32MiB only after
-  retained readiness, checks regular/single-link/identity/size/time/EOF, clears
-  buffers, computes digest and existing bounded static PE parse. Changed/refused/
-  cancelled samples discard content-derived results. No raw image/ACL/SID/path/
-  environment output, target Git execution, version query or network request.
-- test/windows-fixtures.ps1: one extra mixed Installer+foreign allow/deny mode,
-  only owned fixtures. No system ACL repair. Existing fixture modes preserved.
-- build.ps1/Harness.cs: compile/register proof-only named modes. Production
-  src/windows/private-storage.ps1 still compiles ONLY PrivateStorage.cs.
-- A bounded new metadata observation after image refusal exposes only booleans
-  and link count. The original guard is not bypassed and authority stays false.
+## Preserved Windows blocker — do not work on it next
 
-No executable/signature/package/dependency/loader/source-provenance guarantee.
-SDK/descriptor samples are not immutable/atomic; existing mappings or privileged/
-hostile-same-user changes remain outside the stated claim. Parent15s watchdog is
-not a universal pending-kernel-IO completion bound. No production gate activated.
+Latest tested source3ce44fc76561b11051c610894fa38338bdfafd50,
+CI40122363235: both Windows OS lanes25storage passes,84/85process proofs.
+Mandatory real cmd Git image positive refused Image before bytes; new retained
+handle sample disk/non-reparse/selected-name-match true/links2, violating current
+one-link guard. Not an atomic original-cause trace. No hash/import/version or Git
+candidate execution. Failure and guard unchanged. Four POSIX lanes189pass/0fail/
+108Windows-only skips297total; portable Windows job success separate. Native
+Windows11/WSL not tested; last unavailable, do not ask repeatedly. All production
+Windows settings/dashboard/project/Git/restore gates remain closed before IO.
+No alias/Installer/loader policy relaxation or new Windows experiment on this switch.
 
-## Preserve intermediate evidence
+## Next exact model and coherent milestone
 
-1. 7d8c3f5 / CI40120193894: all7 conclusions success; both decoded Windows lanes
-   25checks+81proof passes. Strict known image attempts refused CodeDirectory,
-   no bytes. Controls were tightened afterward, not an unchanged-run retry.
-2. 70a0c3e / CI40120522820: all7 conclusions success; both Windows25+81/0/0skip.
-   Positive original-reader controls fit the1MiB limit; original policies still
-   refused after own Installer grant. No actual known image inventory.
-3. 7921619 / CI40120825372: all7 success; Windows25+81/0/0skip. Repeated descriptor
-   sample at code-root segment0 reports ForeignInstallerGrant, non-authorizing,
-   not atomic cause. Original strict-reader behavior remained unchanged.
-4. 8fa1147 / CI40121829428: both Windows25passes,84/1/85 proofs. Additional explicit
-   InstallerInventory synthetic cases passed; real cmd image refused Image.
-   No actual image bytes; guard preserved. Latest3ce44fc added metadata evidence,
-   not a permission repair or erasure of this failure.
-5. Earlier source24/23 reliability failures and refuted lifetime hypothesis remain
-   in their reviews/test log. Do not claim they are retrospectively solved.
+**GPT-6.1 Sol, High.** Medium stops before a consequential deletion/runtime/security
+change. Implement a useful macOS selected-scope retention inspection/explicit
+cleanup workflow; do not return to package-version-only/Windows-proof loops.
 
-Local equivalents053a777/50c1b10/34fc698/a8ad058 remain on named dev25 backup
-branches. Exact full identities/private logs are in ignored root handoff.
+1. Read MACOS-BATCH BatchB and review src/state.mjs pruneMetadataState/stateRoot/
+   withStateLock, src/runtime-settings.mjs, src/cli.mjs, state/privacy/CLI tests.
+   Existing prune scans root scopes; do not expose it unchanged as a selected-
+   project cleanup command. Define small stable contracts before code.
+2. Read-only preview from reviewed settings must select the exact configured scope,
+   not enumerate private sessions or create state directories/locks. Bounded age/
+   count/eligibility output must omit raw events/IDs/paths. No automatic retention.
+3. Separate explicit cleanup must freshly verify selection/data/confirmation and
+   protect other projects/sessions/recent records. Review live locks, links, special/
+   unexpected entries, permission errors, partial failure and concurrent writes.
+   Do not delete locks, broaden scope, retry ambiguous writes or add MCP/UI writer.
+4. Test only owned synthetic data, including stale preview/concurrent/invalid/
+   absent cases and unchanged unrelated scope/index/HEAD/settings. New Windows
+   path refuses before IO until separately reviewed; preserve old Windows failure.
+   No cleanup of installed production metadata authorized in this milestone.
+5. Update docs/help/ledger and run warranted tests/CI. Prepare a concrete immutable
+   macOS snapshot/access diff only when useful; changed code needs human review,
+   trust/restart. Existing single-run grant consumed: new model/API/native trigger
+   run needs explicit bounded authorization; read-only tools in unchanged scope
+   can proceed. Do not change parent model or prompt, or auto-approve calls.
+6. Preserve all93 requirements and remaining lifecycle/accessibility/optional hooks/
+   failure/model events/usage/theme/routing/authoring/platform work. Next native
+   acceptance batches are in MACOS-BATCH, not silently out of scope.
+7. Save/upload nonforce/full-tree/independent-ref verify a runnable code milestone;
+   stop for Medium when only routine verification/docs/packaging is justified.
+   A harder new architecture/security uncertainty requiring Astra also needs a
+   human switch checkpoint. No delegated/background/scheduled continuation.
 
-## Preservation, installation and rollback
+No human input is required to start the scoped High design/synthetic implementation.
+Do not ask for trust/restart or another model run until a concrete reviewed test
+requires it. Several substantial batches and later native platform work remain;
+no defensible full-product date/percentage from current evidence.
 
-Installed human-trusted dev10 remains149 byte-equal reviewed files; private settings
-hash and explicitly selected disposable-project logging scope unchanged. Current
-chat is outside that scope. No install/update/trust/config/cache/retention/export/
-observer/theme/client/parent-model change or additional native/model/API run.
-No subagents or continuation automation in this High stage.
-All93 requirement identities/order remain. Runtime/manifest/package version25
-only; production storage/ACL/state/budgets/Git/settings/restore code unchanged.
+## Copy-and-paste resume
 
-No protected user action/restart or machine rollback required for the audit.
-Remove only owned test artifacts after exit. Never delete live locks, repair
-system ACLs, patch installed cache/trust hashes, globally trust Installer or restore
-shared config wholesale. Windows11 was last unavailable; do not ask repeatedly.
-Any future changed installed snapshot needs supported update and human trust review.
-
-## Next exact model and bounded macOS work
-
-**GPT-6.1 Sol, Medium.** The human deferred further Windows work. Immediate work
-is acceptance audit/planning and already-authorized safe macOS verification.
-Do not hand Medium the unresolved Windows security change to implement.
-
-1. Verify this checkpoint/ref and inspect DELIVERY-PLAN/ACCEPTANCE-QUEUE against
-   all93 ledger rows. Record macOS target-specific closure with actual snapshot,
-   client and evidence: exact verified, disclosed approximation verified,
-   unsupported with primary evidence/alternative, incomplete, or awaiting user.
-   Mechanism supported does NOT mean feature done; do not invent a completion
-   percentage or finish date from tests/version numbers.
-2. Read-only inspect current installed host/plugin/scope. Reuse native evidence
-   only for unchanged components/versioned claims. Identify one bounded macOS
-   acceptance batch: remaining lifecycle, visible events, install/disable/rollback,
-   optional triggers/theme/accessibility/routing/authoring as the audit warrants.
-3. Prepare a concrete reviewed snapshot and exact human trust/restart/test steps
-   if an update or protected action is required. Preserve unrelated entries/data.
-   Existing separate-model-run authorization was consumed; any additional model/API
-   run must be visible, bounded and authorized. Harmless read-only checks of the
-   current trusted host may proceed within the existing scope. Never broaden logging, change the
-   selected model, install automatically trusted code or discover private sessions.
-4. Source25 source-package inspection may be useful for an immutable macOS batch,
-   but do not label it fully verified while Windows CI has the known failure.
-   No repeated full suite just for notes. No new Windows policy/alias experiment.
-5. Publish an evidence-based remaining implementation/acceptance table and
-   conditional estimate. High is required before consequential runtime/security
-   or writer changes and before resumed Windows work. Keep Windows in the full
-   scope, explicitly incomplete. No new client/fork direction without agreement.
-6. Save/upload/nonforce/full-tree/independent-ref verify progress and stop for the
-   next exact human model setting when appropriate. No delegated/background/
-   scheduled continuation after announcing a stop.
-
-## Complete resume instruction
-
-I've switched to GPT-6.1 Sol, Medium. Continue from the verified source25 macOS-first
-checkpoint on codex/astra-groundwork. Follow docs/continuation/HANDOFF.md,
-DELIVERY-PLAN.md and ACCEPTANCE-QUEUE.md plus the latest ignored root HANDOFF.md.
-Prioritize macOS feature acceptance: audit all93 requirements against actual
-versioned evidence, prepare one bounded native acceptance batch and report the
-remaining work. Preserve logging scope, human trust, installed dev10 and failure
-evidence. Leave Windows guards and its failed actual-image check intact; Windows
-remains in scope for later High work. No extra separate model/API run or trust action
-without its required authorization. Stop for High before consequential code or
-security changes; save, upload and independently verify the next checkpoint.
+I've switched to GPT-6.1 Sol, High. Continue from the verified macOS acceptance
+checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
+MACOS-ACCEPTANCE.md and MACOS-BATCH.md plus the latest ignored root HANDOFF.md.
+Implement the bounded macOS selected-scope retention preview/explicit cleanup
+milestone with tests, preserving unrelated scopes, logging scope, human trust,
+installed dev10 and all93 requirements. Leave deferred Windows guards and the
+failed real-image check intact. No production-data cleanup, automatic trust,
+logging expansion or additional model/API run. Save/upload/independently verify
+progress and stop for Medium when routine work is sufficient.

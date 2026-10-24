@@ -1,12 +1,17 @@
 # Claude Mods for Codex
 
+macOS acceptance is the current priority. The [93-row audit](docs/continuation/MACOS-ACCEPTANCE.md)
+and [bounded native batch](docs/continuation/MACOS-BATCH.md) record what is verified
+on unchanged installed dev10 and what remains incomplete. Next is High review of
+selected-scope retention management; Windows remains incomplete and deferred.
+
 Independent MIT-licensed project; not affiliated with or endorsed by Anthropic or OpenAI.
 
 Source **0.2.0-dev.25** is a development checkpoint on `codex/astra-groundwork`.
 The full [93-capability ledger](docs/continuation/REQUIREMENTS.md) remains incomplete;
 the default branch retains the earlier experimental MVP.
 
-The current milestone is a proof-only installed-image read inventory. It retains
+The source25 code milestone was a proof-only installed-image read inventory. It retains
 the original strict-code profile and adds an explicitly named Installer inventory
 profile for fixed images beneath the fresh SDK-bound Program Files/Git location.
 Neither profile grants execution or private-data authority. No candidate Git is
@@ -17,7 +22,8 @@ Installed human-trusted **dev10** and its logging scope remain unchanged. Source
 is uninstalled. Earlier macOS native UI/hooks/preview observations do not certify
 this source. Native Windows11 Codex and WSL acceptance remain unverified.
 
-MacOS acceptance is now the human-selected priority; Windows remains in scope.
+macOS acceptance is the human-selected priority; the audit/current native batch
+is recorded above. Historical latest full-source test evidence follows:
 Local and four POSIX CI lanes passed189 tests with108 Windows-only skips.
 Windows storage checks passed25 per lane; process checks passed84/85. The mandatory
 real-image read is still refused (observed2links versus the one-link guard).
