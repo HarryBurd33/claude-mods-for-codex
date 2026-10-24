@@ -1,5 +1,24 @@
 # Continuation verification log
 
+
+## Source21 Medium package verification — 2026-10-24
+
+Exact anonymous public clone of fde53c9 passed 186 tests, zero failures, 89
+Windows-only skips. Reviewed archive: 187 files, 1,345,986 unpacked / 399,098
+compressed bytes, SHA256
+`5ad1b1b4e3fac93b7f9991dae98badcfa851b58efbf5ea9a55a117c709db41a8`.
+Every packaged byte matches the clone and checkpoint. Hygiene, MIT, version21,
+default-off storage and proof/production separation passed. Fresh spaced extraction
+validated3 mods, replayed4 fixtures, and passed11 package/scaffold/state tests.
+See [PACKAGE-DEV21](PACKAGE-DEV21.md) for exact commands and evidence limits.
+
+Only documentation changed in this Medium stage. Source21 is uninstalled;
+installed human-trusted dev10, private settings, logging scope, all93 requirements
+and every Windows gate are unchanged. First fixture failure and corrected High CI
+remain distinct; no native Windows compatibility follows from packaging. Full
+product incomplete. Next human Sol High before further gated Windows security.
+Earlier model-next statements below describe their historical checkpoints.
+
 ## Source21 High checkpoint — exact known-folder assessment — 2026-10-24
 
 The proof-only Windows assessment matches one exact OS-known ProgramFilesX64
