@@ -1,5 +1,16 @@
 # Current status — source28 component authoring — 2026-10-24
 
+## Native28 follow-up — current — 2026-10-24
+
+[NATIVE-DEV28](NATIVE-DEV28.md) records actual loaded authored counter/tool/table:
+3pre+2post=5, matching existing selected activity7/same revision; Refresh and
+covered native rewrites/control/denial passed. Installed227files/settings/scope/
+exports unchanged, three hooks trusted, optional observers off, no extra model run.
+Earlier28 native-pending wording is historical. Full93 product remains incomplete.
+Next **GPT-6.1 Sol High** for [production impact decision flow](IMPACT-NEXT.md);
+stop before consequential source/security changes. No restart/trust action now.
+
+
 ## Medium package/update follow-up — 2026-10-24
 
 [PACKAGE-DEV28](PACKAGE-DEV28.md) supersedes earlier CI/package-pending wording.

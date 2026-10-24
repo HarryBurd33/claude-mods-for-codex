@@ -1,5 +1,27 @@
 # Source28 component authoring handoff — next GPT-6.1 Sol Medium
 
+## Human model-switch checkpoint — next Sol High
+
+Read NATIVE-DEV28.md, IMPACT-NEXT.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md,
+latest TEST-LOG.md and ignored root HANDOFF.md. No current restart needed.
+
+Resume: “I've switched to GPT-6.1 Sol, High. Continue from the verified dev28 native
+checkpoint on codex/astra-groundwork. Follow IMPACT-NEXT.md for the production
+blast-radius decision workflow. Preserve logging scope, human trust, installed28,
+existing exports and Windows guards. No extra model run or optional event enrollment
+without fresh authorization. Stop for Medium when routine work is sufficient.”
+
+## Native28 follow-up — current — 2026-10-24
+
+[NATIVE-DEV28](NATIVE-DEV28.md) records actual loaded authored counter/tool/table:
+3pre+2post=5, matching existing selected activity7/same revision; Refresh and
+covered native rewrites/control/denial passed. Installed227files/settings/scope/
+exports unchanged, three hooks trusted, optional observers off, no extra model run.
+Earlier28 native-pending wording is historical. Full93 product remains incomplete.
+Next **GPT-6.1 Sol High** for [production impact decision flow](IMPACT-NEXT.md);
+stop before consequential source/security changes. No restart/trust action now.
+
+
 ## Medium package/update follow-up — 2026-10-24
 
 [PACKAGE-DEV28](PACKAGE-DEV28.md) supersedes earlier CI/package-pending wording.

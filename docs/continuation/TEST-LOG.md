@@ -2284,3 +2284,13 @@ supported source28 update. Installed227files match reviewed candidate; unchanged
 scope/rules/exports/old settings, optional observers off, no extra model run.
 After human review, inventory confirms3enabled trusted hooks/0errors;
 restart/loaded28 checks pending. Installed does not mean native accepted. Full93 product incomplete.
+
+## Native28 follow-up — current — 2026-10-24
+
+[NATIVE-DEV28](NATIVE-DEV28.md) records actual loaded authored counter/tool/table:
+3pre+2post=5, matching existing selected activity7/same revision; Refresh and
+covered native rewrites/control/denial passed. Installed227files/settings/scope/
+exports unchanged, three hooks trusted, optional observers off, no extra model run.
+Earlier28 native-pending wording is historical. Full93 product remains incomplete.
+Next **GPT-6.1 Sol High** for [production impact decision flow](IMPACT-NEXT.md);
+stop before consequential source/security changes. No restart/trust action now.
