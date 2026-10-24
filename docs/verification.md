@@ -7,19 +7,17 @@ Clear focused and empty source/output. Three hooks remain enabled/human-trusted,
 zero inventory errors;149cache files match the reviewed fixture. Same four activity
 records/project scope/revision. No configuration, logging, trust or product-code
 changes. Full accessibility/platform/product completion remains unverified.
-Next: human-controlled **GPT-6.1 Sol, High** for gated Windows security work;
-retain refusals until acceptance passes. Earlier pending-restart statements below
-are historical and superseded by this observation. See the current handoff.
+Source11 remains uninstalled. Exact88e8895 public clone/full suite170pass/0fail/
+33Windows-only skips203total;151-file archive checked against public source and
+spaced extraction validate3/replay4/package-scaffold7/7 passed. See
+[package record](continuation/PACKAGE-DEV11.md). Source392fc04 CI40046690213 all7jobs
+passed, both Windows logs20storage+13proof each; source88e8895 notesCI40047067099
+all7job conclusions passed. Server OS evidence is not Windows11 Codex acceptance.
+High is required before further Windows security implementation; no gate enabled.
 
-Historical v0.1 verification. Current continuation results are recorded separately
-in [continuation/TEST-LOG.md](continuation/TEST-LOG.md). The prior review and 39-test
-baseline do not certify later changes or native integration.
-
-Current source9 Windows CI passed20/20 storage plus8/8 isolated process/object
-proofs on each real Windows Node22/24 lane; all7jobs passed. This is OS/subprocess evidence, not native Codex
-Windows11 acceptance. Installed dev6 native Local preview/authored rewrite and
-same-snapshot removal/reinstallation remain version-specific; logging unchanged.
-See the current continuation summary and Windows contract.
+Historical v0.1 verification follows. Current continuation results are recorded in
+[continuation/TEST-LOG.md](continuation/TEST-LOG.md). The prior39-test baseline and
+historical model/OS records do not certify later changes or native integration.
 
 This file records checks actually completed for v0.1.0. The initial implementation worker hit a usage limit; work continued from the saved checkpoint.
 

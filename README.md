@@ -14,7 +14,10 @@ See [source11 review](docs/continuation/DEV11-REVIEW.md) and
 Local suite170pass/0fail/33Windows-only skips203total; validate3/replay4 passed.
 Source392fc04 [CI40046690213](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40046690213) passed all7jobs; both actual
 Windows job logs read20storage+13proof each,0fail/0skip.
-Real Windows CI results are recorded separately; POSIX skips are not Windows passes.
+[Source11 packaging](docs/continuation/PACKAGE-DEV11.md): exact88e8895 anonymous
+clone170pass/33Windows-only skips,151-file archive, byte/hygiene inspection and
+spaced extraction validate3/replay4/package-scaffold7/7 passed. Source11 remains
+uninstalled. Real Windows CI is separate; POSIX skips are not Windows passes.
 
 The configured macOS test fixture0.2.0-dev.10 remains installed in the user profile,
 149files equal its immutable reviewed snapshot, three hooks human-trusted/zero

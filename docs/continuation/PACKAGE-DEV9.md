@@ -67,6 +67,6 @@ owned hooks.state trusted hashes, other5states and non-hook-state config unchang
 Agent wrote no trust record. Read-only inventory first returned3modified/0errors
 (the checker initially expected literal untrusted, a diagnostic assertion error).
 After human review:3enabled/trusted/0errors/0model turns. Cache149files/settings
-hash rechecked. Native source10 UI/delivery still pending desktop restart; full
-product incomplete. Rollback restores only owned source pointer through supported
+hash rechecked. At that package checkpoint native source10 UI/delivery was pending restart.
+Later native focus/keyboard-Clear passed; see STATUS. Full product incomplete. Rollback restores only owned source pointer through supported
 install, requires fresh human review as needed, never full-config/trust restoration.

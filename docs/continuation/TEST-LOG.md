@@ -1,5 +1,22 @@
 # Continuation verification log
 
+## Medium source11 package verification — 2026-10-23
+
+Resumed clean88e8895/tree2a6916fd39fac62f19f149b3bc7417613ae7ff0b. Anonymous
+config/credential-disabled single-branch clone exact commit/tree; npm test170pass/
+0fail/33Windows-only skips203total. Offline ignore-scripts pack, separate empty
+npm configs/local cache;151regular files960204unpacked/296328compressed bytes,
+SHA256da94434ff6a2a803700983cb3aed2150963fcbb5505161318def3e25ab2a6d4a.
+Every packaged byte equals clone/workspace, no private roots/links/traversal/
+special/set-ID/case-collision/dependencies/root portable manifest; MIT/default-off
+journal/metadata selection verified. Spaced extraction validate3/replay4/package+
+scaffold7pass/0fail/0skip. No dependency install, fixture execution or model run.
+Source88e8895 notesCI40047067099 all7job conclusions actually read; exact proof
+source392fc04 OS log counts stay separate. Fresh bounded no-model native inventory
+3enabled/human-trusted/0errors; installed10 cache/settings preserved. Current stale
+pending-restart docs corrected. No product/proof/test/default/UI/hook/skill change.
+Next High before gated Windows security; later host inventory kit already prepared.
+
 ## Verified High source11 scratch proof — 2026-10-23
 
 Source[392fc04](https://github.com/HarryBurd33/claude-mods-for-codex/commit/392fc0400f6c1bcd29fb6c13f433ea19c1502c01),

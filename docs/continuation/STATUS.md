@@ -20,6 +20,17 @@ read20storage+13proof each,0fail/0skip. See TEST-LOG. No native Windows Codex/Wi
 result. No new public operation; production compiles only original PrivateStorage.cs.
 See DEV11-REVIEW for architecture, actual primary references and remaining gates.
 
+## Source11 Medium package verification
+
+Human resumed88e8895 on Sol Medium. Exact anonymous public clone/full suite170/0/
+33Windows-only skips203total. Reviewed151-file archive960204unpacked bytes,
+SHA256da94434ff6a2a803700983cb3aed2150963fcbb5505161318def3e25ab2a6d4a;
+all packaged bytes equal clone/checkpoint, hygiene checks and default-off grants
+pass. Spaced extraction validate3/replay4/package-scaffold7/7 passed. No install or
+native Windows result. See PACKAGE-DEV11. NotesCI40047067099 all7conclusions passed.
+Fresh installed10 inventory3enabled/trusted/0errors/0model turns; cache/settings
+unchanged. Current setup/native-acceptance stale pending-restart reporting corrected.
+
 ## Preserved installation and native evidence
 
 Installed10 immutable149files and three enabled/human-trusted hooks verified after
@@ -48,8 +59,9 @@ High work. Current scratch slots are not a drop-in Git repository; their1MiB bou
 is below the existing32MiB index bound. Native Windows11 host is available later,
 not tested. Runtime settings/project/Git/restore still refuse before IO.
 
-Next setting is **GPT-6.1 Sol, Medium**: package the exact reviewed proof, reconcile documentation and prepare
-read-only inventory. It must stop for a human High switch before any gated code.
+Routine source11 package checks are complete. Next setting **GPT-6.1 Sol, High**
+before further gated Windows implementation. Native inventory kit is prepared;
+actual Windows11 host remains available later, not tested here.
 Broader accessibility, backend close-pending cleanup, loaded disable/older rollback,
 optional native events/themes and native Linux/Windows/WSL remain incomplete.
 No additional model/API test, optional observers, theme/client change, app patch,

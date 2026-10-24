@@ -7,15 +7,12 @@ Clear focused and empty source/output. Three hooks remain enabled/human-trusted,
 zero inventory errors;149cache files match the reviewed fixture. Same four activity
 records/project scope/revision. No configuration, logging, trust or product-code
 changes. Full accessibility/platform/product completion remains unverified.
-Next: human-controlled **GPT-6.1 Sol, High** for gated Windows security work;
-retain refusals until acceptance passes. Earlier pending-restart statements below
-are historical and superseded by this observation. See the current handoff.
-
-Source10 is installed with149verified fixture files and its3hooks human-trusted.
-Restart/reopen is pending. Earlier dev6 native evidence below is version-specific;
-verify updated focus/controls in10 after restart. No additional
-model/API evaluation, optional hook registration, broader logging, client upgrade
-or theme selection is implied. Keep other plugins and existing data unchanged.
+Source11 remains an uninstalled proof-only extension; its anonymous public clone,
+archive and spaced extraction passed as recorded in continuation/PACKAGE-DEV11.md.
+No new model run, optional hook registration, logging expansion, theme/client change
+or trust mutation. Human-selected High remains required before gated Windows work.
+Earlier dev6 native evidence is version-specific; no event delivery is inferred
+from source10 trust inventory or a UI check.
 
 ## Small user-visible checks
 
@@ -23,7 +20,7 @@ or theme selection is implied. Keep other plugins and existing data unchanged.
 | --- | --- | --- |
 | Preview keyboard | Click Preview source, press Tab once, then Enter. Focus should reach Render locally and render the sample. | Human confirmed2026-10-23; permitted MCP Apps inspection saw3nodes/2edges and complete tables. One keyboard path only. |
 | Preview resize | Drag the divider between this chat and Claude Mods narrower, then wider. Source and Render/Clear should remain usable. | Human confirmed both narrower and wider widths remained usable2026-10-23; exact widths not measured. |
-| Other keyboard controls | From Render locally, Shift-Tab should return to source; Tab should reach Clear. Use the labeled Format select to change format. | Human confirmed Clear worked but focus was unclear; live DOM showed focused Clear/empty source. Source10 strengthens focus outline; isolated browser sequence passed. Actual updated native focus visibility remains unverified. |
+| Other keyboard controls | From Render locally, Shift-Tab should return to source; Tab should reach Clear. Use the labeled Format select to change format. | On source10 after restart, human confirmed Shift-Tab to source, Tab to Render, Tab to Clear with clear visible focus and Enter-Clear; native inspection confirmed3px outline/3px offset and focused Clear/empty source/output. Format/full keyboard coverage remains incomplete. |
 | Screen reader/zoom/contrast | Inspect labels, equivalent node/edge tables, meaningful diff signs and visible focus in the actual host/settings chosen by the user. | Not established. Do not change OS accessibility/preferences silently. |
 | Close/reopen | Close only the Claude Mods panel, preserving this chat. Reopen through the installed entry or ask for mods.dashboard in this same chat. It should reconnect with the same selected scope/counts; local source need not persist. | Human closed the panel; permitted inventory became empty. After human reopened, a new panel connected with scope project/4records/same revision, Watch off. Backend cancellation/loaded-session unload still unverified. |
 | Close while observing | Select Activity and Watch, then close only that panel. Reopen and check responsiveness and unchanged scope. | Separate explicit UI test needed. Source simulation covers cancellation/teardown. Watch was checked before human closure in the source9 packaging stage; closure timing relative to its deadline was not measured, so backend cancellation remains unverified. |

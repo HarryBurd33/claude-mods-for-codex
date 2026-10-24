@@ -2,11 +2,11 @@
 
 This development package uses **only `.codex-plugin/plugin.json`**. Released Codex CLI 0.163.0 and 0.164.0 skip bundled hooks when a schema-recognized root `plugin.json` selects the portable format. Do not restore the old root manifest or add it beside the compatibility manifest. Paths in the compatibility manifest resolve from the package root. See the release-source evidence and observed inventory correction in [Codex contracts](continuation/CODEX-CONTRACTS.md#released-hook-packaging-contradicts-portable-documentation).
 
-The current source package is `0.2.0-dev.10` (stronger owned-panel focus outline, retained source9 Windows directory-sharing correction/proofs and authoring fixtures), a development checkpoint, not a completed product release. Its registered components include the session notice, lexical guard, opt-in metadata journal/state, exact-command replacement and management skill, plus the local dashboard MCP service. Default configuration does not enable replacement or metadata storage. See [runtime access](runtime.md) before configuring its project/session scope. The included `proofs/` directory contains separate development harnesses and the unintegrated Windows OS proof. Installing the main package does not register those proof servers, panels, probes or an arbitrary execution tool. Actual host results and remaining blockers are recorded in the [continuation test log](continuation/TEST-LOG.md).
+The current source package is `0.2.0-dev.11` (unintegrated Windows scratch-content proof, retained source10 owned-panel focus outline and authoring fixtures), a development checkpoint, not a completed product release. Its registered components include the session notice, lexical guard, opt-in metadata journal/state, exact-command replacement and management skill, plus the local dashboard MCP service. Default configuration does not enable replacement or metadata storage. See [runtime access](runtime.md) before configuring its project/session scope. The included `proofs/` directory contains separate development harnesses and the unintegrated Windows OS proof. Installing the main package does not register those proof servers, panels, probes or an arbitrary execution tool. Actual host results and remaining blockers are recorded in the [continuation test log](continuation/TEST-LOG.md).
 
 The configured macOS fixture10 is installed with149verified files and its3hooks
-human-reviewed/trusted, pending desktop restart/native UI verification. Source
-changes alone never update a cache or establish trust. See [current native acceptance](native-acceptance.md).
+human-reviewed/trusted; native focus/render/keyboard-Clear verified after restart.
+Source11 remains uninstalled. Source changes alone never update a cache or establish trust. See [current native acceptance](native-acceptance.md).
 
 ## Requirements and installation scope
 

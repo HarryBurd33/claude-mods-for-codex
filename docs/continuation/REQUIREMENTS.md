@@ -6,7 +6,9 @@ remains installed/human-trusted. Production Windows settings/project/Git/restore
 still refuse before IO. See DEV11-REVIEW, STATUS and TEST-LOG for scope/evidence.
 Native source10 panel/render/focus and human keyboard-Clear passed after restart;
 cache149/trusted3/zero errors verified. Same four scoped records/settings hash.
-No logging/trust/config/permission/model change. Mechanism support is not completion.
+No logging/trust/config/permission/model change. Source11 exact88e8895 package/
+public-clone/spaced extraction verified; see PACKAGE-DEV11. All93IDs retained.
+Mechanism support is not completion.
 
 ## Reading the ledger
 
