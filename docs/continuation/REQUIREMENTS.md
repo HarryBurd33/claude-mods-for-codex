@@ -1,5 +1,25 @@
 # Requirements ledger
 
+## Source19 Medium package verification — 2026-10-24
+
+Human resumed verified38848a8 on GPT-6.1 Sol Medium. Exact anonymous public clone
+full181pass/0fail/86Windows-only skips267total. Reviewed179file archive:
+1,261,355unpacked/375,412compressed bytes; SHA256
+40e242938c34582108616f9474a810ae026ab12a47ead19105708996674fe31e.
+Every byte equals exact clone/workspace; hygiene/MIT/version19/default-off storage
+passed. Spaced extraction validate3/replay4/package+scaffold+decoder10pass/0fail/0skip.
+
+New38848a8 CI40068264694 Ubuntu Node24 job120795969532 failed independent state
+writers with metadata-state busy:180pass/1fail/86skips. Actual failed log read;
+all7conclusions read:6success/1failure. Root cause unresolved, no corruption/stale-
+lock claim or retry. Medium changed no
+runtime/test/security code. Local packaging success is separate from incomplete
+concurrency verification. Next human High should investigate this before gated
+Windows code trust. Installed149dev10files/private settings/logging/trust unchanged;
+all93IDs retained, all Windows gates closed. Source19 uninstalled. See [PACKAGE-DEV19](PACKAGE-DEV19.md).
+Earlier ce81171/CI40067892456 High OS proof remains distinct/version-specific.
+
+
 ## Source19 verified High checkpoint — repeat metadata diagnosis
 
 Human resumed verifiedc37d744 on GPT-6.1 Sol High. Source19 uninstalled; installed
@@ -271,7 +291,7 @@ issues are reports/leads, not reproductions by this project.
 | SEC-06 Do not collect secrets/environment values | Environment/settings/process access exists | Treat inherited env as sensitive, do not enumerate credentials | All | C-DEV; CX-H; User instruction | deliberately excluded by policy | No credential-store search or secret telemetry | Synthetic secret env/input values do not appear in public logs, reports or UI; minimal configured env | Need only availability flags if justified, never secret values |
 | SEC-07 Keep prompts/transcripts private | Session/message APIs | Explicit sanitized exported input only where feature needs it | All | C-EVT; CX-H; CX-RUN; LOCAL | supported | No private session discovery; changes adapter reads explicit selected Git working tree, patch text only when opted in | Preserve privacy fixtures, verify default metadata-only changes and no session-path reads in production host | Git patches may contain secrets even when sensitive filenames are excluded; review opt-in/scope separately |
 | SEC-08 Opt in to metadata and sensitive telemetry separately | Store/event handlers | Default-off journal/state; stronger consent for content capture | NodeMac; CLI163/Desk | C-EVT; LOCAL | supported | Existing default-off/session metadata; explicit project aggregate and patch/export opt-ins preserved; new observer names default absent | Dev4 count4 unchanged after parent-chat tests; dev5 observer default-off/no-write/scope tests pass | Optional observer hook reception can contain sensitive payload in memory; registration/storage reviewed separately |
-| SEC-09 Preserve private storage under concurrency | Store persistence lacks general transaction guarantee | Private POSIX root, owned locks, bounded append/prune | NodeMac; POSIX-CI; Windows Server2025 NTFS-CI (Node22/24) | C-EVT; LOCAL STATE-PROOF | supported | Original journal/state plus source7 handle/ACL adapter/public APIs/bounded hook lane; source9 corrects directory sharing pins and bounds transient sharing retries | Concurrent writes, private ACL/refusal/link/retention/owned-tree tests on real Windows CI; native client acceptance separate | Hostile same-user/administrator outside claim; Windows project/restore unavailable pending separate gates |
+| SEC-09 Preserve private storage under concurrency | Store persistence lacks general transaction guarantee | Private POSIX root, owned locks, bounded append/prune | NodeMac; POSIX-CI; Windows Server2025 NTFS-CI (Node22/24) | C-EVT; LOCAL STATE-PROOF | supported | Original journal/state plus source7 handle/ACL adapter/public APIs/bounded hook lane; source9 corrects directory sharing pins and bounds transient sharing retries | Concurrent writes, private ACL/refusal/link/retention/owned-tree tests on real Windows CI; native client acceptance separate | Hostile same-user/administrator outside claim; Windows project/restore unavailable pending separate gates  Latest38848a8 CI40068264694 Ubuntu24 independent-writer busy failure unresolved; High reliability review pending, no guarantee of32-record contention success from local pass alone |
 | SEC-10 Maintain UI accessibility and lifecycle | Host UI components and callbacks | Semantic HTML, focus/keyboard, teardown, bounded requests | UIhost; NodeMac simulation | C-UI; CX-UI; LOCAL | supported | Native dev6 controls/chart/table/diff and preview labels/tables/Clear observed; teardown source removal tested in simulation | Synthetic transport/teardown/privacy tests and browser preview pass; one preview keyboard path/narrower-wider usability human-confirmed; source10 focus sequence passed natively; full keyboard/screen-reader/close-pending remain | Browser preview does not establish Codex accessibility or memory erasure |
 
 ## Practical collection and original skills

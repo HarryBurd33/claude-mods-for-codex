@@ -1,5 +1,25 @@
 # Continuation verification log
 
+## Source19 Medium package verification — 2026-10-24
+
+Human resumed verified38848a8 on GPT-6.1 Sol Medium. Exact anonymous public clone
+full181pass/0fail/86Windows-only skips267total. Reviewed179file archive:
+1,261,355unpacked/375,412compressed bytes; SHA256
+40e242938c34582108616f9474a810ae026ab12a47ead19105708996674fe31e.
+Every byte equals exact clone/workspace; hygiene/MIT/version19/default-off storage
+passed. Spaced extraction validate3/replay4/package+scaffold+decoder10pass/0fail/0skip.
+
+New38848a8 CI40068264694 Ubuntu Node24 job120795969532 failed independent state
+writers with metadata-state busy:180pass/1fail/86skips. Actual failed log read;
+all7conclusions read:6success/1failure. Root cause unresolved, no corruption/stale-
+lock claim or retry. Medium changed no
+runtime/test/security code. Local packaging success is separate from incomplete
+concurrency verification. Next human High should investigate this before gated
+Windows code trust. Installed149dev10files/private settings/logging/trust unchanged;
+all93IDs retained, all Windows gates closed. Source19 uninstalled. See [PACKAGE-DEV19](PACKAGE-DEV19.md).
+Earlier ce81171/CI40067892456 High OS proof remains distinct/version-specific.
+
+
 ## Source19 verified High checkpoint — repeat metadata diagnosis
 
 Human resumed verifiedc37d744 on GPT-6.1 Sol High. Source19 uninstalled; installed
