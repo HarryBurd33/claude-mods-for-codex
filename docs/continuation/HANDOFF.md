@@ -1,179 +1,218 @@
-# Dev27 native handoff — next GPT-6.1 Sol High
+# Source28 component authoring handoff — next GPT-6.1 Sol Medium
 
-Current source28 follow-up: the High component-authoring implementation is now
-runnable and tested; see DEV28-REVIEW.md, STATUS.md and ../component-authoring.md.
-Installed27/capture/trust/Windows guards unchanged. Next human Sol Medium for
-CI/package/display-only native review preparation. The earlier next-High planning
-below is historical; a precise source checkpoint handoff follows upload verification.
-
-
-2026-10-24. Human restarted and resumed Sol Medium from75a0d6f. The requested
-bounded native27 batch is verified: new synthetic observation tool/table, six owned
-views and harmless ordinary pre-hook rewrite/control/deny. No source/config/install/
-new trust action/extra model run. Full93-capability product remains incomplete.
-Next consequential feature is broader component authoring; stop for human
-**GPT-6.1 Sol High** before changing its generated access/config/render contracts.
-MacOS acceptance remains first, Windows later; no Windows proof/package-only loop.
+2026-10-24. Human resumed Sol High froma2f76b4. Bounded observer/status/activity
+component authoring is implemented and runnable, preserving legacy three kinds.
+Demanding source/permission/contract work is complete for this milestone; remaining
+CI readback/package/native-review preparation is routine. Stop for human
+**GPT-6.1 Sol Medium**. Full93-capability product remains incomplete. macOS first,
+Windows later; do not resume the deferred Windows proof/package-only loop.
 
 ## Read first
 
-NATIVE-DEV27.md, AUTHORING-NEXT.md, STATUS.md, REQUIREMENTS.md, current
-ARCHITECTURE.md/latest TEST-LOG.md; PACKAGE-DEV27.md and ../event-observation.md
-for immutable installation/access/proofs. MACOS-ACCEPTANCE.md/DELIVERY-PLAN.md retain
-all other gaps. Latest ignored root HANDOFF.md holds exact private settings/cache/
-backups/evidence paths/final verified checkpoint. Earlier restart-pending and
-source27-not-installed wording is historical; current summary supersedes it.
+DEV28-REVIEW.md, STATUS.md, REQUIREMENTS.md, current ARCHITECTURE.md/latest
+TEST-LOG.md and ../component-authoring.md. NATIVE-DEV27.md/PACKAGE-DEV27.md,
+MACOS-ACCEPTANCE.md/DELIVERY-PLAN.md keep exact installed/native evidence and gaps.
+Latest ignored root HANDOFF.md holds private setup/fixtures/logs/backups/final
+checkpoint. Earlier next-High-authoring directions are historical; source28 now
+implements the stated bounded path, not arbitrary custom plugin/code support.
 
-## Branch / verified base / runnable state
+## Verified source / branch / runnable checkpoint
 
 Repo https://github.com/HarryBurd33/claude-mods-for-codex
-Branch codex/astra-groundwork. Starting local/remote
-[75a0d6f73e149f2cd5262fe92689556826d0983a](https://github.com/HarryBurd33/claude-mods-for-codex/commit/75a0d6f73e149f2cd5262fe92689556826d0983a),
-tree7c88d5aed707dd0587eab099fb5a1c75da7cab5c, clean at resume.
-Runtime/tests/CI are unchanged since
-[7d94c34565d72c32edb62ee23eebb52740dc02cb](https://github.com/HarryBurd33/claude-mods-for-codex/commit/7d94c34565d72c32edb62ee23eebb52740dc02cb).
-Installed configured27 derives from public54c2330 archive217files plus three private
-overlays, not newer notes. Final notes commit/tree/local equivalent and independent
-ref verification are reported after upload in reply/private handoff, no self-hash.
-No force-push/history loss/private root handoff upload. Prior local equivalents
-remain on named backup branches. This stage changes only sanitized documentation.
+Branch codex/astra-groundwork. Startinga2f76b4cc001df1fba3edce7f3760fd3e4f2c70c.
+Runnable uploaded/local source:
+[ecabc4587a25e95bd58e9f12b95bc07d2f6659ce](https://github.com/HarryBurd33/claude-mods-for-codex/commit/ecabc4587a25e95bd58e9f12b95bc07d2f6659ce),
+treef8ce6045ce91f53e49dafd7de939cef6976a542f, parenta2f76b4. Exact connector tree,
+expected-parent/nonforce update, fetched full-tree equality and anonymous public
+ls-remote matched. Equivalent local85510131eeb9fbd9a0511e3f29b7f5ac2c2492c4 retained
+on codex/dev28-high-source-local-checkpoint before aligning identical tree.
+No force push/history loss/private root handoff upload. This final notes checkpoint
+identity is read back after upload in reply/private handoff, not guessed as self-hash.
 
-## Host / installed scope / human trust
+Node24.22.0/macOS14.6. Standalone CLI0.163.0 and host-name chatgpt were freshly
+measured in preceding native27 batch; exact running desktop/internal-server version
+not independently attested. Historical installed bundle26.1021.22027/build21747
+is not substituted for a current runtime measurement. No client upgrade/patch.
 
-Fresh sw_vers14.6, Node24.22.0, standalone codex-cli0.163.0. CLI printed its prior
-PATH alias permission warning, no repair/update. Desktop MCP App reports connected
-host chatgpt; exact running bundle/internal server version not independently
-attested. Previous bundle26.1021.22027/build21747 is historical, separate from CLI.
+## Completed / partial / unverified
 
-User-profile/cache installed0.2.0-dev.27, not project-only. All217cache files still
-match reviewed immutable candidate, with only private .mcp settings selection,
-unchanged configured26mods.json and three inert review comments26→27 versus public
-archive. Default hooks only SessionStart/PreToolUse/PostToolUse. Optional lifecycle
-reception/storage remain off. Original settings SHA unchanged; new settings equal
-human-authorized proposal: only observationExport adds the359-byte public synthetic
-fixture, outside selected project. Project/session capture/rules/data/retention and
-old usage export unchanged. Reviewed26/10 preserved for selective rollback.
+- Useful new POSIX private data-only component authoring: strict observer/status/
+  activity specs, all reception/retention/display false, access review/complete
+  marker/synthetic fixtures, validation, read-only replay and fresh merge plan.
+  Existing notice/deny/replacement scaffold source/output behavior unchanged.
+- Independent componentObserverEvents storage list retains only selected optional
+  event/time metadata, not default events or dormant legacy selections. Old config
+  semantics remain when list absent; overlap projects once. No state/journal schema
+  change, raw field retention, control/permission/prompt/model alteration.
+- Inline statusComponents in reviewed runtime settings, max8/8events, no new path/
+  export grant. No-argument read-only mods.status; all-off no IO; Activity decorates
+  same snapshot. Literal bounded table, unavailable not zero, no health/success/
+  unique-turn inference. Owned Activity component, not native chrome/separate client.
+- Updated skill routes actual installed feature detection and both workflows;
+  source CLI paired/status demonstrations pass with temporary offline activation
+  intent, originals untouched. Local callbacks make no model calls; describing
+  via skill uses selected model/usage. Not an independent skill-evaluation result.
+- Tests pass for strict schemas, separate switches, access/non-inference, core/
+  dormant legacy non-capture, privacy/scope, private files/bounds/links/tampering/
+  partial output/no overwrite, actual CLI/hooks subprocess, literal simulated UI.
+  These do not prove native28. Source28 is not installed/package-accepted yet.
+- All93 requirement IDs/order remain. AU-06/07/10/SK-04 have useful source extension,
+  actual additional-component review/install/native proof still pending. Broader
+  optional events/failure/cancel/notice/resume/full accessibility/lifecycle/disable/
+  older rollback/themes/routing/context/arbitrary authoring/platform gaps remain.
 
-Before restart human personally reviewed all three27hooks; fresh current bounded
-read-only inventory3enabled/trusted/zeroerrors/zeromodelturns. Agent never wrote
-hashes. Before restart only three owned trusted_hash changes were observed vs
-pre-update backup; post-restart read now shows both trusted_hash and
-trusted_content_hash changes in the same three owned entries. Every other shared
-config/hook/trust field preserved. Exact host bookkeeping timing/cause not
-instrumented. Initial stale three-field expectation failed, then six-field fresh
-comparison confirmed explicitly; no restore/policy weakening/foreign change hidden.
+## Exact contracts and code
 
-## Completed native batch / observed commands
+src/component-contract.mjs:
+- Specs: observer(name/kind/events), status and activity(add title). IDs lowercase
+  max48, literal title max96UTF16units/no controls or bidi; observer/paired1–7
+  optional lifecycle names, status1–8 known events. No code/HTML/paths/commands/
+  model/API/permission fields, accessors/custom array prototypes. Version1 component
+  has id and observer{reception,retention,events}/status{enabled,title,events}; paired
+  selections equal. Immutable validated data. Intent changes only booleans.
+- componentPlan returns installed:false/access and separate registration/hookConfig/
+  runtimeSettings fragments. Fixed Node dispatcher,3s Interrupt/SessionEnd or5s
+  others, no proposed registration while off. Authored retention adds only
+  metadataState.componentObserverEvents; no core enabled/scope/legacy modification.
+  Union explicitly reviewed event names, one dispatcher per event, preserve other
+  components. Shared capture/registration removal requires review. No auto-merge.
+- projectStatusComponents selects delivery counts only; absent event in available
+  retained data0, unavailable/bad/overflow null. No content/IDs/tools/native request
+  routing or source authenticity guarantee. Counts may overlap and are not health.
+- replayComponentEvent validates host-shape synthetic data, always response{},
+  projects only event name when proposed reception+retention selected. It models
+  this bundle, not pre-existing external registrations. No execution/writes.
 
-- New live mods.observations discovered and invoked. Aggregate matches authorized
-  public synthetic fixture: turns started1/completed0/failed1/streamErrors0;
-  command completed0/failed1/declined0; exits zero0/nonzero1/unavailable0;
-  streamStatus failed, cancellation unavailable. No raw contents/IDs/paths returned.
-- Actual owned Access and usage table rendered those fields and correct provenance/
-  limitations: selected snapshot separate from hooks/current chat, records not
-  unique executions, buckets overlap, absent data not failure/cancellation. Old
-  selected usage snapshot remains separately available/completed, private counters
-  not published. No file/setting selection change.
-- Activity before/after7records/same revision/project scope, producer health unknown.
-  Current chat is outside selected child capture; do not broaden logger or treat
-  per-shell workdir as native session scope. No new SessionStart/PostToolUse capture
-  independently observed in this batch. Watch never started, no background watcher.
-- All six owned views loaded: two existing selected synthetic files/Git statuses,
-  harmless working-tree patch, two previously selected commit Replay patch with
-  provenance/exclusions, Access table and local preview. Existing default flowchart
-  rendered3nodes/2edges/complete tables, source unchanged/no Clear. No restoration.
-- Ordinary exec_command production print BEFORE→AFTER/exit0; authored print
-  BEFORE→AFTER/exit0; fixed control unchanged/exit0; configured harmless denial
-  print blocked by PreToolUse before OS execution. Expected rejection, no destructive
-  command, elevated retry, automatic approval or permission weakening.
-- Actual MCP Apps DOM/synthetic locator interaction, not native pointer/keyboard/
-  VoiceOver/full accessibility/independent network trace. One panel present/used;
-  default source preserved, left in Access view. Private screenshot of only the
-  synthetic values retained. Screenshot API full-page/crop refused; visible capture
-  succeeded. A guessed changes heading timed out; fresh DOM showed actual file.
-  These are UI-tool limits/selector correction, not product failures/code fixes.
+src/component-authoring.mjs:
+- New platform guard before argv/options/spec/path for every IO entrypoint/CLI.
+  POSIX exclusive private new directory/files; no overwrite/retry/auto-cleanup.
+  Canonical private owned regular one-link files, sampled identities/content,
+  no-follow/nonblocking handles, fatal UTF8;32KiB/file128KiB/bundle, fixed names.
+- component/access/plan/summary/REVIEW and synthetic matching per event/control/
+  malformed fixtures; bundle.json hashes/completion marker last. Not trust or
+  authentication/crash-atomicity/hostile same-user sandbox/syscall wall-time proof.
+  Exact template-derived format; validate with same reviewed generator version.
+  Partial artifacts remain for inspection and cannot load/replay/plan.
+- Separate private intent outside bundle, only booleans differ; other fields need
+  regeneration/review. Replay uses explicit synthetic summary, never journal state
+  or commands. Fixed relative fixture labels, no selected private path diagnostics.
 
-No runtime/test/CI/config/install changes or production cleanup/synthetic journal
-replay. No additional model/API run; all old separate grants consumed. Current
-chat/skills still consume selected-model usage; callbacks add no model calls.
-Native nonzero vs invocation error/cancel/Stop/Interrupt and visible notice/resume/
-reset are unverified. New tool/table is a disclosed explicit snapshot approximation,
-not universal native failure subscription. Wider lifecycle/accessibility/disable/
-older rollback/theme/routing/context/authoring/platform requirements remain.
+src/cli.mjs: scaffold-component --spec PRIVATE_JSON --output NEW_ABSOLUTE_DIR;
+validate-component --bundle PRIVATE_DIR; component-plan/replay-component --bundle
+PRIVATE_DIR [--intent PRIVATE_JSON]. No installer/apply command. Old commands intact.
 
-## Existing automated / package evidence — not repeated for notes
+src/config.mjs validates componentObserverEvents; dispatcher.mjs observer path ORs
+explicit legacy storage and authored event allowlist. Core metadata/journal/mod
+control behavior unchanged; no new event names. Hook-main/state/journal/retention/
+legacy scaffold/default hooks/Windows helpers all untouched.
 
-PACKAGE-DEV27: exact public54c2330 archive217files,1,690,660unpacked/506,560bytes,
-SHA2563a1c87dc28ef60949a0b623b0334c73e4c5547dbabaf8bea2d73d9a4cda42de4;
-byte-equal/hygiene/MIT/default-off/proof checks. Fresh spaced extraction46pass/
-0fail/2Windows-only skips48total; validate3/replay4. Original source CI40131377115:
-four POSIX217pass/0fail/110Windows-only skips327total each, portable success and
-actual new Windows observation before-options/path/IO refusal pass. No full-suite
-or archive repeat solely for native notes. Notes archive never replaces installation.
+runtime-settings.mjs adds inline statusComponents behind unchanged Windows early
+refusal; server.mjs validates/project counters and mods.status, UI literal Activity
+section, version28 manifest/package/server/UI. Skill update in
+skills/mod-scaffolding/SKILL.md; docs/component-authoring.md, examples/components
+turn-weather and tool-deliveries. No agents metadata/invocation policy change.
 
-Both Windows storage jobs25storage passes/84of85process proofs; same mandatory
-real installed cmd/git image positive refuses Image before bytes, observed links2
-vs original one-link guard, no sample/hash/import/version/execution. Failure/test/
-all Windows settings/project/Git/restore/retention gates unchanged. No all-green or
-native Windows11/WSL claim. Last native host unavailable; no repeat question or new
-Windows/REA/system-repair investigation next.
+## Commands actually run / evidence
 
-## Next High implementation — exact scope and acceptance
+- node --test components/scaffold/observers/dashboard/rendering first32total:
+  30pass/1fail/1Windows skip. New test passed incomplete direct factory settings;
+  corrected to valid session scope with missing session ID, no guard weakening.
+  Expanded33total32pass/0fail/1skip.
+- npm test full339total228pass/0fail/111Windows-only skips; final structural array/
+  accessor hardening full repeat same228/0/111,7.1s. Final fixed relative label
+  output refinement related19total18pass/0fail/1Windows skip. No full repeat solely
+  docs/labels. node --check new modules/diff checks pass; EOF blank corrected.
+- npm run validate3mods/replay4legacy fixtures unchanged. Two real source-CLI
+  paired/status private demos: generate/validate/disabled replay/temporary private
+  boolean intent/replay/fresh plan, synthetic totals5, originals unchanged. Not
+  native activation; no fixture command or model/API run. Actual synthetic Node
+  hook subprocess persisted only event/recordedAt while core/dormant capture off.
+- Copied-source fault before completion marker confirms partial retained output/
+  loader refusal/no retry; not all crash or hostile-race coverage. Simulated table
+  checks literal labels/row headers/8component8event bounds/unavailable fallback,
+  not native keyboard/VoiceOver/host rendering.
+- Skill quick_validate.py attempted in system and configured bundled Python;
+  missing PyYAML both, helper unavailable/not passed. No dependency install/system
+  repair; frontmatter/routing/reference content inspected manually. Existing
+  package metadata tests/source CLI workflow are separate evidence.
+- Preserve all93IDs/default hooks/legacy scaffold/Windows runtime and settings
+  before-IO guard; cache217/settings/fixture/old usage/scope/rules unchanged.
+  Existing service still7records/same revision; no count manufacture/logger widening.
 
-**GPT-6.1 Sol High.** Current routine native batch complete. Broader authoring is a
-requested supported gap, not another optional package-only milestone. Read
-AUTHORING-NEXT.md and actual src/scaffold.mjs/skills/mod-scaffolding/SKILL.md first.
-The scaffold currently accepts only strict notice/deny/replacement shapes, generates
-disabled config/access/review/match/control fixtures and never executes them.
+[CI40138532390](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40138532390)
+started for exactecabc458. Last snapshot in progress; no decoded job counts/final
+conclusion yet. Medium should read exact final jobs/logs, especially new actual
+Windows before-IO guard5pure checks/6POSIX skips if observed (not assumed). No
+High waiting/polling merely to consume usage. Source28 package/spaced extraction/
+CI/native28 unverified until observed.
 
-1. Design/implement one coherent authoring extension for an observation-only
-   lifecycle component and a bounded metadata-backed owned status component using
-   existing official-host hooks/MCP App, with stable reviewable contracts.
-   Decide narrow useful representation after source review; avoid unrestricted
-   code generator, arbitrary module loading/eval/HTML, native slash callback claims,
-   native chrome restyling or silent custom-client substitute.
-2. Preserve existing three kinds/replays/permissions/defaults. Generated components
-   start disabled/unregistered with explicit access delta and separate reception/
-   storage choices, synthetic match/control/malformed tests and review/install/
-   removal instructions. No new project/export/data selection implicitly inherited.
-3. Meaningful no-overwrite/traversal/link/bounds/privacy/partial-output/combination
-   tests, literal rendering and no command execution/model/network calls from
-   generator/replay. Natural-language skill uses selected model/usage explicitly.
-   New unavailable Windows paths must refuse before IO; preserve all old guards.
-4. Runnable code/tests/docs, not only speculative research. Broader AU-06/07/10,
-   SK-04 remain partial until actual useful workflow/acceptance. All93 IDs remain.
-   Build concrete future harmless native review only after usable source; preserve
-   installed27 until supported human-reviewed update. No old trust/grant reuse.
-5. Native optional reception/storage, changed-code trust/restart and any extra
-   bounded model-run usage need explicit human selection/authorization at the
-   concrete review step. No production cleanup, automatic approval, retries,
-   prompt/parent-model changes or destructive demonstrations.
-6. Save/upload/nonforce/full-tree/independent-ref verify and stop for Medium when
-   only routine package/acceptance remains. If a new hard problem truly needs
-   Astra, checkpoint and ask human; do not delegate around model stopping points.
+Previous27CI40131377115 four POSIX217passes/portable success; both Windows storage
+jobs25passes/84of85process proofs, same mandatory installed cmd/git image Image
+refusal before bytes/links2 vs one-link guard, no hashes/import/version/execution.
+Failure/assertion/gates unchanged. No all-green/native Windows11/WSL claim or new
+Windows/REA investigation. Last native host unavailable, do not repeat question.
 
-## Rollback / user action now
+## Installed configuration, rollback and user actions
 
-Only human model switch is required now, no new restart/trust/fixture selection.
-No current machine change needs rollback. To stop export reads later, remove only
-observationExport via reviewed settings/supported reload. Old settings retained.
-Selective package rollback can point only owned marketplace source to immutable26,
-supported same-ID add, verify cache/trust/loaded snapshot; older-version rollback
-acceptance remains unverified. Never whole shared-config restore/cache patch/hash
-copy/data deletion/ACL repair/live-lock reaping/automatic recovery. Existing data
-retention cleanup is a separate explicit action, not authorized here.
+Installed27 immutable217files from54c2330+three private overlays stays frozen.
+Old settings SHA/new authorized settings/public359byte synthetic fixture/usage
+selection/capture project-session/rules/data/retention unchanged. Same prior three
+human-reviewed owned trust entries differ in their two hash fields from pre-update
+backup; all other config/trust fields preserved. No agent trust/cache/settings or
+marketplace write. Actual27 native proof remains versioned in NATIVE-DEV27, not28.
+No optional reception/storage/display activation in live settings, additional model
+run, production cleanup/synthetic journal replay/background watcher/child.
+
+No current rollback needed. Original component outputs are private new artifacts;
+recovery/removal separate explicit owner action, no automatic delete/retry. Future
+native disable removes only chosen authored status/event selections/registrations
+not needed by other components; preserve legacy choices and data. Package rollback
+selectively restores only owned immutable source with supported same-ID add,
+cache/trust/loaded verification. Never whole shared-config restore/cache patch/
+hash copy/ACL repair/lock reaping. Old reviewed27/26/10 remain preserved.
+
+## Next tasks — exact model and human boundaries
+
+**GPT-6.1 Sol Medium.** Source/security work complete for this bounded milestone;
+CI readback, packaging and concrete review/native preparation are routine.
+
+1. Read source40138532390 exact jobs/decoded logs. Preserve known Windows image
+   failure. New correctness/security failures require High checkpoint, not weakened
+   tests/guard or attempted Medium runtime fix.
+2. Verify anonymous exact public clone/archive/spaced extraction/MIT/versions/
+   defaults/private exclusion/proof separation, plus new component CLI/skill/docs
+   packaged. Use local npm cache if default outside sandbox; no system repair.
+   Reuse exact full suite evidence unless new code/failure warrants repetition.
+3. Prepare a concrete **display-only** tool-deliveries authoring/native review from
+   existing private demo/bundle or fresh source CLI output. Derive expected counts
+   from current explicitly selected metadata; never force counts5 (demo5 synthetic
+   is coincidental). No new observer reception/storage, path/export/capture grant,
+   model run or data cleanup needed. The independent storage code remains unused
+   in such a proof and does not gain native-event certification.
+4. Keep installed27 untouched until reviewable immutable source28 update prepared.
+   Explicit human display selection, source/code/access review, supported same-ID
+   installation, human changed-hook trust (new dispatcher/config code), restart/
+   loaded checks remain separate. Do not reuse prior trust or silently update cache.
+   Preserve other entries/current data/usage/fixture/scope. Do not automatically
+   enroll lifecycle events. Any new event/storage selection or additional bounded
+   model/API run requires fresh specific human authorization after exact review.
+5. Verify actual native28 new authored counter/tool/skill only after proper update/
+   review/reload; unit/subprocess/projection alone not proof. Broader optional native
+   events and other93gaps stay incomplete. Stop for High before new consequential
+   source/security work or later Windows work. Save/upload/full-tree/independent-ref
+   verify before human model/restart stops; no delegated/automatic/background switch.
 
 ## Complete copy-and-paste resume
 
-I've switched to GPT-6.1 Sol, High. Continue from the verified dev27-native handoff
+I've switched to GPT-6.1 Sol, Medium. Continue from the verified source28 handoff
 checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
-NATIVE-DEV27.md, AUTHORING-NEXT.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md,
-latest TEST-LOG.md and the latest ignored root HANDOFF.md. Implement the bounded
-broader authoring workflow for supported lifecycle observers and an owned status
-component, with strict disabled-by-default artifacts/access review and meaningful
-validation/replay tests. Preserve existing notice/deny/replacement contracts,
-installed27/logging scope/human trust/synthetic fixture/old usage selection/all93
-requirements and Windows guards/known failure. No optional event/storage enrollment,
-extra model/API run, production cleanup or automatic trust. Prepare concrete native
-review only after runnable source, then save/upload/verify and stop for Medium when
-routine work is sufficient. No separate-client direction or delegated model switch.
+DEV28-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md and
+docs/component-authoring.md plus the latest ignored root HANDOFF.md. Read source
+CI40138532390 and verify exact source28 packaging/spaced extraction, then prepare
+a concrete display-only authored-counter native review against existing selected
+metadata. Preserve installed27/logging scope/human trust/synthetic fixture/old usage
+selection/all93 requirements and Windows guards/known failed image check. No live
+optional event/storage enrollment, extra model/API run, production cleanup or
+automatic trust. Stop for High before new correctness/security/consequential code
+or deferred Windows work. Save/upload/verify progress before any human-controlled
+model-switch/restart stop.

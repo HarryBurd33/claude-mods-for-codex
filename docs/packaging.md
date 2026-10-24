@@ -24,7 +24,7 @@ The runtime requires Node.js 22 or newer and has no dependencies to install. Bui
 npm pack --ignore-scripts --pack-destination /absolute/path/to/output
 ```
 
-This creates a local archive; it does not publish or install the plugin. `package.json` is private to prevent accidental npm publication. The current development version is `0.2.0-dev.27`; match compatibility manifest,
+This creates a local archive; it does not publish or install the plugin. `package.json` is private to prevent accidental npm publication. The previously packaged version is `0.2.0-dev.27`; source28 packaging is pending. Match compatibility manifest,
 server and UI appInfo version when changing versions. [PACKAGE-DEV27](continuation/PACKAGE-DEV27.md)
 records the exact54c2330 public217-file archive, byte/hygiene inspection and fresh
 spaced-path46focused passes/0fail/2skips plus validate/replay. Four POSIX source CI

@@ -54,6 +54,19 @@ Next exact human Sol Medium for readback/package/display-only native preparation
 High before new correctness/security/consequential code. Full93product incomplete.
 
 
+## Source28 uploaded runnable checkpoint / CI snapshot
+
+Public/local [ecabc4587a25e95bd58e9f12b95bc07d2f6659ce](https://github.com/HarryBurd33/claude-mods-for-codex/commit/ecabc4587a25e95bd58e9f12b95bc07d2f6659ce),
+treef8ce6045ce91f53e49dafd7de939cef6976a542f, parenta2f76b4. Exact connector/local tree,
+expected-parent/nonforce upload, fetched full-tree equality and anonymous public
+ref matched. Local equivalent8551013 retained codex/dev28-high-source-local-checkpoint.
+[CI40138532390](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40138532390)
+started for ecabc458, last snapshot in progress; no final job counts read. Medium
+must decode exact results/new Windows before-IO refusal rather than infer success
+from local skips. Previous Windows failure unchanged. No High waiting/extra model
+run/native28 claim. Final notes checkpoint only updates handoff/verification text;
+installed27 immutable source remains untouched.
+
 ## Dev27 restarted native acceptance — 2026-10-24 — Sol Medium
 
 Human restarted/resumed75a0d6f. [NATIVE-DEV27](NATIVE-DEV27.md) records exact scope.
