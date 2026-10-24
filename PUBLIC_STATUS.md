@@ -1,6 +1,18 @@
 # Project status — source16 source HEAD binding — 2026-10-23
 
-**The full93-capability product is incomplete. Development source0.2.0-dev.16
+## Source17 candidate — owned metadata helper composition
+
+Original isolated composition runs retained HEAD/ref/index capture inside the
+existing creation-time owned job with fixed original fixture executable, private
+cwd/EOF/minimal env,4s child deadline/4KiB output. Nine new Windows tests pending
+CI; local170pass/0fail/82Windows-only skips252total, validate3/replay4. Parent
+preflight IO outside child timer; synthetic stalls do not prove blocked kernel IO
+termination. No production operation/gate/installed10/logging/trust change.
+Source17 uninstalled; full93product/native Windows/Git/loader/provenance/ignore/
+writer incomplete. See docs/continuation/DEV17-REVIEW.md and TEST-LOG.md. Source16 below is historical.
+
+
+**The full93-capability product is incomplete. Development source0.2.0-dev.17
 is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
 Human resumed GPT-6.1 Sol High from verifiedfbce126.
 

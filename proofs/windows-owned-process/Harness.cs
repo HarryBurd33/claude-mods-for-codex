@@ -21,6 +21,13 @@ public static class Harness {
  [DllImport("kernel32.dll")] static extern bool UnmapViewOfFile(IntPtr address);
  static string Exe { get {return System.Reflection.Assembly.GetExecutingAssembly().Location;} }
  static string B64(string value) { return Convert.ToBase64String(Encoding.UTF8.GetBytes(value)); }
+ static void OperationMarker(string parent,string suffix,string value) {
+  // Private synthetic fixture markers only, never adopted/overwritten or product
+  // telemetry. They intentionally survive abrupt death for the independent test.
+  using(var file=new FileStream(Path.Combine(parent,"operation"+suffix),FileMode.CreateNew,FileAccess.Write,FileShare.Read)) {
+   byte[] bytes=new UTF8Encoding(false).GetBytes(value);file.Write(bytes,0,bytes.Length);
+  }
+ }
  static Process Spawn(string mode,string path) {
   var p=new ProcessStartInfo(Exe,"child "+mode+" \""+path+"\"");p.UseShellExecute=false;p.CreateNoWindow=true;
   return Process.Start(p);
@@ -33,6 +40,20 @@ public static class Harness {
    case "args": for(int i=2;i<a.Length;i++)Console.WriteLine(B64(a[i]));return 0;
    case "env": Console.Write(B64(Environment.GetEnvironmentVariable("MODS_SYNTHETIC_ALLOWED")??""));Console.Write("|");Console.Write(B64(Environment.GetEnvironmentVariable("MODS_SYNTHETIC_FORBIDDEN")??""));return 0;
    case "stdin": Console.Write(Console.In.Read()==-1?"eof":"unexpected-input");return 0;
+   case "metadata-operation":
+    try {
+     if(Environment.GetEnvironmentVariable("MODS_SYNTHETIC_FORBIDDEN")!=null || Environment.CurrentDirectory!=a[3] || Console.In.Read()!=-1)throw new IOException();
+     OperationMarker(a[3],".pid",Process.GetCurrentProcess().Id.ToString());
+     if(a[4]=="before") {OperationMarker(a[3],".ready","before-capture");Thread.Sleep(60000);return 0;}
+     using(var selected=new CodexMods.PrivateStorage.GitSelectedMetadataProof(a[2],a[3],true,CancellationToken.None)) {
+      OperationMarker(a[3],".scratch",selected.Path);OperationMarker(a[3],".ready","captured");
+      if(a[4]=="stall")Thread.Sleep(60000);
+      if(a[4]=="exit")Environment.Exit(23); // Deliberately skips managed cleanup.
+      if(a[4]=="flood")while(true)Console.Write(new string('x',4096));
+      selected.Verify();
+     }
+     Console.Write("metadata-complete");return 0;
+    } catch(IOException) {Console.Write("metadata-refused");return 7;}
    case "scratch-read": Console.Write(CodexMods.PrivateStorage.ScratchReadProof(a[2])?"verified":"mismatch");return 0;
    case "metadata-read": Console.Write(CodexMods.PrivateStorage.GitMetadataReadProof(a[2],a[3]=="full")?"verified-layout":"mismatch");return 0;
    case "metadata-incompatible":
@@ -70,6 +91,19 @@ public static class Harness {
    if(a.Length>1 && a[0]=="child")return Child(a);
    if(a.Length<3 || a[0]!="run")return 2;
    string mode=a[1],directory=a[2];
+   if(mode=="metadata-operation" || mode=="metadata-operation-cancel" || mode=="metadata-operation-pre-cancel") {
+    using(var cancellation=new CancellationTokenSource()) {
+     if(mode=="metadata-operation-pre-cancel")cancellation.Cancel();
+     if(mode=="metadata-operation-cancel") {
+      var request=new Thread(delegate(){Console.In.ReadLine();try {cancellation.Cancel();}catch(ObjectDisposedException){}});request.IsBackground=true;request.Start();
+     }
+     try {
+      var value=CodexMods.PrivateStorage.RunMetadataOperationProof(a[4],directory,a[3],a[5],cancellation.Token);
+      Console.WriteLine("ok|"+value.ExitCode+"|"+Convert.ToBase64String(value.Output)+"|"+Convert.ToBase64String(value.Error));
+     } catch(OperationCanceledException){Console.WriteLine("cancelled");}
+       catch(IOException){Console.WriteLine("refused");}
+    }return 0;
+   }
    if(mode=="transient-pin" || mode=="held-pin") {
     try {CodexMods.PrivateStorage.SharingPinProof(directory,mode=="transient-pin");Console.WriteLine("pinned");}
     catch(IOException) {Console.WriteLine("refused");}return 0;

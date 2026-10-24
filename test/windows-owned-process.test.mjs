@@ -759,3 +759,108 @@ test('Windows selected metadata owner death removes owned scratch and releases H
     await writeFile(ref,'released-on-death');await writeFile(join(f.source,'HEAD'),'released-on-death');
   } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
 });
+
+// Source17: fixed independently compiled fixture helper only. Parent preflight IO
+// is outside the child deadline; Thread.Sleep models a stalled step after capture,
+// not an injected kernel hang, native Codex permission or real Git invocation.
+async function operationFixture(){
+  const f=await selectedFixture('ref: refs/heads/main\n');await writeFile(join(f.source,'refs','heads','main'),'c'.repeat(40)+'\n');
+  const codeRoot=f.parent+' code';await windowsStorageRequest('prepare-directory',codeRoot);
+  await copyFile(f.exe,join(codeRoot,'owned-proof.exe'));
+  assert.deepEqual(await readFile(join(codeRoot,'owned-proof.exe')),await readFile(f.exe));
+  return {...f,codeRoot};
+}
+const operationArgs=(f,kind,mode='metadata-operation')=>['run',mode,f.source,f.parent,f.codeRoot,kind];
+const operationPath=(f,suffix)=>join(f.parent,'operation'+suffix);
+async function operationReady(f,expected='captured'){
+  for(let n=0;n<300;n++){
+    try {if(await readFile(operationPath(f,'.ready'),'utf8')===expected)return;}catch(e){if(e.code!=='ENOENT')throw e;}
+    await new Promise(resolve=>setTimeout(resolve,20));
+  }
+  assert.fail('Owned metadata helper did not reach the fixed synthetic readiness state');
+}
+function operationHolder(f,kind='stall',mode='metadata-operation'){
+  const child=spawn(f.exe,operationArgs(f,kind,mode),{windowsHide:true,stdio:['pipe','pipe','pipe']}),parts=[],errors=[];
+  let size=0;child.stdout.on('data',b=>{size+=b.length;if(size>8192)child.kill();else parts.push(b);});
+  child.stderr.on('data',b=>{size+=b.length;if(size>8192)child.kill();else errors.push(b);});
+  const closed=new Promise((resolve,reject)=>{child.once('close',resolve);child.once('error',reject);});
+  const timer=setTimeout(()=>child.kill(),10000);child.once('close',()=>clearTimeout(timer));
+  return {child,closed,output:()=>Buffer.concat(parts).toString().trim(),error:()=>Buffer.concat(errors).toString()};
+}
+async function operationGone(f,{normal=false}={}){
+  await dead(operationPath(f,'.pid'));
+  const scratch=await readFile(operationPath(f,'.scratch'),'utf8');assert.ok(scratch.startsWith(f.parent+win32.sep+'owned-'));
+  await metadataFilesAbsent(scratch);
+  if(normal)await absent(scratch);else await emptyMetadataHierarchy(scratch);
+  assert.equal(await readFile(join(f.source,'HEAD'),'utf8'),'ref: refs/heads/main\n');
+  assert.equal(await readFile(join(f.source,'refs','heads','main'),'utf8'),'c'.repeat(40)+'\n');
+  await writeFile(join(f.source,'HEAD'),'released-head');await writeFile(join(f.source,'refs','heads','main'),'released-ref');
+  await writeFile(join(f.source,'index'),'released-index');await writeFile(join(f.source,'info','exclude'),'released-exclude');
+}
+test('Windows owned metadata operation completes with fixed output, EOF, private cwd and stripped synthetic environment',native,async()=>{
+  const f=await operationFixture();
+  assert.deepEqual(result(await run(f.exe,operationArgs(f,'complete'),{env:{...process.env,MODS_SYNTHETIC_FORBIDDEN:'must-not-inherit'}})),{code:0,out:'metadata-complete',err:''});
+  await operationReady(f);await operationGone(f,{normal:true});
+  assert.deepEqual((await readdir(f.parent)).sort(),['operation.pid','operation.ready','operation.scratch']);
+});
+test('Windows owned metadata operation returns abrupt exit status and OS cleanup without relying on managed disposal',native,async()=>{
+  const f=await operationFixture();assert.deepEqual(result(await run(f.exe,operationArgs(f,'exit'))),{code:23,out:'',err:''});
+  await operationReady(f);await operationGone(f);
+});
+test('Windows owned metadata operation deadline kills a captured helper, releases source/code leases and deletes owned bytes',native,async()=>{
+  const f=await operationFixture(),h=operationHolder(f),start=performance.now();
+  try {
+    await operationReady(f);
+    await assert.rejects(writeFile(join(f.source,'HEAD'),'must-not-change'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+    await assert.rejects(writeFile(join(f.codeRoot,'owned-proof.exe'),'must-not-change'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+    await assert.rejects(rename(f.codeRoot,f.codeRoot+' moved'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+    assert.equal(await h.closed,0);assert.equal(h.output(),'refused');assert.equal(h.error(),'');assert.ok(performance.now()-start<6500);
+    await operationGone(f);await rename(f.codeRoot,f.codeRoot+' released');
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows owned metadata operation explicit cancellation terminates captured helper and releases source leases',native,async()=>{
+  const f=await operationFixture(),h=operationHolder(f,'stall','metadata-operation-cancel');
+  try {
+    await operationReady(f);const start=performance.now();h.child.stdin.end('\n');
+    assert.equal(await h.closed,0);assert.equal(h.output(),'cancelled');assert.ok(performance.now()-start<2000);
+    await operationGone(f);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows owned metadata operation external owner death closes its sole job and captured helper handles',native,async()=>{
+  const f=await operationFixture(),h=operationHolder(f);
+  try {
+    await operationReady(f);h.child.kill();await h.closed;await operationGone(f);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows owned metadata operation pre-cancels without launch and bounds a synthetic pre-capture stall',native,async()=>{
+  const f=await operationFixture();
+  assert.equal(await run(f.exe,operationArgs(f,'complete','metadata-operation-pre-cancel')),'cancelled');
+  assert.deepEqual(await readdir(f.parent),[]);
+  assert.equal(await run(f.exe,operationArgs(f,'before')),'refused');
+  await operationReady(f,'before-capture');await dead(operationPath(f,'.pid'));
+  await assert.rejects(access(operationPath(f,'.scratch')),{code:'ENOENT'});
+  await writeFile(join(f.source,'HEAD'),'unselected-source-writable');
+});
+test('Windows owned metadata operation source/parser failure is nonzero data and marker collision never overwrites',native,async()=>{
+  const f=await operationFixture();await writeFile(join(f.source,'index'),'malformed-index');
+  assert.deepEqual(result(await run(f.exe,operationArgs(f,'complete'))),{code:7,out:'metadata-refused',err:''});
+  await dead(operationPath(f,'.pid'));assert.deepEqual(await readdir(f.parent),['operation.pid']);
+  await writeFile(join(f.source,'HEAD'),'released-on-parser-failure');
+  await writeFile(join(f.source,'refs','heads','main'),'released-on-parser-failure');
+  const other=await operationFixture();await writeFile(operationPath(other,'.pid'),'unowned-sentinel');
+  assert.deepEqual(result(await run(other.exe,operationArgs(other,'complete'))),{code:7,out:'metadata-refused',err:''});
+  assert.equal(await readFile(operationPath(other,'.pid'),'utf8'),'unowned-sentinel');assert.deepEqual(await readdir(other.parent),['operation.pid']);
+});
+test('Windows owned metadata operation output overflow kills captured helper and discards failed output',native,async()=>{
+  const f=await operationFixture();assert.equal(await run(f.exe,operationArgs(f,'flood')),'refused');
+  await operationReady(f);await operationGone(f);
+});
+test('Windows owned metadata operation refuses unsafe code roots, mutation grants, junction cwd and unknown kind before launch',native,async()=>{
+  const f=await operationFixture();
+  for(const args of [operationArgs(f,'unknown'),['run','metadata-operation',f.source,f.parent,f.source,'complete'],['run','metadata-operation',f.source,f.parent+'\\..\\alias',f.codeRoot,'complete']])assert.equal(await run(f.exe,args),'refused');
+  const exe=join(f.codeRoot,'owned-proof.exe');await fixtureAcl(exe,'code-write');
+  assert.equal(await run(f.exe,operationArgs(f,'complete')),'refused');await fixtureAcl(exe,'private');
+  assert.deepEqual(await readdir(f.parent),[]);
+  const outside=f.parent+' original';await rename(f.parent,outside);await symlink(outside,f.parent,'junction');
+  assert.equal(await run(f.exe,operationArgs(f,'complete')),'refused');assert.deepEqual(await readdir(outside),[]);
+});

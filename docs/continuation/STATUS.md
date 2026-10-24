@@ -1,5 +1,17 @@
 # Current status — source16 positive HEAD binding — 2026-10-23
 
+## Source17 candidate — owned metadata helper composition
+
+Original isolated composition runs retained HEAD/ref/index capture inside the
+existing creation-time owned job with fixed original fixture executable, private
+cwd/EOF/minimal env,4s child deadline/4KiB output. Nine new Windows tests pending
+CI; local170pass/0fail/82Windows-only skips252total, validate3/replay4. Parent
+preflight IO outside child timer; synthetic stalls do not prove blocked kernel IO
+termination. No production operation/gate/installed10/logging/trust change.
+Source17 uninstalled; full93product/native Windows/Git/loader/provenance/ignore/
+writer incomplete. See DEV17-REVIEW.md and TEST-LOG.md. Source16 below is historical.
+
+
 ## Source16 Medium package verification — 2026-10-23
 
 Human resumed3c022e7/tree997da69 on GPT-6.1 Sol Medium. Exact anonymous clean
