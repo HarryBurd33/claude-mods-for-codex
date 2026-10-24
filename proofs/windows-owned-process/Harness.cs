@@ -115,6 +115,12 @@ public static class Harness {
    if(mode=="pin-diagnosis") {
     Console.WriteLine(CodexMods.PrivateStorage.ProgramPinDiagnosisProof(a[3],a[4],a[5]));return 0;
    }
+   if(mode=="code-ancestor") {
+    Console.WriteLine(CodexMods.PrivateStorage.AssessKnownCodeAncestorProof(a[3]));return 0;
+   }
+   if(mode=="code-ancestor-case") {
+    Console.WriteLine(CodexMods.PrivateStorage.CodeAncestorDescriptorCaseProof(a[3]));return 0;
+   }
    if(mode=="inventory-pin") {
     // Test-only retained object boundary. No image loading, version query, Git
     // execution or content read here. Parent reads only after this readiness.

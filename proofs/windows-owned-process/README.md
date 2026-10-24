@@ -1,5 +1,10 @@
 # Windows owned-process research candidate
 
+Source21 adds CodeAncestorAssessment.cs: exact SDK-known ProgramFilesX64 metadata
+against a draft descriptor rule, not admission/image IO/trust expansion. Original
+private policy/ProgramPins unchanged. Local186pass/0fail/89Win-skips; CI pending.
+See [review](../../docs/continuation/DEV21-REVIEW.md). Older results are versioned.
+
 Source19 adds ProgramDiagnostics.cs and a closed wire decoder: observation-only
 metadata after original refusal, no fallback/read/launch even if probe completes.
 Original admission/production primitives unchanged. Local181pass/0fail/86Win-skips;

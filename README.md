@@ -1,5 +1,17 @@
 # Claude Mods for Codex
 
+## Source21 High candidate — exact known-folder assessment — 2026-10-24
+
+Human resumed verifieda1bc966 on GPT-6.1 Sol High. Source21 uninstalled; installed
+human-trusted dev10/cache149files/private settings/logging scope unchanged. Full93
+product incomplete, all Windows gates closed. Proof-only draft descriptor assessment
+is scoped to the exact OS-known ProgramFilesX64 directory, never executable/private-
+data admission. No global Installer trust/ACL repair/image read/Git launch. Original
+ProgramPins/production Trusted/state20 unchanged. Local186pass/0fail/89Windows-only
+skips275total; validate3/replay4. Windows CI candidate pending. See [DEV21 review](docs/continuation/DEV21-REVIEW.md).
+Earlier source/package/failure records remain version-specific historical evidence.
+
+
 ## Source20 Medium package verification — 2026-10-24
 
 Human resumed verified5ac9e16 on GPT-6.1 Sol Medium. Exact anonymous public clone

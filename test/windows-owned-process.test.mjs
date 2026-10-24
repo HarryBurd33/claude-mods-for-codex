@@ -247,6 +247,51 @@ test('Windows pin repeat probe classifies synthetic installer and other mutation
   } finally {await fixtureAcl(code,'private');}
   assert.equal(await run(exe,['run','pin',data,target,code,project]),'pinned','fixture-only grants restored');
 });
+test('Windows draft code-ancestor descriptor rule is narrow and does not excuse unknown grants with denies',native,async()=>{
+  const {data,exe}=await setup();
+  // These are constructed descriptors with a synthetic scope assumption, not an
+  // OS-known-folder witness or file/admission permission.
+  const cases={base:'MatchesDraftRule',installer:'MatchesDraftRule','installer-owner':'MatchesDraftRule',
+    'foreign-read':'MatchesDraftRule','inherit-only':'MatchesDraftRule',unscoped:'ScopePolicy',
+    'foreign-write':'ForeignMutation','foreign-generic':'ForeignMutation','foreign-deny-allow':'ForeignMutation',
+    'foreign-service':'ForeignMutation','foreign-owner':'OwnerPolicy',callback:'AcePolicy',
+    'object-ace':'AcePolicy','null-dacl':'DescriptorPolicy','no-owner':'DescriptorPolicy',
+    'missing-dacl-flag':'DescriptorPolicy','too-many':'DescriptorPolicy',unknown:'InputPolicy'};
+  for(const [kind,expected] of Object.entries(cases))assert.equal(await run(exe,['run','code-ancestor-case',data,kind]),expected,kind);
+});
+test('Windows code-ancestor assessment does not accept private roots or change private-data trust',native,async()=>{
+  const {data,exe}=await setup(), root=join(data,'private policy boundary');
+  await windowsStorageRequest('prepare-directory',root);
+  const marker=join(root,'synthetic.txt');await writeFile(marker,'unchanged',{mode:0o600});
+  await fixtureAcl(root,'installer-control');
+  try {
+    assert.equal(await run(exe,['run','code-ancestor-case',data,'installer']),'MatchesDraftRule');
+    // Matching that abstract descriptor is not authority for this private path.
+    assert.equal(await run(exe,['run','code-ancestor',data,root]),'ScopePolicy');
+    await assert.rejects(windowsStorageRequest('prepare-directory',root),/Private Windows/);
+    assert.equal(await readFile(marker,'utf8'),'unchanged');
+  } finally {await fixtureAcl(root,'private');}
+  await windowsStorageRequest('prepare-directory',root);
+  assert.equal(await run(exe,['run','code-ancestor',data,root]),'ScopePolicy');
+});
+test('Windows CI exact known ProgramFilesX64 directory matches a draft descriptor rule without code authority',{
+  ...native,skip:process.platform!=='win32'||!process.env.CODEX_MODS_CI_GIT_ROOT,
+},async t=>{
+  const root=process.env.CODEX_MODS_CI_GIT_ROOT;assert.equal(root,'C:\\Program Files\\Git');
+  const {data,exe}=await setup(), directory=win32.dirname(root);
+  const assessment=await run(exe,['run','code-ancestor',data,directory]);
+  assert.equal(assessment,'MatchesDraftRule');
+  t.diagnostic(JSON.stringify({target:'ProgramFilesX64',assessment,admissionAuthority:false,imageRead:false,productionPolicyChanged:false}));
+  for(const candidate of [root,join(directory,'not-created-child'),'C:\\','relative','\\\\synthetic\\share',directory+':ads']) {
+    assert.equal(await run(exe,['run','code-ancestor',data,candidate]),candidate===root||candidate.includes('not-created-child')?'ScopePolicy':'InputPolicy');
+  }
+  const project=join(data,'known ancestor comparison');await mkdir(project);
+  for(const relative of ['cmd/git.exe','mingw64/bin/git.exe']) {
+    // The original metadata-only pin mode never reads image contents, even if
+    // some future runner's ACLs unexpectedly pass and this assertion fails.
+    assert.equal(await run(exe,['run','pin',data,win32.join(root,...relative.split('/')),root,project]),'refused');
+  }
+});
 test('Windows executable-pin proof rejects project code, foreign writes, links, aliases and mutable code directory',native,async()=>{
   const {data,exe}=await setup(), code=join(data,'reviewed code'), project=join(data,'selected project');
   await windowsStorageRequest('prepare-directory',code);await mkdir(project);

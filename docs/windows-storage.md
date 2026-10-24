@@ -1,4 +1,9 @@
-# Windows private storage — source19 proof-only diagnosis / unchanged gates
+# Windows private storage — source21 assessment / unchanged production gates
+
+Source21 tests a draft code-ancestor descriptor rule for one exact OS-known folder.
+No global Installer trust/private-data or executable admission change; no image
+read/Git execution/ACL repair. Source21 uninstalled, Windows CI pending. See
+[review](continuation/DEV21-REVIEW.md). Earlier versioned foundations follow.
 
 Source19 adds only a non-authorizing repeat metadata probe after original pin
 refusal. No admission/production gate/installed10/logging/trust change. CI40067892456 all7passed, actual Windows20storage+66proof each.
