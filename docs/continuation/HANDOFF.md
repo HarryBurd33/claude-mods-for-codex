@@ -21,3 +21,14 @@ verification and STOP for human Sol Medium for source23 packaging. Further secur
 remains High. No native/model/API run/install/trust/logging expansion/systemACL
 repair/globalInstallertrust/candidateGitlaunch. Windows11unavailablelatest/noaskagain.
 No background/delegated/scheduled model-switch bypass.
+
+
+Firstsource23 a70f90b/CI40075058916 observercasesPASSbothWindows; Node24 actual
+22storage+75proofpass, Node22 actualstorage21pass1fail/22:INITIAL3concurrentwrites
+refusal at220/1097.918ms, notobserver. Node22proofskipped. Nooldretry/permission
+weakening. New diagnostic proof windows-state-trace.mjs copied public C#/PS/bridge,
+fixedRefuse labels+sourcecallsite lines/closedexceptiontypes/timings/3freshroots×3
+concurrentwrites, counts observationsonly, NOTacceptance. Originalpolicy/deadlines
+unchanged. CIstepalwaysrunsafterstoragefailurewithoutclearingit. Results pending
+upload; Highinspectconcretefailurestagebeforeprivatefix. Deepersecuritymayrequire
+Astrahumancheckpoint, notautomaticdelegation. Alllogging/trust/productiongatesheld.

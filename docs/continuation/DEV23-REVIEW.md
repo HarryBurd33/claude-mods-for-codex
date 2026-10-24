@@ -108,3 +108,37 @@ Future installed changed code needs human host trust review; none requested here
 After actual CI inspection, save/upload/independently verify full checkpoint and
 STOP for human GPT-6.1 Sol Medium for source23 packaging. No background/delegated/
 scheduled continuation, no additional native/model/API run authorization.
+
+
+## First source23 CI: observer cases passed, new concurrency refusal
+
+Sourcea70f90b6fd01de142a3c3049def7896661434d33,
+CI40075058916:6jobs passed, Windows Node22 job120816524685 failed. Actual decoded
+logs read for both OS lanes. Node22:both new live/expiry cases passed using actual
+storage (live3→4/cancel, expired TypeError/fresh4). Then storage public-state test
+failed its INITIAL concurrent3writes assertion at windows-storage.test.mjs:220,
+1097.918ms, generic Private Windows storage unavailable. Storage21pass/1fail/0skip,
+22total; process proof skipped. This is separate from the old missing second yield.
+Node24 job120816524773 passed22storage+75proof/0fail/0skip, including both new cases.
+Four decoded POSIX logs each188pass/0fail/95skips. No retry of this failed run.
+
+No permission failure cause, corruption or record-loss claim follows from generic
+refusal. Do not blindly increase sharing/lock/helper budgets, repair ACLs, serialize
+away the original three-writer assertion, retry events or weaken checks. Source22
+and prior failures remain distinct. Exact old observer host delay still unproved.
+
+New diagnostic-only proofs/windows-state-trace.mjs copies the public C# helper,
+PowerShell wrapper and Node bridge into an owned temporary root. Refuse callsites
+receive closed numbered labels mapped to original source line numbers; wrapper
+emits closed exception types, bridge captures only fixed labels/numeric timings.
+Three fresh roots, initial missing-state read and THREE concurrent writes per root,
+then fresh stored-count observation. Original helper/deadlines/policies unchanged;
+only own source copies gain diagnostics, no installed or production logging.
+A diagnostic refusal is reported as a refusal, never counted as storage acceptance.
+No raw paths/ACL/SID/environment/session/content output. All requests bounded by
+original adapter deadlines; wait for results before removing own temporary root.
+The explicit CI step runs even after storage failure, and cannot erase prior failed
+steps. It is a new diagnostic experiment on fresh roots, not a retry of the old run.
+Actual diagnostic results pending upload. High must inspect labels before any
+private-storage change or model switch. If a deeper architecture/security issue
+requires Astra, checkpoint and request that human switch rather than speculate.

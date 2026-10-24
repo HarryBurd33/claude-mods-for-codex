@@ -76,6 +76,9 @@ jobs:
         run: node test/windows-ipc.mjs
       - name: Real NTFS ACL, public storage APIs, cancellation and synthetic hook subprocess
         run: node --test test/windows-storage.test.mjs test/state-observer-boundary.test.mjs
+      - name: Copied-helper state refusal trace (diagnosis only, fixed labels, fresh synthetic roots)
+        if: always()
+        run: node proofs/windows-state-trace.mjs
       - name: Isolated job-list lifetime proof (not production Git or Codex acceptance)
         env:
           # Explicit fixed root documented by actions/runner-images Install-Git.ps1.

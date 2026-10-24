@@ -11,7 +11,10 @@ deadlines/privacy/gates unchanged. Source23 uninstalled, dev10 human-trusted/log
 scope unchanged, all93requirements retained; full product incomplete.
 
 Local188pass/0fail/95Windows-only skips283total, targeted15pass/0fail/1skip,
-validate3/replay4. Actual Windows CI pending. Old CI40073187216 failure preserved,
+validate3/replay4. First CI40075058916: new observer cases passed in both Windows lanes; Node24
+22storage+75proof passed, Node22 failed a separate initial concurrent3write refusal
+(storage21/1, proof skipped). Diagnostic copied-helper labels pending; no policy
+change/retry. Old CI40073187216 failure preserved,
 exact old host timing unproved, no retry/timeout increase/assertion weakening.
 See [DEV23-REVIEW](docs/continuation/DEV23-REVIEW.md); earlier model-next statements are historical.
 
