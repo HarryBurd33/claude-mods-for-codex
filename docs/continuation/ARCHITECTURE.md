@@ -1,11 +1,19 @@
 # Extension architecture and security contracts
 
-## Source18 High candidate — static installed-code inventory — 2026-10-23
+## Source18 verified High checkpoint — static installed-code inventory — 2026-10-23
 
 Human resumed verified7848c97 on GPT-6.1 Sol High. Original proof-only PE parser
 and retained-pin inventory, never Git execution/DLL loading or production activation.
-Local178pass/0fail/84Windows-only skips262total; validate3/replay4. Windows CI
-pending upload. Source18 uninstalled; installed human-trusted10/cache149files and
+Local178pass/0fail/84Windows-only skips262total; validate3/replay4. Source [f8290ef](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f8290ef7289d3dba16397b2bf8092c089b0d6a86),
+[CI40064711984](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40064711984):
+all7jobs passed. Both decoded Windows Node22/24 logs read:20storage+64proof tests
+per lane,0fail/0skip. Both fixed Git candidate paths returned pin=refused/dataRead=false
+in both lanes. No image hash/import list/version was obtained; the generic pin
+boundary does not distinguish absent/path/ACL/sharing refusal. The original compiled
+fixture passed held-read/write+rename refusal/release; unsafe ACL refused before
+image read. Previous mapping diagnostics still mapping-refused; altered-byte/mtime
+and8.3 remain unverified. OS evidence is separate from Windows11 Codex/Git execution.
+ Source18 uninstalled; installed human-trusted10/cache149files and
 private settings hash freshly unchanged, logging scope preserved. All93IDs retained;
 PL-04 native Windows remains unverified. See [DEV18 review](DEV18-REVIEW.md).
 Source17 and earlier results below remain version-specific historical evidence.

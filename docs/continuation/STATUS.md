@@ -6,14 +6,23 @@ Human selected GPT-6.1 Sol High from verified 7848c97.
 
 Source18 adds a proof-only, read-only installed-code inventory and original bounded
 static PE import parser. It never runs Git or loads its DLLs. Two fixed Windows CI
-Git paths are read only after the existing object pins succeed; a refusal records
+Git candidate paths are read only after the existing object pins succeed; a refusal records
 no content read. Static imports/hashes are inventory, not authenticity, actual DLL
 resolution, execution safety or native Windows11 Codex acceptance. Every production
 Windows settings/project/Git/restore gate remains closed before IO.
 
 Local `npm test`: 178 passed, 0 failed, 84 Windows-only skips (262 total).
-`npm run validate`: 3 mods; `npm run replay`: 4 fixtures. Windows CI evidence is
-pending this candidate upload. No compatibility upgrade is claimed. See
+`npm run validate`: 3 mods; `npm run replay`: 4 fixtures. Source [f8290ef](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f8290ef7289d3dba16397b2bf8092c089b0d6a86),
+[CI40064711984](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40064711984):
+all7jobs passed. Both decoded Windows Node22/24 logs read:20storage+64proof tests
+per lane,0fail/0skip. Both fixed Git candidate paths returned pin=refused/dataRead=false
+in both lanes. No image hash/import list/version was obtained; the generic pin
+boundary does not distinguish absent/path/ACL/sharing refusal. The original compiled
+fixture passed held-read/write+rename refusal/release; unsafe ACL refused before
+image read. Previous mapping diagnostics still mapping-refused; altered-byte/mtime
+and8.3 remain unverified. OS evidence is separate from Windows11 Codex/Git execution.
+
+No compatibility upgrade is claimed. See
 [Source18 review](DEV18-REVIEW.md) for contracts and remaining security work.
 
 ## Prior source17 checkpoint (historical)

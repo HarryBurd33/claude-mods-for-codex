@@ -1,8 +1,9 @@
 # Windows private storage — source18 inventory / unchanged production boundary
 
 Source18 adds only a read-only installed-code/static import inventory behind existing
-object pins. No Git execution, DLL loading or production gate change. Windows CI
-pending candidate upload; native Windows11 remains unverified. See
+object pins. No Git execution, DLL loading or production gate change. CI40064711984 all7jobs passed; both Windows lanes20storage+64proof/0fail/0skip.
+Both Git candidates refused before reads; no hash/import/version or diagnosed
+preflight cause. Native Windows11 remains unverified. See
 [review](continuation/DEV18-REVIEW.md). Installed10/logging/human trust unchanged.
 Earlier source17 and older versioned foundations follow.
 

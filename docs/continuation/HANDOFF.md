@@ -1,195 +1,141 @@
-# Source18 High candidate — Windows code inventory
+# Source18 verified checkpoint — next Sol Medium
 
-2026-10-23. Human resumed GPT-6.1 Sol High from verified7848c97 on
-codex/astra-groundwork. Full93product incomplete; no model-switch stop yet.
-Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, DEV18-REVIEW.md,
-../windows-storage.md, ../windows-native-acceptance.md and ignored root HANDOFF.md.
-
-Original proof-only static PE parser/retained-pin inventory added; never execute
-Git/load DLLs or change production gates. Exact contracts/bounds/primary evidence
-and local commands/outcomes are in DEV18-REVIEW. Local178pass/0fail/84Windows-only
-skips262total; validate3/replay4. Windows CI candidate upload pending. Preserve all
-historical source17 evidence/limits below; no result inferred from portable tests.
-
-Installed human-trusted10/cache149files and private settings hash freshly unchanged;
-no logging/trust/cache/config/observer/theme/client/model/API run changes. Current
-chat outside selected child. Source18 uninstalled. Windows11 latest reply unavailable;
-do not repeat availability question. All93IDs retained. Native compatibility
-unverified. No machine change needs rollback; remove new uninstalled source/fixtures.
-
-High next: upload safe candidate/nonforce verified-parent, read actual Windows job
-logs including inventory outcomes, correct any concrete issue without policy
-weakening, save final verified records. Then stop for human GPT-6.1 Sol Medium for
-packaging only. No internal/delegated/background continuation at model switch.
-Production Windows settings/project/Git/restore before-IO gates unchanged. No extra
-model run or native trust action is authorized. If resume interrupted, inspect Git
-and ignored handoff for actual candidate remote/CI identity before repeating work.
-
-## Earlier source17 handoff — historical
-
-# Source17 package checkpoint — next Sol High
-
-2026-10-23. Human-selected GPT-6.1 Sol High from verifiedb67f98a on
-codex/astra-groundwork. Full93product incomplete. Source17 uninstalled; installed
-human-trusted dev10/logging/private settings/production gates unchanged. Windows11
-remains unavailable per latest reply; do not repeat its availability question.
+2026-10-23 local workspace date. Human selected GPT-6.1 Sol High from verified
+7848c97 on codex/astra-groundwork. Full93-capability product remains incomplete.
+Source18 uninstalled; installed human-trusted dev10/logging scope unchanged.
 
 ## Read first
 
-STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, PACKAGE-DEV17.md,
-DEV17-REVIEW.md,
-DEV16-REVIEW.md, PACKAGE-DEV16.md, ../windows-storage.md,
+STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, DEV18-REVIEW.md,
+PACKAGE-DEV17.md, DEV17-REVIEW.md, ../windows-storage.md,
 ../windows-native-acceptance.md, ../native-acceptance.md,
 ../../proofs/windows-owned-process/README.md and latest ignored root HANDOFF.md.
-Private paths/raw logs/settings/backups/session data remain ignored.
+Private paths/raw logs/settings/backups/session data stay ignored. Earlier source
+reviews/package records retain historical evidence; this file is current guidance.
 
-## Current milestone, code and stable contracts
+## Milestone and exact contracts
 
-Original MIT MetadataOperation.cs compiled only by isolated proof build:
-RunMetadataOperationProof(codeRoot,selectedMetadata,privateParent,kind,token).
-Closed complete/stall/exit/before/flood fixture kinds; strict pairwise-disjoint
-local roots/fixed owned-proof.exe/marker names before IO. Original ProgramPins
-and private parent Pins held across fixed OwnedProcess.Run. Tests independently
-compile original public fixture then copy/byte-check it in fresh private code root;
-no arbitrary binary/provenance/dependency trust claim or PATH/project executable.
+Original proof-only pe-imports.mjs: pure bounded32MiB PE32/PE32+ x86/x64/ARM64
+static header/import-name inventory, no filesystem/execution/DLL loading/network.
+Narrow sections/directories/descriptor/name subset with explicit refusal. No
+signature/content provenance/loader resolution/whole-image validity claim.
 
-Mandatory creation-time job-list/handle-list, sole non-inherited kill-on-close job,
-stdin EOF/private cwd/only SystemRoot env,4000ms child timer/4096combined output.
-Source16 HEAD/ref/index/exclude capture/strict projection/private scratch occurs
-inside owned child. Completion verifies/disposes; abrupt exit23 skips managed
-cleanup; synthetic stall/before/flood witnesses bounded cancellation/timeout/
-output cleanup. Malformed source returns fixed status7/metadata-refused; nonzero
-status is data. No private bytes in argv/env/stdout or new public production API.
-Existing32KiB/3MiB bridge unchanged, production PowerShell/taskkill unchanged.
+Harness.cs adds run inventory-pin only: unchanged ProgramPins owns explicit
+executable/root/disjoint selected disposable project pins while readiness/owner
+stdin handshake lives. No image/version reads or Git launch in that mode.
+ProgramBoundary.cs/OwnedProcess.cs and every production Windows gate unchanged.
 
-Harness test-only operation.pid/.scratch/.ready markers use CREATE_NEW, no
-adoption/overwrite; only synthetic PID/private scratch path/status. Markers persist
-for independent checks, not product telemetry/production storage protocol. Test
-parent stdin reader requests cancellation, child still receives EOF. No daemon,
-network/model/API run/native approval/trust mutation. Nine new OS tests cover
-normalEOF/cwd/env, abrupt exit, captured timeout/code+source leases, explicitcancel,
-ownerdeath, precancel/pre-capture stall, source failure/collision, flood and unsafe
-kind/code/parent/ACL/junction before launch. All prior53proof+20storage regress.
+Test-only pinnedInventory waits for pin before opening one bounded regular/single-
+link file; positional reads/EOF/stat samples, SHA256 and static parser while pins
+remain, own buffer cleared, file closed before pin release.15s outer owner timer/
+128char stdout/8KiB stderr bounds; not universal interruptible IO/termination proof.
+No arbitrary scan/PATH fallback/ACL repair/loader call. Fixed two candidate CI
+paths only under explicit CODEX_MODS_CI_GIT_ROOT. Not a product tool or launcher.
+Public diagnostics contain only fixed relative identity/status/hash/static names,
+never content/full host paths/ACLs/SIDs/env/private sessions. Version not queried.
+No new bridge API/request/response expansion; existing32KiB/3MiB contract remains.
 
-Four-second timer excludes parent preflight filesystem IO. Pending kernel IO may
-outlive asynchronous process termination/500ms root wait; sleeping helper tests
-do not prove blocked drivers interruptible or universal4s API bound. Future
-production needs enclosing preflight/owner/transport bounds and actual acceptance.
-ProgramPins holds executable identity/sharing and directory names; same-user code
-additions/DLL trust unverified. Not a sandbox/network/broker/same-user/admin boundary.
+## Actual outcomes, source and remote identity
 
-Source16 positive-source limits/absent packed/unborn/chain support, source15 format
-subset and source14 capture lifetime remain. Repository/hash-format/HEAD/ref/object
-provenance/existence/type/coherent snapshot/ignore/Git reader-write-temp-lock/loader/
-native/writer unverified. Unknown content/live unowned readers may retain bytes;
-no recursive cleanup/adoption/secure erasure. Prior mapping-refused/byte-mtime/8.3
-gaps persist. Source leases must stay one short operation, not a persistent panel.
+Tested source [f8290ef7289d3dba16397b2bf8092c089b0d6a86](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f8290ef7289d3dba16397b2bf8092c089b0d6a86),
+tree cd3efdbb83cba58628c52d9f6ed2f238c8e99558. Uploaded expected-parent/nonforce;
+fetched full-tree equality and anonymous ls-remote readback verified. Equivalent
+local5c73cbbf1feadc7a9d3709d74cc34801e4d38be2 preserved on
+codex/dev18-inventory-local-checkpoint. Final notes-only local/verified remote
+identity is recorded after actual readback in reply/latest ignored handoff; no
+self-hash claim. Confirm branch HEAD and ancestry before continuing.
 
-Production helper/default hooks/settings/project/Git/restore/UI/skills/config and
-OwnedProcess/ProgramPins/source12–16 primitive code unchanged. New proof/build/
-Harness/tests and package/manifest/server version17 only. No source17 install.
+[CI40064711984](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40064711984)
+all7jobs passed; actual decoded Windows logs120785412717(Node22) and
+120785412597(Node24) both read. Each20storage+64proof/0fail/0skip. WindowsServer2025
+windows-2025-vs2026 image20261021.278.1; run2026-10-24UTC/2026-10-23local.
+Four full POSIX lanes and portable Windows passed; portable lane runs8new parser
+cases. No retry/fix. Local macOS14.6/Node24.22.0/npm11.19.1:
 
-## Verification identity and observed results
+- node --test test/pe-inventory.test.mjs:8pass/0fail/0skip.
+- Targeted parser+OS suite:8pass/0fail/64Windows-only skips72total.
+- npm test:178pass/0fail/84Windows-only skips262total.
+- npm run validate:3mods; npm run replay:4fixtures; git diff --check clean.
 
-Tested source[04a49394b477fe45c14025da0f318a7a641faff3](https://github.com/HarryBurd33/claude-mods-for-codex/commit/04a49394b477fe45c14025da0f318a7a641faff3),
-tree8ebe34f70905fda08a22d548129e52080af34c5f. Expected-parent/nonforce upload,
-fetch/full-tree equality verified. Equivalent local05686eff76c4b69cca63c771d9a3e50e215e7491
-retained on codex/dev17-operation-local-checkpoint. Final notes-only identity
-recorded after actual readback in reply/latest ignored handoff.
+Original compiled fixture passed held read, write/file+directory rename refusal,
+release and unsafe-ACL refusal before image read. Both fixed Git candidates
+cmd/git.exe and mingw64/bin/git.exe returned pin=refused/dataRead=false in both
+lanes. No image hash/import/version or independently verified presence obtained.
+The generic unchanged pin preflight does not isolate absent/path/ACL/sharing cause;
+do not guess, claim Git trust or weaken policy. Successful inventory protocol is
+not successful executable validation. Static import parser remains synthetic-plus-
+original-fixture evidence; actual Git import metadata blocked at preflight.
 
-Local npm test170pass/0fail/82Windows-only skips252total; validate3/replay4/diff-
-check clean. CI40063228451 all7jobs passed. Actual decoded Windows logs
-120781001773(Node22)/120781001823(Node24) read:20storage+62proof each/0fail/0skip.
-All9new helper cases passed; prior mapping-refused/byte-mtime/8.3 gaps retained. WindowsServer OS proof is not Windows11/Codex/Git acceptance.
+Prior mapping diagnostics still mapping-refused; changed-byte/restored-mtime/8.3
+not established. Source17 parent-preflight/async IO/job limits, source16 positive
+HEAD/ref limits, source15 subset and live-reader/unknown-content/cleanup caveats
+remain. OS fixtures are separate from native Windows11 Codex/Git acceptance.
 
-## Installation, privacy, rollback
+## Installation, access, privacy and rollback
 
-Source17 uninstalled. Installed user-profile dev10 still149files equal reviewed
-immutable fixture/private settings hash unchanged. No fresh native inventory/event/
-UI/trust/model run. Prior High3enabled/human-trusted/0errors and Activity4/project/
-same revision/health unknown remain versioned. Current chat outside selected child;
-never broaden logging to move counters. No config/cache/logging/trust/observer/
-theme/client/model/API evaluation change. All93IDs retained; product incomplete.
+No source18 installation, cache/trust/config/logging/scope/retention/export/model/
+client/theme/observer change. Fresh149installed dev10 files equal reviewed fixture;
+private settings hash unchanged (exact hash/path only ignored handoff). No fresh
+native inventory/event/UI/trust/model run; earlier macOS host evidence stays
+version-specific. Current chat outside selected logging child; never broaden
+scope to move counters. All93requirement identities/order retained. Only production
+source difference from7848c97 is MCP reported version18; default hooks/UI/config/
+skills/Windows primitives unchanged. No extra model/API test authorized.
 
-No machine change needs rollback. Remove checkout/disposable proof fixtures to
-remove new source. Existing selective supported dev10 removal/rollback remains
-separate; never edit cache/trust hashes/whole shared config/live locks. Settings/
-data separate, private paths/backups in ignored root HANDOFF.md only.
+No machine change needs rollback; remove uninstalled checkout/proof fixtures.
+Supported selective dev10 disable/removal/rollback remains in native-acceptance
+records; settings/data separate, private backup locations ignored. Never patch
+cache/trust hashes/shared config/live locks. No generated code auto-trust.
 
-## Completed Medium package verification
+Windows11 remains unavailable per latest human reply; do not ask again until
+availability changes or actual selected inventory is needed. No protected user
+step is required for this checkpoint; source18 stays uninstalled.
 
-Human resumed0021f01ff3c41c63f9754e199da89da66809071c/
-treef84a8a9e235756529f4ed86c97f0d5f89b525a41. Anonymous clean public clone full
-suite170pass/0fail/82Windows-only skips252total. Reviewed170-file archive
-1,170,039unpacked/350,942compressed bytes; SHA256
-aed2e7aca0eed106d10037d4a9284906e7cc32803c1acddedba73ec674a1795f.
-Every packaged byte equals exact clone/workspace. Hygiene/MIT/version17/server/
-default-off storage passed; no compiled exe/DLL/PDB. Fresh spaced extraction
-validate3/replay4/package-scaffolding7pass/0fail/0skip. macOS14.6/Node24.22.0/
-npm11.19.1; no Windows compilation/install/model run. NotesCI40063619879 all7job
-conclusions read success, no new native-count/branch claim. Actual proof04a4939/
-CI40063228451 OS evidence stays separate from packaging/native Windows acceptance.
+## Next tasks — Medium first, then human High
 
-Installed10/cache149files/private settings hash unchanged. No new native inventory/
-event/UI/trust/model turn; prior High observations remain version-specific. No
-config/cache/logging/trust/gated-code change. All93IDs kept. See PACKAGE-DEV17.
-Following notes-only archive rebuilt/read back once after upload; exact final
-identity after observation in reply/latest ignored handoff, no self-hash or
-redundant full suite solely for notes. Source17 remains uninstalled.
-
-## Next tasks in priority order — High only
-
-1. Read DEV17-REVIEW and retain phase limits: parent program/private-parent preflight
-   outside child timer, asynchronous kernel IO/termination not certified by a sleep
-   witness. No universal4s API bound or arbitrary binary/DLL/sandbox trust claim.
-   Fixed original fixture code/copy/byte-check only. Current-user code additions,
-   broker/network/same-user/admin isolation and real Git remain unverified.
-2. Choose one concrete integration prerequisite: enclosing preflight/owner/transport
-   bounds, actual executable/dependency/loader trust, repository config/hash-format/
-   object provenance/freshness or ignore-aware reads. Define valid/malformed/link/
-   alias/concurrent-change acceptance before implementation. Keep private bytes out
-   of argv/env/logs;32KiB/3MiB bridge unchanged. Leases one short operation, not
-   persistent panel/session lifetime. No raw-index/source-commit fallback.
-3. Windows11 remains unavailable per latest reply. Do not repeat its availability
-   question until state changes or actual inventory needed. Independent synthetic
-   High proofs may continue; native acceptance incomplete. Later read-only native
-   kit inventory precedes executable choices; no guessed PATH/project Git, binary
-   download/system repair/policy override/sandbox setup/credential/env dump/model run.
-4. Preserve every production Windows settings/project/Git/restore before-IO gate
-   until its own security/OS/native acceptance passes. Source16 positive HEAD/ref
-   binding not actual repository/hash format/object identity/type/existence/atomic
-   snapshot; missing/packed-only/unborn/chained/unsupported forms refuse. Source15
-   strict subset stays. Restore separate explicit writer with fresh content/identity
-   conflicts/metadata/interruption/concurrency and ordinary permissions. Prior
-   mapping-refused/byte-mtime/8.3 gaps remain. Live readers/unknown content may retain
-   bytes; no recursive cleanup/adoption/secure erasure or hostile same-user isolation.
-5. Preserve installed human-trusted dev10/private grants/data/project/scope/
-   retention/export. No extra model/API run, trust automation, broader logging,
-   observer/theme/client change, whole-project copy or major custom-client/fork
-   direction authorized. All93requirements remain accounted for/incomplete as needed.
-6. Stop for human Medium once another meaningful security/integration milestone
-   leaves routine packaging/docs/acceptance: save/upload/independently read back
-   first. No internal/background/delegated/scheduled continuation around model stops.
-   If a hard architectural issue exceeds High, checkpoint/request Astra the same way.
+1. Medium: anonymous exact public clone; inspect diff/status and verify ancestry to
+   f8290ef. Reuse the existing packaging workflow with source18-specific names.
+   Verify full offline tests/validate/replay, archive identity/manifest/MIT/hygiene,
+   packaged byte equality, no private roots/compiled binaries/links/collisions/
+   dependencies, default-off storage and spaced extraction CLI/scaffolding. Add
+   PACKAGE-DEV18.md with observed counts/hashes/commands; do not invent results.
+2. Medium: update these records with actual package evidence. Preserve installed
+   dev10/private settings/trust/logging and all93requirements. No production gate,
+   helper/launcher/security code change or new native/model run. Do not rerun full
+   suites solely for final notes when no code changed.
+3. Save/commit/upload meaningful safe progress without force, independently verify
+   remote branch/commit/full tree. Stop for human GPT-6.1 Sol High before any new
+   gated Windows work. No subagent/background/scheduled bypass of model stops.
+4. High later: diagnose the fixed Git candidate preflight with bounded closed-stage
+   observations, no raw ACL/path/credential/env dumps and no policy weakening.
+   Resolve actual binary/signature/dependency/loader/config trust separately; a
+   hash/static import list cannot justify launch. Official runner installer sets
+   system Git trust/policy, but effective image configuration was not inspected.
+   No PATH/project exe fallback, binary download, system repair or real Git launch.
+5. High later: enclosing preflight/owner/transport bounds, repository config/hash-
+   format/object identity/freshness/ignore-aware selection and separate explicit
+   writer acceptance remain. Every Windows settings/project/Git/restore before-IO
+   gate stays closed pending its own security/OS/native acceptance. Preserve normal
+   permissions and human decisions; no native Windows11/WSL compatibility claim.
 
 ## Exact next model and complete resume instruction
 
-**GPT-6.1 Sol, High.** Source17 packaging complete; gated Windows security/
-integration requires High. Source17 stays uninstalled; no trust/restart step for
-these documentation-only records. Full product incomplete.
+**GPT-6.1 Sol, Medium.** The verified bounded inventory/refusal milestone leaves
+routine source18 packaging/documentation. High is required before further gated
+Windows diagnosis/integration; no installation/trust/restart action now.
 
-> I switched to GPT-6.1 Sol, High. Continue from the verified source17 package
-> checkpoint on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
-> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV17-REVIEW.md, PACKAGE-DEV17.md,
-> docs/windows-storage.md, docs/windows-native-acceptance.md and latest ignored
-> root HANDOFF.md. Source17 public clone/archive/spaced extraction passed. Resume
-> one concrete remaining Windows security/integration prerequisite. Preserve
-> installed human-trusted dev10, logging scope and every production before-IO gate.
-> Fixed owned-helper composition is not production/Windows Git/loader/native
-> acceptance, a universal4s API bound or blocked kernel IO proof; parent preflight
-> remains outside child timer. Repository/object provenance/ignore/writer remain
-> gated; unknown content/live readers may retain bytes, no recursive cleanup/secure
-> erasure. Windows11 unavailable; don't repeat its availability question. No extra
-> model/API run, trust automation, broader logging, observer/theme/client change or
-> new direction authorized. Keep all93requirements incomplete as applicable. Stop
-> for Medium when sufficient after saving/uploading/verifying the checkpoint.
+Copy and paste after the human model switch (use final verified notes commit from
+checkpoint reply if specifying an exact resume HEAD):
+
+> Continue on GPT-6.1 Sol Medium from the verified source18 handoff on
+> codex/astra-groundwork. Read docs/continuation/HANDOFF.md, STATUS.md,
+> REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, DEV18-REVIEW.md, PACKAGE-DEV17.md
+> and the latest ignored root HANDOFF.md. Verify source18 packaging against the
+> exact anonymous public checkpoint, retaining tested source f8290ef and
+> CI40064711984 as distinct OS evidence. Both Git candidates refused before content
+> reads; do not claim hash/import/loader/native compatibility. Preserve installed
+> human-trusted dev10, private settings, selected logging scope, all93requirements
+> and every production Windows gate. Do not install, automate trust, execute Git,
+> make a model/API test run or alter gated security code. Save/upload/independently
+> verify the package checkpoint, then stop for human GPT-6.1 Sol High before any
+> further gated Windows security work.

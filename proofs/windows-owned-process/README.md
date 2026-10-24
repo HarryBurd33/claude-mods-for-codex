@@ -5,8 +5,9 @@
 The new original PE parser and `run inventory-pin` mode support bounded read-only
 installed-code inspection. CI opts into two fixed Git executables under the
 official runner installation root; no Git execution or DLL loading. Policy refusal
-is recorded before content reads. Parser8portable tests pass locally; Windows OS
-candidate evidence is pending. See [review](../../docs/continuation/DEV18-REVIEW.md).
+is recorded before content reads. Parser8portable tests pass locally; CI40064711984 all7jobs passed, both Windows
+lanes20storage+64proof/0fail/0skip. Both fixed Git candidates refused before
+content reads; no hash/import/version or diagnosed preflight cause. See [review](../../docs/continuation/DEV18-REVIEW.md).
 Every production gate/installed10/logging/human trust remains unchanged.
 
 ## Prior foundation and version-specific evidence
