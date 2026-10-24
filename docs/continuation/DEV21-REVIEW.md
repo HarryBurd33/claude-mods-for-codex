@@ -76,8 +76,8 @@ Three new Windows cases:
 
 Local Windows suite69skips/0passes, not Windows success. Full npm test186pass/
 0fail/89Windows-only skips275total; validate3mods/replay4fixtures/diff-check clean.
-Windows CI pending candidate upload. No native acceptance or actual folder-policy
-match claimed before logs are read. Source20/old38848a8 failure evidence preserved;
+Corrected Windows CI passed; actual logs and scope limits are recorded below.
+A draft directory match does not establish code admission or native acceptance. Source20/old38848a8 failure evidence preserved;
 exact old host delay cause unproved, no state/runtime acquisition change here.
 
 ## Primary evidence retrieved2026-10-24
@@ -136,5 +136,54 @@ setup correction, not permission repair to the installed Git/system directory.
 retrieved2026-10-24, documents propagation of inheritable ACE changes to existing
 children. We did not dump the old child descriptor, so propagation is the supported
 mechanism/inference rather than a retrospective raw-ACL observation. Corrected
-candidate verification pending; preserve the failed run even if later CI passes.
+candidate verification subsequently passed as recorded below; the failed run remains.
 No manual retry of40071218873, no hidden failure erasure or weakened assertion.
+
+
+## Corrected source and observed CI
+
+Corrected source [4b99ac1bdac3aad211a4553feb4fcacb7ce61f57](https://github.com/HarryBurd33/claude-mods-for-codex/commit/4b99ac1bdac3aad211a4553feb4fcacb7ce61f57),
+tree `c605eea0dd705bf2c75a0660dc781487d9956b5a`.
+[CI40071604769](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40071604769)
+passed all seven jobs. Actual decoded logs were read, not inferred from green status:
+
+| Job | Observed result |
+| --- | --- |
+| Windows Node22, 120806040058 | 20 storage + 69 proof passes, zero failures/cancellations/skips |
+| Windows Node24, 120806040276 | 20 storage + 69 proof passes, zero failures/cancellations/skips |
+| macOS Node22, 120806040271 | 186 passes, zero failures/cancellations, 89 Windows-only skips |
+| macOS Node24, 120806040347 | Same 186/0/89 result |
+| Ubuntu Node22, 120806040355 | Same 186/0/89 result |
+| Ubuntu Node24, 120806040325 | Same 186/0/89 result |
+| Windows portable contracts, 120806040247 | Successful job conclusion; distinct from OS and native-host acceptance |
+
+Windows host: Server2025, `windows-2025-vs2026` image `20261021.278.1`,
+Windows PowerShell5.1 build path, Node22/24, NTFS fixtures. No Windows11 Codex host
+was available. This stage ran no native client session or model/API test.
+
+Both corrected OS lanes passed the three new cases, including the private marker's
+unchanged contents, refusal under the Installer grant, restoration and complete
+teardown. Fixed diagnostic: ProgramFilesX64 / MatchesDraftRule /
+admissionAuthority:false / imageRead:false / productionPolicyChanged:false.
+Both original fixed Git pins still refused before data reads. Their separate
+repeat diagnostic remains CodeAncestor/ForeignInstallerGrant/segment1 with
+no authority, version not queried, authenticity/loader closure unverified.
+The draft assessment does not identify or authenticate Git executables.
+
+The only test correction was explicit protection of the own sentinel before the
+parent fixture ACL changed. No C# assessment, original authority/admission code,
+production gate, state acquisition budget, timeout or assertion was relaxed.
+First and corrected runs are different commits; the failed run was not retried.
+
+Local macOS14.6, Node24.22.0/npm11.19.1: `npm test` 186 passes/0 failures/
+89 Windows-only skips (275 total), `node --test test/windows-owned-process.test.mjs`
+69 skipped/0 passes, `npm run validate` 3 mods, `npm run replay` 4 fixtures,
+`git diff --check` clean. Source21 packaging remains a separate Medium task.
+149 installed dev10 files still equal the reviewed immutable fixture; private
+settings/logging/human trust and all 93 requirement IDs/order are preserved.
+
+The following handoff commit changes documentation only. Its actual local/remote
+identity is read back after upload and recorded in the checkpoint response and
+ignored handoff, avoiding a circular self-hash claim. No repeated full suite solely
+for notes. Further admission composition and all remaining security gates require
+High; routine archive verification can use Medium.

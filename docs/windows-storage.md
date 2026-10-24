@@ -2,7 +2,9 @@
 
 Source21 tests a draft code-ancestor descriptor rule for one exact OS-known folder.
 No global Installer trust/private-data or executable admission change; no image
-read/Git execution/ACL repair. Source21 uninstalled, Windows CI pending. See
+read/Git execution/ACL repair. Source21 uninstalled. Corrected CI40071604769 passed both Windows OS lanes, each
+20 storage + 69 proof tests; this is not native Codex acceptance. First own-fixture
+ACL failure and correction are preserved in DEV21-REVIEW. See
 [review](continuation/DEV21-REVIEW.md). Earlier versioned foundations follow.
 
 Source19 adds only a non-authorizing repeat metadata probe after original pin

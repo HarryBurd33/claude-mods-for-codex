@@ -1,18 +1,30 @@
 # Extension architecture and security contracts
 
-## Source21 High candidate — exact known-folder assessment — 2026-10-24
+## Source21 High checkpoint — exact known-folder assessment — 2026-10-24
 
-Human resumed verifieda1bc966 on GPT-6.1 Sol High. Source21 uninstalled; installed
-human-trusted dev10/cache149files/private settings/logging scope unchanged. Full93
-product incomplete, all Windows gates closed. Proof-only draft descriptor assessment
-is scoped to the exact OS-known ProgramFilesX64 directory, never executable/private-
-data admission. No global Installer trust/ACL repair/image read/Git launch. Original
-ProgramPins/production Trusted/state20 unchanged. Local186pass/0fail/89Windows-only
-skips275total; validate3/replay4. FirstCI40071218873 passed5jobs but both Windows lanes failed a new fixture sentinel
-read/cleanup after inheritance replacement. SDK/18descriptor cases passed. Own
-sentinel now explicitly private before parent mutation; no policy change. Corrected
-candidate CI pending. Failure retained in DEV21-REVIEW. See [DEV21 review](DEV21-REVIEW.md).
-Earlier source/package/failure records remain version-specific historical evidence.
+The proof-only Windows assessment matches one exact OS-known ProgramFilesX64
+ancestor against a draft descriptor rule. It grants no executable or private-data
+authority. Production Windows gates, original ProgramPins/private trust and the
+source20 state fix remain unchanged. Source21 is uninstalled; the human-trusted
+dev10 cache, private settings and selected-project logging scope are unchanged.
+The full 93-capability product remains incomplete.
+
+Corrected source [4b99ac1](https://github.com/HarryBurd33/claude-mods-for-codex/commit/4b99ac1bdac3aad211a4553feb4fcacb7ce61f57),
+[CI40071604769](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40071604769):
+all seven jobs passed. Both Windows Server 2025 Node22/24 logs were read: each
+20 storage + 69 proof tests passed, zero failures/skips. SDK scope, 18 constructed
+descriptor cases and private-data separation passed; original Git pins still refuse
+before content reads. Each of four POSIX lanes reports 186 passes, zero failures,
+89 Windows-only skips. Local validate: 3 mods; replay: 4 fixtures.
+
+First CI40071218873 failed the new sentinel read and cleanup after its parent ACL
+changed. Giving that own test file an explicit protected private ACL corrected
+fixture setup; no assessment or production policy changed. The failed run is
+preserved. No native Windows Codex/Windows11 compatibility claim follows from CI.
+See [DEV21 review](DEV21-REVIEW.md) and the current handoff. Next: human Sol Medium
+for packaging only; High before further gated security work. Earlier records below
+are version-specific history, superseded by this current summary.
+
 
 
 ## Source20 Medium package verification — 2026-10-24

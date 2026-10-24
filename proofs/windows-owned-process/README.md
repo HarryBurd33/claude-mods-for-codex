@@ -2,7 +2,10 @@
 
 Source21 adds CodeAncestorAssessment.cs: exact SDK-known ProgramFilesX64 metadata
 against a draft descriptor rule, not admission/image IO/trust expansion. Original
-private policy/ProgramPins unchanged. Local186pass/0fail/89Win-skips; CI pending.
+private policy/ProgramPins unchanged. Local186pass/0fail/89Win-skips. Corrected CI40071604769: both Windows
+Node22/24 lanes each20storage+69proof passes, zero failures/skips. First own-fixture
+failure retained; explicit private sentinel ACL fixes setup only. No native Codex
+acceptance or executable authority.
 See [review](../../docs/continuation/DEV21-REVIEW.md). Older results are versioned.
 
 Source19 adds ProgramDiagnostics.cs and a closed wire decoder: observation-only
