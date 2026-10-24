@@ -1,20 +1,26 @@
 # Extension architecture and security contracts
 
 
-## Source22 High candidate — retained ancestor metadata — 2026-10-24
+## Source22 High checkpoint — retained ancestor metadata — 2026-10-24
 
-An isolated proof retains exact SDK-bound ancestor handles, then rechecks identity
-and sampled owner/DACL bytes before release. Separate synthetic tests cover rename,
-descriptor changes, partial-construction cleanup, cancel/EOF and process exit.
-This grants no executable/private-data authority and is not an atomic ACL snapshot.
-Original production gates, ProgramPins/private trust/state20 and installed human-
-trusted dev10/logging scope are unchanged. Source22 is uninstalled; all93 requested
-capabilities remain accounted for and the full product is incomplete.
+The isolated proof retains exact SDK-bound ancestor handles and rechecks identity
+and sampled owner/DACL bytes before release. It grants no executable/private-data
+authority and is not an atomic ACL snapshot. Production Windows gates, original
+ProgramPins/private trust/state20, installed human-trusted dev10, private settings
+and logging scope remain unchanged. Source22 is uninstalled; full93 product incomplete.
 
-Local186pass/0fail/95Windows-only skips281total; validate3/replay4. Windows75skips
-here establish no success. Actual Windows CI pending candidate upload. See
-[DEV22-REVIEW](DEV22-REVIEW.md). Source21 failures/correction and source20 failure uncertainty
+Source [46c417d](https://github.com/HarryBurd33/claude-mods-for-codex/commit/46c417d327fab4a915a1ea333297c63909e9e861),
+[CI40072785589](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40072785589):
+all seven jobs passed. Both Windows Server2025 Node22/24 decoded logs read: each
+20 storage + 75 proof passes, zero failures/skips. Six new retention/change/cleanup/
+cancel/exit/SDK cases passed. Original Git pins still refuse before content reads.
+Each of four POSIX lanes reports186pass/0fail/95Windows-only skips281total;
+local validate3/replay4. No native Windows Codex/Windows11 compatibility claim.
+
+See [DEV22-REVIEW](DEV22-REVIEW.md). Next human Sol Medium for source22 packaging only;
+further gated security stays High. All93 IDs/order and previous failure evidence
 remain preserved; earlier model-next statements below are historical.
+
 
 
 ## Source21 Medium package verification — 2026-10-24

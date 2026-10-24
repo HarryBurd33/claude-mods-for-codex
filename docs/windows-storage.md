@@ -1,7 +1,8 @@
 # Windows private storage — source21 assessment / unchanged production gates
 
 Source22 isolates retained code-ancestor metadata sampling, no production policy
-change or private authority. CI pending. See continuation/DEV22-REVIEW.md; all
+change or private authority. CI40072785589 passed both OS lanes, each20storage+
+75proof/0fail/0skip, not native Codex acceptance. See continuation/DEV22-REVIEW.md; all
 Windows production gates and installed human trust/logging remain unchanged.
 
 Source21 tests a draft code-ancestor descriptor rule for one exact OS-known folder.

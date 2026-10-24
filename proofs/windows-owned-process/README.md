@@ -2,7 +2,9 @@
 
 Source22 adds CodeAncestorLease.cs: isolated retained ancestor metadata samples,
 no code/private authority or atomic ACL snapshot. Owned synthetic rename/descriptor/
-cleanup/cancel/exit tests and read-only exact SDK scope test; CI pending. Original
+cleanup/cancel/exit tests and read-only exact SDK scope test. CI40072785589 all7
+jobs passed; both Windows lanes20storage+75proof/0fail/0skip. No native Codex
+acceptance or code/private authority. Original
 ProgramPins/production/private policies unchanged. See DEV22-REVIEW.
 
 Source21 adds CodeAncestorAssessment.cs: exact SDK-known ProgramFilesX64 metadata

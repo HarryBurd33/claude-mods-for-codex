@@ -86,8 +86,8 @@ New cases in `test/windows-owned-process.test.mjs` (75 total):
 
 Local macOS14.6/Node24.22.0/npm11.19.1: npm test186pass/0fail/95Windows-only skips,
 281total; targeted Windows75skips/0passes, not Windows success. Validate3mods/
-replay4fixtures, diff-check clean. Windows CI pending candidate upload; actual
-compiler/OS logs must be inspected before success claims or model switch.
+replay4fixtures, diff-check clean. Actual Windows CI passed as recorded below; local skips are separate from that
+OS result. No native Codex/Windows11 acceptance follows from this proof.
 
 ## Primary evidence retrieved2026-10-24
 
@@ -124,3 +124,48 @@ separate. Human review required for any future installed code change.
 After actual CI inspection, save/upload/verify a complete checkpoint and stop for
 human GPT-6.1 Sol Medium for source22 packaging. Further security/admission
 composition remains High; this isolated lease is not authorization to compose it.
+
+
+## Observed Windows and POSIX CI
+
+Tested source [46c417d327fab4a915a1ea333297c63909e9e861](https://github.com/HarryBurd33/claude-mods-for-codex/commit/46c417d327fab4a915a1ea333297c63909e9e861),
+tree `9d6c5256e88df0250ae52a7a031460c7c704cd2e`.
+[CI40072785589](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40072785589)
+passed all seven jobs. Actual decoded logs were read:
+
+| Job | Observed result |
+| --- | --- |
+| Windows Node22, 120809634573 | 20 storage + 75 proof passes, zero failures/cancellations/skips |
+| Windows Node24, 120809634423 | Same 20+75/0 result, all six new cases passed |
+| macOS Node22, 120809634614 | 186 passes, zero failures/cancellations, 95 Windows-only skips (281 total) |
+| macOS Node24, 120809634689 | Same 186/0/95 result |
+| Ubuntu Node22, 120809634719 | Same 186/0/95 result |
+| Ubuntu Node24, 120809634664 | Same 186/0/95 result |
+| Windows portable, 120809634620 | Successful conclusion; distinct from OS/native-host acceptance |
+
+Windows Server2025, NTFS fixtures, `windows-2025-vs2026` image `20261021.278.1`,
+Windows PowerShell5.1 isolated build. Each lane passed all six new tests as well as
+source21's existing descriptor/scope/private-data separation. Owned target/parent
+rename refused during retention and succeeded after release. Allowed descriptor
+sample changes and foreign grants refused revalidation; failed construction,
+cancel/EOF/invalid control, disposal and externally terminated helper released
+handles before post-exit rename. No test failure or retry in this source22 run.
+
+The actual SDK case emitted only ProgramFilesX64 / retainedMetadata:unchanged /
+admissionAuthority:false / imageRead:false / systemMutation:false. No actual system
+rename or ACL change. Both original Git pins still refused before data reads;
+separate repeat diagnosis remains CodeAncestor/ForeignInstallerGrant/segment1 with
+no authority, version not queried, authenticity/loader closure unverified. No
+native Codex session/hook/sandbox/UI test, extra model/API run or Windows11 result.
+Source21's first fixture failure/correction and source20 old contention failure are
+retained as historical evidence, not erased by this pass.
+
+149 installed dev10 files remain byte-equal to the immutable reviewed fixture;
+private settings unchanged, all93 requirement IDs/order preserved. No install/
+trust/logging/config/observer/theme/client change. No machine rollback needed.
+
+Following handoff commit changes documentation only. Its actual local/remote/tree
+identity is read back after upload and recorded in the checkpoint reply and ignored
+handoff, avoiding self-hash claims. Stop for human Sol Medium for source22 archive/
+extraction verification; further security/admission remains High. No repeated full
+suite solely for notes and no background/delegated continuation after model stop.
