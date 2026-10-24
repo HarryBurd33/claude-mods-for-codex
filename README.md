@@ -1,67 +1,52 @@
 # Claude Mods for Codex
 
-## Source15 current candidate — strict index projection
-
-Original unintegrated SHA1/v2 index projection proof: bounded checksum/entry/path/
-frame validation, optional accelerator stripping and explicit same-helper scratch
-composition. Nine new real Windows tests pending CI; local170pass/0fail/
-64Windows-only skips234total, validate3/replay4. Golden synthetic index from
-macOS Git2.39.5 roundtrip, no Windows Git launch. No production operation/gate or
-installed10/logging/trust change. Full93product and native Windows/Git remain
-incomplete. See docs/continuation/DEV15-REVIEW.md and TEST-LOG.md. Source14 records below are the
-previous verified foundation, including its completed package checks.
-
-
-**The full 93-capability product is incomplete. Development source 0.2.0-dev.15
+**The full 93-capability product is incomplete. Development source0.2.0-dev.15
 is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
-Human resumed GPT-6.1 Sol High from verified5016e11.
+Human resumed GPT-6.1 Sol High from verified65743d9.
 
-Source14 adds an original, isolated same-helper metadata capture proof: explicitly
-selected synthetic index (32 MiB) and info/exclude (1 MiB) use retained read handles,
-metadata/byte verification and direct private scratch composition. Private bytes
-stay inside the helper; the public 32 KiB request/3 MiB response bridge is unchanged.
-No production operation, settings/project/Git/restore gate or installation changes.
-Source [c369f49](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c369f49f335c57ed0e5840088795145a0ea5717b),
-[CI40059849695](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40059849695):
-all 7 jobs passed. Actual Windows Node22/24 logs read: 20 storage + 35 proof tests
-per lane, 0 failures and 0 skips. Seven new metadata-capture cases passed, including
-full32MiB index/1MiB exclude direct composition. Both prior mapping diagnostics
-still mapping-refused; altered-byte/mtime branch unverified. Windows Server2025 OS
-evidence is separate from native Windows11 Codex/Git acceptance.
+Source15 adds an original isolated SHA1/v2 index projection: bounded structure,
+checksum, names/order and frame checks; optional extension payloads omitted and
+checksum regenerated. An explicit source14 capture overload composes it inside
+one helper before private scratch. Unsupported flags/modes/formats/mandatory
+extensions refuse; no fallback to raw bytes after strict refusal. No production
+helper/operation/settings/project/Git/restore gate is enabled.
 
-Local suite: 170 pass, 0 fail,
-55 Windows-only skips, 225 total. Validation: 3 mods; replay: 4 fixtures.
+Local npm test:170pass/0fail/64Windows-only skips234total, validate3mods/replay4.
+Source[4933f28](https://github.com/HarryBurd33/claude-mods-for-codex/commit/4933f28b82e16e29d14d24a5e3222037113afee8),
+[CI40060887884](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40060887884):
+all7jobs passed. Both actual WindowsServer2025 Node22/24 logs read:20storage+
+44proof each/0fail/0skip. All9new index cases passed, including10000entries,
+32MiB input, malformed/mandatory framing and projected-source cleanup. Both prior
+mapping diagnostics still mapping-refused; altered-byte/mtime and8.3 unverified.
+OS evidence is not native Windows11 Codex or Windows Git acceptance. A deterministic192-byte index
+was produced/read using macOS Git2.39.5 with synthetic data/zero stat fields, not
+Windows Git. See [review](docs/continuation/DEV15-REVIEW.md) and
+[verification log](docs/continuation/TEST-LOG.md).
 
-Real Git, executable/DLL trust, ignore-aware selection, repository provenance,
-child-created content ownership and native Windows11 acceptance remain gated.
-Five-second cooperative checks cannot interrupt blocked IO. Live readers can retain
-scratch bytes; unknown entries are preserved, with no recursive cleanup or secure
-erasure claim. Prior mapping tests returned mapping-refused; altered-byte/mtime
-negative branch and 8.3-specific behavior remain unverified. Windows11 host remains
-unavailable per latest human reply; no repeated availability question.
+Strict format checks are not repository/hash-format/HEAD/ref/object provenance,
+ignore-aware selection, whole-tree freshness, loader trust or native Windows11
+acceptance. Root syntax uses a dummy path, not an actual selected-root identity.
+Five-second cooperative checks cannot interrupt hashing/kernel IO. Prior mapping
+outcomes remain mapping-refused; altered-byte/mtime branch and8.3 unverified.
+Live readers/unknown child-created content can retain bytes; no recursive cleanup,
+secure erasure or hostile same-user/admin isolation. Windows11 remains unavailable
+per latest reply; do not repeat its availability question without a state change.
 
-Expanded development is on codex/astra-groundwork; default branch remains the
-historical experimental MVP. MIT and independent-project status are preserved.
-See [source14 review](docs/continuation/DEV14-REVIEW.md),
-[handoff](docs/continuation/HANDOFF.md) and [verification log](docs/continuation/TEST-LOG.md).
+Expanded development remains on codex/astra-groundwork; default branch is the
+historical experimental MVP. MIT and independent-project status preserved.
 Source14 [package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV14.md)
-passed:160files/all-byte checks, validate3/replay4/package-scaffolding7/7. It remains
-uninstalled. Prior source13 package evidence is versioned separately.
+passed; source15 packaging is the next Medium task after its security proof. No
+source15 installation or Windows compatibility claim.
 
-Installed macOS dev10 remains149 reviewed files/3human-trusted hooks, same private
-settings/mod rules/data/project/scope/retention/export. Activity remains4retained
-records/same revision. No install/cache/config/trust/logging change, extra model/API
-evaluation or optional observer/theme/client upgrade. Source10 native focus/render/
-keyboard-Clear passed earlier; inventory/trust is separate from event delivery.
-
-Earlier native dev6 six views/preview/files/diffs/usage/rewrites/deny/removal-reinstall
-and dev4 sandbox-negative/removed hold evidence stay version-specific. Hold is not
-a production approval gate; human provenance/host fail-open limits remain. Full
-accessibility/lifecycle/loaded disable/older rollback/Linux/Windows/WSL incomplete.
-Source14 package checks passed; next human Sol High before further gated work. See
-[handoff](docs/continuation/HANDOFF.md), [ledger](docs/continuation/REQUIREMENTS.md),
-[test log](docs/continuation/TEST-LOG.md), [Windows boundary](docs/windows-storage.md)
-and [native kit](docs/windows-native-acceptance.md).
+Installed dev10 remains149 reviewed files and the same private settings/mod rules/
+data/project/scope/retention/patch/export grants. Last High inventory3enabled/
+human-trusted hooks/0errors and Activity4/same scope/revision are prior versioned
+observations, not new source15 event/UI evidence. Source10 focus/render/keyboard-
+Clear and dev6/dev4 hook/rewrite/deny/hold/sandbox evidence remain separate.
+Full accessibility/lifecycle/loaded disable/older rollback/Linux/Windows/WSL
+acceptance incomplete. No config/cache/trust/logging/optional observer/theme/client
+change or additional model/API run. See [handoff](docs/continuation/HANDOFF.md),
+[ledger](docs/continuation/REQUIREMENTS.md) and [native kit](docs/windows-native-acceptance.md).
 
 ## What it does
 

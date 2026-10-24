@@ -57,7 +57,7 @@ zero IDs/nanoseconds; name lengths/NUL/padding/invalid UTF8; ordering/case/prefi
 traversal/Windows aliases; optional stripping/mandatory and malformed framing;
 entry10000/input32MiB boundary, overflows/cancellation; retained-source scratch
 projection/parser-refusal cleanup; external owner death/source release. All prior
-35proof and20storage tests must regress on Node22/24 Windows lanes. Local macOS
+35proof and20storage tests regressed on Node22/24 Windows lanes. Local macOS
 skips are not Windows passes. Exact observed CI identity belongs in TEST-LOG.
 
 Original deterministic golden fixture test/fixtures/git-index-v2.json was produced
@@ -111,3 +111,37 @@ trust hashes, expand logging scope or auto-approve a call to make acceptance pas
 - Existing retrieved Microsoft handle/ACL/sharing/lifetime evidence stays in
   proofs/windows-owned-process/README.md and DEV12–14 reviews. This milestone
   does not infer released/native Codex support from a source field or OS test.
+
+## Observed result and completed High review
+
+Source[4933f28](https://github.com/HarryBurd33/claude-mods-for-codex/commit/4933f28b82e16e29d14d24a5e3222037113afee8),
+[CI40060887884](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40060887884):
+all7jobs passed. Both actual WindowsServer2025 Node22/24 logs read:20storage+
+44proof each/0fail/0skip. All9new index cases passed, including10000entries,
+32MiB input, malformed/mandatory framing and projected-source cleanup. Both prior
+mapping diagnostics still mapping-refused; altered-byte/mtime and8.3 unverified.
+OS evidence is not native Windows11 Codex or Windows Git acceptance.
+
+Tested treeaac10e13130e47af1eb7d6ce7b337c06c88c874c. Windows jobs
+120773922216(Node22)/120773922264(Node24), decoded logs read. All4POSIX full
+suites and portable Windows job passed. Local npm test170pass/0fail/64Windows-
+only skips234total; validate3mods/replay4fixtures; diff-check clean. No CI retry or
+compiler/test repair needed. Before CI review corrected one positive unsigned-byte
+name order, moved the golden fixture out of hook replay inputs and used existing
+Dictionary types to avoid introducing a System.Core compile reference. No production
+change to make a test pass. Existing failed candidates/intermittent storage history
+remains separately in TEST-LOG; these passes make no cause/fix claim about it.
+
+High reviewed bounded arithmetic/offsets before reads, whole private clone/checksum,
+strict unsupported-case refusal/no raw fallback, duplicate/order/collision handling,
+full input and entry bounds, cancellation/buffer ownership and source14 projected
+lifetime composition. Production helper compiles only PrivateStorage.cs; no public
+operation or gate is changed. Installed10 still149reviewed files/settings hash
+unchanged. Last prior trusted-hook/activity/UI evidence stays version-specific;
+no new native observation or model/API run. All93ledger IDs retained.
+
+The immediate next work is exact-source public-clone/package/spaced extraction and
+record verification: human-controlled GPT-6.1 Sol Medium. High required before
+further index format scope, repository provenance, Git execution/loader/ignore,
+metadata/helper/cleanup/gate/native/writer integration. No restart/trust step for
+this uninstalled source. Full product incomplete.

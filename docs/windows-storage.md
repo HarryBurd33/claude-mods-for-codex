@@ -1,5 +1,12 @@
 # Windows private storage — source14 proof / unchanged production boundary
 
+Source15 adds only the unintegrated strict SHA1/v2 index projection proof, no
+production operation or gate change. Raw capture and strict projection remain
+explicit distinct proof contracts, never a fallback. Parser/frames/checksum/path
+syntax do not establish actual repository/loader/ignore/native acceptance. See
+[source15 review](continuation/DEV15-REVIEW.md) and TEST-LOG for observed results.
+Installed10/logging/human trust unchanged; earlier versioned foundations follow.
+
 ## Source14 current checkpoint — same-helper metadata capture
 
 Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata

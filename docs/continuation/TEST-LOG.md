@@ -1,10 +1,37 @@
 # Continuation verification log
 
-## Source15 current candidate — strict index projection
+## Verified High source15 — 2026-10-23
+
+Source[4933f28](https://github.com/HarryBurd33/claude-mods-for-codex/commit/4933f28b82e16e29d14d24a5e3222037113afee8),
+[CI40060887884](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40060887884):
+all7jobs passed. Both actual WindowsServer2025 Node22/24 logs read:20storage+
+44proof each/0fail/0skip. All9new index cases passed, including10000entries,
+32MiB input, malformed/mandatory framing and projected-source cleanup. Both prior
+mapping diagnostics still mapping-refused; altered-byte/mtime and8.3 unverified.
+OS evidence is not native Windows11 Codex or Windows Git acceptance.
+
+Tested treeaac10e13130e47af1eb7d6ce7b337c06c88c874c. Actual decoded logs
+120773922216(Node22)/120773922264(Node24); all4full POSIX/portable Windows jobs
+also success. No CI retry/correction needed. Local npm test170pass/0fail/
+64Windows-only skips234total; validate3mods/replay4fixtures; diff-check clean.
+Golden original synthetic192byte macOS Git2.39.5 roundtrip passed; zero stat fields,
+SHA256281ad5169c46eacf899af357b5042cd14dfaa9c995f15db70ee57458f86c25e8.
+Pre-CI review corrected positive path ordering and fixture placement; details in
+DEV15-REVIEW. No cause/fix inferred for prior intermittent storage issue.
+
+Installed10/cache149files match reviewed immutable fixture; private settings hash
+unchanged. No native inventory/event/UI/model run in this stage; prior3trusted hooks/
+4scoped records remain separate versioned evidence. No config/cache/trust/logging/
+observer/theme/client change. All93IDs retained, full product incomplete. Next human
+Medium for packaging. Production before-IO gates intact; real Git/native/loader/
+source provenance/ignore/unknown child-content cleanup/writer remain gated.
+
+## Source15 verified strict index proof — strict index projection
 
 Original unintegrated SHA1/v2 index projection proof: bounded checksum/entry/path/
 frame validation, optional accelerator stripping and explicit same-helper scratch
-composition. Nine new real Windows tests pending CI; local170pass/0fail/
+composition. Source4933f28/CI40060887884 all7jobs passed; actual Windows20storage+44proof
+per Node22/24 lane/0fail/0skip, both logs read. Local170pass/0fail/
 64Windows-only skips234total, validate3/replay4. Golden synthetic index from
 macOS Git2.39.5 roundtrip, no Windows Git launch. No production operation/gate or
 installed10/logging/trust change. Full93product and native Windows/Git remain
