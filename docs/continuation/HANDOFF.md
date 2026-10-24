@@ -21,6 +21,29 @@ tree9a9534134bcf4a39a2b7844916a62cb039a9beb2. Exact new source/final checkpoint
 and CI evidence are recorded after actual remote readback; no self-hash claim.
 Verify local HEAD/ref before work. No force-push or overwritten user history.
 
+## Uploaded code and CI handoff snapshot
+
+Runnable source [b66f2fbdaeaaca5b350ecb229b769b90a0da675e](https://github.com/HarryBurd33/claude-mods-for-codex/commit/b66f2fbdaeaaca5b350ecb229b769b90a0da675e),
+tree41e60bcaa33c4c5a00a6b015dcf205920e4e5d2f, expected-parent/nonforce uploaded.
+Fetched full-tree equality and independent connector/anonymous public ref matched;
+equivalent local062d51f95de5f96636efd8d936343db647701642 retained on named backup.
+[CI40128013186](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40128013186)
+was in progress when this handoff snapshot was made. Actual decoded completed logs:
+Ubuntu24job120973491527, Ubuntu22job120973491569, macOS24job120973491589 each
+208pass/0fail/109Windows-only skips317total. New retention/actual-CLI/interruption
+checks passed there. Windows portable retention before-IO step concluded success
+(counts not decoded yet). macOS22job120973491548, Windows22job120973491585,
+Windows24job120973491304 and portablejob120973491662 were still in progress in the
+last snapshot. This is not an all-green CI or new Windows storage/host claim.
+
+Remaining CI readback and exact packaging are routine **Medium** work. Read the
+run/decoded logs first; a new correctness/security failure needs a human High
+checkpoint, not weakened assertions/retries or an attempted Medium runtime fix.
+The old unchanged Windows image failure remains explicit even if its new lane
+result has not finished. No further implementation investigation is required to
+justify keeping High selected while waiting for routine evidence. Final notes-only
+checkpoint identity is read back after upload in the reply/private handoff.
+
 ## Implemented contracts and code
 
 - src/retention.mjs: previewRetention/cleanupRetention/runRetentionCli. Private
@@ -111,12 +134,16 @@ separate evidence, not Windows cleanup/native compatibility.
 
 ## Next exact model and tasks
 
-**GPT-6.1 Sol Medium** once this source checkpoint/CI is reviewed and uploaded.
+**GPT-6.1 Sol Medium**. Source/tree/ref verified; completed CI logs read as above.
+Finish pending CI readback as routine work; do not keep High merely to wait.
 Remaining work is routine packaging/docs and concrete native step preparation.
 High before new consequential runtime/security/writer changes. Preserve macOS
 priority; do not return to a Windows-proof/package-version-only loop.
 
-1. Verify HEAD/ref and exact source26 public clone/archive/spaced extraction using
+1. Verify HEAD/ref; first read CI40128013186/decoded remaining logs. New correctness/
+   security failure requires a human High stop; preserve the known old Windows
+   image failure without restarting that investigation. Then exact source26 public
+   clone/archive/spaced extraction using
    docs/packaging.md/PACKAGE-DEV24 workflow. Retention module/test/docs included;
    compatibility-only manifest/MIT/defaults/proof-production separation intact;
    no private handoff/log/config/link/traversal. No dependency install or scripts.

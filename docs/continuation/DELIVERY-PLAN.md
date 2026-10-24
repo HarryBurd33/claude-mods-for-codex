@@ -14,8 +14,8 @@ authoring/platform gaps remain; no package-version-only or Windows-proof loop.
 ## What is usable, and what is unfinished
 
 The installed human-reviewed dev10 has recorded macOS native dashboard, covered
-hook, exact rewrite/deny, preview/focus and basic authoring observations. Source25
-is uninstalled. Its offline macOS suite passed189 tests with108 Windows-only skips.
+hook, exact rewrite/deny, preview/focus and basic authoring observations. Source26
+is uninstalled. Its offline macOS suite passed208 tests with109 Windows-only skips.
 Neither result is full-product acceptance. Native checks belong to the snapshot
 and client version actually observed; unsupported behavior and approximations
 must be disclosed rather than counted as implemented exact equivalents.

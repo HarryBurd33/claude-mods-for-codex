@@ -13,7 +13,9 @@ No installed production metadata was deleted.
 
 Exact local source26 full suite208pass/0fail/109Windows-only skips317total;
 new retention suite19pass/0fail/1Windows-only skip; validate3mods/replay4fixtures.
-Source26 CI is pending upload/readback. These are offline/OS synthetic/subprocess
+Codeb66f2fb/tree41e60bc uploaded and independently verified. CI40128013186 is
+in progress: decoded Ubuntu22/24 and macOS24 each208/0/109skips; portable retention
+before-IO step success (counts not decoded), remaining jobs unverified. These are offline/OS synthetic/subprocess
 checks, not Codex host delivery. Original state/journal/settings/Windows/project/
 restore code and deadlines remain unchanged.
 

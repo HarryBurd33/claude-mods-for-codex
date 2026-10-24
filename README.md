@@ -14,8 +14,8 @@ remain incomplete. Installed human-trusted dev10, its149reviewed files and loggi
 scope are unchanged; no installed production metadata was cleaned.
 
 Local source26:208tests passed,0failed,109Windows-only skips; new retention suite
-19passed/0failed/1Windows-only skip; validate3mods/replay4fixtures. CI awaits actual
-upload/readback. Synthetic/OS subprocess tests do not certify native Codex delivery.
+19passed/0failed/1Windows-only skip; validate3mods/replay4fixtures. CI40128013186 is in progress; decoded Ubuntu22/24 and macOS24 logs each
+passed208 with109Windows-only skips. Remaining jobs are unverified. Synthetic/OS subprocess tests do not certify native Codex delivery.
 [Last completed source24 package check](docs/continuation/PACKAGE-DEV24.md); source26 packaging
 and installed native acceptance remain separate.
 
