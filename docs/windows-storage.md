@@ -1,5 +1,9 @@
 # Windows private storage — source21 assessment / unchanged production gates
 
+Source22 isolates retained code-ancestor metadata sampling, no production policy
+change or private authority. CI pending. See continuation/DEV22-REVIEW.md; all
+Windows production gates and installed human trust/logging remain unchanged.
+
 Source21 tests a draft code-ancestor descriptor rule for one exact OS-known folder.
 No global Installer trust/private-data or executable admission change; no image
 read/Git execution/ACL repair. Source21 uninstalled. Corrected CI40071604769 passed both Windows OS lanes, each

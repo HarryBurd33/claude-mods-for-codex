@@ -295,6 +295,99 @@ test('Windows CI exact known ProgramFilesX64 directory matches a draft descripto
     assert.equal(await run(exe,['run','pin',data,win32.join(root,...relative.split('/')),root,project]),'refused');
   }
 });
+// Lease proof control is one byte; all output is closed fixed frames. No parent
+// image read/rename/system ACL mutation is performed by the known-folder case.
+async function ancestorLease(exe,data,target,{mode='synthetic-ancestor-lease',during,control='v',terminate=false}={}) {
+  const p=spawn(exe,['run',mode,data,target],{windowsHide:true,stdio:['pipe','pipe','pipe']});
+  p.stdin.on('error',()=>{});
+  const closed=new Promise((resolve,reject)=>{p.once('close',(code,signal)=>resolve({code,signal}));p.once('error',reject);});
+  closed.catch(()=>{});
+  let text='',errors=0,timedOut=false;
+  const timer=setTimeout(()=>{timedOut=true;p.kill();},15000);
+  const ready=new Promise((resolve,reject)=>{
+    p.stdout.setEncoding('utf8');p.stdout.on('data',chunk=>{
+      text+=chunk;if(text.length>256){p.kill();reject(new Error('Lease output bound'));}
+      else if(text.includes('\n'))resolve(text.split(/\r?\n/)[0]);
+    });
+    p.stderr.on('data',chunk=>{errors+=chunk.length;if(errors>8192)p.kill();});
+    p.once('error',reject);p.once('close',()=>reject(new Error('Lease readiness unavailable')));
+  });
+  try {
+    const first=await ready;
+    if(first==='held' && during)await during();
+    if(terminate)p.kill();else p.stdin.end(control);
+    const result=await closed;
+    assert.equal(timedOut,false,'Lease parent deadline');assert.equal(errors,0);
+    if(terminate)assert.notEqual(result.signal,null);else assert.equal(result.code,0);
+    return text.trim().split(/\r?\n/);
+  } finally {
+    clearTimeout(timer);if(p.exitCode===null && p.signalCode===null)p.kill();await closed;
+  }
+}
+async function leaseFixture(name) {
+  const {data,exe}=await setup(),parent=join(data,'lease '+name),target=join(parent,'selected Ω directory');
+  await windowsStorageRequest('prepare-directory',parent);await windowsStorageRequest('prepare-directory',target);
+  return {data,exe,parent,target};
+}
+const leaseFrames=state=>['held',state,'disposed-refused','released'];
+test('Windows retained synthetic ancestor denies target and parent rename until release without private authority',native,async()=>{
+  const {data,exe,parent,target}=await leaseFixture('rename');await fixtureAcl(target,'installer-control');
+  try {
+    assert.deepEqual(await ancestorLease(exe,data,target,{during:async()=>{
+      await assert.rejects(rename(target,target+' moved'));
+      await assert.rejects(rename(parent,parent+' moved'));
+      await assert.rejects(windowsStorageRequest('prepare-directory',target),/Private Windows/);
+    }}),leaseFrames('unchanged'));
+    await rename(target,target+' moved');await rename(target+' moved',target);
+    await rename(parent,parent+' moved');await rename(parent+' moved',parent);
+  } finally {await fixtureAcl(target,'private');}
+});
+test('Windows retained synthetic ancestor refuses changed allowed metadata and foreign mutation descriptors',native,async()=>{
+  const {data,exe,target}=await leaseFixture('descriptor');
+  for(const mode of ['broad','code-write','deny-code-write','null']) {
+    try {
+      assert.deepEqual(await ancestorLease(exe,data,target,{during:()=>fixtureAcl(target,mode)}),leaseFrames('changed-or-refused'),mode);
+    } finally {await fixtureAcl(target,'private');}
+  }
+  assert.deepEqual(await ancestorLease(exe,data,target),leaseFrames('unchanged'));
+});
+test('Windows retained synthetic ancestor detects a changed prefix descriptor without final-root policy expansion',native,async()=>{
+  const {data,exe,parent,target}=await leaseFixture('prefix');
+  try {
+    // Allowed public-read grant under original prefix policy still changes the
+    // retained descriptor sample. Child has explicit protected private grants.
+    assert.deepEqual(await ancestorLease(exe,data,target,{during:()=>fixtureAcl(parent,'broad')}),leaseFrames('changed-or-refused'));
+  } finally {await fixtureAcl(parent,'private');}
+  assert.deepEqual(await ancestorLease(exe,data,target),leaseFrames('unchanged'));
+});
+test('Windows retained synthetic ancestor constructor failure releases partial target and ancestor handles',native,async()=>{
+  const {data,exe,parent,target}=await leaseFixture('failure');await fixtureAcl(target,'code-write');
+  try {
+    assert.deepEqual(await ancestorLease(exe,data,target),['refused']);
+    await rename(target,target+' moved');await rename(target+' moved',target);
+    await rename(parent,parent+' moved');await rename(parent+' moved',parent);
+  } finally {await fixtureAcl(target,'private');}
+});
+test('Windows retained synthetic ancestor releases on cancel EOF invalid control and external process termination',native,async()=>{
+  const {data,exe,target}=await leaseFixture('cancel');
+  for(const [control,state] of [['c','cancelled'],['','cancelled'],['x','control-refused']]) {
+    assert.deepEqual(await ancestorLease(exe,data,target,{control}),leaseFrames(state));
+    await rename(target,target+' moved');await rename(target+' moved',target);
+  }
+  assert.deepEqual(await ancestorLease(exe,data,target,{terminate:true}),['held']);
+  await rename(target,target+' moved');await rename(target+' moved',target);
+});
+test('Windows CI known ancestor lease retains and rechecks exact SDK folder metadata without returning authority',{
+  ...native,skip:process.platform!=='win32'||!process.env.CODEX_MODS_CI_GIT_ROOT,
+},async t=>{
+  const root=process.env.CODEX_MODS_CI_GIT_ROOT;assert.equal(root,'C:\\Program Files\\Git');
+  const {data,exe}=await setup(),target=win32.dirname(root),mode='known-ancestor-lease';
+  assert.deepEqual(await ancestorLease(exe,data,target,{mode}),leaseFrames('unchanged'));
+  t.diagnostic(JSON.stringify({target:'ProgramFilesX64',retainedMetadata:'unchanged',admissionAuthority:false,imageRead:false,systemMutation:false}));
+  for(const [candidate,expected] of [[data,'ScopePolicy'],[root,'ScopePolicy'],[join(target,'not-created-child'),'ScopePolicy'],['relative','InputPolicy'],[target+':ads','InputPolicy']])
+    assert.deepEqual(await ancestorLease(exe,data,candidate,{mode}),[expected]);
+});
+
 test('Windows executable-pin proof rejects project code, foreign writes, links, aliases and mutable code directory',native,async()=>{
   const {data,exe}=await setup(), code=join(data,'reviewed code'), project=join(data,'selected project');
   await windowsStorageRequest('prepare-directory',code);await mkdir(project);

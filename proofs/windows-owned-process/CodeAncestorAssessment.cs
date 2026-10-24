@@ -35,7 +35,7 @@ namespace CodexMods {
    }
    return CodeAncestorAssessment.MatchesDraftRule;
   }
-  public static CodeAncestorAssessment AssessKnownCodeAncestorProof(string candidate) {
+  static CodeAncestorAssessment KnownCodeAncestorScope(string candidate) {
    try {PathInput(candidate);}catch(IOException){return CodeAncestorAssessment.InputPolicy;}
    // Microsoft documents ProgramFilesX64 as unsupported for 32-bit OS/processes.
    if(!Environment.Is64BitOperatingSystem || !Environment.Is64BitProcess)return CodeAncestorAssessment.PlatformPolicy;
@@ -50,7 +50,11 @@ namespace CodexMods {
     known=Marshal.PtrToStringUni(memory,n);PathInput(known);
    } catch(IOException) {return CodeAncestorAssessment.KnownFolderUnavailable;}
    finally {if(memory!=IntPtr.Zero)Marshal.FreeCoTaskMem(memory);}
-   if(!String.Equals(candidate,known,StringComparison.OrdinalIgnoreCase))return CodeAncestorAssessment.ScopePolicy;
+   return String.Equals(candidate,known,StringComparison.OrdinalIgnoreCase)?CodeAncestorAssessment.MatchesDraftRule:CodeAncestorAssessment.ScopePolicy;
+  }
+  public static CodeAncestorAssessment AssessKnownCodeAncestorProof(string candidate) {
+   var scope=KnownCodeAncestorScope(candidate);
+   if(scope!=CodeAncestorAssessment.MatchesDraftRule)return scope;
    var held=new List<IDisposable>();
    try {
     string root=candidate.Substring(0,3),cursor=root;

@@ -1,5 +1,10 @@
 # Windows owned-process research candidate
 
+Source22 adds CodeAncestorLease.cs: isolated retained ancestor metadata samples,
+no code/private authority or atomic ACL snapshot. Owned synthetic rename/descriptor/
+cleanup/cancel/exit tests and read-only exact SDK scope test; CI pending. Original
+ProgramPins/production/private policies unchanged. See DEV22-REVIEW.
+
 Source21 adds CodeAncestorAssessment.cs: exact SDK-known ProgramFilesX64 metadata
 against a draft descriptor rule, not admission/image IO/trust expansion. Original
 private policy/ProgramPins unchanged. Local186pass/0fail/89Win-skips. Corrected CI40071604769: both Windows

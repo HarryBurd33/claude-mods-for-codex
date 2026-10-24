@@ -121,6 +121,11 @@ public static class Harness {
    if(mode=="code-ancestor-case") {
     Console.WriteLine(CodexMods.PrivateStorage.CodeAncestorDescriptorCaseProof(a[3]));return 0;
    }
+   if(mode=="known-ancestor-lease" || mode=="synthetic-ancestor-lease") {
+    if(mode=="known-ancestor-lease")CodexMods.PrivateStorage.KnownCodeAncestorLeaseHarnessProof(a[3]);
+    else CodexMods.PrivateStorage.SyntheticCodeAncestorLeaseHarnessProof(a[3]);
+    return 0;
+   }
    if(mode=="inventory-pin") {
     // Test-only retained object boundary. No image loading, version query, Git
     // execution or content read here. Parent reads only after this readiness.

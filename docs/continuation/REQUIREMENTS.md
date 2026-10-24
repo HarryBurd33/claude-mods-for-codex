@@ -1,6 +1,22 @@
 # Requirements ledger
 
 
+## Source22 High candidate — retained ancestor metadata — 2026-10-24
+
+An isolated proof retains exact SDK-bound ancestor handles, then rechecks identity
+and sampled owner/DACL bytes before release. Separate synthetic tests cover rename,
+descriptor changes, partial-construction cleanup, cancel/EOF and process exit.
+This grants no executable/private-data authority and is not an atomic ACL snapshot.
+Original production gates, ProgramPins/private trust/state20 and installed human-
+trusted dev10/logging scope are unchanged. Source22 is uninstalled; all93 requested
+capabilities remain accounted for and the full product is incomplete.
+
+Local186pass/0fail/95Windows-only skips281total; validate3/replay4. Windows75skips
+here establish no success. Actual Windows CI pending candidate upload. See
+[DEV22-REVIEW](DEV22-REVIEW.md). Source21 failures/correction and source20 failure uncertainty
+remain preserved; earlier model-next statements below are historical.
+
+
 ## Source21 Medium package verification — 2026-10-24
 
 Exact anonymous public clone of fde53c9 passed 186 tests, zero failures, 89
