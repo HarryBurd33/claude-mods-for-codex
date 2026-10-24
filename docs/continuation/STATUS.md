@@ -1,5 +1,23 @@
 # Current status — source18 static inventory — 2026-10-23
 
+## Source18 Medium packaging candidate — 2026-10-23
+
+Human resumed verified09a810b on GPT-6.1 Sol Medium. Anonymous exact public clone:
+178pass/0fail/84Windows-only skips262total; reviewed174-file archive all bytes equal
+clone/workspace,1,213,534unpacked/363,259compressed bytes, SHA256
+79d4a7a07e315d418c5e606d047ce0b30d3f1666ecb335ac36784b0d86d7f6fb.
+Spaced extraction validate3/replay4/package+scaffold+parser15pass/0fail/0skip.
+Source18 remains uninstalled; installed dev10/cache149files/private settings unchanged.
+
+Later09a810b CI40065152768 failed Windows portable scaffold replay at its5s test
+subprocess budget (ETIMEDOUT); other6job conclusions success. Prior actual proof
+f8290ef/CI40064711984 all7passed remains separate. A test-only Windows15s budget
+now replaces5s, POSIX stays5s, no retry or production/security/deadline change.
+Candidate CI/package verification pending upload. All93IDs and every Windows gate
+remain; no model/native/trust/logging change. See PACKAGE-DEV18.md. Historical
+records below are version-specific, not evidence that the later run passed.
+
+
 **Full 93-capability product remains incomplete. Source 0.2.0-dev.18 is
 uninstalled; installed human-trusted dev10 and logging scope remain unchanged.**
 Human selected GPT-6.1 Sol High from verified 7848c97.

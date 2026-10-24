@@ -24,7 +24,9 @@ test('scaffold validates before writes and refuses existing/linked output parent
 test('generated matching/control fixtures exercise disabled and enabled rules through the real offline CLI',async t=>{
  const root=await mkdtemp(join(await realpath(tmpdir()),'mods-author-cli-'));t.after(()=>rm(root,{recursive:true,force:true}));
  const cli=fileURLToPath(new URL('../bin/codex-mods.mjs',import.meta.url));
- const invoke=args=>execFileSync(process.execPath,[cli,...args],{cwd:root,encoding:'utf8',timeout:5000});
+ // CI40065152768 hit this harness's 5s limit during one Windows replay.
+ // Keep a bounded 15s Windows test budget; no retries/product deadline changes.
+ const invoke=args=>execFileSync(process.execPath,[cli,...args],{cwd:root,encoding:'utf8',timeout:process.platform==='win32'?15000:5000});
  const specs=[
   {name:'notice',kind:'notice',message:'Review scope'},
   {name:'guard',kind:'deny',match:'SYNTHETIC_RISK',reason:'Review before retrying'},
