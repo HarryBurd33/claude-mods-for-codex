@@ -1,5 +1,13 @@
 # Final review
 
+Current source27 adds [failure/turn export observation](event-observation.md), independently
+selected with observationExport or an immediate CLI path. It makes no journal
+writes, raw-content responses, model calls or automatic export discovery. Optional
+Stop/Interrupt and the three default registrations stay unchanged/off as applicable.
+Installed human-reviewed26/logging scope/trust and all Windows gates are preserved;
+27 is source-only pending package/native acceptance. See [review](continuation/DEV27-REVIEW.md).
+
+
 This review covers only the historical v0.1 MVP. It is not approval or completion
 of the expanded product; see the current continuation records.
 

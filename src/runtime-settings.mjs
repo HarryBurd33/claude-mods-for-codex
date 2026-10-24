@@ -20,7 +20,7 @@ export async function loadRuntimeSettings(path) {
     const parent = dirname(cursor); if (parent === cursor) break; cursor = parent;
   }
   const value = parseJsonObject(await readBoundedFile(file, 16384), 'settings');
-  if (Object.keys(value).some(key => !['version','projectRoot','dataDirectory','stateScope','sessionId','allowChanges','checkpoints','usageExport'].includes(key)) || value.version !== 1) throw new Error('Unsupported settings');
+  if (Object.keys(value).some(key => !['version','projectRoot','dataDirectory','stateScope','sessionId','allowChanges','checkpoints','usageExport','observationExport'].includes(key)) || value.version !== 1) throw new Error('Unsupported settings');
   for (const key of ['projectRoot','dataDirectory']) {
     if (typeof value[key] !== 'string' || !isAbsolute(value[key]) || value[key].length > 4096 || /\p{Cc}/u.test(value[key])) throw new Error('Settings paths must be absolute and bounded');
   }
@@ -42,6 +42,11 @@ export async function loadRuntimeSettings(path) {
     if(typeof value.usageExport!=='string'||!isAbsolute(value.usageExport)||value.usageExport.length>4096||/\p{Cc}/u.test(value.usageExport))throw new Error('Select an absolute bounded private usage export');
     const exportRelative=relative(projectRoot,resolve(value.usageExport));
     if(exportRelative===''||(!isAbsolute(exportRelative)&&exportRelative!=='..'&&!exportRelative.startsWith(`..${sep}`)))throw new Error('Keep the selected raw usage export outside the project');
+  }
+  if(value.observationExport!==undefined){
+    if(typeof value.observationExport!=='string'||!isAbsolute(value.observationExport)||value.observationExport.length>4096||/\p{Cc}/u.test(value.observationExport))throw new Error('Select an absolute bounded private observation export');
+    const exportRelative=relative(projectRoot,resolve(value.observationExport));
+    if(exportRelative===''||(!isAbsolute(exportRelative)&&exportRelative!=='..'&&!exportRelative.startsWith(`..${sep}`)))throw new Error('Keep the selected raw observation export outside the project');
   }
   return Object.freeze({ ...value, projectRoot, dataDirectory: resolve(value.dataDirectory), stateScope: value.stateScope ?? 'session', allowChanges: value.allowChanges === true });
 }

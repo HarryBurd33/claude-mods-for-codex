@@ -1,5 +1,39 @@
 # Continuation verification log
 
+## Source27 failure/turn observations — 2026-10-24 — Sol High
+
+Start4663912, clean codex/astra-groundwork. Bounded primary release check and
+implementation: [DEV27-REVIEW](DEV27-REVIEW.md), [workflow/evidence](../event-observation.md).
+No native trigger, model/API run, installation, trust/config selection or production
+write. Existing installed26cache210byte-equal fixture; settings SHA unchanged;
+default hooks/Windows helpers/storage and before-IO settings guard preserved.
+All93 requirement identities/order preserved. Standalone Node24.22.0/npm11.19.1,
+macOS14.6; CLI163 previously measured, desktop independent, no version upgrade.
+
+Commands actually run:
+- node --test test/observations.test.mjs test/observers.test.mjs test/usage.test.mjs
+  test/dashboard.test.mjs:18pass/0fail/2platform skips20total.
+- Expanded the above with test/rendering.test.mjs test/contracts.test.mjs:
+  40pass/0fail/2skips42total, including busy-state/config-failure optional callbacks.
+- First npm test after new projection/barrier:216pass/0fail/110Windows-only skips,
+  326total. Final after simulated outcome table and status type guard:
+  **217pass/0fail/110Windows-only skips327total**,7.1seconds. No test failure.
+- npm run validate:3mods valid. npm run replay:4fixture responses observed,
+  unchanged notice/deny/abstention behavior, no execution.
+- Final source UI version-only6→27 correction: node --test test/rendering.test.mjs
+  test/package.test.mjs:11pass/0fail/0skip. Earlier new parser/UI focused14total:
+  13pass/0fail/1Windows skip. No broad suite repeated solely for docs/version string.
+- git diff --check:clean. Synthetic owned-file read/CLI/MCP and copied-source
+  mutation barrier only; simulated DOM test is not native rendering/accessibility.
+
+New Windows before-options/path/IO refusal test is present in the portable CI
+lane but skips locally. Existing mandatory real-image positive remains unmodified;
+previous CI40128013186 both Windows storage jobs failed it (25storagepasses and
+84of85process checks each). Source27 CI not yet read; no all-green claim. Medium
+must read exact results, not infer Windows success from POSIX skips. Package/native
+source27/Stop/Interrupt/cancel/nonzero/invocation-error acceptance still unverified.
+
+
 ## Dev26 restarted native acceptance — 2026-10-24
 
 Human resumed Sol Medium from457609b after restart. Fresh inventory3enabled/trusted

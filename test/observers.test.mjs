@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile, mkdtemp, rm, readdir, realpath } from 'node:fs/promises';
+import { readFile, mkdtemp, rm, readdir, realpath, mkdir, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -58,12 +58,49 @@ test('malformed lifecycle fields fail validation without interpreting response/t
 test('optional observer hook manifest is explicit; default package keeps its three hooks', async () => {
   const manifest = JSON.parse(await readFile(join(root, 'examples/hooks/observe-lifecycle.json'), 'utf8'));
   assert.deepEqual(Object.keys(manifest.hooks).sort(), names.sort());
-  for (const groups of Object.values(manifest.hooks)) {
+  for (const [name, groups] of Object.entries(manifest.hooks)) {
     assert.equal(groups.length, 1); assert.equal(groups[0].hooks.length, 1);
-    assert.deepEqual(groups[0].hooks[0], { type: 'command', command: 'node "${PLUGIN_ROOT}/src/hook-main.mjs"', timeout: 5, statusMessage: 'Observing opted-in Claude Mods lifecycle metadata' });
+    assert.deepEqual(groups[0].hooks[0], { type: 'command', command: 'node "${PLUGIN_ROOT}/src/hook-main.mjs"', timeout: ['Interrupt','SessionEnd'].includes(name) ? 3 : 5, statusMessage: 'Observing opted-in Claude Mods lifecycle metadata' });
   }
   const defaults = JSON.parse(await readFile(join(root, 'hooks/hooks.json'), 'utf8'));
   assert.deepEqual(Object.keys(defaults.hooks).sort(), ['PostToolUse', 'PreToolUse', 'SessionStart']);
+});
+
+test('PostToolUse delivery never infers process success/failure from arbitrary result text or counts a missing failure hook', async () => {
+  const base = JSON.parse(await readFile(join(root, 'fixtures/post-tool.json'), 'utf8'));
+  const configured = config([]);
+  for (const tool_response of ['Process exited with code 0', 'Process exited with code 7', { error: 'synthetic-private', isError: true }, 'cancelled']) {
+    const result = dispatch({ ...base, tool_response }, configured);
+    assert.deepEqual(result.stateMetadata, { event: 'PostToolUse', tool: base.tool_name });
+    assert.deepEqual(result.output, {});
+  }
+  assert.deepEqual(dispatch({hook_event_name:'PostToolUseFailure'}, configured).stateMetadata, null);
+});
+
+test('turn observers keep empty output on busy scoped state/config failure and never recover locks or start follow-up (subprocess replay)', { skip: process.platform === 'win32' }, async t => {
+  const directory = await mkdtemp(join(await realpath(tmpdir()), 'mods-turn-'));
+  t.after(() => rm(directory, { recursive: true, force: true }));
+  const project = join(directory, 'project'); await mkdir(project);
+  const data = join(directory, 'data'), configuration = join(directory, 'config.json');
+  await writeFile(configuration, JSON.stringify({version:1, mods:[], metadataState:{enabled:true, scope:'session',observerEvents:['Stop','Interrupt']}}), { mode: 0o600 });
+  const scope = {projectId:project,sessionId:'synthetic-private'};
+  await recordMetadataEvent(data,scope,{event:'Stop'});
+  const lock = join(data, 'metadata-state-v1', '.state.lock'); await mkdir(lock, {mode:0o700});
+  const env = {...process.env,PLUGIN_ROOT:root,CODEX_MODS_CONFIG:configuration,CODEX_MODS_PROJECT_ROOT:project,CODEX_MODS_DATA_DIR:data};
+  async function invoke(input,environment=env) {
+    return new Promise((resolve,reject)=>{
+      const child=execFile(process.execPath,[join(root,'src/hook-main.mjs')],{env:environment,timeout:5000,maxBuffer:4096},(error,stdout,stderr)=>error?reject(error):resolve({stdout,stderr}));
+      child.stdin.end(JSON.stringify(input));
+    });
+  }
+  const stop={...await fixture('Stop'),cwd:project,session_id:scope.sessionId};
+  const result=await invoke(stop); assert.equal(result.stdout,'{}\n'); assert.match(result.stderr,/metadata state unavailable/); assert.doesNotMatch(result.stderr,/synthetic-private|project|data\/|turn_id/);
+  assert.equal((await readdir(join(data,'metadata-state-v1'))).includes('.state.lock'),true);
+  assert.equal((await readMetadataState(data,scope)).records,1);
+  const failed=await invoke(stop,{...env,CODEX_MODS_CONFIG:join(directory,'missing')});
+  assert.equal(failed.stdout,'{}\n'); assert.equal(failed.stderr,'claude-mods-for-codex: configuration unavailable\n');
+  const interrupted=await invoke({...await fixture('Interrupt'),cwd:project,session_id:scope.sessionId},{...env,CODEX_MODS_CONFIG:join(root,'config/mods.json'),CODEX_MODS_DATA_DIR:join(directory,'not-created')});
+  assert.equal(interrupted.stdout,'{}\n'); assert.equal(interrupted.stderr,''); assert.equal((await readdir(directory)).includes('not-created'),false);
 });
 
 test('observer delivery counts and subprocess output stay scoped/private; disabled event writes nothing (not native)', { skip: process.platform === 'win32' }, async t => {

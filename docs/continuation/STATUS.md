@@ -1,47 +1,49 @@
-# Current status — source26 selected-scope retention — 2026-10-24
+# Current status — source27 observations — 2026-10-24
 
-Source **0.2.0-dev.26** is a development checkpoint on
-`codex/astra-groundwork`. The full [93-capability ledger](REQUIREMENTS.md) remains
+Source **0.2.0-dev.27** is a runnable development checkpoint on
+`codex/astra-groundwork`. The [93-capability ledger](REQUIREMENTS.md) remains
 incomplete; the default branch retains the earlier experimental MVP.
 
-The new POSIX [retention CLI](../retention.md) previews only the project/session
-scope in reviewed private settings and requires its unchanged fingerprint for
-explicit cleanup. It protects other scopes and recent data, takes cooperating
-storage locks, refuses unsafe entries and reports partial deletion. No automatic
-cleanup, MCP writer, lock reaping or Windows enabling. [Design/tests](DEV26-REVIEW.md).
-No installed production metadata was deleted.
+The new [observation CLI/MCP/panel workflow](../event-observation.md) summarizes
+one explicitly selected private exec JSONL export. It separates command status,
+zero/nonzero/missing exits, started/completed/failed turn records and stream errors.
+This is a disclosed snapshot approximation: reviewed CLI163/164 have no
+PostToolUseFailure hook, PostToolUse does not certify exit0, and interrupted exec
+turns may omit a terminal record. No result-text scraping or missing-event inference.
 
-Exact public789a417 clone passed208/0fail/109Windows-only skips317total. Its
-210-file archive was inspected byte-for-byte and a fresh spaced extraction passed
-33focused checks/0fail/1Windows-only skip plus validate3/replay4. [Package record](PACKAGE-DEV26.md).
-CI40128013186 completed: all four POSIX lanes208/0/109skips; Windows portable
-passed (retention refusal1/0/19POSIX-skips). Both Windows storage jobs retain the
-same real-image failure:25storage passes,84/85process proofs each. Not all-green.
+The optional Stop/Interrupt/state lane retains only event/time and always returns
+empty control output. Source27 tests busy/config failure/default-off/scope/privacy;
+the optional manifest now respects the three-second Interrupt/SessionEnd limit.
+Reception/trust and storage are separate explicit opt-ins. No default registration,
+journal field or current capture selection changed. No raw payload retention.
 
-Configured **dev26 is installed, human-trusted and observed after human restart**.
-Fresh cache/settings/trust checks passed. Both harmless print replacements,
-unchanged control and expected PreToolUse denial passed in the actual desktop.
-All six owned views, selected project/diffs/usage labels and restricted local
-preview/Clear/fallback rendered. [Native acceptance and limits](NATIVE-DEV26.md).
+Local Node24.22.0/macOS14.6 suite:217pass/0fail/110platform-only skips327total;
+validate3mods/replay4fixtures. Parser/private-file/CLI/MCP and simulated accessible
+UI checks passed, including synthetic mutation refusal. No new native run, install,
+trust, configuration change or optional event delivery. Source27 package/CI/loaded
+native acceptance is pending; [review](DEV27-REVIEW.md) and latest TEST-LOG hold
+exact evidence. No all-green CI or Windows compatibility claim.
 
-Human authorized one additional ephemeral Sol Medium read-only run: one fixed
-print, exit0 in7.3s. Active bounded Watch showed4→7records (SessionStart/pre/post
-+1each), same scope/revision as service readback. Watch stopped; grant consumed.
-This verifies that bounded native path, not full lifecycle/producer health or
-visible notice/resume/failure/Stop. No more model/API run authorized. Settings/
-trust/cache/logging scope/export/optional hooks unchanged; no production cleanup.
-The exact running bundled runtime was not independently attested; installed bundle
-26.1021.22027/build21747 re-read, panel host chatgpt. Reviewed10 remains rollback.
+Installed **human-reviewed dev26 remains frozen**. All210cache files still match
+its configured immutable fixture; private settings SHA unchanged. Its bounded
+[native hooks/panel/authorized Watch4→7](NATIVE-DEV26.md) results belong to26,
+not27. Existing selected usage export is unchanged and never implicitly supplies
+observation access. No production cleanup or further model/API run authorized;
+latest one-run grant is consumed. Reviewed10 remains a selective rollback source.
 
-Human priority remains macOS acceptance first, Windows later. Source25's known
-Windows real-image positive fails before bytes: post-refusal linkcount2 versus
-one-link guard. CI40122363235 had25storage passes and84/85process proofs per Windows
-lane; four POSIX lanes189pass/0fail/108Windows-only skips. That failure is retained,
-not hidden or repaired by26. No actual Git image hash/import/version/execution or
-native Windows11/WSL acceptance; every production Windows gate remains closed.
-[Preserved Windows review](DEV25-REVIEW.md).
+Windows remains in scope and later in the human-selected delivery order. Existing
+settings/project/Git/restore/retention gates and mandatory image check are unchanged;
+new observation file IO refuses before options/path access. CI40128013186 previously
+had four POSIX successes/portable success and both Windows storage jobs failing the
+retained installed-image positive (25storage passes/84of85process proofs each,
+post-refusal links2 vs one-link guard). No image read/hash/import/execution or native
+Windows11/WSL acceptance is established. Do not resume another Windows proof loop.
 
-Next exact setting: **GPT-6.1 Sol High** before the failure/turn-lifecycle
-observation contract and adapter changes described in NATIVE-DEV26.md. No new
-code or permission changes on Medium. Keep optional events off until explicit
-opt-in/review; source26 remains a development milestone, not full-product closure.
+Next exact setting: **GPT-6.1 Sol Medium** for source27 CI readback, exact package/
+spaced-path verification and concrete review/native acceptance preparation. Keep
+installed26/logging/trust unchanged unless a supported update is deliberately
+prepared with human review. Explicit observer storage/event selection and fresh
+bounded native-run authorization remain protected. Stop for High before new
+consequential code/security work or a new correctness failure. macOS accessibility,
+lifecycle/loaded disable/older rollback/themes/routing/context/authoring and other
+platform acceptance remain incomplete; no full-product completion claim.

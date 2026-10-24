@@ -1,5 +1,31 @@
 # Research log and reproducibility
 
+## 2026-10-24 — source27 bounded failure/turn contract check
+
+Official hooks page retrieved from https://learn.chatgpt.com/docs/hooks; a direct
+https://developers.openai.com/docs/hooks attempt returned404, and the German
+search lead redirected to the same English Learn page. No unavailable page was
+claimed reviewed. Latest stable GitHub release re-read rust-v0.164.0, published
+2026-10-23T04:48:10Z. No install/upgrade or model run.
+
+Retrieved pinned0.163.0 hook schema/PostToolUse/Stop, tool registry/context, unified
+exec handler/adapter and exec_events/event_processor_with_jsonl_output. Re-read
+0.164.0 registry/context: byte-identical. Two initially guessed filenames
+(event_processor_with_json_output.rs and unified_exec/mod.rs) returned404; directory
+listing/correct filenames resolved to jsonl_output.rs and unified_exec.rs. Only
+retrieved content supports conclusions. Full primary links and source-specific
+limits are in [event observation](event-observation.md).
+
+Conclusions: no released PostToolUseFailure in reviewed interface; registry uses
+logging success, while exec returns true independent of exit. Text-only terminal
+post-response is unsuitable for trustworthy failure classification; invocation
+errors/live processes can omit it. Exec JSONL structured statuses/exit/turn.failed
+are a useful explicit snapshot alternative; interrupted turns may lack terminal
+records. No cancellation inference, text scraping, native desktop-runtime mapping
+or expanded logging. Implemented source27 explicit selection, fixed safe counts,
+privacy/Windows refusals and synthetic tests; native acceptance remains separate.
+
+
 > Historical v0.1 record. Current capability assessment, released-format correction and native proof results are in [continuation/STATUS.md](continuation/STATUS.md) and [continuation/REQUIREMENTS.md](continuation/REQUIREMENTS.md). Earlier exclusions and portable-hook packaging claims are superseded; the full product remains incomplete.
 
 Date: 2026-10-22, America/Denver. Public documentation is mutable; Git source and package identities below are pinned. This log contains sanitized summaries, not raw machine diagnostics.

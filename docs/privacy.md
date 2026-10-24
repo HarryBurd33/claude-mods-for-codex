@@ -1,5 +1,13 @@
 # Privacy
 
+Current source27 adds [failure/turn export observation](event-observation.md), independently
+selected with observationExport or an immediate CLI path. It makes no journal
+writes, raw-content responses, model calls or automatic export discovery. Optional
+Stop/Interrupt and the three default registrations stay unchanged/off as applicable.
+Installed human-reviewed26/logging scope/trust and all Windows gates are preserved;
+27 is source-only pending package/native acceptance. See [review](continuation/DEV27-REVIEW.md).
+
+
 Current native follow-up: [dev26 restart acceptance](continuation/NATIVE-DEV26.md)
 verified the bounded hooks/owned UI and one explicitly authorized active-Watch
 update. No configuration/trust/scope/production cleanup changes; optional events

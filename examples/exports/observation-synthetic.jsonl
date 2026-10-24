@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"synthetic-example"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"synthetic-command","type":"command_execution","command":"printf SYNTHETIC_EXAMPLE","aggregated_output":"synthetic fixture only","status":"failed","exit_code":7}}
+{"type":"turn.failed","error":{"message":"synthetic failure fixture only"}}

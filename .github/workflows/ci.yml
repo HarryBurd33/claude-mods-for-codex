@@ -45,7 +45,7 @@ jobs:
       - name: POSIX state acquisition scheduler (clock simulation, not Windows storage)
         run: node --test test/state-lock-budget.test.mjs
       - name: Selected Git and scope contracts; restore privacy refusal
-        run: node --test test/checkpoints.test.mjs test/scope.test.mjs test/restore.test.mjs test/usage.test.mjs test/impact.test.mjs
+        run: node --test test/checkpoints.test.mjs test/scope.test.mjs test/restore.test.mjs test/usage.test.mjs test/observations.test.mjs test/impact.test.mjs
       - name: Local rendering contracts (simulated DOM, not native host)
         run: node --test test/rendering.test.mjs test/observers.test.mjs
       - name: Bounded static PE parser (synthetic bytes, no image loading)

@@ -4,6 +4,7 @@ import { checkMetadataScope } from "./scope.mjs";
 import { prepareRestorePlan,reviewRestorePlan,applyRestorePlan } from "./restore.mjs";
 import { assessCommandImpact } from "./impact.mjs";
 import { readSelectedUsage } from "./usage.mjs";
+import { readSelectedObservations } from "./observations.mjs";
 import { readdir } from "node:fs/promises";
 import { basename, dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -28,6 +29,7 @@ Usage:
   codex-mods scope --project PATH --session-cwd PATH
   codex-mods impact --stdin
   codex-mods usage --export PRIVATE_JSONL
+  codex-mods observations --export PRIVATE_JSONL
   codex-mods files --project PATH
   codex-mods changes --project PATH [--include-diffs]
   codex-mods checkpoints --project PATH --from COMMIT --to COMMIT [--path FILE] [--include-diffs]
@@ -50,6 +52,8 @@ Commands:
             assessment only, never executes or approves the command.
   usage     Read only reported counters from an explicit private exec export.
             No private-session discovery, model call, cost or context inference.
+  observations  Summarize structured command/turn records in one selected private
+                exec export. Read-only POSIX approximation, separate from hooks.
   files     List bounded non-secret project filenames and Git status, read-only.
   changes   Inspect Git working-tree changes against HEAD, read-only.
             Patch text requires --include-diffs and may contain sensitive data.
@@ -157,6 +161,10 @@ export async function runCli(argv, streams = process) {
   if(command==="usage"){
     const options=parseOptions(args,new Set(["--export"]));if(!options.export)throw new Error("usage requires --export PRIVATE_JSONL");
     streams.stdout.write(`${JSON.stringify(await readSelectedUsage(options.export),null,2)}\n`);return;
+  }
+  if(command==="observations"){
+    const options=parseOptions(args,new Set(["--export"]));if(!options.export)throw new Error("observations requires --export PRIVATE_JSONL");
+    streams.stdout.write(`${JSON.stringify(await readSelectedObservations(options.export),null,2)}\n`);return;
   }
   if (command === "files" || command === "changes") {
     const options = parseOptions(args, new Set(["--project", ...(command === "changes" ? ["--include-diffs"] : [])]));

@@ -1,5 +1,34 @@
 # Extension architecture and security contracts
 
+## Source27 selected-export outcomes — current — 2026-10-24
+
+src/observations.mjs is an independent read-only projection, not a new hook event
+or journal format. One JSON-only thread export supplies fixed turn/command-status/
+exit-bucket counts, no raw fields or identifiers. Command status and exits overlap;
+missing terminal records cannot identify cancellation or a tool invocation error.
+Known released-hook limitations motivate this approximation; primary evidence and
+exact boundaries are in [event-observation](../event-observation.md).
+
+The immediate CLI takes one explicit file path. MCP mods.observations takes no
+arguments, reads only separately reviewed observationExport and never follows
+usageExport. The owned Access and usage view presents a separate table on refresh;
+Activity/Watch are unchanged and never read/poll that export. No persistent state,
+automatic subscription, network/model call, execution, retry or recovery is added.
+POSIX reader checks private regular one-link canonical file/handle identity,
+metadata stability, UTF-8/byte/line bounds and cancellation; failures return fixed
+unavailable output. This is not a hostile same-user/admin race sandbox or native
+source-authenticity attestation. Windows entrypoint refuses before inspecting
+options/path; existing settings early refusal and Windows helper/gates unchanged.
+
+Optional Stop/Interrupt observer implementation still returns{} and only event
+metadata after separate storage opt-in. Its state/journal schema is unchanged;
+source27 tests default-off, busy/config failure, scope and non-inference. Only
+Interrupt/SessionEnd example timeouts change5→3 per documented cap. Default three
+hooks and installed26 remain byte-identical. New source27 native installation/UI/
+optional delivery unverified. [Review](DEV27-REVIEW.md). Next Medium packaging and
+acceptance preparation; High before further consequential implementation.
+
+
 ## Dev26 native restart observation — current — 2026-10-24
 
 [NATIVE-DEV26](NATIVE-DEV26.md) records actual harmless rewrite/control/deny,

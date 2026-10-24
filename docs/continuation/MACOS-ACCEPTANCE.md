@@ -24,6 +24,12 @@ SessionStart/pre/post write and active Watch4→7. Same scope/settings/trust/cac
 Grant consumed/Watch stopped; full lifecycle/other targets remain incomplete.
 The original Hnow labels below stay historical; no retroactive host/source claims.
 
+Source27 follow-up: [DEV27-REVIEW](DEV27-REVIEW.md) implements separately
+selected structured export outcomes and strengthens optional-observer failure
+checks. This is a source/subprocess/simulated-UI approximation; optional hooks
+stay unregistered and native27 acceptance is pending. The original Hnow evidence
+below stays historical. EV-03/04 still have native gaps; no closure score changed.
+
 ## Evidence and classification
 
 - **Hnow:** this Medium stage's actual installed dev10 MCP tools/owned panel,

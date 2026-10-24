@@ -21,6 +21,22 @@ interaction were then observed. The production package's compatibility-only
 migration is prepared as 0.1.1-dev.1; its native installation and acceptance
 checks remain separate and outstanding.
 
+## 2026-10-24 source27 failure/turn addendum — current
+
+The earlier introductory production-uninstalled wording is historical. Installed
+human-reviewed26 now has bounded native results in [NATIVE-DEV26](NATIVE-DEV26.md).
+Source27 is not installed. Its [event contract review](../event-observation.md)
+retrieved the official hook page/latest stable164 and pinned163/164 registry/context
+(byte-equal). No PostToolUseFailure is available in the reviewed release interface;
+exec logging-success is independent of exit, with text-only terminal post-response.
+Invocation errors/live processes can bypass it. Optional Stop counts opportunities,
+not unique completions; Interrupt is separate. Exec JSONL supports structured
+status/exit/turn.failed/error but interrupted turn shutdown may omit a terminal
+record. New selected export summary is an explicit approximation, not all-native
+failure observation. No output scraping, missing-post/cancellation inference,
+client upgrade, installed runtime mapping, event opt-in or model run. Primary
+links/access limits and tested contracts are in [DEV27-REVIEW](DEV27-REVIEW.md).
+
 ## Versions and evidence
 
 - Installed command-line client inspected: `codex-cli 0.163.0`. Read-only help

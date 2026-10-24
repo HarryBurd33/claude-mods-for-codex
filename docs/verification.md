@@ -1,5 +1,13 @@
 # Verification record
 
+Current source27 adds [failure/turn export observation](event-observation.md), independently
+selected with observationExport or an immediate CLI path. It makes no journal
+writes, raw-content responses, model calls or automatic export discovery. Optional
+Stop/Interrupt and the three default registrations stay unchanged/off as applicable.
+Installed human-reviewed26/logging scope/trust and all Windows gates are preserved;
+27 is source-only pending package/native acceptance. See [review](continuation/DEV27-REVIEW.md).
+
+
 Current2026-10-23: after restart, the native source10 panel rendered the sample;
 its3px focus outline/3px offset was observed. The human confirmed clear keyboard
 focus through source→Render→Clear and Enter cleared; native inspection confirmed

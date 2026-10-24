@@ -19,7 +19,7 @@
           {
             "type": "command",
             "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
-            "timeout": 5,
+            "timeout": 3,
             "statusMessage": "Observing opted-in Claude Mods lifecycle metadata"
           }
         ]
@@ -79,7 +79,7 @@
           {
             "type": "command",
             "command": "node \"${PLUGIN_ROOT}/src/hook-main.mjs\"",
-            "timeout": 5,
+            "timeout": 3,
             "statusMessage": "Observing opted-in Claude Mods lifecycle metadata"
           }
         ]

@@ -94,3 +94,19 @@ test('served UI bundles only fixed local rendering assets; no external library o
   assert.doesNotMatch(source, /innerHTML|outerHTML|insertAdjacentHTML|\beval\(|\bfetch\(|localStorage|sessionStorage/);
   assert.ok(Buffer.byteLength(html) < 256 * 1024);
 });
+
+test('export outcomes render separately from hook counts with literal accessible tables and unavailable fallback (simulated DOM)', async () => {
+  const html = await loadDashboardHtml(), parent = new Element('div');
+  const helpers = html.slice(html.indexOf('function visible('), html.indexOf('function eventChart('));
+  const render = html.slice(html.indexOf('function render(view,data)'), html.indexOf('function stopWatch('));
+  const draw = runInNewContext(helpers + '\n' + render + '\n;render', { document: doc, $: () => parent });
+  draw('access', { observations: { available: true, semantics: '<script>literal', turns: { started: 2, completed: 1, failed: 1, streamErrors: 0 }, commands: { completed: 1, failed: 1, declined: 0 }, exits: { zero: 1, nonzero: 1, unavailable: 0 }, cancellation: 'unavailable', limits: 'Not live hooks' } });
+  const nodes = descendants(parent), values = nodes.map(n => n.textContent);
+  assert.ok(values.includes('Selected export outcomes (separate from live hooks)'));
+  assert.ok(values.includes('Failed turn records')); assert.ok(values.includes('Command exit: nonzero')); assert.ok(values.includes('Cancellation detection'));
+  assert.ok(values.includes('<script>literal')); assert.equal(nodes.some(n => n.tagName === 'script'), false);
+  assert.ok(nodes.some(n => n.tagName === 'th' && n.scope === 'row'));
+  draw('access', { observations: { available: false, reason: 'No observation export selected.' } });
+  assert.equal(descendants(parent).some(n => n.textContent === 'Failed turn records'), false);
+  assert.ok(descendants(parent).some(n => n.textContent === 'No observation export selected.'));
+});

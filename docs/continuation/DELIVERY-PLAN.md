@@ -2,19 +2,20 @@
 
 The human selected **finish macOS feature acceptance first, then Windows**.
 Windows stays in scope and explicitly incomplete. The Medium acceptance audit and bounded unchanged-dev10 checks are recorded below.
-That retention source milestone is implemented on High; routine verification is next. Do not start another Windows proof loop.
+The retention milestone and its bounded native batch are complete for their stated scope. Do not start another Windows proof loop.
 
 Post-restart26 native acceptance: hooks/owned UI and a fresh authorized selected
 CLI→active Watch4→7 passed; [NATIVE-DEV26](NATIVE-DEV26.md). Grant consumed,
-Watch stopped/scope and trust unchanged. Next High must resolve the released
-failure/turn-event contract and deliver a minimal default-off observation lane,
-not another Windows proof/package-only loop. Other macOS/platform gaps remain.
+Watch stopped/scope and trust unchanged. High source27 now resolves the reviewed
+release contract and implements a separate default-off export approximation plus
+observer failure checks; [DEV27-REVIEW](DEV27-REVIEW.md). Medium packaging/CI readback
+and concrete native acceptance preparation are next. Other macOS/platform gaps remain.
 
 Source26 now implements the High-reviewed POSIX selected-scope retention preview/
 explicit cleanup CLI; [DEV26-REVIEW](DEV26-REVIEW.md) records tests and limits.
-No production data cleaned;26now installed/human-trusted, restart/native26 pending;
+No production data cleaned;26now installed/human-trusted, bounded restart/native26 verified;
 settings/scope unchanged and reviewed10 retained for rollback.
-Core post-restart checks passed; next High for failure/turn-event contracts; High
+Core post-restart checks passed; source27 failure/turn approximation ready for Medium; High
 before further consequential code/security. Native/event/accessibility/lifecycle/
 authoring/platform gaps remain; no package-version-only or Windows-proof loop.
 
@@ -22,7 +23,7 @@ authoring/platform gaps remain; no package-version-only or Windows-proof loop.
 
 The installed human-reviewed dev10 has recorded macOS native dashboard, covered
 hook, exact rewrite/deny, preview/focus and basic authoring observations. Configured source26
-is installed/human-trusted, with restart/native acceptance pending. Its offline macOS suite passed208 tests with109 Windows-only skips.
+is installed/human-trusted, with bounded restart/native acceptance recorded. Its offline macOS suite passed208 tests with109 Windows-only skips.
 Neither result is full-product acceptance. Native checks belong to the snapshot
 and client version actually observed; unsupported behavior and approximations
 must be disclosed rather than counted as implemented exact equivalents.
