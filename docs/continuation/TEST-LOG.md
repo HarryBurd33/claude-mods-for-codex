@@ -1,5 +1,20 @@
 # Continuation verification log
 
+## Source24 Medium package checkpoint — 2026-10-24
+
+Human selected GPT-6.1 Sol Medium from verified e15ba7b. Exact public clone passed
+189 tests with98 Windows-only skips; archive199 files, all bytes matched. Fresh
+spaced extraction validated3/replayed4 and passed14 focused checks.
+See [PACKAGE-DEV24](PACKAGE-DEV24.md) for archive hash, commands and limits.
+Only documentation changed; installed human-trusted dev10, logging scope, all93
+requirements and every production Windows gate are preserved. Source24 is uninstalled.
+Next human **GPT-6.1 Sol High** before gated Windows authority/loader/Git/writer
+work or consequential runtime repair. Earlier model-next statements are historical.
+
+Archive SHA256 fa8ffb1e44bbf7b8350c21e78958f265ed2ba4721cfcd0eea88ea2083a27d3db;
+1,420,556 unpacked/425,380 compressed bytes. Current notes CI40118941924 all7 job
+conclusions success, no fresh OS count/native claim. All earlier failures retained.
+
 ## Source24 Astra reliability review — 2026-10-24
 
 Human selected GPT-6 Astra Ultra from9becda0. Production behavior/permissions/

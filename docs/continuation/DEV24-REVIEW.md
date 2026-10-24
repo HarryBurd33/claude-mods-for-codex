@@ -41,7 +41,7 @@ original budget, then requires busy, identical lock identity/mode/owner, identic
 committed journal bytes/snapshot and no new files. Existing real-clock8-by-4 and
 held-lock cases and pure scheduler tests remain unchanged. Local focused5/0/0skip.
 
-### Windows lock lifetime investigation
+### Initial Windows lock lifetime hypothesis (superseded by observations below)
 
 The actual `JournalLock` retries50 collisions with10ms sleeps. Its discarded
 `LockExists` probe opens a metadata handle with delete sharing, and retains it
@@ -57,10 +57,12 @@ retrieved2026-10-24. The precise CreateDirectory error on a pending name must be
 observed; source reasoning alone does not establish the old refusal branch.
 
 New original `proofs/windows-lock-contention.cs` compiles as a test-only partial
-with the actual production helper; it does not copy the lock algorithm. Owned
-NTFS fixtures retain exactly the probe's metadata access/share handle across owner
-release, observe the numeric creation error, require actual contender refusal,
-then require fresh acquisition and empty cleanup after explicit handle release.
+with the actual production helper; it does not copy the lock algorithm.
+The initial owned NTFS fixture retained the probe's metadata access/share handle
+across owner release and incorrectly required contender refusal before observing
+the outcome. That expectation failed; the corrected measurements and refutation
+are recorded below. Fresh acquisition and empty cleanup after explicit handle
+release remain mandatory.
 A separate unchanged-owner case requires refusal without replacement/removal,
 then successful fresh acquisition after owner release. No event is retried.
 Disposal failure cannot be misclassified as acquisition refusal.

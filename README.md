@@ -6,6 +6,10 @@ Source **0.2.0-dev.24** is a development checkpoint on `codex/astra-groundwork`,
 not a completed release. The default branch retains the earlier experimental MVP.
 The full [93-capability ledger](docs/continuation/REQUIREMENTS.md) remains in scope.
 
+Source24 [package verification](docs/continuation/PACKAGE-DEV24.md) passed: exact public-clone tests189/0,
+98 Windows-only skips; reviewed archive199 files and fresh extraction14/0.
+The full product and native platform acceptance remain incomplete.
+
 The installed, human-reviewed macOS package is still **dev10**. Earlier native
 checks verified the owned dashboard, local preview/focus, covered hooks and an
 opt-in exact print rewrite; those results do not certify source24. Logging remains

@@ -1,5 +1,10 @@
 # Development dashboard and immediate local commands
 
+Current source24 packaging note2026-10-24: installed human-trusted dev10 remains
+unchanged; source24 is uninstalled. Native results below describe the recorded
+versions when tested, not fresh acceptance of source24. Current state is in
+[STATUS](continuation/STATUS.md) and [HANDOFF](continuation/HANDOFF.md).
+
 Native acceptance note2026-10-23: new dashboard views and fixed production
 rewrite/deny/control were verified after restart. Activity scope must align with
 the actual native chat/project context: setting a shell tool's workdir to a child

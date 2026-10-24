@@ -1,5 +1,15 @@
 # Extension architecture and security contracts
 
+## Source24 Medium package checkpoint — 2026-10-24
+
+Human selected GPT-6.1 Sol Medium from verified e15ba7b. Exact public clone passed
+189 tests with98 Windows-only skips; archive199 files, all bytes matched. Fresh
+spaced extraction validated3/replayed4 and passed14 focused checks.
+See [PACKAGE-DEV24](PACKAGE-DEV24.md) for archive hash, commands and limits.
+Only documentation changed; installed human-trusted dev10, logging scope, all93
+requirements and every production Windows gate are preserved. Source24 is uninstalled.
+Next human **GPT-6.1 Sol High** before gated Windows authority/loader/Git/writer
+work or consequential runtime repair. Earlier model-next statements are historical.
 
 ## Current reliability contracts — source24 Astra review
 
@@ -695,9 +705,10 @@ uses supported installation/trust; it never automatically trusts generated code.
 
 Use compatibility-only `.codex-plugin/plugin.json` with no root `plugin.json`.
 The released 0.163/0.164 portable loader skips hooks; adding a compatibility
-overlay beside it does not fix discovery. Installed0.2.0-dev.6 is human-
-trusted and verified after desktop restart; source0.2.0-dev.8 is not installed; earlier0.2.0-dev.1 has native execution/UI
-evidence on the recorded macOS host. Keep version-specific acceptance separate.
+overlay beside it does not fix discovery. Installed human-trusted dev10 remains
+the reviewed snapshot; source24 is uninstalled. Earlier dev6/dev4/dev1 native
+execution/UI observations belong to their recorded macOS versions. Keep those
+results separate from source24 package and OS-fixture verification.
 Legacy MCP uses `.mcp.json`, relative `cwd: "."` and script arguments; it does
 not inject portable plugin variables. Pass a shared data location explicitly
 through reviewed configuration to both hook and server. Never assume a local
