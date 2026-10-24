@@ -42,6 +42,8 @@ jobs:
         run: node --test --test-name-pattern="session notice|safe tool use|matched command|unknown event|compatibility manifest|every packaged|bundled skill|example configurations|state scope keys|Windows state" test/dispatcher.test.mjs test/package.test.mjs test/state.test.mjs
       - name: Portable replacement and decision contracts
         run: node --test test/contracts.test.mjs test/hold.test.mjs
+      - name: POSIX state acquisition scheduler (clock simulation, not Windows storage)
+        run: node --test test/state-lock-budget.test.mjs
       - name: Selected Git and scope contracts; restore privacy refusal
         run: node --test test/checkpoints.test.mjs test/scope.test.mjs test/restore.test.mjs test/usage.test.mjs test/impact.test.mjs
       - name: Local rendering contracts (simulated DOM, not native host)

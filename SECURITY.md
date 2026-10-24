@@ -1,5 +1,12 @@
 # Security policy
 
+Source20 POSIX state acquisition uses a1000ms no-observed-handoff allowance and
+2500ms total checked budget. Only validated private lock-object identity changes
+may extend contention waiting; no stale-lock stealing/event retry or metadata
+collection. Pending filesystem IO/critical-section sync is not universally bounded
+by that schedule. Windows policy and installed dev10 are unchanged. See
+[review](docs/continuation/DEV20-REVIEW.md).
+
 ## Supported versions
 
 Until the first stable release, the default branch remains an experimental MVP.

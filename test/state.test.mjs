@@ -175,6 +175,23 @@ test("state refuses a held lock within a bounded interval without removing it", 
   assert.equal((await readMetadataState(directory, scope)).records, 1);
 });
 
+test("state lock identity sampling refuses public, linked and non-directory locks without writes", posixOnly, async t => {
+  const directory=await temporaryDirectory(t);
+  await recordMetadataEvent(directory,scope,{event:'SessionStart'},fixedTime);
+  const lock=join(directory,'metadata-state-v1','.state.lock');
+  await mkdir(lock,{mode:0o700});await chmod(lock,0o755);
+  await assert.rejects(recordMetadataEvent(directory,scope,{event:'SessionStart'}),/group or other access/);
+  await rm(lock,{recursive:true}); // Own synthetic fixture, after rejected call.
+  const target=join(directory,'untouched');await mkdir(target,{mode:0o700});
+  await symlink(target,lock);
+  await assert.rejects(recordMetadataEvent(directory,scope,{event:'SessionStart'}),/symbolic/);
+  assert.deepEqual(await readdir(target),[]);await rm(lock);
+  await writeFile(lock,'synthetic',{mode:0o600});
+  await assert.rejects(recordMetadataEvent(directory,scope,{event:'SessionStart'}),/unexpected file type/);
+  assert.equal(await readFile(lock,'utf8'),'synthetic');
+  assert.equal((await readMetadataState(directory,scope)).records,1);
+});
+
 test("state rejects symlinked roots and scopes and public directory permissions", posixOnly, async (t) => {
   const directory = await temporaryDirectory(t);
   const target = join(directory, "target");

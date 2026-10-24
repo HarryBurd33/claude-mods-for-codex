@@ -1,5 +1,11 @@
 # Scoped metadata state proof
 
+Source20 adds bounded progress-aware POSIX acquisition (1000ms idle/2500ms total),
+with original exclusive mkdir/metadata/privacy/retention policy. Controlled latency
+case before17/32completed versus after32/32; exact prior CI stall cause unproved.
+Uninstalled; CI candidate pending. See [DEV20 review](DEV20-REVIEW.md). Earlier
+first-proof contract/results below are historical, not current install evidence.
+
 Historical first synthetic state checkpoint. Current source7 integration, real
 Windows NTFS CI and prior macOS host evidence are in STATUS/TEST-LOG/REQUIREMENTS.
 The pending/unintegrated/refusal statements below describe that earlier version,

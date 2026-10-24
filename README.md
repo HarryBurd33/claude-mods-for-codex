@@ -1,5 +1,18 @@
 # Claude Mods for Codex
 
+## Source20 High candidate — bounded POSIX state contention — 2026-10-24
+
+Human resumed verifiedf500868 on GPT-6.1 Sol High. Source20 uninstalled; installed
+human-trusted dev10/cache149files/private settings/logging scope unchanged. Full93
+product incomplete; all Windows gates closed. A controlled60ms-sync fixture changed
+from17completed/17retained with4busy children before to32/32with0busy after. Exact
+old CI scheduling cause remains unproved and its failure preserved. Acquisition
+keeps1000ms idle refusal and allows validated object handoffs up to2500ms total;
+no lock stealing, event retry, skipped sync or weakened32-record assertion.
+Local186pass/0fail/86Windows-only skips272total; validate3/replay4. CI candidate
+pending upload. See [DEV20 review](docs/continuation/DEV20-REVIEW.md); earlier records below remain version-specific.
+
+
 ## Source19 Medium package verification — 2026-10-24
 
 Human resumed verified38848a8 on GPT-6.1 Sol Medium. Exact anonymous public clone

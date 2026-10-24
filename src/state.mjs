@@ -4,6 +4,7 @@ import { isAbsolute, join, parse, resolve, sep } from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
 import { appendJournalEntry, prepareDataDirectory, readJournalEntries, summarizeJournal } from "./journal.mjs";
 import { recordWindowsMetadata, readWindowsMetadata, pruneWindowsMetadata } from './windows-state.mjs';
+import { createStateLockBudget } from "./state-lock-budget.mjs";
 
 // This is an opt-in storage primitive, not a hook or a host event subscription.
 // The caller selects the data directory and supplies trusted scope identifiers.
@@ -94,17 +95,27 @@ async function scopeDirectories(root) {
 async function withStateLock(root, action) {
   const path = join(root, ROOT_LOCK);
   let acquired = false;
-  for (let attempt = 0; attempt < 100; attempt += 1) {
+  const budget = createStateLockBudget();
+  while (budget.canAttempt()) {
     try {
       await mkdir(path, { mode: 0o700 });
       acquired = true;
       break;
     } catch (error) {
       if (error?.code !== "EEXIST") throw error;
-      try { assertPrivate(await lstat(path), true); } catch (inspectionError) {
+      try {
+        const info = await lstat(path, { bigint: true });
+        assertPrivate({ isSymbolicLink: () => info.isSymbolicLink(), isDirectory: () => info.isDirectory(),
+          uid: Number(info.uid), mode: Number(info.mode) }, true);
+        // Ephemeral object fingerprint only. No PID, path or metadata is logged.
+        // Reused/unavailable birth times can miss progress, never grant a lock.
+        budget.observe([info.dev, info.ino, info.birthtimeNs ?? 0n].join(':'));
+      } catch (inspectionError) {
         if (inspectionError?.code !== "ENOENT") throw inspectionError;
       }
-      await delay(10);
+      const wait = budget.delayMs();
+      if (wait <= 0) break;
+      await delay(wait);
     }
   }
   if (!acquired) throw new Error("metadata state is busy; inspect a stale lock only after stopping writers");
