@@ -1,156 +1,162 @@
-# Source22 High handoff — stop for human Sol Medium
+# Source22 package handoff — High required for new observer failure
 
-2026-10-24. Human selected GPT-6.1 Sol High from verified4a6db33 on
-`codex/astra-groundwork`. Milestone: isolated retained ancestor metadata/lifetime
-proof, actual Windows CI. Source22 is uninstalled; full93-capability product incomplete.
+2026-10-24. Human selected GPT-6.1 Sol Medium from verifiede44dd93 on
+`codex/astra-groundwork`. Source22 archive/local extraction checks passed. A later
+notes CI exposed a Windows state-observation failure; runtime investigation is
+incomplete and requires High. This Medium stage changes documentation only.
+Full93-capability product incomplete. Source22 remains uninstalled.
 
 ## Read first
 
 Read this file; STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md,
-DEV22-REVIEW.md, DEV21-REVIEW.md, PACKAGE-DEV21.md, DEV20-REVIEW.md,
-DEV19-REVIEW.md, ../windows-storage.md, ../windows-native-acceptance.md;
-latest ignored root HANDOFF.md. Private paths/configuration/raw logs stay ignored.
-Historical versioned model-next statements are superseded by this summary.
+PACKAGE-DEV22.md, DEV22-REVIEW.md, DEV21-REVIEW.md, PACKAGE-DEV21.md,
+DEV20-REVIEW.md, DEV19-REVIEW.md, ../windows-storage.md,
+../windows-native-acceptance.md; latest ignored root HANDOFF.md.
+Root handoff/machine paths/config/raw logs stay private. Historical model-next
+statements do not override this current summary.
 
-## Exact source and observed tests
+## Exact source, package and local results
 
 Repository: https://github.com/HarryBurd33/claude-mods-for-codex
 Branch: `codex/astra-groundwork`.
+Reviewed anonymous public source:
+[e44dd9374ac6c743bba0a5da9c4928a84a5a81e0](https://github.com/HarryBurd33/claude-mods-for-codex/commit/e44dd9374ac6c743bba0a5da9c4928a84a5a81e0),
+tree `09beec2be3b54cec0596ac647da4d0bbdce8a90f`, clean clone/workspace equality.
+macOS14.6/Node24.22.0/npm11.19.1: `npm test`186passes/0failures/95Windows-only
+skips281total. No Windows success inferred from skips. No native/model/API run.
 
-Tested source [46c417d327fab4a915a1ea333297c63909e9e861](https://github.com/HarryBurd33/claude-mods-for-codex/commit/46c417d327fab4a915a1ea333297c63909e9e861),
-tree `9d6c5256e88df0250ae52a7a031460c7c704cd2e`.
-[CI40072785589](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40072785589)
-passed all seven jobs. Actual decoded logs read:
+`npm pack --ignore-scripts --offline --json`, isolated empty npm user/global config,
+dedicated cache/output outside clone. No dependency/account/lifecycle/package fetch.
+190 regular files,1,387,608unpacked/411,049compressed bytes; SHA256
+`e97466a776f8659ecf1dcb27304480cddf667d6367494d0eb3dd5b9ba54101b2`.
+All bytes equal exact clone/workspace; one package root, no links/traversal/special/
+private roots/home paths/key/config leakage/case collisions/root private HANDOFF/
+portable root plugin.json/dependencies/compiled binaries. MIT/independence/version22/
+default-off logging and proof-production separation passed. New lease/assessment/
+build/harness/Windows tests/review included; production helper excludes proof code.
+Fresh spaced extraction validate3mods/replay4fixtures/package+scaffold+state budget+
+slow-sync tests11passes/0failures/0skips. Commands/limits: PACKAGE-DEV22.
 
-- Windows Node22 job120809634573 / Node24 job120809634423: each20storage+
-  75proof passes, zero failures/cancellations/skips. All six new cases passed.
-  Server2025 NTFS, windows-2025-vs2026 image20261021.278.1, PowerShell5.1 build.
-- macOS22/24 jobs120809634614/120809634689 and Ubuntu22/24 jobs120809634719/
-  120809634664: each186pass/0fail/95Windows-only skips281total.
-- Windows portable120809634620: successful conclusion, distinct from native host.
-- Local macOS14.6/Node24.22.0/npm11.19.1: npm test186/0/95skips281total,
-  targeted Windows75skips/0passes, validate3mods/replay4fixtures/diff-check clean.
+Following notes change documentation only. Actual final local/remote/tree and
+notes-only archive identities belong in checkpoint reply/ignored handoff after
+upload/readback, avoiding self-hash claims. Next model must verify HEAD/ref.
+No force-push/lost history; equivalent local commits retained on backup branches.
 
-No source22 failure/retry. First source21 b16a749/CI40071218873 failure and own-
-sentinel setup correction in4b99ac1/CI40071604769 remain preserved; no policy change
-or raw child-ACL observation inferred. Source20 old38848a8/CI40068264694 contention
-failure remains preserved; exact old host delay cause unproved, arbitrary-load busy
-is valid. No state budget/privacy/assertion/sync change in source22.
+## New blocking CI observation — investigate first
 
-Equivalent local source2c1243efeed74090049fc28d8eea0d5471e645a7 preserved on
-codex/dev22-ancestor-lease-local-checkpoint. Candidate remote independently fetched
-and whole-tree/anonymous ref verified. Following handoff commit changes documentation
-only; final actual local/remote/tree identities belong in the checkpoint response
-and ignored handoff after upload/readback, avoiding a circular self-hash claim.
-Next model must verify exact HEAD/ref. No force-push or lost history.
+[e44dd93 notes CI40073187216](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40073187216):
+six jobs passed, Windows Node22 job120810857964 failed. Actual decoded failed log
+read: storage19passes/1failure/0skips, total20. Test “native Windows public state
+isolates sessions, observes changes and prunes by explicit cutoff” failed with
+`Cannot read properties of undefined (reading 'records')`,
+`test/windows-storage.test.mjs:227`, duration22595.0689ms. Process/lifetime proof
+step was skipped in that failed lane. Node24 OS120810857805, portable120810857712
+and four POSIX jobs concluded success; no fresh decoded counts claimed from them.
 
-## Code locations and contracts
+Concrete source: test224 creates10000ms observer, first next at225 checks3records,
+awaited write at226 adds PostToolUse, second next at227 assumes value.records4.
+`src/state.mjs:166` observer uses an absolute monotonic deadline and can return
+without a yield after expiry/abort, including after a read. The failed log lacks
+per-phase timing and the actual iterator-result object. Do not claim an exact
+expiry cause, corruption, lost records, permission regression, source22 lease cause
+or a harmless scheduling-only explanation from this evidence.
 
-`proofs/windows-owned-process/CodeAncestorLease.cs` is original MIT, isolated build
-only. Private sealed CodeAncestorLease exposes no object/handle/path/descriptor/
-capability. Public wrappers are harness-only fixed-frame routines:
-KnownCodeAncestorLeaseHarnessProof and SyntheticCodeAncestorLeaseHarnessProof.
-Harness modes known-ancestor-lease/synthetic-ancestor-lease, six new tests in
-`test/windows-owned-process.test.mjs`. build.ps1 includes new file; production
-private-storage.ps1 excludes it. Version22 manifest/package/server only in production.
+No retry/rerun, skipped assertion, timeout increase or runtime/test/security change
+at Medium. Preserve this failed run independently. Earlier passing High CI is not
+evidence to ignore it. High must inspect the observer/update/deadline boundary.
+Native Windows11 unavailable; no repeated availability question.
 
-The private KnownCodeAncestorScope helper was extracted from source21's assessment
-without changing old path/SDK/status behavior. Fresh exact SDK ProgramFilesX64/
-current-token/DONT_VERIFY match,64-bit guards, strict input/240-char memory handling
-before target IO. Never accept an old assessment enum/token as caller authority.
-Synthetic scope is an explicit test assumption with an original private parent held
-outside; never an OS witness or installed-code/private-data authority.
+## Separate earlier OS and security evidence
 
-Retain no-follow directory handles (ReadControl/attributes/FILE_LIST_DIRECTORY,
-read/write sharing, no delete sharing, non-inheritable). Original Info/Volume/
-prefix Access(false); only final matched root gets source21 draft descriptor rule.
-Capture/reverify retained volume/index identity and bounded owner+DACL bytes;
-constructor revalidates; partial failure releases all; dispose clears samples,
-idempotent, verification after disposal refuses. No enumeration/image contents/
-code execution/network/registry/ACL mutation/capability returned.
+High source46c417d / CI40072785589 all7jobs passed. High read actual Windows22/24
+logs120809634573/120809634423: each20storage+75proof passes/0failures/0skips.
+Server2025 NTFS, windows-2025-vs2026 image20261021.278.1, PowerShell5.1 build;
+not native Windows11 Codex. Four POSIX lanes186/0/95skips. Six new lease cases
+passed then, not rerun in the later failed Node22 lane. Exact SDK retained metadata
+unchanged diagnostic grants no authority; no system rename/ACL mutation/image read.
+Both original Git pins still refuse before content reads; separate later diagnostic
+CodeAncestor/ForeignInstallerGrant/segment1 is non-authorizing, version not queried,
+authenticity/loader closure unverified. No candidate Git execution.
+Source21 firstb16a749/CI40071218873 failure and own-sentinel setup correction in
+4b99ac1/CI40071604769 preserved. Prior child raw ACL not dumped; propagation is
+inference, no policy/assertion/budget change. Source20 old38848a8/CI40068264694
+contention failure preserved; exact old host delay unproved. New observer failure
+must not be conflated with that prior POSIX contention class.
 
-Known case observes actual SDK root unchanged metadata only; owned synthetic cases
-prove target/parent rename blocking then release, final/prefix descriptor changes,
-partial failure, cancel/EOF/invalid control/disposal/external process termination.
-Only owned fixture ACLs changed and restored; no system rename/ACL attempt.
-One byte control v/c/EOF/other, closed frames; parent15s/output bound kills/waits
-before cleanup. Inner control wait itself has no production deadline.
+## Contracts, installed scope, permissions and rollback
 
-This is NOT an atomic/continuous ACL snapshot, executable authenticity/loader trust,
-permission approval, code or private-data admission. Handles do not freeze ACLs;
-Access/descriptor calls can sample different instants; changes/restoration between
-samples can be missed. SDK lookup is not an immutable configuration lease. IDs
-are lifetime-bound; pending metadata IO has no universal wall-clock guarantee.
-No hostile same-user/admin/privileged Installer protection claim. Detailed threat
-limits and primary Microsoft API evidence dated2026-10-24 are in DEV22-REVIEW;
-SDK IDs/flags/bitness evidence in DEV21-REVIEW.
-
-## Current status, permissions and rollback
-
-Completed: isolated retention/revalidation/cleanup tests on actual Windows CI.
-Partial: code-installation trust design; no lease composed into admission.
-Unverified/blocked: Windows11 native Codex install/trust/hooks/sandbox/dashboard,
-WSL, executable authenticity/loader/provenance and all remaining Windows gates.
-PL-04 stays unverified; all93 requirement IDs/order retained. Windows11 unavailable
-per latest reply; no repeated availability question. SDK/CI is not native support.
-Both original fixed Git pins still refuse before content reads, separate repeat
-CodeAncestor/ForeignInstallerGrant/segment1 diagnostic is non-authorizing;
-version not queried, authenticity/loader closure unverified. No candidate Git run.
+Original MIT isolated CodeAncestorLease.cs private holder, fixed-frame known/
+synthetic wrappers, no handle/path/descriptor/capability escapes. Shared private
+KnownCodeAncestorScope retains strict SDK/current-token/DONT_VERIFY/64-bit/240char
+lookup before target IO. Synthetic scope is a separate test assumption requiring
+original private parent pin; not an OS witness. Retained no-follow directory handles
+use LIST_DIRECTORY/read-control/attributes/no delete sharing/non-inheritable;
+original Info/Volume/prefixAccess, final source21 draft predicate. Recheck identity
+and bounded owner+DACL sample; constructor/partial cleanup/disposal checked.
+No atomic/continuous ACL snapshot: handles don't freeze ACLs, separate calls can
+sample different instants and changes/restoration between samples can be missed.
+SDK binding/identities are not post-release authority; pending metadata IO lacks a
+universal wall-clock guarantee. No code/private-data admission/authenticity/loader/
+provenance/permission grant. Detailed primary sources/limits: DEV22/DEV21 reviews.
 
 Production PrivateStorage/adapter/ProgramBoundary/ProgramDiagnostics/OwnedProcess/
-state20 are unchanged. All settings/project/Git/restore before-IO gates remain.
-Installed human-trusted dev10 remains byte-equal to149-file immutable fixture,
-private settings unchanged. Selected logging child only; this chat outside it.
-No source22 install/update, trust/config/cache/logging/retention/export/observer/
-theme/client/native session/model/API-run change, no paid keepalive or secret search.
-No global Installer trust, system ACL repair, PATH/project executable fallback or
-binary download. Extra model/API runs require visible bounded user authorization.
+state20 unchanged. Version22 only in manifest/package/server production fields.
+All Windows settings/project/Git/restore before-IO gates remain closed. PL-04 stays
+unverified; all93 IDs/order retained. Windows11 native installation/trust/hooks/
+sandbox/dashboard and WSL acceptance remain incomplete, not permanently impossible.
 
-No machine rollback needed. Own ignored fixtures/source/package artifacts removable
-after child exit; no live-lock removal/cache patch/trust-hash automation/shared-
-config wholesale restoration. Existing selective supported dev10 disable/removal/
-rollback is separate; settings/data preserved. Future changed installed code needs
-human host trust review. No protected user action/restart needed for packaging.
+Installed human-trusted dev10 remains equal to149-file immutable fixture; private
+settings unchanged. Selected logging child only; this chat outside it. No source22
+install/update, native inventory/event/UI/trust observation, config/cache/logging/
+scope/retention/export/observer/theme/client change or extra model/API run.
+No global Installer trust/system ACL repair/PATH-project fallback/binary download.
+No paid keepalive/secret search/automatic approval or model selection changes.
+No machine rollback needed. Own ignored artifacts removable after child exit;
+no live-lock removal/cache patch/trust-hash automation/shared-config wholesale
+restore. Existing selective supported dev10 disable/removal/rollback separate;
+settings/data preserved. Future changed installed code requires human trust review.
+No protected user action/restart required to investigate source fixtures.
 
-## Exact next model and acceptance
+## Exact next model and priorities
 
-**GPT-6.1 Sol, Medium.** Immediate remaining work is routine source22 packaging;
-High is no longer required. Further gated security/admission stays High.
+**GPT-6.1 Sol, High.** Packaging checks passed, but a Windows runtime/test boundary
+now needs investigation. Do this before further gated Windows development.
 
-1. Verify exact public checkpoint/ref with anonymous clone; preserve all prior
-   failure/source/OS/native distinctions. Read listed files and latest private handoff.
-2. Run warranted full offline suite against exact clone (local expected186/0/95
-   skips, not Windows success), validate3/replay4. No install or native/model/API run.
-3. `npm pack --ignore-scripts --offline --json`, separate empty npm user/global
-   config/local cache/output outside clone. Every byte matches clone/workspace;
-   no traversal/links/special/private/raw logs/home paths/key/config leakage/
-   dependencies/compiled binaries/case collisions. Check MIT/independence/version22/
-   default-off logging, new lease/helper/build/harness/tests/docs included, production
-   helper excludes proof. Inspect prior verifier as template, no stale identities.
-4. Fresh spaced extraction validate/replay and relevant package/scaffold/state budget/
-   slow-sync tests; expected11passes/no failures/skips on local macOS. Report actual
-   file count/bytes/archive SHA and outcomes. Preserve skipped/CI/native distinctions.
-5. Save PACKAGE-DEV22/status/ledger/architecture/test-log/handoff. Upload safe notes
-   with expected-parent/nonforce, independently verify branch/full tree/anonymousref;
-   final notes-only archive/readback and fresh spaced validate/replay. No repeated
-   full suite solely for notes, no installed update or automatic trust.
-6. Stop for human GPT-6.1 Sol High before any further runtime/security or Windows
-   gate composition. A retained metadata match alone authorizes no trust expansion.
-   If packaging reveals a security issue, preserve the blocker and request High.
+1. Verify exact checkpoint/ref, preserve CI40073187216 failed job/log and all
+   earlier passing/failing runs. Read listed files/latest private handoff.
+2. Inspect test/windows-storage.test.mjs216–234, src/state.mjs observer/read contract,
+   src/windows-state.mjs and scoped helper deadlines. Establish expected iterator
+   semantics under expiry vs live change; no data-corruption inference from a
+   missing observer yield. No broad logs/environment/session collection.
+3. Build a controlled synthetic reproducer at that boundary, with bounded sanitized
+   phase timings if needed. Keep old CI's precise host delay unproved unless actual
+   evidence resolves it. No blind timeout increase, event replay/lock stealing,
+   disabled sync, weakened assertions or logging expansion. Preserve bounded
+   observation, permission checks and cancellation/cleanup behavior.
+4. Make the smallest justified fix only after identifying the responsible boundary;
+   meaningful tests must cover legitimate expiry/no-yield and live observation as
+   applicable. Run appropriate checks/actual Windows CI, inspect decoded logs.
+   Do not retry the old failed run or hide its failure. Preserve all production
+   gates and native-host limitations. If architecture/security requires Astra,
+   checkpoint/request exact human switch before that work.
+5. Save sanitized records, upload expected-parent/nonforce, independently verify
+   branch/full tree/anonymousref, stop for Medium once remaining work is routine.
+   Further code-installation/admission prerequisites remain in scope after this
+   failure is handled, but no automatic trust expansion/candidate Git launch.
 
-Full supported unfinished capabilities remain in scope, not quietly removed to a
-roadmap. No separate-client/fork direction without user agreement. No delegated/
-background/scheduled continuation to bypass human model switches.
+No extra native/model/API test authorization is granted by this handoff. No separate-
+client/fork direction without user agreement. All supported unfinished requirements
+remain in scope; no background/delegated/scheduled model-switch bypass.
 
 ## Complete resume instruction
 
-I've switched to GPT-6.1 Sol, Medium. Continue from the verified source22 High
+I've switched to GPT-6.1 Sol, High. Continue from the verified source22 package
 checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and listed
-files plus latest ignored root HANDOFF.md; verify exact remote HEAD. Verify source22
-packaging. Keep46c417d/CI40072785589 OS proof separate from local skips/native Windows
-acceptance. Retained ancestor metadata is no atomic ACL snapshot or code/private-data
-authority; original Git pins and all production gates remain closed. Preserve logging
-scope, human trust, installed dev10/private settings, all93requirements and prior
-failure evidence. No install/trust automation, gated security edit, candidate Git
-execution or extra native/model/API run. Save/upload/independently verify package
-checkpoint, then stop for human Sol High before further gated Windows work.
+files plus latest ignored root HANDOFF.md; verify exact remote HEAD. Investigate
+CI40073187216 Windows Node22 state-observation failure at windows-storage.test.mjs:227
+before further gated work. Preserve the failed run, exact-cause uncertainty,
+source22 packaging and earlier46c417d/CI40072785589 passing proof as distinct evidence.
+Keep logging scope, human trust, installed dev10/private settings, all93requirements
+and every production gate. No retry/weakening/global Installer trust/system ACL
+repair/candidate Git execution/trust automation or extra native/model/API test.
+Stop for Medium when sufficient after saving/uploading and verifying a checkpoint.

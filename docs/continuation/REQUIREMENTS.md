@@ -1,6 +1,25 @@
 # Requirements ledger
 
 
+## Source22 Medium package verification — 2026-10-24
+
+Exact anonymous public clone e44dd93 passed186 tests, zero failures,95Windows-only
+skips. Reviewed archive190 files,1,387,608 unpacked/411,049 compressed bytes; SHA256
+`e97466a776f8659ecf1dcb27304480cddf667d6367494d0eb3dd5b9ba54101b2`.
+Every packaged byte matches clone/workspace. Hygiene/MIT/version22/default-off
+storage/proof-production separation passed; fresh spaced extraction validate3/
+replay4/package+scaffold+state tests11pass/0fail/0skip. See [PACKAGE-DEV22](PACKAGE-DEV22.md).
+
+Only documentation changed. Source22 uninstalled; installed human-trusted dev10,
+private settings/logging scope/all93requirements/every Windows gate unchanged.
+CI proof and native-host acceptance remain separate; previous failures preserved.
+Full product incomplete. Later e44dd93 notes CI40073187216 passed6jobs but Windows
+Node22 storage failed19pass/1fail: missing observer result at windows-storage.test:227.
+Proof step skipped in that lane; exact cause unproved, no retry/policy change.
+Next human Sol High to investigate this state-observation failure before gates.
+Earlier model-next statements below describe historical checkpoints.
+
+
 ## Source22 High checkpoint — retained ancestor metadata — 2026-10-24
 
 The isolated proof retains exact SDK-bound ancestor handles and rechecks identity
