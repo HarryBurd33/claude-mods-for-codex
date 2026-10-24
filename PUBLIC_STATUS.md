@@ -30,7 +30,8 @@ unavailable per latest reply; do not repeat that availability question.
 
 Installed10/cache149files/private settings hash unchanged; no fresh native trust/
 event/UI/model observation or config/cache/logging/observer/theme/client change.
-All93IDs retained. Source16 package checks remain versioned; source17 packaging is
-next on human Medium after OS proof. High before further Windows security work.
+All93IDs retained. Source17 [package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV17.md)
+passed:170files/all-byte checks, validate3/replay4/package-scaffolding7/7. Next human
+Sol High before further Windows security work.
 See [handoff](docs/continuation/HANDOFF.md), [ledger](docs/continuation/REQUIREMENTS.md)
-and [source16 package record](docs/continuation/PACKAGE-DEV16.md).
+and [source17 package record](docs/continuation/PACKAGE-DEV17.md).

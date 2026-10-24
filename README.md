@@ -30,9 +30,9 @@ unavailable per latest reply; do not repeat that availability question.
 
 Expanded development remains on codex/astra-groundwork; default branch stays the
 historical experimental MVP. MIT and independent-project status preserved.
-Source16 [package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV16.md)
-passed; source17 packaging is next on human Sol Medium after verified OS proof.
-No source17 installation, production Windows or full-product completion claim.
+Source17 [package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV17.md)
+passed:170files/all-byte checks, validate3/replay4/package-scaffolding7/7. Source17
+remains uninstalled; next human Sol High before further gated Windows work.
 
 Installed dev10/cache149reviewed files/private settings remain unchanged, with no
 new native inventory/event/UI/trust/model run or logging/observer/theme/client

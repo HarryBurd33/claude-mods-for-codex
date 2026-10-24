@@ -1,5 +1,21 @@
 # Continuation verification log
 
+## Source17 Medium package verification — 2026-10-23
+
+Human resumed0021f01/treef84a8a9 on GPT-6.1 Sol Medium. Exact anonymous clean
+public clone full170pass/0fail/82Windows-only skips252total. Reviewed170-file
+archive1,170,039unpacked/350,942compressed bytes; SHA256
+aed2e7aca0eed106d10037d4a9284906e7cc32803c1acddedba73ec674a1795f.
+Every byte equals public clone/checkpoint; hygiene/MIT/version17/default-off storage
+passed. Fresh spaced extraction validate3/replay4/package-scaffolding7/7,0fail/0skip.
+macOS14.6/Node24.22.0/npm11.19.1; no Windows compilation/install/model run.
+NotesCI40063619879 all7job conclusions read success; no new native-count/branch
+claim. Installed10/cache149files/private settings hash unchanged; no new native/trust/
+config/cache/logging/gated-code change. All93IDs retained. Next human Sol High
+before more gated work. See PACKAGE-DEV17; final notes-only artifact identity
+recorded after actual readback in reply/private handoff. Full product incomplete.
+
+
 ## Verified High source17 — 2026-10-23
 
 Source[04a4939](https://github.com/HarryBurd33/claude-mods-for-codex/commit/04a49394b477fe45c14025da0f318a7a641faff3),

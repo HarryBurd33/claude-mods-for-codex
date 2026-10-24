@@ -1,4 +1,4 @@
-# Source17 security checkpoint — next Sol Medium
+# Source17 package checkpoint — next Sol High
 
 2026-10-23. Human-selected GPT-6.1 Sol High from verifiedb67f98a on
 codex/astra-groundwork. Full93product incomplete. Source17 uninstalled; installed
@@ -7,7 +7,8 @@ remains unavailable per latest reply; do not repeat its availability question.
 
 ## Read first
 
-STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, DEV17-REVIEW.md,
+STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, PACKAGE-DEV17.md,
+DEV17-REVIEW.md,
 DEV16-REVIEW.md, PACKAGE-DEV16.md, ../windows-storage.md,
 ../windows-native-acceptance.md, ../native-acceptance.md,
 ../../proofs/windows-owned-process/README.md and latest ignored root HANDOFF.md.
@@ -86,43 +87,80 @@ remove new source. Existing selective supported dev10 removal/rollback remains
 separate; never edit cache/trust hashes/whole shared config/live locks. Settings/
 data separate, private paths/backups in ignored root HANDOFF.md only.
 
-## Next tasks in priority order — Medium only
+## Completed Medium package verification
 
-1. Exact anonymous public clone/tree match/full offline suite. Inspect source17
-   archive/all bytes, new proof/Harness/fixture inclusion, MIT/version/default-off
-   storage, no links/traversal/special/private roots/case collisions/dependencies/
-   root portable manifest. Source17 uninstalled; prior packages retained/versioned.
-2. Safe fresh spaced-path extraction validate/replay/package-scaffolding. Preserve
-   baseline; after notes upload rebuild/read back final archive once, validate/
-   replay fresh extraction. Exact final commit/hash after observation privately/
-   reply, no self-hash or redundant full-suite repeat solely for changed notes.
-3. Reconcile README/PUBLIC_STATUS/five continuation records/all93IDs and earlier
-   failure history. Keep child budget/preflight/asynchronous IO/synthetic stall/
-   loader/OS/native/source-provenance boundaries precise; no universal deadline/
-   sandbox/Windows compatibility claim from isolated fixture success.
-4. Save/upload/independently verify checkpoint then stop for human High before
-   further Windows security contracts/launchers/dependencies/metadata/ignore/
-   cleanup/gates/writers. Windows11 unavailable, no repeated question until state
-   change/actual inventory need. Later read-only native kit first, no guessed PATH/
-   project Git/downloads/system repair/policy override/sandbox setup/model prompt.
+Human resumed0021f01ff3c41c63f9754e199da89da66809071c/
+treef84a8a9e235756529f4ed86c97f0d5f89b525a41. Anonymous clean public clone full
+suite170pass/0fail/82Windows-only skips252total. Reviewed170-file archive
+1,170,039unpacked/350,942compressed bytes; SHA256
+aed2e7aca0eed106d10037d4a9284906e7cc32803c1acddedba73ec674a1795f.
+Every packaged byte equals exact clone/workspace. Hygiene/MIT/version17/server/
+default-off storage passed; no compiled exe/DLL/PDB. Fresh spaced extraction
+validate3/replay4/package-scaffolding7pass/0fail/0skip. macOS14.6/Node24.22.0/
+npm11.19.1; no Windows compilation/install/model run. NotesCI40063619879 all7job
+conclusions read success, no new native-count/branch claim. Actual proof04a4939/
+CI40063228451 OS evidence stays separate from packaging/native Windows acceptance.
+
+Installed10/cache149files/private settings hash unchanged. No new native inventory/
+event/UI/trust/model turn; prior High observations remain version-specific. No
+config/cache/logging/trust/gated-code change. All93IDs kept. See PACKAGE-DEV17.
+Following notes-only archive rebuilt/read back once after upload; exact final
+identity after observation in reply/latest ignored handoff, no self-hash or
+redundant full suite solely for notes. Source17 remains uninstalled.
+
+## Next tasks in priority order — High only
+
+1. Read DEV17-REVIEW and retain phase limits: parent program/private-parent preflight
+   outside child timer, asynchronous kernel IO/termination not certified by a sleep
+   witness. No universal4s API bound or arbitrary binary/DLL/sandbox trust claim.
+   Fixed original fixture code/copy/byte-check only. Current-user code additions,
+   broker/network/same-user/admin isolation and real Git remain unverified.
+2. Choose one concrete integration prerequisite: enclosing preflight/owner/transport
+   bounds, actual executable/dependency/loader trust, repository config/hash-format/
+   object provenance/freshness or ignore-aware reads. Define valid/malformed/link/
+   alias/concurrent-change acceptance before implementation. Keep private bytes out
+   of argv/env/logs;32KiB/3MiB bridge unchanged. Leases one short operation, not
+   persistent panel/session lifetime. No raw-index/source-commit fallback.
+3. Windows11 remains unavailable per latest reply. Do not repeat its availability
+   question until state changes or actual inventory needed. Independent synthetic
+   High proofs may continue; native acceptance incomplete. Later read-only native
+   kit inventory precedes executable choices; no guessed PATH/project Git, binary
+   download/system repair/policy override/sandbox setup/credential/env dump/model run.
+4. Preserve every production Windows settings/project/Git/restore before-IO gate
+   until its own security/OS/native acceptance passes. Source16 positive HEAD/ref
+   binding not actual repository/hash format/object identity/type/existence/atomic
+   snapshot; missing/packed-only/unborn/chained/unsupported forms refuse. Source15
+   strict subset stays. Restore separate explicit writer with fresh content/identity
+   conflicts/metadata/interruption/concurrency and ordinary permissions. Prior
+   mapping-refused/byte-mtime/8.3 gaps remain. Live readers/unknown content may retain
+   bytes; no recursive cleanup/adoption/secure erasure or hostile same-user isolation.
+5. Preserve installed human-trusted dev10/private grants/data/project/scope/
+   retention/export. No extra model/API run, trust automation, broader logging,
+   observer/theme/client change, whole-project copy or major custom-client/fork
+   direction authorized. All93requirements remain accounted for/incomplete as needed.
+6. Stop for human Medium once another meaningful security/integration milestone
+   leaves routine packaging/docs/acceptance: save/upload/independently read back
+   first. No internal/background/delegated/scheduled continuation around model stops.
+   If a hard architectural issue exceeds High, checkpoint/request Astra the same way.
 
 ## Exact next model and complete resume instruction
 
-**GPT-6.1 Sol, Medium** for routine source17 packaging/public clone/records. High
-before further gated work. No internal/background/delegated/scheduled continuation
-around human model stops; no trust/restart needed for this uninstalled source.
+**GPT-6.1 Sol, High.** Source17 packaging complete; gated Windows security/
+integration requires High. Source17 stays uninstalled; no trust/restart step for
+these documentation-only records. Full product incomplete.
 
-> I switched to GPT-6.1 Sol, Medium. Continue from the verified source17 checkpoint
-> on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
-> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV17-REVIEW.md, PACKAGE-DEV16.md,
+> I switched to GPT-6.1 Sol, High. Continue from the verified source17 package
+> checkpoint on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
+> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV17-REVIEW.md, PACKAGE-DEV17.md,
 > docs/windows-storage.md, docs/windows-native-acceptance.md and latest ignored
-> root HANDOFF.md. Verify source17 packaging/public clone/spaced extraction.
-> Preserve installed human-trusted dev10/logging scope/every production before-IO
-> gate. Fixed owned-helper composition is not production/Windows Git/loader/native
-> acceptance, universal4s API bound or blocked kernel IO proof; parent preflight
+> root HANDOFF.md. Source17 public clone/archive/spaced extraction passed. Resume
+> one concrete remaining Windows security/integration prerequisite. Preserve
+> installed human-trusted dev10, logging scope and every production before-IO gate.
+> Fixed owned-helper composition is not production/Windows Git/loader/native
+> acceptance, a universal4s API bound or blocked kernel IO proof; parent preflight
 > remains outside child timer. Repository/object provenance/ignore/writer remain
-> gated. Unknown content/live readers may retain bytes, no recursive cleanup/secure
+> gated; unknown content/live readers may retain bytes, no recursive cleanup/secure
 > erasure. Windows11 unavailable; don't repeat its availability question. No extra
 > model/API run, trust automation, broader logging, observer/theme/client change or
 > new direction authorized. Keep all93requirements incomplete as applicable. Stop
-> for High before further gated work after saving/uploading/verifying checkpoint.
+> for Medium when sufficient after saving/uploading/verifying the checkpoint.

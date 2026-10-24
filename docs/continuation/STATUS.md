@@ -1,5 +1,20 @@
 # Current status — source17 owned metadata helper — 2026-10-23
 
+## Source17 Medium package verification — 2026-10-23
+
+Human resumed0021f01/treef84a8a9 on GPT-6.1 Sol Medium. Exact anonymous clean
+public clone full170pass/0fail/82Windows-only skips252total. Reviewed170-file
+archive1,170,039unpacked/350,942compressed bytes; SHA256
+aed2e7aca0eed106d10037d4a9284906e7cc32803c1acddedba73ec674a1795f.
+Every byte equals public clone/checkpoint; hygiene/MIT/version17/default-off storage
+passed. Fresh spaced extraction validate3/replay4/package-scaffolding7/7,0fail/0skip.
+macOS14.6/Node24.22.0/npm11.19.1; no Windows compilation/install/model run.
+Installed10/cache149files/private settings hash unchanged; no new native/trust/
+config/cache/logging/gated-code change. All93IDs retained. Next human Sol High
+before more gated work. See PACKAGE-DEV17; final notes-only artifact identity
+recorded after actual readback in reply/private handoff. Full product incomplete.
+
+
 **Full93-capability product incomplete. Development source0.2.0-dev.17 is
 uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
 Human resumed GPT-6.1 Sol High from verifiedb67f98a.
@@ -30,7 +45,6 @@ unavailable per latest reply; do not repeat that availability question.
 
 Installed10 still149reviewed files/private settings hash unchanged; no fresh
 native inventory/event/UI/trust/model run. Prior observations remain versioned.
-No config/cache/logging/observer/theme/client change. All93IDs retained. Source16
-packaging passed in PACKAGE-DEV16; source17 packaging next on human Medium after
-OS proof. High before more Windows security/loader/provenance/ignore/helper/
+No config/cache/logging/observer/theme/client change. All93IDs retained. Source17 packaging passed in PACKAGE-DEV17; next human Sol
+High before more Windows security/loader/provenance/ignore/helper/
 cleanup/gate/writer work. Earlier failures remain in TEST-LOG. Full product incomplete.

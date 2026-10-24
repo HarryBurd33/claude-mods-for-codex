@@ -21,7 +21,7 @@ Strict local paths and three pairwise-disjoint roots before IO. Fixed owned-proo
 under explicit code root, fixed synthetic marker names under privateParent. Original
 ProgramPins denies executable write/delete sharing and pins directory identity
 against rename/replacement; current-user child-entry creation/DLL additions are
-not excluded.
+not excluded. The
 private parent uses original current-user private NTFS pins. No PATH/project exe.
 Object integrity pins do not authenticate binary contents/dependencies. Tests copy
 and byte-check the separately compiled original fixture into fresh private code root.
