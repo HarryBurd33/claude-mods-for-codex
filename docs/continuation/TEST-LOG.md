@@ -54,6 +54,20 @@ Retrieved CreateFileW, file disposition/rename docs; first winbase disposition-E
 URL404, actual ntddk FILE_DISPOSITION_INFORMATION_EX retrieved. MS-FSA access/share algorithms subsequently retrieved corroborate that metadata-
 only opens do not enter these sharing conflicts; no POSIX-delete cause inferred. No native Codex support claim.
 
+### Directory-sharing fix CI: one public-state failure still being diagnosed
+
+Sourcecec94d66eef0614bc4662db0406db5a27a1971dc/CI40042641563: Node22 existing
+NTFS20/20 and new proof7/7 passed, including actual live-rmdir refusal. Node24
+NTFS19/20 failed in the public state test; subsequent proof step did not run.
+All4POSIX/portableWindows passed. Do not claim full green from Node22 alone.
+First public concurrent-create batch is now explicitly labeled for diagnostics;
+no production relaxation or timing change from an unidentified failure.
+A plausible sharing race during concurrent initial directory creation must be
+verified, not declared the cause. Existing lock/prune ordering reviewed: scope
+pins release before the scope's own deletion; lock-existence probes share-delete.
+Installed activity read first used invalid waitMs0 and was correctly refused;
+retry without wait returned4records/same revision. No settings/logging change.
+
 ## High read-only review and travel pause — 2026-10-23
 
 Resumed3e6272d with clean tracked tree. Read current handoff/Windows helper/C#,
