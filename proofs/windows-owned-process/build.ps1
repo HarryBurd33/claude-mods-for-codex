@@ -17,6 +17,7 @@ try {
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'ProjectReadSet.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'GitMetadataScratch.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'GitMetadataCapture.cs')),
+    [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'GitIndexProjection.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'../../src/windows/PrivateStorage.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'Harness.cs')))
   $compiler = [Microsoft.CSharp.CSharpCodeProvider]::new()

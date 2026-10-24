@@ -1,0 +1,10 @@
+{
+  "generator": "git version 2.39.5 (Apple Git-154)",
+  "description": "Original synthetic data; update-index --index-info and ls-files --stage roundtrip on macOS. Zero stat metadata, no user paths. Not Windows Git acceptance.",
+  "paths": [
+    "docs/sample.txt",
+    "sample.txt"
+  ],
+  "indexBase64": "RElSQwAAAAIAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBpAAAAAAAAAAAAAAAAPP+27lIQxyIsRwdwjZIST9qAP3pAA9kb2NzL3NhbXBsZS50eHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIGkAAAAAAAAAAAAAAAA8/7buUhDHIixHB3CNkhJP2oA/ekACnNhbXBsZS50eHQAAAAAAAAAALKwkMwXGLAiS0cvGOpHFWlaEoT4",
+  "sha256": "281ad5169c46eacf899af357b5042cd14dfaa9c995f15db70ee57458f86c25e8"
+}

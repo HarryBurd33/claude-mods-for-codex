@@ -1,5 +1,17 @@
 # Windows owned-process research candidate
 
+## Source15 current candidate — strict index projection
+
+Original unintegrated SHA1/v2 index projection proof: bounded checksum/entry/path/
+frame validation, optional accelerator stripping and explicit same-helper scratch
+composition. Nine new real Windows tests pending CI; local170pass/0fail/
+64Windows-only skips234total, validate3/replay4. Golden synthetic index from
+macOS Git2.39.5 roundtrip, no Windows Git launch. No production operation/gate or
+installed10/logging/trust change. Full93product and native Windows/Git remain
+incomplete. See [review](../../docs/continuation/DEV15-REVIEW.md) and TEST-LOG. Source14 records below are the
+previous verified foundation, including its completed package checks.
+
+
 Source14 GitMetadataCapture.cs adds an **unintegrated same-helper fixed source
 capture** proof: retained explicit index/info-exclude objects,32MiB/1MiB bounds,
 metadata+byte verification and direct private scratch composition. No raw-byte IPC,

@@ -102,13 +102,27 @@ public static class Harness {
     if(System.IO.Directory.Exists(path))throw new IOException();
     Console.WriteLine("bounded");return 0;
    }
-   if(mode=="capture" || mode=="capture-hold" || mode=="capture-cancel" || mode=="capture-cancel-after") {
+   if(mode=="index-project" || mode=="index-project-cancel") {
+    using(var cancellation=new CancellationTokenSource()) {
+     if(mode=="index-project-cancel")cancellation.Cancel();
+     // This test-only request reads explicit synthetic fixture bytes, never
+     // a production operation or undisclosed project/config/session discovery.
+     byte[] input=File.ReadAllBytes(Path.Combine(directory,"index")),projected=null;
+     try {
+      projected=CodexMods.PrivateStorage.ProjectSha1IndexV2Proof(input,cancellation.Token);
+      using(var hash=System.Security.Cryptography.SHA256.Create())Console.WriteLine("projected|"+projected.Length+"|"+BitConverter.ToString(hash.ComputeHash(projected)).Replace("-","").ToLowerInvariant());
+     } catch(IOException){Console.WriteLine("refused");}
+       catch(OperationCanceledException){Console.WriteLine("cancelled");}
+     finally {Array.Clear(input,0,input.Length);if(projected!=null)Array.Clear(projected,0,projected.Length);}
+    }return 0;
+   }
+   if(mode=="capture" || mode=="capture-hold" || mode=="capture-cancel" || mode=="capture-cancel-after" || mode=="capture-projected") {
     using(var cancellation=new CancellationTokenSource()) {
      if(mode=="capture-cancel")cancellation.Cancel();
      try {
-      using(var capture=new CodexMods.PrivateStorage.GitMetadataCaptureProof(directory,a[3],new string('a',40),a[4]=="index" || a[4]=="both",a[4]=="exclude" || a[4]=="both",cancellation.Token)) {
+      using(var capture=new CodexMods.PrivateStorage.GitMetadataCaptureProof(directory,a[3],new string('a',40),a[4]=="index" || a[4]=="both",a[4]=="exclude" || a[4]=="both",cancellation.Token,mode=="capture-projected")) {
        Console.WriteLine(B64(capture.Path));Console.Out.Flush();
-       if(mode=="capture-hold" || mode=="capture-cancel-after")Console.In.ReadLine();
+       if(mode=="capture-hold" || mode=="capture-cancel-after" || mode=="capture-projected")Console.In.ReadLine();
        if(mode=="capture-cancel-after")cancellation.Cancel();
        capture.Verify();Console.WriteLine("verified-capture");
        capture.Dispose();

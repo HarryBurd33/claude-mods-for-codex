@@ -55,10 +55,12 @@ namespace CodexMods {
    // Explicit selected root + booleans select exactly index and/or info/exclude.
    // A selected missing file refuses; omission asserts nothing about absence.
    // HEAD is already selected inert data, not discovered/parsed from this root.
-   public GitMetadataCaptureProof(string selectedMetadata,string privateParent,string headCommit,bool index,bool exclude,CancellationToken token) {
+   public GitMetadataCaptureProof(string selectedMetadata,string privateParent,string headCommit,bool index,bool exclude,CancellationToken token)
+    : this(selectedMetadata,privateParent,headCommit,index,exclude,token,false) {}
+   public GitMetadataCaptureProof(string selectedMetadata,string privateParent,string headCommit,bool index,bool exclude,CancellationToken token,bool projectSha1Index) {
     cancellation=token;var clock=Stopwatch.StartNew();Check(clock);
     PathInput(selectedMetadata);PathInput(privateParent);
-    if(Within(selectedMetadata,privateParent) || Within(privateParent,selectedMetadata)
+    if(projectSha1Index && !index || Within(selectedMetadata,privateParent) || Within(privateParent,selectedMetadata)
      || headCommit!=null && !System.Text.RegularExpressions.Regex.IsMatch(headCommit,@"\A[a-f0-9]{40}\z"))throw Refuse();
     // Validate every fixed source path before any IO. No arbitrary relative name,
     // enumeration, optional missing-file probing or changes to source objects.
@@ -70,7 +72,12 @@ namespace CodexMods {
      Source capturedIndex=index?Capture(indexPath,33554432,clock):null;
      Source capturedExclude=exclude?Capture(excludePath,1048576,clock):null;
      Verify(clock);
-     scratch=new GitMetadataScratchProof(privateParent,headCommit,capturedIndex==null?null:capturedIndex.Bytes,capturedExclude==null?null:capturedExclude.Bytes,token);
+     byte[] projected=null;
+     try {
+      if(projectSha1Index)projected=ProjectSha1IndexV2Proof(capturedIndex.Bytes,token);
+      Check(clock);
+      scratch=new GitMetadataScratchProof(privateParent,headCommit,projectSha1Index?projected:capturedIndex==null?null:capturedIndex.Bytes,capturedExclude==null?null:capturedExclude.Bytes,token);
+     } finally {if(projected!=null)Array.Clear(projected,0,projected.Length);}
      // Sources stay pinned for the complete scratch lifetime. Bytes never cross
      // the public 32KiB/3MiB bridge, command line, environment or diagnostic output.
      Verify(clock);

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { spawn } from 'node:child_process';
 import { mkdtemp, readFile, writeFile, readdir, rm, rmdir, access, realpath, mkdir, copyFile, symlink, link, open, rename } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -563,6 +564,89 @@ test('Windows metadata capture owner death deletes owned scratch bytes and relea
   try {
     await finishHolder(h,true);await metadataFilesAbsent(root);await emptyMetadataHierarchy(root);
     assert.equal(await readFile(join(f.source,'info','exclude'),'utf8'),'synthetic-ignore\n');
+    await writeFile(join(f.source,'index'),'released-on-owner-death');
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+
+// Source15: independent fixtures encode the published format, not Git source.
+// All contents/names below are synthetic. Parser outputs expose only size/hash.
+function indexChecksum(prefix){return Buffer.concat([prefix,createHash('sha1').update(prefix).digest()]);}
+function indexFixture(names=['sample.txt'],{mode=0o100644,flags=0,extensions=[]}={}){
+  const header=Buffer.alloc(12);header.write('DIRC');header.writeUInt32BE(2,4);header.writeUInt32BE(names.length,8);
+  const entries=names.map(name=>{const raw=Buffer.isBuffer(name)?name:Buffer.from(name);const b=Buffer.alloc(Math.ceil((62+raw.length+1)/8)*8);b.writeUInt32BE(mode,24);b.fill(0x11,40,60);b.writeUInt16BE(flags|raw.length,60);raw.copy(b,62);return b;});
+  const ext=extensions.map(([signature,payload])=>{const h=Buffer.alloc(8);h.write(signature,0,4,'ascii');h.writeUInt32BE(payload.length,4);return Buffer.concat([h,payload]);});
+  return indexChecksum(Buffer.concat([header,...entries,...ext]));
+}
+function indexChange(input,change){const prefix=Buffer.from(input.subarray(0,-20));change(prefix);return indexChecksum(prefix);}
+const projectedResult=b=>`projected|${b.length}|${createHash('sha256').update(b).digest('hex')}`;
+async function projectIndex(f,bytes,mode='index-project'){await writeFile(join(f.source,'index'),bytes);return run(f.exe,['run',mode,f.source]);}
+test('Windows strict index projection accepts empty, regular Unicode and actual macOS Git-generated synthetic v2 index',native,async()=>{
+  const f=await captureFixture();
+  for(const names of [[],['a','docs/sample.txt','Ω.txt'],['a.c','a/b','z']]) {
+    const b=indexFixture(names);assert.equal(await projectIndex(f,b),projectedResult(b));
+  }
+  const golden=JSON.parse(await readFile(new URL('./fixtures/git-index-v2.json',import.meta.url),'utf8'));
+  const b=Buffer.from(golden.indexBase64,'base64');assert.equal(createHash('sha256').update(b).digest('hex'),golden.sha256);
+  assert.equal(await projectIndex(f,b),projectedResult(b));
+});
+test('Windows strict index projection refuses checksum, signature, unsupported version and entry-count corruption',native,async()=>{
+  const f=await captureFixture(),b=indexFixture(),badHash=Buffer.from(b);badHash[badHash.length-1]^=1;
+  const cases=[Buffer.alloc(0),b.subarray(0,31),b.subarray(0,-1),badHash,indexChange(b,p=>p.write('FAIL')),indexChange(b,p=>p.writeUInt32BE(2,8))];
+  for(const v of [0,1,3,4,0xffffffff])cases.push(indexChange(b,p=>p.writeUInt32BE(v,4)));
+  for(const bytes of cases)assert.equal(await projectIndex(f,bytes),'refused');
+});
+test('Windows strict index projection refuses ambiguous flags, modes, zero object ID and invalid nanoseconds',native,async()=>{
+  const f=await captureFixture();
+  for(const flags of [0x1000,0x2000,0x3000,0x4000,0x8000])assert.equal(await projectIndex(f,indexFixture(['a'],{flags})),'refused');
+  for(const mode of [0o120000,0o160000,0o040000,0o100600,0xffffffff])assert.equal(await projectIndex(f,indexFixture(['a'],{mode})),'refused');
+  const b=indexFixture(['a']);
+  for(const change of [p=>p.fill(0,52,72),p=>p.writeUInt32BE(1000000000,16),p=>p.writeUInt32BE(1000000000,24)])assert.equal(await projectIndex(f,indexChange(b,change)),'refused');
+  const executable=indexFixture(['a'],{mode:0o100755});assert.equal(await projectIndex(f,executable),projectedResult(executable));
+});
+test('Windows strict index projection refuses malformed names, nonzero padding and invalid UTF8',native,async()=>{
+  const f=await captureFixture(),b=indexFixture(['ab']);
+  for(const change of [p=>p.writeUInt16BE(0,72),p=>p.writeUInt16BE(1,72),p=>p.writeUInt16BE(3,72),p=>p.writeUInt16BE(4095,72),p=>p[74]=0,p=>p[76]=1,p=>p[79]=1])assert.equal(await projectIndex(f,indexChange(b,change)),'refused');
+  for(const raw of [Buffer.from([0xc0,0xaf]),Buffer.from([0xed,0xa0,0x80]),Buffer.from([0xff])])assert.equal(await projectIndex(f,indexFixture([raw])),'refused');
+});
+test('Windows strict index projection refuses unordered, colliding, traversal and Windows alias paths without path IO',native,async()=>{
+  const f=await captureFixture();
+  for(const names of [['b','a'],['a','a'],['A','a'],['a','a/b'],['A/b','a'],['/escape'],['a/../b'],['.Git/config'],['x\\y'],['C:stream'],['CON.txt'],['trailing.'],['a//b'],['a/'],['a/\u202eb'],['a/\u{e0001}b'],['a'.repeat(201)]])assert.equal(await projectIndex(f,indexFixture(names)),'refused');
+});
+test('Windows strict index projection strips optional extension payloads and refuses mandatory or malformed frames',native,async()=>{
+  const f=await captureFixture(),plain=indexFixture(['a']);
+  const optional=indexFixture(['a'],{extensions:[['TREE',Buffer.from('invalid-tree-synthetic')],['FSMN',Buffer.from([0,255])],['Zzzz',Buffer.alloc(0)]]});
+  assert.equal(await projectIndex(f,optional),projectedResult(plain));
+  for(const extensions of [[['link',Buffer.alloc(0)]],[['sdir',Buffer.alloc(0)]],[['nope',Buffer.alloc(0)]],[['TREE',Buffer.alloc(0)],['TREE',Buffer.alloc(0)]],Array.from({length:65},(_,n)=>['Z'+n.toString().padStart(3,'0'),Buffer.alloc(0)])])assert.equal(await projectIndex(f,indexFixture(['a'],{extensions})),'refused');
+  const extra=indexFixture(['a'],{extensions:[['TREE',Buffer.from('x')]]}),start=plain.length-20;
+  for(const change of [p=>p.writeUInt32BE(0xffffffff,start+4),p=>p.writeUInt32BE(2,start+4),p=>p.writeUInt32BE(0,start+4)])assert.equal(await projectIndex(f,indexChange(extra,change)),'refused');
+});
+test('Windows strict index projection bounds entry count, input bytes and cancellation',native,async()=>{
+  const f=await captureFixture(),names=Array.from({length:10000},(_,n)=>'f'+n.toString().padStart(5,'0'));
+  const accepted=indexFixture(names);assert.equal(await projectIndex(f,accepted),projectedResult(accepted));
+  const plain=indexFixture(['a']),largest=indexFixture(['a'],{extensions:[['TREE',Buffer.alloc(33554432-plain.length-8)]]});
+  assert.equal(largest.length,33554432);assert.equal(await projectIndex(f,largest),projectedResult(plain));
+  assert.equal(await projectIndex(f,indexFixture([...names,'z'])),'refused');
+  assert.equal(await projectIndex(f,Buffer.alloc(33554433)),'refused');
+  assert.equal(await projectIndex(f,indexFixture(),'index-project-cancel'),'cancelled');
+});
+test('Windows projected metadata capture writes only verified extension-free index, retaining original source and pins',native,async()=>{
+  const f=await captureFixture(),plain=indexFixture(['sample.txt']),original=indexFixture(['sample.txt'],{extensions:[['TREE',Buffer.from('synthetic-discarded')]]});
+  await writeFile(join(f.source,'index'),original);
+  const h=await captureHolder(f,'index','capture-projected'),root=h.paths[0];
+  try {
+    assert.deepEqual(await readFile(join(root,'index')),plain);assert.deepEqual(await readFile(join(f.source,'index')),original);
+    await assert.rejects(writeFile(join(f.source,'index'),'must-not-write'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+    await finishHolder(h);assert.match(h.output(),/verified-capture/);await absent(root);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+  await writeFile(join(f.source,'index'),Buffer.from('not-an-index'));
+  assert.equal(await run(f.exe,['run','capture-projected',f.source,f.parent,'index']),'refused');
+  assert.deepEqual(await readdir(f.parent),[]);await writeFile(join(f.source,'index'),'released-on-parser-refusal');
+});
+test('Windows projected metadata capture owner death removes owned projection and releases source handles',native,async()=>{
+  const f=await captureFixture();await writeFile(join(f.source,'index'),indexFixture());
+  const h=await captureHolder(f,'index','capture-projected'),root=h.paths[0];
+  try {
+    await finishHolder(h,true);await metadataFilesAbsent(root);await emptyMetadataHierarchy(root);
     await writeFile(join(f.source,'index'),'released-on-owner-death');
   } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
 });

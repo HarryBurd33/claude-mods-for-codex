@@ -1,6 +1,18 @@
 # Project status — source14 metadata capture proof — 2026-10-23
 
-**The full 93-capability product is incomplete. Development source 0.2.0-dev.14
+## Source15 current candidate — strict index projection
+
+Original unintegrated SHA1/v2 index projection proof: bounded checksum/entry/path/
+frame validation, optional accelerator stripping and explicit same-helper scratch
+composition. Nine new real Windows tests pending CI; local170pass/0fail/
+64Windows-only skips234total, validate3/replay4. Golden synthetic index from
+macOS Git2.39.5 roundtrip, no Windows Git launch. No production operation/gate or
+installed10/logging/trust change. Full93product and native Windows/Git remain
+incomplete. See docs/continuation/DEV15-REVIEW.md and TEST-LOG.md. Source14 records below are the
+previous verified foundation, including its completed package checks.
+
+
+**The full 93-capability product is incomplete. Development source 0.2.0-dev.15
 is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
 Human resumed GPT-6.1 Sol High from verified5016e11.
 
