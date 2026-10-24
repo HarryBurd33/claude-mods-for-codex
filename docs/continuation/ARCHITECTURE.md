@@ -1,42 +1,30 @@
 # Extension architecture and security contracts
 
-Current High source11 candidate2026-10-23: unintegrated private scratch-content
-proof under review/test; source10 stays installed/human-trusted. Creation-time
-private delete-on-close files, bounded slots/bytes and exact-handle cleanup;
-no recursive adoption, project/Git copies or gate activation. Native Windows
-host unavailable here; CI result pending. See DEV11-REVIEW and TEST-LOG.
+## Source11 private synthetic content boundary — 2026-10-23
 
-## Native source10 focus verified — 2026-10-23
+Source392fc04/CI40046690213 all7jobs passed; native Windows20storage+13proof each,
+0fail/skip, both logs read. Proof-only ScratchContentProof(parent)/Add(byte[])/
+Dispose reuses helper checks and private ScratchProof directory. Flat numeric
+slots,16files/256KiB each/1MiB total. CREATE_NEW/protected descriptor/delete-on-close
+are atomic at creation; verified/flushed noninherited handles retained. Compatible
+readers share read/write/delete, new writers refuse. No adoption/path deletion/
+recursive recovery. Exact owned files disappear after last reader closes; normal
+empty-only root removal can refuse, leaving a protected root. No secure erasure.
 
-After restart, real panel Render/focus outline (3px/3px offset) passed. Human
-confirmed source→Render→Clear keyboard focus and Enter-Clear; native DOM confirmed
-focused Clear/empty source/output. Cache149 matches reviewed fixture; inventory
-3enabled/human-trusted,0errors/0model turns. Same project scope/four records/revision;
-settings hash unchanged. No configuration/trust/logging/code changes. Full93-product
-and broader accessibility/platform acceptance remain incomplete. See TEST-LOG.
-Next **GPT-6.1 Sol, High** before gated Windows security/integration; no gate enabled.
+Original synthetic tests prove bounds/collision/junction/reader/owner-death behavior,
+including creation-time job-owned descendant readers and successful root exit.
+Production compiles only PrivateStorage.cs; no public operation or gate change.
+Slot layout/limits are not a Git repository or its larger index bound. Real project
+read-set consistency, executable/dependency/loader trust, inert named Git metadata
+and separate restore/native host permissions remain High/security gates. See
+DEV11-REVIEW for reviewed sources, contracts and exact acceptance order.
 
-Earlier versioned evidence below is historical; this current summary supersedes pending-restart/focus statements.
-
-## Current source10 Medium continuation — 2026-10-23
-
-Only owned-control focus CSS and version metadata change product behavior after
-source9:3px currentColor outline/3px offset for mouse/keyboard focus, no JS/tab-order
-change. Isolated browser keyboard/Clear/style checks pass; native10 pending restart.
-Public package/clone/extraction and CI40044819664 all7jobs pass. Windows/privacy/
-model/dispatcher/gates/default registration remain equal reviewed source9.
-
-Source10 installed149-file immutable configured fixture through supported local
-marketplace CLI, same settings/mods/MCP/data/scope/retention/export. Private hook
-commands differ only by inert version review comments. Human reviewed3modified
-hooks; fresh inventory3trusted/0errors. No agent trust writes. Install config equal;
-human changed only3owned hook state records, other config preserved. Current counts
-4/same revision. Source6 native close/reopen observed; source10 UI not yet verified.
-
-Stay Sol Medium for post-restart native UI, Sol High before later Windows security/
-integration. Windows kit is preparation; no gate activation/snapshot/client/fork
-choice. Full93product incomplete. Source9 foundation below is retained and supersedes
-older metadata-only pin assumptions; its original installed6 status is historical.
+Source11 uninstalled; installed human-trusted source10 unchanged. Actual native
+panel focus/render/keyboard-Clear passed after restart. Same settings/four scoped
+records; no trust/config/logging/model-call change. Next Medium for package/routine
+review only; human High switch before additional gated security/integration.
+Full93product remains incomplete. Historical versioned foundations follow; older
+installed6/pending10 statements are superseded by this current summary.
 
 ## Reviewed source9 Windows boundary — 2026-10-23
 

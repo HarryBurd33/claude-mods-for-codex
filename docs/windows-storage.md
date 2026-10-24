@@ -1,11 +1,12 @@
-# Windows private storage — development source0.2.0-dev.9
+# Windows private storage — source11 proof / unchanged production boundary
 
 Source11 adds only an **unintegrated** bounded synthetic scratch-content proof:
 private create-new/delete-on-close, retained handles, no recursive cleanup/adoption,
 normal and external-death/descendant-reader tests. No project/Git data or writer.
 Installed10/logging/trust and all production gates unchanged. Empty private roots
 can remain; compatible reader sharing and real Git/DLL trust remain separate.
-See [source11 review](continuation/DEV11-REVIEW.md); OS test results are recorded
+Source392fc04 CI40046690213 passed all7jobs; each native Windows lane20storage+
+13proof/0fail/0skip, both logs read. See [source11 review](continuation/DEV11-REVIEW.md); OS test results are recorded
 separately from native Windows Codex acceptance.
 
 Native OS primitive checkpoint f152acb passed all15 tests on Windows Server2025

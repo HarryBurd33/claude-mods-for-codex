@@ -66,8 +66,8 @@ Real Windows tests, not Windows-looking paths on POSIX:
 - Real descendant reader exists before external owner death; owned root/reader
   processes die and content disappears. Successful root exit also kills its reader.
 
-Source11 local POSIX checks skip all13 Windows proof cases. Windows CI results and
-exact source/run identity must be recorded in TEST-LOG after actual observation;
+Source11 local POSIX checks skip all13 Windows proof cases. Windows CI40046690213 for source392fc04 passed all7jobs; both native job logs
+were read:20storage+13proof each,0fail/0skip. Exact evidence is in TEST-LOG;
 no native Codex/Windows11 compatibility follows from those OS results.
 
 ## Remaining High gates
@@ -98,3 +98,58 @@ IO. Native Windows11 client/OS/Git/DLL inventory is available later, not perform
 
 These establish intended API semantics, not measured compatibility. Original NTFS
 ACL/path/volume and job lifetime sources remain in the source9 proof README.
+
+## Execution boundary review for the next High stage
+
+The current POSIX adapter cannot simply call the new Windows process runner:
+`workspace.mjs` uses PATH Git, project cwd and a directory-shaped temporary Git
+repository with named config/HEAD/index/info/exclude. This proof has numeric flat
+slots; calling it a drop-in Git repository would be incorrect. Its1MiB aggregate
+is deliberately below the existing32MiB index bound. Raise neither bound silently.
+
+A reviewed Windows adapter must keep a private trusted cwd and avoid project cwd
+or `-C` as a loader/search workaround. It needs the exact installed distribution,
+executable and dependency locations held across execution; ProjectPins alone do
+not validate DLL search. Microsoft documents API sets, redirection, SxS, KnownDLLs,
+package graphs and dependent-module searches before/following ordinary directories.
+A minimal PATH/private cwd does not close all of those. A parent's SetDllDirectory
+can affect child search, but no loader-policy mutation is selected here; this is
+different from assuming a parent's SetDefaultDllDirectories configures the child.
+[DLL search](https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order)
+was retrieved again2026-10-23. No system registry or search policy changed.
+
+Git's official [environment reference](https://git-scm.com/docs/git) and
+[configuration reference](https://git-scm.com/docs/git-config) were also retrieved.
+Global/system config suppression does not suppress repository config. Git's
+fsmonitor option can name a hook or start a daemon on Windows; helper/filters/
+attributes/diff/maintenance/replace/alternates/lazy-fetch need explicit review.
+The future adapter must test a generated inert config plus hostile synthetic local
+config and markers, not pass a private copy of the project's arbitrary config.
+No trace env, credential helper, terminal prompt or implicit network fallback.
+These documents are latest online guidance; actual installed Git version and
+capabilities must be inventoried. The Git for Windows primary site was retrieved
+only as the installation-origin lead; no download, install or executable test.
+
+Concrete next gate order: (1) reviewed target-host executable/loader inventory;
+(2) original bounded synthetic traversal/read-set proof with held handles and
+mutation detection; (3) inert named Git scratch layout/reader compatibility and
+exact-owned cleanup; (4) harmless trusted Git integration with hostile helper/DLL/
+config controls; (5) native Codex permission/UI lifecycle acceptance. A source11
+scratch pass closes only the narrower synthetic file-lifetime question. Restore
+remains outside all five read-only steps. High is required for2–4; Medium may
+package this exact proof and prepare inventory without changing those contracts.
+
+## Final scoped review
+
+High reviewed creation-time flag/descriptor lifetime, refused slot adoption,
+retained-handle ownership, compatible sharing, byte/count checks before IO,
+exception cleanup, unowned junction preservation and asynchronous reader/job death.
+Real OS witnesses pass on both Windows lanes. Production helper compiler references
+only PrivateStorage.cs; no new IPC operation, runtime gate relaxation, telemetry,
+registration, UI/model or permission change. These checks do not justify integrating
+Git or a writer; the explicit remaining boundaries above remain High work.
+
+Immediate next work is routine exact-source package/public-clone verification and
+read-only host-kit preparation on Sol Medium. Stronger reasoning is not needed
+for that bounded phase. Return to human-selected High before any new Windows
+security implementation, traversal, named Git scratch layout or trust decision.

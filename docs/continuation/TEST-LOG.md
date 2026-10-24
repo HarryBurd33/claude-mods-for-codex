@@ -1,5 +1,33 @@
 # Continuation verification log
 
+## Verified High source11 scratch proof — 2026-10-23
+
+Source[392fc04](https://github.com/HarryBurd33/claude-mods-for-codex/commit/392fc0400f6c1bcd29fb6c13f433ea19c1502c01),
+treed878c927a668a93f58d8411384b6451509f8dd45, branchcodex/astra-groundwork.
+[CI40046690213](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40046690213) all7jobs passed. Actual native Windows job logs
+120729934926(Node22) and120729934981(Node24) read: each20storage+13proof,
+0fail/0skip. All4full POSIX and portableWindows jobs passed. Windows Server2025,
+not native Codex/Windows11/WSL. Source11 local npm test170pass/0fail/33Windows-only
+skips203total; validate3mods/replay4fixtures passed. Earlier candidate failures and
+unknown-cause intermittent state failure remain recorded; no cause claim here.
+
+Five new OS cases exercised protected compatible readers/write exclusion, aggregate/
+file/count bounds and post-disposal refusal, existing-slot preservation, unexpected
+junction/target preservation, normal/owner-death content cleanup and owned descendant
+readers on external owner death/successful root exit. Only exact owned handles are
+closed; no recursive recovery, real Git data, production operation or gate activation.
+The proof can leave empty private roots; it is not a secure-erasure guarantee.
+
+Human-selected Sol High resumed1b11d14. Original local equivalent
+8605f7eb698ced500bdf9534395b3ed74b55a02b retained on
+codex/dev11-scratch-content-local-checkpoint. GitHub nonforce expected-parent upload,
+fetch and whole-tree equality passed. Final following notes-only checkpoint identity
+will be recorded after readback in reply/private handoff; product/proof/tests match
+this tested source. Full93product remains incomplete; source11 uninstalled,
+installed10 trust/settings/logging untouched. Next Medium may package/reconcile;
+High remains required before any further gated Windows security/integration change.
+
+
 ## High source11 scratch candidate — 2026-10-23
 
 Resumed clean1b11d14. Added proof-only ScratchContent.cs plus fixed compilation,

@@ -1,101 +1,56 @@
-# Current status — source10 restart checkpoint — 2026-10-23
+# Current status — source11 private scratch proof — 2026-10-23
 
-Current High source11 candidate2026-10-23: unintegrated private scratch-content
-proof under review/test; source10 stays installed/human-trusted. Creation-time
-private delete-on-close files, bounded slots/bytes and exact-handle cleanup;
-no recursive adoption, project/Git copies or gate activation. Native Windows
-host unavailable here; CI result pending. See DEV11-REVIEW and TEST-LOG.
+**Full93-capability product incomplete. Source0.2.0-dev.11 is uninstalled;
+configured source10 remains installed and human-trusted on macOS.** Human resumed
+Sol High from1b11d14. No production Windows gate, configuration or trust change.
 
-## Native source10 focus verified — 2026-10-23
+## New High result
 
-After restart, real panel Render/focus outline (3px/3px offset) passed. Human
-confirmed source→Render→Clear keyboard focus and Enter-Clear; native DOM confirmed
-focused Clear/empty source/output. Cache149 matches reviewed fixture; inventory
-3enabled/human-trusted,0errors/0model turns. Same project scope/four records/revision;
-settings hash unchanged. No configuration/trust/logging/code changes. Full93-product
-and broader accessibility/platform acceptance remain incomplete. See TEST-LOG.
-Next **GPT-6.1 Sol, High** before gated Windows security/integration; no gate enabled.
+Original unintegrated ScratchContent.cs reuses the fixed helper's ACL/path/volume/
+private descriptor/pinned-directory checks. Up to16flat created slots,256KiB each,
+1MiB total, no caller paths/adoption. CREATE_NEW/private ACL/DELETE_ON_CLOSE are one
+creation operation before bytes; verified/flushed handles remain noninherited.
+Close touches only owned handles; root removal is empty-only. Unexpected entries
+remain intact; readers can delay deletion and leave an empty private root.
+No recursive recovery or secure-erasure promise, no real Git/project/index/ref copy.
 
-Earlier versioned evidence below is historical; this current summary supersedes pending-restart/focus statements.
+Five new real-Windows tests extend the isolated proof to13cases. Local final suite
+170pass/0fail/33Windows-only skips203total; validate3/replay4 pass. Source392fc04 CI40046690213 passed all7jobs; both actual native job logs
+read20storage+13proof each,0fail/0skip. See TEST-LOG. No native Windows Codex/Windows11/WSL
+result. No new public operation; production compiles only original PrivateStorage.cs.
+See DEV11-REVIEW for architecture, actual primary references and remaining gates.
 
-**Full93-capability product incomplete. Source and installed0.2.0-dev.10.**
-Human selected Sol Medium from09518fd. Source10 is installed through the supported
-local marketplace flow,149cached files equal the prepared immutable fixture.
-Human reviewed/trusted the three changed hooks; fresh read-only inventory confirms
-3enabled/trusted,0errors,0model turns. **Desktop restart and source10 native focus
-verification remain pending.** Stay Sol Medium for that routine check; stop for
-Sol High before gated Windows security/integration. Windows11 host available later.
+## Preserved installation and native evidence
 
-## Current Medium results
+Installed10 immutable149files and three enabled/human-trusted hooks verified after
+restart, zero errors/zero model turns started by inventory. Actual owned panel
+Render/sample/3px focus outline with3px offset observed. Human confirmed source→
+Render→Clear keyboard focus and Enter-Clear; native DOM confirmed empty source/
+output and Clear focus. Same four retained records/project scope/revision. Settings
+hash unchanged. No agent cache/trust/config/logging writes or additional model run.
 
-Source9 anonymous public clone/full suite and147-file package/spaced extraction
-verified. Source10[9d8fb42](https://github.com/HarryBurd33/claude-mods-for-codex/commit/9d8fb42ebf8b09caea5c7893a91e895398d430a5),
-[CI40044819664](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40044819664)
-all7jobs success; both Windows20storage+8proof,0fail/0skip, all4POSIX/portable
-Windows passed. Local and anonymous source10 clone170pass/0fail/28Windows-only
-skips198total; extracted validate3mods/replay4fixtures/package+scaffold7/7.
-Source10 first reviewed archive149files939257bytes, exact clone/checkpoint bytes;
-final notes-only rebuild identity is recorded after readback. See PACKAGE-DEV9.md.
+Existing private before-backups, immutable dev6 rollback, settings/data/retention/
+export and unrelated entries remain. Earlier native6 six views/rewrite/control/deny/
+remove-reinstall and dev4 sandbox-negative/removed hold tests stay version-specific.
+No source11 installation is required for this proof-only milestone.
 
-Source10 strengthens owned-control focus:3px currentColor outline/3px offset on
-mouse and keyboard focus. Human clarified installed6 Clear worked, focus was
-unclear. Isolated source10 browser keyboard order/Enter-Clear/computed outline
-passed; **not native source10 or full accessibility acceptance**. Native6 human
-close→empty panel inventory→reopen/new connected panel preserved project/4records/
-same revision/Watch off. Timing/backend cancellation not proved. A later Windows
-native kit is prepared from actually retrieved official pages.
+Source9 directory-sharing fix and creation-time job/handle-list proof remain the
+foundation. Source10 exact tested codeCI40044819664 passed all7jobs,20storage+
+8proof each Windows lane,170/0/28skips local/public clone; package checks recorded
+in PACKAGE-DEV9. Failed candidates and unexplained intermittent state failure remain
+in TEST-LOG; the new scratch proof does not establish their cause.
 
-## Preserved authority and install scope
+## Remaining work and model boundary
 
-User-profile installation via existing claude-mods-production-dev marketplace;
-only its owned local source pointer changed6→10. Private before-config/marketplace
-backups and immutable125-file dev6 rollback retained. Native fixture reuses exact
-settings, config/mod rules, data/project/scope/retention/patch/commit/export grants.
-Only three private overlays differ from the public149-file snapshot: existing
-MCP settings reference, existing mods config, and inert hook version comments.
-No agent trust writes. Install preserved parsed config exactly; human review then
-changed only this plugin's3hooks.state trust records. Other hook states and all
-non-hook-state config preserved. Latest activity4/same revision; optional observers
-off, theme/client/model unchanged. This chat remains outside selected child scope.
-No extra model/API run, credential/session search, dependency install or system
-repair. Temporary loopback source-test server exited and its browser tab closed.
-Native Windows/gated code byte-equal reviewed source9; no gate activation.
+Executable/DLL trust, selected project no-follow/consistent reads, inert named Git
+scratch/layout/reader compatibility and separate restore/host permissions remain
+High work. Current scratch slots are not a drop-in Git repository; their1MiB bound
+is below the existing32MiB index bound. Native Windows11 host is available later,
+not tested. Runtime settings/project/Git/restore still refuse before IO.
 
-Earlier native6 six views/rewrite/deny/keyboard/resize evidence remains version-
-specific. Updated desktop UI/skill/native hook execution has not yet been verified
-on10; inventory/trust is not delivery. Source9 Windows foundation/history below is
-retained separately, never native Codex/Windows11 support proof.
-
-## High Windows results
-
-Metadata-only directory handles did not prevent live rmdir in Windows CI. The
-production NTFS helper now requests FILE_LIST_DIRECTORY alongside metadata rights,
-while still omitting share-delete. It does not enumerate ancestors. Insufficient
-rights refuse; no ACL repair. Sharing violation32 alone has10attempts/90ms sleep
-per handle; the existing whole-request/optional telemetry deadlines remain.
-
-The original MIT unintegrated proof uses mandatory creation-time JOB_LIST and
-HANDLE_LIST, kill-on-close ownership, explicit argv/environment, EOF stdin,
-bounded output/deadline/cancellation and owned descendant cleanup including owner
-death. A proof-only partial helper extension checks executable object ACLs/handles,
-separate code/project roots, no-follow project-root metadata and private empty
-scratch. No product code loads it, no new public execution operation, no Git run.
-See [review](DEV9-REVIEW.md), [proof](../../proofs/windows-owned-process/README.md)
-and [Windows boundary](../windows-storage.md). Failed candidates are retained in
-TEST-LOG, including a corrected handle-number test and intermittent state failure.
-
-Local full suite170pass/0fail/28Windows-only skips198total. [Source9 CI40043152081](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40043152081)
-all7jobs passed: each Windows lane20storage+8proof, all4POSIX and portable Windows.
-These OS results remain separate from native host acceptance. Native Codex
-Windows11/WSL installation/events/UI/permissions remain unverified.
-
-## Remaining work
-
-Restart/reopen this chat on Sol Medium, open the updated owned panel and verify
-focus visibility and same scope/counts. Native backend cancellation, full screen
-reader/zoom/contrast, loaded disable/older rollback, optional events/themes and
-Linux/Windows/WSL acceptance remain incomplete. No extra model run or optional
-observer/theme/client change is authorized. High before Windows executable/DLL/
-project traversal/content cleanup/restore work when the later host is available.
-All93requirements remain accounted. No custom client/fork/app patch direction or
-full-product finish claim. See HANDOFF for exact commands/rollback/resume.
+Next setting is **GPT-6.1 Sol, Medium**: package the exact reviewed proof, reconcile documentation and prepare
+read-only inventory. It must stop for a human High switch before any gated code.
+Broader accessibility, backend close-pending cleanup, loaded disable/older rollback,
+optional native events/themes and native Linux/Windows/WSL remain incomplete.
+No additional model/API test, optional observers, theme/client change, app patch,
+custom client/fork or major new product direction authorized.

@@ -1,96 +1,44 @@
 # Claude Mods for Codex
 
-Current development source0.2.0-dev.11 adds an unintegrated Windows private
-scratch-content proof; installed0.2.0-dev.10 remains unchanged and human-trusted.
-No project/Git/restore gate is enabled. The full product remains incomplete.
-See [security review](docs/continuation/DEV11-REVIEW.md) for limits and test status.
+**Development source0.2.0-dev.11; the full93-capability product is incomplete.**
+The default branch remains the historical experimental MVP. Current expanded work
+is on codex/astra-groundwork; it is not a stable release or a Windows compatibility
+claim. MIT and the independent-project disclaimer remain unchanged.
 
-Current2026-10-23: after restart, the native source10 panel rendered the sample;
-its3px focus outline/3px offset was observed. The human confirmed clear keyboard
-focus through source→Render→Clear and Enter cleared; native inspection confirmed
-Clear focused and empty source/output. Three hooks remain enabled/human-trusted,
-zero inventory errors;149cache files match the reviewed fixture. Same four activity
-records/project scope/revision. No configuration, logging, trust or product-code
-changes. Full accessibility/platform/product completion remains unverified.
-Next: human-controlled **GPT-6.1 Sol, High** for gated Windows security work;
-retain refusals until acceptance passes. Earlier pending-restart statements below
-are historical and superseded by this observation. See the current handoff.
+The source11 Windows proof creates bounded private synthetic scratch files with
+creation-time delete-on-close, retained handles and no recursive cleanup/adoption.
+It is not loaded by the production helper, does not copy project/Git data and does
+not enable Windows settings/project/Git/restore. Empty private roots can remain.
+See [source11 review](docs/continuation/DEV11-REVIEW.md) and
+[verification log](docs/continuation/TEST-LOG.md) for actual test scope/results.
+Local suite170pass/0fail/33Windows-only skips203total; validate3/replay4 passed.
+Source392fc04 [CI40046690213](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40046690213) passed all7jobs; both actual
+Windows job logs read20storage+13proof each,0fail/0skip.
+Real Windows CI results are recorded separately; POSIX skips are not Windows passes.
 
-**Development source0.2.0-dev.10; the full requested product is incomplete.**
-Source10 makes the owned dashboard's focus ring stronger for mouse and keyboard
-focus. The isolated browser sequence passed; actual updated native visibility
-awaits desktop restart. It does not restyle native Codex chrome or change themes.
+The configured macOS test fixture0.2.0-dev.10 remains installed in the user profile,
+149files equal its immutable reviewed snapshot, three hooks human-trusted/zero
+inventory errors. Its existing settings/mod rules/project/data/scope/retention/
+export grants are preserved. After restart, the actual owned panel rendered its
+sample and stronger3px focus outline; the human confirmed source→Render→Clear
+keyboard focus and Enter-Clear. Retained activity remains four records, same project
+scope/revision. No new model run, logging/trust/configuration change or source11
+installation was made. Installation/trust inventory is separate from event delivery.
 
-The configured macOS test fixture10 is installed in the user profile with149files
-matching its reviewed immutable snapshot. The human reviewed its3changed hooks;
-fresh inventory confirms3enabled/trusted/0errors. Settings/mod rules, project/data/
-scope/retention/export and unrelated configuration were preserved. Human review
-changed only the3owned trust records; the agent wrote none. Latest retained
-activity4/same revision. **Installation/trust is not native execution/UI proof.**
-Restart/reopen is still required to verify the new panel. See [current handoff](docs/continuation/HANDOFF.md).
+Earlier native dev6 evidence covers six views, nested files, selected diffs, passive
+usage, restricted local preview/Clear, reviewed print rewrites/control/deny and
+same-version removal/reinstall. Dev4 separately verified sandbox rejection of a
+rewritten out-of-workspace marker write. Removed hold proofs exercised human
+confirm/decline/cancel/deadline, but are not a production approval gate: human
+provenance and host fail-open limits remain. No destructive demonstration was used.
 
-[Package verification](docs/continuation/PACKAGE-DEV9.md) passed for sources9/10:
-anonymous public clones, bounded archive inspection, extraction in a spaced path,
-validation/replay and offline tests. Source10[CI40044819664](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40044819664)
-passed all7jobs, including20storage+8proof cases on each Windows Node22/24 lane.
-Local/public clone170pass/0fail/28Windows-only skips198total. Windows Server CI
-is OS/process evidence, not native Codex/Windows11/WSL compatibility.
-
-The source9 Windows directory-sharing correction and isolated process/object/
-empty-scratch proof remain unchanged. Windows settings/dashboard/project/Git/
-restore refuse before IO pending their separate security/native gates. No real Git
-or arbitrary executor is activated by the proof. See [Windows boundary](docs/windows-storage.md)
-and [later Windows native kit](docs/windows-native-acceptance.md). Stop for Sol High
-before gated Windows work; routine post-restart macOS UI checks remain Sol Medium.
-
-Earlier dev6 actual macOS evidence includes six owned views, local restricted
-flowchart/JSON/plain-code preview/Clear, nested files, selected diffs, passive usage,
-reviewed print rewrites/control/deny and same-version removal/reinstall125files/
-3hooks. A human confirmed a preview keyboard path/resize and later Clear; focus
-was unclear. Human close→empty panel inventory→reopen preserved scope/counts.
-These results are version-specific; full accessibility and backend cancellation
-remain incomplete and are not transferred to10 merely by installation.
-
-The earlier dev4 normal sandbox rejected a rewritten marker-file write outside
-the workspace; no target or elevated retry. Separate harmless hold tests verified
-confirm/decline/cancel/30s timeout and were removed. The hold proof is not a
-production gate: human provenance is not attested and disconnected hooks can fail
-open. See [current status](docs/continuation/STATUS.md) and
-[test log](docs/continuation/TEST-LOG.md) for version-specific limits.
-
-The [local preview](docs/local-preview.md) is an original restricted flowchart
-approximation, not full Mermaid or native transcript restyling. Optional
-[observation-only lifecycle events](docs/lifecycle-observation.md) remain source-
-tested, unregistered and native-unverified. Default hook registration/logging
-is unchanged. Local callbacks make no additional model calls; skill/chat use
-consumes usage. Current source local suite170pass/28Windows-only skips (198total); CI and native
-platform evidence are separate.
-
-Replay compares only explicit selected Git commits, which may include human edits
-or multiple turns; it is not automatic previous-turn attribution. A separate
-explicit POSIX one-file [restore CLI](docs/replay.md) has conflict/private-plan
-checks and documented non-atomic interruption limits; no panel/MCP restore action.
-[Usage](docs/impact-and-usage.md) reads only one explicitly selected private export:
-latest cumulative counters, never summed or called current context/billing/cache
-health. No private-session discovery or paid keepalive.
-
-Remaining incomplete work includes full accessibility, broader skill invocation,
-disable/older-version rollback and loaded-process lifecycle, supported themes,
-optional event native delivery and real Windows/Linux/WSL compatibility. Windows settings/dashboard,
-project/Git views and restore remain explicitly unavailable; private storage and
-selected-export APIs have dedicated NTFS CI. Native Codex installation/events,
-standard-user sandbox behavior and full Windows compatibility remain unverified. The
-[93-capability ledger](docs/continuation/REQUIREMENTS.md) records every gap and
-alternative. An original [theme example and supported setup/rollback guide](docs/themes.md) is
-provided without applying it or upgrading Codex. The management skill reflects
-the reviewed exact-replacement contract; the source scaffolding skill now uses
-self-contained fixtures. A human confirmed the installed dev6 Preview source →
-Tab → Enter rendering path and narrower/wider preview usability; broader
-accessibility remains incomplete. Continue through the [handoff](docs/continuation/HANDOFF.md).
-
-Claude Mods for Codex is an inspectable local hook framework with a plugin-owned dashboard, scoped metadata, read-only project tools, authoring/replay CLI and five focused skills. Its default hook examples are: a visible session notice, a deny-only lexical command guard, and an optional metadata activity journal. A fixture replay CLI lets you test the exact hook responses without installing the plugin or signing in.
-
-This is an independent project. It is not affiliated with, endorsed by, or maintained by Anthropic or OpenAI. It does not run Claude Mods unchanged.
+Full accessibility, backend close-pending cleanup, loaded disable/older rollback,
+optional native lifecycle/themes and Linux/Windows/WSL acceptance remain incomplete.
+Windows Server NTFS CI is OS evidence, not native Codex/Windows11 acceptance.
+Gated Windows security/integration requires human-selected Sol High; routine
+packaging/preparation can use Medium. See the [current handoff](docs/continuation/HANDOFF.md),
+[ledger](docs/continuation/REQUIREMENTS.md), [Windows boundary](docs/windows-storage.md)
+and [native kit](docs/windows-native-acceptance.md).
 
 ## What it does
 

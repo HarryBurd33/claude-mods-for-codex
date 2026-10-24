@@ -11,7 +11,8 @@ sharing; this is not established for installed Git. Empty private roots can rema
 Source11 is uninstalled; source10 remains human-trusted on macOS. Production compiles
 only PrivateStorage.cs; Windows settings/project/restore gates stay closed.
 See [source11 review](../../docs/continuation/DEV11-REVIEW.md) for contract, sources,
-limits and exact remaining gates; actual Windows results belong in TEST-LOG.
+limits and exact remaining gates. Source392fc04 CI40046690213 passed all7jobs;
+both Windows logs20storage+13proof/0fail/0skip read. See TEST-LOG.
 
 Earlier source9-only empty-scratch descriptions below are historical; this proof
 extends synthetic content handling, not production access or native compatibility.
@@ -91,7 +92,7 @@ that composite behavior or native sandbox authority.
 
 ## Not established by this candidate
 
-Path syntax is not executable trust. It does not validate executable/parent ACLs,
+Path syntax alone and OwnedProcess.Run do not validate executable/parent ACLs,
 DLL dependencies/search, reparse points, project file traversal, private Git index/
 ref snapshots, Git config/helper suppression or native Codex permissions. Callers
 cannot infer those from absolute paths or these tests. No production integration
