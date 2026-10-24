@@ -34,6 +34,17 @@ must read exact results, not infer Windows success from POSIX skips. Package/nat
 source27/Stop/Interrupt/cancel/nonzero/invocation-error acceptance still unverified.
 
 
+## Source27 uploaded source / CI snapshot
+
+Runnable public/local [7d94c34565d72c32edb62ee23eebb52740dc02cb](https://github.com/HarryBurd33/claude-mods-for-codex/commit/7d94c34565d72c32edb62ee23eebb52740dc02cb),
+treeaef171d890b2be0c3bd6002a0789b6a9c2985456, parent4663912. Expected-parent/
+nonforce update, fetched full-tree equality, independent connector+anonymous public
+ref matched. Equivalent local87c1a18 preserved on codex/dev27-high-source-local-checkpoint.
+[CI40131377115](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40131377115)
+last snapshot: portable/Ubuntu24/macOS24/Ubuntu22 success (counts not decoded);
+macOS22/Windows22/24 still in progress. No new all-green/Windows claim. Medium
+must read exact final jobs/logs; no High waiting or repetitive testing needed.
+
 ## Dev26 restarted native acceptance — 2026-10-24
 
 Human resumed Sol Medium from457609b after restart. Fresh inventory3enabled/trusted
