@@ -1,9 +1,11 @@
 # Claude Mods for Codex
 
-Source18 package verification is in progress; the exact09a810b public archive
-passed local checks. Its later CI40065152768 had one Windows test-harness timeout;
-a bounded test-only correction is pending CI. No production gate or installed
-plugin change. See [package record](docs/continuation/PACKAGE-DEV18.md).
+Source18 packaging verified on GPT-6.1 Sol Medium. Exact public c42f7cb clone:
+178pass/0fail/84Windows-only skips; reviewed175file archive passes all-byte/hygiene
+checks and spaced extraction validate/replay/15tests. CI40066967691 all7jobs passed.
+An earlier Windows portable timeout is preserved; only its test-harness budget
+changed. No production/security/installed plugin change. See
+[package verification](docs/continuation/PACKAGE-DEV18.md).
 
 **Full 93-capability product remains incomplete. Source 0.2.0-dev.18 is
 uninstalled; installed human-trusted dev10 and logging scope remain unchanged.**

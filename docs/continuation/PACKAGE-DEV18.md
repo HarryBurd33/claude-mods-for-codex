@@ -42,8 +42,9 @@ established; do not diagnose it as antivirus, startup or product security failur
 test/scaffold.test.mjs changes only Windows per-invocation budget5s→15s; POSIX5s
 unchanged. No retries/skips/assertion removal, production deadline/helper/gate/
 permission change. Local targeted package/scaffold/parser15pass/0fail/0skip.
-Candidate CI and exact revised package verification pending upload. Preserve this
-failure even if a later run passes; longer budget does not establish delay cause.
+Candidate c42f7cb was uploaded and read back with whole-tree equality. Its exact
+anonymous public clone/archive checks passed below. Preserve the earlier failure;
+a longer budget does not establish delay cause.
 
 ## Distinct OS and native evidence
 
@@ -61,3 +62,39 @@ observations remain version-specific. All93requirements retained. No machine
 rollback needed; ignored clone/archive/extraction are disposable. Never edit cache/
 trust hashes/shared config/live locks. Source18 stays uninstalled. Medium completes
 routine verification then stops for human High before gated Windows work.
+
+## Revised exact public candidate
+
+[c42f7cb1b69154d08bd8c72b7a75ee37e7ce4003](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c42f7cb1b69154d08bd8c72b7a75ee37e7ce4003),
+tree eea56327a99f9523e8c008a193fcfd0855bf8799, uploaded expected-parent/nonforce;
+fetched full-tree equality verified. Equivalent local31f4e5755fcd4da93c6eb64ffda73edafc8c9422
+retained on codex/dev18-package-candidate-local-checkpoint. Anonymous clone fetched
+with credentials/global/system config suppressed, detached at exact c42f7cb and
+clean. Full suite178pass/0fail/84Windows-only skips262total; validate3/replay4.
+
+Same offline/ignore-scripts pack procedure and complete archive checks passed:
+175files,1,214,885unpacked/363,649compressed bytes. SHA256
+`ef15a4ef8e9d89c470871a58581788c3ff121aad2e5a135f02270496057d5534`.
+Every packaged byte equals exact public clone/workspace. Version18/MIT/default-off
+storage/hygiene/new source18 module+test+review and this package record checked.
+No compiled executable/dependency/private root. Fresh spaced extraction passed
+validate3/replay4/package+scaffold+parser15pass/0fail/0skip. Reviewed archive/hash
+manifest retained privately under exact candidate identity, separate from09a810b.
+
+[CI40066967691](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40066967691)
+Windows portable job120792156379 passed; decoded scaffold log read:2pass/0fail/
+1POSIX-only skip, CLI case2285.3905ms. No failed-run retry or new cause claim.
+All7job conclusions read success, including both Windows OS jobs120792156514
+(Node22)/120792156516(Node24), four full POSIX jobs and Windows portable.
+No new decoded Windows OS test-count/mapping-branch claim from this packaging run.
+No new native Windows test-count/mapping/Git acceptance claim from this package run.
+
+## Following documentation-only checkpoint
+
+Following status/package/handoff records change documentation only. After upload,
+rebuild/read back the final archive once, compare every byte with the exact final
+public tree and validate/replay a fresh spaced extraction. Record actual final
+commit/tree/archive identity after observation in checkpoint reply and ignored
+local handoff; no self-hash claim. Do not repeat full suite solely for final notes.
+All installed149files/private settings/logging/human trust remain unchanged. Stop
+for human GPT-6.1 Sol High before diagnosing or altering any gated Windows path.

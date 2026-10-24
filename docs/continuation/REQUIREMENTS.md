@@ -1,22 +1,26 @@
 # Requirements ledger
 
-## Source18 Medium packaging candidate — 2026-10-23
+## Source18 Medium package verification — 2026-10-23
 
-Human resumed verified09a810b on GPT-6.1 Sol Medium. Anonymous exact public clone:
-178pass/0fail/84Windows-only skips262total; reviewed174-file archive all bytes equal
-clone/workspace,1,213,534unpacked/363,259compressed bytes, SHA256
-79d4a7a07e315d418c5e606d047ce0b30d3f1666ecb335ac36784b0d86d7f6fb.
-Spaced extraction validate3/replay4/package+scaffold+parser15pass/0fail/0skip.
-Source18 remains uninstalled; installed dev10/cache149files/private settings unchanged.
+Human resumed09a810b on GPT-6.1 Sol Medium. Initial public baseline archive passed;
+later CI40065152768 had one Windows portable scaffold CLI timeout at5s (other6jobs
+success). Preserved failure; only test change is Windows15s/POSIX5s budget, no
+retry/assertion removal/product/security deadline change or diagnosed delay cause.
 
-Later09a810b CI40065152768 failed Windows portable scaffold replay at its5s test
-subprocess budget (ETIMEDOUT); other6job conclusions success. Prior actual proof
-f8290ef/CI40064711984 all7passed remains separate. A test-only Windows15s budget
-now replaces5s, POSIX stays5s, no retry or production/security/deadline change.
-Candidate CI/package verification pending upload. All93IDs and every Windows gate
-remain; no model/native/trust/logging change. See PACKAGE-DEV18.md. Historical
-records below are version-specific, not evidence that the later run passed.
-
+Revised exact public c42f7cb (tree eea56327; full identity in PACKAGE-DEV18.md)
+clone full178pass/0fail/84Windows-only skips262total. Reviewed175file archive:
+1,214,885unpacked/363,649compressed bytes, SHA256
+ef15a4ef8e9d89c470871a58581788c3ff121aad2e5a135f02270496057d5534.
+All bytes equal public clone/workspace; hygiene/MIT/version18/default-off checks
+passed. Spaced extraction validate3/replay4/package+scaffold+parser15pass/0fail/0skip.
+CI40066967691 all7job conclusions read success, including both Windows OS lanes.
+Decoded portable scaffold log2pass/0fail/1POSIX-only skip; CLI2285.3905ms.
+No new native count/mapping-branch/Git trust claim from this packaging run.
+Installed dev10/cache149files/private settings freshly unchanged; no native/model/
+trust/config/logging/gate change. All93IDs retained. Source18 uninstalled; next
+human High before further gated Windows work. See PACKAGE-DEV18.md. Earlier High
+f8290ef/CI40064711984 OS proof remains distinct; both Git candidates refused before
+reads, no hash/import/version/native compatibility claim.
 
 ## Source18 verified High checkpoint — static installed-code inventory — 2026-10-23
 
