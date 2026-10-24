@@ -1,5 +1,10 @@
 # Claude Mods for Codex
 
+Source13 High candidate2026-10-23: unintegrated fixed private Git-metadata layout
+proof under test. Source13 uninstalled; installed10/human trust/logging unchanged.
+No real project/Git execution or production gate activation; native Windows11
+unavailable. See [review](docs/continuation/DEV13-REVIEW.md) for closed names/bounds, cleanup/reader limits and acceptance.
+
 **Development source0.2.0-dev.12; the full93-capability product is incomplete.**
 The default branch remains the historical experimental MVP. Current expanded work
 is on codex/astra-groundwork; MIT/independent-project status remain unchanged.

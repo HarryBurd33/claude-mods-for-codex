@@ -34,6 +34,10 @@ public static class Harness {
    case "env": Console.Write(B64(Environment.GetEnvironmentVariable("MODS_SYNTHETIC_ALLOWED")??""));Console.Write("|");Console.Write(B64(Environment.GetEnvironmentVariable("MODS_SYNTHETIC_FORBIDDEN")??""));return 0;
    case "stdin": Console.Write(Console.In.Read()==-1?"eof":"unexpected-input");return 0;
    case "scratch-read": Console.Write(CodexMods.PrivateStorage.ScratchReadProof(a[2])?"verified":"mismatch");return 0;
+   case "metadata-read": Console.Write(CodexMods.PrivateStorage.GitMetadataReadProof(a[2],a[3]=="full")?"verified-layout":"mismatch");return 0;
+   case "metadata-incompatible":
+    try {using(var file=new FileStream(Path.Combine(a[2],"index"),FileMode.Open,FileAccess.Read,FileShare.Read)){};Console.Write("unexpected-reader");}
+    catch(IOException){Console.Write("reader-refused");}return 0;
    case "scratch-reader":
     // Keep a compatible read handle open in an owned descendant. No raw content
     // is printed; the parent test checks actual object cleanup after job death.
@@ -97,6 +101,47 @@ public static class Harness {
     try {scratch.Add(new byte[1]);throw new InvalidOperationException();}catch(IOException){}
     if(System.IO.Directory.Exists(path))throw new IOException();
     Console.WriteLine("bounded");return 0;
+   }
+   if(mode=="metadata-bounds") {
+    int refused=0;
+    foreach(string head in new string[]{"HEAD",new string('A',40),new string('a',40)+"\n","ref: refs/heads/other"}) {
+     try {using(var invalid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,head,null,null,CancellationToken.None)){};}
+     catch(IOException){refused++;}
+    }
+    try {using(var invalid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,null,new byte[33554433],null,CancellationToken.None)){};}
+    catch(IOException){refused++;}
+    try {using(var invalid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,null,null,new byte[1048577],CancellationToken.None)){};}
+    catch(IOException){refused++;}
+    using(var cancellation=new CancellationTokenSource()) {
+     cancellation.Cancel();
+     try {using(var invalid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,null,null,null,cancellation.Token)){};}
+     catch(OperationCanceledException){refused++;}
+    }
+    if(refused!=7)throw new IOException();
+    string path;
+    using(var valid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,new string('a',40),new byte[33554432],new byte[1048576],CancellationToken.None)) {
+     path=valid.Path;
+     if(new FileInfo(Path.Combine(path,"index")).Length!=33554432 || new FileInfo(Path.Combine(path,"info","exclude")).Length!=1048576)throw new IOException();
+    }
+    if(System.IO.Directory.Exists(path))throw new IOException();Console.WriteLine("bounded");return 0;
+   }
+   if(mode=="metadata" || mode=="metadata-empty" || mode=="metadata-job" || mode=="metadata-cancel") {
+    bool optional=mode!="metadata-empty";
+    var metadata=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,optional?new string('a',40):null,
+     optional?new byte[]{68,73,82,67,0,255}:null,optional?Encoding.UTF8.GetBytes("synthetic-ignore\n"):null,CancellationToken.None);
+    try {
+     Console.WriteLine(B64(metadata.Path));Console.Out.Flush();
+     if(mode=="metadata-job" || mode=="metadata-cancel") {
+      var env=new Dictionary<string,string>();env.Add("SystemRoot",Environment.GetEnvironmentVariable("SystemRoot"));
+      using(var cancellation=new CancellationTokenSource()) {
+       if(mode=="metadata-cancel")cancellation.CancelAfter(1500);
+       try {OwnedProcess.Run(Exe,new string[]{"child","scratch-fork",Path.Combine(metadata.Path,"index"),a[3]},metadata.Path,env,15000,1024,cancellation.Token);}
+       catch(OperationCanceledException){Console.WriteLine("cancelled");}
+      }
+     } else Console.In.ReadLine();
+    } finally {
+     try {metadata.Dispose();Console.WriteLine("removed");}catch(IOException){Console.WriteLine("retained-root");}
+    }return 0;
    }
    if(mode=="readset" || mode=="readset-hold" || mode=="readset-cancel" || mode=="readset-cancel-after") {
     string[] paths=new string[a.Length-3];Array.Copy(a,3,paths,0,paths.Length);

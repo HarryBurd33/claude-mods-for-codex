@@ -1,5 +1,10 @@
 # Extension architecture and security contracts
 
+Source13 High candidate2026-10-23: unintegrated fixed private Git-metadata layout
+proof under test. Source13 uninstalled; installed10/human trust/logging unchanged.
+No real project/Git execution or production gate activation; native Windows11
+unavailable. See DEV13-REVIEW.md for closed names/bounds, cleanup/reader limits and acceptance.
+
 ## Current source12 explicit positive read set — 2026-10-23
 
 Proof-only ProjectReadSetProof(root,relativePaths,token), Count/Verify/Bytes/Dispose

@@ -1,5 +1,10 @@
 # Requirements ledger
 
+Source13 High candidate2026-10-23: unintegrated fixed private Git-metadata layout
+proof under test. Source13 uninstalled; installed10/human trust/logging unchanged.
+No real project/Git execution or production gate activation; native Windows11
+unavailable. See DEV13-REVIEW.md for closed names/bounds, cleanup/reader limits and acceptance.
+
 Assessment2026-10-23. **All93requirements retained; full product incomplete.**
 Source12 is an uninstalled explicit synthetic Windows read-set proof; installed
 human-trusted10/logging unchanged. Sourcee55ed71 CI40048345934 all7jobs passed;

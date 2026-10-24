@@ -1,5 +1,13 @@
 # Windows owned-process research candidate
 
+Source13 GitMetadataScratch.cs adds an **unintegrated fixed named metadata**
+layout/private creation/delete-on-close/empty-only cleanup proof. Generated config/
+HEAD, optional32MiB index/1MiB exclude; prior flat/read-set bounds unchanged.
+Synthetic compatible reader only, no actual Git/project/loader/native Codex proof.
+External owner death can leave private empty hierarchy; live unowned readers can
+retain bytes until close. See [source13 review](../../docs/continuation/DEV13-REVIEW.md).
+Production compiles only PrivateStorage.cs; all Windows gates and installed10 stay.
+
 Source12 adds ProjectReadSet.cs, an **unintegrated explicit synthetic read-set**
 proof: retained no-follow handles, bounded captured bytes, metadata+byte verification,
 path/ACL/share/cancel refusals and one private-slot composition. No enumeration/

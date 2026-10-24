@@ -11,6 +11,27 @@ namespace CodexMods {
   [DllImport("kernel32.dll",SetLastError=true)] static extern bool WriteFile(SafeFileHandle handle,byte[] bytes,uint count,out uint written,IntPtr overlapped);
   [DllImport("kernel32.dll",SetLastError=true)] static extern bool FlushFileBuffers(SafeFileHandle handle);
 
+  // Shared proof-only creation primitive. Every caller selects a closed set of
+  // names and tighter type-specific bounds before IO; this is not a public API.
+  static SafeFileHandle CreateScratchFileProof(string path,byte[] content) {
+   PathInput(path);if(content==null || content.Length>33554432)throw Refuse();SafeFileHandle handle=null;
+   try {
+    using(var security=new Creation(false)) {
+     IntPtr descriptor=Marshal.AllocHGlobal(Marshal.SizeOf(typeof(SecurityAttributes)));
+     try {
+      Marshal.StructureToPtr(security.Attributes,descriptor,false);
+      // CREATE_NEW + private descriptor + DELETE_ON_CLOSE from creation.
+      // Noninherited handle; compatible readers share WRITE and DELETE.
+      handle=CreateFileW(path,GenericRead|GenericWrite|ReadControl|0x10000,5,descriptor,1,OpenReparse|0x04000000,IntPtr.Zero);
+     } finally {Marshal.FreeHGlobal(descriptor);}
+    }
+    Info(handle,path,false);Access(handle,true);uint written;
+    if(!WriteFile(handle,content,(uint)content.Length,out written,IntPtr.Zero) || written!=(uint)content.Length || !FlushFileBuffers(handle))throw Refuse();
+    Info(handle,path,false);Access(handle,true);
+    var result=handle;handle=null;return result;
+   } finally {if(handle!=null)handle.Dispose();}
+  }
+
   public sealed class ScratchContentProof : IDisposable {
    readonly ScratchProof directory;
    readonly List<SafeFileHandle> files=new List<SafeFileHandle>();
@@ -22,24 +43,9 @@ namespace CodexMods {
    public string Add(byte[] content) {
     if(disposed || content==null || content.Length>262144 || files.Count>=16 || content.Length>1048576-total)throw Refuse();
     string path=System.IO.Path.Combine(Path,"slot-"+files.Count.ToString("D4",System.Globalization.CultureInfo.InvariantCulture)+".bin");
-    PathInput(path);SafeFileHandle handle=null;
-    try {
-     using(var security=new Creation(false)) {
-      IntPtr descriptor=Marshal.AllocHGlobal(Marshal.SizeOf(typeof(SecurityAttributes)));
-      try {
-       Marshal.StructureToPtr(security.Attributes,descriptor,false);
-       // CREATE_NEW + private descriptor + DELETE_ON_CLOSE from creation.
-       // This handle is not inheritable. Compatible readers must share DELETE
-       // and WRITE (our retained handle holds write access); other writes fail.
-       handle=CreateFileW(path,GenericRead|GenericWrite|ReadControl|0x10000,5,descriptor,1,OpenReparse|0x04000000,IntPtr.Zero);
-      } finally {Marshal.FreeHGlobal(descriptor);}
-     }
-     Info(handle,path,false);Access(handle,true);
-     uint written;
-     if(!WriteFile(handle,content,(uint)content.Length,out written,IntPtr.Zero) || written!=(uint)content.Length || !FlushFileBuffers(handle))throw Refuse();
-     Info(handle,path,false);Access(handle,true);
-     files.Add(handle);handle=null;total+=content.Length;return path;
-    } finally {if(handle!=null)handle.Dispose();}
+    var handle=CreateScratchFileProof(path,content);
+    try {files.Add(handle);handle=null;total+=content.Length;return path;}
+    finally {if(handle!=null)handle.Dispose();}
    }
    public void Dispose() {
     if(disposed)return;disposed=true;

@@ -1,5 +1,10 @@
 # Project status — source12 explicit read-set proof — 2026-10-23
 
+Source13 High candidate2026-10-23: unintegrated fixed private Git-metadata layout
+proof under test. Source13 uninstalled; installed10/human trust/logging unchanged.
+No real project/Git execution or production gate activation; native Windows11
+unavailable. See [review](docs/continuation/DEV13-REVIEW.md) for closed names/bounds, cleanup/reader limits and acceptance.
+
 **Full93-capability product incomplete. Source12 is uninstalled; installed10 and
 human trust/logging scope are preserved.** Human resumed GPT-6.1 Sol High from
 e8557f7; fresh reply confirms Windows11 computer is not yet available.

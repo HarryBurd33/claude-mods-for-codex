@@ -369,3 +369,95 @@ test('Windows read-set copies only captured synthetic bytes into private delete-
   assert.equal(await run(exe,['run','readset-scratch',project,data]),'verified-copy');
   assert.equal(await readFile(file,'utf8'),'synthetic-private-content');assert.deepEqual((await readdir(data)).sort(),before);
 });
+
+async function metadataFilesAbsent(root) {
+  for(const path of ['config','HEAD','index','info/exclude'])await absent(join(root,path));
+}
+async function emptyMetadataHierarchy(root) {
+  assert.deepEqual((await readdir(root)).sort(),['info','objects','refs']);
+  for(const name of ['info','objects','refs']) {
+    assert.deepEqual(await readdir(join(root,name)),[]);
+    await windowsStorageRequest('prepare-directory',join(root,name));
+  }
+}
+test('Windows metadata scratch creates a fixed private layout readable only with compatible sharing and cleans it normally',native,async()=>{
+  const {exe}=await setup();
+  for(const mode of ['metadata','metadata-empty']) {
+    const h=await scratchHolder(mode),root=h.paths[0];
+    try {
+      assert.deepEqual((await readdir(root)).sort(),mode==='metadata'?['HEAD','config','index','info','objects','refs']:['HEAD','config','info','objects','refs']);
+      for(const path of [root,join(root,'info'),join(root,'objects'),join(root,'refs')])await windowsStorageRequest('prepare-directory',path);
+      assert.equal(result(await run(exe,['run','metadata-read',root,root,mode==='metadata'?'full':'empty'])).out,'verified-layout');
+      await assert.rejects(rmdir(join(root,'objects')),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+      if(mode==='metadata') {
+        assert.equal(result(await run(exe,['run','metadata-incompatible',root,root])).out,'reader-refused');
+        await assert.rejects(writeFile(join(root,'index'),'must-not-write'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+      } else {
+        await assert.rejects(access(join(root,'index')),{code:'ENOENT'});
+        await assert.rejects(access(join(root,'info','exclude')),{code:'ENOENT'});
+      }
+      await finishHolder(h);assert.match(h.output(),/removed/);await absent(root);
+    } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+  }
+});
+test('Windows metadata scratch enforces typed HEAD and existing 32MiB index/1MiB exclude bounds without residue',native,async()=>{
+  const {data,exe}=await setup(),before=(await readdir(data)).sort();
+  assert.equal(await run(exe,['run','metadata-bounds',data]),'bounded');
+  assert.deepEqual((await readdir(data)).sort(),before);
+});
+test('Windows metadata scratch preserves unexpected known-directory content and junction targets without recursive cleanup',native,async()=>{
+  const {data}=await setup(),h=await scratchHolder('metadata'),root=h.paths[0];
+  try {
+    await writeFile(join(root,'objects','unowned'),'preserve-unowned');
+    await finishHolder(h);assert.match(h.output(),/retained-root/);await metadataFilesAbsent(root);
+    assert.equal(await readFile(join(root,'objects','unowned'),'utf8'),'preserve-unowned');
+    assert.deepEqual((await readdir(root)).sort(),['objects']);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+  const outside=join(data,'metadata synthetic target');await mkdir(outside);await writeFile(join(outside,'keep'),'unchanged');
+  const other=await scratchHolder('metadata'),otherRoot=other.paths[0];
+  try {
+    await symlink(outside,join(otherRoot,'unexpected junction'),'junction');
+    await finishHolder(other);assert.match(other.output(),/retained-root/);await metadataFilesAbsent(otherRoot);
+    assert.deepEqual(await readdir(otherRoot),['unexpected junction']);
+    assert.equal(await readFile(join(outside,'keep'),'utf8'),'unchanged');
+  } finally {if(other.child.exitCode===null){other.child.kill();await other.closed;}}
+});
+test('Windows metadata scratch owner death removes only owned file objects and leaves protected empty hierarchy',native,async()=>{
+  const h=await scratchHolder('metadata'),root=h.paths[0];
+  try {
+    await finishHolder(h,true);await metadataFilesAbsent(root);await emptyMetadataHierarchy(root);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows metadata scratch owner death kills its owned descendant reader before file cleanup completes',native,async()=>{
+  const {data}=await setup(),marker=join(data,'metadata-job'),h=await scratchHolder('metadata-job',marker),root=h.paths[0];
+  try {
+    let ready=false;
+    for(let i=0;i<300;i++) {
+      try {await access(marker+'.reader');ready=true;break;}catch{}
+      await new Promise(resolve=>setTimeout(resolve,10));
+    }
+    assert.ok(ready,'The descendant must actually hold an index read handle');
+    await finishHolder(h,true);await dead(marker+'.root');await dead(marker+'.reader');
+    await metadataFilesAbsent(root);await emptyMetadataHierarchy(root);
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows metadata scratch composes owned-reader cancellation with bounded empty-only cleanup',native,async()=>{
+  const {data}=await setup(),marker=join(data,'metadata-cancel'),h=await scratchHolder('metadata-cancel',marker),root=h.paths[0];
+  try {
+    assert.equal(await h.closed,0);assert.match(h.output(),/cancelled/);
+    await dead(marker+'.root');await dead(marker+'.reader');await metadataFilesAbsent(root);
+    // Job termination is asynchronous; no recursive retry is inferred from
+    // either normal removal or a retained empty private root.
+    try {assert.deepEqual(await readdir(root),[]);}catch(e){if(e.code!=='ENOENT')throw e;}
+  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
+test('Windows metadata scratch reports a live unowned reader and does not claim deletion before its handle closes',native,async()=>{
+  const h=await scratchHolder('metadata'),root=h.paths[0];let reader;
+  try {
+    reader=await open(join(root,'index'),'r');
+    await finishHolder(h);assert.match(h.output(),/retained-root/);
+    const bytes=Buffer.alloc(6);assert.equal((await reader.read(bytes,0,6,0)).bytesRead,6);
+    assert.deepEqual([...bytes],[68,73,82,67,0,255]);
+    await reader.close();reader=null;await metadataFilesAbsent(root);assert.deepEqual(await readdir(root),[]);
+  } finally {if(reader)await reader.close();if(h.child.exitCode===null){h.child.kill();await h.closed;}}
+});
