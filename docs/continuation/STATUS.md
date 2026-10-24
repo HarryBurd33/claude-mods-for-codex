@@ -1,5 +1,21 @@
 # Current status — source20 POSIX state contention — 2026-10-24
 
+## Source20 Medium package verification — 2026-10-24
+
+Human resumed verified5ac9e16 on GPT-6.1 Sol Medium. Exact anonymous public clone
+full186pass/0fail/86Windows-only skips272total. Reviewed184file archive:
+1,302,133unpacked/386,768compressed bytes; SHA256
+45bcc8fb22f38018b9ccf8e14a08c8f24335e3aa26ffe658c4636751b233ddc2.
+Every byte equals exact clone/workspace; hygiene/MIT/version20/default-off storage
+passed. Spaced extraction validate3/replay4/package+scaffold+scheduler+slow-sync
+11pass/0fail/0skip. No runtime/test/security edit. Installed149dev10files/private
+settings/logging/trust unchanged, all93IDs retained, all Windows gates closed.
+Source20 uninstalled. Source14091a2/CI40069749825 High OS proof stays separate;
+old38848a8 failure retained, precise old delay cause unproved. See [PACKAGE-DEV20](PACKAGE-DEV20.md).
+NotesCI40070044574 all7job conclusions read success; no new native counts/host
+claim. Next human High before further runtime/security or gated Windows work.
+
+
 ## Source20 High checkpoint — bounded POSIX state contention — 2026-10-24
 
 Human resumed verifiedf500868 on GPT-6.1 Sol High. Source20 uninstalled; installed
