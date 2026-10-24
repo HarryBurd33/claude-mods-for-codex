@@ -1,4 +1,4 @@
-# Source16 security checkpoint — next Sol Medium
+# Source16 package checkpoint — next Sol High
 
 2026-10-23. Human-selected GPT-6.1 Sol High from verifiedfbce126 on
 codex/astra-groundwork. Full93product incomplete. Source16 uninstalled; installed
@@ -7,7 +7,8 @@ Windows11 remains unavailable per latest reply; no repeated availability questio
 
 ## Read first
 
-STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, DEV16-REVIEW.md,
+STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, PACKAGE-DEV16.md,
+DEV16-REVIEW.md,
 DEV15-REVIEW.md, PACKAGE-DEV15.md, ../windows-storage.md,
 ../windows-native-acceptance.md, ../native-acceptance.md,
 ../../proofs/windows-owned-process/README.md and latest ignored root HANDOFF.md.
@@ -85,44 +86,79 @@ marketplace remove/add plus retained reviewed snapshot and human changed-code
 review; never edit cache/trust hashes or restore whole shared config/live locks.
 Settings/data separate; private paths/backups stay in ignored root HANDOFF.md.
 
-## Next tasks in priority order — Medium only
+## Completed Medium package verification
 
-1. Anonymous exact public clone/tree match and full offline suite. Inspect source16
-   archive/all bytes, MIT/version16/default-off storage, proof/fixture inclusion,
-   no links/traversal/special/private roots/case collisions/dependencies/root
-   portable manifest. Keep source16 uninstalled; retain versioned prior packages.
-2. Safe fresh spaced-path extraction validate/replay/package/scaffolding tests.
-   Preserve reviewed baseline artifact; after notes upload rebuild/read back final
-   archive once and validate/replay fresh extraction. Record exact final identity
-   after observation privately/reply, no self-hash or redundant full suite for notes.
-3. Reconcile README/PUBLIC_STATUS/five continuation records/all93IDs. Retain earlier
-   failures, actual source/OS/native distinctions, source16 subset and remaining
-   repository/loader/ignore/object/hash-format/native/writer gaps. No unsupported
-   form silently treated as partial successful capture or proof of impossibility.
-4. Save/upload/independently verify checkpoint and stop for human High before
-   further Windows security contract/parser/metadata/provenance/loader/ignore/
-   execution/cleanup/gate/writer work. Windows11 remains unavailable; do not repeat
-   question until state change or actual inventory need. Later read-only native
-   kit inventory precedes executable decisions; no guessed PATH/project Git,
-   downloads/system repair/policy override/sandbox setup/credential dump/model run.
+Human resumed3c022e77dfea6fef48919d8bc2a52884612cbeb3/
+tree997da696f067484392b9eaf0eed0d6e723eb7112. Anonymous clean public clone full
+suite170pass/0fail/73Windows-only skips243total. Reviewed167-file archive
+1,136,506unpacked/342,897compressed bytes; SHA256
+6f6f264ffb1aac4aae670c9a6376a56aa9064def3a5ec124ac22453b1bebb5ec.
+Every packaged byte equals exact clone/workspace. Hygiene/MIT/version16/server/
+default-off storage pass. Fresh spaced extraction validate3/replay4 and package/
+scaffolding7pass/0fail/0skip. macOS14.6/Node24.22.0/npm11.19.1; no Windows
+compilation/install/model run. NotesCI40062184596 all7job conclusions read success,
+no new native-count/branch claim. Actual proof26d8090/CI40061829694 OS evidence
+remains separate from packaging and native Windows11/Git acceptance.
+
+Installed10/cache149files/private settings hash unchanged. No new native inventory/
+event/UI/trust/model turn; prior High observations stay version-specific. No
+config/cache/trust/logging/gated-code change. All93IDs kept. See PACKAGE-DEV16.
+Following notes-only artifact rebuilt/read back once after upload; exact final
+identity recorded after observation in reply/latest ignored handoff, no self-hash
+or redundant full suite solely for changed notes.
+
+## Next tasks in priority order — High only
+
+1. Read DEV16-REVIEW. Positive retained HEAD/one-loose-ref binding is not repository
+   identity/config/hash-format/object existence/type/provenance or atomic snapshot.
+   Keep strict ASCII/line/path/ref/subset limits and disclose unsupported forms.
+   Missing/packed-only/unborn/chained forms refuse, never silently infer or fallback.
+   Source15 raw constructor is separate history, not a strict-call fallback.
+2. Choose one concrete remaining integration prerequisite: repository config/hash-
+   format/source object provenance and freshness, ignore-aware selection, reviewed
+   executable/dependency/loader trust or owned-helper composition. Define valid,
+   malformed, link/alias and concurrent-change acceptance before implementation.
+   No raw private bytes in argv/env/logs; existing32KiB/3MiB bridge unchanged.
+   Source leases must be bounded to one short operation, not persistent panel/session
+   lifetime. Future outer helper deadline required for blocked kernel/hash calls.
+3. Windows11 remains unavailable per latest reply. Do not repeat availability
+   question until state change or actual inventory need. Independent synthetic High
+   proofs may continue with native acceptance incomplete. Later read-only native kit
+   inventory precedes executable choices; no guessed PATH/project Git, downloads/
+   system repair/policy override/sandbox setup/credential/env dump or model prompt.
+4. Keep every production Windows settings/project/Git/restore before-IO refusal
+   until its own security/OS/native acceptance passes. Restore remains a separate
+   explicit writer with content/identity conflicts, metadata/interruption/concurrency
+   and ordinary host permissions. Prior mapping-refused/altered-byte-mtime/8.3 gaps
+   persist. Unknown content/live readers may retain bytes; no recursive cleanup,
+   stale-root adoption/secure erasure or hostile same-user/admin isolation claim.
+5. Preserve installed human-trusted dev10/private grants/data/project/scope/
+   retention/export. No extra model/API run, trust automation, expanded logging,
+   observer/theme/client change, whole-project copy or major custom-client/fork
+   direction authorized. All93requirements remain accounted for/incomplete as needed.
+6. Stop for human Medium when another meaningful security/integration milestone
+   leaves routine packaging/docs/acceptance. Save/upload/independently read back
+   first; no background/delegated/scheduled continuation around a model stop. If a
+   hard architectural problem exceeds High, checkpoint/request Astra the same way.
 
 ## Exact next model and complete resume instruction
 
-**GPT-6.1 Sol, Medium** for routine source16 packaging/public clone/records. Return
-High before gated work; no internal delegation/background continuation around
-human-controlled switches. No user protected action needed for uninstalled source.
+**GPT-6.1 Sol, High.** Source16 packaging is complete; gated Windows security/
+integration requires High. Source16 stays uninstalled. No human trust/restart step
+needed for these documentation-only records. Full product incomplete.
 
-> I switched to GPT-6.1 Sol, Medium. Continue from the verified source16 checkpoint
-> on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
-> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV16-REVIEW.md, PACKAGE-DEV15.md,
+> I switched to GPT-6.1 Sol, High. Continue from the verified source16 package
+> checkpoint on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
+> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV16-REVIEW.md, PACKAGE-DEV16.md,
 > docs/windows-storage.md, docs/windows-native-acceptance.md and latest ignored
-> root HANDOFF.md. Verify source16 packaging/public clone/spaced extraction.
-> Preserve installed human-trusted dev10, logging scope and every production
-> Windows before-IO gate. Positive HEAD/one-loose-ref binding is not repository
-> identity/hash-format/object provenance/ignore/loader/native Windows acceptance.
-> Missing/packed-only/unborn/chained/unsupported forms refuse; no fallback. Live
-> readers/unknown child content may retain bytes; no recursive cleanup/secure erasure.
-> Windows11 unavailable; don't repeat its availability question. No extra model/API
-> run, trust automation, broader logging, observer/theme/client change or new
-> direction authorized. Keep all93requirements incomplete as applicable. Stop for
-> High before further gated work after saving/uploading/verifying the checkpoint.
+> root HANDOFF.md. Source16 public clone/archive/spaced extraction passed. Resume
+> one concrete remaining Windows security/integration prerequisite. Preserve
+> installed human-trusted dev10, logging scope and all production before-IO gates.
+> Positive HEAD/loose-ref binding is not repository/hash-format/object provenance/
+> ignore/loader/native Windows acceptance. Missing/packed-only/unborn/chained forms
+> refuse, no fallback. Source leases must stay one short operation; unknown content/
+> live readers may retain bytes, no recursive cleanup/secure erasure. Windows11
+> unavailable; don't repeat its availability question. No extra model/API run, trust
+> automation, broader logging, observer/theme/client change or new direction
+> authorized. Keep all93requirements incomplete as applicable. Stop for Medium when
+> sufficient after saving/uploading/verifying the checkpoint.

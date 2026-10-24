@@ -1,5 +1,20 @@
 # Requirements ledger
 
+## Source16 Medium package verification — 2026-10-23
+
+Human resumed3c022e7/tree997da69 on GPT-6.1 Sol Medium. Exact anonymous clean
+public clone full170pass/0fail/73Windows-only skips243total. Reviewed167-file
+archive1,136,506unpacked/342,897compressed bytes; SHA256
+6f6f264ffb1aac4aae670c9a6376a56aa9064def3a5ec124ac22453b1bebb5ec.
+All bytes equal public clone/checkpoint; hygiene/MIT/version16/default-off storage
+passed. Fresh spaced extraction validate3/replay4/package-scaffolding7/7,0fail/0skip.
+macOS14.6/Node24.22.0/npm11.19.1; no Windows compilation/install/model run.
+Installed10/cache149files/private settings hash unchanged. No new native observation/
+trust/config/cache/logging/gated-code change. All93IDs retained. Next human Sol
+High before more gated work. See PACKAGE-DEV16; final notes-only artifact identity
+recorded after actual readback in reply/private handoff. Full product incomplete.
+
+
 **The full93-capability product is incomplete. Development source0.2.0-dev.16
 is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
 Human resumed GPT-6.1 Sol High from verifiedfbce126.

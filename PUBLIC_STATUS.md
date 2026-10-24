@@ -30,8 +30,8 @@ recursive cleanup, secure erasure or hostile same-user/admin isolation. Windows1
 remains unavailable per latest reply; do not repeat that availability question.
 
 Installed10/cache149files/settings hash unchanged. No native observation/trust/
-model-run/logging/observer/theme/client change. All93IDs retained. Source15 package
-checks are versioned; source16 packaging follows its verified OS proof on human
-Sol Medium. High before further Windows security/integration/gate/writer work.
+model-run/logging/observer/theme/client change. All93IDs retained. Source16 [package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV16.md)
+passed:167files/all-byte checks, validate3/replay4/package-scaffolding7/7. Next human
+Sol High before further Windows security/integration/gate/writer work.
 See [handoff](docs/continuation/HANDOFF.md), [ledger](docs/continuation/REQUIREMENTS.md)
-and [source15 package record](docs/continuation/PACKAGE-DEV15.md).
+and [source16 package record](docs/continuation/PACKAGE-DEV16.md).
