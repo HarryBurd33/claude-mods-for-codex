@@ -1,5 +1,30 @@
 # Extension architecture and security contracts
 
+## Source25 read-inventory boundary — current
+
+The isolated InstalledImageRead composition has two explicitly named policies.
+The original strict CodeAccess profile is unchanged and continues to refuse
+Installer mutation grants on code children. The additional InstallerInventory
+profile is only a READ policy: a fresh SDK-bound ProgramFilesX64/Git installation,
+two fixed images, individually validated objects and retained handles/samples.
+It evaluates the reviewed descriptor predicate on each object, without propagating
+an ancestor permission implicitly. Unknown mutation grants still refuse despite
+Installer or deny ACEs. Original Trusted/Access/CodeAccess/ProgramPins and private
+data/production gates remain byte-identical. No execution capability is returned.
+
+The named synthetic wrapper carries an owned-fixture assumption, never an SDK
+scope witness. All images remain bounded/non-reparse/single-link, descriptor and
+identity rechecked before/after read; cancelled/changed samples are discarded.
+Frames identify the profile, and sampleAccepted means only data validation, never
+human approval or execution permission. No production hook/MCP registration.
+See [DEV25-REVIEW](DEV25-REVIEW.md) for exact contracts and evidence limits.
+
+The next loader/execution gate must establish package/authenticity, dependency
+resolution/search and actual supported host permission behavior independently.
+An inventory digest is not code trust. Installed human-trusted dev10 and logging
+scope are unchanged; source25 is uninstalled. Historical sections below preserve
+their versioned observations and do not override the current handoff.
+
 ## Source24 Medium package checkpoint — 2026-10-24
 
 Human selected GPT-6.1 Sol Medium from verified e15ba7b. Exact public clone passed

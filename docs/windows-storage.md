@@ -1,4 +1,14 @@
-# Windows private storage — current source24 contract review
+# Windows private storage — source25 experiment incomplete
+
+The human selected macOS feature acceptance first; Windows remains in scope for
+later work. Source25 has a separately named proof-only Installer inventory READ
+profile, while original private/execution policies and all production gates stay
+unchanged. Its mandatory actual-image read is still refused: the observed cmd
+image has2links and the guard requires1. Windows CI25storage checks passed per
+lane,84/85process checks passed; no real image bytes, hashes or imports obtained.
+This is not Windows compatibility or a verified release. See
+[DEV25-REVIEW](continuation/DEV25-REVIEW.md) and
+[delivery plan](continuation/DELIVERY-PLAN.md). Earlier evidence below is historical.
 
 Source24 changes no production storage, permissions, deadlines or Windows gates.
 Its actual Server2025 NTFS experiment refuted the proposed lock-handle lifetime

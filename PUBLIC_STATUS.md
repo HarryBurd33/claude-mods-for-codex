@@ -1,31 +1,33 @@
-# Current project status — 2026-10-24
+# Current project status — source25 — 2026-10-24
 
-Source **0.2.0-dev.24** is a development checkpoint on `codex/astra-groundwork`,
-not a completed release. The default branch retains the earlier experimental MVP.
-The full [93-capability ledger](docs/continuation/REQUIREMENTS.md) remains in scope.
+Source **0.2.0-dev.25** is a development checkpoint on `codex/astra-groundwork`.
+The full [93-capability ledger](docs/continuation/REQUIREMENTS.md) remains incomplete;
+the default branch retains the earlier experimental MVP.
 
-Source24 [package verification](docs/continuation/PACKAGE-DEV24.md) passed: exact public-clone tests189/0,
-98 Windows-only skips; reviewed archive199 files and fresh extraction14/0.
-The full product and native platform acceptance remain incomplete.
+The current milestone is a proof-only installed-image read inventory. It retains
+the original strict-code profile and adds an explicitly named Installer inventory
+profile for fixed images beneath the fresh SDK-bound Program Files/Git location.
+Neither profile grants execution or private-data authority. No candidate Git is
+launched, and all production Windows settings/project/Git/restore gates stay closed.
+[Design, tests and observed results](docs/continuation/DEV25-REVIEW.md).
 
-The installed, human-reviewed macOS package is still **dev10**. Earlier native
-checks verified the owned dashboard, local preview/focus, covered hooks and an
-opt-in exact print rewrite; those results do not certify source24. Logging remains
-limited to the deliberately selected disposable project. Source24 is uninstalled.
+Installed human-trusted **dev10** and its logging scope remain unchanged. Source25
+is uninstalled. Earlier macOS native UI/hooks/preview observations do not certify
+this source. Native Windows11 Codex and WSL acceptance remain unverified.
 
-This milestone separates concurrency correctness from finite wait budgets, adds
-actual Windows lock-lifetime experiments, and improves failure evidence for Git
-inspection. [Review and observed results](docs/continuation/DEV24-REVIEW.md).
-All seven CI jobs passed. Both Windows lanes passed22 existing storage/observer
-checks,3 lock fixtures (two diagnostic), and75 process/security proofs. All four
-POSIX lanes passed189 tests with98 Windows-only skips. This is not native Windows
-Codex or WSL acceptance. No production lock change was justified by the experiment.
-Windows dashboard settings, project/Git views and restore still refuse before IO.
-The prior macOS availability refusal and exact older storage failure causes
-remain unproved. No logging, trust, permission or production deadline expansion.
+MacOS acceptance is now the human-selected priority; Windows remains in scope.
+Local and four POSIX CI lanes passed189 tests with108 Windows-only skips.
+Windows storage checks passed25 per lane; process checks passed84/85. The mandatory
+real-image read is still refused (observed2links versus the one-link guard).
+No real image bytes/hash/imports were obtained. This experiment remains incomplete.
+The [delivery plan](docs/continuation/DELIVERY-PLAN.md) gives the remaining work and next macOS batch.
+The latest reviewed source24 archive is documented in
+[PACKAGE-DEV24](docs/continuation/PACKAGE-DEV24.md); source25 packaging is outstanding.
+Static read samples do not establish binary authenticity, loader/dependency trust,
+version or native compatibility. Keep the original execution/private-data policies
+and normal Codex permissions separate.
 
 Use [setup](docs/setup.md), [runtime access](docs/runtime.md) and
-[privacy](docs/privacy.md) for the implemented tools and their limits. Current
-state and next human model switch are in the
-[handoff](docs/continuation/HANDOFF.md); version-specific evidence and all earlier
-failures remain in the [test log](docs/continuation/TEST-LOG.md).
+[privacy](docs/privacy.md) for the implemented tools and their access. Current
+continuation instructions are in the [handoff](docs/continuation/HANDOFF.md);
+historical results and failures remain in the [test log](docs/continuation/TEST-LOG.md).

@@ -1,5 +1,11 @@
 # Windows owned-process research candidate
 
+Source25 adds an isolated installed-image READ inventory with distinct strict-code
+and InstallerInventory profiles. Neither grants execution/private-data authority.
+Original ProgramPins and all production gates stay unchanged; no Git is launched.
+See [source25 review](../../docs/continuation/DEV25-REVIEW.md) for bounded source,
+fixed scope, tests and actual observations. Earlier records below are historical.
+
 Source22 adds CodeAncestorLease.cs: isolated retained ancestor metadata samples,
 no code/private authority or atomic ACL snapshot. Owned synthetic rename/descriptor/
 cleanup/cancel/exit tests and read-only exact SDK scope test. CI40072785589 all7

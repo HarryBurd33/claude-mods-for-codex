@@ -1,5 +1,47 @@
 # Continuation verification log
 
+## Source25 High checkpoint — incomplete Windows experiment; macOS first — 2026-10-24
+
+Human selected Sol High from804a7ef, then explicitly chose finish macOS feature
+acceptance first, then Windows. Next Sol Medium performs the93-row acceptance
+audit and bounded macOS plan. Windows stays in scope and incomplete; no further
+Windows investigation in that next stage. [Delivery plan](DELIVERY-PLAN.md).
+
+Tested [3ce44fc](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3ce44fc76561b11051c610894fa38338bdfafd50),
+[CI40122363235](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40122363235):
+five jobs passed; both Windows OS jobs failed the mandatory real-image positive.
+Actual decoded Windows22/24 logs120956483161/120956483033 each25storage checks
+passed and84process/security passes/1failure/0skip85total. cmd/git.exe refused
+before bytes; post-refusal handle metadata regular/disk/non-reparse/name-match,
+links2. Current guard requires1link. Second real image not reached. No actual
+hash/imports/version, Git execution, policy repair, assertion weakening or old-run retry.
+The additional static inventory profile remains an unintegrated experiment.
+
+Four actual decoded POSIX lanes Ubuntu24/22:120956483105/120956483148,
+macOS24/22:120956483166/120956483260 each189pass/0fail/108Windows-only skips297total.
+Portable120956483220 successful conclusion only. WindowsServer2025/NTFS/PS5.1
+is not native Windows11 Codex/WSL. Source25 is uninstalled; full product incomplete.
+
+Earlier source25 checkpoints:7d8c3f5/CI40120193894 and70a0c3e/CI40120522820 both
+Windows25+81/0/0skip. 7921619/CI40120825372 reports strict code-root segment0
+ForeignInstallerGrant as a non-authorizing repeated metadata sample. 8fa1147/
+CI40121829428 bothWindows25passed,84/1/85 actual-image failure before link-count
+observation. All are distinct source commits; no failed-run retry or erasure.
+See [DEV25-REVIEW](DEV25-REVIEW.md) for design, positive controls and limits.
+
+Local macOS14.6/Node24.22.0/npm11.19.1 final full189pass/0fail/108skips297total;
+validate3/replay4/syntax/diff-check passed. Existing private-data/execution
+policies, storage/observer budgets and all production Windows gates unchanged.
+Installed149dev10files/private settings/logging/human trust/93IDs preserved.
+No extra native/model/API run, install/trust/config/cache change or subagent.
+New named profiles are READ-only and cannot authorize execution/private data.
+Packaging is not verified for source25; any report must retain its failed Windows test.
+
+The new DELIVERY-PLAN/ACCEPTANCE-QUEUE expose the remaining scope and make macOS
+acceptance the priority. Neither supported mechanism status nor test count is a
+completion score. High required before consequential runtime/security or resumed
+Windows work; stop for the human after a saved/uploaded/verified checkpoint.
+
 ## Source24 Medium package checkpoint — 2026-10-24
 
 Human selected GPT-6.1 Sol Medium from verified e15ba7b. Exact public clone passed

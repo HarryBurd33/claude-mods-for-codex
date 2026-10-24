@@ -215,3 +215,40 @@ refusal observation queries the retained handle for only opened/query/disk/repar
 directory/selected-name-match booleans and link count. It does not output paths,
 bytes or ACLs, bypass Info, accept the image or claim an atomic original cause.
 Actual results must identify the failed boundary before any object-policy decision.
+
+## Final observed boundary and human delivery priority
+
+Tested source [3ce44fc](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3ce44fc76561b11051c610894fa38338bdfafd50),
+tree `e4e0dd98d54731bc685489608cdde3c066198b43`,
+[CI40122363235](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40122363235):
+five jobs passed; both Windows OS jobs failed the mandatory actual-image positive.
+Actual decoded logs read: Node22 job120956483161 and Node24 job120956483033 each
+25 storage/observer/lock passes, then84 process/security passes/1failure/0skip85total.
+All four POSIX logs each189pass/0fail/108Windows-only skips297total; portable job
+120956483220 successful conclusion, separate scope.
+
+The cmd/git.exe post-refusal handle observation in BOTH lanes reports opened,
+queried, disk and selected-name-match true; reparse/directory false; link count2.
+That observed object violates the existing one-link Info contract. It is a NEW
+metadata sample, not an atomic trace of the earlier call. No image bytes/hash/
+imports were read. The mandatory test stopped before the second real image.
+The guard and failing positive assertion remain intact; no link-policy repair,
+assertion weakening, old-run retry or execution occurred. The experiment is
+**incomplete**, not a Windows inventory or compatibility success.
+
+The original, strict-reader and explicit inventory profiles passed their synthetic
+cases; the latter does not establish actual linked-image support. A future
+purpose-specific alias design would need separate review and actual alias write/
+identity/path/count safety checks while preserving original private/execution
+policies. This stage does not implement that design or start another investigation.
+
+The human explicitly selected **finish macOS feature acceptance first, then Windows**
+on2026-10-24 after asking for a delivery estimate. Windows remains in scope and
+explicitly incomplete. Immediate next work is a capability acceptance audit and
+bounded macOS verification plan on Sol Medium. High is required before a
+consequential runtime/security change or resumed Windows work. This is a sequencing
+decision, not removal of requirements or a claim that the product is finished.
+
+See [delivery plan](DELIVERY-PLAN.md) and the current handoff. The failed actual-
+image check must remain visible in any package/CI report. Source25 is uninstalled;
+installed dev10/logging scope/human trust/all production gates remain unchanged.
