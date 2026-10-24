@@ -1,5 +1,11 @@
 # Windows owned-process research candidate
 
+Source19 adds ProgramDiagnostics.cs and a closed wire decoder: observation-only
+metadata after original refusal, no fallback/read/launch even if probe completes.
+Original admission/production primitives unchanged. Local181pass/0fail/86Win-skips;
+Windows CI candidate pending. See [review](../../docs/continuation/DEV19-REVIEW.md).
+Earlier versioned foundation evidence follows.
+
 ## Source18 static inventory (unintegrated)
 
 The new original PE parser and `run inventory-pin` mode support bounded read-only

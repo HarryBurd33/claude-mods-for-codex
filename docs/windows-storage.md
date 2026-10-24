@@ -1,4 +1,9 @@
-# Windows private storage — source18 inventory / unchanged production boundary
+# Windows private storage — source19 proof-only diagnosis / unchanged gates
+
+Source19 adds only a non-authorizing repeat metadata probe after original pin
+refusal. No admission/production gate/installed10/logging/trust change. CI candidate
+pending, no native diagnosis or compatibility claim. See
+[review](continuation/DEV19-REVIEW.md). Earlier versioned foundations follow.
 
 Source18 adds only a read-only installed-code/static import inventory behind existing
 object pins. No Git execution, DLL loading or production gate change. CI40064711984 all7jobs passed; both Windows lanes20storage+64proof/0fail/0skip.

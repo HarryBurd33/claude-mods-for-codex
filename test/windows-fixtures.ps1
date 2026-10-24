@@ -27,6 +27,11 @@ try {
     if ($request.mode -eq 'deny-code-write') {
       $acl.AddAccessRule((New-Object System.Security.AccessControl.FileSystemAccessRule($principal,'WriteData','Deny')))
     }
+  } elseif ($request.mode -eq 'installer-control' -or $request.mode -eq 'installer-code-write') {
+    # Known OS service SID on synthetic fixture only; never query or repair host ACLs.
+    $principal = New-Object System.Security.Principal.SecurityIdentifier('S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464')
+    $rights = if ($request.mode -eq 'installer-control') { 'FullControl' } else { 'WriteData' }
+    $acl.AddAccessRule((New-Object System.Security.AccessControl.FileSystemAccessRule($principal,$rights,'Allow')))
   } elseif ($request.mode -eq 'broad' -or $request.mode -eq 'deny-and-broad') {
     $identity = if ($request.mode -eq 'deny-and-broad') { 'S-1-5-21-111-222-333-424242' } else { 'S-1-1-0' }
     $principal = New-Object System.Security.Principal.SecurityIdentifier($identity)

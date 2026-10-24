@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { windowsStorageRequest } from '../src/windows-storage.mjs';
 import { peImports, MAX_PE_BYTES } from '../proofs/windows-owned-process/pe-imports.mjs';
+import { pinRefusal } from '../proofs/windows-owned-process/pin-diagnostic-frame.mjs';
 
 // Real Windows OS tests only. No mocked paths, model calls, Codex installation,
 // production API integration, user project traversal or executable-trust claim.
@@ -132,9 +133,9 @@ async function pinnedInventory(harness, directory, target, codeRoot, project, du
   closed.catch(() => {});
   let result;
   try {
-    const status = await ready;
-    assert.ok(['pinned','refused'].includes(status));
-    if (status === 'refused') result = { pin:'refused', dataRead:false };
+    const frame = await ready;
+    const status = frame === 'pinned' ? 'pinned' : 'refused';
+    if (status === 'refused') result = pinRefusal(frame);
     else {
       if (during) await during();
       const file = await open(target, 'r');
@@ -159,7 +160,7 @@ async function pinnedInventory(harness, directory, target, codeRoot, project, du
     }
     if (status === 'pinned') p.stdin.end('\n');
     assert.equal(await closed, 0); assert.equal(errors, 0); assert.equal(timedOut, false);
-    assert.equal(text.replace(/\r/g,'').trim(), result.pin === 'held' ? 'pinned\nreleased' : 'refused');
+    assert.equal(text.replace(/\r/g,'').trim(), result.pin === 'held' ? 'pinned\nreleased' : frame);
     return result;
   } finally {
     if (p.exitCode === null) p.kill();
@@ -180,7 +181,7 @@ test('Windows static inventory keeps code pins across reads and refuses before b
   assert.equal(typeof value.pe,'object'); // independently compiled original CLR PE
   const write = await open(target,'r+'); await write.close();
   await fixtureAcl(target,'code-write');
-  assert.deepEqual(await pinnedInventory(exe,data,target,code,project),{pin:'refused',dataRead:false});
+  assert.deepEqual(await pinnedInventory(exe,data,target,code,project),pinRefusal('refused|Executable|ForeignMutationGrant|0'));
   await fixtureAcl(target,'private');
 });
 test('Windows CI installed Git object and static import inventory (no Git execution or loader claim)', {
@@ -197,6 +198,54 @@ test('Windows CI installed Git object and static import inventory (no Git execut
     // A policy refusal is evidence, never suppressed or counted as Git trusted.
     assert.equal(value.dataRead,value.pin === 'held');
   }
+});
+test('Windows pin repeat probe separates input, missing, sharing and object refusals without authorizing reads', native, async () => {
+  const {data,exe}=await setup(), code=join(data,'diagnostic code'), project=join(data,'diagnostic project');
+  await windowsStorageRequest('prepare-directory',code);await mkdir(project);
+  const target=join(code,'original.exe');await copyFile(exe,target);await fixtureAcl(target,'private');
+  const diagnose=(path,root=code,selected=project)=>run(exe,['run','pin-diagnosis',data,path,root,selected]);
+  assert.equal(await diagnose('relative.exe'),'Input|PathPolicy|0');
+  assert.equal(await diagnose(target,code,code),'Input|ScopePolicy|0');
+  assert.equal(await diagnose(target),'Complete|NoRepeatRefusal|0','metadata probe itself grants no authority');
+  const missing=await pinnedInventory(exe,data,join(code,'absent.exe'),code,project);
+  assert.deepEqual(missing,pinRefusal('refused|Executable|Missing|0'));
+  const intermediate=await pinnedInventory(exe,data,join(code,'absent','file.exe'),code,project);
+  assert.equal(intermediate.repeatProbe.role,'CodeAncestor');assert.equal(intermediate.repeatProbe.reason,'Missing');assert.equal(intermediate.dataRead,false);
+  const writer=await open(target,'r+');
+  try {assert.deepEqual(await pinnedInventory(exe,data,target,code,project),pinRefusal('refused|Executable|Sharing|0'));}
+  finally {await writer.close();}
+  const hard=join(code,'alias.exe');await link(target,hard);
+  try {assert.deepEqual(await pinnedInventory(exe,data,hard,code,project),pinRefusal('refused|Executable|ObjectPolicy|0'));}
+  finally {await rm(hard);}
+  const linked=join(data,'diagnostic junction');await symlink(code,linked,'junction');
+  try {
+    const value=await pinnedInventory(exe,data,join(linked,'original.exe'),linked,project);
+    assert.equal(value.repeatProbe.role,'CodeAncestor');assert.equal(value.repeatProbe.reason,'ObjectPolicy');assert.equal(value.dataRead,false);
+  } finally {await rm(linked);}
+  assert.equal(await run(exe,['run','pin',data,target,code,project]),'pinned','all refused-attempt leases released');
+});
+test('Windows pin repeat probe classifies synthetic installer and other mutation grants without policy repair',native,async()=>{
+  const {data,exe}=await setup(), code=join(data,'diagnostic ACL code'), project=join(data,'diagnostic ACL project');
+  await windowsStorageRequest('prepare-directory',code);await mkdir(project);
+  const target=join(code,'original.exe');await copyFile(exe,target);await fixtureAcl(target,'private');
+  const value=()=>pinnedInventory(exe,data,target,code,project);
+  for(const mode of ['code-write','installer-code-write','null']) {
+    await fixtureAcl(target,mode);
+    try {
+      const reason=mode==='code-write'?'ForeignMutationGrant':mode==='installer-code-write'?'ForeignInstallerGrant':'DescriptorPolicy';
+      assert.deepEqual(await value(),pinRefusal(`refused|Executable|${reason}|0`));
+    } finally {await fixtureAcl(target,'private');}
+  }
+  await fixtureAcl(code,'code-write');
+  try {assert.deepEqual(await value(),pinRefusal('refused|CodeDirectory|ForeignMutationGrant|0'));}
+  finally {await fixtureAcl(code,'private');}
+  await fixtureAcl(code,'installer-control');
+  try {
+    const result=await value();assert.equal(result.pin,'refused');assert.equal(result.dataRead,false);
+    assert.equal(result.repeatProbe.role,'CodeAncestor');assert.equal(result.repeatProbe.reason,'ForeignInstallerGrant');
+    assert.equal(result.repeatProbe.segment,code.substring(3).split(win32.sep).length);
+  } finally {await fixtureAcl(code,'private');}
+  assert.equal(await run(exe,['run','pin',data,target,code,project]),'pinned','fixture-only grants restored');
 });
 test('Windows executable-pin proof rejects project code, foreign writes, links, aliases and mutable code directory',native,async()=>{
   const {data,exe}=await setup(), code=join(data,'reviewed code'), project=join(data,'selected project');

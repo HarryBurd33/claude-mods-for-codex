@@ -1,5 +1,17 @@
 # Requirements ledger
 
+## Source19 High candidate — repeat metadata diagnosis
+
+Human resumed verifiedc37d744 on GPT-6.1 Sol High. Source19 uninstalled; installed
+human-trusted dev10/cache149files/private settings/logging scope unchanged. Full93
+product incomplete. Original ProgramPins/production helper/owned runner unchanged;
+all Windows gates closed. Proof-only metadata repeat probe reports closed categories
+after refusal, never authorizes reads or execution even on NoRepeatRefusal. No
+image content/raw ACL/SID/path/env/session output. Local181pass/0fail/86Windows-only
+skips267total; validate3/replay4. Windows CI candidate pending; no actual diagnosis
+or native compatibility claimed. See [DEV19 review](DEV19-REVIEW.md). Earlier records below are historical.
+
+
 ## Source18 Medium package verification — 2026-10-23
 
 Human resumed09a810b on GPT-6.1 Sol Medium. Initial public baseline archive passed;

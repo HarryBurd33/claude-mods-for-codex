@@ -13,6 +13,7 @@ try {
   $sources = [string[]]@(
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'OwnedProcess.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'ProgramBoundary.cs')),
+    [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'ProgramDiagnostics.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'ScratchContent.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'ProjectReadSet.cs')),
     [System.IO.File]::ReadAllText([System.IO.Path]::Combine($PSScriptRoot,'GitMetadataScratch.cs')),
