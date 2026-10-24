@@ -1,5 +1,13 @@
 # Development dashboard and immediate local commands
 
+Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)
+passed for the selected synthetic outcome tool/table, six owned views and harmless
+ordinary pre-hook behavior. Logging scope/settings/trust selection/fixture remain
+unchanged; optional lifecycle capture off, no extra model/API run or cleanup.
+Earlier restart-pending statements below are historical; wider lifecycle/platform
+acceptance remains incomplete. Next High before broader component authoring.
+
+
 Current source27 adds [failure/turn export observation](event-observation.md), independently
 selected with observationExport or an immediate CLI path. It makes no journal
 writes, raw-content responses, model calls or automatic export discovery. Optional

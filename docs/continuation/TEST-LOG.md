@@ -1,5 +1,46 @@
 # Continuation verification log
 
+## Dev27 restarted native acceptance — 2026-10-24 — Sol Medium
+
+Human restarted/resumed75a0d6f. [NATIVE-DEV27](NATIVE-DEV27.md) records exact scope.
+Fresh native inventory3enabled/trusted/zeroerrors/zeromodelturns;217cache files
+byte-equal fixture, old settings SHA/new authorized settings/synthetic fixture
+unchanged. Fresh sw_vers14.6/Node24.22.0/CLI0.163.0; PATH-alias warning, no repair.
+Panel host chatgpt, exact internal desktop/server version not independently attested.
+
+New mods.observations available and actual structured synthetic result/table
+rendered: failed command1, nonzero1, failed turn1, started1; completed/error/other
+buckets0; failed stream, cancellation unavailable. Distinct from prior selected
+usage snapshot/current context/live hooks; limitations/local-process authority shown.
+All six owned views read existing selected files/working patch/two-commit Replay;
+default preview source preserved and3node/2edge tables rendered. No file/setting/
+selection/restoration change. DOM synthetic clicks in actual official host, not
+native keyboard/VoiceOver/full accessibility. Private screenshot synthetic-only.
+Fullpage/crop unavailable, used visible capture; guessed patch-heading selector
+failed then fresh DOM corrected it. No product defect/source change inferred.
+
+Ordinary actual exec calls: reviewed production/authored fixed prints yielded
+AFTER outputs/exit0; control unchanged/exit0; expected harmless deny rejected by
+PreToolUse before OS execution. No destructive command/escalation/automatic approval.
+Activity remained7/same revision/project before/after; no scope widening, per-call
+workdir identity inference or synthetic journal writes. Selected-scope post/start/
+optional failure/cancel/Stop/Interrupt/native concurrency remain unverified. No
+additional model/API run; old extra-run grants consumed. Watch never started.
+
+Trust detail: prior pre-restart comparison had only3ownedtrusted_hash changes.
+Fresh post-restart read now both trusted_hash/trusted_content_hash in same3records
+vs pre-update backup, every other config/trust field equal. Stale3field expectation
+asserted, explicit fresh6field comparison confirmed; agent wrote/restored no hashes.
+Exact host bookkeeping timing/cause not instrumented. No new human review requested.
+
+No runtime/test/CI/config/install/retention/Windows policy change. Existing217POSIX
+passes/46package passes/known Windows image failure remain versioned; no redundant
+suite/archive run for notes. All93IDs preserved; no full-product completion claim.
+Next human Sol High for broader generated component/access authoring contracts in
+AUTHORING-NEXT, before source edits. Optional lifecycle capture remains off and
+new native usage grants/changed trust stay human-controlled.
+
+
 ## Source27 Medium package / install / human trust — 2026-10-24
 
 Resumed54c2330, no runtime/test/CI source edits. [PACKAGE-DEV27](PACKAGE-DEV27.md)

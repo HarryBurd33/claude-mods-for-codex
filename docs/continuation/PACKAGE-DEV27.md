@@ -1,5 +1,12 @@
 # Source27 package, supported update and human review — 2026-10-24
 
+Current post-restart follow-up: [NATIVE-DEV27](NATIVE-DEV27.md) verifies the bounded
+new synthetic tool/table, six owned views and harmless ordinary pre-hook checks.
+Scope/installed bytes/settings/fixture unchanged, optional events off/no extra
+model run. Earlier restart/native-pending statements below describe the prior
+stage; broader native lifecycle/platform acceptance remains incomplete.
+
+
 Sol Medium resumed verified54c2330. This is packaging/install evidence, not native
 source27 feature acceptance or full93-capability completion. No runtime/test/CI
 source change was made. macOS first; deferred Windows gates/failure remain intact.

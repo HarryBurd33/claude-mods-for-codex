@@ -1,5 +1,27 @@
 # Extension architecture and security contracts
 
+## Source27 restarted native observation — current — 2026-10-24
+
+[NATIVE-DEV27](NATIVE-DEV27.md): actual new observation tool and owned table
+return the authorized synthetic failed-command/nonzero/failed-turn snapshot,
+separate from prior usage and live Activity. Six views and unchanged default
+preview rendered. Ordinary covered pre-hook exact prints/control/denial passed.
+Activity7/same revision fits this chat outside selected child scope; no inference
+of new PostToolUse or SessionStart delivery from this batch. No extra model/API
+run, optional event capture, config/code change or production write. Actual MCP
+App/DOM interaction is not native keyboard/VoiceOver/full lifecycle proof.
+
+All217cache files/settings/fixture/rules unchanged. Three owned trusted records
+now differ in both trusted_hash/content_hash versus pre-update backup after
+restart; every other config/trust field preserved, no agent hash write. Exact host
+bookkeeping timing/cause was not instrumented. Runtime host name chatgpt; internal
+bundled version not independently attested, CLI163 remains separate/freshly read.
+Next human High for [component authoring contracts](AUTHORING-NEXT.md), before
+source changes. Existing scaffold remains three-kind declarative data; broader
+observer/status-component authoring is incomplete. Preserve Windows gates/failure.
+Earlier restart-pending statements below are historical package-stage evidence.
+
+
 ## Source27 Medium supported update — current — 2026-10-24
 
 [PACKAGE-DEV27](PACKAGE-DEV27.md) records the217-file exact54c2330 archive,46focused

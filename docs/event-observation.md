@@ -3,8 +3,9 @@
 This development feature has two distinct inputs. Neither is automatically
 enabled, neither launches a model, and neither changes the selected project or
 the three default hook registrations. [Configured27 is now installed/human-trusted](continuation/PACKAGE-DEV27.md)
-after human selection of only the public synthetic fixture; restart/native27
-acceptance remains pending. Logging scope/rules/usage selection and optional
+after human selection of only the public synthetic fixture; [bounded native27
+tool/table checks passed](continuation/NATIVE-DEV27.md). Broader lifecycle
+acceptance remains incomplete. Logging scope/rules/usage selection and optional
 lifecycle reception/storage remain unchanged/off. The implementation-stage
 contracts below do not imply native delivery.
 

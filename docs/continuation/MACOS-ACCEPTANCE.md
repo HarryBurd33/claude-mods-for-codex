@@ -30,6 +30,14 @@ checks. This is a source/subprocess/simulated-UI approximation; optional hooks
 stay unregistered and native27 acceptance is pending. The original Hnow evidence
 below stays historical. EV-03/04 still have native gaps; no closure score changed.
 
+Native27 follow-up: [NATIVE-DEV27](NATIVE-DEV27.md) separately records loaded
+new observation tool/table with fixed synthetic counts, all six owned views and
+ordinary covered pre-hook rewrite/control/deny. Scope remains7/same revision;
+no new PostToolUse selected-scope, SessionStart or optional trigger proof. No
+extra model run. Original Hnow table below remains historical, not retroactively
+rewritten. New component authoring is the next High milestone; AU-06/07/10 and
+SK-04 remain partial. Full accessibility/lifecycle/platform gaps remain unchanged.
+
 ## Evidence and classification
 
 - **Hnow:** this Medium stage's actual installed dev10 MCP tools/owned panel,

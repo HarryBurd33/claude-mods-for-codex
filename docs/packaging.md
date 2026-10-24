@@ -1,5 +1,13 @@
 # Build a local source package
 
+Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)
+passed for the selected synthetic outcome tool/table, six owned views and harmless
+ordinary pre-hook behavior. Logging scope/settings/trust selection/fixture remain
+unchanged; optional lifecycle capture off, no extra model/API run or cleanup.
+Earlier restart-pending statements below are historical; wider lifecycle/platform
+acceptance remains incomplete. Next High before broader component authoring.
+
+
 This is a compatibility-only hook distribution. Its manifest is `.codex-plugin/plugin.json`, with top-level `hooks`, `skills`, and `interface`, plus `extensions.com.openai.onboardingSkill`. All component paths resolve from the package root. There is deliberately no root `plugin.json`: released Codex CLI 0.163.0/0.164.0 would select that portable format and skip bundled hooks. See [release evidence](continuation/CODEX-CONTRACTS.md#released-hook-packaging-contradicts-portable-documentation).
 
 The runtime requires Node.js 22 or newer and has no dependencies to install. Build a source archive into an existing output directory:

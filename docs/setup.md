@@ -1,5 +1,13 @@
 # Reviewed local setup
 
+Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)
+passed for the selected synthetic outcome tool/table, six owned views and harmless
+ordinary pre-hook behavior. Logging scope/settings/trust selection/fixture remain
+unchanged; optional lifecycle capture off, no extra model/API run or cleanup.
+Earlier restart-pending statements below are historical; wider lifecycle/platform
+acceptance remains incomplete. Next High before broader component authoring.
+
+
 Current native follow-up: [dev26 restart acceptance](continuation/NATIVE-DEV26.md)
 verified the bounded hooks/owned UI and one explicitly authorized active-Watch
 update. No configuration/trust/scope/production cleanup changes; optional events

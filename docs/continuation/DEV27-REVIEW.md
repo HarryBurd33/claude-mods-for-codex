@@ -1,5 +1,12 @@
 # Source27 failure/turn observation review — 2026-10-24
 
+Current post-restart follow-up: [NATIVE-DEV27](NATIVE-DEV27.md) verifies the bounded
+new synthetic tool/table, six owned views and harmless ordinary pre-hook checks.
+Scope/installed bytes/settings/fixture unchanged, optional events off/no extra
+model run. Earlier restart/native-pending statements below describe the prior
+stage; broader native lifecycle/platform acceptance remains incomplete.
+
+
 Current Medium follow-up: [PACKAGE-DEV27](PACKAGE-DEV27.md) records exact archive/
 spaced extraction/decoded CI and human-authorized synthetic read/supported update.
 Configured27 is installed/human-trusted; restart/native acceptance pending. No

@@ -1,5 +1,13 @@
 # Delivery order and remaining acceptance — 2026-10-24
 
+Current native27 batch passed as scoped in [NATIVE-DEV27](NATIVE-DEV27.md): new
+synthetic snapshot tool/table, six owned views and ordinary pre-hook checks;
+logging remains7/same revision and optional events off. Next **human Sol High**
+for [broader component authoring](AUTHORING-NEXT.md) rather than another package-
+only or deferred Windows loop. Changes to generated component/access contracts
+are consequential; Medium stops before source. All other93row gaps remain in scope.
+
+
 The human selected **finish macOS feature acceptance first, then Windows**.
 Windows stays in scope and explicitly incomplete. The Medium acceptance audit and bounded unchanged-dev10 checks are recorded below.
 The retention milestone and its bounded native batch are complete for their stated scope. Do not start another Windows proof loop.

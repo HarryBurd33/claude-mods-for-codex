@@ -25,15 +25,21 @@ and four POSIX CI lanes217pass each. Windows portable passed including the new
 refusal; both Windows storage jobs retain the known failed real-image check.
 No all-green CI or Windows compatibility claim.
 
-Configured **source27 is installed and human-trusted, restart/native acceptance
-pending**. Human explicitly authorized the359-byte public synthetic observation
+Configured **source27 is installed, human-trusted and observed after restart**;
+[NATIVE-DEV27](NATIVE-DEV27.md) records the bounded result. Human explicitly authorized the359-byte public synthetic observation
 fixture and same-ID update. New private settings copy adds only observationExport;
 logging project/session scope/rules/data/usage selection and optional events remain
 unchanged. All217cache files match the reviewed immutable54c2330 snapshot plus
 three disclosed private overlays. Shared config matched before human review;
-then only three owned trusted_hash fields changed. Everything else preserved.
+then only three owned trusted_hash fields changed. After restart, fresh comparison
+now includes content-hash updates in those same three owned entries; every other
+configuration/trust field is preserved. No agent hash write or new trust action.
 
-No new native/model/API run or production cleanup; prior extra-run grant consumed.
+Actual ordinary native prints verified both reviewed rewrites, unchanged control
+and expected pre-execution denial. New observation tool and owned table returned
+the public synthetic failed-command/nonzero/failed-turn counts; six views loaded.
+Activity stayed7/same revision; this chat remains outside selected capture. No
+new separate model/API run or production cleanup; prior extra-run grant consumed.
 [NATIVE-DEV26](NATIVE-DEV26.md) results belong to the earlier snapshot. Reviewed26/10
 remain selective rollback sources. Installation is user-profile/cache scope,
 not project-only. Cache/trust do not attest the loaded desktop process.
@@ -46,11 +52,12 @@ retained installed-image positive (25storage passes/84of85process proofs each,
 post-refusal links2 vs one-link guard). No image read/hash/import/execution or native
 Windows11/WSL acceptance is established. Do not resume another Windows proof loop.
 
-Next action: **restart Codex and reopen this chat on GPT-6.1 Sol Medium**. Verify
-actual source27 tool discovery, owned outcome table/fixed synthetic counts/labels
-and harmless ordinary hook behavior after reload. Preserve logging scope, human
-trust and selected fixture; optional lifecycle storage/reception and any additional
-bounded model run still require fresh explicit selection/authorization. Stop for High before new
-consequential code/security work or a new correctness failure. macOS accessibility,
-lifecycle/loaded disable/older rollback/themes/routing/context/authoring and other
-platform acceptance remain incomplete; no full-product completion claim.
+Next exact setting: **GPT-6.1 Sol High** before broader component authoring,
+[AUTHORING-NEXT](AUTHORING-NEXT.md). Current scaffold supports only notice/deny/
+replacement configuration; authoring lifecycle observers and owned status
+components requires consequential generated-access/config/render contracts.
+Keep installed27, logging scope, human trust, synthetic fixture/old usage selection
+and Windows guards/failure unchanged. Optional lifecycle/native failure/cancel,
+visible notice/resume, full accessibility/close-pending, loaded disable/older
+rollback/themes/routing/context/authoring/platform gaps remain incomplete.
+No full-product completion claim or additional model-run authorization.
