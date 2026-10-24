@@ -14,8 +14,11 @@ That grant is consumed. Cache/settings/trust/logging scope unchanged; optional
 hooks off, no production cleanup/Windows enabling. Exact running bundled runtime
 not independently attested. Source27 implements the separately selected export
 approximation and keeps optional turn hooks off; see [DEV27-REVIEW](DEV27-REVIEW.md)
-and [workflow](../event-observation.md). New source is not installed/native-tested.
-Next Medium for packaging/CI readback; High before further consequential changes.
+and [workflow](../event-observation.md). [PACKAGE-DEV27](PACKAGE-DEV27.md) now
+records exact public packaging/CI, human-authorized synthetic fixture selection,
+supported same-ID installation and human trust. Restart/native27 acceptance is
+pending; optional observers remain off. Continue Medium after restart; High before
+further consequential changes.
 Historical checkpoint results remain in [TEST-LOG](TEST-LOG.md) and the versioned
 reviews; this ledger reports the current capability assessment.
 
@@ -218,7 +221,7 @@ issues are reports/leads, not reproductions by this project.
 | GOV-03 Preserve MIT and independent-project status | Upstream example licenses vary | Original implementation, own MIT license, truthful attribution | Repository/all packages | LOCAL LICENSE; PRISM/FILETREE/CACHE MIT; SAMPLES Apache-2.0 | supported | MIT/disclaimer preserved; no upstream mod code copied | License/dependency audit on every new library/template; no implied endorsement | Feature ideas are leads; copied code would require separate license/notice review |
 | GOV-04 Preserve local history and user work | Not applicable | Development branch from public snapshot, retain local main | Git repository | LOCAL STATUS | supported | `codex/astra-groundwork` from public main; original local history retained | Compare safe public files; no force-push/private-history merge; inspect staged diff for unrelated changes | Old historical public handoff exposure is not erased by new ignore rule |
 | GOV-05 Publish sanitized durable checkpoints | Not applicable | `docs/continuation/` public records; ignored root handoff for local details | Git/GitHub | User protocol; LOCAL STATUS | supported | Source8 d7fafbb exact uploaded/fetched tree verified; source7 final0c3413b preserved; current native/CLI results public, private evidence excluded | Current checkpoint must be uploaded/fetched/tree-diffed/ls-remote verified before switch stop | Current checkpoint hash reported only after independent readback; no private history force-push |
-| GOV-06 Honor human-controlled model switches | Not applicable | Saved verified checkpoint; human changes selected model | Current Sol High source27; next Sol Medium packaging/acceptance; Windows later | User mandatory protocol; LOCAL STATUS | supported | No automatic/delegated switch, trust mutation or extra model/API run during source26 implementation | Save/upload/full-tree/independent-ref verification and stop for Medium; return High before new consequential runtime/security code | Human priority remains macOS acceptance first; failed Windows positive/guards unchanged |
+| GOV-06 Honor human-controlled model switches | Not applicable | Saved verified checkpoint; human changes selected model | Current Sol Medium source27 package/install; restart/native acceptance next; Windows later | User mandatory protocol; LOCAL STATUS | supported | No automatic/delegated switch, trust mutation or extra model/API run during source26 implementation | Save/upload/full-tree/independent-ref verification and stop for Medium; return High before new consequential runtime/security code | Human priority remains macOS acceptance first; failed Windows positive/guards unchanged |
 | GOV-07 Account for every capability before full completion | Not applicable | Ledger + feature tests + truthful README/final report | All stated targets | User completion criteria; LOCAL | supported | 93-row ledger updated for integrated source foundations and limited hold observation; product remains incomplete | Every supported row still needs stated implementation/native or explicitly reported gap; eventual report covers setup/tests/models/commit/removal | Neither Astra proof nor Sol foundation checkpoint is full product completion |
 
 ## Dependencies and next acceptance gates

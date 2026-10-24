@@ -8,7 +8,16 @@ The runtime requires Node.js 22 or newer and has no dependencies to install. Bui
 npm pack --ignore-scripts --pack-destination /absolute/path/to/output
 ```
 
-This creates a local archive; it does not publish or install the plugin. `package.json` is private to prevent accidental npm publication. The current development version is `0.2.0-dev.26`; match it in the compatibility manifest and server version when changing versions so the installed cache can distinguish reviewed snapshots. The exact source26 archive/public clone/spaced extraction are verified in [PACKAGE-DEV26](continuation/PACKAGE-DEV26.md). The separately configured210-file snapshot is installed and human-trusted; desktop restart/native acceptance remain pending. Installed private overlays never belong in a public archive.
+This creates a local archive; it does not publish or install the plugin. `package.json` is private to prevent accidental npm publication. The current development version is `0.2.0-dev.27`; match compatibility manifest,
+server and UI appInfo version when changing versions. [PACKAGE-DEV27](continuation/PACKAGE-DEV27.md)
+records the exact54c2330 public217-file archive, byte/hygiene inspection and fresh
+spaced-path46focused passes/0fail/2skips plus validate/replay. Four POSIX source CI
+lanes each passed217tests; the portable Windows lane passed, while both Windows
+storage jobs retain the known image failure. No native compatibility inference.
+The configured217-file snapshot is installed/human-trusted after explicit selection
+of only a public synthetic observation fixture. Restart/native27 acceptance is
+pending. Private overlays/settings never belong in a public archive. Later notes
+commits do not silently replace that immutable installed snapshot.
 
 The explicit package file list includes `.codex-plugin/plugin.json`, runtime, configuration, hooks, skills, examples, fixtures, tests, public documentation, and development proofs. npm also includes the package metadata, README, and MIT license. Production does not load `proofs/`; explicit test/proof commands can execute those fixtures, and separate proof plugins require their own installation/review. Production registers its settings-scoped dashboard server via `.mcp.json` and includes `ui/`; it does not register proof servers or enable replacement by default. The Windows production wrapper compiles only `src/windows/PrivateStorage.cs`, excluding test-only partial classes.
 

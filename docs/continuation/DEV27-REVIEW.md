@@ -1,5 +1,12 @@
 # Source27 failure/turn observation review — 2026-10-24
 
+Current Medium follow-up: [PACKAGE-DEV27](PACKAGE-DEV27.md) records exact archive/
+spaced extraction/decoded CI and human-authorized synthetic read/supported update.
+Configured27 is installed/human-trusted; restart/native acceptance pending. No
+runtime/test/CI source change. The High source-only/not-installed statements below
+are historical implementation-stage evidence; they do not describe current install.
+
+
 Human switched to GPT-6.1 Sol High from verified4663912 on
 codex/astra-groundwork. This is the bounded macOS-first implementation milestone,
 not full-product completion. All93 requirement identities remain in scope.

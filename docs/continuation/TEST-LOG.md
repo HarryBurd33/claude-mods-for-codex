@@ -1,5 +1,45 @@
 # Continuation verification log
 
+## Source27 Medium package / install / human trust — 2026-10-24
+
+Resumed54c2330, no runtime/test/CI source edits. [PACKAGE-DEV27](PACKAGE-DEV27.md)
+records exact source/archive/hash/decoded jobs, preparation, supported same-ID
+update and human trust. Anonymous clean clone54c2330; all217archive bytes equal
+clone/workspace,1,690,660unpacked/506,560compressedbytes. SHA256
+3a1c87dc28ef60949a0b623b0334c73e4c5547dbabaf8bea2d73d9a4cda42de4. Hygiene/default-off/
+MIT/version/proof checks passed. Fresh spaced extraction observations/observers/
+rendering/package/dashboard/contracts/usage:46pass/0fail/2Windows-only skips48total;
+validate3/replay4. Packaged CLI private public-synthetic fixture gave commandfailed1/
+nonzero1/turnfailed1; no raw response/command execution/model/API run. No full-suite
+repeat solely for notes or existing exact CI evidence.
+
+CI40131377115 source7d94c34 completed: four POSIX217pass/0fail/110Windows-only
+skips327total each; portable succeeded and actually ran new Windows before-options/
+path/IO refusal. Selected combined step14pass/0fail/13POSIX skips27total. Both
+Windows storage lanes25passes/84of85process proofs, same real installed-image Image
+refusal before bytes, links2/no sample/hash/import/version/execution. No new
+correctness failure/all-green/Windows host claim; failure/gates unchanged.
+
+Human explicitly authorized only359-byte public synthetic observation file read
+and source27 update. New private settings copy adds only observationExport; every
+old field and original settings SHA preserved. Only owned marketplace26→27 changed,
+supported plugin add returned27, all217cache bytes equal immutable54+three reviewed
+private overlays. Shared parsed config equaled backup before human review.
+Initial installer verifier stale26path asserted after success; corrected independent
+verification, no install retry. Wrong clone prefix/cache write errors were tooling
+invocation issues, fixed with isolated cache/no system repair. No product code edit.
+
+Native inventory3modified/enabled, zero errors/model turns. Human personally
+reviewed/trusted three27hooks; fresh bounded inventory3enabled/trusted/zeroerrors/
+zeroturns. Post-review diff only three owned trusted_hash entries; content hashes/
+all other config/trust fields preserved. Initial six-field verifier expectation
+from prior version corrected to exact observed three; no trust restore. No agent
+trust write, optional reception/storage, production cleanup, scope/usage widening,
+extra model run or background watch. **Desktop restart/native27 acceptance pending.**
+Earlier26native evidence remains version-specific; continue Sol Medium after human
+restart/reopen. High before consequential code/security/unexpected correctness fixes.
+
+
 ## Source27 failure/turn observations — 2026-10-24 — Sol High
 
 Start4663912, clean codex/astra-groundwork. Bounded primary release check and

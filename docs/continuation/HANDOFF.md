@@ -1,181 +1,165 @@
-# Source27 handoff — next GPT-6.1 Sol Medium
+# Source27 restart handoff — continue GPT-6.1 Sol Medium
 
-2026-10-24. Human switched to Sol High from4663912. The bounded failure/turn
-contract review and useful default-off implementation are complete for their
-stated scope. Remaining packaging/CI readback is routine. Stop for human
-**GPT-6.1 Sol Medium**. Full93-capability product remains incomplete; macOS first,
-Windows later. Do not start another Windows proof/package-only implementation loop.
+2026-10-24. Medium completed exact public packaging/CI readback, prepared a concrete
+review, received human authorization for only the public synthetic observation
+fixture and supported source27 update, then installed/verified it. Human personally
+trusted the three27hooks; fresh inventory confirms enabled/trusted/zero errors.
+Desktop restart/native27 acceptance remains pending. Save/upload checkpoint before
+human restart, then reopen this same chat on **GPT-6.1 Sol Medium**. No model switch
+needed for routine acceptance; High before consequential source/security changes.
+Full93-capability product remains incomplete; macOS first, Windows later.
 
 ## Read first
 
-STATUS.md, REQUIREMENTS.md, current ARCHITECTURE.md/latest TEST-LOG.md,
-DEV27-REVIEW.md and ../event-observation.md. NATIVE-DEV26.md, MACOS-ACCEPTANCE.md
-and DELIVERY-PLAN.md preserve version-specific native results and broader gaps.
-Read latest ignored root HANDOFF.md for exact private setup/logs/backups/final
-notes checkpoint. Earlier nextHigh failure-contract instructions are historical.
+PACKAGE-DEV27.md, STATUS.md, REQUIREMENTS.md, current ARCHITECTURE.md/latest
+TEST-LOG.md, DEV27-REVIEW.md and ../event-observation.md. NATIVE-DEV26.md,
+MACOS-ACCEPTANCE.md and DELIVERY-PLAN.md retain historical native results/broader
+gaps. Latest ignored root HANDOFF.md contains private settings/cache/backups/
+fixture/review paths and exact final checkpoint. Earlier source27-not-installed/
+next-package statements describe the High implementation stage, not current state.
 
-## Verified checkpoint and runnable state
+## Branch / verified source / checkpoint
 
 Repo https://github.com/HarryBurd33/claude-mods-for-codex
-Branch codex/astra-groundwork.
-Runnable public/local source commit:
-[7d94c34565d72c32edb62ee23eebb52740dc02cb](https://github.com/HarryBurd33/claude-mods-for-codex/commit/7d94c34565d72c32edb62ee23eebb52740dc02cb),
-treeaef171d890b2be0c3bd6002a0789b6a9c2985456, parent46639123af21237ed1ed66df996077b5f61363d8.
-Expected-parent/nonforce upload, fetched full-tree equality, connector ref and
-anonymous public ls-remote matched. Equivalent local87c1a181b55e878040c019e2a69ba6418f157a81
-retained on codex/dev27-high-source-local-checkpoint before aligning identical tree.
-No force push, lost commits or private-root handoff upload. This final notes
-checkpoint's identity is read back after upload in reply/private handoff; it
-preserves the runnable source/test tree except documentation.
+Branch codex/astra-groundwork. Starting local/verified remote
+[54c2330820093805b6b32a1b27e9740e8682d1a9](https://github.com/HarryBurd33/claude-mods-for-codex/commit/54c2330820093805b6b32a1b27e9740e8682d1a9),
+tree4fd20135e6f7c903aea1f68dacaf4059d790eb6f. Runtime/tests/CI identical to
+[7d94c34565d72c32edb62ee23eebb52740dc02cb](https://github.com/HarryBurd33/claude-mods-for-codex/commit/7d94c34565d72c32edb62ee23eebb52740dc02cb).
+Anonymous public clone matched54c2330. This stage modifies only documentation;
+final uploaded local/remote commit/tree is independently read back in final reply/
+ignored handoff after commit, not guessed as a self-hash. Earlier local equivalent
+source87c1a18 and handofff356b25 remain on named backup branches. No force push/loss.
 
-Node24.22.0/npm11.19.1/macOS14.6. Previously measured standalone CLI0.163.0;
-latest stable0.164.0 release re-read2026-10-24, no upgrade. Desktop bundle previously
-26.1021.22027/build21747/panel host chatgpt; exact running bundled runtime not
-independently attested. Native26 evidence does not certify new27 code/UI.
+## Host and installation
 
-## Completed / partial / unverified
+macOS14.6, Node24.22.0/npm11.19.1. Standalone CLI0.163.0 was previously measured,
+not the desktop runtime. Latest stable0.164.0 release previously re-read, no upgrade.
+Previously recorded installed bundle26.1021.22027/build21747/panel-host chatgpt;
+exact running bundled runtime not independently attested or remeasured this stage.
 
-- Primary released contracts resolved: no PostToolUseFailure in reviewed CLI163/164
-  interface. Registry uses output logging-success; exec sets true regardless of
-  exit, supplies text-only terminal response, skips a post payload for live process.
-  Invocation errors can bypass PostToolUse. Registry/context163/164 byte-equal.
-  Stop is a stopping opportunity, Interrupt separate. Exec JSONL has status/exit/
-  turn.failed/error, but interrupted turn shutdown may omit a terminal record.
-- Useful supported-source approximation implemented: explicit private export
-  observation, independent of live hooks and usage selection. Numeric fixed record
-  counts/status only, never text scraping/missing-post/cancellation inference.
-  No raw content/IDs/paths/usage returned, journal/state format change or model call.
-- CLI, read-only no-argument MCP tool, separate runtime opt-in and owned Access and
-  usage outcome table. Three defaults and installed scope unchanged. Activity/Watch
-  never read/poll exports. New file IO refuses Windows before options/path access;
-  settings existing before-IO Windows refusal unchanged, no helper/gate change.
-- Optional turn observers still off/unregistered. Busy/config-failure/default-off/
-  scope/privacy subprocess checks pass and always return{}. Example Interrupt/
-  SessionEnd timeout5→3 matches docs. No automatic continuation/block/approval/retry.
-- Automated tests pass for parser/status/exit/turn distinctions, malformed/bounds/
-  privacy/links/cancel/read-only, service/settings grants and simulated accessible
-  literal UI table. Copied-source synthetic file-change barrier refuses summary;
-  it is not hostile-race/native proof. All93 identities/order preserved.
-- Source27 package/extraction/loaded host/optional native events are unverified.
-  Native nonzero vs invocation error/cancel/Stop/Interrupt remain distinct gaps.
-  Visible start/resume/reset, full accessibility/close-pending, loaded disable/
-  older rollback, themes/routing/current context/broader authoring/platforms remain.
-  No separate client/private app patch or permanent impossibility claim.
+User-profile/cache installation, not project-only. Configured0.2.0-dev.27 is exact
+54c2330 public217-file package plus exactly three private overlays: .mcp.json
+selects the new reviewed settings copy; config/mods.json equals configured26
+byte-for-byte; hooks/hooks.json preserves all three defaults/env/status/timeout/
+command with only inert version-review comment26→27. No optional lifecycle hooks
+registered or retained. All217installed bytes equal reviewed immutable candidate.
 
-## Exact code and contracts
+Human explicitly authorized the359-byte public synthetic export and supported
+same-ID update. New private settings copy equals all old fields plus only
+observationExport; old settings untouched, project/session capture/rules/data/
+retention and usage export preserved. No existing private log/session selected.
+Backups made before changing only owned marketplace source26→27; supported plugin
+add returned27. Shared parsed config equaled backup before review. Agent never
+wrote trust. Human trusted three modified hooks; fresh inventory3enabled/trusted,
+zero errors/zero model turns. Only three owned trusted_hash fields changed versus
+backup; content hashes and every other shared config/trust field preserved.
 
-src/observations.mjs: summarizeExecObservations(text), readSelectedObservations
-(path, options). JSON-only single thread header,1MiB/4096lines/256KiBline/i32-or-null
-exit. Return fixed turns{started,completed,failed,streamErrors},
-commands{completed,failed,declined}, exits{zero,nonzero,unavailable}, streamStatus,
-ignoredRecords, cancellation=unavailable, semantics/limits. Status and exit buckets
-overlap, duplicate records count twice. Private regular canonical one-link owned
-POSIX file and pre/handle/post metadata samples; AbortSignal/fatal UTF-8/fixed
-unavailable on unsafe/change/cancel. No source-authenticity or malicious same-user
-sandbox claim. Whole bounded raw file is read in memory only by explicit selection.
+No native execution/loaded UI source27 claim yet. Do not call an old connection
+and label it27. Cache/trust do not establish process reload. Reviewed immutable26/
+10 remain rollback sources. No production cleanup, logger expansion, model/API
+run or automatic trust. All older separate-run grants consumed.
 
-src/cli.mjs observations --export PRIVATE_JSONL is immediate local callback.
-src/runtime-settings.mjs observationExport is a separate optional path outside
-selected project. Existing usageExport never grants observation access.
-src/server.mjs mods.observations has no arguments, read-only metadata; dashboard
-field read only on dashboard request. ui/dashboard.html renders separate table
-on Access and usage refresh, not Activity Watch. App/server/manifest/packagev27.
+## Package and CI actually verified
 
-examples/exports/observation-synthetic.jsonl is original synthetic failed print/
-turn data, not native evidence. Copy to a private outside-project file for reader
-use. examples/hooks/observe-lifecycle.json is review-only; select individual events
-explicitly, never enroll all seven automatically. test/observations.test.mjs,
-observers.test.mjs, rendering.test.mjs; portable CI adds new before-IO guard test.
-Default hooks, dispatcher/config/mods/state/journal/retention/windows runtime untouched.
+[PACKAGE-DEV27](PACKAGE-DEV27.md) has full commands/results and limits:
+- Anonymous exact54c2330 public clone clean; npm pack ignore-scripts/offline with
+  isolated local cache.217files/1,690,660unpacked/506,560archivebytes, SHA256
+  3a1c87dc28ef60949a0b623b0334c73e4c5547dbabaf8bea2d73d9a4cda42de4.
+  Every byte matched clone/workspace; hygiene/default-off/version/MIT/proof separation
+  passed. Fresh spaced extraction46pass/0fail/2Windows skips48total; validate3/
+  replay4. Packaged CLI against private synthetic copy returned expected aggregate.
+- CI40131377115 exact7d94c34: all four POSIX lanes217pass/0fail/110Windows-only
+  skips327total. Windows portable success; new observation before-options/path/IO
+  refusal actually passed, selected combined step14pass/0fail/13POSIX skips27total.
+- Both Windows storage jobs25storage passes/84of85process proofs. Same mandatory
+  installed cmd/git image positive fails Image before bytes, links2 vs one-link
+  guard, no sample/hash/import/version/execution. No new source failure. Failure/
+  assertion/all Windows gates untouched. No all-green/native Windows11/WSL claim.
+  Exact jobs/logs in package record; no reason to poll/repeat tests now.
+- Routine verifier corrections preserved: wrong relative clone prefix failed
+  before pack; default npm cache refused so isolated cache used, no system repair.
+  Installer succeeded but stale expected26cache assertion halted verifier;
+  independently corrected/read all217bytes/config without repeating installation.
+  Post-human compare initially expected six fields from prior update but observed
+  exactly three trusted_hash-only changes; corrected expectation, no trust restore.
+  No product code/test/assertion or Windows guard changed to make a failure pass.
 
-## Commands actually run / observed results
+Final notes archive is not silently substituted into reviewed217-file installation.
+Do not reinstall merely because public documentation changed.
 
-- Initial targeted observations/observers/usage/dashboard:18pass/0fail/2skips20total.
-  Expanded contracts/rendering:40pass/0fail/2skips42total.
-- npm test first216pass/0fail/110Windows-only skips326total; final217pass/0fail/
-  110Windows-only skips327total,7.1seconds. No source-milestone test failure.
-- npm run validate3mods valid; npm run replay4fixture responses unchanged.
-- Final source UI version-only string correction: rendering/package11pass/0fail/
-  0skip. Prior new parser/UI focused13pass/0fail/1skip14total. No broad suite repeat
-  solely for notes/metadata. git diff --check clean.
-- Preservation: installed26cache210byte-equal configured fixture; settings SHA
-  unchanged; default hooks/source Windows runtime/storage/gates unchanged. No
-  native run/config/install/trust/export selection/production write in this stage.
-- [CI40131377115](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40131377115)
-  tests exact7d94c34. Last snapshot: portable120983614660, Ubuntu24120983614789,
-  macOS24120983614817, Ubuntu22120983614885 completed success; counts not decoded.
-  macOS22120983614945 and Windows22120983614841/24120983614939 in progress.
-  No all-green claim; Medium must read completed logs and final conclusions.
+## Contracts and remaining requirements
 
-Previous CI40128013186 both Windows storage lanes had25storage passes and84of85
-process proofs: mandatory real cmd/git image positive refused before bytes,
-post-refusal linkcount2 versus original one-link guard. Failure/assertion preserved.
-No image hash/import/version/execution/native Windows11/WSL acceptance. All settings/
-project/Git/restore/retention production Windows gates remain closed; no more Windows
-investigation next. Native Windows host unavailable last asked; no repeat question.
+src/observations.mjs projection/reader; CLI observations --export PRIVATE_JSONL;
+runtime-settings observationExport; server mods.observations (no arguments) and
+dashboard aggregate; ui/dashboard.html Access and usage table separate from Activity.
+One explicit private JSON-only thread,1MiB/4096lines/256KiBline, fixed command status/
+nullable-i32 exit/turn/error record counts. Duplicate records count, buckets overlap.
+No raw text/ID/path/usage response or writes, model/network calls, cancellation/
+missing-post inference. Whole selected raw file is read in process memory only by
+explicit selection; not source authenticity/completeness or same-user sandbox.
 
-## Installation / configuration / rollback
+Reviewed CLI163/164 have no PostToolUseFailure, exec PostToolUse is not exit0 proof
+and can omit invocation errors/live calls. Export snapshot is disclosed approximation.
+Optional Stop event/time-only state remains off and observes stopping opportunities,
+not unique completed turns. Interrupt separate; exec interruption can omit terminal
+record. Existing observer subprocess/units/simulated table pass, not native delivery.
+New observation IO refuses Windows before options/path; settings before-IO guard,
+helpers and project/Git/restore/retention gates unchanged. No Windows proof loop next;
+last native Windows host unavailable, no repeat ask.
 
-No source27 installed. Human-reviewed immutable26 stays selected and210files match
-fixture. Existing project/data/usage export/scope/trust unchanged; new
-observationExport absent, optional observers off. Private backup paths and exact
-settings hash in ignored root handoff. No data cleanup or new selected export.
-Latest one-run grant from26 is consumed; **no additional model/API run authorized**.
-No active observer/native test child/background scheduling from this stage.
+All93 identities/order preserved. Native failure/nonzero/cancel/Stop/Interrupt,
+visible notice/resume/reset, full accessibility/close-pending, loaded disable/older
+rollback, themes/routing/current context/broader authoring/platforms remain gaps.
+Actual dev26 hook/panel/Watch results stay versioned in NATIVE-DEV26, not inherited27.
 
-A later supported immutable same-ID update must be prepared/reviewed first,
-preserve unrelated entries, complete human trust if required and restart/check
-loaded snapshot. Optional event reception AND event storage need explicit human
-selection, separate from ordinary model-run authorization. Do not add these merely
-to make activity rise. No trust-hash/cache edits or auto-trust generated code.
+## Next action after checkpoint — human restart
 
-No current rollback needed. To stop later export reads, remove only
-observationExport then supported reload/update; CLI stops when not invoked.
-For optional hooks remove only chosen storage names/registrations through reviewed
-update. Keep data unless separately selecting explicit retention cleanup. Existing
-immutable26/10 selective same-ID rollback sources preserved. Never whole shared
-config restore, cache replacement, system ACL repair, live-lock reaping or automatic
-cleanup/retry. Supported lifecycle/older-version rollback acceptance still pending.
+1. Human restarts Codex and reopens this same chat, keeps Sol Medium, says continue.
+   No test prompt or separate model run needed. User already trusted27; do not ask
+   again unless inventory/content actually changes. Do not auto-trust/hash-patch.
+2. Recheck cache/settings/trust with bounded read-only inspector, no model turn.
+   Discover new mods.observations and actual27connection/server/UI; tool presence
+   alone is not rendering evidence. If desktop hasn't reloaded, report exact blocker.
+3. Open/inspect Claude Mods beside chat through supported owned dashboard entry.
+   Permitted MCP Apps interface can inspect an open panel; blocked native-app
+   computer use must not be bypassed. Preserve other panels/drafts. Ask human to
+   open only if needed. Inspect Access and usage table: failed command1, nonzero1,
+   failed turn1, started1, streamStatus failed, cancellation unavailable. These are
+   fixed **synthetic snapshot counts**, never native failures/current chat. Confirm
+   old selected usage still separate, Activity capture explanation and no export
+   Watch/poll. Do not select a private native log automatically or change scope.
+4. Harmless ordinary existing rewrite/control/deny calls under normal permissions
+   can verify unchanged hooks. No additional ephemeral/model/API run authorized;
+   do not repurpose old grants. Current chat is outside selected child logging
+   scope; do not broaden capture or use per-call workdir to manufacture counts.
+   Optional event reception/storage remain off; request exact human selection only
+   after a concrete reviewed plan. No production synthetic journal replay/cleanup.
+5. Record actual host observations/limitations, stop watchers/children, then
+   continue independent routine macOS acceptance where useful. High before new
+   consequential source/security fixes, unexpected correctness failures or later
+   gated Windows work. Save/upload/verify before any human model-switch/restart stop.
 
-## Next tasks / exact setting / human actions
+## Rollback / removal / permission boundaries
 
-**GPT-6.1 Sol Medium.** Demanding source/contract work is complete for this bounded
-milestone; routine readback, packaging and review preparation do not justify High.
+No rollback needed now. To stop export reads later, remove only observationExport
+in reviewed private settings revision and supported reload; original settings
+preserved. For package rollback, selectively point only owned marketplace entry
+back to immutable26 and supported same-ID add, verify cache/trust/loaded snapshot.
+Preserve human trust/other entries/data; never whole shared-config restore/cache
+patch/ACL repair/live-lock reaping/automatic cleanup. Scope is current user profile.
+Older loaded rollback acceptance remains unverified. No background/delegation/
+scheduled continuation after this stop; no current watcher/native child.
 
-1. Read exact40131377115 final jobs/decoded logs. Record POSIX217/Windows-only skips
-   if observed; verify new portable Windows refusal actually ran. Preserve known
-   Windows failure. A new correctness/security issue requires High checkpoint;
-   never weaken assertions/guards or retry into a false pass on Medium.
-2. Verify anonymous exact public source and npm archive/spaced-path extraction,
-   versions/MIT/default-off selections/no private files/proof-production separation.
-   Exercise new read-only CLI against a private copy of the synthetic fixture.
-   Reuse existing full suite evidence unless new code/failure warrants rerunning.
-3. Prepare concrete immutable source27 access/review diff and native acceptance
-   steps. Keep installed26 and existing settings untouched while packaging. New
-   export selection and selected optional events must come from the human; no
-   fallback to previous private test log or automatic enrollment. Ask only after
-   the exact reviewable change is ready, with review/trust/restart steps precise.
-4. Continue macOS acceptance where routine/authorized: new table using selected
-   synthetic fixture and loaded snapshot, optional turn events only after explicit
-   selection/review, bounded extra run only after fresh usage authorization. Do
-   independent read-only work while protected actions pending. No synthetic writes
-   to production journals or deletion. All native result categories stay separate.
-5. Save/upload/full-tree/independent-ref verify and stop for High before new
-   consequential code/security/gated Windows work. Stronger reasoning is not a
-   reason to continue while only waiting for CI or human review. No subagent,
-   automatic switch, background work or scheduled continuation after stop.
+## Complete resume instruction
 
-## Complete copy-and-paste resume
-
-I've switched to GPT-6.1 Sol, Medium. Continue from the verified source27 handoff
-checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
-DEV27-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md and
-docs/event-observation.md, plus the latest ignored root HANDOFF.md. Read CI40131377115
-and verify exact source27 packaging/spaced extraction, then prepare reviewable
-macOS native acceptance. Preserve installed26, logging scope, human trust, old
-usage selection, all93 requirements and Windows guards/known failed image check.
-Do not opt into observationExport or optional event reception/storage automatically;
-prior native-run grants are consumed. No extra model/API run or production cleanup
-without its required fresh authorization. Stop for High before consequential code,
-new correctness/security fixes or deferred Windows work. Save/upload/verify progress
-before any human-controlled model-switch stop.
+I've restarted Codex. Continue on GPT-6.1 Sol Medium from the verified source27
+restart checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
+PACKAGE-DEV27.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md and
+docs/event-observation.md plus the latest ignored root HANDOFF.md. Verify the
+loaded27 dashboard and synthetic observation table, new tool discovery and harmless
+ordinary hooks. Preserve logging scope, human trust, selected synthetic fixture,
+old usage selection, all93 requirements and Windows guards/known failure. Optional
+lifecycle reception/storage stay off; prior model-run grants are consumed. No
+extra model/API run or production cleanup. Stop for High before consequential
+changes/new correctness or security fixes/gated Windows work. Save/upload/verify
+progress before any human-controlled model-switch or restart stop.

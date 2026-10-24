@@ -4,8 +4,10 @@ Current source27 adds [failure/turn export observation](event-observation.md), i
 selected with observationExport or an immediate CLI path. It makes no journal
 writes, raw-content responses, model calls or automatic export discovery. Optional
 Stop/Interrupt and the three default registrations stay unchanged/off as applicable.
-Installed human-reviewed26/logging scope/trust and all Windows gates are preserved;
-27 is source-only pending package/native acceptance. See [review](continuation/DEV27-REVIEW.md).
+Human authorized only a public synthetic observation fixture and supported27
+update. Configured27 is installed/human-trusted with restart/native acceptance
+pending; logging scope/rules/usage selection and Windows gates preserved. See
+[package/install](continuation/PACKAGE-DEV27.md) and [review](continuation/DEV27-REVIEW.md).
 
 
 This review covers only the historical v0.1 MVP. It is not approval or completion

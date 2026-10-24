@@ -2,7 +2,11 @@
 
 This development feature has two distinct inputs. Neither is automatically
 enabled, neither launches a model, and neither changes the selected project or
-the three default hook registrations. Installed human-reviewed dev26 is unchanged.
+the three default hook registrations. [Configured27 is now installed/human-trusted](continuation/PACKAGE-DEV27.md)
+after human selection of only the public synthetic fixture; restart/native27
+acceptance remains pending. Logging scope/rules/usage selection and optional
+lifecycle reception/storage remain unchanged/off. The implementation-stage
+contracts below do not imply native delivery.
 
 | Input | What can be reported | Limits |
 | --- | --- | --- |
@@ -110,5 +114,6 @@ observers by removing only the chosen storage names and registrations, then revi
 update as required; keep existing data unless explicitly choosing scoped cleanup.
 Rollback uses the preserved immutable package through supported same-ID update,
 not shared-config restoration or cache edits. No such machine changes occurred
-in source27. New export IO and runtime-settings entrypoints refuse Windows before
+in the High implementation stage; the later human-authorized Medium update is
+recorded separately in PACKAGE-DEV27. It preserves the old reviewed sources. New export IO and runtime-settings entrypoints refuse Windows before
 IO; portable summary tests do not establish Windows host/storage compatibility.

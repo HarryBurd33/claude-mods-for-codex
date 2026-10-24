@@ -19,17 +19,24 @@ journal field or current capture selection changed. No raw payload retention.
 
 Local Node24.22.0/macOS14.6 suite:217pass/0fail/110platform-only skips327total;
 validate3mods/replay4fixtures. Parser/private-file/CLI/MCP and simulated accessible
-UI checks passed, including synthetic mutation refusal. No new native run, install,
-trust, configuration change or optional event delivery. Source27 package/CI/loaded
-native acceptance is pending; [review](DEV27-REVIEW.md) and latest TEST-LOG hold
-exact evidence. No all-green CI or Windows compatibility claim.
+UI checks passed, including synthetic mutation refusal. These are source tests, not native event delivery. [PACKAGE-DEV27](PACKAGE-DEV27.md)
+now verifies the exact public archive,46focused spaced-package passes/0fail/2skips
+and four POSIX CI lanes217pass each. Windows portable passed including the new
+refusal; both Windows storage jobs retain the known failed real-image check.
+No all-green CI or Windows compatibility claim.
 
-Installed **human-reviewed dev26 remains frozen**. All210cache files still match
-its configured immutable fixture; private settings SHA unchanged. Its bounded
-[native hooks/panel/authorized Watch4→7](NATIVE-DEV26.md) results belong to26,
-not27. Existing selected usage export is unchanged and never implicitly supplies
-observation access. No production cleanup or further model/API run authorized;
-latest one-run grant is consumed. Reviewed10 remains a selective rollback source.
+Configured **source27 is installed and human-trusted, restart/native acceptance
+pending**. Human explicitly authorized the359-byte public synthetic observation
+fixture and same-ID update. New private settings copy adds only observationExport;
+logging project/session scope/rules/data/usage selection and optional events remain
+unchanged. All217cache files match the reviewed immutable54c2330 snapshot plus
+three disclosed private overlays. Shared config matched before human review;
+then only three owned trusted_hash fields changed. Everything else preserved.
+
+No new native/model/API run or production cleanup; prior extra-run grant consumed.
+[NATIVE-DEV26](NATIVE-DEV26.md) results belong to the earlier snapshot. Reviewed26/10
+remain selective rollback sources. Installation is user-profile/cache scope,
+not project-only. Cache/trust do not attest the loaded desktop process.
 
 Windows remains in scope and later in the human-selected delivery order. Existing
 settings/project/Git/restore/retention gates and mandatory image check are unchanged;
@@ -39,11 +46,11 @@ retained installed-image positive (25storage passes/84of85process proofs each,
 post-refusal links2 vs one-link guard). No image read/hash/import/execution or native
 Windows11/WSL acceptance is established. Do not resume another Windows proof loop.
 
-Next exact setting: **GPT-6.1 Sol Medium** for source27 CI readback, exact package/
-spaced-path verification and concrete review/native acceptance preparation. Keep
-installed26/logging/trust unchanged unless a supported update is deliberately
-prepared with human review. Explicit observer storage/event selection and fresh
-bounded native-run authorization remain protected. Stop for High before new
+Next action: **restart Codex and reopen this chat on GPT-6.1 Sol Medium**. Verify
+actual source27 tool discovery, owned outcome table/fixed synthetic counts/labels
+and harmless ordinary hook behavior after reload. Preserve logging scope, human
+trust and selected fixture; optional lifecycle storage/reception and any additional
+bounded model run still require fresh explicit selection/authorization. Stop for High before new
 consequential code/security work or a new correctness failure. macOS accessibility,
 lifecycle/loaded disable/older rollback/themes/routing/context/authoring and other
 platform acceptance remain incomplete; no full-product completion claim.

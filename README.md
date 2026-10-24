@@ -6,7 +6,10 @@ runtime read opt-in and an owned-panel outcome table. It distinguishes command
 status, nonzero exit, failed turns and stream errors without retaining raw content.
 There is no released failure hook in the reviewed CLI163/164 interface; the export
 is a disclosed snapshot approximation. Optional Stop/Interrupt observers remain off.
-Source27 is not installed or natively verified. Human-reviewed dev26 stays frozen.
+Configured source27 is installed and human-trusted; desktop restart/native27
+acceptance is pending. [Package/install record](docs/continuation/PACKAGE-DEV27.md).
+The only new read opt-in is an explicitly authorized public synthetic fixture;
+logging scope/rules/usage selection and optional-hook defaults are unchanged.
 
 Source26's POSIX [selected-scope retention CLI](docs/retention.md) remains available:
 read-only preview followed by explicit fingerprint-confirmed cleanup. No production
@@ -16,10 +19,12 @@ Independent MIT-licensed project; not affiliated with or endorsed by Anthropic o
 
 This is a development checkpoint on `codex/astra-groundwork`, not a finished release.
 The default branch retains the MVP; the [93-capability ledger](docs/continuation/REQUIREMENTS.md)
-remains incomplete. Configured dev26 is installed in the local Codex user profile,
-with210verified cache files and three hooks personally reviewed/trusted. **Desktop
-restart completed; bounded dev26 native acceptance passed as recorded below.** Existing settings/rules/logging
-scope are unchanged; no production data cleanup. Reviewed10 remains for rollback.
+remains incomplete. Configured dev27 is installed in the local Codex user profile, with217verified
+cache files and three hooks personally reviewed/trusted. **Restart/native27
+acceptance is pending.** Earlier bounded dev26 results remain historical below.
+Existing logging scope/rules/usage selection are unchanged; the authorized
+359-byte synthetic observation fixture is selected through a new private settings
+copy. No production cleanup. Reviewed26/10 remain for selective rollback.
 
 Prior source26 public clone:208tests passed/0failed/109Windows-only skips. Inspected210-file
 archive and fresh spaced extraction:33focused passes/0fail/1skip plus validate3/
@@ -39,10 +44,12 @@ previously failed before bytes (observed2links versus the one-link guard). No
 candidate Git execution, image hash/import/version or native Windows11/WSL result.
 All production Windows gates remain closed. [Failure record](docs/continuation/DEV25-REVIEW.md).
 
-The source27 implementation/review is complete for its stated scope; next is
-routine packaging/CI readback on Sol Medium. Native optional-event acceptance,
-export selection, changed-code trust and any extra model run remain separate
-human steps. Keep the logging scope and installed snapshot unchanged meanwhile.
+Source27 packaging/CI readback and supported update/human trust are recorded in
+[PACKAGE-DEV27](docs/continuation/PACKAGE-DEV27.md):217-file archive,46focused
+passes/0fail/2skips; four POSIX CI lanes217pass each and portable Windows pass.
+Both Windows storage jobs retain the known failed image check. Next: restart and
+reopen this chat on Sol Medium for actual loaded27 native acceptance. No extra
+model run or optional lifecycle logging is authorized by that step.
 No native UI restyling, automatic trust, extra model/API run or full-product
 completion is implied. The [delivery plan](docs/continuation/DELIVERY-PLAN.md) retains remaining work.
 

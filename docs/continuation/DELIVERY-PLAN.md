@@ -11,6 +11,13 @@ release contract and implements a separate default-off export approximation plus
 observer failure checks; [DEV27-REVIEW](DEV27-REVIEW.md). Medium packaging/CI readback
 and concrete native acceptance preparation are next. Other macOS/platform gaps remain.
 
+Source27 Medium packaging/CI readback is complete; [PACKAGE-DEV27](PACKAGE-DEV27.md)
+records exact217-file snapshot, authorized synthetic-only observation read grant,
+supported installation/human trust and preserved capture scope/rules/usage selection.
+Next human restart, then continue Sol Medium native27 table/ordinary-hook acceptance.
+No optional lifecycle event selection or additional model run included. Historical
+source26 directions below stay versioned; High before new consequential changes.
+
 Source26 now implements the High-reviewed POSIX selected-scope retention preview/
 explicit cleanup CLI; [DEV26-REVIEW](DEV26-REVIEW.md) records tests and limits.
 No production data cleaned;26now installed/human-trusted, bounded restart/native26 verified;

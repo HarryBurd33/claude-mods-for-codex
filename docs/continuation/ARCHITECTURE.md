@@ -1,5 +1,25 @@
 # Extension architecture and security contracts
 
+## Source27 Medium supported update — current — 2026-10-24
+
+[PACKAGE-DEV27](PACKAGE-DEV27.md) records the217-file exact54c2330 archive,46focused
+spaced-package passes and decoded source CI (four POSIX217passes/portable success,
+known Windows image failures retained). No runtime/test/CI source changes here.
+Human explicitly selected only the359-byte public synthetic export for the new
+read grant, then supported same-ID update and personally trusted three27hooks.
+New private settings copy adds only observationExport; old settings retained.
+Capture scope/rules/data/usage selection and optional events stay unchanged.
+Only owned marketplace source26→27, three inert review comments and private MCP
+settings selection change; all217cache bytes match reviewed candidate. Shared
+config matched before review; after it only three owned trusted_hash values
+changed, with content hashes/every other field preserved. User-profile scope.
+Desktop restart/native27 acceptance pending; current cache/trust is not reload
+proof. Reviewed26/10 preserved. No extra model/API run/event opt-in/production
+cleanup or Windows boundary change. Continue Sol Medium after human restart;
+High before consequential code/security work. Earlier source-only statements below
+record the High implementation stage, not the current installation state.
+
+
 ## Source27 selected-export outcomes — current — 2026-10-24
 
 src/observations.mjs is an independent read-only projection, not a new hook event
