@@ -1,178 +1,117 @@
-# Source13 package checkpoint — next Sol High
+# Source14 security checkpoint — next Sol Medium
 
-2026-10-23. **Full93-capability product incomplete.** Human resumed GPT-6.1 Sol
-High fromd7d3b84 added/reviewed an original unintegrated fixed private named Git
-metadata lifetime proof. Human then resumed Sol Medium from69e8bb3 for packaging. Source13 uninstalled; installed human-trusted10/logging
-scope and every production Windows gate unchanged. Windows11 host still unavailable
-per latest reply; do not repeat the availability question without a state change.
-
-## Exact tested source and observed results
-
-Branch codex/astra-groundwork. Tested source
-[15e388e3403f7d73a8f6bf2b41df66c6dd7bfa3c](https://github.com/HarryBurd33/claude-mods-for-codex/commit/15e388e3403f7d73a8f6bf2b41df66c6dd7bfa3c),
-tree014998207439329718d8fa97e99296606619ced3.
-[CI40058125353](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40058125353)
-all7jobs success. Both actual Windows logs120765539100(Node22)/120765538855(Node24)
-read:20storage+28proof each/0fail/0skip. All4POSIX full suites/portableWindows pass.
-Windows Server2025 is OS evidence, not native Codex/Windows11/Git acceptance.
-Local npm test170pass/0fail/48Windows-only skips218total; validate3/replay4 pass.
-Both source12 mapping cases still mapping-refused: altered-byte/mtime branch and
-8.3-specific behavior remain unverified. Do not infer them from the pass count.
-
-Seven new cases covered optional fixed layout/private compatible reader/unsafe
-sharing+writer refusal,32MiB index+1MiB exclude bounds, unknown entry/junction
-preservation, normal/owner-death/cancellation and live unowned-reader retention.
-All previous21proof cases regressed the shared creation refactor. No actual Git.
-
-Original local4c33e0eafa578af3ac9c2b17f19a37c67e4d8587 retained on
-codex/dev13-metadata-local-checkpoint. Nonforce expected-parent upload/fetch/whole-
-tree equality verified. Final following notes-only checkpoint identity recorded
-after readback in reply/latest private handoff; proof/test/code match this CI source.
-**Source13 exact69e8bb3 archive/public-clone/spaced extraction verified.** See
-PACKAGE-DEV13. Final notes-only artifact identity is recorded after actual readback
-in reply/private handoff; no code/test change after tested source. No install implied.
+2026-10-23, human-selected GPT-6.1 Sol High resumed verified5016e11 on
+codex/astra-groundwork. Full93-capability product incomplete. Original source14
+same-helper fixed synthetic metadata capture is uninstalled. Installed reviewed
+human-trusted10, private settings and logging scope unchanged. Windows11 host
+remains unavailable per latest reply; do not repeat that availability question.
 
 ## Read first
 
-Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, DEV13-REVIEW.md,
-DEV12-REVIEW.md, PACKAGE-DEV13.md, PACKAGE-DEV12.md, ../windows-storage.md,
+Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, DEV14-REVIEW.md,
+DEV13-REVIEW.md, PACKAGE-DEV13.md, ../windows-storage.md,
 ../windows-native-acceptance.md, ../native-acceptance.md,
 ../../proofs/windows-owned-process/README.md and latest ignored root HANDOFF.md.
-Private paths/raw logs/settings/backups/snapshots never uploaded. Earlier failures
-and unknown-cause intermittent storage issue remain in TEST-LOG/Git; no cause claim.
+Raw logs, machine paths, settings/backups and private handoff stay ignored.
 
-## Code and stable contracts
+## Current milestone and code
 
-- proofs/windows-owned-process/GitMetadataScratch.cs: proof-only partial helper.
-  GitMetadataScratchProof(parent,headCommit,index,exclude,CancellationToken), Path,
-  Dispose(). Closed objects/refs/info plus generated config/HEAD and optional
-  index/info-exclude. No caller filename/config/ref syntax. HEAD null for fixed
-  unborn branch or40lowercase hex, no trailing newline. Index32MiB/exclude1MiB
-  match existing adapter bounds; at most33MiB+small generated strings.
-- Reuses original protected ScratchProof root and private created/verified/pinned
-  directories.5s constructor checks/cancellation cannot interrupt blocked kernel IO;
-  future caller needs an outer owned-helper deadline. Root removal after pin release
-  assumes no hostile same-user/admin namespace race, not atomic handle deletion.
-- ScratchContent.cs: common CreateScratchFileProof factored out, private descriptor/
-  CREATE_NEW/delete-on-close before bytes, noninherited owned read/write/DELETE
-  handle, share read/delete, verify/write/flush/reverify and safe ownership transfer.
-  Flat slot/read-set limits remain256KiB/file/1MiB; no broadening of their APIs.
-- Cleanup closes only exact owned file handles, releases pins, removes only known
-  successfully created/verified empty directory names/root. No enumeration/recursion/
-  stale-root adoption/unknown entry deletion/ACL repair. Live readers can delay
-  deletion; normal disposal reports retained-root instead of killing them.
-- GitMetadataReadProof: independent fixed synthetic compatible reader sharing R/W/D,
-  not actual Git. Harness/build/test add7cases to prior21; source index binary is
-  synthetic, not valid Git parser coverage. Real Git sharing/writes remain unknown.
-- Package/compatibility manifest/server metadata0.2.0-dev.13. Production helper/
-  storage/state/hooks/runtime settings/workspace/restore/default hooks/config/UI/
-  skills unchanged. Production compiles only PrivateStorage.cs, no new operation.
-  OwnedProcess/ProgramBoundary/ProjectReadSet unchanged, only source11 proof factory
-  refactored and fully regressed. Installed10 not updated.
+Source14 closes one proof gap: a32MiB index need not pass through the public
+32KiB request/3MiB response bridge to reach private scratch. GitMetadataCapture.cs
+is compiled only by the proof build, never production PrivateStorage.ps1.
 
-## Limits and remaining security gates
+GitMetadataCaptureProof(selectedMetadata,privateParent,headCommit,index,exclude,
+CancellationToken), Path/Verify/Dispose. Explicit strict local disjoint roots;
+fixed selected index32MiB/info-exclude1MiB, selected missing file refuses. Omitted
+file makes no absence assertion; source HEAD/config/refs are never discovered.
+Caller-selected HEAD is inert null/full lowercase40hex only, provenance unverified.
+Whole fixed syntax/HEAD validated before IO. Original ancestor/source no-follow
+handles, single-link identity/foreign mutation ACL refusal and no write/delete
+sharing; ordinary readers allowed. Captured arrays passed directly into original
+private named scratch in the same helper, metadata+byte verified before/after;
+source handles stay owned until disposal. No raw-byte export API or expanded IPC.
+Buffers cleared on managed failure/disposal, not secure erasure/crash zeroization.
 
-Owner death with fixed owned readers removes owned files; private empty hierarchy
-can remain. A live unowned reader actually retained bytes/handle and caused cleanup
-refusal until close. No secure erasure or arbitrary service/broker isolation.
+Five-second cooperative constructor/Verify checks cannot interrupt blocked kernel
+IO; later production needs an outer owned-helper deadline. Failure finally releases
+sources even when exact-owned scratch cleanup refuses. No recursive deletion,
+unknown entry adoption, ACL repair or hostile same-user/admin race protection.
+Sources are explicit synthetic fixtures; no actual Git index parser, repository
+provenance, ignore engine, Git executable/dependency/loader or native Codex proof.
+Full multi-file repository freshness and8.3 behavior remain unverified. Prior
+mapping tests returned mapping-refused, not altered-byte/restored-mtime rejection.
 
-An arbitrary child can create unknown files without the delete-on-close flag; those
-could retain private content and are intentionally preserved. Before real Git:
-validate reader/write/temp/lock/cache behavior, executable/dependency/loader trust,
-ignore-aware selection, actual metadata provenance/freshness/index/repo formats and
-child-created-content ownership. Never add recursive deletion to make a test pass.
-The source12 reader cannot capture32MiB index. Existing bridge32KiB request/3MiB
-response is unchanged; in-memory fixture does not expand IPC. Never put private
-bytes in argv/env/logs. Same-process capture or a new bounded transfer needs High.
+Seven new cases in test/windows-owned-process.test.mjs cover exact bytes/source
+write/rename exclusion, full32MiB+1MiB and oversize, selected missing/omitted source,
+partial failure release, aliases/overlap/UNC/hardlinks/junctions, foreign write ACLs/
+existing writer, cancellation and external owner death/source release. All prior
+28proof and20storage cases remain. Build/Harness changes are proof-only; server/
+package/compatibility version metadata14. Production settings/project/Git/restore
+refusals, helper/default hooks/UI/skills/config unchanged.
 
-All Windows settings/project/Git/restore still refuse before IO. Native Windows11
-install/events/UI/sandbox/unload unverified; OS passes cannot close them. Restore
-remains a separate explicit writer with identity/content conflict, metadata/
-interruption/concurrency and ordinary native sandbox/permission acceptance.
-No whole-project copy, custom client/fork/app patch or major direction selected.
+## Verification identity
 
-## Installation, privacy and rollback
+Source candidate[c369f49f335c57ed0e5840088795145a0ea5717b](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c369f49f335c57ed0e5840088795145a0ea5717b),
+treeb34f9ce1286b64ad0f859d82df7820e502b1dc8a. Nonforce expected-parent upload,
+fetch/full-tree equality verified. Equivalent local1b73fa33f6035e1ca6c0393e33f5eeca88ba2159
+retained on codex/dev14-capture-local-checkpoint. Final notes-only checkpoint hash
+will be recorded after actual readback in reply/latest ignored handoff.
 
-Source13 uninstalled. User-profile configured10 immutable149files/settings/data/
-project/scope/retention/patch/commits/export and human trust preserved. Last actual
-inventory3enabled/trusted/0errors; latest activity four project records/same revision,
-producer health unknown. Native source10 focus/render/keyboard-Clear passed earlier;
-source6/4 hook/rewrite/deny/hold/sandbox evidence stays version-specific. Optional
-observers off; no extra model run/theme/client/model change.
+Local `npm test`:170pass/0fail/55Windows-only skips225total. `npm run validate`:
+3mods; `npm run replay`:4fixtures; `git diff --check` clean. CI40059849695 all7jobs passed. Both actual Windows logs120770786180(Node24)/
+120770786310(Node22) read:20storage+35proof each/0fail/0skip. Both prior mapping
+cases still mapping-refused; no altered-byte/mtime negative branch witnessed.
+Server2025 OS passes are not Windows11 Codex/Git acceptance.
 
-No machine change needs rollback here. Proof fixtures disposable only; remove the
-reviewed checkout to remove proof source. Installed10 selective rollback remains
-supported owned marketplace pointer to retained immutable dev6 + plugin add, verify
-125files, human changed-code/hook review and restart as needed. Never edit cache/
-trust hashes or restore whole shared config. Data/settings separate; no live-lock
-removal. Machine paths/backups in ignored handoff only.
+## Installation/privacy/removal/rollback
 
-## Completed Medium checks
+Source14 uninstalled. User-profile installed10 remains149files byte-equal reviewed
+immutable fixture; private settings hash unchanged. Fresh bounded read-only inventory:3enabled/human-trusted hooks/0errors/0model turns.
+Activity:4retained project records/same revision, not new event-delivery proof.
+Current chat is outside selected child scope. Do not broaden logging to move counters.
+No model/API run, optional observer/theme/client/model change or human trust write.
 
-Exact anonymous public clone69e8bb3/tree3471e32, full170pass/0fail/48Windows-only
-skips218total. Reviewed157-file archive1033715unpacked/316972compressed bytes,
-SHA25611a5f0bdd3634c0cc9f3a6279106bc43051c34429556e40031291e62cb1ee41b.
-All bytes equal clone/checkpoint; hygiene/MIT/version/default-off storage pass.
-Spaced extraction validate3/replay4/package-scaffolding7pass/0fail/0skip.
-macOS14.6/Node24.22.0/npm11.19.1, no Windows proof compilation locally.
-NotesCI40058562429 all7job conclusions read as success; no new native count/branch
-claim from that run. Prior proof15e388e actual OS evidence remains separate.
+No machine change needs rollback. Proof fixtures are disposable; removing the
+checkout removes this source. Do not load source14 or edit installed cache/trust.
+Existing installed10 selective rollback uses owned marketplace pointer to retained
+dev6 plus supported plugin add, verify125files, human changed-code review/restart.
+Never restore whole shared config; keep settings/data separate and live locks intact.
+Private paths/backups remain in ignored root HANDOFF.md.
 
-Fresh bounded read-only inventory3enabled/human-trusted/0errors/0model turns;
-installed10/cache149/settings hash preserved. Actual activity four records/same
-scope/revision, producer health unknown. No install/config/trust/cache/logging/
-model-run/gated-code change. All93IDs kept. Final docs-only archive rebuilt/read
-back once after upload, validate/replay its spaced extraction; no full-suite repeat
-solely for notes. See PACKAGE-DEV13; source13 stays uninstalled, no trust action.
+## Next tasks in order — Medium only
 
-## Exact next tasks — human-selected High
-
-1. Read DEV13-REVIEW and preserve all actual lifetime limits. The named layout used
-   fixed synthetic bytes/readers, not Git. A live unowned reader retained bytes;
-   arbitrary child-created files are not owned by the delete-on-close protocol and
-   may remain. No recursive cleanup/adoption or secure-erasure promise.
-2. Choose a bounded next unresolved gate: executable/parent/dependency/loader trust,
-   actual Git sharing/write/temp/lock behavior, ignore-aware selection/repository
-   metadata provenance/freshness or same-helper capture/IPC composition. Existing
-  32KiB request/3MiB response does not transport32MiB index, and source12 read-set
-   bounds cannot capture it. Never put private bytes in arguments/environment/logs.
-3. Windows11 host remains unavailable per latest human reply. Do not repeat its
-   availability question until a state change or actual inventory is required.
-   Independent synthetic High work can proceed, with real Git/native acceptance
-   still unverified. Later target-host read-only kit inventory precedes executable/
-   dependency decisions; no guessed PATH/project Git, binary download, system repair,
-   policy override, sandbox setup, credential/env dump or model prompt as inventory.
-4. Keep every Windows settings/project/Git/restore before-IO refusal until its own
-   security/OS/native acceptance passes. Restore is a separate explicit writer with
-   conflict/identity/metadata/interruption/concurrency and ordinary host permissions.
-   Source12 mapping byte/mtime negative branch and8.3-specific witness remain
-   unverified; add targeted witnesses only to resolve a concrete integration question.
-5. Preserve installed10/human trust/data/project/scope/retention/export and unrelated
-   entries. No new paid model/API test, automatic trust/approval, broader logging,
-   optional observer/theme/client change, whole-project copy or major new client
-   direction authorized. Full93-product and native/accessibility/lifecycle/rollback
-   platform gaps stay explicit. Independent-project/MIT status preserved.
-6. Stop for Medium when another meaningful security/integration milestone leaves
-   routine packaging/docs/acceptance. Save/upload/verify first; no internal model
-   delegation/background continuation around the human-controlled stopping point.
+1. Verify exact public checkpoint via anonymous clone and tree match. Inspect
+   source14 package allowlist/all bytes, MIT/version14, no links/traversal/private
+   roots/case collisions/dependencies/root portable manifest. Do not install it.
+2. Run full offline suite in exact public clone; report170portable pass/55Windows-
+   only skips if observed, not Windows success. From reviewed spaced-path archive
+   extraction run validate/replay and package/scaffold tests. Preserve versioned
+   original/final archive hashes if notes change archive bytes; no self-hash claims.
+3. Reconcile README/PUBLIC_STATUS/current continuation summary, all93ledger IDs,
+   source/CI/OS/native distinctions and proof limitations. Earlier failure history
+   stays in TEST-LOG. Read-only installed10 inventory only if useful, no new turn.
+4. Save/upload/independently read back precise handoff. Stop for human-selected High
+   before any further Windows security contract/integration, real Git provenance/
+   executable/DLL/ignore/same-helper execution, settings/project gate activation,
+   cleanup protocol change or separate restore writer. Native Windows11 later needs
+   read-only inventory first; no guessed PATH Git, downloads or system repair.
 
 ## Exact next model and complete resume instruction
 
-**GPT-6.1 Sol, High** for remaining Windows security/integration contracts. Routine
-source13 packaging is complete. Source13 remains uninstalled; no human trust/restart
-step needed for these documentation-only records. Full product incomplete.
+**GPT-6.1 Sol, Medium.** Remaining immediate work is routine exact-source packaging
+and public-clone verification. Gated Windows reasoning returns to human High.
+No user trust/restart step needed for uninstalled proof source.
 
-> I switched to GPT-6.1 Sol, High. Continue from the verified source13 package
-> checkpoint on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
-> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV13-REVIEW.md, PACKAGE-DEV13.md,
+> I switched to GPT-6.1 Sol, Medium. Continue from the verified source14 checkpoint
+> on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
+> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV14-REVIEW.md, PACKAGE-DEV13.md,
 > docs/windows-storage.md, docs/windows-native-acceptance.md and latest ignored
-> root HANDOFF.md. Source13 package/public clone/spaced extraction passed; preserve
-> installed human-trusted dev10 and logging scope. Resume the next gated Windows
-> security proof/integration, retaining all production refusals until acceptance.
-> Fixed readers only; real Git/loader/ignore/source metadata/IPC/unknown child-content
-> cleanup/native/writer behavior remains gated. Live readers may retain bytes and
-> mapping byte/mtime branch is unverified. Windows11 unavailable; don't repeat its
-> availability question. No extra model/API run, trust automation, broader logging,
-> observer/theme/client change or new direction authorized. Keep all93requirements
-> incomplete as applicable; stop for Medium when sufficient after checkpoint/upload/
-> verification.
+> root HANDOFF.md. Verify source14 packaging/public clone/spaced extraction.
+> Preserve installed human-trusted dev10, private settings/logging scope and all
+> production Windows before-IO gates. Source14 captures only explicit synthetic
+> index/exclude in one proof helper; no real Git/loader/ignore/source provenance or
+> native Windows11 acceptance. No extra model/API run, trust automation, broader
+> logging, observer/theme/client change or new direction authorized. Windows11 is
+> unavailable; don't repeat its availability question. Keep all93requirements
+> accounted for/incomplete as applicable. Stop for High before further gated Windows
+> work after saving/uploading/verifying the checkpoint.

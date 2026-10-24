@@ -51,9 +51,8 @@ omitted sources/partial failure release, overlap/alias/UNC/hardlink/junction ref
 foreign write ACLs/existing writer, pre/post capture cancellation and external owner
 death/source release. All fixtures synthetic private NTFS roots. No real Git index
 parser, actual project, credentials or session. Existing28proof and20storage cases
-must regress on both Node22/24 Windows lanes. Local macOS skips are not OS passes.
-Observed commands/results and CI identity belong in TEST-LOG; this initial record
-makes no Windows pass claim before logs are read.
+regressed on both Node22/24 Windows lanes. Local macOS skips are not OS passes.
+Observed results are recorded below and in TEST-LOG; no native-host claim follows.
 
 This proves positive selected file object capture only, not a coherent repository:
 no HEAD/ref provenance, worktree/commondir/split/sparse index format, config objects,
@@ -82,3 +81,37 @@ handoff; never edit installed cache, trust hashes or shared configuration wholes
 Primary Windows API/ACL/sharing evidence remains the retrieved Microsoft references
 in proofs/windows-owned-process/README.md and DEV12/DEV13-REVIEW. This milestone
 composes existing primitives; no released Codex/Windows support inference is added.
+
+## Observed result and completed High review
+
+Source [c369f49](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c369f49f335c57ed0e5840088795145a0ea5717b),
+[CI40059849695](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40059849695):
+all 7 jobs passed. Actual Windows Node22/24 logs read: 20 storage + 35 proof tests
+per lane, 0 failures and 0 skips. Seven new metadata-capture cases passed, including
+full32MiB index/1MiB exclude direct composition. Both prior mapping diagnostics
+still mapping-refused; altered-byte/mtime branch unverified. Windows Server2025 OS
+evidence is separate from native Windows11 Codex/Git acceptance.
+
+Source treeb34f9ce1286b64ad0f859d82df7820e502b1dc8a. Local npm test170pass/0fail/
+55Windows-only skips225total; validate3mods/replay4fixtures; diff-check clean.
+Windows jobs120770786180(Node24)/120770786310(Node22), both decoded logs read.
+Original equivalent local1b73fa3 retained on codex/dev14-capture-local-checkpoint;
+nonforce expected-parent upload/fetch/full-tree equality verified.
+
+High review covered whole-input validation, every handle/buffer failure path,
+partial source capture release, retained positive-file identity/sharing, full-size
+same-helper transfer, pre/post cancellation, source handle release on owner death
+and inherited exact-owned scratch cleanup. No new lifetime/source isolation claim
+for hostile same-user/admin or previously accepted writable mappings. The32MiB
+fixture contains synthetic bytes, not a valid parsed Git index. Production gates
+remain before IO; only package/manifest/server version metadata14 changed there.
+
+Fresh read-only installed inventory3enabled/human-trusted hooks/0errors/0model turns.
+Initial shell-sandbox inventory exited before initialize and could not send process-
+group cleanup; identical bounded inventory under approved local execution succeeded.
+No system tool repair or trust write. Activity4/same selected scope/revision, health
+unknown; installed10 byte-equal149files and private settings hash unchanged.
+
+Next immediate work is routine exact-source public-clone/package/spaced-path
+verification: human-controlled GPT-6.1 Sol Medium. Return to High before another
+Windows security/integration/gate/writer change; full93product remains incomplete.

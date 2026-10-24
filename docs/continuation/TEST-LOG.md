@@ -5,12 +5,40 @@
 Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
 capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
 copied directly into private named scratch inside one helper. No public IPC byte
-transfer or bridge expansion. Seven new OS tests added; Windows results pending
-until CI logs are read. Production settings/project/Git/restore gates unchanged;
+transfer or bridge expansion. Source [c369f49](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c369f49f335c57ed0e5840088795145a0ea5717b),
+[CI40059849695](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40059849695):
+all 7 jobs passed. Actual Windows Node22/24 logs read: 20 storage + 35 proof tests
+per lane, 0 failures and 0 skips. Seven new metadata-capture cases passed, including
+full32MiB index/1MiB exclude direct composition. Both prior mapping diagnostics
+still mapping-refused; altered-byte/mtime branch unverified. Windows Server2025 OS
+evidence is separate from native Windows11 Codex/Git acceptance. Production settings/project/Git/restore gates unchanged;
 installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
 loader/native acceptance claim. See DEV14-REVIEW.md and TEST-LOG.md. Full93product
 incomplete. Source13 records below describe the previous verified foundation.
 
+
+## Verified High source14 — 2026-10-23
+
+Source [c369f49](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c369f49f335c57ed0e5840088795145a0ea5717b),
+[CI40059849695](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40059849695):
+all 7 jobs passed. Actual Windows Node22/24 logs read: 20 storage + 35 proof tests
+per lane, 0 failures and 0 skips. Seven new metadata-capture cases passed, including
+full32MiB index/1MiB exclude direct composition. Both prior mapping diagnostics
+still mapping-refused; altered-byte/mtime branch unverified. Windows Server2025 OS
+evidence is separate from native Windows11 Codex/Git acceptance.
+
+Tested treeb34f9ce1286b64ad0f859d82df7820e502b1dc8a.
+Windows jobs120770786180(Node24)/120770786310(Node22), both actual logs read;
+all4full POSIX suites/portable Windows job passed too. No compiler/test correction
+or retry needed in this milestone. Prior failed candidates/unknown intermittent
+storage issue remain below; these passes do not establish a cause or fix.
+
+Fresh installed dev10/cache149files match immutable reviewed fixture; private
+settings hash unchanged. Bounded inventory3enabled/human-trusted/0errors/0model turns;
+initial sandbox invocation exited before initialize/cleanup signal denied, approved
+local rerun succeeded. Activity4/project scope/same revision, health unknown. No
+install/config/cache/trust/logging/observer/theme/client/model-run change.
+All93IDs retained, no completion category upgraded. See DEV14-REVIEW/HANDOFF.
 
 ## Local source14 candidate — 2026-10-23
 

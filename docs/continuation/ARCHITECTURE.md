@@ -5,14 +5,19 @@
 Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
 capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
 copied directly into private named scratch inside one helper. No public IPC byte
-transfer or bridge expansion. Seven new OS tests added; Windows results pending
-until CI logs are read. Production settings/project/Git/restore gates unchanged;
+transfer or bridge expansion. Source [c369f49](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c369f49f335c57ed0e5840088795145a0ea5717b),
+[CI40059849695](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40059849695):
+all 7 jobs passed. Actual Windows Node22/24 logs read: 20 storage + 35 proof tests
+per lane, 0 failures and 0 skips. Seven new metadata-capture cases passed, including
+full32MiB index/1MiB exclude direct composition. Both prior mapping diagnostics
+still mapping-refused; altered-byte/mtime branch unverified. Windows Server2025 OS
+evidence is separate from native Windows11 Codex/Git acceptance. Production settings/project/Git/restore gates unchanged;
 installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
 loader/native acceptance claim. See DEV14-REVIEW.md and TEST-LOG.md. Full93product
 incomplete. Source13 records below describe the previous verified foundation.
 
 
-## Current source13 fixed metadata lifetime — 2026-10-23
+## Source13 foundation: fixed metadata lifetime — 2026-10-23
 
 Proof-only GitMetadataScratchProof(parent,headCommit,index,exclude,token), Path/
 Dispose. Closed generated config/HEAD/optional index+exclude and objects/refs/info;
@@ -39,7 +44,7 @@ package/public-clone/spaced extraction passed; see PACKAGE-DEV13. Next human Hig
 before more gated security. All93product incomplete. Versioned
 foundations below are historical and superseded where current status differs.
 
-## Current source12 explicit positive read set — 2026-10-23
+## Source12 foundation: explicit positive read set — 2026-10-23
 
 Proof-only ProjectReadSetProof(root,relativePaths,token), Count/Verify/Bytes/Dispose
 keeps original no-follow NTFS pins and readonly source handles. Whole input set

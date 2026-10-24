@@ -1,27 +1,34 @@
 # Requirements ledger
 
-## Source14 current checkpoint — same-helper metadata capture
+**The full 93-capability product is incomplete. Development source 0.2.0-dev.14
+is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
+Human resumed GPT-6.1 Sol High from verified5016e11.
 
-Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
-capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
-copied directly into private named scratch inside one helper. No public IPC byte
-transfer or bridge expansion. Seven new OS tests added; Windows results pending
-until CI logs are read. Production settings/project/Git/restore gates unchanged;
-installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
-loader/native acceptance claim. See DEV14-REVIEW.md and TEST-LOG.md. Full93product
-incomplete. Source13 records below describe the previous verified foundation.
+Source14 adds an original, isolated same-helper metadata capture proof: explicitly
+selected synthetic index (32 MiB) and info/exclude (1 MiB) use retained read handles,
+metadata/byte verification and direct private scratch composition. Private bytes
+stay inside the helper; the public 32 KiB request/3 MiB response bridge is unchanged.
+No production operation, settings/project/Git/restore gate or installation changes.
+Source [c369f49](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c369f49f335c57ed0e5840088795145a0ea5717b),
+[CI40059849695](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40059849695):
+all 7 jobs passed. Actual Windows Node22/24 logs read: 20 storage + 35 proof tests
+per lane, 0 failures and 0 skips. Seven new metadata-capture cases passed, including
+full32MiB index/1MiB exclude direct composition. Both prior mapping diagnostics
+still mapping-refused; altered-byte/mtime branch unverified. Windows Server2025 OS
+evidence is separate from native Windows11 Codex/Git acceptance.
 
+Local suite: 170 pass, 0 fail,
+55 Windows-only skips, 225 total. Validation: 3 mods; replay: 4 fixtures.
 
-Assessment2026-10-23. **All93requirements retained; full product incomplete.**
-Source13 uninstalled fixed synthetic metadata-layout/private lifetime proof;
-installed10/human trust/logging unchanged. Source15e388e CI40058125353 all7jobs
-passed, actual Windows20storage+28proof each. Fixed compatible reader only; real
-Git/loader/ignore/source capture/child-created content cleanup/native integration
-remain gated. Live unowned-reader retention observed, no recursive cleanup. Prior
-mapping-refused outcome persists; negative byte/mtime branch unverified. Windows11
-unavailable. See DEV13-REVIEW/STATUS/TEST-LOG; exact69e8bb3 package/public clone/
-spaced extraction passed in PACKAGE-DEV13. Next human High before further gated
-implementation. Mechanism is not completion.
+Real Git, executable/DLL trust, ignore-aware selection, repository provenance,
+child-created content ownership and native Windows11 acceptance remain gated.
+Five-second cooperative checks cannot interrupt blocked IO. Live readers can retain
+scratch bytes; unknown entries are preserved, with no recursive cleanup or secure
+erasure claim. Prior mapping tests returned mapping-refused; altered-byte/mtime
+negative branch and 8.3-specific behavior remain unverified. Windows11 host remains
+unavailable per latest human reply; no repeated availability question.
+
+All 93 requirement IDs retained in order. Mechanism is not product completion.
 
 ## Reading the ledger
 
@@ -214,7 +221,7 @@ issues are reports/leads, not reproductions by this project.
 | PL-01 Usable native macOS CLI installation | Claude CLI Mods | Supported Codex CLI plugins/hooks/MCP with format gate | CLI163 | CX-PKG; CX-FORMAT; CX-H; NATIVE-PROOF | unverified | CLI163 supported install/update/trust/cache; fresh removal hook/cache absence and125-file exact reinstall passed | Three trusted hooks/zero errors after unchanged reinstall; disable/older-version rollback/permission matrix still pending | CLI and desktop results recorded separately; optional lifecycle hooks unregistered |
 | PL-02 Usable actual desktop integration | Claude desktop Mods | Official desktop plugin and MCP App extension | Desk | CX-UI; CX-PKG; NATIVE-PROOF | supported | Dev6 actual six-view dashboard/local preview/authored rewrite/control/deny passed; dev4 sandbox-negative separate | Native rendering/nested expansion/Clear passed; accessibility/lifecycle/desktop SessionStart remain | MCP Apps inspection permitted; native app CUA blocked and not bypassed |
 | PL-03 Linux portability | Claude CLI on Linux | Node package plus supported Codex Linux hooks/MCP | POSIX-CI; Linux Codex version TBD | CX-PKG; LOCAL CI | unverified | Source8 d7fafbb four POSIX Node22/24 Ubuntu/macOS CI jobs passed; no native Linux Codex host | Observe exact-source Linux CI and separately native Linux install/events/cleanup when host available | No Linux Codex host tested; Node CI is not native integration |
-| PL-04 Native Windows compatibility | Claude sample/version-specific Windows support | Codex native Windows plus platform command/storage adapter | Win | CX-WIN; SAMPLES issues; LOCAL | unverified | Source9–13 NTFS/job/read-set/named-metadata synthetic OS proofs (CI40058125353,28/28 each Windows lane); source14 same-helper fixed metadata capture tests pending, existing storage APIs; no native Codex host, project/settings/restore refused before IO | Native ACL/private root, shell quoting, drives/UNC/Unicode/junctions, lock/rename, timeout cleanup, install/trust/update/remove | No full compatibility claim; do not remove privacy checks to pass |
+| PL-04 Native Windows compatibility | Claude sample/version-specific Windows support | Codex native Windows plus platform command/storage adapter | Win | CX-WIN; SAMPLES issues; LOCAL | unverified | Source9–13 NTFS/job/read-set/named-metadata synthetic OS proofs (CI40058125353,28/28 each Windows lane); source14 same-helper fixed synthetic metadata capture (CI40059849695,35/35 proofs each Windows lane), existing storage APIs; no native Codex host, project/settings/restore refused before IO | Native ACL/private root, shell quoting, drives/UNC/Unicode/junctions, lock/rename, timeout cleanup, install/trust/update/remove | No full compatibility claim; do not remove privacy checks to pass |
 | PL-05 WSL compatibility separately | Claude desktop WSL plugin restrictions differ | Codex Linux path under WSL2 | WSL | C-UI; CX-WIN | unverified | Not tested | Record distro/Windows/client; host interoperability/path and hook tests | WSL does not certify native Windows; Claude restriction not transferred blindly |
 | PL-06 CI separates platform contracts from host tests | Mocked test framework | GitHub Actions matrices with explicit test scopes | POSIX-CI; Win | LOCAL `.github/workflows/ci.yml` | supported | Source8 full CI retained; source9 OS suites and separate process/object proof recorded with failures/corrections/exact source in TEST-LOG | Preserve earlier candidate/legacy failure history; distinguish OS APIs, subprocess replay and actual Codex host | No native Windows/Windows11/WSL installation/event/UI claim; source/extraction/private ACL CI recorded separately |
 | GOV-01 Review full requested primary documentation | Entire Mods section/index and official Codex docs | Requirements/evidence records with version/date and retrieval gaps | Research date 2026-10-23 | C-UI/C-EVT/C-DEV; CX-*; CLAUDE-RESEARCH | supported | Ten Claude Mods pages retrieved, relevant security/admin, primary examples and Codex release source reviewed | Keep each row linked to evidence; record inaccessible pages/videos rather than invent review | Current docs mutable; recheck changed claims before release |

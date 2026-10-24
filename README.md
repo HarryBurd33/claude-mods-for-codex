@@ -1,58 +1,52 @@
 # Claude Mods for Codex
 
-## Source14 current checkpoint — same-helper metadata capture
+**The full 93-capability product is incomplete. Development source 0.2.0-dev.14
+is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
+Human resumed GPT-6.1 Sol High from verified5016e11.
 
-Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
-capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
-copied directly into private named scratch inside one helper. No public IPC byte
-transfer or bridge expansion. Seven new OS tests added; Windows results pending
-until CI logs are read. Production settings/project/Git/restore gates unchanged;
-installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
-loader/native acceptance claim. See docs/continuation/DEV14-REVIEW.md and TEST-LOG.md. Full93product
-incomplete. Source13 records below describe the previous verified foundation.
+Source14 adds an original, isolated same-helper metadata capture proof: explicitly
+selected synthetic index (32 MiB) and info/exclude (1 MiB) use retained read handles,
+metadata/byte verification and direct private scratch composition. Private bytes
+stay inside the helper; the public 32 KiB request/3 MiB response bridge is unchanged.
+No production operation, settings/project/Git/restore gate or installation changes.
+Source [c369f49](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c369f49f335c57ed0e5840088795145a0ea5717b),
+[CI40059849695](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40059849695):
+all 7 jobs passed. Actual Windows Node22/24 logs read: 20 storage + 35 proof tests
+per lane, 0 failures and 0 skips. Seven new metadata-capture cases passed, including
+full32MiB index/1MiB exclude direct composition. Both prior mapping diagnostics
+still mapping-refused; altered-byte/mtime branch unverified. Windows Server2025 OS
+evidence is separate from native Windows11 Codex/Git acceptance.
 
+Local suite: 170 pass, 0 fail,
+55 Windows-only skips, 225 total. Validation: 3 mods; replay: 4 fixtures.
 
-**Development source0.2.0-dev.14; the full93-capability product is incomplete.**
-Current expanded work is on codex/astra-groundwork; default branch remains the
+Real Git, executable/DLL trust, ignore-aware selection, repository provenance,
+child-created content ownership and native Windows11 acceptance remain gated.
+Five-second cooperative checks cannot interrupt blocked IO. Live readers can retain
+scratch bytes; unknown entries are preserved, with no recursive cleanup or secure
+erasure claim. Prior mapping tests returned mapping-refused; altered-byte/mtime
+negative branch and 8.3-specific behavior remain unverified. Windows11 host remains
+unavailable per latest human reply; no repeated availability question.
+
+Expanded development is on codex/astra-groundwork; default branch remains the
 historical experimental MVP. MIT and independent-project status are preserved.
+See [source14 review](docs/continuation/DEV14-REVIEW.md),
+[handoff](docs/continuation/HANDOFF.md) and [verification log](docs/continuation/TEST-LOG.md).
+Previous source13 package evidence remains in [PACKAGE-DEV13](docs/continuation/PACKAGE-DEV13.md);
+source14 packaging is the next Medium task, not an installation claim.
 
-Source13 adds an unintegrated fixed private Git-metadata layout proof: generated
-config/HEAD, optional index/info-exclude and known objects/refs/info directories.
-Owned file handles use private create-new/delete-on-close; directory cleanup is
-empty-only. It tests compatible and incompatible readers, explicit32MiB index/1MiB
-exclude bounds, unexpected-entry preservation, owner death/cancellation and delayed
-deletion while an unowned reader stays open. Prior flat/read-set bounds unchanged.
-No actual Git/project/index capture, loader/ignore engine, public helper operation
-or production Windows gate activation. See [review](docs/continuation/DEV13-REVIEW.md).
-
-Source15e388e [CI40058125353](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40058125353)
-all7jobs passed; both Windows logs read20storage+28proof each/0fail/0skip. Local
-170pass/0fail/48Windows-only skips218total; validate3/replay4. Server CI is not
-native Codex/Windows11/WSL acceptance. Both earlier mapping tests still refused
-before acceptance; altered-byte/mtime branch remains unverified. Source13
-[package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV13.md) passed:
-157files/all-byte checks, validate3/replay4/package-scaffolding7/7. Source13 remains
-uninstalled. Windows11 host remains unavailable.
-
-Compatible live readers can retain bytes; unknown child-created files would be
-preserved, not recursively deleted. Empty private hierarchy may remain after owner
-death. Real Git reader/write/temp/lock behavior, executable/DLL trust, ignore-aware
-selection, metadata provenance, IPC and native integration remain separate gates.
-The in-memory32MiB fixture does not expand the32KiB request/3MiB response bridge.
-No private bytes in arguments/environment/logs, secure-erasure or arbitrary-process
-sandbox guarantee. All Windows settings/project/Git/restore still refuse before IO.
-
-Installed macOS fixture0.2.0-dev.10 remains149reviewed files, human-trusted3hooks,
-same settings/mod rules/data/project/scope/retention/export. Native source10 focus/
-render/keyboard-Clear passed earlier; activity four retained records/same revision.
-No install13/cache/config/trust/logging change, extra model/API evaluation or optional
-observer/theme/client upgrade. Inventory/trust is separate from event delivery.
+Installed macOS dev10 remains149 reviewed files/3human-trusted hooks, same private
+settings/mod rules/data/project/scope/retention/export. Activity remains4retained
+records/same revision. No install/cache/config/trust/logging change, extra model/API
+evaluation or optional observer/theme/client upgrade. Source10 native focus/render/
+keyboard-Clear passed earlier; inventory/trust is separate from event delivery.
 
 Earlier native dev6 six views/preview/files/diffs/usage/rewrites/deny/removal-reinstall
 and dev4 sandbox-negative/removed hold evidence stay version-specific. Hold is not
 a production approval gate; human provenance/host fail-open limits remain. Full
 accessibility/lifecycle/loaded disable/older rollback/Linux/Windows/WSL incomplete.
-Routine package checks complete; next human Sol High before more gated work. See
+Source14 package checks are next on human-selected Sol Medium; return to High
+before further gated work. See
 [handoff](docs/continuation/HANDOFF.md), [ledger](docs/continuation/REQUIREMENTS.md),
 [test log](docs/continuation/TEST-LOG.md), [Windows boundary](docs/windows-storage.md)
 and [native kit](docs/windows-native-acceptance.md).

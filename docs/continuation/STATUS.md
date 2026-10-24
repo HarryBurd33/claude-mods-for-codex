@@ -1,55 +1,44 @@
 # Current status — source14 same-helper capture proof — 2026-10-23
 
-## Source14 current checkpoint — same-helper metadata capture
+**The full 93-capability product is incomplete. Development source 0.2.0-dev.14
+is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
+Human resumed GPT-6.1 Sol High from verified5016e11.
 
-Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
-capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
-copied directly into private named scratch inside one helper. No public IPC byte
-transfer or bridge expansion. Seven new OS tests added; Windows results pending
-until CI logs are read. Production settings/project/Git/restore gates unchanged;
-installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
-loader/native acceptance claim. See DEV14-REVIEW.md and TEST-LOG.md. Full93product
-incomplete. Source13 records below describe the previous verified foundation.
+Source14 adds an original, isolated same-helper metadata capture proof: explicitly
+selected synthetic index (32 MiB) and info/exclude (1 MiB) use retained read handles,
+metadata/byte verification and direct private scratch composition. Private bytes
+stay inside the helper; the public 32 KiB request/3 MiB response bridge is unchanged.
+No production operation, settings/project/Git/restore gate or installation changes.
+Source [c369f49](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c369f49f335c57ed0e5840088795145a0ea5717b),
+[CI40059849695](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40059849695):
+all 7 jobs passed. Actual Windows Node22/24 logs read: 20 storage + 35 proof tests
+per lane, 0 failures and 0 skips. Seven new metadata-capture cases passed, including
+full32MiB index/1MiB exclude direct composition. Both prior mapping diagnostics
+still mapping-refused; altered-byte/mtime branch unverified. Windows Server2025 OS
+evidence is separate from native Windows11 Codex/Git acceptance.
 
+Local suite: 170 pass, 0 fail,
+55 Windows-only skips, 225 total. Validation: 3 mods; replay: 4 fixtures.
 
-**Full93-capability product incomplete. Source0.2.0-dev.13 is uninstalled;
-installed human-trusted10/logging scope unchanged.** Human resumed Sol High from
-d7d3b84. Windows11 remains unavailable per latest reply; independent proofs only.
+Real Git, executable/DLL trust, ignore-aware selection, repository provenance,
+child-created content ownership and native Windows11 acceptance remain gated.
+Five-second cooperative checks cannot interrupt blocked IO. Live readers can retain
+scratch bytes; unknown entries are preserved, with no recursive cleanup or secure
+erasure claim. Prior mapping tests returned mapping-refused; altered-byte/mtime
+negative branch and 8.3-specific behavior remain unverified. Windows11 host remains
+unavailable per latest human reply; no repeated availability question.
 
-## Verified new result
+Next: GPT-6.1 Sol Medium for exact-source packaging/public-clone/spaced extraction,
+then human-selected High before further gated Windows implementation. Read
+[handoff](HANDOFF.md), [review](DEV14-REVIEW.md) and [test log](TEST-LOG.md).
 
-Original unintegrated GitMetadataScratch.cs creates only private objects/refs/info
-and generated config/HEAD plus optional index/info/exclude.32MiB index/1MiB exclude
-match existing adapter bounds; prior flat/read-set smaller bounds stay unchanged.
-Shared proof-only creation keeps private CREATE_NEW/delete-on-close/noninherited
-handles. Cleanup closes exact owned files, removes known empty dirs/root only.
-Normal layout/reader sharing, boundaries, unexpected entries/junctions, owner death,
-owned-reader cancellation and live unowned-reader retention observed in real OS tests.
-
-Source15e388e/CI40058125353 all7jobs passed, actual Windows logs each20storage+
-28proof/0fail/0skip. Local170pass/0fail/48Windows-only skips218total; validate3/
-replay4. Both prior mapping cases still mapping-refused; changed-byte/mtime and
-8.3-specific behavior remain unverified. Server CI is not native Codex/Windows11.
-No actual Git executable/parser/dependency/loader, ignore engine, real project or
-index capture. Production compiles only PrivateStorage.cs; no new public operation.
-See DEV13-REVIEW and TEST-LOG for contracts/sources/observations and scoped review.
-
-## Limits and remaining High gates
-
-A live compatible reader may retain bytes after owner disposal; empty-only cleanup
-reports refusal and does not kill unrelated processes. Owner death with fixed
-owned readers can leave private empty hierarchy. Arbitrary children could create
-unknown files retaining data: preserved, not recursively cleaned. No secure erasure
-or hostile same-user/admin namespace-race protection. Real Git write/temp/lock and
-reader behavior must be reviewed before integration.5s constructor checks do not
-interrupt blocked kernel IO; outer owned-helper deadline remains necessary.
-
-The bridge remains32KiB request/3MiB response; this in-memory32MiB fixture is not an
-IPC expansion or a source-index reader. Never transfer private bytes via argv/env/
-logs. Executable/DLL trust, ignore-aware selection and metadata provenance/freshness,
-actual Git semantics/child writes, production integration and separate restore/native
-permissions still require High and their OS/host tests. All Windows settings/project/
-Git/restore before-IO refusals remain. Windows11 native acceptance incomplete.
+Installed10 is byte-equal to all149 reviewed files; private settings hash unchanged.
+Fresh read-only inventory:3enabled/human-trusted hooks,0errors,0model turns. Actual
+activity:4records/same project scope/revision, producer health unknown. Native
+source10 focus/render/keyboard-Clear and dev6/dev4 event/hold/sandbox evidence stay
+version-specific. Full accessibility/lifecycle/loaded disable/older rollback/Linux/
+Windows/WSL acceptance incomplete. Optional observers off; no model/API run, trust
+write or theme/client change. Earlier failures remain in TEST-LOG.
 
 ## Source13 Medium package verification — 2026-10-23
 
@@ -69,19 +58,3 @@ settings unchanged. Activity4/same scope/revision. No logging/trust/config/model
 or gated-code change. All93IDs retained. Real Git/native/unknown child-content
 cleanup/live-reader limits persist; mapping mutation branch unverified. Next human
 Sol High before further gated implementation. See PACKAGE-DEV13.
-
-## Next setting and preserved installation
-
-Routine source13 public-clone/archive/spaced-path checks complete. Next setting
-**GPT-6.1 Sol, High** before remaining real Git/loader/ignore/capture/IPC/child-content/
-production/writer implementation. Source13 stays uninstalled; no retrust/restart
-needed for this notes-only milestone. Windows11 unavailable, no repeated question.
-
-Installed10 immutable149files/settings/data/project/scope/retention/export and human
-trust remain. Latest actual activity four records/same project revision, not producer
-health. Source10 native focus/render/keyboard-Clear passed earlier; dev6/dev4 events/
-rewrite/deny/hold/sandbox evidence stays version-specific. Optional observers off,
-no theme/client/model change or additional model/API evaluation. No source13 install.
-Full accessibility/lifecycle/loaded disable/older rollback/Linux/Windows/WSL incomplete.
-Prior failed candidates/unknown-cause intermittent storage failure preserved in TEST-LOG.
-Source12 package history remains in PACKAGE-DEV12; current status supersedes old next-model text.

@@ -4,7 +4,8 @@ Source14 GitMetadataCapture.cs adds an **unintegrated same-helper fixed source
 capture** proof: retained explicit index/info-exclude objects,32MiB/1MiB bounds,
 metadata+byte verification and direct private scratch composition. No raw-byte IPC,
 Git discovery/parser/launch, ignore engine, production activation or host acceptance.
-Seven new real Windows tests pending log review. See
+Sourcec369f49/CI40059849695 all7jobs passed; actual Windows20storage+35proof
+each/0fail/0skip. Both mapping diagnostics still mapping-refused. See
 [source14 review](../../docs/continuation/DEV14-REVIEW.md). Installed10 unchanged.
 Source13 and older results below are versioned foundations.
 

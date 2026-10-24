@@ -1,45 +1,37 @@
-# Project status — source14 same-helper capture proof — 2026-10-23
+# Project status — source14 metadata capture proof — 2026-10-23
 
-## Source14 current checkpoint — same-helper metadata capture
+**The full 93-capability product is incomplete. Development source 0.2.0-dev.14
+is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
+Human resumed GPT-6.1 Sol High from verified5016e11.
 
-Source0.2.0-dev.14 adds an original unintegrated fixed synthetic source-metadata
-capture proof. Explicit index32MiB/info-exclude1MiB are held/read/reverified and
-copied directly into private named scratch inside one helper. No public IPC byte
-transfer or bridge expansion. Seven new OS tests added; Windows results pending
-until CI logs are read. Production settings/project/Git/restore gates unchanged;
-installed10/human trust/logging unchanged. No real Git/source provenance/ignore/
-loader/native acceptance claim. See docs/continuation/DEV14-REVIEW.md and TEST-LOG.md. Full93product
-incomplete. Source13 records below describe the previous verified foundation.
+Source14 adds an original, isolated same-helper metadata capture proof: explicitly
+selected synthetic index (32 MiB) and info/exclude (1 MiB) use retained read handles,
+metadata/byte verification and direct private scratch composition. Private bytes
+stay inside the helper; the public 32 KiB request/3 MiB response bridge is unchanged.
+No production operation, settings/project/Git/restore gate or installation changes.
+Source [c369f49](https://github.com/HarryBurd33/claude-mods-for-codex/commit/c369f49f335c57ed0e5840088795145a0ea5717b),
+[CI40059849695](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40059849695):
+all 7 jobs passed. Actual Windows Node22/24 logs read: 20 storage + 35 proof tests
+per lane, 0 failures and 0 skips. Seven new metadata-capture cases passed, including
+full32MiB index/1MiB exclude direct composition. Both prior mapping diagnostics
+still mapping-refused; altered-byte/mtime branch unverified. Windows Server2025 OS
+evidence is separate from native Windows11 Codex/Git acceptance.
 
+Local suite: 170 pass, 0 fail,
+55 Windows-only skips, 225 total. Validation: 3 mods; replay: 4 fixtures.
 
-**Full93-capability product incomplete. Source13 uninstalled; installed10/human
-trust/logging scope preserved.** Human resumed Sol High fromd7d3b84. Windows11
-host remains unavailable; independent synthetic proofs only.
+Real Git, executable/DLL trust, ignore-aware selection, repository provenance,
+child-created content ownership and native Windows11 acceptance remain gated.
+Five-second cooperative checks cannot interrupt blocked IO. Live readers can retain
+scratch bytes; unknown entries are preserved, with no recursive cleanup or secure
+erasure claim. Prior mapping tests returned mapping-refused; altered-byte/mtime
+negative branch and 8.3-specific behavior remain unverified. Windows11 host remains
+unavailable per latest human reply; no repeated availability question.
 
-Original fixed metadata layout creates protected config/HEAD/optional index+exclude
-and known objects/refs/info. Private create-new/delete-on-close files, retained
-handles, empty-only known-directory cleanup.32MiB index/1MiB exclude match existing
-adapter; smaller flat/read-set and production bridge bounds stay unchanged.
-
-Source15e388e [CI40058125353](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40058125353)
-all7jobs success; both actual Windows logs20storage+28proof each/0fail/0skip.
-Local170pass/0fail/48Windows-only skips218total; validate3/replay4 pass. Tests cover
-compatible/incompatible readers, bounds, unexpected entries, normal/cancel/owner
-lifetimes and real unowned-reader retention. Old mapping tests still mapping-refused;
-mutated-byte/mtime branch unverified. Server CI is not native Windows11 Codex.
-
-No actual Git/parser/loader/ignore/source-index capture or public operation. Unknown
-child-created files can retain data; no recursive cleanup or secure-erasure claim.
-Actual Git sharing/write/temp/lock/loader, provenance, IPC/native integration and
-separate restore remain High gates. All Windows before-IO refusals preserved.
-Source13 exact69e8bb3 package/public-clone/spaced extraction passed:157files/
-all-byte checks, validate3/replay4/package-scaffolding7/7. Source13 uninstalled;
-next human Sol High before further gated implementation.
-
-Installed10 immutable149files/settings/scope/retention/export unchanged; prior
-native focus/render/keyboard-Clear and versioned dev6/4 hook/hold/sandbox evidence
-stay separate. Latest activity four scoped records/same revision. No config/trust/
-cache/logging/observer/theme/client/model-run change. Full accessibility/lifecycle/
-loaded disable/older rollback/Linux/Windows/WSL incomplete. All93requirements kept.
-See [handoff](docs/continuation/HANDOFF.md), [review](docs/continuation/DEV13-REVIEW.md),
-[ledger](docs/continuation/REQUIREMENTS.md) and [test log](docs/continuation/TEST-LOG.md).
+Installed dev10 remains149 reviewed files,3enabled human-trusted hooks,0inventory
+errors. Latest Activity:4records, same selected scope/revision, health unknown.
+Native versioned evidence and remaining lifecycle/accessibility/platform gaps are
+separate. All93ledger IDs retained. Next human Sol Medium for packaging; High before
+further security integration. See [handoff](docs/continuation/HANDOFF.md),
+[review](docs/continuation/DEV14-REVIEW.md), [ledger](docs/continuation/REQUIREMENTS.md)
+and [test log](docs/continuation/TEST-LOG.md).
