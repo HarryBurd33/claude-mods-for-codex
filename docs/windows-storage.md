@@ -1,4 +1,11 @@
-# Windows private storage — source16 proof / unchanged production boundary
+# Windows private storage — source17 proof / unchanged production boundary
+
+Source17 adds only an isolated fixed-fixture metadata/helper job composition,
+not a production launcher or gate change. Four-second child budget excludes
+parent preflight; synthetic stalls do not prove pending kernel IO termination.
+Executable/DLL trust, actual Git/native/permissions and existing storage adapter
+remain separate. See [review](continuation/DEV17-REVIEW.md) and TEST-LOG.
+Installed10/logging/human trust unchanged; earlier versioned foundations follow.
 
 Source16 adds only an isolated positive HEAD/one-existing-loose-ref source binding
 proof composed with source15 strict index projection. No discovery/packed fallback/

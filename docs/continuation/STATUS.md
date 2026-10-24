@@ -1,63 +1,36 @@
-# Current status — source16 positive HEAD binding — 2026-10-23
+# Current status — source17 owned metadata helper — 2026-10-23
 
-## Source17 candidate — owned metadata helper composition
+**Full93-capability product incomplete. Development source0.2.0-dev.17 is
+uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
+Human resumed GPT-6.1 Sol High from verifiedb67f98a.
 
-Original isolated composition runs retained HEAD/ref/index capture inside the
-existing creation-time owned job with fixed original fixture executable, private
-cwd/EOF/minimal env,4s child deadline/4KiB output. Nine new Windows tests pending
-CI; local170pass/0fail/82Windows-only skips252total, validate3/replay4. Parent
-preflight IO outside child timer; synthetic stalls do not prove blocked kernel IO
-termination. No production operation/gate/installed10/logging/trust change.
-Source17 uninstalled; full93product/native Windows/Git/loader/provenance/ignore/
-writer incomplete. See DEV17-REVIEW.md and TEST-LOG.md. Source16 below is historical.
+Source17 adds an original isolated owned-helper composition around source16's
+retained HEAD/ref/index capture. The fixed independently compiled fixture runs
+in a mandatory creation-time job, with pinned code objects/private cwd, stdin EOF,
+SystemRoot-only environment,4s child budget and4KiB output. Normal completion,
+abrupt exit, synthetic stalls, cancellation, owner death, parser failure and output
+bounds are tested. No production launcher/helper/operation/gate is enabled.
 
+Local suite170pass/0fail/82Windows-only skips252total; validate3/replay4. Source[04a4939](https://github.com/HarryBurd33/claude-mods-for-codex/commit/04a49394b477fe45c14025da0f318a7a641faff3),
+[CI40063228451](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40063228451):
+all7jobs passed. Both actual WindowsServer2025 Node22/24 decoded logs read:
+20storage+62proof each/0fail/0skip. All9new owned-helper cases passed. Prior
+mapping diagnostics still mapping-refused; altered-byte/mtime and8.3 unverified.
+OS fixture evidence is separate from Windows11 Codex/Git/native acceptance. See
+[review](DEV17-REVIEW.md) and [test log](TEST-LOG.md).
 
-## Source16 Medium package verification — 2026-10-23
+The timer excludes parent preflight IO. Synthetic stalls do not prove blocked
+kernel IO termination or a universal4s API bound; cleanup is asynchronous. Object
+pins do not authenticate binary/DLL dependencies or block all current-user code
+additions. This is not a sandbox/network boundary, actual Git or native Windows11
+acceptance. Repository identity/hash format/object provenance/ignore/restore stay
+gated. Live readers/unknown content may retain bytes; no recursive cleanup or
+secure erasure. Prior mapping-refused/byte-mtime/8.3 gaps remain. Windows11 remains
+unavailable per latest reply; do not repeat that availability question.
 
-Human resumed3c022e7/tree997da69 on GPT-6.1 Sol Medium. Exact anonymous clean
-public clone full170pass/0fail/73Windows-only skips243total. Reviewed167-file
-archive1,136,506unpacked/342,897compressed bytes; SHA256
-6f6f264ffb1aac4aae670c9a6376a56aa9064def3a5ec124ac22453b1bebb5ec.
-All bytes equal public clone/checkpoint; hygiene/MIT/version16/default-off storage
-passed. Fresh spaced extraction validate3/replay4/package-scaffolding7/7,0fail/0skip.
-macOS14.6/Node24.22.0/npm11.19.1; no Windows compilation/install/model run.
-Installed10/cache149files/private settings hash unchanged. No new native observation/
-trust/config/cache/logging/gated-code change. All93IDs retained. Next human Sol
-High before more gated work. See PACKAGE-DEV16; final notes-only artifact identity
-recorded after actual readback in reply/private handoff. Full product incomplete.
-
-
-**The full93-capability product is incomplete. Development source0.2.0-dev.16
-is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
-Human resumed GPT-6.1 Sol High from verifiedfbce126.
-
-Source16 adds an original isolated positive source HEAD binding proof. A detached
-HEAD or one existing loose branch ref is held and verified through source handles,
-then composed with the strict projected index/private scratch. No caller commit
-override, packed fallback, unborn inference or raw-index fallback. No production
-operation/settings/project/Git/restore gate is enabled.
-
-Local suite170pass/0fail/73Windows-only skips243total; validate3mods/replay4.
-Source[26d8090](https://github.com/HarryBurd33/claude-mods-for-codex/commit/26d8090e17e031b187afb22f7f73a32b5d888c53),
-[CI40061829694](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40061829694):
-all7jobs passed. Both actual WindowsServer2025 Node22/24 logs read:20storage+
-53proof each/0fail/0skip. All9new HEAD-binding cases passed. Both prior mapping
-diagnostics still mapping-refused; altered-byte/mtime branch and8.3 unverified.
-OS evidence is separate from native Windows11 Codex/Git acceptance. See
-[review](DEV16-REVIEW.md) and [test log](TEST-LOG.md).
-
-This binds positive files, not repository identity/hash format/object provenance or
-an atomic repository snapshot. Ref support is deliberately narrower than Git;
-missing/packed-only/unborn/chained/unsupported forms refuse. Inherited reader cap
-256KiB/file, parser cap512bytes, actual-root syntax/handles checked. No Git launch,
-ignore engine, loader trust, native Windows11 or restore acceptance. Five-second
-cooperative checks cannot interrupt kernel IO. Earlier mapping-refused/altered-byte-
-mtime/8.3 gaps remain. Live readers/unknown child content can retain bytes; no
-recursive cleanup, secure erasure or hostile same-user/admin isolation. Windows11
-remains unavailable per latest reply; do not repeat that availability question.
-
-Installed10 remains149reviewed files/private settings hash unchanged. No native
-inventory/event/UI/model run or trust/config/cache/logging/observer/theme/client
-change. Prior trusted-hook/activity/native observations remain version-specific.
-All93IDs retained; source16 packaging passed in PACKAGE-DEV16. Next human Sol
-High before any more gated Windows security work. Earlier failures remain in TEST-LOG; full product incomplete.
+Installed10 still149reviewed files/private settings hash unchanged; no fresh
+native inventory/event/UI/trust/model run. Prior observations remain versioned.
+No config/cache/logging/observer/theme/client change. All93IDs retained. Source16
+packaging passed in PACKAGE-DEV16; source17 packaging next on human Medium after
+OS proof. High before more Windows security/loader/provenance/ignore/helper/
+cleanup/gate/writer work. Earlier failures remain in TEST-LOG. Full product incomplete.

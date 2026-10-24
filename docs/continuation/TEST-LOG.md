@@ -1,11 +1,37 @@
 # Continuation verification log
 
-## Source17 candidate — owned metadata helper composition
+## Verified High source17 — 2026-10-23
+
+Source[04a4939](https://github.com/HarryBurd33/claude-mods-for-codex/commit/04a49394b477fe45c14025da0f318a7a641faff3),
+[CI40063228451](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40063228451):
+all7jobs passed. Both actual WindowsServer2025 Node22/24 decoded logs read:
+20storage+62proof each/0fail/0skip. All9new owned-helper cases passed. Prior
+mapping diagnostics still mapping-refused; altered-byte/mtime and8.3 unverified.
+OS fixture evidence is separate from Windows11 Codex/Git/native acceptance.
+
+Tested tree8ebe34f70905fda08a22d548129e52080af34c5f. Actual decoded Windows logs
+120781001773(Node22)/120781001823(Node24); all4full POSIX/portable Windows jobs
+also success. Local npm test170pass/0fail/82Windows-only skips252total, validate3/
+replay4/diff-check clean. No CI retry or correction. Earlier failed candidates/
+intermittent storage issue retained separately; no new cause/fix claim.
+
+Nine composite cases observed source/code lease release and owned scratch cleanup
+on normal/abrupt23/timeout/cancel/owner-death/overflow, no-launch pre-cancel and
+preflight refusals, synthetic pre-capture stall, fixed status7/source failure and
+PID-marker collision preservation. No actual blocked kernel IO/Git/native host.
+Four-second child timer excludes parent preflight; termination asynchronous. Binary/
+DLL/source provenance/ignore/native/writer/unknown child-content cleanup remain
+unverified. See DEV17-REVIEW/HANDOFF. Installed10/cache149files/settings hash
+unchanged; no native inventory/event/UI/trust/model-run or config/cache/logging/
+observer/theme/client change. All93IDs retained. Next Medium for packaging;
+production gates remain closed, High before further gated work.
+
+## Source17 verified owned-helper composition — owned metadata helper composition
 
 Original isolated composition runs retained HEAD/ref/index capture inside the
 existing creation-time owned job with fixed original fixture executable, private
-cwd/EOF/minimal env,4s child deadline/4KiB output. Nine new Windows tests pending
-CI; local170pass/0fail/82Windows-only skips252total, validate3/replay4. Parent
+cwd/EOF/minimal env,4s child deadline/4KiB output. Source04a4939/CI40063228451 all7jobs passed; actual Windows20storage+62proof
+per Node22/24 lane/0fail/0skip, both logs read. Local170pass/0fail/82Windows-only skips252total, validate3/replay4. Parent
 preflight IO outside child timer; synthetic stalls do not prove blocked kernel IO
 termination. No production operation/gate/installed10/logging/trust change.
 Source17 uninstalled; full93product/native Windows/Git/loader/provenance/ignore/
