@@ -21,7 +21,7 @@ the explicit read-inventory scope and holds its prerequisites throughout the rea
 Only the isolated proof build includes this partial; production still compiles
 only PrivateStorage.cs. No production IPC operation, configuration or gate changes.
 
-## Boundaries and contract
+## Initial strict-reader boundaries and contract
 
 The known wrapper accepts only codeRoot named Git immediately beneath the exact
 fresh SDK ProgramFilesX64 location, and only cmd/git.exe or mingw64/bin/git.exe.
@@ -146,3 +146,57 @@ ordinal and fixed reason enum only. This is a NEW sample, not an atomic trace of
 the original policy check and never authority. Readiness remains refused and no
 image content is read. No path/ACL/SID/environment value or policy change.
 Actual results for the tightened positive controls and explanation remain pending.
+
+## Explicit additional Installer inventory profile
+
+The Node24 explanation on7921619 reported CodeDirectory/segment0 with a repeated
+ForeignInstallerGrant sample for both real candidates. Segment0 is the Git code
+root. This was a new descriptor observation, not an atomic causal trace. Original
+strict code policy correctly keeps refusing that grant; all original strict-reader
+and ProgramPins/private-data assertions remain in place.
+
+Reading installed bytes for static inventory has a different purpose from admitting
+them for execution. An additional, separately named InstallerInventory profile
+therefore applies the reviewed descriptor predicate freshly to EACH validated
+installation object, rather than implicitly inheriting an ancestor exception.
+Its known wrapper still requires the fresh SDK anchor, immediate Git installation
+and exactly the two named images before filesystem IO. The synthetic wrapper is
+separate and keeps its owned/private-parent assumption explicit. No general read
+broker, config option, executable handle/token or production API is exposed.
+
+The inventory profile accepts mutation grants to the existing trusted principals
+plus the exact Installer SID within that fixed read scope. Unknown owners, callback/
+object ACEs, null/unbounded descriptors and every other principal's mutation grant
+still refuse. Denies never excuse an unknown allow. Each object is checked after
+no-reparse/type/path validation; file identity/link/size and retained pre/post
+descriptor checks remain. No OS permission is added or repaired. The original
+Trusted/Access/CodeAccess/ProgramPins and private-data policies are byte-identical.
+This profile CANNOT authorize execution, DLL loading or private data: those gates
+remain closed, and authenticity/source/loader provenance remain unverified.
+
+Known/synthetic-installer-read modes use distinct installer-read frames. The old
+strict modes keep their original frames and refusal tests. A failure of the new
+predicate may expose its closed assessment enum from that sampled descriptor,
+without SID/ACL/path values or atomic-snapshot claims. The old strict-policy repeat
+classifier cannot explain an Installer-profile decision and is not used for it.
+
+Four additional acceptance cases keep the boundary concrete:
+
+1. Installer grants on owned anchor, code directory AND image: the explicit
+   inventory profile samples content while old strict reader, original ProgramPins
+   and original private reader still refuse. Renames/writes while held refuse;
+   descriptor change after a read discards the hash/import sample. Cancel/EOF/bad
+   control/owner death release handles. No original assertion is removed.
+2. Installer grant plus unknown allow/deny on child/image still refuses before
+   bytes with ForeignMutation. False SDK scope/project overlap also refuses.
+3. Hardlinks, junction code directories and an active image writer refuse before
+   bytes; restoring the owned fixture permits a fresh read and proves partial
+   handles were released.
+4. Actual fixed CI images must be read and accepted under this explicit inventory
+   profile; this is a mandatory positive check, not accept-either diagnostic success.
+   Output is bounded digest/static parser results with executionAuthority:false.
+
+This is an explicit read-policy design, not relaxation of the original execution
+or private-data policy to force an execution pass. Production loads no profile.
+Actual new profile compilation/OS results are pending; local skipped tests do not
+establish Windows behavior. No actual Git process, system mutation or network call.

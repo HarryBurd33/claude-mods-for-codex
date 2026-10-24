@@ -141,6 +141,11 @@ public static class Harness {
     else CodexMods.PrivateStorage.SyntheticInstalledImageReadHarnessProof(a[3],a[4],a[5]);
     return 0;
    }
+   if(mode=="known-installer-read" || mode=="synthetic-installer-read") {
+    if(mode=="known-installer-read")CodexMods.PrivateStorage.KnownInstallerInventoryHarnessProof(a[3],a[4],a[5]);
+    else CodexMods.PrivateStorage.SyntheticInstallerInventoryHarnessProof(a[3],a[4],a[5]);
+    return 0;
+   }
    if(mode=="scratch") {
     using(var scratch=new CodexMods.PrivateStorage.ScratchProof(directory)) {
      Console.WriteLine(B64(scratch.Path));Console.Out.Flush();Console.In.ReadLine();

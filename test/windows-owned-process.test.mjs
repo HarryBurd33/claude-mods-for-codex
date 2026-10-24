@@ -169,8 +169,10 @@ async function pinnedInventory(harness, directory, target, codeRoot, project, du
 }
 // Separate read-only policy under test. No original ProgramPins fallback, Git
 // execution, signature query, raw image output or production API integration.
-async function installedImageRead(exe,data,target,codeRoot,project,{known=false,during,read=false,control='v',terminate=false}={}) {
-  const p=spawn(exe,['run',known?'known-image-read':'synthetic-image-read',data,target,codeRoot,project],{windowsHide:true,stdio:['pipe','pipe','pipe']});
+async function installedImageRead(exe,data,target,codeRoot,project,{known=false,installer=false,during,read=false,control='v',terminate=false}={}) {
+  const prefix=installer?'installer-read':'inventory-read';
+  const mode=installer?(known?'known-installer-read':'synthetic-installer-read'):(known?'known-image-read':'synthetic-image-read');
+  const p=spawn(exe,['run',mode,data,target,codeRoot,project],{windowsHide:true,stdio:['pipe','pipe','pipe']});
   p.stdin.on('error',()=>{});
   const closed=new Promise((resolve,reject)=>{p.once('close',(code,signal)=>resolve({code,signal}));p.once('error',reject);});closed.catch(()=>{});
   let output='',errors=0,timedOut=false,dataRead=false,sample;
@@ -185,7 +187,7 @@ async function installedImageRead(exe,data,target,codeRoot,project,{known=false,
   });
   try {
     const first=await ready;
-    if(first==='inventory-read-held') {
+    if(first===prefix+'-held') {
       if(during)await during();
       if(read) {
         const file=await open(target,'r');
@@ -203,21 +205,27 @@ async function installedImageRead(exe,data,target,codeRoot,project,{known=false,
           } finally {bytes.fill(0);}
         } finally {await file.close();}
       }
-    } else assert.match(first,/^inventory-read-refused\|(Input|Scope|Project|Ancestor|CodeDirectory|Image|Changed)$/);
+    } else assert.match(first,new RegExp('^'+prefix+'-refused\\|(Input|Scope|Project|Ancestor|CodeDirectory|Image|Changed)$'));
     if(terminate)p.kill();else p.stdin.end(control);
     const exited=await closed;
     assert.equal(timedOut,false);assert.equal(errors,0);
     if(terminate)assert.notEqual(exited.signal,null);else assert.equal(exited.code,0);
-    let frames=output.trim().split(/\r?\n/);let repeatObservation;
+    let frames=output.trim().split(/\r?\n/);let repeatObservation,refusalObservation;
     if(frames.length===2&&frames[1].startsWith('inventory-read-repeat|')) {
+      assert.equal(installer,false,'original repeat predicate cannot explain Installer-profile decisions');
       assert.match(frames[0],/^inventory-read-refused\|(CodeDirectory|Image)$/);
       const m=/^inventory-read-repeat\|(0|[1-9][0-9]?)\|(DescriptorPolicy|OwnerPolicy|AcePolicy|ForeignInstallerGrant|ForeignMutationGrant|AccessUnclassified)$/.exec(frames[1]);
       assert.ok(m,'closed repeated metadata observation');assert.ok(Number(m[1])<=32);
       repeatObservation={segment:Number(m[1]),reason:m[2],authority:false,atomicCause:false};frames=frames.slice(0,1);
+    } else if(frames.length===2&&frames[1].startsWith('installer-read-assessment|')) {
+      assert.equal(installer,true);assert.match(frames[0],/^installer-read-refused\|(CodeDirectory|Image)$/);
+      const m=/^installer-read-assessment\|(DescriptorPolicy|OwnerPolicy|AcePolicy|ForeignMutation)$/.exec(frames[1]);
+      assert.ok(m,'closed Installer read assessment');
+      refusalObservation={assessment:m[1],authority:false,atomicSnapshot:false};frames=frames.slice(0,1);
     }
-    const accepted=frames[1]==='inventory-read-unchanged'&&frames.at(-1)==='inventory-read-released';
+    const accepted=frames[1]===prefix+'-unchanged'&&frames.at(-1)===prefix+'-released';
     // Never return content-derived results after changed/refused/cancelled samples.
-    return {frames,dataRead,sampleAccepted:accepted&&dataRead,...(accepted&&dataRead?{sample}:{}),...(repeatObservation?{repeatObservation}:{}),executionAuthority:false};
+    return {frames,readPolicy:installer?'scoped-installer-inventory':'original-strict-code',dataRead,sampleAccepted:accepted&&dataRead,...(accepted&&dataRead?{sample}:{}),...(repeatObservation?{repeatObservation}:{}),...(refusalObservation?{refusalObservation}:{}),executionAuthority:false};
   } finally {
     clearTimeout(timer);if(p.exitCode===null&&p.signalCode===null)p.kill();await closed;
   }
@@ -230,6 +238,7 @@ async function imageReadFixture(name) {
   return {data,exe,parent,anchor,code,project,target};
 }
 const imageReadFrames=state=>['inventory-read-held','inventory-read-'+state,'inventory-read-disposed-refused','inventory-read-released'];
+const installerReadFrames=state=>['installer-read-held','installer-read-'+state,'installer-read-disposed-refused','installer-read-released'];
 test('Windows scoped installed-image read policy samples content while original code and private-data policies still refuse',native,async()=>{
   const f=await imageReadFixture('positive');
   const expected=await readFile(f.target);assert.ok(expected.length<=1024*1024,'fixture fits original private-reader bound');
@@ -308,6 +317,84 @@ test('Windows CI known installed Git images get read-only scoped inventory witho
     const result=await installedImageRead(exe,data,win32.join(root,...relative.split('/')),root,project,{known:true,read:true});
     t.diagnostic(JSON.stringify({target:relative,...result,version:'not-queried',authenticity:'unverified',loaderClosure:'unverified',productionGateChanged:false}));
     assert.equal(result.dataRead,result.sampleAccepted);
+  }
+});
+test('Windows explicit Installer inventory profile reads managed code while both original strict policies still refuse',native,async()=>{
+  const f=await imageReadFixture('installer profile');
+  for(const path of [f.anchor,f.code,f.target])await fixtureAcl(path,'installer-control');
+  try {
+    const strict=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{read:true});
+    assert.deepEqual(strict.frames,['inventory-read-refused|CodeDirectory']);assert.equal(strict.dataRead,false);
+    assert.equal(await run(f.exe,['run','pin',f.data,f.target,f.code,f.project]),'refused');
+    await assert.rejects(windowsStorageRequest('private-read',f.target,{limit:1024*1024}),/Private Windows/);
+    const result=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{installer:true,read:true,during:async()=>{
+      await assert.rejects(open(f.target,'r+'));await assert.rejects(rename(f.target,f.target+'.moved'));
+      await assert.rejects(rename(f.code,f.code+'.moved'));await assert.rejects(rename(f.anchor,f.anchor+'.moved'));
+    }});
+    assert.deepEqual(result.frames,installerReadFrames('unchanged'));assert.equal(result.sampleAccepted,true);
+    assert.equal(result.sample.sha256,createHash('sha256').update(await readFile(f.target)).digest('hex'));
+    assert.equal(typeof result.sample.pe,'object');assert.equal(result.executionAuthority,false);
+    const changed=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{installer:true,read:true,during:()=>fixtureAcl(f.target,'broad')});
+    assert.deepEqual(changed.frames,installerReadFrames('changed-or-refused'));
+    assert.equal(changed.dataRead,true);assert.equal(changed.sampleAccepted,false);assert.equal(changed.sample,undefined);
+    await fixtureAcl(f.target,'installer-control');
+    for(const control of ['c','','x']) {
+      const cancelled=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{installer:true,control});
+      assert.deepEqual(cancelled.frames,installerReadFrames(control==='x'?'control-refused':'cancelled'));assert.equal(cancelled.sampleAccepted,false);
+    }
+    await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{installer:true,terminate:true});
+    await rename(f.code,f.code+'.moved');await rename(f.code+'.moved',f.code);
+  } finally {for(const path of [f.target,f.code,f.anchor])await fixtureAcl(path,'private');}
+});
+test('Windows Installer inventory profile rejects foreign grants despite Installer and deny ACEs and rejects false SDK scope',native,async()=>{
+  const f=await imageReadFixture('installer foreign');await fixtureAcl(f.anchor,'installer-control');
+  try {
+    for(const [path,phase] of [[f.code,'CodeDirectory'],[f.target,'Image']]) {
+      await fixtureAcl(path,'installer-foreign-deny-allow');
+      try {
+        const result=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{installer:true,read:true});
+        assert.deepEqual(result.frames,['installer-read-refused|'+phase]);assert.equal(result.dataRead,false);
+        assert.equal(result.sampleAccepted,false);assert.equal(result.repeatObservation,undefined);
+        assert.equal(result.refusalObservation.assessment,'ForeignMutation');
+      } finally {await fixtureAcl(path,'private');}
+    }
+    for(const [target,root,project,phase] of [[f.target,f.code,f.code,'Input'],[join(f.code,'cmd','git.exe'),f.code,f.project,'Scope']]) {
+      const result=await installedImageRead(f.exe,f.data,target,root,project,{known:true,installer:true,read:true});
+      assert.deepEqual(result.frames,['installer-read-refused|'+phase]);assert.equal(result.dataRead,false);
+    }
+  } finally {await fixtureAcl(f.anchor,'private');}
+});
+test('Windows Installer inventory preserves hardlink, junction and active-writer refusal before bytes',native,async()=>{
+  const f=await imageReadFixture('installer object guards');
+  const inventory=()=>installedImageRead(f.exe,f.data,f.target,f.code,f.project,{installer:true,read:true});
+  const alias=join(f.code,'second-link.exe');await link(f.target,alias);
+  try {
+    const result=await inventory();assert.deepEqual(result.frames,['installer-read-refused|Image']);assert.equal(result.dataRead,false);
+  } finally {await rm(alias);}
+  const writer=await open(f.target,'r+');
+  try {
+    const result=await inventory();assert.deepEqual(result.frames,['installer-read-refused|Image']);assert.equal(result.dataRead,false);
+  } finally {await writer.close();}
+  const real=f.code+'.real';await rename(f.code,real);
+  try {
+    await symlink(real,f.code,'junction');
+    try {
+      const result=await inventory();assert.deepEqual(result.frames,['installer-read-refused|CodeDirectory']);assert.equal(result.dataRead,false);
+    } finally {await rm(f.code);}
+  } finally {await rename(real,f.code);}
+  assert.equal((await inventory()).sampleAccepted,true,'all refused attempts release partial handles');
+});
+test('Windows CI explicit Installer inventory profile obtains hashes and static imports without executable trust',{
+  ...native,skip:process.platform!=='win32'||!process.env.CODEX_MODS_CI_GIT_ROOT,
+},async t=>{
+  const root=process.env.CODEX_MODS_CI_GIT_ROOT;assert.equal(root,'C:\\Program Files\\Git');
+  const {data,exe}=await setup(),project=join(data,'Installer inventory project');await mkdir(project);
+  for(const relative of ['cmd/git.exe','mingw64/bin/git.exe']) {
+    const result=await installedImageRead(exe,data,win32.join(root,...relative.split('/')),root,project,{known:true,installer:true,read:true});
+    t.diagnostic(JSON.stringify({target:relative,...result,version:'not-queried',authenticity:'unverified',loaderClosure:'unverified',productionGateChanged:false}));
+    assert.deepEqual(result.frames,installerReadFrames('unchanged'));
+    assert.equal(result.dataRead,true);assert.equal(result.sampleAccepted,true);assert.match(result.sample.sha256,/^[a-f0-9]{64}$/);
+    assert.equal(result.executionAuthority,false);
   }
 });
 test('Windows static inventory keeps code pins across reads and refuses before bytes on unsafe code', native, async () => {
