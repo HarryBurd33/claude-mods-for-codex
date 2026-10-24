@@ -200,3 +200,18 @@ This is an explicit read-policy design, not relaxation of the original execution
 or private-data policy to force an execution pass. Production loads no profile.
 Actual new profile compilation/OS results are pending; local skipped tests do not
 establish Windows behavior. No actual Git process, system mutation or network call.
+
+## Installer-profile actual-image failure — guard preserved
+
+Source8fa1147c2ce760b2158b0e88ae7727d98781b453,
+CI40121829428 Node22 job120954870921:25 storage checks passed; process proofs
+84pass/1fail/0skip85total. The mandatory real-image positive failed on cmd/git.exe
+with installer-read-refused|Image, dataRead:false. It did not reach the second
+image. The new synthetic profile/foreign/object checks passed. No image hash,
+imports or actual execution authority was obtained. Failed run is preserved.
+
+The object guard is NOT relaxed based on a guessed cause. A new bounded post-
+refusal observation queries the retained handle for only opened/query/disk/reparse/
+directory/selected-name-match booleans and link count. It does not output paths,
+bytes or ACLs, bypass Info, accept the image or claim an atomic original cause.
+Actual results must identify the failed boundary before any object-policy decision.

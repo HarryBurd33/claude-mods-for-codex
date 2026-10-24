@@ -14,6 +14,19 @@ namespace CodexMods {
    public readonly CodeAncestorAssessment Assessment;
    public InstallerInventoryRefusal(CodeAncestorAssessment assessment) {Assessment=assessment;}
   }
+  static string ObserveInventoryImage(SafeFileHandle h,string path) {
+   // A NEW metadata sample after Info refusal. No image bytes or name output.
+   FileInfo info=new FileInfo();bool opened=!h.IsInvalid;
+   bool queried=opened && GetFileInformationByHandle(h,out info);
+   if(!queried)info=new FileInfo();
+   bool disk=opened && GetFileType(h)==1,name=false;
+   if(opened) {
+    var b=new System.Text.StringBuilder(512);uint n=GetFinalPathNameByHandleW(h,b,512,0);
+    name=n>0 && n<512 && String.Equals(b.ToString(),@"\\?\"+path,StringComparison.OrdinalIgnoreCase);
+   }
+   return "inventory-image-observed|"+(opened?1:0)+"|"+(queried?1:0)+"|"+(disk?1:0)+"|"+info.Links.ToString(System.Globalization.CultureInfo.InvariantCulture)
+    +"|"+((info.Attributes&Reparse)!=0?1:0)+"|"+((info.Attributes&Directory)!=0?1:0)+"|"+(name?1:0);
+  }
   // This composition freshly applies an explicit READ-INVENTORY policy while
   // handles are held; it never accepts an old assessment enum as authority.
   sealed class InstalledImageRead : IDisposable {
@@ -66,7 +79,9 @@ namespace CodexMods {
      }
      phase=ImageReadPhase.Image;
      var image=CreateFileW(target,GenericRead|ReadControl,1,IntPtr.Zero,3,OpenReparse,IntPtr.Zero);
-     handles.Add(image);var imageInfo=Info(image,target,false);
+     handles.Add(image);FileInfo imageInfo;
+     try {imageInfo=Info(image,target,false);}
+     catch(IOException) {if(profile==ImageReadProfile.InstallerInventory)observation=ObserveInventoryImage(image,target);throw;}
      long size=((long)imageInfo.SizeHigh<<32)|imageInfo.SizeLow;
      if(size<64 || size>32*1024*1024)throw Refuse();
      var imageBytes=CaptureSample(image,0,profile,ref observation);

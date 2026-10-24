@@ -210,7 +210,7 @@ async function installedImageRead(exe,data,target,codeRoot,project,{known=false,
     const exited=await closed;
     assert.equal(timedOut,false);assert.equal(errors,0);
     if(terminate)assert.notEqual(exited.signal,null);else assert.equal(exited.code,0);
-    let frames=output.trim().split(/\r?\n/);let repeatObservation,refusalObservation;
+    let frames=output.trim().split(/\r?\n/);let repeatObservation,refusalObservation,objectObservation;
     if(frames.length===2&&frames[1].startsWith('inventory-read-repeat|')) {
       assert.equal(installer,false,'original repeat predicate cannot explain Installer-profile decisions');
       assert.match(frames[0],/^inventory-read-refused\|(CodeDirectory|Image)$/);
@@ -222,10 +222,15 @@ async function installedImageRead(exe,data,target,codeRoot,project,{known=false,
       const m=/^installer-read-assessment\|(DescriptorPolicy|OwnerPolicy|AcePolicy|ForeignMutation)$/.exec(frames[1]);
       assert.ok(m,'closed Installer read assessment');
       refusalObservation={assessment:m[1],authority:false,atomicSnapshot:false};frames=frames.slice(0,1);
+    } else if(frames.length===2&&frames[1].startsWith('inventory-image-observed|')) {
+      assert.equal(installer,true);assert.equal(frames[0],'installer-read-refused|Image');
+      const m=/^inventory-image-observed\|([01])\|([01])\|([01])\|(0|[1-9][0-9]{0,9})\|([01])\|([01])\|([01])$/.exec(frames[1]);
+      assert.ok(m);assert.ok(Number(m[4])<=0xffffffff);
+      objectObservation={opened:m[1]==='1',queried:m[2]==='1',disk:m[3]==='1',links:Number(m[4]),reparse:m[5]==='1',directory:m[6]==='1',selectedNameMatched:m[7]==='1',authority:false,atomicCause:false};frames=frames.slice(0,1);
     }
     const accepted=frames[1]===prefix+'-unchanged'&&frames.at(-1)===prefix+'-released';
     // Never return content-derived results after changed/refused/cancelled samples.
-    return {frames,readPolicy:installer?'scoped-installer-inventory':'original-strict-code',dataRead,sampleAccepted:accepted&&dataRead,...(accepted&&dataRead?{sample}:{}),...(repeatObservation?{repeatObservation}:{}),...(refusalObservation?{refusalObservation}:{}),executionAuthority:false};
+    return {frames,readPolicy:installer?'scoped-installer-inventory':'original-strict-code',dataRead,sampleAccepted:accepted&&dataRead,...(accepted&&dataRead?{sample}:{}),...(repeatObservation?{repeatObservation}:{}),...(refusalObservation?{refusalObservation}:{}),...(objectObservation?{objectObservation}:{}),executionAuthority:false};
   } finally {
     clearTimeout(timer);if(p.exitCode===null&&p.signalCode===null)p.kill();await closed;
   }
