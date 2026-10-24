@@ -167,6 +167,135 @@ async function pinnedInventory(harness, directory, target, codeRoot, project, du
     await closed.catch(() => {}); clearTimeout(timer);
   }
 }
+// Separate read-only policy under test. No original ProgramPins fallback, Git
+// execution, signature query, raw image output or production API integration.
+async function installedImageRead(exe,data,target,codeRoot,project,{known=false,during,read=false,control='v',terminate=false}={}) {
+  const p=spawn(exe,['run',known?'known-image-read':'synthetic-image-read',data,target,codeRoot,project],{windowsHide:true,stdio:['pipe','pipe','pipe']});
+  p.stdin.on('error',()=>{});
+  const closed=new Promise((resolve,reject)=>{p.once('close',(code,signal)=>resolve({code,signal}));p.once('error',reject);});closed.catch(()=>{});
+  let output='',errors=0,timedOut=false,dataRead=false,sample;
+  const timer=setTimeout(()=>{timedOut=true;p.kill();},15000);
+  const ready=new Promise((resolve,reject)=>{
+    p.stdout.setEncoding('utf8');p.stdout.on('data',chunk=>{
+      output+=chunk;if(output.length>256){p.kill();reject(new Error('Image inventory frame bound'));}
+      else if(output.includes('\n'))resolve(output.split(/\r?\n/)[0]);
+    });
+    p.stderr.on('data',chunk=>{errors+=chunk.length;if(errors>8192)p.kill();});
+    p.once('error',reject);p.once('close',()=>reject(new Error('Image inventory readiness unavailable')));
+  });
+  try {
+    const first=await ready;
+    if(first==='inventory-read-held') {
+      if(during)await during();
+      if(read) {
+        const file=await open(target,'r');
+        try {
+          const before=await file.stat({bigint:true});
+          assert.ok(before.isFile()&&before.nlink===1n&&before.size>=64n&&before.size<=BigInt(MAX_PE_BYTES));
+          const bytes=Buffer.alloc(Number(before.size));
+          try {
+            let pos=0;while(pos<bytes.length){const {bytesRead}=await file.read(bytes,pos,bytes.length-pos,pos);assert.ok(bytesRead>0);pos+=bytesRead;}
+            assert.equal((await file.read(Buffer.alloc(1),0,1,pos)).bytesRead,0);
+            const after=await file.stat({bigint:true});
+            for(const key of ['dev','ino','size','mtimeNs','ctimeNs'])assert.equal(after[key],before[key]);
+            dataRead=true;sample={bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')};
+            try {sample.pe=peImports(bytes);}catch(e){assert.equal(e.message,'PE inventory refused');sample.pe='subset-refused';}
+          } finally {bytes.fill(0);}
+        } finally {await file.close();}
+      }
+    } else assert.match(first,/^inventory-read-refused\|(Input|Scope|Project|Ancestor|CodeDirectory|Image|Changed)$/);
+    if(terminate)p.kill();else p.stdin.end(control);
+    const exited=await closed;
+    assert.equal(timedOut,false);assert.equal(errors,0);
+    if(terminate)assert.notEqual(exited.signal,null);else assert.equal(exited.code,0);
+    const frames=output.trim().split(/\r?\n/);
+    const accepted=frames[1]==='inventory-read-unchanged'&&frames.at(-1)==='inventory-read-released';
+    // Never return content-derived results after changed/refused/cancelled samples.
+    return {frames,dataRead,sampleAccepted:accepted&&dataRead,...(accepted&&dataRead?{sample}:{}),executionAuthority:false};
+  } finally {
+    clearTimeout(timer);if(p.exitCode===null&&p.signalCode===null)p.kill();await closed;
+  }
+}
+async function imageReadFixture(name) {
+  const {data,exe}=await setup(),parent=join(data,'image read '+name);
+  const anchor=join(parent,'selected installation'),code=join(anchor,'Git'),project=join(parent,'project'),target=join(code,'original.exe');
+  for(const path of [parent,anchor,code,project])await windowsStorageRequest('prepare-directory',path);
+  await copyFile(exe,target);await fixtureAcl(target,'private');
+  return {data,exe,parent,anchor,code,project,target};
+}
+const imageReadFrames=state=>['inventory-read-held','inventory-read-'+state,'inventory-read-disposed-refused','inventory-read-released'];
+test('Windows scoped installed-image read policy samples content while original code and private-data policies still refuse',native,async()=>{
+  const f=await imageReadFixture('positive');await fixtureAcl(f.anchor,'installer-control');
+  try {
+    assert.equal(await run(f.exe,['run','pin',f.data,f.target,f.code,f.project]),'refused','original ProgramPins unchanged');
+    await assert.rejects(windowsStorageRequest('private-read',f.target,{limit:1024}),/Private Windows/);
+    const result=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{read:true,during:async()=>{
+      await assert.rejects(open(f.target,'r+'));await assert.rejects(rename(f.target,f.target+'.moved'));
+      await assert.rejects(rename(f.code,f.code+'.moved'));await assert.rejects(rename(f.anchor,f.anchor+'.moved'));
+    }});
+    assert.deepEqual(result.frames,imageReadFrames('unchanged'));assert.equal(result.sampleAccepted,true);
+    assert.equal(result.sample.sha256,createHash('sha256').update(await readFile(f.target)).digest('hex'));
+    assert.equal(typeof result.sample.pe,'object');assert.equal(result.executionAuthority,false);
+    const writer=await open(f.target,'r+');await writer.close();
+  } finally {await fixtureAcl(f.anchor,'private');}
+});
+test('Windows scoped image read rule does not propagate Installer or foreign mutation trust to code children or images',native,async()=>{
+  const f=await imageReadFixture('negative');await fixtureAcl(f.anchor,'installer-control');
+  try {
+    for(const [path,mode,phase] of [[f.code,'installer-control','CodeDirectory'],[f.target,'installer-code-write','Image'],[f.target,'deny-code-write','Image']]) {
+      await fixtureAcl(path,mode);
+      try {
+        const result=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{read:true});
+        assert.deepEqual(result.frames,['inventory-read-refused|'+phase]);assert.equal(result.dataRead,false);assert.equal(result.sampleAccepted,false);
+      } finally {await fixtureAcl(path,'private');}
+    }
+    await fixtureAcl(f.anchor,'code-write');
+    try {assert.deepEqual((await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{read:true})).frames,['inventory-read-refused|Ancestor']);}
+    finally {await fixtureAcl(f.anchor,'installer-control');}
+  } finally {await fixtureAcl(f.anchor,'private');}
+});
+test('Windows installed-image known scope cannot be supplied by a synthetic path or overlapping project',native,async()=>{
+  const f=await imageReadFixture('scope');
+  for(const known of [false,true]) {
+    const result=await installedImageRead(f.exe,f.data,f.target,f.code,f.code,{known,read:true});
+    assert.deepEqual(result.frames,['inventory-read-refused|Input']);assert.equal(result.dataRead,false);
+  }
+  const result=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{known:true,read:true});
+  assert.deepEqual(result.frames,['inventory-read-refused|Scope']);assert.equal(result.dataRead,false);
+});
+test('Windows scoped installed-image read detects descriptor changes and releases partially acquired handles',native,async()=>{
+  const f=await imageReadFixture('changed');await fixtureAcl(f.anchor,'installer-control');
+  try {
+    const changed=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{during:()=>fixtureAcl(f.target,'broad')});
+    assert.deepEqual(changed.frames,imageReadFrames('changed-or-refused'));assert.equal(changed.sampleAccepted,false);assert.equal(changed.sample,undefined);
+    await fixtureAcl(f.target,'private');await fixtureAcl(f.code,'installer-control');
+    try {assert.deepEqual((await installedImageRead(f.exe,f.data,f.target,f.code,f.project)).frames,['inventory-read-refused|CodeDirectory']);}
+    finally {await fixtureAcl(f.code,'private');}
+    await rename(f.anchor,f.anchor+'.moved');await rename(f.anchor+'.moved',f.anchor);
+    await rename(f.target,f.target+'.moved');await rename(f.target+'.moved',f.target);
+  } finally {await fixtureAcl(f.target,'private');await fixtureAcl(f.code,'private');await fixtureAcl(f.anchor,'private');}
+});
+test('Windows installed-image inventory cancel, EOF, invalid control and owner death release all pins',native,async()=>{
+  const f=await imageReadFixture('cancel');
+  for(const control of ['c','','x']) {
+    const result=await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{control});
+    assert.deepEqual(result.frames,imageReadFrames(control==='x'?'control-refused':'cancelled'));assert.equal(result.sampleAccepted,false);
+    await rename(f.code,f.code+'.moved');await rename(f.code+'.moved',f.code);
+  }
+  await installedImageRead(f.exe,f.data,f.target,f.code,f.project,{terminate:true});
+  await rename(f.anchor,f.anchor+'.moved');await rename(f.anchor+'.moved',f.anchor);
+});
+test('Windows CI known installed Git images get read-only scoped inventory without executable admission',{
+  ...native,skip:process.platform!=='win32'||!process.env.CODEX_MODS_CI_GIT_ROOT,
+},async t=>{
+  const root=process.env.CODEX_MODS_CI_GIT_ROOT;assert.equal(root,'C:\\Program Files\\Git');
+  const {data,exe}=await setup(),project=join(data,'scoped inventory project');await mkdir(project);
+  for(const relative of ['cmd/git.exe','mingw64/bin/git.exe']) {
+    const result=await installedImageRead(exe,data,win32.join(root,...relative.split('/')),root,project,{known:true,read:true});
+    t.diagnostic(JSON.stringify({target:relative,...result,version:'not-queried',authenticity:'unverified',loaderClosure:'unverified',productionGateChanged:false}));
+    assert.equal(result.dataRead,result.sampleAccepted);
+  }
+});
 test('Windows static inventory keeps code pins across reads and refuses before bytes on unsafe code', native, async () => {
   const {data,exe} = await setup(), code = join(data,'inventory code'), project = join(data,'inventory project');
   await windowsStorageRequest('prepare-directory',code); await mkdir(project);

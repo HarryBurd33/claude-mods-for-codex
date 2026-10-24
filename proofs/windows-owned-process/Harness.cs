@@ -136,6 +136,11 @@ public static class Harness {
      Console.WriteLine("released");
     } catch(IOException){Console.WriteLine("refused|"+CodexMods.PrivateStorage.ProgramPinDiagnosisProof(a[3],a[4],a[5]));}return 0;
    }
+   if(mode=="known-image-read" || mode=="synthetic-image-read") {
+    if(mode=="known-image-read")CodexMods.PrivateStorage.KnownInstalledImageReadHarnessProof(a[3],a[4],a[5]);
+    else CodexMods.PrivateStorage.SyntheticInstalledImageReadHarnessProof(a[3],a[4],a[5]);
+    return 0;
+   }
    if(mode=="scratch") {
     using(var scratch=new CodexMods.PrivateStorage.ScratchProof(directory)) {
      Console.WriteLine(B64(scratch.Path));Console.Out.Flush();Console.In.ReadLine();
