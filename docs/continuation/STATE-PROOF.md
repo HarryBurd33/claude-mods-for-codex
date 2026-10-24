@@ -3,7 +3,7 @@
 Source20 adds bounded progress-aware POSIX acquisition (1000ms idle/2500ms total),
 with original exclusive mkdir/metadata/privacy/retention policy. Controlled latency
 case before17/32completed versus after32/32; exact prior CI stall cause unproved.
-Uninstalled; CI candidate pending. See [DEV20 review](DEV20-REVIEW.md). Earlier
+Uninstalled; CI40069749825 all7passed, actual4POSIX logs each186pass/0fail/86Win-skips. See [DEV20 review](DEV20-REVIEW.md). Earlier
 first-proof contract/results below are historical, not current install evidence.
 
 Historical first synthetic state checkpoint. Current source7 integration, real

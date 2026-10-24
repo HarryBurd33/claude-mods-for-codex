@@ -87,7 +87,15 @@ node --test test/state-lock-budget.test.mjs:3pass/0fail/0skip.
 Targeted state/journal/scheduler/latency suite before extra guard test:30pass/0fail/
 1Windows-only skip31total. Final npm test186pass/0fail/86Windows-only skips272total;
 validate3mods/replay4fixtures, diff-check clean. Host macOS14.6/Node24.22.0/npm11.19.1.
-Windows CI candidate pending upload; no native Windows/host/producer-health claim.
+Source [14091a2](https://github.com/HarryBurd33/claude-mods-for-codex/commit/14091a2a437ea56716c6d77e647367a457370fef),
+[CI40069749825](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40069749825):
+all4full POSIX lanes passed; actual decoded Ubuntu22/24 and macOS22/24 logs read,
+each186pass/0fail/86Windows-only skips272total. Original8×4, new slow-sync32, idle/
+total bounds and unsafe-lock cases passed. All7job conclusions read success, including Windows portable and both Windows OS
+lanes. Windows observations here are conclusions only, no new OS counts/native claim. Prior failure remains, exact old CI delay
+cause unproved. Installed10/logging/trust/Windows gates unchanged; source20 uninstalled.
+
+No updated native-hook/Windows host/producer-health claim.
 
 ## Primary evidence and inaccessible source
 
@@ -119,3 +127,48 @@ loader/signature/config/repository/ignore/writer and all native Windows11 gaps a
 recorded in DEV19-REVIEW. Windows11 latest unavailable; do not ask again yet.
 After actual CI verification checkpoint/upload/readback, stop for human Sol Medium
 for packaging. Further gated Windows security requires High, not silent activation.
+
+## Observed candidate identity and POSIX CI results
+
+Tested14091a2a437ea56716c6d77e647367a457370fef,
+treed5b44ddba6e89b097316b7b135a9f108810c5d39. Expected-parent/nonforce upload,
+fetched full-tree equality/anonymous ls-remote verified. Equivalent local
+23dbde676b843ae9916a8ee87a47c060032e1988 retained on
+codex/dev20-state-progress-local-checkpoint.
+
+Actual decoded job logs read:
+
+- 120800434553 Ubuntu24,186pass/0fail/86skips; original32case246.55ms,
+ slow-sync32case2260.20ms, unchanged held-lock refusal1007.02ms.
+- 120800434738 Ubuntu22,186pass/0fail/86skips; original/new32/bounds/guard cases pass.
+- 120800434595 macOS24,186pass/0fail/86skips; original32case312.05ms,
+ slow-sync32case2560.90ms, held-lock refusal1012.41ms.
+- 120800434648 macOS22,186pass/0fail/86skips; original/new32/bounds/guard cases pass.
+
+Images Ubuntu24.04 version20261012.334.1 and macOS26-arm64 version20261013.0424.1.
+The slow-sync case time includes all children/records/fixture work; it is not an
+individual acquisition measurement or evidence of a universal method deadline.
+Windows portable scheduler test is a clock simulation, not Windows storage support.
+Windows OS jobs120800434393(Node24)/120800434577(Node22) concluded success;
+conclusions only, no new decoded OS counts/mapping branch/native-host claim.
+No failed-run retry. Exact old host stall cause remains unproved even though the
+reproduced contention class and original regression pass at this new source.
+
+Installed149files/settings hash freshly unchanged, all93identities/order retained.
+No production Windows/proof or journal/hook/config/UI changes. No install/trust/
+logging/client/native/model/API-run change. Final notes-only local/verified remote
+identity is recorded after actual readback in reply/latest ignored handoff.
+
+## Final checkpoint decision
+
+All7CI40069749825jobs passed on the first candidate. Four POSIX logs read as
+above; Windows conclusions are separate from native Windows acceptance. No manual
+CI retry/fix or deletion of old failure. Installed149files/private settings hash
+freshly unchanged; all93requirement identities/order retained. Runtime diff is
+limited to POSIX state acquisition and its pure budget helper plus MCP version20;
+journal/hook/Windows/proof code unchanged. Public data/permission/logging contracts
+unchanged; no installed updated hook observation claimed.
+
+High milestone leaves routine source20 packaging. Next human GPT-6.1 Sol Medium;
+High required before new state/security or gated Windows changes. Save/upload/
+independently verify notes first, then stop without background continuation.

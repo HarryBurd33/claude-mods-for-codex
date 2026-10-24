@@ -1,6 +1,6 @@
 # Requirements ledger
 
-## Source20 High candidate — bounded POSIX state contention — 2026-10-24
+## Source20 High checkpoint — bounded POSIX state contention — 2026-10-24
 
 Human resumed verifiedf500868 on GPT-6.1 Sol High. Source20 uninstalled; installed
 human-trusted dev10/cache149files/private settings/logging scope unchanged. Full93
@@ -9,8 +9,14 @@ from17completed/17retained with4busy children before to32/32with0busy after. Exa
 old CI scheduling cause remains unproved and its failure preserved. Acquisition
 keeps1000ms idle refusal and allows validated object handoffs up to2500ms total;
 no lock stealing, event retry, skipped sync or weakened32-record assertion.
-Local186pass/0fail/86Windows-only skips272total; validate3/replay4. CI candidate
-pending upload. See [DEV20 review](DEV20-REVIEW.md); earlier records below remain version-specific.
+Local186pass/0fail/86Windows-only skips272total; validate3/replay4. Source [14091a2](https://github.com/HarryBurd33/claude-mods-for-codex/commit/14091a2a437ea56716c6d77e647367a457370fef),
+[CI40069749825](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40069749825):
+all4full POSIX lanes passed; actual decoded Ubuntu22/24 and macOS22/24 logs read,
+each186pass/0fail/86Windows-only skips272total. Original8×4, new slow-sync32, idle/
+total bounds and unsafe-lock cases passed. All7job conclusions read success, including Windows portable and both Windows OS
+lanes. Windows observations here are conclusions only, no new OS counts/native claim. Prior failure remains, exact old CI delay
+cause unproved. Installed10/logging/trust/Windows gates unchanged; source20 uninstalled.
+ See [DEV20 review](DEV20-REVIEW.md); earlier records below remain version-specific.
 
 
 ## Source19 Medium package verification — 2026-10-24
@@ -304,7 +310,7 @@ issues are reports/leads, not reproductions by this project.
 | SEC-06 Do not collect secrets/environment values | Environment/settings/process access exists | Treat inherited env as sensitive, do not enumerate credentials | All | C-DEV; CX-H; User instruction | deliberately excluded by policy | No credential-store search or secret telemetry | Synthetic secret env/input values do not appear in public logs, reports or UI; minimal configured env | Need only availability flags if justified, never secret values |
 | SEC-07 Keep prompts/transcripts private | Session/message APIs | Explicit sanitized exported input only where feature needs it | All | C-EVT; CX-H; CX-RUN; LOCAL | supported | No private session discovery; changes adapter reads explicit selected Git working tree, patch text only when opted in | Preserve privacy fixtures, verify default metadata-only changes and no session-path reads in production host | Git patches may contain secrets even when sensitive filenames are excluded; review opt-in/scope separately |
 | SEC-08 Opt in to metadata and sensitive telemetry separately | Store/event handlers | Default-off journal/state; stronger consent for content capture | NodeMac; CLI163/Desk | C-EVT; LOCAL | supported | Existing default-off/session metadata; explicit project aggregate and patch/export opt-ins preserved; new observer names default absent | Dev4 count4 unchanged after parent-chat tests; dev5 observer default-off/no-write/scope tests pass | Optional observer hook reception can contain sensitive payload in memory; registration/storage reviewed separately |
-| SEC-09 Preserve private storage under concurrency | Store persistence lacks general transaction guarantee | Private POSIX root, owned locks, bounded append/prune | NodeMac; POSIX-CI; Windows Server2025 NTFS-CI (Node22/24) | C-EVT; LOCAL STATE-PROOF | supported | Original journal/state plus source7 handle/ACL adapter/public APIs/bounded hook lane; source9 corrects directory sharing pins and bounds transient sharing retries | Concurrent writes, private ACL/refusal/link/retention/owned-tree tests on real Windows CI; native client acceptance separate | Hostile same-user/administrator outside claim; Windows project/restore unavailable pending separate gates  Latest38848a8 CI40068264694 Ubuntu24 independent-writer busy failure unresolved; High reliability review pending, no guarantee of32-record contention success from local pass alone |
+| SEC-09 Preserve private storage under concurrency | Store persistence lacks general transaction guarantee | Private POSIX root, owned locks, bounded append/prune | NodeMac; POSIX-CI; Windows Server2025 NTFS-CI (Node22/24) | C-EVT; LOCAL STATE-PROOF | supported | Original journal/state plus source7 handle/ACL adapter/public APIs/bounded hook lane; source9 corrects directory sharing pins and bounds transient sharing retries | Concurrent writes, private ACL/refusal/link/retention/owned-tree tests on real Windows CI; native client acceptance separate | Hostile same-user/administrator outside claim; Windows project/restore unavailable pending separate gates  38848a8 CI40068264694 busy failure retained; source20 conditional1000ms idle/2500ms total budget fixes controlled active-contention class,4POSIX lanes pass original32+slow32; exact old CI stall cause unproved, arbitrary-load success not guaranteed |
 | SEC-10 Maintain UI accessibility and lifecycle | Host UI components and callbacks | Semantic HTML, focus/keyboard, teardown, bounded requests | UIhost; NodeMac simulation | C-UI; CX-UI; LOCAL | supported | Native dev6 controls/chart/table/diff and preview labels/tables/Clear observed; teardown source removal tested in simulation | Synthetic transport/teardown/privacy tests and browser preview pass; one preview keyboard path/narrower-wider usability human-confirmed; source10 focus sequence passed natively; full keyboard/screen-reader/close-pending remain | Browser preview does not establish Codex accessibility or memory erasure |
 
 ## Practical collection and original skills

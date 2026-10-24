@@ -1,6 +1,6 @@
 # Claude Mods for Codex
 
-## Source20 High candidate — bounded POSIX state contention — 2026-10-24
+## Source20 High checkpoint — bounded POSIX state contention — 2026-10-24
 
 Human resumed verifiedf500868 on GPT-6.1 Sol High. Source20 uninstalled; installed
 human-trusted dev10/cache149files/private settings/logging scope unchanged. Full93
@@ -9,8 +9,14 @@ from17completed/17retained with4busy children before to32/32with0busy after. Exa
 old CI scheduling cause remains unproved and its failure preserved. Acquisition
 keeps1000ms idle refusal and allows validated object handoffs up to2500ms total;
 no lock stealing, event retry, skipped sync or weakened32-record assertion.
-Local186pass/0fail/86Windows-only skips272total; validate3/replay4. CI candidate
-pending upload. See [DEV20 review](docs/continuation/DEV20-REVIEW.md); earlier records below remain version-specific.
+Local186pass/0fail/86Windows-only skips272total; validate3/replay4. Source [14091a2](https://github.com/HarryBurd33/claude-mods-for-codex/commit/14091a2a437ea56716c6d77e647367a457370fef),
+[CI40069749825](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40069749825):
+all4full POSIX lanes passed; actual decoded Ubuntu22/24 and macOS22/24 logs read,
+each186pass/0fail/86Windows-only skips272total. Original8×4, new slow-sync32, idle/
+total bounds and unsafe-lock cases passed. All7job conclusions read success, including Windows portable and both Windows OS
+lanes. Windows observations here are conclusions only, no new OS counts/native claim. Prior failure remains, exact old CI delay
+cause unproved. Installed10/logging/trust/Windows gates unchanged; source20 uninstalled.
+ See [DEV20 review](docs/continuation/DEV20-REVIEW.md); earlier records below remain version-specific.
 
 
 ## Source19 Medium package verification — 2026-10-24
