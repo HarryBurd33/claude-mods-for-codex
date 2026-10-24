@@ -1,5 +1,23 @@
 # Claude Mods for Codex
 
+**Full 93-capability product remains incomplete. Source 0.2.0-dev.18 is
+uninstalled; installed human-trusted dev10 and logging scope remain unchanged.**
+Human selected GPT-6.1 Sol High from verified 7848c97.
+
+Source18 adds a proof-only, read-only installed-code inventory and original bounded
+static PE import parser. It never runs Git or loads its DLLs. Two fixed Windows CI
+Git paths are read only after the existing object pins succeed; a refusal records
+no content read. Static imports/hashes are inventory, not authenticity, actual DLL
+resolution, execution safety or native Windows11 Codex acceptance. Every production
+Windows settings/project/Git/restore gate remains closed before IO.
+
+Local `npm test`: 178 passed, 0 failed, 84 Windows-only skips (262 total).
+`npm run validate`: 3 mods; `npm run replay`: 4 fixtures. Windows CI evidence is
+pending this candidate upload. No compatibility upgrade is claimed. See
+[Source18 review](docs/continuation/DEV18-REVIEW.md) for contracts and remaining security work.
+
+## Prior source17 checkpoint (historical)
+
 **Full93-capability product incomplete. Development source0.2.0-dev.17 is
 uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
 Human resumed GPT-6.1 Sol High from verifiedb67f98a.

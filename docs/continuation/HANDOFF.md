@@ -1,3 +1,32 @@
+# Source18 High candidate — Windows code inventory
+
+2026-10-23. Human resumed GPT-6.1 Sol High from verified7848c97 on
+codex/astra-groundwork. Full93product incomplete; no model-switch stop yet.
+Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, DEV18-REVIEW.md,
+../windows-storage.md, ../windows-native-acceptance.md and ignored root HANDOFF.md.
+
+Original proof-only static PE parser/retained-pin inventory added; never execute
+Git/load DLLs or change production gates. Exact contracts/bounds/primary evidence
+and local commands/outcomes are in DEV18-REVIEW. Local178pass/0fail/84Windows-only
+skips262total; validate3/replay4. Windows CI candidate upload pending. Preserve all
+historical source17 evidence/limits below; no result inferred from portable tests.
+
+Installed human-trusted10/cache149files and private settings hash freshly unchanged;
+no logging/trust/cache/config/observer/theme/client/model/API run changes. Current
+chat outside selected child. Source18 uninstalled. Windows11 latest reply unavailable;
+do not repeat availability question. All93IDs retained. Native compatibility
+unverified. No machine change needs rollback; remove new uninstalled source/fixtures.
+
+High next: upload safe candidate/nonforce verified-parent, read actual Windows job
+logs including inventory outcomes, correct any concrete issue without policy
+weakening, save final verified records. Then stop for human GPT-6.1 Sol Medium for
+packaging only. No internal/delegated/background continuation at model switch.
+Production Windows settings/project/Git/restore before-IO gates unchanged. No extra
+model run or native trust action is authorized. If resume interrupted, inspect Git
+and ignored handoff for actual candidate remote/CI identity before repeating work.
+
+## Earlier source17 handoff — historical
+
 # Source17 package checkpoint — next Sol High
 
 2026-10-23. Human-selected GPT-6.1 Sol High from verifiedb67f98a on

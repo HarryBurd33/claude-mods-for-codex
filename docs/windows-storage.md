@@ -1,4 +1,10 @@
-# Windows private storage — source17 proof / unchanged production boundary
+# Windows private storage — source18 inventory / unchanged production boundary
+
+Source18 adds only a read-only installed-code/static import inventory behind existing
+object pins. No Git execution, DLL loading or production gate change. Windows CI
+pending candidate upload; native Windows11 remains unverified. See
+[review](continuation/DEV18-REVIEW.md). Installed10/logging/human trust unchanged.
+Earlier source17 and older versioned foundations follow.
 
 Source17 adds only an isolated fixed-fixture metadata/helper job composition,
 not a production launcher or gate change. Four-second child budget excludes

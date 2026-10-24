@@ -7,6 +7,7 @@ import { join, win32 } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { windowsStorageRequest } from '../src/windows-storage.mjs';
+import { peImports, MAX_PE_BYTES } from '../proofs/windows-owned-process/pe-imports.mjs';
 
 // Real Windows OS tests only. No mocked paths, model calls, Codex installation,
 // production API integration, user project traversal or executable-trust claim.
@@ -110,6 +111,93 @@ async function fixtureAcl(path, mode) {
     p.stdin.end(JSON.stringify({path,mode}).replace(/[^\x00-\x7f]/g,c=>`\\u${c.charCodeAt(0).toString(16).padStart(4,'0')}`)+'\n');
   });
 }
+async function pinnedInventory(harness, directory, target, codeRoot, project, during) {
+  const p = spawn(harness, ['run','inventory-pin',directory,target,codeRoot,project], { windowsHide:true, stdio:['pipe','pipe','pipe'] });
+  p.stdin.on('error', () => {}); // Refusal may close before the owner sends EOF.
+  const closed = new Promise((resolve,reject) => { p.once('close',resolve); p.once('error',reject); });
+  let text = '', errors = 0, timedOut = false;
+  const timer = setTimeout(() => { timedOut = true; p.kill(); }, 15000);
+  const ready = new Promise((resolve,reject) => {
+    p.stdout.setEncoding('utf8');
+    p.stdout.on('data', value => {
+      text += value;
+      if (text.length > 128) { p.kill(); reject(new Error('Inventory frame bound')); }
+      else if (text.includes('\n')) resolve(text.split(/\r?\n/)[0]);
+    });
+    p.stderr.on('data', value => { errors += value.length; if (errors > 8192) p.kill(); });
+    p.once('error',reject);
+    p.once('close', () => reject(new Error('Inventory readiness unavailable')));
+  });
+  // Ensure asynchronous process failure has a handler even during file IO.
+  closed.catch(() => {});
+  let result;
+  try {
+    const status = await ready;
+    assert.ok(['pinned','refused'].includes(status));
+    if (status === 'refused') result = { pin:'refused', dataRead:false };
+    else {
+      if (during) await during();
+      const file = await open(target, 'r');
+      try {
+        const before = await file.stat({ bigint:true });
+        assert.ok(before.isFile() && before.nlink === 1n && before.size >= 64n && before.size <= BigInt(MAX_PE_BYTES), 'Bounded regular pinned image');
+        const bytes = Buffer.alloc(Number(before.size));
+        try {
+          let pos = 0;
+          while (pos < bytes.length) {
+            const { bytesRead } = await file.read(bytes, pos, bytes.length - pos, pos);
+            assert.ok(bytesRead > 0, 'Pinned image truncated'); pos += bytesRead;
+          }
+          assert.equal((await file.read(Buffer.alloc(1), 0, 1, pos)).bytesRead, 0, 'Pinned image grew');
+          const after = await file.stat({ bigint:true });
+          for (const key of ['dev','ino','size','mtimeNs','ctimeNs']) assert.equal(after[key], before[key], 'Pinned image metadata changed');
+          result = { pin:'held', dataRead:true, bytes:bytes.length, sha256:createHash('sha256').update(bytes).digest('hex') };
+          try { result.pe = peImports(bytes); }
+          catch (error) { assert.equal(error.message, 'PE inventory refused'); result.pe = 'subset-refused'; }
+        } finally { bytes.fill(0); }
+      } finally { await file.close(); }
+    }
+    if (status === 'pinned') p.stdin.end('\n');
+    assert.equal(await closed, 0); assert.equal(errors, 0); assert.equal(timedOut, false);
+    assert.equal(text.replace(/\r/g,'').trim(), result.pin === 'held' ? 'pinned\nreleased' : 'refused');
+    return result;
+  } finally {
+    if (p.exitCode === null) p.kill();
+    await closed.catch(() => {}); clearTimeout(timer);
+  }
+}
+test('Windows static inventory keeps code pins across reads and refuses before bytes on unsafe code', native, async () => {
+  const {data,exe} = await setup(), code = join(data,'inventory code'), project = join(data,'inventory project');
+  await windowsStorageRequest('prepare-directory',code); await mkdir(project);
+  const target = join(code,'original.exe'); await copyFile(exe,target); await fixtureAcl(target,'private');
+  const value = await pinnedInventory(exe,data,target,code,project,async () => {
+    await assert.rejects(open(target,'r+'));
+    await assert.rejects(rename(target,target+'.moved'));
+    await assert.rejects(rename(code,code+'.moved'));
+  });
+  assert.equal(value.pin,'held'); assert.equal(value.dataRead,true);
+  assert.equal(value.sha256,createHash('sha256').update(await readFile(target)).digest('hex'));
+  assert.equal(typeof value.pe,'object'); // independently compiled original CLR PE
+  const write = await open(target,'r+'); await write.close();
+  await fixtureAcl(target,'code-write');
+  assert.deepEqual(await pinnedInventory(exe,data,target,code,project),{pin:'refused',dataRead:false});
+  await fixtureAcl(target,'private');
+});
+test('Windows CI installed Git object and static import inventory (no Git execution or loader claim)', {
+  ...native, skip:process.platform !== 'win32' || !process.env.CODEX_MODS_CI_GIT_ROOT,
+}, async t => {
+  // Explicit CI root from official runner setup. No PATH search, project binary,
+  // recursive traversal, ACL repair, environment/credential dump or native claim.
+  const root = process.env.CODEX_MODS_CI_GIT_ROOT;
+  assert.equal(root,'C:\\Program Files\\Git');
+  const {data,exe} = await setup(), project = join(data,'CI inventory project'); await mkdir(project);
+  for (const relative of ['cmd/git.exe','mingw64/bin/git.exe']) {
+    const value = await pinnedInventory(exe,data,win32.join(root,...relative.split('/')),root,project);
+    t.diagnostic(JSON.stringify({target:relative,...value,version:'not-queried',authenticity:'unverified',loaderClosure:'unverified'}));
+    // A policy refusal is evidence, never suppressed or counted as Git trusted.
+    assert.equal(value.dataRead,value.pin === 'held');
+  }
+});
 test('Windows executable-pin proof rejects project code, foreign writes, links, aliases and mutable code directory',native,async()=>{
   const {data,exe}=await setup(), code=join(data,'reviewed code'), project=join(data,'selected project');
   await windowsStorageRequest('prepare-directory',code);await mkdir(project);

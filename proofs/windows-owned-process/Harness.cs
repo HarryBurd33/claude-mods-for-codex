@@ -112,6 +112,16 @@ public static class Harness {
     try {using(var pin=new CodexMods.PrivateStorage.ProgramPins(a[3],a[4],a[5]))Console.WriteLine("pinned");}
     catch(IOException){Console.WriteLine("refused");}return 0;
    }
+   if(mode=="inventory-pin") {
+    // Test-only retained object boundary. No image loading, version query, Git
+    // execution or content read here. Parent reads only after this readiness.
+    try {
+     using(var pin=new CodexMods.PrivateStorage.ProgramPins(a[3],a[4],a[5])) {
+      Console.WriteLine("pinned");Console.Out.Flush();Console.In.ReadLine();
+     }
+     Console.WriteLine("released");
+    } catch(IOException){Console.WriteLine("refused");}return 0;
+   }
    if(mode=="scratch") {
     using(var scratch=new CodexMods.PrivateStorage.ScratchProof(directory)) {
      Console.WriteLine(B64(scratch.Path));Console.Out.Flush();Console.In.ReadLine();

@@ -1,5 +1,10 @@
 # Later Windows native acceptance kit
 
+Source18 adds only an uninstalled CI read-only code/import inventory, not a Windows11
+Codex installation or execution result. Static hashes/import names never establish
+loader provenance or permit opening production gates. See
+[review](continuation/DEV18-REVIEW.md); earlier native checklist remains applicable.
+
 Prepared2026-10-23 from official documentation retrieved that day. This is a
 checklist, not a Windows compatibility result or an installation script. Source9
 OS CI passed20storage+8proof tests on each Windows Server2025 Node22/24 lane;

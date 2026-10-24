@@ -1,5 +1,16 @@
 # Requirements ledger
 
+## Source18 High candidate — static installed-code inventory — 2026-10-23
+
+Human resumed verified7848c97 on GPT-6.1 Sol High. Original proof-only PE parser
+and retained-pin inventory, never Git execution/DLL loading or production activation.
+Local178pass/0fail/84Windows-only skips262total; validate3/replay4. Windows CI
+pending upload. Source18 uninstalled; installed human-trusted10/cache149files and
+private settings hash freshly unchanged, logging scope preserved. All93IDs retained;
+PL-04 native Windows remains unverified. See [DEV18 review](DEV18-REVIEW.md).
+Source17 and earlier results below remain version-specific historical evidence.
+
+
 ## Source17 Medium package verification — 2026-10-23
 
 Human resumed0021f01/treef84a8a9 on GPT-6.1 Sol Medium. Exact anonymous clean
