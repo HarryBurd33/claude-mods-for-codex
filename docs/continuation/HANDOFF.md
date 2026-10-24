@@ -1,4 +1,4 @@
-# Source14 security checkpoint — next Sol Medium
+# Source14 package checkpoint — next Sol High
 
 2026-10-23, human-selected GPT-6.1 Sol High resumed verified5016e11 on
 codex/astra-groundwork. Full93-capability product incomplete. Original source14
@@ -8,7 +8,8 @@ remains unavailable per latest reply; do not repeat that availability question.
 
 ## Read first
 
-Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, DEV14-REVIEW.md,
+Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md, PACKAGE-DEV14.md,
+DEV14-REVIEW.md,
 DEV13-REVIEW.md, PACKAGE-DEV13.md, ../windows-storage.md,
 ../windows-native-acceptance.md, ../native-acceptance.md,
 ../../proofs/windows-owned-process/README.md and latest ignored root HANDOFF.md.
@@ -78,40 +79,75 @@ dev6 plus supported plugin add, verify125files, human changed-code review/restar
 Never restore whole shared config; keep settings/data separate and live locks intact.
 Private paths/backups remain in ignored root HANDOFF.md.
 
-## Next tasks in order — Medium only
+## Completed Medium checks
 
-1. Verify exact public checkpoint via anonymous clone and tree match. Inspect
-   source14 package allowlist/all bytes, MIT/version14, no links/traversal/private
-   roots/case collisions/dependencies/root portable manifest. Do not install it.
-2. Run full offline suite in exact public clone; report170portable pass/55Windows-
-   only skips if observed, not Windows success. From reviewed spaced-path archive
-   extraction run validate/replay and package/scaffold tests. Preserve versioned
-   original/final archive hashes if notes change archive bytes; no self-hash claims.
-3. Reconcile README/PUBLIC_STATUS/current continuation summary, all93ledger IDs,
-   source/CI/OS/native distinctions and proof limitations. Earlier failure history
-   stays in TEST-LOG. Read-only installed10 inventory only if useful, no new turn.
-4. Save/upload/independently read back precise handoff. Stop for human-selected High
-   before any further Windows security contract/integration, real Git provenance/
-   executable/DLL/ignore/same-helper execution, settings/project gate activation,
-   cleanup protocol change or separate restore writer. Native Windows11 later needs
-   read-only inventory first; no guessed PATH Git, downloads or system repair.
+Human resumed verified1e1e4d1e51bd5bde1aef4cc2aec3983975c57180/
+tree00ac9bb90559cf8635980f2f959f9b244c453105. Anonymous clean public clone/full
+suite170pass/0fail/55Windows-only skips225total. Reviewed160-file archive
+1,066,360unpacked/324,060compressed bytes, SHA256
+ a4bc1abbde2cdd6a81fdee277a6c8bfe36e4f895891a1bc88531cc9701cdf69f.
+All packaged bytes equal exact clone/workspace; hygiene/MIT/version14/default-off
+storage checks pass. Fresh spaced extraction validate3mods/replay4fixtures and
+package/scaffolding7pass/0fail/0skip. macOS14.6/Node24.22.0/npm11.19.1.
+NotesCI40060117302 all7job conclusions read success; no new native-count/branch
+claim. Proof sourcec369f49/CI40059849695 actual OS evidence remains separate.
+
+Installed10 cache still149reviewed files, private settings hash unchanged. Prior
+High inventory/activity version-specific observations retained; no new native event/
+trust/UI claim in Medium. No install/config/cache/logging/trust/model-run or gated-
+code change. All93IDs kept. See PACKAGE-DEV14. Following notes-only artifact will
+be rebuilt/read back once after upload; actual final commit/hash in reply/latest
+ignored handoff. No self-hash or repeated full suite solely for changed notes.
+
+## Next tasks in order — High only
+
+1. Read DEV14-REVIEW and preserve source14's scope: positive selected synthetic
+   index/exclude objects only, not discovered/coherent repository state. Caller
+   HEAD is unverified; omitted files make no absence assertion. Five-second checks
+   cannot interrupt kernel IO; future outer owned-helper deadline required. Scratch
+   still preserves unknown content/live-reader retention; no recursive cleanup.
+2. Choose one concrete remaining prerequisite for integration: repository metadata
+   provenance/freshness and safe fixed-layout interpretation, ignore-aware selected
+   reads, reviewed executable/dependency/loader trust or owned-helper execution
+   composition. Do not repeat packaging or unrelated research. Real Git/parser/
+   reader/write/temp/lock behavior is unverified. No private bytes in argv/env/logs;
+   existing32KiB/3MiB bridge unchanged. Source14 solves only same-helper transfer.
+3. Windows11 host remains unavailable per latest human reply. Do not repeat its
+   availability question until a state change or actual inventory is needed.
+   Independent synthetic High proofs can continue; actual native acceptance stays
+   incomplete. Later read-only host kit inventory precedes executable decisions;
+   no guessed PATH/project Git, binary downloads/system repair/sandbox setup,
+   credential/env dump, model prompt or policy override as inventory.
+4. Keep Windows settings/project/Git/restore before-IO gates until each security/
+   OS/native acceptance passes. Restore is a separate explicit writer requiring
+   identity/content conflict, metadata/interruption/concurrency and ordinary host
+   permissions. Mapping byte/mtime negative branch and8.3 witness remain unverified.
+5. Preserve installed10/human trust and exact private settings/data/project/scope/
+   retention/export. No additional model/API run, trust automation, expanded logging,
+   optional observer/theme/client change, whole-project copy or major custom-client/
+   fork direction authorized. Keep all93requirements incomplete as applicable.
+6. Stop for human-selected Medium when the next meaningful security/integration
+   milestone leaves routine packaging/docs/acceptance: save/upload/independently
+   read back the exact checkpoint first. No internal delegation/background model
+   switching. If a hard architectural problem exceeds High, checkpoint for Astra.
 
 ## Exact next model and complete resume instruction
 
-**GPT-6.1 Sol, Medium.** Remaining immediate work is routine exact-source packaging
-and public-clone verification. Gated Windows reasoning returns to human High.
-No user trust/restart step needed for uninstalled proof source.
+**GPT-6.1 Sol, High.** Source14 packaging is complete. Remaining Windows security/
+integration requires High; source14 stays uninstalled. No human trust/restart step
+needed for these source/package documentation records. Full product incomplete.
 
-> I switched to GPT-6.1 Sol, Medium. Continue from the verified source14 checkpoint
-> on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
-> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV14-REVIEW.md, PACKAGE-DEV13.md,
+> I switched to GPT-6.1 Sol, High. Continue from the verified source14 package
+> checkpoint on codex/astra-groundwork. Read docs/continuation/{STATUS,REQUIREMENTS,
+> ARCHITECTURE,TEST-LOG,HANDOFF}.md, DEV14-REVIEW.md, PACKAGE-DEV14.md,
 > docs/windows-storage.md, docs/windows-native-acceptance.md and latest ignored
-> root HANDOFF.md. Verify source14 packaging/public clone/spaced extraction.
-> Preserve installed human-trusted dev10, private settings/logging scope and all
-> production Windows before-IO gates. Source14 captures only explicit synthetic
-> index/exclude in one proof helper; no real Git/loader/ignore/source provenance or
-> native Windows11 acceptance. No extra model/API run, trust automation, broader
-> logging, observer/theme/client change or new direction authorized. Windows11 is
-> unavailable; don't repeat its availability question. Keep all93requirements
-> accounted for/incomplete as applicable. Stop for High before further gated Windows
-> work after saving/uploading/verifying the checkpoint.
+> root HANDOFF.md. Source14 public clone/archive/spaced extraction passed; preserve
+> installed human-trusted dev10, logging scope and all production Windows before-IO
+> gates. Resume one concrete remaining security/integration prerequisite. Fixed
+> synthetic index/exclude same-helper capture is not real Git/loader/ignore/source
+> provenance or native Windows11 acceptance. Unknown child content/live readers can
+> retain bytes; no recursive cleanup. Windows11 remains unavailable; do not repeat
+> its availability question. No extra model/API run, trust automation, broader
+> logging, observer/theme/client change or new direction authorized. Keep all93
+> requirements accounted for/incomplete as applicable. Stop for Medium when
+> sufficient after saving/uploading/verifying the checkpoint.

@@ -32,8 +32,9 @@ Expanded development is on codex/astra-groundwork; default branch remains the
 historical experimental MVP. MIT and independent-project status are preserved.
 See [source14 review](docs/continuation/DEV14-REVIEW.md),
 [handoff](docs/continuation/HANDOFF.md) and [verification log](docs/continuation/TEST-LOG.md).
-Previous source13 package evidence remains in [PACKAGE-DEV13](docs/continuation/PACKAGE-DEV13.md);
-source14 packaging is the next Medium task, not an installation claim.
+Source14 [package/public-clone/spaced extraction](docs/continuation/PACKAGE-DEV14.md)
+passed:160files/all-byte checks, validate3/replay4/package-scaffolding7/7. It remains
+uninstalled. Prior source13 package evidence is versioned separately.
 
 Installed macOS dev10 remains149 reviewed files/3human-trusted hooks, same private
 settings/mod rules/data/project/scope/retention/export. Activity remains4retained
@@ -45,8 +46,7 @@ Earlier native dev6 six views/preview/files/diffs/usage/rewrites/deny/removal-re
 and dev4 sandbox-negative/removed hold evidence stay version-specific. Hold is not
 a production approval gate; human provenance/host fail-open limits remain. Full
 accessibility/lifecycle/loaded disable/older rollback/Linux/Windows/WSL incomplete.
-Source14 package checks are next on human-selected Sol Medium; return to High
-before further gated work. See
+Source14 package checks passed; next human Sol High before further gated work. See
 [handoff](docs/continuation/HANDOFF.md), [ledger](docs/continuation/REQUIREMENTS.md),
 [test log](docs/continuation/TEST-LOG.md), [Windows boundary](docs/windows-storage.md)
 and [native kit](docs/windows-native-acceptance.md).

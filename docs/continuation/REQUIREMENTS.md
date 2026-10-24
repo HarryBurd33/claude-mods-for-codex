@@ -1,5 +1,20 @@
 # Requirements ledger
 
+## Source14 Medium packaging verification — 2026-10-23
+
+Exact anonymous public clone1e1e4d1/tree00ac9bb, full170pass/0fail/55Windows-only
+skips225total. Reviewed160-file archive1,066,360unpacked/324,060compressed bytes,
+SHA256a4bc1abbde2cdd6a81fdee277a6c8bfe36e4f895891a1bc88531cc9701cdf69f.
+All bytes match public clone/checkpoint; hygiene/MIT/version14/default-off storage
+passed. Spaced extraction validate3mods/replay4fixtures/package-scaffolding7/7,
+0fail/0skip. macOS14.6/Node24.22.0/npm11.19.1; no Windows compilation or install.
+Installed10 still149reviewed files/settings hash unchanged; prior High trust/activity
+observations remain separate. No config/cache/trust/logging/model-run/gated-code
+change. All93IDs retained. Next human Sol High before further gated work. See
+PACKAGE-DEV14.md; final notes-only artifact identity recorded after actual readback
+in reply/private handoff. Full product/native Windows/Git remain incomplete.
+
+
 **The full 93-capability product is incomplete. Development source 0.2.0-dev.14
 is uninstalled. Installed human-trusted dev10 and logging scope are unchanged.**
 Human resumed GPT-6.1 Sol High from verified5016e11.
