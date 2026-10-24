@@ -11,7 +11,7 @@ This is a development checkpoint on `codex/astra-groundwork`, not a finished rel
 The default branch retains the MVP; the [93-capability ledger](docs/continuation/REQUIREMENTS.md)
 remains incomplete. Configured dev26 is installed in the local Codex user profile,
 with210verified cache files and three hooks personally reviewed/trusted. **Desktop
-restart and native dev26 acceptance are pending.** Existing settings/rules/logging
+restart completed; bounded dev26 native acceptance passed as recorded below.** Existing settings/rules/logging
 scope are unchanged; no production data cleanup. Reviewed10 remains for rollback.
 
 Exact public clone:208tests passed/0failed/109Windows-only skips. Inspected210-file
@@ -20,12 +20,20 @@ replay4. [Package/install record](docs/continuation/PACKAGE-DEV26.md). CI4012801
 four POSIX lanes pass; Windows portable passes; both Windows storage lanes retain
 the known failed image check. Packaging is not native-host or full-platform proof.
 
+[Native dev26 results](docs/continuation/NATIVE-DEV26.md): two harmless exact
+rewrites, unchanged control and expected denial passed; six owned views/local
+preview rendered. One freshly authorized Sol Medium read-only run completed in
+7.3s; Watch showed4→7records in the unchanged selected scope. Grant consumed,
+Watch stopped; no production cleanup or further model run authorized. Full
+lifecycle/accessibility/events and the93-capability product remain incomplete.
+
 Windows stays in scope and deferred. Its unchanged mandatory real-image check
 previously failed before bytes (observed2links versus the one-link guard). No
 candidate Git execution, image hash/import/version or native Windows11/WSL result.
 All production Windows gates remain closed. [Failure record](docs/continuation/DEV25-REVIEW.md).
 
-After a human desktop restart, continue on Sol Medium for native read-only checks, with High before new consequential runtime/security/writer changes.
+Next is a human switch to Sol High before failure/turn event-contract integration;
+keep optional events off pending explicit opt-in and review.
 No native UI restyling, automatic trust, extra model/API run or full-product
 completion is implied. The [delivery plan](docs/continuation/DELIVERY-PLAN.md) retains remaining work.
 

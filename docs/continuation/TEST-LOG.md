@@ -1,5 +1,37 @@
 # Continuation verification log
 
+## Dev26 restarted native acceptance — 2026-10-24
+
+Human resumed Sol Medium from457609b after restart. Fresh inventory3enabled/trusted
+production hooks/zero errors/no inspector model turn; all210cache files byte-equal
+fixture and settings SHA unchanged. Installed bundle26.1021.22027/build21747 re-read;
+panel host chatgpt, exact bundled runtime not independently attested. No install/
+trust/config/code/scope/Windows gate changes. [Full evidence/limits](NATIVE-DEV26.md).
+
+Actual ordinary exec calls: production/authored exact prints yielded reviewed AFTER
+outputs, unchanged control unchanged, exit0; configured fixed deny print blocked
+before execution. Expected hook rejection, no destructive command/escalated retry.
+Two MCP App panels connected; only second used. All six views loaded selected
+synthetic files/status/working patch/two-commit Replay/access/old selected-export
+counters with context/billing/cache unknown. Flowchart3nodes/2edges/tables, literal
+highlighted JSON/plain code, unsupported directive fallback/Clear/default restored.
+Synthetic locator clicks not native keyboard/VoiceOver. Screenshots private.
+
+Fresh human authorization granted ONE ephemeral Sol Medium run in existing selected
+project, read-only/90s/2MiB/one fixed print request, stop approval/error/no retry.
+Completed7.3s/exit0/10,676private logbytes; exactly one command completed with reviewed
+AFTER output and one turn.completed, no turn.failed/error. Reported usage private,
+not a free run/current context/exact cost. Parent model and usage-export selection
+unchanged. Grant consumed; no more model/API run authorized. No production cleanup.
+
+Actual Watch checked at17,558ms sample with7records (before4), SessionStart/pre/post
++1each; no manual Refresh. Service readback same7/revision/project. Watch stopped
+and unchecked. Establishes one selected CLI native write/shared-read/live bounded
+poll update on26. Not visible notice/resume/failure/Stop/concurrency/exactly-once or
+producer-health guarantee; optional hooks remain off. No full-suite repeat for
+notes, old208/33 offline results remain versioned. Next High before failure/turn
+lifecycle contract integration; Windows failure/gates remain unchanged/deferred.
+
 ## Source26 Medium package/install/human trust — 2026-10-24
 
 Exact anonymous public789a417/tree455acb997 clone clean, full208pass/0fail/109Windows-only

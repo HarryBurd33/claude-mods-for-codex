@@ -1,7 +1,13 @@
 # Preview and explicitly clean selected metadata
 
+Current native follow-up: [dev26 restart acceptance](continuation/NATIVE-DEV26.md)
+verified the bounded hooks/owned UI and one explicitly authorized active-Watch
+update. No configuration/trust/scope/production cleanup changes; optional events
+off and the extra run grant consumed. Broader lifecycle/platform limits remain.
+
+
 Source26 adds immediate local POSIX CLI commands. They are not registered hooks,
-MCP tools, native slash commands or scheduled cleanup. Configured source26 is installed/human-trusted; desktop restart and native acceptance remain pending;
+MCP tools, native slash commands or scheduled cleanup. Configured source26 is installed/human-trusted; bounded native hooks/panel/Watch acceptance passed after restart; full lifecycle remains incomplete;
 these checks are not native Codex acceptance. Installed human-trusted dev10 and
 its selected logging scope are unchanged. Windows commands refuse before reading
 settings or any selected path; all existing Windows gates remain closed.

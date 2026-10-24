@@ -1,5 +1,9 @@
 # Source26 package, update and human review — 2026-10-24
 
+Follow-up: human restart and bounded dev26 native acceptance are now recorded in
+[NATIVE-DEV26](NATIVE-DEV26.md). This package/install record preserves its earlier
+stage evidence; pending-restart language below is historical, not current status.
+
 Human resumed Sol Medium from verified789a417. macOS acceptance first; Windows
 later/incomplete. No product code change in this stage. Full93-capability product
 remains incomplete. This record separates source packaging, user-profile install/

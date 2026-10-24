@@ -1,139 +1,158 @@
-# Dev26 restart handoff — continue GPT-6.1 Sol Medium
+# Dev26 native acceptance handoff — next GPT-6.1 Sol High
 
-2026-10-24. Human resumed Medium from verified789a417. CI and exact public source26
-packaging verified. Supported same-ID user-profile update installed the immutable
-configured26; human reviewed/trusted all three changed hooks and fresh inventory
-confirmed them. **Human desktop restart/reopen is next.** Stay on Sol Medium for
-native read-only checks; High before consequential code/security/writer changes.
-MacOS acceptance first, Windows later. Full93-capability product incomplete.
+2026-10-24. Human restarted and resumed Sol Medium from457609b. Covered native
+hooks/owned panel and a newly authorized selected CLI→active Watch path passed.
+No source/config/trust/logging scope/Windows gate changes. Full93-capability
+product remains incomplete. The next consequential work is failure/turn-lifecycle
+observation contracts; stop for human **GPT-6.1 Sol High** before changing them.
 
 ## Read first
 
-STATUS.md, PACKAGE-DEV26.md, DEV26-REVIEW.md, ../retention.md, ../native-acceptance.md,
-MACOS-ACCEPTANCE.md, MACOS-BATCH.md, REQUIREMENTS.md, DELIVERY-PLAN.md, current
-ARCHITECTURE.md and latest TEST-LOG.md. Read latest ignored root HANDOFF.md for
-final checkpoint identity/private artifacts/backups/paths. Older installed10/
-uninstalled26/nextHigh-Windows statements are historical and superseded here.
+NATIVE-DEV26.md, STATUS.md, REQUIREMENTS.md, current ARCHITECTURE.md/latest
+TEST-LOG.md, MACOS-ACCEPTANCE.md, DELIVERY-PLAN.md, PACKAGE-DEV26.md,
+DEV26-REVIEW.md and ../native-acceptance.md. Read latest ignored root HANDOFF.md
+for exact final checkpoint/private evidence/counters/paths/backups. Earlier
+restart-pending/uninstalled26/nextHigh-Windows directions are historical.
 
 Repo https://github.com/HarryBurd33/claude-mods-for-codex
-Branch codex/astra-groundwork. Stage start789a417bf2800489805ef2c50495e2b5df4d020f,
-tree455acb997fa9218d9cb50f5de58636e8d249c02a, clean/remote independently matched.
-Installed immutable configured snapshot is from that exact public archive plus
-three private overlays below. Final public documentation checkpoint hash is
-reported after upload/full-tree/ref readback in reply/private handoff. Notes-only
-archives are separate and never silently installed over the reviewed snapshot.
+Branch codex/astra-groundwork. Start457609b38f0f02ede68017442326250c8b9ac111,
+tree2206ec630e73925d9cadea6b13c3e1fc42472ec4, clean/remote ref independently matched.
+Final notes checkpoint identity is reported after upload/full-tree/independent-ref
+verification in reply/private handoff; no self-hash claim. No force-push/history loss.
 
-## Completed CI and package verification
+## Completed actual native work
 
-Tested codeb66f2fb / CI40128013186: five successful jobs/two failed Windows jobs.
-All four POSIX decoded logs208pass/0fail/109Windows-only skips317total. Remaining
-macOS22job120973491548 read this stage; Ubuntu22/24/macOS24 read on prior High.
-Windows22job120973491585 and Windows24job120973491304 each25storage passes,
-84/85process proofs: unchanged cmd/git.exe Image refusal before bytes, post-sample
-links2 violates original one-link guard, no data/sample/execution authority/hash/
-imports/version. No new failure; do not fix/retry/weaken it on Medium or resume
-Windows research. Portablejob120973491662 passed; new retention refusal1pass/
-0fail/19POSIX-only skips20total, not Windows cleanup/host compatibility.
-Notes789CI40128249622 initially in progress, not decoded for new counts; same code.
+- Fresh bounded no-daemon initialize/hooks/list/plugin/read: three production hooks
+  enabled/human-trusted, zero errors, no inspector model turn. All210cache bytes
+  equal reviewed immutable configured26; settings SHA unchanged. Unrelated root/
+  hook fields and other hook states equal pre-update backup; only earlier three
+  human-reviewed owned trust records differ. No new install/trust/config action.
+- Installed bundle26.1021.22027/build21747 re-read; panel host chatgpt. Exact running
+  bundled runtime/server process version not independently attested. Previously
+  measured standalone CLI0.163.0 distinct from desktop. macOS14.6/Node24.22.0
+  source/package evidence remains dated separately.
+- Actual ordinary exec_command: printf MODS_PRODUCTION_BEFORE→reviewed production
+  AFTER; printf MODS_AUTHOR_BEFORE→reviewed author AFTER; unchanged print control
+  unchanged; all exit0. Configured harmless fixed denial print blocked by PreToolUse
+  before execution. Expected rejection, no destructive or escalated test. One
+  ordinary path does not certify all tools/approval modes/infrastructure failures.
+- Actual MCP tools/owned panel connected after restart. Two panels present; only
+  second used. Six views displayed selected synthetic files/Git status, working
+  patch/two selected commit Replay, access/process/model/provenance labels, selected
+  OLD usage export counters and unknown context/exact billing/cache health.
+- Local preview: restricted flowchart3nodes/2edges plus complete tables, literal
+  highlighted JSON/plain code, unsupported click directive refusal/explanation,
+  Clear and original sample restoration. Synthetic locator clicks are not native
+  keyboard/VoiceOver. Other panel/drafts preserved. Private screenshots retained.
+- Before the additional run, activity stayed4/same revision/project, consistent
+  with this chat outside selected child logging scope. Never broaden capture to
+  make counts rise; shell per-call workdir is not native session scope.
 
-Exact anonymous credential/config/prompt-disabled single-branch clone789a417/tree
-455acb997 clean/byte-equal workspace. macOS14.6/Node24.22.0/npm11.19.1: npm test
-208pass/0fail/109Windows-only skips317total. Separate empty user/global npm config,
-dedicated cache, npm pack --ignore-scripts --offline --json; no dependencies/account/
-network package fetch/lifecycle scripts.210regular files/1,610,063unpacked/
-480,635compressed bytes, SHA25684668fc17a16fa11b27745d1c8a2009819bd842dd22289f1dd639e74355e9e11.
-Every packaged byte matches clone/workspace. Privacy/link/traversal/special-file/
-version26/MIT/default-off/compatibility/proof-production separation passed.
-Fresh spaced extraction: node --test test/retention.test.mjs test/package.test.mjs
- test/scaffold.test.mjs test/state-lock-budget.test.mjs test/state-contention.test.mjs
- test/state-observer-boundary.test.mjs:33pass/0fail/1Windows-only skip34total.
-Validate3mods/replay4fixtures passed. All cleanup only owned synthetic test data.
-No product code/test/CI changes in this Medium stage; no notes-only full-suite repeat.
+## Newly authorized ONE run — completed and grant consumed
 
-## What was installed and trusted
+Human explicitly authorized one additional ephemeral GPT-6.1 Sol Medium run in
+already-selected disposable project, read-only sandbox, one fixed print request,
+90s watchdog/2MiB output bound, stop approval/failure/no retries. Used existing
+private reviewed harness pattern with unique evidence output and Medium effort;
+parent model unchanged. Extra run consumes account usage; reported counters private.
 
-Prepared210-file immutable local26 snapshot from exact789archive. Three deliberate
-private overlays only: existing .mcp settings selection copied unchanged; existing
-config/rules/metadata project scope copied unchanged; old three hook definitions
-with only inert version review comment10→26. Same data/project/export/patch grants,
-no optional events/new MCP tool/network/model call/automatic cleanup or permissions.
-Runtime diff from reviewed10: version metadata, prior state.mjs/state-lock-budget,
-new retention module/CLI and inert hook review comment. Source26 High contracts/
-fault tests in DEV26-REVIEW; new CLI never invoked by panel/hook automatically.
+Command form: codex --no-daemon exec --model gpt-6.1-sol, configuration
+model_reasoning_effort=medium, --ephemeral --json --sandbox read-only, -C existing
+selected project. Requested exactly one reviewed print replacement/no other tools
+or file reads/writes/DONE. Completed7.3s/exit0/10,676private combined logbytes.
+Exactly one shell item completed with reviewed AFTER/exit0, one turn.completed,
+no turn.failed/error. No update of the previously selected usage export.
 
-Private config/marketplace backups saved mode0600. Only owned marketplace source
-entry10→26 changed; supported CLI0.163.0 plugin add same production identity.
-Installed210cache files match immutable snapshot byte-for-byte. Parsed user config
-remained equal before/after install. Human review then changed only the three
-owned hook trust records; all unrelated root/hook fields and other hook states
-remain equal, settings hash unchanged. Installation is Codex user-profile/cache scope, not
-project-only. Selected logging remains the existing disposable child; this chat
-is outside. Do not broaden it to make counters rise. No production cleanup run.
+Native Watch checked before launch; at17,558ms sample still checked and4→7records,
+SessionStart/pre/post+1each. No manual Refresh. Service readback matched7/revision/
+project. Watch then stopped and observed unchecked, no background watch. Establishes
+one native CLI producer/shared desktop reader/live bounded-poll path on installed26,
+including the prior changed state implementation. Not native concurrency, exactly
+once, producer health, persistent push, visible notice/resume/reset, failure or Stop.
 
-First fresh no-daemon read-only inventory: three modified production hooks, zero
-errors/no model turn. Human explicitly reviewed/trusted three dev26 hooks, then
-independent fresh inventory three enabled/trusted/zero errors/no model turn.
-No agent trust hashes/cache edits. Original separate proof retained, hold/optional
-observers absent. **Inventory does not prove actual desktop reload/event delivery.**
+**The new grant is now consumed. No additional model/API run is authorized.**
+No synthetic production journal replay, production cleanup, optional hook/event/
+storage opt-in, scope/export/theme/client/permission/model/prompt change. Raw logs,
+private session information, counters, screenshots and paths stay ignored locally.
 
-No native dev26 execution/rendering, separate model/API run, optional observer,
-retention cleanup, export/theme/client/parent model/prompt change. Existing installed
-snapshot is frozen; do not reinstall it merely because public docs later changed.
-Human restart now, not another trust request for already-reviewed unchanged bytes.
+## Source, package and prior CI evidence retained
 
-## Protected next step / bounded acceptance
+Installed immutable26 is exact public789a417 snapshot plus existing private MCP/
+config selections and inert hook-review comment overlays,210files. Never replace
+it just because notes change. Preserved reviewed10 is rollback source. Last final
+public notes archive457609b211files was inspected byte-equal (details private);
+original789public clone208pass/0fail/109Windows-only skips317total; fresh spaced
+package focused33/0/1 plus validate3mods/replay4fixtures. This stage no code/test/CI
+change, no redundant full-suite/package repeat solely for native notes.
 
-1. After verified save, human restarts Codex and reopens this same chat. Continue
-   GPT-6.1 Sol Medium. No additional model run is authorized by the restart.
-2. Read latest private checkpoint, verify source/ref/current210cache/settings and
-   fresh trusted inventory. Open actual Claude Mods dashboard beside this chat via
-   supported tool/entry and permitted MCP Apps inspection. Verify connection and
-   all six views/selected files/diff/Replay/access/unknown counters/local preview.
-   Preserve user local drafts and scope; no synthetic events in production journal.
-   Host bundle/runtime/version measured independently; cache is not loaded-source
-   attestation. Keep prior dev10 human keyboard/resize evidence versioned.
-3. Verify harmless covered rewrite/deny/control only through ordinary permissions
-   if warranted after restart, without destructive commands/permission escalation.
-   New CLI source is already synthetic-tested; do not run retention-cleanup against
-   the selected production settings/data for acceptance. No cleanup needed there.
-4. Changed-state native write/Watch/SessionStart needs a selected-project session;
-   shell workdir alone is not native scope. Prepare one concrete bounded harmless
-   additional run, fixed marker/read-only sandbox/explicit usage limit+watchdog, and
-   ask fresh human authorization. The prior single-run grant was consumed. Do not
-   silently launch a model/API task, register optional hooks or change selected
-   parent model. Keep visible notice/resume/failure/Stop claims separate until tested.
-5. Continue routine acceptance that needs no new code. Full keyboard/VoiceOver/
-   zoom/contrast/backend close-pending/loaded disable/older rollback/themes/routing/
-   current-context/broader authoring/platforms remain incomplete. High checkpoint
-   before consequential runtime/security/writer changes or a newly observed
-   correctness failure; never weaken tests/Windows guards or call product finished.
-6. Save/upload/full-tree/independent-ref verify each meaningful checkpoint. Human
-   protected actions occur only with concrete reviewed steps. No automatic trust,
-   approvals, background/delegated/scheduled continuation after a stopping message.
+CI40128013186 testedb66f2fb: all four POSIX lanes208/0/109; portable passed, including
+retention Windows refusal1/0/19POSIX-skips. Both Windows OS lanes25storage passes,
+84/85process proofs: unchanged installed cmd Git image refused before bytes with
+post-sample links2 versus one-link guard. No image hash/import/version/execution or
+native Windows11/WSL acceptance; no all-green claim. Failure/test and every production
+Windows settings/dashboard/project/Git/restore/retention gate remain unchanged.
+No further Windows investigation next; last Windows11 host unavailable, no repeat ask.
 
-## Rollback/removal and privacy
+## Next exact model and bounded implementation
 
-Preserved immutable reviewed10 remains rollback source. If explicitly needed,
-selectively restore only the owned marketplace source to10 and supported plugin
-add same identity, verify149cache/loaded version and human review if required.
-Do not overwrite concurrent unrelated config, restore old trust hashes or swap
-cache files. Restart only after reviewed rollback. Data/settings retained separately;
-removal is not data deletion. No rollback executed this stage. Public guide setup/
-removal documents the generic supported flow, exact local paths stay private.
+**GPT-6.1 Sol High.** Native verification is complete for this stated batch. Changing
+tool/lifecycle adapters and retained event contracts is consequential; Medium stops
+before code. Human priority remains macOS acceptance first, Windows later.
 
-Root HANDOFF, raw logs, machine paths/config/backups/private overlays remain ignored.
-Remove only owned scratch after child exit; never delete live locks, repair system
-ACLs or globally trust Installer. Windows11/WSL native acceptance unverified; last
-Windows host unavailable, no repeated availability request. All production Windows
-settings/dashboard/project/Git/restore/retention gates closed before IO.
+1. Resolve EV-03/EV-04 with a bounded primary-source check of released hook schema,
+   registry/exec adapters and actual installed CLI/desktop contract. Distinguish
+   process exit!=0 from tool invocation error, cancellation and Stop. A schema/
+   issue/unreleased change alone is not native support. Do not silently upgrade
+   clients, patch private internals or infer desktop source from system CLI.
+2. Deliver a coherent minimal default-off failure/turn-observation lane where
+   supported, reusing existing Stop examples, state and generic activity chart.
+   Strict allowlisted event/tool metadata only; no raw results/error text, commands,
+   prompts/transcripts/paths/session/model-request identifiers or hidden sampling.
+   If exact behavior unsupported, record scoped primary evidence and implement a
+   clearly labeled useful supported alternative, not a separate client silently.
+3. Relevant code: src/constants.mjs, config.mjs/dispatcher.mjs event validation,
+   hook-main.mjs, journal.mjs metadata validation, state/server activity contracts,
+   examples/events and examples/hooks/observe-lifecycle.json; tests/observers,
+   dispatcher/contracts/journal/state/transport/native inspector. Inspect before
+   editing; preserve original core allow/deny/rewrite semantics and permissions.
+   No default observer registration or storage expansion. Reception/retention remain
+   separate explicit human opt-ins; currently only three hooks registered.
+4. Test successful completion/nonzero/tool-failure distinctions, malformed/default-
+   off/no-write/privacy/scope/busy/cancel/failure behavior with harmless synthetic
+   fixtures. Local deterministic callbacks never need another model call. No
+   automatic approvals/retry/follow-up/cleanup. Keep all Windows authority/admission/
+   storage gates unchanged; explicitly refuse unavailable optional paths instead
+   of broadening Windows policy to make a new event work.
+5. Deliver runnable code/tests/docs, not another speculative proof-only/packaging
+   loop. Prepare concrete immutable access diff and human event selection/trust/
+   restart/native-trigger steps only after implementation; no new event/storage
+   opt-in or model run under consumed grants. Preserve installed26/data/trust until
+   supported reviewed update. Stop for Medium once routine packaging/acceptance is
+   sufficient; a new hard architecture/security problem requiring Astra needs a
+   human checkpoint/switch, no delegated substitute.
+6. Maintain all93 requirements and remaining full accessibility/close-pending,
+   loaded disable/older rollback/themes/routing/current-context/broader authoring/
+   platforms. Save/upload/nonforce/full-tree/independent-ref verify progress before
+   every model stop. No automatic/delegated/background/scheduled continuation.
 
-## Copy-and-paste resume after restart
+## Rollback and user action
 
-I've restarted Codex. Continue on GPT-6.1 Sol Medium from the verified dev26 restart
+No machine rollback/new trust/restart is required now. Only human model switch.
+If explicitly needed later, selectively point owned marketplace source back to
+preserved immutable10 and supported same-ID add; inspect149cache/loaded version and
+human review if required. Preserve concurrent unrelated config; never wholesale
+backup/trust-hash restore, cache edits, live-lock deletion, system ACL repair or
+production data cleanup. Data/settings retained separately. No rollback executed.
+
+## Copy-and-paste resume
+
+I've switched to GPT-6.1 Sol, High. Continue from the verified dev26 native-acceptance
 checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and
-PACKAGE-DEV26.md plus the latest ignored root HANDOFF.md. Dev26 is installed and
-human-trusted; verify the loaded dashboard and harmless native hooks after restart.
-Preserve logging scope, existing rules/settings, unrelated data, human trust and
-Windows guards. No production cleanup, optional hooks or extra model/API run
-without fresh explicit bounded authorization. Stop for High before consequential
-runtime/security changes or a new correctness failure.
+NATIVE-DEV26.md plus the latest ignored root HANDOFF.md. Resolve the released
+failure/turn-lifecycle event contracts and implement a minimal default-off scoped
+observation lane with tests and clear support limits. Preserve logging scope,
+installed26/human trust, existing permissions, all93 requirements and deferred
+Windows guards/failed image check. The latest single-run authorization is consumed;
+no extra model/API run, event opt-in or production cleanup without its required
+fresh authorization. Save/upload/independently verify progress and stop for Medium
+when routine work is sufficient.

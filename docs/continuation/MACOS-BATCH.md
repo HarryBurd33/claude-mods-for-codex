@@ -1,5 +1,10 @@
 # Bounded macOS acceptance and next milestone — 2026-10-24
 
+Latest post-restart26 native milestone: [NATIVE-DEV26](NATIVE-DEV26.md) records
+covered hooks/six-view UI/local preview and freshly authorized CLI/Watch4→7.
+Grant consumed; no more model run. Next High before failure/turn event-adapter
+contract changes. Historical install/restart-pending criteria below are superseded.
+
 Current Medium checkpoint: configured26 installed and human-trusted after exact
 package checks; restart/native26 acceptance pending. [PACKAGE-DEV26](PACKAGE-DEV26.md)
 records install/rollback/evidence. No production cleanup or additional model run.

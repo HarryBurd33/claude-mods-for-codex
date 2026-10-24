@@ -4,11 +4,17 @@ The human selected **finish macOS feature acceptance first, then Windows**.
 Windows stays in scope and explicitly incomplete. The Medium acceptance audit and bounded unchanged-dev10 checks are recorded below.
 That retention source milestone is implemented on High; routine verification is next. Do not start another Windows proof loop.
 
+Post-restart26 native acceptance: hooks/owned UI and a fresh authorized selected
+CLI→active Watch4→7 passed; [NATIVE-DEV26](NATIVE-DEV26.md). Grant consumed,
+Watch stopped/scope and trust unchanged. Next High must resolve the released
+failure/turn-event contract and deliver a minimal default-off observation lane,
+not another Windows proof/package-only loop. Other macOS/platform gaps remain.
+
 Source26 now implements the High-reviewed POSIX selected-scope retention preview/
 explicit cleanup CLI; [DEV26-REVIEW](DEV26-REVIEW.md) records tests and limits.
 No production data cleaned;26now installed/human-trusted, restart/native26 pending;
 settings/scope unchanged and reviewed10 retained for rollback.
-Continue Medium after human restart for native read-only acceptance; High
+Core post-restart checks passed; next High for failure/turn-event contracts; High
 before further consequential code/security. Native/event/accessibility/lifecycle/
 authoring/platform gaps remain; no package-version-only or Windows-proof loop.
 

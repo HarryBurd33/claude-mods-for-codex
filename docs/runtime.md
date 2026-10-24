@@ -1,9 +1,15 @@
 # Development dashboard and immediate local commands
 
+Current native follow-up: [dev26 restart acceptance](continuation/NATIVE-DEV26.md)
+verified the bounded hooks/owned UI and one explicitly authorized active-Watch
+update. No configuration/trust/scope/production cleanup changes; optional events
+off and the extra run grant consumed. Broader lifecycle/platform limits remain.
+
+
 Current source26 note2026-10-24: configured26 is now installed/human-trusted after
 exact package verification.210cache files match the immutable reviewed snapshot,
-existing settings/rules/logging unchanged. Desktop restart/native26 behavior remains
-pending; earlier native results below are version-specific. No production cleanup,
+existing settings/rules/logging unchanged. After human restart, bounded native26 hooks/owned panel and authorized active
+Watch delivery passed; broader lifecycle acceptance remains incomplete; earlier native results below are version-specific. No production cleanup,
 optional hooks or extra model/API run. [Package/install](continuation/PACKAGE-DEV26.md),
 [current handoff](continuation/HANDOFF.md) and [macOS audit](continuation/MACOS-ACCEPTANCE.md).
 

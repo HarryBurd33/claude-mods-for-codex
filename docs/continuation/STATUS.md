@@ -18,15 +18,20 @@ CI40128013186 completed: all four POSIX lanes208/0/109skips; Windows portable
 passed (retention refusal1/0/19POSIX-skips). Both Windows storage jobs retain the
 same real-image failure:25storage passes,84/85process proofs each. Not all-green.
 
-Configured **dev26 is now installed in the Codex user profile and human-trusted**.
-All210cache files equal the immutable prepared789a417 snapshot plus three private
-existing-selection overlays. User reviewed all three changed hooks; independent
-fresh inventory shows enabled/trusted, zero errors, no model turn. **Desktop
-restart and native dev26 execution/rendering remain pending.** No production
-cleanup, logging expansion, optional observer, theme or additional model/API run.
-Preserved immutable10 is rollback source. Settings hash and unrelated config stay
-unchanged; only owned marketplace source points to26. Do not infer loaded desktop
-version from cache/trust inventory. See the restart [HANDOFF](HANDOFF.md).
+Configured **dev26 is installed, human-trusted and observed after human restart**.
+Fresh cache/settings/trust checks passed. Both harmless print replacements,
+unchanged control and expected PreToolUse denial passed in the actual desktop.
+All six owned views, selected project/diffs/usage labels and restricted local
+preview/Clear/fallback rendered. [Native acceptance and limits](NATIVE-DEV26.md).
+
+Human authorized one additional ephemeral Sol Medium read-only run: one fixed
+print, exit0 in7.3s. Active bounded Watch showed4→7records (SessionStart/pre/post
++1each), same scope/revision as service readback. Watch stopped; grant consumed.
+This verifies that bounded native path, not full lifecycle/producer health or
+visible notice/resume/failure/Stop. No more model/API run authorized. Settings/
+trust/cache/logging scope/export/optional hooks unchanged; no production cleanup.
+The exact running bundled runtime was not independently attested; installed bundle
+26.1021.22027/build21747 re-read, panel host chatgpt. Reviewed10 remains rollback.
 
 Human priority remains macOS acceptance first, Windows later. Source25's known
 Windows real-image positive fails before bytes: post-refusal linkcount2 versus
@@ -36,8 +41,7 @@ not hidden or repaired by26. No actual Git image hash/import/version/execution o
 native Windows11/WSL acceptance; every production Windows gate remains closed.
 [Preserved Windows review](DEV25-REVIEW.md).
 
-Next: human restart, then continue **GPT-6.1 Sol Medium** for native read-only
-dev26 acceptance. No model switch is needed for that routine work. High before
-any new consequential runtime/security/writer change. Remaining accessibility,
-loaded lifecycle/rollback, native triggers/active Watch, themes/routing/context,
-broader authoring and platform work stay incomplete. See [HANDOFF](HANDOFF.md).
+Next exact setting: **GPT-6.1 Sol High** before the failure/turn-lifecycle
+observation contract and adapter changes described in NATIVE-DEV26.md. No new
+code or permission changes on Medium. Keep optional events off until explicit
+opt-in/review; source26 remains a development milestone, not full-product closure.

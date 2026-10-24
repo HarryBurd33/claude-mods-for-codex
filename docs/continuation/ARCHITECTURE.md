@@ -1,5 +1,17 @@
 # Extension architecture and security contracts
 
+## Dev26 native restart observation — current — 2026-10-24
+
+[NATIVE-DEV26](NATIVE-DEV26.md) records actual harmless rewrite/control/deny,
+six-view panel/preview and a fresh human-authorized one-run CLI/shared-state/active
+Watch update4→7 after restart. Same210cache files/settings/trust/scope; optional
+hooks off, no production cleanup/new code. Model run used visible account usage;
+its grant is consumed. Exact running bundled runtime not independently attested.
+One native producer does not establish exactly-once delivery/concurrency, visible
+start notice, failure/cancel or optional Stop. Next High must review the released
+failure/turn event contracts before minimal default-off adapter/storage changes.
+Preserve all Windows gates and existing failure; no new client direction.
+
 ## Source26 Medium package/install checkpoint — 2026-10-24
 
 [PACKAGE-DEV26](PACKAGE-DEV26.md) records exact public clone/archive/spaced-path
@@ -32,7 +44,8 @@ can leave journals or locks; report progress and inspect, never retry automatica
 Private POSIX path/handle samples do not sandbox hostile same-user/admin races.
 
 Original state/journal/settings/Windows/project/restore modules and budgets remain
-unchanged. Source26 is uninstalled; trusted dev10/logging scope preserved. Exact
+unchanged. Configured26 is installed/human-trusted with bounded native observations;
+logging scope preserved. Historical earlier uninstalled26 statements are versioned. Exact
 code, tests, fault-copy labels and limits: [DEV26-REVIEW](DEV26-REVIEW.md). Earlier
 macOS native observations do not certify source26. Windows failure remains intact.
 

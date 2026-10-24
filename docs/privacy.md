@@ -1,5 +1,11 @@
 # Privacy
 
+Current native follow-up: [dev26 restart acceptance](continuation/NATIVE-DEV26.md)
+verified the bounded hooks/owned UI and one explicitly authorized active-Watch
+update. No configuration/trust/scope/production cleanup changes; optional events
+off and the extra run grant consumed. Broader lifecycle/platform limits remain.
+
+
 The shipped configuration disables the activity journal.
 
 When explicitly enabled, each record is limited to:
@@ -29,5 +35,5 @@ private settings, then requires its unchanged fingerprint for explicit cleanup.
 No automatic data deletion, sibling-scope discovery, MCP writer or lock reaping.
 Both journals remain when any retained record is too recent. Deletion may partially
 complete or leave locks after interruption; inspect after stopping writers, do not
-retry automatically. Windows refuses before IO. Configured source26 is installed/human-trusted; desktop restart and native acceptance remain pending; no cleanup
+retry automatically. Windows refuses before IO. Configured source26 is installed/human-trusted; bounded native hooks/panel/Watch acceptance passed after restart; full lifecycle remains incomplete; no cleanup
 of installed production records was performed by this milestone.

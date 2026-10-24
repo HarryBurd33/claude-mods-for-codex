@@ -18,6 +18,12 @@ reviewed all three changed hooks; fresh inventory trusted. Desktop restart/nativ
 acceptance pending. The Hnow evidence below remains the historical dev10 batch;
 no new production cleanup, logging scope/event opt-in or model run.
 
+Post-restart26 follow-up: [NATIVE-DEV26](NATIVE-DEV26.md) verifies covered native
+rewrites/control/deny, six owned views/preview, one fresh authorized selected CLI
+SessionStart/pre/post write and active Watch4→7. Same scope/settings/trust/cache.
+Grant consumed/Watch stopped; full lifecycle/other targets remain incomplete.
+The original Hnow labels below stay historical; no retroactive host/source claims.
+
 ## Evidence and classification
 
 - **Hnow:** this Medium stage's actual installed dev10 MCP tools/owned panel,
@@ -126,7 +132,7 @@ state acceptance for these changes. Source25 remains uninstalled/package-unverif
 | SEC-06 Do not collect secrets/environment values | P | No credential-store search/secret telemetry; synthetic privacy fixtures | Preserve exclusion; do not enumerate inherited environment or publish sensitive evidence. |
 | SEC-07 Keep prompts/transcripts private | V | Source explicit selected Git/export access and default-off patches; Hnow provenance labels | Verified no session discovery; opted-in patches can contain secrets; sensitive export remains explicitly selected. |
 | SEC-08 Opt in to metadata and sensitive telemetry separately | V | Default config off; optional hook names absent; Hnow selected settings/cache unchanged | Verified separate selection grants remain; no added event registration/metadata opt-in in this stage. |
-| SEC-09 Preserve private storage under concurrency | I | A25 focused lock/observer tests; retained CI POSIX and Windows OS results | Source25 lock change needs selected native acceptance. Prior failures retained; best-effort refusal not proof of no commit. |
+| SEC-09 Preserve private storage under concurrency | I | A25 focused lock/observer tests; retained CI POSIX and Windows OS results | Source26 now has one selected native CLI/shared-Watch path; not native concurrency or full lifecycle. Prior failures retained; best-effort refusal not proof of no commit. |
 | SEC-10 Maintain UI accessibility and lifecycle | I | H10 human focus/resize subset; Hnow labels/focus3px/clear and view state; A25 teardown | Full keyboard/VoiceOver/zoom/contrast and actual backend close-pending/loaded lifecycle remain. |
 | EX-01 blast-radius explains likely command impact | I | Original disabled impact CLI/guard A; separate H hold proof | Production impact explanation/deny-retry workflow native acceptance and useful supported decision alternative; no destructive demo. |
 | EX-02 filetree explores selected project with Git status | I | H6 nested expansion; Hnow selected filenames/Git status; A hostile tree | Full accessibility and native acceptance after any adapter change; Windows still gated. |

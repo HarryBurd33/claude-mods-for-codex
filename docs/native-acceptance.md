@@ -1,25 +1,25 @@
 # Remaining native acceptance
 
-Current2026-10-24: configured dev26 is installed through the supported user-profile
-update,210cache files byte-equal immutable public789a417 plus three private unchanged-
-selection overlays. Human reviewed/trusted the three changed hook definitions;
-fresh inventory enabled/trusted/zero errors/no model turn. **Desktop restart and
-native26 rendering/event delivery remain pending.** Settings/rules/logging scope
-unchanged; no production cleanup, optional hooks, agent trust writes or model/API
-run. Reviewed10 preserved for supported selective rollback. [Package/install record](continuation/PACKAGE-DEV26.md).
+Current native follow-up: [dev26 restart acceptance](continuation/NATIVE-DEV26.md)
+verified the bounded hooks/owned UI and one explicitly authorized active-Watch
+update. No configuration/trust/scope/production cleanup changes; optional events
+off and the extra run grant consumed. Broader lifecycle/platform limits remain.
 
-The earlier [macOS audit](continuation/MACOS-ACCEPTANCE.md)/[bounded batch](continuation/MACOS-BATCH.md)
-retain dated dev10 UI evidence, not new26 acceptance. Source26 retention has source/
-OS synthetic CLI proof, not permission to clean production records. Windows stays
-in scope/later with the original failed image read and guards intact. Continue
-Sol Medium after restart; High before consequential code/security changes.
 
-The installed desktop app bundle is now26.1021.22027/build21747. Actual panel says
-chatgpt; exact running host/bundled runtime not independently attested. Older native
-results below remain tied to their snapshots/client. Full keyboard/VoiceOver/zoom/
-contrast/backend-close/loaded-disable/older-rollback remain incomplete. The current
-Watch check observed it off at31.7s without new events; this is not native active-event
-delivery or precise deadline/backend cancellation proof.
+Current2026-10-24: human restarted after personally trusting dev26. Fresh inventory
+three enabled/trusted hooks/zero errors/no inspector model turn;210cache files
+match the immutable reviewed snapshot/settings unchanged. Actual covered native
+print rewrites/control/deny, all six owned views/local preview and one freshly
+authorized selected CLI→active Watch update4→7 passed. [Exact evidence and limits](continuation/NATIVE-DEV26.md).
+No configuration/trust/logging expansion or production cleanup. Extra run completed
+in7.3s and its grant is consumed. Watch stopped; no further model/API run authorized.
+
+Installed bundle26.1021.22027/build21747 re-read, connected panel host chatgpt;
+exact running bundled runtime not independently attested. Visible SessionStart
+notice/resume/reset, failure/Stop semantics, full keyboard/VoiceOver/zoom/contrast,
+backend close-pending/loaded disable/older rollback remain incomplete. Next High
+before consequential failure/turn event-contract integration; macOS remains first,
+Windows later/guarded. Earlier dated dev10/deadline-only observations stay historical.
 
 ## Small user-visible checks
 

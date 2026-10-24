@@ -1,12 +1,19 @@
 # Reviewed local setup
 
+Current native follow-up: [dev26 restart acceptance](continuation/NATIVE-DEV26.md)
+verified the bounded hooks/owned UI and one explicitly authorized active-Watch
+update. No configuration/trust/scope/production cleanup changes; optional events
+off and the extra run grant consumed. Broader lifecycle/platform limits remain.
+
+
 This development package uses **only `.codex-plugin/plugin.json`**. Released Codex CLI 0.163.0 and 0.164.0 skip bundled hooks when a schema-recognized root `plugin.json` selects the portable format. Do not restore the old root manifest or add it beside the compatibility manifest. Paths in the compatibility manifest resolve from the package root. See the release-source evidence and observed inventory correction in [Codex contracts](continuation/CODEX-CONTRACTS.md#released-hook-packaging-contradicts-portable-documentation).
 
 The current source package is `0.2.0-dev.26` (explicit POSIX selected-scope retention CLI; unintegrated Windows read-inventory proofs and retained source10 panel/authoring components), a development checkpoint, not a completed product release. Its registered components include the session notice, lexical guard, opt-in metadata journal/state, exact-command replacement and management skill, plus the local dashboard MCP service. Default configuration does not enable replacement or metadata storage. See [runtime access](runtime.md) before configuring its project/session scope. The included `proofs/` directory contains separate development harnesses and the unintegrated Windows OS proof. Installing the main package does not register those proof servers, panels, probes or an arbitrary execution tool. Actual host results and remaining blockers are recorded in the [continuation test log](continuation/TEST-LOG.md).
 
 The configured macOS fixture26 is now installed with210verified cache files and
 three hooks personally reviewed/trusted; fresh inventory confirms enabled/trusted,
-zero errors/no model turn. Desktop restart/native26 execution remains pending.
+zero errors/no model turn. After human restart bounded native26 hooks/panel/active-Watch checks passed;
+full lifecycle acceptance remains incomplete.
 Settings/rules/logging unchanged; no optional observers or production cleanup.
 Reviewed10 retained for selective rollback. [Current package/install record](continuation/PACKAGE-DEV26.md).
 Source edits alone never update caches or establish trust.
