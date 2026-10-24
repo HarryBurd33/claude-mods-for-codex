@@ -137,3 +137,11 @@ The corrected helper requests the directory list right solely to participate in
 sharing checks. Its independent NTFS rmdir witness and storage regressions must
 pass on the exact final source. No claim of defending hostile same-user processes
 or changing directory ACLs; OS administrators remain outside the isolation claim.
+
+A controlled30ms no-sharing lease and a permanently held lease test directory
+sharing behavior. The production OpenDirectory implementation retries only sharing
+violation32, at most10attempts/90ms sleep per handle, and repeats all ordinary
+identity/ACL checks on the actual opened handle. It never repairs permissions or
+changes share modes. Outer15s/optional1500ms deadlines still bound the operation.
+This models a short-lived creator handle; it is not proof of the exact cause of
+a previously intermittent public-state CI failure.

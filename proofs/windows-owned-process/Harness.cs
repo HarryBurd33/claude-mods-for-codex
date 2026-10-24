@@ -47,6 +47,10 @@ public static class Harness {
    if(a.Length>1 && a[0]=="child")return Child(a);
    if(a.Length<3 || a[0]!="run")return 2;
    string mode=a[1],directory=a[2];
+   if(mode=="transient-pin" || mode=="held-pin") {
+    try {CodexMods.PrivateStorage.SharingPinProof(directory,mode=="transient-pin");Console.WriteLine("pinned");}
+    catch(IOException) {Console.WriteLine("refused");}return 0;
+   }
    if(mode=="pin") {
     try {using(var pin=new CodexMods.PrivateStorage.ProgramPins(a[3],a[4],a[5]))Console.WriteLine("pinned");}
     catch(IOException){Console.WriteLine("refused");}return 0;

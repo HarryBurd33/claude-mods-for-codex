@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Security.AccessControl;
+using System.Threading;
 using Microsoft.Win32.SafeHandles;
 
 namespace CodexMods {
@@ -73,6 +74,21 @@ namespace CodexMods {
     // Proof writes no content. Refuse to delete unexpected entries recursively;
     // a future Git scratch requires a separate exact-owned-file cleanup design.
     root.Dispose();root=null;System.IO.Directory.Delete(path,false);
+   }
+  }
+  // Deterministic synthetic sharing race: a metadata query used to ignore the
+  // holder, while a real pin must wait or refuse. No production entry point.
+  public static void SharingPinProof(string directory,bool transient) {
+   using(var owner=new Pins(directory,false,true)) {
+    // Own regular read pin permits other reads; this extra handle shares reads
+    // but denies writes. The contender below asks for a read pin, so use a
+    // separate no-sharing lease after releasing our own verification pins.
+   }
+   using(var lease=CreateFileW(directory,ReadControl|Attributes|1,0,IntPtr.Zero,3,Backup|OpenReparse,IntPtr.Zero)) {
+    Info(lease,directory,true);Access(lease,true);Thread release=null;
+    if(transient) {release=new Thread(delegate(){Thread.Sleep(30);lease.Dispose();});release.Start();}
+    try {using(var pins=new Pins(directory,false,true)){};}
+    finally {if(release!=null)release.Join();}
    }
   }
  }

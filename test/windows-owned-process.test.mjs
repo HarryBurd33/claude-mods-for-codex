@@ -152,3 +152,9 @@ test('Windows scratch proof starts private, is pinned while live, and removes on
     await assert.rejects(access(path),{code:'ENOENT'});
   } finally {if(p.exitCode===null){p.kill();await closed;}}
 });
+test('Windows directory pins tolerate a short sharing lease and refuse a held lease without changing ACLs',native,async()=>{
+  const {data,exe}=await setup();
+  assert.equal(await run(exe,['run','transient-pin',data]),'pinned');
+  assert.equal(await run(exe,['run','held-pin',data]),'refused');
+  await windowsStorageRequest('prepare-directory',data);
+});

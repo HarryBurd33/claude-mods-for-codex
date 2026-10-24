@@ -68,6 +68,19 @@ pins release before the scope's own deletion; lock-existence probes share-delete
 Installed activity read first used invalid waitMs0 and was correctly refused;
 retry without wait returned4records/same revision. No settings/logging change.
 
+### Bounded directory sharing retry and controlled lease witness
+
+Real list-right pins can now conflict with another process's still-open creation
+handle; immediate refusal is safe but unsuitable for cooperative initial creation.
+OpenDirectory retries ERROR_SHARING_VIOLATION32 only,10attempts/90ms total sleep per
+handle. Other errors/path/ACL checks are unchanged, no share-delete/ACL repair or
+lock removal. Parent request/telemetry deadlines still bound the whole operation.
+Proof adds deterministic transient30ms and held no-sharing leases: the first must
+obtain a real pin, the latter must refuse. No runtime logging/thread added (lease
+thread is test-only). The exact cause of the earlier public-state failure is not
+established merely by this repair; diagnostic/final CI results remain required.
+Local full suite170pass/0fail/28Windows-only skips198total. New OS proof8cases.
+
 ## High read-only review and travel pause — 2026-10-23
 
 Resumed3e6272d with clean tracked tree. Read current handoff/Windows helper/C#,

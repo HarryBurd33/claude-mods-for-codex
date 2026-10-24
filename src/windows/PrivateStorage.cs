@@ -134,7 +134,16 @@ namespace CodexMods {
    // FILE_LIST_DIRECTORY (the directory form of FILE_READ_DATA) so omission of
    // FILE_SHARE_DELETE actually pins the name against deletion/replacement.
    // This right is not used to enumerate ancestors or broaden selected IO.
-   static SafeFileHandle OpenDirectory(string path) { return CreateFileW(path,ReadControl|Attributes|1,3,IntPtr.Zero,3,Backup|OpenReparse,IntPtr.Zero); }
+   static SafeFileHandle OpenDirectory(string path) {
+    // A concurrent private creator can still have its creation handle open.
+    // Retry sharing violations only, bounded to 90ms; never retry an ACL/path
+    // refusal, remove a lock, grant delete sharing or repair permissions.
+    for(int attempt=0;;attempt++) {
+     var h=CreateFileW(path,ReadControl|Attributes|1,3,IntPtr.Zero,3,Backup|OpenReparse,IntPtr.Zero);
+     if(!h.IsInvalid || Marshal.GetLastWin32Error()!=32 || attempt==9)return h;
+     h.Dispose();Thread.Sleep(10);
+    }
+   }
    void Pin(string path,bool privateObject) {
     var h=OpenDirectory(path);handles.Add(h);Info(h,path,true);Access(h,privateObject);
    }
