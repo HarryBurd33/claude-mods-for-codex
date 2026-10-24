@@ -1,25 +1,18 @@
-# Current status — source29 impact review — 2026-10-24
+# Current status — source29 verification gate — 2026-10-24
 
-Development source0.2.0-dev.29 adds [local impact review](../impact-and-usage.md),
-explicit ephemeral next-step guidance and actionable denial/retry text. It executes
-or approves nothing and changes no policy. Current official ask/advisory constraints
-favor this disclosed approximation; [architecture/tests](DEV29-REVIEW.md).
+## Source29 Medium CI/package gate — current — 2026-10-24
 
-Local macOS346tests235pass/0fail/111Windows-only skips. Validate3mods/replay4fixtures
-passed; actual source CLI synthetic proof passed. UI/host-disconnection/teardown
-checks are simulated. Source29 CI/public package/installed/native UI acceptance
-pending. Skill helper unavailable (PyYAML missing), no independent model evaluation.
+[PACKAGE-DEV29](PACKAGE-DEV29.md):234file public archive passed byte/hygiene/version/
+MIT checks; spaced extraction58pass/0fail. Four POSIX source CI jobs235pass each,
+Windows portable/new7impact cases passed. Node24 has the known image failure;
+Node22 adds a **new metadata-bounds harness failure** (83/85process passes).
+Cause unresolved. Installed28/logging scope/settings/human trust remain unchanged;
+source29 not installed. Next **GPT-6.1 Sol High** for bounded failure investigation,
+not broad Windows feature work. No new guard choice/model run. Earlier pending
+CI/package/next-Medium wording is historical. Full93 product remains incomplete.
 
-Installed human-reviewed28 remains227byte-equal candidate, approved settings and
-selected exports/rules/scope/data unchanged;3prior owned trust entries remain human
-reviewed. [Native28](NATIVE-DEV28.md): authored5delivery counter agrees with existing
-7records/same revision; Refresh/rewrites/control/denial passed. No event capture
-widening, new guard category, optional observer enrollment, cleanup or model run.
-
-Windows guards/known mandatory image failures unchanged; no Windows11/WSL/native
-compatibility or all-green claim. macOS acceptance first, Windows later. All93
-requirements remain in scope and incomplete; default branch retains MVP.
-
-Next GPT-6.1 Sol Medium for exact CI/package/spaced checks and concrete supported
-native review preparation. New guard opt-in/human trust/restart remain separate.
-Stop for High before new correctness/security/consequential implementation.
+Source29's local impact review and explicit next-step guidance are implemented,
+not native accepted. Native28 authored counter/hooks remain separately verified.
+No code/source test change this Medium stage. Known image failure guards intact;
+new failure must not be called flaky or fixed without evidence. macOS remains
+first delivery target; only bounded new-failure triage precedes further acceptance.

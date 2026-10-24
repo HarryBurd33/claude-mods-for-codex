@@ -1,5 +1,12 @@
 # Current project status — source29 — 2026-10-24
 
+Current verification gate: source29 packaging passed (234files;58focused tests).
+CI also found a new Windows Node22 metadata-bounds harness failure alongside the
+known image failures. Cause unresolved; High investigation precedes installation.
+Installed28/logging/trust are unchanged. [Exact results](docs/continuation/PACKAGE-DEV29.md).
+Earlier source29 CI/package-pending wording below is superseded; native29 remains pending.
+
+
 macOS acceptance is the current priority. Development source **0.2.0-dev.29** adds
 [command impact review](docs/impact-and-usage.md): a bounded local assessment and
 explicit Stop, Revise request or Review policy separately guidance. Neither a
