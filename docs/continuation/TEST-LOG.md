@@ -3104,3 +3104,32 @@ lifecycle/platform gaps remainincomplete. Save/upload/verify and stopforhumanHig
   projects; raw config equals this High stage initial observation, no config writes.
   Notes checks:11Markdown-only public changes/no private path/project name;93IDs/
   order preserved; current links resolve; diff check clean. No executable changes.
+
+## 2026-10-25 — Sol Medium exact source34 packaging afterf637340
+
+- Preservation checker before/after passed protected state/projects/config,
+  cache31 251/settings28+31/data/source30+31/marketplace. Raw config equals prior
+  High observation; model preference comparison exclusions preserved; no writes.
+- Anonymous credential-disabled public clone detached at be49b515.../treeb79f94...;
+  pack --ignore-scripts --offline isolated cache/output. Exact287files/2365399
+  unpackedbytes/715761archivebytes, SHA256 in PACKAGE-DEV34; all archive bytes
+  equal public clone, SHA1/SHA512/count/type/path/privacy/default checks pass.
+  Runtime/test/CI/default/version equal workspace;8archived Markdown differences
+  from later notes explicitly recorded, no false all-workspace-byte-equality claim.
+- Safe spaced extraction:13selected testfiles119total117pass0fail2platformskips
+  (~7sec). Packaged validate3/replay4pass, no fixture command execution. No full
+  local suite or CI rerun: exact completed40209560926 metadata checked/reused.
+- Actual packaged native describe exit0/closed; --run --plan exit2stdout0 before
+  plan/native process. Actual synthetic V1/V2 pass/denial stops/peers reaped,
+  nativeInferenceCalls0. Prior actual31Reviewdesk/32inert-agent validate/replay/plan
+  pass with original bytes unchanged, no installation performed.
+- Seven source pins equal package/workspace/private hashes; frozen PLAN/INPUT hash,
+  candidate bytes/internal binary hash record consistent; packaged pure plan
+  validation passed. Binary not rehashed/version-refreshed/invoked. Known stale
+  selected-config fingerprint false match remains, proposal bytes unchanged.
+  Source33archive intact. No new drift or native/config/model/trust/install action.
+- Next High for known conservative metadata-only preflight refusal/security
+  distinction; no source fix/relaxation/activation on Medium. Full93 incomplete.
+- Final notes checks:12Markdown-only public changes/no private path/project
+  name;93IDs/order preserved; current local links and7source pins pass; diff check
+  clean. No executable source/CI/version changes. Raw machine evidence stays ignored/local.

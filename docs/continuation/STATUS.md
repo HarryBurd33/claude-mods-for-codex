@@ -1,21 +1,23 @@
-# Current status — source34 drift reconciled / package pending —2026-10-25
+# Current status — source34 package verified / native gate closed —2026-10-25
 
-## Hook-state drift reconciled read-only — current —2026-10-25
+## Source34 exact package verified — current —2026-10-25
 
-[STATE-RECONCILIATION-DEV34](STATE-RECONCILIATION-DEV34.md): all seven additions
-are per-definition trusted_hash metadata for one other project; no inline handler
-payload/enable override. Existing state entries/installed31 cache251/settings/data/
-sources/marketplace preserved. No foreign definition match or human provenance is
-attested; nothing was trusted, restored, deleted or changed. All current state and
-projects remain in a private protected fingerprint; only model preferences excluded.
+[PACKAGE-DEV34](PACKAGE-DEV34.md): immutable be49b51 public clone/archive287files,
+all bytes equal clone, executable/test/default/CI/version match notes workspace;
+only documented Markdown differences. Spaced packaged117pass0fail2skip119total,
+validate3/replay4; native CLI closed exit2 before process, synthetic V1/V2 pass/
+denial stop/peers reaped. Prior31/32bundles unchanged; no install/native inference.
+Seven source pins/frozen plan/input/candidate consistent, selected-config hash
+remains stale and proposal untouched; binary not rehashed/version-refreshed.
 
-Frozen native review remains stale/unmodified. Synthetic diagnostic confirms the
-source34 nonempty-hooks check conservatively rejects metadata-only state if exported;
-no read-only-scope code fix/relaxation. Gate remains closed; no native/inference/
-install/config change. FourPOSIX284pass113skip/Windows portable CI already verified;
-packaging remains pending. Next **Sol Medium** for unchanged34offline package work,
-High before native activation/security changes. Full93/Windows/native routing incomplete.
+Protected current config/state/projects and installed31cache251/settings/data/
+sources/marketplace preservation passed. No logging/model/trust/config/Windows
+change. Exact CI already verified/reused, not rerun; known Windows refusals/gaps
+remain. Next **Sol High** for known metadata-only preflight classifier/security
+review and explicit proposal refresh planning, keep admission closed. No native
+activation/inference/install/config grant. Full93/native routing remains incomplete.
 
-Exact CI: CI-DEV34.md. Source34 code/tests/version unchanged; no package created
-or native activation. The accepted design is not a run grant. Do not repeat the
-completed classification or overwrite unrelated work to satisfy an old snapshot.
+Public source package identity and notes divergence: PACKAGE-DEV34.md. Source34
+uninstalled; source31loaded installation/lifecycle evidence remains separate.
+Known metadata-only classifier refusal, stale review hash, native config/routing/
+usage/cancellation/export/Windows gaps remain; no finished release/full product claim.

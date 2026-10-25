@@ -1,6 +1,24 @@
 # Verification record
 
-## Hook-state drift reconciled read-only — current —2026-10-25
+## Source34 exact package verified — current —2026-10-25
+
+[PACKAGE-DEV34](continuation/PACKAGE-DEV34.md): immutable be49b51 public clone/archive287files,
+all bytes equal clone, executable/test/default/CI/version match notes workspace;
+only documented Markdown differences. Spaced packaged117pass0fail2skip119total,
+validate3/replay4; native CLI closed exit2 before process, synthetic V1/V2 pass/
+denial stop/peers reaped. Prior31/32bundles unchanged; no install/native inference.
+Seven source pins/frozen plan/input/candidate consistent, selected-config hash
+remains stale and proposal untouched; binary not rehashed/version-refreshed.
+
+Protected current config/state/projects and installed31cache251/settings/data/
+sources/marketplace preservation passed. No logging/model/trust/config/Windows
+change. Exact CI already verified/reused, not rerun; known Windows refusals/gaps
+remain. Next **Sol High** for known metadata-only preflight classifier/security
+review and explicit proposal refresh planning, keep admission closed. No native
+activation/inference/install/config grant. Full93/native routing remains incomplete.
+
+
+## Hook-state reconciliation — historical checkpoint —2026-10-25
 
 [STATE-RECONCILIATION-DEV34](continuation/STATE-RECONCILIATION-DEV34.md): all seven additions
 are per-definition trusted_hash metadata for one other project; no inline handler

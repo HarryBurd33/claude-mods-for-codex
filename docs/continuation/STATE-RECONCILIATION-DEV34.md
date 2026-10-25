@@ -1,5 +1,12 @@
 # Source34 hook-state drift classified read-only —2026-10-25
 
+Current continuation: [PACKAGE-DEV34](PACKAGE-DEV34.md) verifies the immutable
+be49b51 archive and spaced offline checks. Frozen review stays stale/unchanged;
+next High addresses the known metadata-only classifier before any activation.
+No native/config/inference/install grant. Earlier packaging-pending directions
+below are historical and should not be repeated.
+
+
 Sol High resumed9f56598. The seven additions are **stored per-definition trust
 fingerprints referencing a different project's .codex/hooks.json**. They are
 metadata in the user hooks.state map, not inline executable hook definitions or

@@ -1,5 +1,12 @@
 # Source34 prepared native adapter review —2026-10-25
 
+Current continuation: [PACKAGE-DEV34](PACKAGE-DEV34.md) verifies the immutable
+be49b51 archive and spaced offline checks. Frozen review stays stale/unchanged;
+next High addresses the known metadata-only classifier before any activation.
+No native/config/inference/install grant. Earlier packaging-pending directions
+below are historical and should not be repeated.
+
+
 Current update: [STATE-RECONCILIATION-DEV34](STATE-RECONCILIATION-DEV34.md)
 classifies the seven records as other-project trust metadata, verifies owned31
 preservation and leaves the stale proposal/source untouched. Medium can resume
