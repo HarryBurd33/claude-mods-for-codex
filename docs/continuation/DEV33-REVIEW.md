@@ -2,8 +2,9 @@
 
 Current continuation: [native admission assessment](NATIVE-ADMISSION-REVIEW.md).
 Source33 code/package are unchanged; no generic public exact strict gate established.
-A revised design awaits human agreement. Medium may verify notes/record the choice;
-High before revised adapter/security code. No inference or live enablement.
+The human accepted the revised ordinary-permissions design only on2026-10-25.
+Medium recorded the choice; next High prepares adapter/review artifacts. No
+inference, installation, configuration change or live enablement authorized.
 
 
 High resumed327f0be. User authorized implementation/dry tests and **no inference**.

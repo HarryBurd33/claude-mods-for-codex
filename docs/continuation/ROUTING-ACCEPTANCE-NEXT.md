@@ -1,10 +1,11 @@
 # Native configured-agent acceptance — High continuation
 
 Current update: the High [admission assessment](NATIVE-ADMISSION-REVIEW.md) is
-complete. No public exact strict gate was established; a concrete revised design
-awaits human agreement. Original proposal below remains unapproved/unrun; live
-admission is closed and no inference is authorized. Medium may verify notes/record
-the decision; High before any revised native adapter/security implementation.
+complete. No public exact strict gate was established. On2026-10-25 the human
+accepted the ordinary-permissions revised design only; inference, installation
+and configuration changes remain unauthorized. Original strict proposal below is
+historical/unrun. Medium recorded the choice; next High prepares the separate
+native adapter/review artifacts with live admission closed.
 Do not repeat the completed boundary investigation or create another mock-only step.
 
 

@@ -1,5 +1,22 @@
 # Native routing admission review — 2026-10-25
 
+## Recorded human design decision — current
+
+On2026-10-25 the human answered: **“Accept revised design only; keep inference
+closed”**, then explicitly resumed Medium to record that choice. This accepts
+the ordinary-read-only-permissions design below, including disclosed residual
+host-permitted reads/native tools and post-observation stop limits. It does not
+establish the original strict gate or native routing acceptance.
+
+**No inference, installation or configuration change is authorized by this
+approval.** Installed31, logging scope, parent model, human trust and Windows guards
+remain unchanged. The adapter is not implemented; source33 live admission remains
+closed. Next Sol High may prepare the separate adapter/source and exact runnable
+review artifacts; a separate fresh inference grant is still required before a run.
+No permanent profile, process configuration update or protected trust action is
+approved by this record. Earlier pending-choice reporting is superseded by this decision.
+
+
 Sol High resumed verified737c27c. **Live admission remains closed; no inference.**
 Installed31, approved settings, logging scope, parent model, human trust and Windows
 guards are unchanged. Source33 stays uninstalled; this is a research/decision
@@ -75,7 +92,7 @@ session/services.rs and hooks/src/hooks.rs. Directory listings resolved the actu
 split paths; unavailable/uncompleted pages did not supply evidence. No REA, tool repair,
 installed-app inspection/patch, Windows proof loop or additional model call.
 
-## Concrete alternative for human design review — not approved or runnable
+## Accepted design scope — not execution authorization or runnable approval
 
 Keep the same intended marker task, explicit configured role, proposed Sol Low
 parent and Luna Low child, no current-chat history, empty disposable project and
@@ -109,25 +126,26 @@ limits from the original plan, subject to implementation review. Missing child
 usage remains unavailable. No exact cost cap, universal gate or guaranteed remote
 cancellation is claimed.
 
-Two distinct human decisions remain:
+Design agreement and execution authorization remain separate:
 
-1. **Design scope:** accept this ordinary-permissions alternative, or retain the
-   strict proposal and leave native routing blocked while completing other macOS
-   requirements. Agreement only permits preparing the revised plan/adapter.
+1. **Design scope — accepted:** ordinary-permissions alternative as disclosed.
+   Agreement permits preparing the revised plan/adapter, not changing installed
+   configuration or executing the trial.
 2. **Execution later:** after exact runnable source/config/candidate hashes,
    models/access/usage/cancellation/removal are reviewable, request a separate
    fresh bounded inference grant. Design agreement or “continue” is not that grant.
 
-No user decision has been recorded yet. Do not build or execute the revised live
-adapter while that scope decision is pending. The unchanged source33 dry driver
-can still be used offline; re-running it is not progress on this native question.
+The human design choice is recorded above. Source33 remains unchanged and closed.
+Sol High must precede consequential adapter/security implementation; this decision
+does not open an inference path or authorize installation/configuration changes.
 
 ## Next work
 
-Medium can verify these source citations/notes and record the human design choice
-without changing runtime/package/install/logging/trust. If ordinary permissions
-are accepted, stop for High before implementing the separate native adapter and
-review artifacts; keep inference disabled. If strict scope is retained, mark the
-native acceptance blocked at this specific boundary and choose a concrete other
-macOS acceptance task from the93-row ledger. Do not repeatedly research the same
-gap, rebuild a mock-only substitute or repackage unchanged source33.
+Medium recorded the actual human choice and checked the documentation-only change.
+Next Sol High prepares the smallest separate native adapter and exact review
+artifacts under the accepted ordinary-permissions design. Preserve the residual
+access disclosures and stop limits; do not claim a universal gate. Keep inference
+closed and do not install, change configuration, start native turns or bypass
+human trust. Future run authorization must be fresh and cover the exact reviewed
+source/config/candidate, models, access, usage and cancellation/removal behavior.
+Do not repeat source33 packaging or the completed boundary investigation.

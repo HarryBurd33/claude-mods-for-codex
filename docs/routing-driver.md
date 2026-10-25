@@ -2,7 +2,8 @@
 
 Current native boundary assessment: [NATIVE-ADMISSION-REVIEW](continuation/NATIVE-ADMISSION-REVIEW.md).
 The exact strict gate was not established through the public CLI0.164 interface.
-A revised design awaits human agreement; this dry driver remains unchanged/closed.
+The human accepted the revised design only on2026-10-25; inference/installation/
+configuration changes remain unauthorized. This dry driver remains unchanged/closed.
 
 
 Source **0.2.0-dev.33** implements the planned routing protocol driver and

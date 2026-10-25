@@ -3006,3 +3006,19 @@ lifecycle/platform gaps remainincomplete. Save/upload/verify and stopforhumanHig
   review/handoff/driver links resolve. First source retrieval batch stopped on
   tools/spec.rs404; uncompleted futures are not claimed as individually retrieved
   or404. Current source index distinguishes those from observed later404s.
+
+## 2026-10-25 — Sol Medium records accepted native design after568db47
+
+- Human explicitly answered “Accept revised design only; keep inference closed,”
+  then switched to Medium and requested durable recording. This is actual scope
+  agreement, not inferred consent. Residual ordinary host-permitted reads/native
+  tools and observational stop limits remain disclosed.
+- Recorded current decision across handoff/review/status/ledger/architecture/
+  README/plan summaries. No inference, installation or configuration change grant.
+  Next High before native adapter/security source changes; no repeat design question.
+- Documentation-only stage. No native CLI/process, model/tool test, CI polling,
+  package/version/source/runtime/config/logging/trust/parent-model/Windows change.
+  Prior source33 CI/package and prior High no-turn proof are not new test results.
+- Notes verification passed: git diff --check;14changed Markdown files only/no
+  private user path;93requirement IDs/order preserved; current local handoff/review/
+  status links resolve. No executable tests warranted for this documentation record.

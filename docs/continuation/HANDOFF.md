@@ -1,7 +1,8 @@
-# Native admission assessment saved — next GPT-6.1 Sol Medium
+# Revised native routing design accepted — next GPT-6.1 Sol High
 
-2026-10-25. Sol High resumed **737c27c** on **codex/astra-groundwork**.
-Released native boundary reviewed and one bounded no-turn config inventory completed.
+2026-10-25. Sol Medium resumed **568db47** on **codex/astra-groundwork** and
+recorded the human decision: **“Accept revised design only; keep inference closed.”**
+The released native boundary assessment and prior no-turn inventory remain unchanged.
 **Live admission closed; no inference.** Installed31/current model/logging/human
 trust/Windows guards preserved. Source33 uninstalled; no native adapter. Full93
 incomplete, macOS acceptance first/Windows later. No new source/package version.
@@ -29,15 +30,17 @@ repeat source33 packaging/mocks or the same source search.
   test has no established public enforcement path. Not a permanent declaration
   that native routing is impossible; EV15 remains supported in principle/partial
   and native execution/discovery/permissions/usage/lifecycle unverified.
-- **Prepared, not approved:** concrete ordinary-read-only-permissions alternative,
+- **Design accepted, not run-authorized:** concrete ordinary-read-only-permissions alternative,
   same intended Sol Low parent/Luna Low child/role/marker, restrictive process-only
   controls and stop limits, explicit residual host-permitted reads/native tools.
-  Design agreement is required before revised adapter implementation; a separate
-  fresh bounded inference grant would still be required after exact runnable review.
-- Human scope question was sent; **no answer recorded at this checkpoint**. Do not
-  treat silence or a model switch as agreement. Retain strict/closed baseline.
+  The human accepted this design only on2026-10-25 and explicitly asked Medium to
+  record it. No inference, installation or configuration change was authorized.
+  A separate fresh bounded inference grant remains required after runnable review.
+- Next High prepares the separate adapter/source and review artifacts; no native
+  run, installed profile/config change or trust action is included. Original strict
+  gate remains unestablished; source33 live admission remains closed.
 
-## Actual host checks and source evidence
+## Prior High host checks and source evidence — not repeated this Medium stage
 
 macOS14.6; Node24.22.0 last observed Medium; standalone --version now confirmed
 **codex-cli0.164.0**. Desktop/internal binary version remains separately unverified.
@@ -93,9 +96,9 @@ paths/root HANDOFF stay ignored. Do not upload them.
 
 ## Branch / checkpoint provenance
 
-Starting verified local/public commit737c27c1a4f5df9114a3c6886000d1dd50b4ae99,
-tree9c4162165919e433b20174ac977eb34b4c13b0e5.
-[Starting checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/737c27c1a4f5df9114a3c6886000d1dd50b4ae99),
+Starting verified local/public commit568db47e4e92ab60928e56722dad87b30144bf07,
+tree8e05e5f19ddc1d5f421cbcf16e72f304c7f33da2.
+[Starting checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/568db47e4e92ab60928e56722dad87b30144bf07),
 [branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
 Immutable tested source33/package remains c8ea24dc506652a636cd35d25d6cf9db79881066,
 tree1a270654bf3c0b926831af2f6667b16d4c362714. These later notes are not a new
@@ -103,34 +106,53 @@ packaged archive. Current final local equivalent/verified remote commit/tree/lin
 are recorded in private handoff/final after actual non-force upload/readback.
 No force push or lost local history.
 
+## This Medium stage — actual work
+
+Read the current handoff/review and latest private records. Recorded the explicit
+human design choice and updated current README/status/ledger/architecture/plan/
+review/test-log summaries, superseding pending-choice reporting. Documentation
+only: no source/runtime/test/CI/package/version/native invocation, model run,
+installation, settings/logging/permission/trust/Windows guard change. Prior exact
+source33 CI/package and native no-turn observations are not new Medium results.
+No native test, CI polling or repackaging is needed merely to record the approval.
+
 ## Next tasks — exact model and permission gates
 
-**GPT-6.1 Sol, Medium** is sufficient for routine documentation/evidence checks and
-recording the pending human design choice; no consequential code is authorized at
-this setting. No new package/CI/native install/inference needed for this notes stage.
+**GPT-6.1 Sol, High** is required for consequential native adapter/security source
+and integration decisions. The human accepted the revised design; do not ask for
+the same design approval again. This acceptance does not authorize inference,
+installation or configuration changes.
 
-1. Read NATIVE-ADMISSION-REVIEW and verify the relevant citations/claims; preserve
-   the93requirement IDs and distinctions among source/mock/config/native evidence.
-2. Record the human design choice when provided. If no answer exists, leave the
-   strict proposal blocked; do not proceed as though permission was inferred.
-3. If ordinary permissions are accepted, save/upload/verify the exact agreed scope
-   and stop for **Sol High** before native adapter/security implementation. Keep
-   inference closed. The eventual adapter needs exact runnable source/config/
-   candidate/access/usage/cancellation/removal review before a separate inference
-   request; no past grant applies. Never reinterpret scope approval as run approval.
-4. If strict scope is retained, keep native routing blocked at this specific
-   boundary. Select another concrete incomplete macOS acceptance item from the
-   ledger; High before consequential implementation/recovery, Windows remains later.
-5. Do not loop on the same research, fabricate a universal gate, silently build a
-   custom client/fork, add more mock-only scaffolding, change logging/trust/current
-   model or repackage unchanged source33. Full product remains incomplete.
+1. Follow the accepted scope in NATIVE-ADMISSION-REVIEW. Preserve explicit residual
+   host-permitted reads/native tools, ordinary permission checks, typed refusal,
+   post-observation stopping limits, usage uncertainty and cancellation limits.
+   No universal pre-execution tool/argument/one-total-spawn guarantee is available.
+2. Prepare the smallest separate native adapter and exact review artifacts without
+   starting a native turn or enabling live admission. Keep the existing synthetic
+   driver isolated; do not replace the deliverable with another mock-only milestone.
+   Use bounded offline tests where needed for new adapter code, labeling them as
+   offline. Do not claim native acceptance from those tests or config echoes.
+3. Produce the exact runnable command/source/config/candidate hashes, proposed
+   parent/child models/efforts, access and usage bounds, refusal/cancel/disconnect/
+   late-response behavior and removal/cleanup instructions. Keep raw private paths/
+   configuration/logs local. Do not install a profile or change existing settings.
+4. Before any additional native configuration action or inference, prepare the
+   concrete review and obtain the separate authorization needed. A future inference
+   grant must cover both intended parent orchestration and child; no prior grant,
+   design agreement, model switch or “continue” substitutes for it. No automatic
+   approval, human trust mutation or current-model interception.
+5. Preserve installed31, approved settings/logging/capture/rules/exports/status,
+   parent model and Windows guards. No custom host/fork/product direction implied.
+   Stop for Medium when consequential work is complete and routine verification
+   remains. Full93/native routing/Windows acceptance remain incomplete.
 
 ## Copy-and-paste resume instruction
 
-“I’ve switched to GPT‑6.1 Sol, Medium. Continue from the verified native admission
-assessment checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
+“I’ve switched to GPT‑6.1 Sol, High. Continue from the verified accepted-design
+checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
 NATIVE-ADMISSION-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md
-and latest private HANDOFF.md. Verify the notes and record my native test design
-choice if supplied; do not infer agreement. Preserve installed31, logging scope,
-parent model, human trust and Windows guards. Keep live admission closed; no
-inference. Stop for High before native adapter/security implementation.”
+and latest private HANDOFF.md. Prepare the separate native adapter and exact review
+artifacts for my accepted ordinary-read-only-permissions design. Preserve installed31,
+logging scope, parent model, human trust and Windows guards. Keep live admission
+closed; no inference, installation or configuration change is authorized. Stop for
+Medium when sufficient.”

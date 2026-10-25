@@ -11,11 +11,11 @@ no inference and own process reaped; exported config echoes remain non-runtime
 evidence. Installed31/cache251/config/trust/settings/data preserved. No adapter,
 package/version, logging, selected model or Windows guard change.
 
-A concrete ordinary-read-only-permissions alternative is prepared for **human
-design agreement**, currently pending; residual native tools/host-permitted reads
-are explicit. Design agreement cannot authorize inference. Medium may verify
-notes and collect that decision; High before any revised native adapter/security
-implementation. Keep live admission closed; source33 uninstalled/full93 incomplete.
+The human **accepted the ordinary-read-only-permissions revised design only**
+on2026-10-25, including the disclosed residual native tools/host-permitted reads.
+Inference, installation and configuration changes remain unauthorized. Medium
+recorded the decision; next High prepares the separate native adapter/review
+artifacts without executing inference or changing installed configuration. Keep live admission closed; source33 uninstalled/full93 incomplete.
 Do not repeat mock-only scaffolding, source33 packaging or the same boundary search.
 
 
