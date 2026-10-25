@@ -1,5 +1,13 @@
 # Native configured-agent test plan — 2026-10-25
 
+Current update: the High [admission assessment](NATIVE-ADMISSION-REVIEW.md) is
+complete. No public exact strict gate was established; a concrete revised design
+awaits human agreement. Original proposal below remains unapproved/unrun; live
+admission is closed and no inference is authorized. Medium may verify notes/record
+the decision; High before any revised native adapter/security implementation.
+Do not repeat the completed boundary investigation or create another mock-only step.
+
+
 **Native trial not authorized or run.** Source33 now implements the
 [synthetic-only dry driver](../routing-driver.md) / [review](DEV33-REVIEW.md).
 Its protocol/admission/cancellation tests pass; native adapter/gate remains absent/

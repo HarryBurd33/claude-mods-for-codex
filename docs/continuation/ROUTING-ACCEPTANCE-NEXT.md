@@ -1,5 +1,13 @@
 # Native configured-agent acceptance — High continuation
 
+Current update: the High [admission assessment](NATIVE-ADMISSION-REVIEW.md) is
+complete. No public exact strict gate was established; a concrete revised design
+awaits human agreement. Original proposal below remains unapproved/unrun; live
+admission is closed and no inference is authorized. Medium may verify notes/record
+the decision; High before any revised native adapter/security implementation.
+Do not repeat the completed boundary investigation or create another mock-only step.
+
+
 2026-10-24. Source32 authoring is implemented. Medium package/CI evidence belongs
 in PACKAGE-DEV32.md; source design/parser limits are in DEV32-REVIEW.md and
 docs/configured-agents.md. This is remaining EV-15 acceptance, not another authoring

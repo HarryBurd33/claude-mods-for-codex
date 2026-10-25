@@ -1,4 +1,12 @@
-# Next High: resolve the native admission boundary
+# Native admission investigation brief — completed assessment linked below
+
+Current update: the High [admission assessment](NATIVE-ADMISSION-REVIEW.md) is
+complete. No public exact strict gate was established; a concrete revised design
+awaits human agreement. Original proposal below remains unapproved/unrun; live
+admission is closed and no inference is authorized. Medium may verify notes/record
+the decision; High before any revised native adapter/security implementation.
+Do not repeat the completed boundary investigation or create another mock-only step.
+
 
 2026-10-25. Source33 dry driver and exact CI/package are verified within
 PACKAGE-DEV33 limits. New tests passed all four POSIX lanes and the portable

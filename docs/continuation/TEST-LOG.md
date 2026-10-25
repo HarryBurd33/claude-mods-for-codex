@@ -2965,3 +2965,44 @@ Routine33package/CIcomplete,33uninstalled31approvedusable. NextHighactualnative
 admissionboundary/adapterdesign perNATIVE-ADMISSION-NEXT, not more mock-only stage.
 No newinferencegrant; liveclosed/codecannotenable. Full93native routing/permission/
 lifecycle/platform gaps remainincomplete. Save/upload/verify and stopforhumanHigh.
+
+## 2026-10-25 — Sol High native admission review after737c27c
+
+- Read current public/private handoff and installed management skill; used official
+  OpenAI docs. Verified installed manifest name/root; no installation action.
+- Prepared enabled31 preservation checker before/after:251cachefiles/config/owned
+  human trust/settings/data/source30/source31/marketplace unchanged,0modelturns.
+- Retrieved official app-server/config-reference/security pages and pinned0.164
+  primary source6aaac694803004a63c6f393d153c96d22521a6b9. Read tool registration/
+  dispatch/policy, public thread/turn fields, config schema, hooks, native host
+  extension assembly and child runtime permission inheritance. Exact code/source
+  citations and unavailable obsolete-path retrievals: NATIVE-ADMISSION-REVIEW.md.
+- Source finding: Rust ExtensionDataInit ToolPolicy filters registry/hosted tools.
+  No public exact allowlist/argument/one-total-spawn gate found in inspected CLI
+  config or app-server fields. Code-mode exclusions only nested; read-only permits
+  covered reads/commands; hook errors/serialization can continue. V1 depth is not
+  V2 depth; concurrency is not total-call cap. Not a permanent routing-impossibility
+  or all future-version claim. No custom host/fork/app patch/source repair.
+- Actual private bounded no-turn driver invoked standalone --version:0.164.0. First
+  sandboxed app-server attempt exited before initialize; no config/runtime conclusion
+  from that failure. Same20sec/1MiB/256message initialize/config-read check completed
+  with filesystem escalation;4messages/36,752outputbytes; own process group reaped;
+  stderr discarded/raw config not persisted/printed. Requests restricted to
+  initialize/initialized/config-read;0threadstart/0turnstart/0inference. No model/list.
+- Ten restrictive process-only values matched exported config; root code_mode.enabled
+  and tools.update_plan.enabled not confirmed. No echo treated as native tool
+  admission/actual enforcement, and no retries to turn echoes into proof. No shared
+  config/profile/trust/permissions/logging/current-model/Windows-guard changes.
+- Prepared concrete ordinary-read-only-permissions alternative with explicit
+  residual host-permitted reads/tools, post-observation stopping limits and separate
+  design/inference approvals. Human design agreement pending. No revised live
+  adapter or inference path implemented. Existing source33 liveAdmission unchanged.
+- Documentation-only stage; source33 CI/archive evidence remains PACKAGE-DEV33.
+  No redundant full-suite/package/Windows-native proof loop; no new release/version.
+  No current native proof task/process remains running. Medium can review notes and
+  record scope decision; High before consequential adapter/security implementation.
+- Final notes checks: git diff --check passed;93requirement IDs/order unchanged;
+  all changed public files Markdown only/no private user path; new/current local
+  review/handoff/driver links resolve. First source retrieval batch stopped on
+  tools/spec.rs404; uncompleted futures are not claimed as individually retrieved
+  or404. Current source index distinguishes those from observed later404s.

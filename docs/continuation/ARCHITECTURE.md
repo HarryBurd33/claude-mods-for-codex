@@ -1,6 +1,25 @@
 # Extension architecture and security contracts
 
-## Source33 CI/package verified — current — 2026-10-25
+## Native admission review — current — 2026-10-25
+
+[NATIVE-ADMISSION-REVIEW](NATIVE-ADMISSION-REVIEW.md) records the released0.164
+boundary: an exact ToolPolicy exists in Rust embedding, but no public CLI/config/
+thread/turn path establishing the strict one-spawn/wait-only trial was found.
+Feature reductions, read-only policy and fail-open hooks do not establish it.
+One bounded initialize/config-read check completed with zero thread/turn starts,
+no inference and own process reaped; exported config echoes remain non-runtime
+evidence. Installed31/cache251/config/trust/settings/data preserved. No adapter,
+package/version, logging, selected model or Windows guard change.
+
+A concrete ordinary-read-only-permissions alternative is prepared for **human
+design agreement**, currently pending; residual native tools/host-permitted reads
+are explicit. Design agreement cannot authorize inference. Medium may verify
+notes and collect that decision; High before any revised native adapter/security
+implementation. Keep live admission closed; source33 uninstalled/full93 incomplete.
+Do not repeat mock-only scaffolding, source33 packaging or the same boundary search.
+
+
+## Source33 CI/package verified — historical checkpoint — 2026-10-25
 
 [PACKAGE-DEV33](PACKAGE-DEV33.md): exact publicc8ea24d clone/archive276files,
 allbytes source/pre-notes workspace equal, spaced packaged104pass0fail1Windows-only
