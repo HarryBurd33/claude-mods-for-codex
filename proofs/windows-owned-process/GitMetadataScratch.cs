@@ -11,13 +11,15 @@ using Microsoft.Win32.SafeHandles;
 namespace CodexMods {
  public static partial class PrivateStorage {
   static readonly byte[] GitScratchConfig=Encoding.ASCII.GetBytes("[core]\nrepositoryformatversion = 0\nbare = false\nfilemode = false\n");
+  // Proof-only diagnostic subtype; still an IOException refusal, never a permit.
+  public sealed class MetadataScratchDeadlineProofException : IOException { }
   public sealed class GitMetadataScratchProof : IDisposable {
    readonly ScratchProof root;
    readonly List<SafeFileHandle> files=new List<SafeFileHandle>();
    readonly List<Pins> directories=new List<Pins>();
    readonly List<string> names=new List<string>();bool disposed;
    public string Path {get {return root.Path;}}
-   static void Check(CancellationToken token,Stopwatch clock) {token.ThrowIfCancellationRequested();if(clock.ElapsedMilliseconds>=5000)throw Refuse();}
+   static void Check(CancellationToken token,Stopwatch clock) {token.ThrowIfCancellationRequested();if(clock.ElapsedMilliseconds>=5000)throw new MetadataScratchDeadlineProofException();}
    void Add(string name,byte[] bytes,CancellationToken token,Stopwatch clock) {
     Check(token,clock);var handle=CreateScratchFileProof(System.IO.Path.Combine(Path,name),bytes);
     try {files.Add(handle);handle=null;}finally {if(handle!=null)handle.Dispose();}
@@ -28,19 +30,27 @@ namespace CodexMods {
     if(headCommit!=null && !System.Text.RegularExpressions.Regex.IsMatch(headCommit,@"\A[a-f0-9]{40}\z"))throw Refuse();
     if(index!=null && index.Length>33554432 || exclude!=null && exclude.Length>1048576)throw Refuse();
     var clock=Stopwatch.StartNew();Check(cancellation,clock);root=new ScratchProof(parent);
+    string phase="directories";
     try {
      foreach(string name in new string[]{"objects","refs","info"}) {
-      Check(cancellation,clock);string path=System.IO.Path.Combine(Path,name);PathInput(path);
+      phase="directory-"+name;Check(cancellation,clock);string path=System.IO.Path.Combine(Path,name);PathInput(path);
       CreateDirectoryPrivate(path);var pin=new Pins(path,false,true);
       try {directories.Add(pin);pin=null;names.Add(path);}finally {if(pin!=null)pin.Dispose();}
      }
-     Add("config",GitScratchConfig,cancellation,clock);
+     phase="config";Add("config",GitScratchConfig,cancellation,clock);
      byte[] head=Encoding.ASCII.GetBytes(headCommit==null?"ref: refs/heads/mods-inspection\n":headCommit+"\n");
-     Add("HEAD",head,cancellation,clock);
-     if(index!=null)Add("index",index,cancellation,clock);
-     if(exclude!=null)Add(System.IO.Path.Combine("info","exclude"),exclude,cancellation,clock);
-     Check(cancellation,clock);
-    } catch {try {Dispose();}catch(IOException){}throw;}
+     phase="head";Add("HEAD",head,cancellation,clock);
+     if(index!=null){phase="index";Add("index",index,cancellation,clock);}
+     if(exclude!=null){phase="exclude";Add(System.IO.Path.Combine("info","exclude"),exclude,cancellation,clock);}
+     phase="final-check";Check(cancellation,clock);
+    } catch(Exception failure) {
+     bool cleanupRefused=false;try {Dispose();}catch(IOException){cleanupRefused=true;}
+     // Closed source-owned labels only. Keep the original exception/refusal and
+     // cleanup semantics; never serialize Message, stack, path or native error.
+     failure.Data["mods-metadata-phase"]=phase;
+     failure.Data["mods-metadata-cleanup"]=cleanupRefused?"refused":"completed";
+     throw;
+    }
    }
    public void Dispose() {
     if(disposed)return;disposed=true;bool refused=false;

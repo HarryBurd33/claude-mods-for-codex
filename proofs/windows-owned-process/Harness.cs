@@ -86,7 +86,19 @@ public static class Harness {
    default: throw new IOException("Synthetic action refused");
   }
  }
+ static string MetadataFailure(string phase,Exception failure) {
+  string detail=failure.Data["mods-metadata-phase"] as string;
+  switch(detail) {
+   case "directories":case "directory-objects":case "directory-refs":case "directory-info":
+   case "config":case "head":case "index":case "exclude":case "final-check":phase=detail;break;
+  }
+  string kind=failure is CodexMods.PrivateStorage.MetadataScratchDeadlineProofException?"deadline":failure is OperationCanceledException?"cancelled":failure is UnauthorizedAccessException?"access":failure is IOException?"io":"other";
+  string cleanup=failure.Data["mods-metadata-cleanup"] as string;
+  if(cleanup!="completed" && cleanup!="refused")cleanup="unknown";
+  return "metadata-bounds-failed|"+phase+"|"+kind+"|"+cleanup;
+ }
  public static int Main(string[] a) {
+  string metadataPhase=null;
   try {
    if(a.Length>1 && a[0]=="child")return Child(a);
    if(a.Length<3 || a[0]!="run")return 2;
@@ -215,28 +227,42 @@ public static class Harness {
        catch(IOException){Console.WriteLine("refused");}
     }return 0;
    }
+   if(mode=="metadata-bounds-diagnostics") {
+    var error=new IOException("PRIVATE_SYNTHETIC_PATH\\never-emit");
+    error.Data["mods-metadata-phase"]="PRIVATE_UNSUPPORTED";
+    error.Data["mods-metadata-cleanup"]="PRIVATE_UNSUPPORTED";
+    Console.WriteLine(MetadataFailure("max-create",error));
+    error.Data["mods-metadata-phase"]="index";error.Data["mods-metadata-cleanup"]="refused";
+    Console.WriteLine(MetadataFailure("max-create",error));
+    Console.WriteLine(MetadataFailure("max-create",new CodexMods.PrivateStorage.MetadataScratchDeadlineProofException()));
+    Console.WriteLine(MetadataFailure("max-create",new OperationCanceledException("PRIVATE_CANCEL")));
+    Console.WriteLine(MetadataFailure("max-create",new UnauthorizedAccessException("PRIVATE_ACCESS")));
+    Console.WriteLine(MetadataFailure("lengths",new InvalidOperationException("PRIVATE_OTHER")));
+    return 0;
+   }
    if(mode=="metadata-bounds") {
-    int refused=0;
+    metadataPhase="invalid-heads";int refused=0;
     foreach(string head in new string[]{"HEAD",new string('A',40),new string('a',40)+"\n","ref: refs/heads/other"}) {
      try {using(var invalid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,head,null,null,CancellationToken.None)){};}
      catch(IOException){refused++;}
     }
-    try {using(var invalid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,null,new byte[33554433],null,CancellationToken.None)){};}
+    metadataPhase="oversize-index";try {using(var invalid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,null,new byte[33554433],null,CancellationToken.None)){};}
     catch(IOException){refused++;}
-    try {using(var invalid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,null,null,new byte[1048577],CancellationToken.None)){};}
+    metadataPhase="oversize-exclude";try {using(var invalid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,null,null,new byte[1048577],CancellationToken.None)){};}
     catch(IOException){refused++;}
-    using(var cancellation=new CancellationTokenSource()) {
+    metadataPhase="pre-cancel";using(var cancellation=new CancellationTokenSource()) {
      cancellation.Cancel();
      try {using(var invalid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,null,null,null,cancellation.Token)){};}
      catch(OperationCanceledException){refused++;}
     }
-    if(refused!=7)throw new IOException();
-    string path;
+    metadataPhase="refusal-count";if(refused!=7)throw new IOException();
+    metadataPhase="max-create";string path;
     using(var valid=new CodexMods.PrivateStorage.GitMetadataScratchProof(directory,new string('a',40),new byte[33554432],new byte[1048576],CancellationToken.None)) {
-     path=valid.Path;
+     path=valid.Path;metadataPhase="lengths";
      if(new FileInfo(Path.Combine(path,"index")).Length!=33554432 || new FileInfo(Path.Combine(path,"info","exclude")).Length!=1048576)throw new IOException();
+     metadataPhase="dispose";
     }
-    if(System.IO.Directory.Exists(path))throw new IOException();Console.WriteLine("bounded");return 0;
+    metadataPhase="root-absence";if(System.IO.Directory.Exists(path))throw new IOException();Console.WriteLine("bounded");return 0;
    }
    if(mode=="metadata" || mode=="metadata-empty" || mode=="metadata-job" || mode=="metadata-cancel") {
     bool optional=mode!="metadata-empty";
@@ -357,6 +383,6 @@ public static class Harness {
     finally {if(sentinel!=IntPtr.Zero)CloseHandle(sentinel);}
    }
    return 0;
-  } catch { Console.WriteLine("harness-failed");return 1; }
+  } catch(Exception failure) { Console.WriteLine(metadataPhase==null?"harness-failed":MetadataFailure(metadataPhase,failure));return 1; }
  }
 }

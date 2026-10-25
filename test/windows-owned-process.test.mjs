@@ -915,10 +915,24 @@ test('Windows metadata scratch creates a fixed private layout readable only with
     } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
   }
 });
-test('Windows metadata scratch enforces typed HEAD and existing 32MiB index/1MiB exclude bounds without residue',native,async()=>{
+test('Windows metadata scratch enforces typed HEAD and existing 32MiB index/1MiB exclude bounds without residue',native,async t=>{
   const {data,exe}=await setup(),before=(await readdir(data)).sort();
-  assert.equal(await run(exe,['run','metadata-bounds',data]),'bounded');
-  assert.deepEqual((await readdir(data)).sort(),before);
+  let failure;
+  try {assert.equal(await run(exe,['run','metadata-bounds',data]),'bounded');}catch(error){failure=error;}
+  // Check residue even after a child refusal; preserve both independent failures.
+  try {assert.deepEqual((await readdir(data)).sort(),before);}catch(error){if(failure)throw new AggregateError([failure,error],'Bounds proof failed and retained unexpected entries');throw error;}
+  if(failure){t.diagnostic('metadata-bounds parent inventory restored after refusal');throw failure;}
+});
+test('Windows metadata-bounds failure diagnostics are fixed frames without exception text or input fields',native,async()=>{
+  const {data,exe}=await setup();
+  assert.equal(await run(exe,['run','metadata-bounds-diagnostics',data]),[
+    'metadata-bounds-failed|max-create|io|unknown',
+    'metadata-bounds-failed|index|io|refused',
+    'metadata-bounds-failed|max-create|deadline|unknown',
+    'metadata-bounds-failed|max-create|cancelled|unknown',
+    'metadata-bounds-failed|max-create|access|unknown',
+    'metadata-bounds-failed|lengths|other|unknown',
+  ].join('\r\n'));
 });
 test('Windows metadata scratch preserves unexpected known-directory content and junction targets without recursive cleanup',native,async()=>{
   const {data}=await setup(),h=await scratchHolder('metadata'),root=h.paths[0];
