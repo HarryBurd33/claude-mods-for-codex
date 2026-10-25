@@ -3053,3 +3053,28 @@ lifecycle/platform gaps remainincomplete. Save/upload/verify and stopforhumanHig
   no private user path; current local links resolve;7public source hashes match
   private review; git diff --check clean; no Windows runtime file changed. Actual
   host commands node --version/sw_vers confirmed Node24.22.0/macOS14.6.
+
+## 2026-10-25 — Sol Medium source34 CI, stop for protected drift
+
+- Resumed exact be49b51/clean worktree. Read continuation/private handoffs and
+  verification/checkpoint operator guidance. Existing continuation/private format
+  retained authoritative; no runtime binding/store/ownership/router/config installed.
+- Anonymous REST found exact run40209560926 completed/failure; read all7job summaries
+  and decoded logs. FourPOSIX284pass113skip397total+validate/replay; portable success,
+  new native-preparation13pass1skip14total. Both Windows integrations25storage passes
+  +85pass1fail86proofs: only known Installer Image/linkcount2 refusal, no authority.
+  No retry or unrelated Windows work. CI-DEV34 has exact IDs/links/limits.
+- Current config hash differs from source34. Preservation compare stopped before
+  owned cache/settings/data checks: unexpected protected hooks difference. Minimal
+  key-path diff reports7added hooks.state entries, expected model/effort differences
+  and same4unrelated project additions. Values/private paths kept local, not published.
+  Existing entries not reported modified; additions unclassified/no trust inference.
+- Per user's explicit High-on-drift gate, stopped ordinary package work. NO public
+  clone/npm archive/spaced package tests or private plan refresh/consistency run.
+  Frozen plan selected-config hash stale. No config restore/edit, trust action,
+  native Codex/model/catalog/thread/turn, install/restart/source/gate/Windows change.
+- Saved decoded CI evidence/key-path diff/current hash privately and updated
+  sanitized handoff for High read-only reconciliation. Packaging remains incomplete.
+- Bounded preservation notes checks passed:10Markdown-only public changes/no
+  private user path;93IDs/order preserved; current local links resolve; diff check
+  clean. No executable tests run solely for notes; ordinary work stayed stopped.
