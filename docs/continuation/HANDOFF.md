@@ -21,6 +21,19 @@ The current implementation local equivalent, verified remote commit/full tree/re
 and GitHub link are recorded after safe non-force upload in final/private record;
 never guess a self-referential commit hash in this file. Preserve all local commits.
 
+## Verified source33 implementation checkpoint
+
+Local aligned source commit and independently verified remote:
+**1427bc5c3318e960955d9fb25e442a5fccd59d26**;
+full tree **26e12da269d334b495c4deed0ff23006e509090a**. GitHub tree creation matched
+local source; non-force expected-parent update, fetched full-tree comparison,
+connector source readback and anonymous public ref agreed. Original local
+ffe6b4b93d09a2e30664d48544fc4036e5a5948c retained separately, not lost.
+[Source33 checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/1427bc5c3318e960955d9fb25e442a5fccd59d26).
+This notes follow-up records the already verified implementation identity; its
+final ref is independently verified and reported in final/private record.
+Source33CI/package remain pending Medium; upload is not test evidence.
+
 ## Completed / partial / unverified
 
 - Six proof modules implement constants/contracts, pure protocol machine, framing,

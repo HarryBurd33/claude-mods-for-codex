@@ -22,3 +22,8 @@ The planned separate Sol Low/Luna Low tasks remain proposals only. The dry peer'
 names/marker/token counts are artificial; no account/model work occurred. Prior
 source32 authoring/package and installed31 native evidence remain separate. Source33
 CI/exact public clone/archive/spaced packaging are next Medium verification.
+
+Source33 implementation verified at
+[1427bc5](https://github.com/HarryBurd33/claude-mods-for-codex/commit/1427bc5c3318e960955d9fb25e442a5fccd59d26),
+local/fetched/public full tree agreed; exact identity in HANDOFF. This notes
+follow-up changes no driver/test/installed state; final ref verified separately.
