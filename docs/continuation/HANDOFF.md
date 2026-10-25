@@ -1,158 +1,157 @@
-# Revised native routing design accepted — next GPT-6.1 Sol High
+# Source34 native adapter prepared — next GPT-6.1 Sol Medium
 
-2026-10-25. Sol Medium resumed **568db47** on **codex/astra-groundwork** and
-recorded the human decision: **“Accept revised design only; keep inference closed.”**
-The released native boundary assessment and prior no-turn inventory remain unchanged.
-**Live admission closed; no inference.** Installed31/current model/logging/human
-trust/Windows guards preserved. Source33 uninstalled; no native adapter. Full93
-incomplete, macOS acceptance first/Windows later. No new source/package version.
+2026-10-25. Sol High resumed **dcd3881** on **codex/astra-groundwork**. Prepared
+separate native plan/protocol/input/process-transport source and exact private
+review artifacts under the human-accepted ordinary-read-only design.
+**Live admission remains unconditionally closed. No inference, installation or
+configuration change is authorized.** Installed31/logging/current model/human
+trust/Windows guards preserved. Source34 uninstalled; full93 incomplete.
 
-Read STATUS.md, NATIVE-ADMISSION-REVIEW.md, REQUIREMENTS.md(EV15/EV16/SEC),
-ARCHITECTURE.md, latest TEST-LOG.md, NATIVE-ROUTING-TEST-PLAN.md, PACKAGE-DEV33.md,
-docs/routing-driver.md and latest ignored root HANDOFF.md. Older “next High to
-investigate the boundary” directions are superseded by this assessment. Do not
-repeat source33 packaging/mocks or the same source search.
+Read STATUS.md, DEV34-REVIEW.md, docs/routing-native.md, NATIVE-ADMISSION-REVIEW.md,
+REQUIREMENTS.md(EV15/EV16/SEC), ARCHITECTURE.md, latest TEST-LOG.md, PACKAGE-DEV33.md
+and latest private root HANDOFF.md. Do not repeat accepted-design questions, the
+completed boundary search, source33 implementation or Windows proof loops.
 
-## Milestone / outcome / remaining gap
+## Completed / partial / unverified
 
-- **Completed:** inspect released CLI0.164.0 native tool-plan/registry/dispatch,
-  ToolPolicy/host assembly, public thread/turn/config schemas, hooks and child
-  runtime inheritance. Exact primary links/limits: NATIVE-ADMISSION-REVIEW.md.
-- Rust embedding has an actual startup tool allowlist. The inspected public CLI
-  configuration/app-server requests do not expose that generic ceiling or a
-  pre-execution exact-role/argument/one-total-spawn gate. A custom compiled host is
-  a separate product direction, not a plugin integration to silently substitute.
-- Read-only still permits covered reads/commands. Shell/app/plugin/web/MCP controls
-  have narrower scope. Code-mode namespace exclusions are nested only. Hooks can
-  fail open; after-start observation cannot prevent an unexpected action already
-  admitted. V1 depth is not V2 depth; concurrency is not a total-spawn cap.
-- **Blocked at the original strict boundary:** native one-exact-spawn/wait-only
-  test has no established public enforcement path. Not a permanent declaration
-  that native routing is impossible; EV15 remains supported in principle/partial
-  and native execution/discovery/permissions/usage/lifecycle unverified.
-- **Design accepted, not run-authorized:** concrete ordinary-read-only-permissions alternative,
-  same intended Sol Low parent/Luna Low child/role/marker, restrictive process-only
-  controls and stop limits, explicit residual host-permitted reads/native tools.
-  The human accepted this design only on2026-10-25 and explicitly asked Medium to
-  record it. No inference, installation or configuration change was authorized.
-  A separate fresh bounded inference grant remains required after runnable review.
-- Next High prepares the separate adapter/source and review artifacts; no native
-  run, installed profile/config change or trust action is included. Original strict
-  gate remains unestablished; source33 live admission remains closed.
+- **Implemented/prepared:** four separate native modules plus public inert candidate,
+ 14offline cases, source34 version metadata and portable preparation CI step.
+  Real private stdio transport source exists but is unreachable/unexecuted behind
+  the unchanged requireLiveAdmission. This is a temporary app-server verification
+  client, not a plugin native UI or a new product/fork direction.
+- **Exact private review ready:** INPUT.json/PLAN.json/FILE-HASHES.json/ACCESS.json/
+  REVIEW.md/CLOSED-ENTRY.json contain selected executable/candidate/config/source
+  hashes,32proposed config confirmations, exact argv/parent request/access/usage/
+  removal. Native binary read for hash only; no CLI version/config/catalog call.
+- **Local verified:**284pass0fail113platformskips397total, validate3mods/replay4.
+  New14cases13pass1non-macOS-onlyskip on macOS. Exact prepared --run --plan entry
+  exit2/stdout0 before plan read/process, zero native starts/additional inference.
+- **Partial/unverified:** source34 exact CI/public archive/spaced package pending
+  Medium; native config-export normalization, actual V2 routing/discovery/role/
+  inherited authority/output/child usage/turn visibility/cancel/process lifecycle
+  unverified. Prepared transport is not a live result. Missing evidence stays
+  incomplete; no native verification from offline packets/config echoes.
+- Windows execution remains refused; storage/restore/security guards unchanged.
+  Known Image refusals/original bounds root cause/native11/WSL gaps remain open.
+  macOS first. Prior source33 archive/CI is not source34 evidence.
 
-## Prior High host checks and source evidence — not repeated this Medium stage
+## Accepted scope / non-authorizations
 
-macOS14.6; Node24.22.0 last observed Medium; standalone --version now confirmed
-**codex-cli0.164.0**. Desktop/internal binary version remains separately unverified.
-No desktop UI/trust/hook native acceptance repeated this stage.
+The human accepted ordinary read-only permissions, disclosed residual host-permitted
+reads/native tools and post-observation stop limits. Do not ask this same design
+question again. It is not a universal tool/argument/one-total-child ceiling.
+No additional model run, native config action, profile installation or trust action
+was authorized. Do not activate a flag, manufacture a grant, infer permission from
+continue/model switch or change the selected current chat model.
 
-1. Prepared enabled31 preservation helper before/after passed:251cachefiles,
-   full config/owned human trust/settings28+31/data/source30+31/marketplace unchanged.
-2. Retrieved official app-server/config-reference/security pages and pinned source
-   commit6aaac694803004a63c6f393d153c96d22521a6b9;21raw source snapshots/hash index
-   kept private. Guessed obsolete paths returning404 were resolved through public
-   directory listings; failed retrievals did not establish support. No REA/tool repair.
-3. Private no-turn Python driver: fixed officialCLI --no-daemon/process-only
-   restrictive overrides/app-server; only initialize/initialized/config-read,
-  20seconds/1MiB/256messages; any server request errors/stops; stderr discarded,
-   raw config never printed/persisted; owned process group terminated/reaped.
-4. First sandboxed process exited before initialize. Same bounded no-turn check
-   completed with filesystem escalation:4messages/36,752outputbytes, reaped.
-   Ten selected restrictive values echoed; two attempted keys not confirmed:
-   root code_mode.enabled and tools.update_plan.enabled. Do not reuse those as
-   verified controls. Native echo is not execution/selection/admission proof.
-5. Zero thread starts, turn starts, model-list requests, model/tool executions,
-   profile installs or global config writes. No inference grant exists.
-6. Documentation-only changes; no runtime/test/CI/package/version/security-code
-   change. Source33 prior19dry tests/full271passes/fourPOSIXCI/package276files/
-   spaced104passes1skip remain exactly within PACKAGE-DEV33 limits. Windows known
-   Image refusals/original bounds cause/native11/WSL gaps unchanged. No rerun needed
-   solely for notes, no source34 packaging loop or Windows investigation.
+Intended future trial remains one new Sol Low parent and Luna Low named-role child,
+V2/no current-chat history; no fallback or automatic retry. Both intended model
+tasks consume additional usage if later authorized. Normal official CLI auth/
+environment/ancestor instructions/provider network would apply, not a sandbox for
+the extension process itself. Missing child usage/null inference measurement and
+remote cancellation/billing limits are explicit in docs/routing-native.md.
 
-## Code locations / contracts — unchanged
+## Exact code locations / contracts
 
-- proofs/routing-contract.mjs: liveAdmission always false; requireLiveAdmission
-  throws. Exact synthetic action gate is a different trust domain.
-- proofs/routing-machine.mjs: pure own-scope protocol/evidence/usage/cancellation
-  checks; unsent purge/late cleanup/ambiguous stop. Notifications are observations.
-- proofs/routing-driver.mjs + peer/frames/fixtures: only fixed Node peer, no native
-  adapter/transport injection/arbitrary command/config/grant/live enablement.
-- test/routing-driver.test.mjs:19synthetic cases, not native routing evidence.
-- src/components.mjs / docs/configured-agents.md: inert kind:agent candidate
-  authoring/validation/review/plan; no automatic trust/install/launch.
-- No code was added to implement or enable the proposed ordinary-permissions test.
+- proofs/routing-native-plan.mjs: createNativePlan/validateNativePlan, pure/frozen
+  explicit inputs, V2/reducers/MCP disables/candidate SHA/argv/thread+turn drafts.
+  nativeConfigMatches confirms all proposed values and refuses unexpected MCP,
+  ambient hooks or remote board; echo is not a universal runtime barrier.
+- proofs/routing-native-adapter.mjs: createNativeRoutingAdapter produces only
+  native-review-draft records, executionAuthorizedfalse. Config before catalog/
+  thread/turn drafts; own ids/turns/V2 resolved selection/metadata/version/marker/
+  usage separately checked. Missing child-turn visibility prevents cleanup claim;
+  ACK!=terminal, unsent purge/late responses cleanup only, typed refusals/no approval.
+- proofs/routing-native-inputs.mjs: macOS-only bounded selected-file streaming,
+  no-follow/nonblocking open, regular single links/canonical/before-after identity/
+  exact hashes, bounded private review JSON, one-entry empty project check. No
+  traversal/native process/config write; unsupported platforms refuse before IO.
+- proofs/routing-native-driver.mjs: --describe works; --run --plan and exported
+  runNativeRouting/runNativeRoutingFromFile refuse through unchanged unconditional
+  gate BEFORE argument/path/plan read/verify/spawn. Private dormant transport has
+  reviewed executable/argv/no shell/no daemon, bounded frames/deadlines/owned-group
+  cleanup; not exported ungated or native-tested. Future activation requires review.
+- proofs/routing-native-candidate.txt: synthetic inert exact source32 candidate;
+  no discoverable .toml or installed reference. Candidate SHA remainsf17550c7...
+- Existing proofs/routing-contract/machine/driver/frames/peer/fixtures unchanged;
+  synthetic-only domains are not converted to a live transport. No app patch.
+- test/routing-native.test.mjs14cases; .github/workflows/ci.yml adds portable closed
+  preparation test only. Source package/manifest/server/UI versions34; defaults
+  and ordinary runtime behavior unchanged. src/component-contract.mjs and
+  src/component-authoring.mjs remain the actual source32 authoring locations.
 
-## Configuration / rollback / access
+## Actual commands / observed results
 
-Installed0.2.0-dev.31 user-profile/cache remains enabled with approved Review desk.
-No current chat model, selected logging/capture/rules/exports/status, optional hooks,
-permission profile, human trust, existing role or Windows guard was changed.
-No restart, trust review or rollback required. Process-only restrictive inventory
-flags expired with the reaped child; no stored profile/agent reference created.
-Official CLI startup bookkeeping outside the compared preservation set is not
-claimed byte-identical. Raw configuration was processed transiently only; no
-credential-store/session discovery or secret printing. Source caches/results/private
-paths/root HANDOFF stay ignored. Do not upload them.
+1. Initial old enabled31 preservation helper failed on config comparison. Sanitized
+   key-path inspection found only changed global model/effort preferences and four
+   added unrelated project entries. Compared existing project entries/all other
+   settings and owned state; preserved current values, no restore/edit. Stored only
+   current config hash as this stage's baseline, no new raw config copy.
+2. New native/synthetic targeted31tests passed; final full npm test284pass0fail/
+ 113skips397total (~13.5sec). Later source was frozen before final full run.
+3. npm run validate:3mods valid. npm run replay:4fixtures expected data responses,
+   no fixture command execution. Mac synthetic file-handle/refusal tests are local
+   verifier tests, not Codex-native or Windows permission proof.
+4. Private input/plan creation: selected existing inert candidate SHA matched,
+   empty project, two selected direct MCP servers,32confirmations; pure plan
+   round-trip validation passed. Read selected executable bytes/hash only; zero
+   native CLI/config/model-list/thread/turn/process or extra model test calls.
+5. Actual Node prepared CLI --run --plan exact private artifact: exit2/stdout0,
+   fixed closed message. Only Node ran; no Codex process or plan read occurred.
+6. Final preservation: current config hash exact, cache251/owned trust/settings28+
+ 31/data/source30+31/marketplace unchanged. No settings/rules/logging/exports/status/
+   optional hooks/selected model/Windows paths changed. No native install/restart.
 
-## Branch / checkpoint provenance
+Host macOS14.6/Node24.22.0 confirmed this stage; standalone0.164.0 version
+last observed prior High, not invoked now. Current binary bytes pinned without
+version refresh. Desktop/internal binary remains independently unverified.
 
-Starting verified local/public commit568db47e4e92ab60928e56722dad87b30144bf07,
-tree8e05e5f19ddc1d5f421cbcf16e72f304c7f33da2.
-[Starting checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/568db47e4e92ab60928e56722dad87b30144bf07),
+## Configuration / rollback / branch
+
+No installed configuration or profile changed; no rollback/trust/restart needed.
+Do not restore the stale historical global config over the current human settings.
+Private review artifacts can be discarded by removing only their proposal folder;
+leave referenced existing candidate/project/config/installed31 untouched. No active
+owned native process or scheduled/background work remains. Public hashes contain
+only public source, never machine/config/plan/private path evidence. Root HANDOFF
+and .local remain ignored and must not be uploaded.
+
+Starting verified public/local dcd3881a3a3998fb759f4e43e2f16baa81ea74d0,
+tree2ff59787895055022793e3351e4cefe8e3f73711.
+[Starting commit](https://github.com/HarryBurd33/claude-mods-for-codex/commit/dcd3881a3a3998fb759f4e43e2f16baa81ea74d0),
 [branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
-Immutable tested source33/package remains c8ea24dc506652a636cd35d25d6cf9db79881066,
-tree1a270654bf3c0b926831af2f6667b16d4c362714. These later notes are not a new
-packaged archive. Current final local equivalent/verified remote commit/tree/link
-are recorded in private handoff/final after actual non-force upload/readback.
-No force push or lost local history.
+Final local equivalent/verified remote commit/tree/link are recorded in private
+handoff/final after actual non-force upload/readback, never guessed self-referentially.
 
-## This Medium stage — actual work
+## Next tasks / acceptance / exact model
 
-Read the current handoff/review and latest private records. Recorded the explicit
-human design choice and updated current README/status/ledger/architecture/plan/
-review/test-log summaries, superseding pending-choice reporting. Documentation
-only: no source/runtime/test/CI/package/version/native invocation, model run,
-installation, settings/logging/permission/trust/Windows guard change. Prior exact
-source33 CI/package and native no-turn observations are not new Medium results.
-No native test, CI polling or repackaging is needed merely to record the approval.
+**GPT-6.1 Sol Medium** for routine exact source34 CI/public clone/archive/spaced
+package verification and private/public review hash/plan consistency. No install,
+trust/restart, native process/config invocation or extra inference is authorized.
 
-## Next tasks — exact model and permission gates
-
-**GPT-6.1 Sol, High** is required for consequential native adapter/security source
-and integration decisions. The human accepted the revised design; do not ask for
-the same design approval again. This acceptance does not authorize inference,
-installation or configuration changes.
-
-1. Follow the accepted scope in NATIVE-ADMISSION-REVIEW. Preserve explicit residual
-   host-permitted reads/native tools, ordinary permission checks, typed refusal,
-   post-observation stopping limits, usage uncertainty and cancellation limits.
-   No universal pre-execution tool/argument/one-total-spawn guarantee is available.
-2. Prepare the smallest separate native adapter and exact review artifacts without
-   starting a native turn or enabling live admission. Keep the existing synthetic
-   driver isolated; do not replace the deliverable with another mock-only milestone.
-   Use bounded offline tests where needed for new adapter code, labeling them as
-   offline. Do not claim native acceptance from those tests or config echoes.
-3. Produce the exact runnable command/source/config/candidate hashes, proposed
-   parent/child models/efforts, access and usage bounds, refusal/cancel/disconnect/
-   late-response behavior and removal/cleanup instructions. Keep raw private paths/
-   configuration/logs local. Do not install a profile or change existing settings.
-4. Before any additional native configuration action or inference, prepare the
-   concrete review and obtain the separate authorization needed. A future inference
-   grant must cover both intended parent orchestration and child; no prior grant,
-   design agreement, model switch or “continue” substitutes for it. No automatic
-   approval, human trust mutation or current-model interception.
-5. Preserve installed31, approved settings/logging/capture/rules/exports/status,
-   parent model and Windows guards. No custom host/fork/product direction implied.
-   Stop for Medium when consequential work is complete and routine verification
-   remains. Full93/native routing/Windows acceptance remain incomplete.
+1. Check the exact uploaded source34 head's completed CI/jobs/logs once appropriate.
+   Keep known Windows failures and original bounds uncertainty distinct; no
+   retry-until-green/assertion weakening or unrelated Windows work.
+2. Anonymous exact source34 clone, safe npm pack/extract with spaces, byte/default/
+   privacy/version/required new-module/test/candidate/doc checks. Preserve the prior
+   immutable33archive; source34 has a separate version. Run meaningful packaged
+   native/synthetic/authoring/contract tests and validate/replay, label offline.
+3. Check exact prepared --describe/closed --run refusal and plan/source hash
+   consistency without any native launch. Preserve current config-hash baseline
+   and installed31. Do not use the old all-config baseline as a restoration target.
+4. Save/upload/verify routine results, then stop for High before native activation,
+   reducer/security changes, unexpected drift/recovery or consequential fixes.
+   Any future runtime/config/inference step needs its concrete review and separate
+   fresh human authorization. Do not request a live run of this closed build or
+   claim a ready grant flag. The accepted design itself is already settled.
 
 ## Copy-and-paste resume instruction
 
-“I’ve switched to GPT‑6.1 Sol, High. Continue from the verified accepted-design
+“I’ve switched to GPT‑6.1 Sol, Medium. Continue from the verified source34 adapter
 checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
-NATIVE-ADMISSION-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md
-and latest private HANDOFF.md. Prepare the separate native adapter and exact review
-artifacts for my accepted ordinary-read-only-permissions design. Preserve installed31,
-logging scope, parent model, human trust and Windows guards. Keep live admission
-closed; no inference, installation or configuration change is authorized. Stop for
-Medium when sufficient.”
+DEV34-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md,
+docs/routing-native.md and latest private HANDOFF.md. Verify source34 CI and exact
+packaging/review artifacts. Preserve installed31, current model preferences and
+unrelated project entries, logging scope, parent model, human trust and Windows
+guards. Keep live admission closed; no inference, installation or configuration
+change. Stop for High before native activation/security changes or unexpected drift.”

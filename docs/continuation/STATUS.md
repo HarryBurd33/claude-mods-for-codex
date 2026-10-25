@@ -1,45 +1,26 @@
-# Current status — source33 verified / installed31 preserved — 2026-10-25
+# Current status — source34 prepared / installed31 preserved —2026-10-25
 
-## Native admission review — current — 2026-10-25
+## Source34 native adapter prepared — current —2026-10-25
 
-[NATIVE-ADMISSION-REVIEW](NATIVE-ADMISSION-REVIEW.md) records the released0.164
-boundary: an exact ToolPolicy exists in Rust embedding, but no public CLI/config/
-thread/turn path establishing the strict one-spawn/wait-only trial was found.
-Feature reductions, read-only policy and fail-open hooks do not establish it.
-One bounded initialize/config-read check completed with zero thread/turn starts,
-no inference and own process reaped; exported config echoes remain non-runtime
-evidence. Installed31/cache251/config/trust/settings/data preserved. No adapter,
-package/version, logging, selected model or Windows guard change.
+[DEV34-REVIEW](DEV34-REVIEW.md) / [routing-native](../routing-native.md): four
+separate native plan/protocol/input/transport modules and inert candidate prepared.
+The real process transport is private behind the unchanged unconditional closed
+gate; exported/CLI run refuses before IO. No inference, install or config action.
+Native V2 evidence/turn identity,32actual proposed config checks, bounded selected
+files and unobserved-child cleanup have explicit limits. Missing usage stays null;
+config echoes/offline packets do not establish native acceptance.
 
-The human **accepted the ordinary-read-only-permissions revised design only**
-on2026-10-25, including the disclosed residual native tools/host-permitted reads.
-Inference, installation and configuration changes remain unauthorized. Medium
-recorded the decision; next High prepares the separate native adapter/review
-artifacts without executing inference or changing installed configuration. Keep live admission closed; source33 uninstalled/full93 incomplete.
-Do not repeat mock-only scaffolding, source33 packaging or the same boundary search.
+Local284pass0fail113platformskips397total, validate3/replay4. New14cases:13pass1skip
+on macOS; all source34 CI/public package checks pending Medium. Source34 uninstalled,
+installed31/cache251/owned trust/settings/data preserved. Old baseline differed in
+model preferences/four unrelated project additions; current values/hash preserved,
+no restoration. Logging/current selected model/Windows guards unchanged.
 
+Next human **Sol Medium** for exact34CI/package/review consistency; High before
+native activation/reducer/security changes. Accepted design is not a run grant.
+Full93 incomplete; native route/export compatibility/usage/lifecycle/Windows later.
 
-## Source33 CI/package verified — historical checkpoint — 2026-10-25
-
-[PACKAGE-DEV33](PACKAGE-DEV33.md): exact publicc8ea24d clone/archive276files,
-allbytes source/pre-notes workspace equal, spaced packaged104pass0fail1Windows-only
-skip105total/validate3/replay4. Packaged dry CLI V1/V2 pass, denial stops/--live
-refuses, peers reaped/nativecalls0/livefalse. Prior28/31/32bundles unchanged.
-ExactCI40170652568:4POSIXlanes271pass112skips383total; portableWindows routing18pass
-1POSIXskip. Both integration jobs only known Image refusal/linkcount2,25storage+
-85pass1fail86proofs; original bounds cause unresolved, guards unchanged, no allgreen.
-No source/runtime/test/CI/config/model/logscope/trust/Windows change this Medium
-stage; installed31/cache251/settings/data preserved. Source33 uninstalled and
-native admission closed. Full93/native routing still incomplete. Next human High
-for [native admission boundary](NATIVE-ADMISSION-NEXT.md), not more mock-only
-scaffolding; no inference authorized. Older status sections below historical.
-
-The synthetic admission/cancellation driver is tested but cannot enable a live
-transport. Native gate/adapter/discovery/route/permission/usage/lifecycle acceptance
-remains separate. No approval or native install/restart is currently requested.
-Routine33verification is complete; consequential native policy/adapter decisions
-require Sol High. Full93 incomplete, macOS first/Windows later.
-
-Immutable verified source/package c8ea24dc506652a636cd35d25d6cf9db79881066/tree
-1a270654bf3c0b926831af2f6667b16d4c362714; SHA256 in PACKAGE-DEV33. Later notes
-are not a new tested archive or native result. No new failure requiring recovery.
+Exact source33 CI/archive remains PACKAGE-DEV33.md; it is not source34 evidence.
+No native activation, installation, trust/restart or model run requested now.
+Prepared machine-specific review is ignored/private; public contracts and hashes
+are in DEV34-REVIEW. The current native --run entry refuses by construction.

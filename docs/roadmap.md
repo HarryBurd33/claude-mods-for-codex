@@ -1,5 +1,10 @@
 # Roadmap
 
+Current native routing checkpoint: source34 adapter/review artifacts prepared,
+execution closed, local284passes/113skips; CI/package pending Medium. See
+[DEV34-REVIEW](continuation/DEV34-REVIEW.md). Native acceptance is incomplete.
+
+
 The sections below describe the earlier MVP scope. The expanded requested
 capabilities, including supported tool-input rewriting and owned UI, are now
 required work in [continuation/REQUIREMENTS.md](continuation/REQUIREMENTS.md).

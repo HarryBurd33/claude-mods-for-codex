@@ -1,5 +1,12 @@
 # Native admission investigation brief — completed assessment linked below
 
+Current continuation: [DEV34-REVIEW](DEV34-REVIEW.md) prepares the separate native
+adapter and exact private review artifacts under the accepted revised design.
+Execution is still unconditionally closed. No inference, installation or config
+change grant exists. Medium34CI/package next; High before activation/security.
+Earlier directions to prepare the adapter are historical, not new work to repeat.
+
+
 Current update: the High [admission assessment](NATIVE-ADMISSION-REVIEW.md) is
 complete. No public exact strict gate was established. On2026-10-25 the human
 accepted the ordinary-permissions revised design only; inference, installation

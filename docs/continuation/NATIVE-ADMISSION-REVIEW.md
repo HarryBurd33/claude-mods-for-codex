@@ -1,5 +1,12 @@
 # Native routing admission review — 2026-10-25
 
+Current continuation: [DEV34-REVIEW](DEV34-REVIEW.md) prepares the separate native
+adapter and exact private review artifacts under the accepted revised design.
+Execution is still unconditionally closed. No inference, installation or config
+change grant exists. Medium34CI/package next; High before activation/security.
+Earlier directions to prepare the adapter are historical, not new work to repeat.
+
+
 ## Recorded human design decision — current
 
 On2026-10-25 the human answered: **“Accept revised design only; keep inference
@@ -10,12 +17,14 @@ establish the original strict gate or native routing acceptance.
 
 **No inference, installation or configuration change is authorized by this
 approval.** Installed31, logging scope, parent model, human trust and Windows guards
-remain unchanged. The adapter is not implemented; source33 live admission remains
-closed. Next Sol High may prepare the separate adapter/source and exact runnable
-review artifacts; a separate fresh inference grant is still required before a run.
+remain unchanged. The separate source34 adapter is prepared but execution-closed;
+source33 live admission remains unchanged. A separately reviewed activation and
+fresh inference grant are still required before any run.
 No permanent profile, process configuration update or protected trust action is
 approved by this record. Earlier pending-choice reporting is superseded by this decision.
 
+
+## Historical initial assessment
 
 Sol High resumed verified737c27c. **Live admission remains closed; no inference.**
 Installed31, approved settings, logging scope, parent model, human trust and Windows

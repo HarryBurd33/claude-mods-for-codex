@@ -1,0 +1,5 @@
+name = "mods-native-route-check"
+description = "Synthetic routing acceptance role; no project access is needed."
+developer_instructions = "Reply with exactly MODS_NATIVE_ROUTING_CHILD_OK. Do not use tools, read files, access the network, spawn another agent, or request permissions. This is a synthetic routing test."
+model = "gpt-6-luna"
+model_reasoning_effort = "low"

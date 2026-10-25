@@ -3022,3 +3022,34 @@ lifecycle/platform gaps remainincomplete. Save/upload/verify and stopforhumanHig
 - Notes verification passed: git diff --check;14changed Markdown files only/no
   private user path;93requirement IDs/order preserved; current local handoff/review/
   status links resolve. No executable tests warranted for this documentation record.
+
+## 2026-10-25 — Sol High source34 native adapter preparation afterdcd3881
+
+- Accepted design reused without another scope question. Added four separate native
+  plan/protocol/input/private-transport modules, public inert candidate and14tests.
+  Source33 synthetic contract/gate/driver unchanged; native exported/CLI execution
+  unconditionally refuses before IO. No transport injection or grant flag.
+- Local targeted31pass initially; final full npm test284pass0fail113platformskips/
+  397total (~13.5sec), after final code changes. Native14cases13pass1non-macOS-only
+  skip on macOS. npm validate3/replay4passed; replay is data, not command execution.
+- Pure exact private plan creation/validation:32required config confirmations,
+  two selected MCP disables, existing inert candidate exactSHA, selected current
+  executable/config/source hash pins and empty project. Actual Node closed-entry
+  command with exact private PLAN.json exit2/stdout0; no plan/native process/model IO.
+- Initial old preservation helper failed. Scoped key-path compare found global
+  model/effort preferences/four new unrelated projects only; all existing projects/
+  other config/owned trust/cache251/settings/data/sources/marketplace unchanged.
+  Preserved current hash/values, no restore/edit. Final current-hash/owned-state
+  comparison passed. Machine paths/values remain private.
+- Production changes only source34 version metadata; CI adds portable preparation
+  test. Defaults/hooks/rules/logging/capture/parent model/trust/Windows guards
+  unchanged. Zero native CLI invocations, new model/catalog/thread/turn runs,
+  installs/profile/config changes/restarts. Native transport/exports/lifecycle
+  unexecuted/unverified; offline tests and source hashes are not host acceptance.
+- Public review/guide/contracts/current93ledger and private exact review/source
+  hashes/access/argv/removal prepared. Source34 CI/public archive/spaced package
+  pending Medium; prior33evidence separate. High before activation/security/drift.
+- Final notes/privacy checks passed:93IDs/order unchanged; public files contain
+  no private user path; current local links resolve;7public source hashes match
+  private review; git diff --check clean; no Windows runtime file changed. Actual
+  host commands node --version/sw_vers confirmed Node24.22.0/macOS14.6.
