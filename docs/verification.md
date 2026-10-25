@@ -1,6 +1,24 @@
 # Verification record
 
-## Native routing test plan prepared — current — 2026-10-25
+## Source33 dry driver implemented — current — 2026-10-25
+
+[DEV33-REVIEW](continuation/DEV33-REVIEW.md) and [routing-driver](routing-driver.md): fixed
+synthetic Node-peer driver/state machine, separate synthetic pre-dispatch admission,
+typed refusals, scoped cancellation/late-response/deadline/stream/privacy/process
+cleanup implemented.19newtests pass; full271pass0fail112Windows-onlyskips383total,
+validate3/replay4. Native calls0; live adapter absent and live admission always closed.
+No flag/config/grant claim can enable it. Native tool admission/routing remains
+unverified, not proven by mocks, readonly metadata or fail-open hooks.
+
+Source0.2.0-dev.33 uninstalled;31/cache251/config/settings/data/logging/trust/current
+model/Windows guards preserved. Only production version metadata changed; CI adds
+portable synthetic-driver test step. No native Codex/profile/turn, paid run, new
+trust or restart. Next human Sol Medium for exact33CI/package; High before
+consequential gate/env/security/native-adapter changes. No live approval request
+for this build. Full93/knownWindowsbounds/Image/native11/WSL gaps incomplete.
+Older status sections below historical.
+
+## Native routing test plan prepared — historical — 2026-10-25
 
 [NATIVE-ROUTING-TEST-PLAN](continuation/NATIVE-ROUTING-TEST-PLAN.md) defines a proposed new
 GPT-6.1 Sol Low orchestrator and GPT-6 Luna Low child, exact inert role/task,

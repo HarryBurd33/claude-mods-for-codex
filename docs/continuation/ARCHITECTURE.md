@@ -1,6 +1,24 @@
 # Extension architecture and security contracts
 
-## Native routing test plan prepared — current — 2026-10-25
+## Source33 dry driver implemented — current — 2026-10-25
+
+[DEV33-REVIEW](DEV33-REVIEW.md) and [routing-driver](../routing-driver.md): fixed
+synthetic Node-peer driver/state machine, separate synthetic pre-dispatch admission,
+typed refusals, scoped cancellation/late-response/deadline/stream/privacy/process
+cleanup implemented.19newtests pass; full271pass0fail112Windows-onlyskips383total,
+validate3/replay4. Native calls0; live adapter absent and live admission always closed.
+No flag/config/grant claim can enable it. Native tool admission/routing remains
+unverified, not proven by mocks, readonly metadata or fail-open hooks.
+
+Source0.2.0-dev.33 uninstalled;31/cache251/config/settings/data/logging/trust/current
+model/Windows guards preserved. Only production version metadata changed; CI adds
+portable synthetic-driver test step. No native Codex/profile/turn, paid run, new
+trust or restart. Next human Sol Medium for exact33CI/package; High before
+consequential gate/env/security/native-adapter changes. No live approval request
+for this build. Full93/knownWindowsbounds/Image/native11/WSL gaps incomplete.
+Older status sections below historical.
+
+## Native routing test plan prepared — historical — 2026-10-25
 
 [NATIVE-ROUTING-TEST-PLAN](NATIVE-ROUTING-TEST-PLAN.md) defines a proposed new
 GPT-6.1 Sol Low orchestrator and GPT-6 Luna Low child, exact inert role/task,
@@ -1147,7 +1165,35 @@ controls, preserve keyboard focus and close observers on teardown. Avoid remote
 assets or rendering untrusted HTML. Test actual host pixels/interaction, not
 just a browser mock. Core deterministic callbacks and buttons make no model calls.
 
-## Native routing acceptance contract — planned, not implemented
+## Source33 verification driver and enforced no-inference boundary
+
+proofs/routing-contract.mjs supplies frozen expectations/bounds, typed refusals,
+strict JSON-data validation, an always-closed live gate and separate synthetic
+pre-dispatch admission. routing-machine.mjs is a pure ownership/evidence/usage/
+deadline/cancellation state machine; outbound intents are synthetic-only, not
+native capabilities. routing-frames.mjs bounds UTF-8 JSON lines/combined streams,
+discards stderr and reports only fixed failures. routing-fixtures/peer are fixed
+synthetic data/Node peer, not model or filesystem/network execution. The only
+process runner spawns current Node+that exact peer with env{} and enumerated
+scenarios; no executable/URL/model/config/approval input or native transport exists.
+
+Cancellation removes queued unsent work; late dispatched responses only add
+cleanup ownership. Terminal evidence is independent of interrupt ACK. Untracked
+activity/ambiguous failed starts never claim cleanup. Outer budget includes reserve;
+unknown requests cannot cancel/read unrelated sessions. Typed requests deny without
+permissions/approval cache/credentials. Failed process exit cannot hide behind
+protocol success. Trusted source/Node is assumed; this is not an OS sandbox.
+
+The mock pre-dispatch gate enforces the exact no-history role and one child before
+mock effects, but is not an equivalent Codex gate. Official hook docs confirm errors/
+timeouts/malformed results can continue calls. No universal fail-closed barrier is
+claimed from hooks/feature echoes/notifications. A future native adapter needs real
+supported admission evidence or an explicitly agreed revised boundary, separate
+review/authorization and human trust, not a runtime flag in this build. Native
+routing remains unverified; no permanent impossibility or alternative-client claim.
+See [routing-driver](../routing-driver.md) / DEV33-REVIEW. Installed31 untouched.
+
+## Native routing acceptance proposal — native execution not implemented
 
 NATIVE-ROUTING-TEST-PLAN.md separates the current chat from a proposed new native
 orchestrator/child. No model override is applied to the current chat. The first

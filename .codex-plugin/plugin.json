@@ -1,6 +1,6 @@
 {
   "name": "claude-mods-for-codex",
-  "version": "0.2.0-dev.32",
+  "version": "0.2.0-dev.33",
   "description": "Local hook contracts, opt-in scoped metadata, and a read-only project dashboard. Incomplete development checkpoint.",
   "author": {
     "name": "HarryBurd33"

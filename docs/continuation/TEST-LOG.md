@@ -2890,3 +2890,43 @@ inferenceapprovalrequestyet. No duplicatefullsuite/archive/CI solelydocschanges.
 Source32packageknownWindowsImagefailures/boundsrootcause/Windowsguardsunchanged,
 nativerouting/discovery/permission/lifecycle/full93 remainincomplete. No cheaper
 switchyet: nextconsequentialdriver/securityworkstillneedsHigh; Mediumwhenresolved.
+
+## High source33 dry routing driver/gates — 2026-10-25
+
+Resumed327f0be clean. Userimplementation/drytestauthorizedNOinference. Added six
+proofs/routing-*.mjs modules and19testcases, developmentversion33fourmetadatafields,
+CIportableonlysyntheticstep. No native adapter/executable/URL/config/approval input;
+onlyfixedNodepeer/env{} /enumeratedscenarios. Liveadmissionalwaysclosed regardless
+claims/flags. Mockgatebeforemockdispatch permitsoneexactnohistoryrolechild/no model
+spawnoverride and8ownedwaits, deniesothers; NOTnativeadmissionproof. Typedserver
+requests cancel/abort/no grants/emptyanswers/decline/failtool; unknown/unownedRPCerror,
+no credentials/unrelatedthreadquery/cancel. Publicdocsreadhooks/appserver confirm
+hookerrors/timeouts/malformedcancontinue, so no universalbarrierclaim/newhooktrust.
+Correctedguessedv2permissionsschemapathactualrootread; oldholdglobnomatch notrepair.
+
+Pureownership/evidence/usage/stream/deadline/cancel machinehandlesV1resolvedcompleted
+vsV2subAgentActivitystarted, duplicates/conflicts/wrongIDs/models/roles/parent,
+unavailableusage/requestedonly/markerinsufficient, monotonicreportedfuse, unexpected
+requests/actions/reroutes. Reviewfixedqueuedturnsurvivingcancel, outercleanupreserve,
+ambiguousfailedstart/untrackedchildfalsecleanup, failedpeerexitmaskingsuccess.
+Cancelpurgesunsentnormalwork; lateinflightresponseonlyaddsownedcleanup. ACKnotterminal,
+no sendsafterouterexhaustion. Frames2MiBcombined64KiBline512msgs, UTF8fatal/partial/
+malformed/overflow,stderrdiscard, fixedlabels/no rawprompt/arguments/errors/IDs saved.
+ActualfixedpeerprocesspipelineandPOSIXsignalignoringchildforcedtermination/reap
+verified, onlyownedPID/group. No allOSdescendant/native/remote-cancel/billingguarantee.
+
+Firstfocused16pass; expandedcorrectedfocused19pass0fail(~6.6sec). Finalnpmtest
+271pass0fail112Windows-onlyskip383total(~8.2sec), includingnewprocessoverflow/
+disconnectmatrixcases. validate3mods/replay4expecteddatafixtures,nocommandexecution.
+RealCLIhappy-v1/v2exit0syntheticpassed;--liverefusedexit2. Environmentfakeclaims/
+secret/NODE_OPTIONSnotreachingpeer; stderrredacted, peerexit17notpass. No actual
+Codexprocess/modelthread/turn/newprofile/nativehook/UIcheck/accountAPIstarted.
+Preparedenabled31checkerbefore/after251cache/sharedconfig/ownedtrust/settings/
+data/sources/marketplaceunchanged0turns. Parentmodel/logscope/Windowsguardsunchanged.
+
+Exact33CI/publicarchive/clone/spacedpackagingPENDINGMedium; no nativeWinclaim from
+portableNodefixtures. OriginalWindowsbounds/Imagefailures/native11/WSLunresolved.
+Nativeadmission/adapter/routingstillunverified/closed, no freshinferencegrant or
+liveapprovalrequest. Full93incomplete. Highscopeddryimplementationready; save/upload/
+verifyandstopforMediumroutineverification. Highbeforegate/env/security/nativeadapter
+changes. No source33install/trust/restart/modelcall/delegation/backgroundcontinuation.

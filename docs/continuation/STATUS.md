@@ -1,31 +1,24 @@
-# Current status — native routing plan prepared, no inference — 2026-10-25
+# Current status — source33 dry driver / installed31 preserved — 2026-10-25
 
-## Native routing test plan prepared — current — 2026-10-25
+## Source33 dry driver implemented — current — 2026-10-25
 
-[NATIVE-ROUTING-TEST-PLAN](NATIVE-ROUTING-TEST-PLAN.md) defines a proposed new
-GPT-6.1 Sol Low orchestrator and GPT-6 Luna Low child, exact inert role/task,
-no-history selection, native evidence, deadlines/usage fuses/cleanup and negative
-cases. Native initialize/model-list advertised both proposed Low settings with
-0thread/turn starts. Source32 private candidate/static replay/TOML checks passed;
-no native install/config reference/inference. Installed31/cache251/config/trust/
-logging/settings/data/parent model/Windows guards preserved. No runtime result.
+[DEV33-REVIEW](DEV33-REVIEW.md) and [routing-driver](../routing-driver.md): fixed
+synthetic Node-peer driver/state machine, separate synthetic pre-dispatch admission,
+typed refusals, scoped cancellation/late-response/deadline/stream/privacy/process
+cleanup implemented.19newtests pass; full271pass0fail112Windows-onlyskips383total,
+validate3/replay4. Native calls0; live adapter absent and live admission always closed.
+No flag/config/grant claim can enable it. Native tool admission/routing remains
+unverified, not proven by mocks, readonly metadata or fail-open hooks.
 
-High source review resolves V1 completed collab versus V2 subAgentActivity metadata
-and explicit V2 fork_turns:none (default all). Plan is not execution authorization:
-no driver yet; pre-execution tool admission/cancellation must be implemented and
-dry-tested before requesting any fresh inference grant. Notifications cannot block
-already admitted calls; cwd/read-only instructions are not tool/read confinement.
-Remain Sol High for these consequential contracts; Medium when only routine
-verification remains. Full93 and native routing/platform gaps remain incomplete.
-Older status sections below historical; no current restart/trust action required.
+Source0.2.0-dev.33 uninstalled;31/cache251/config/settings/data/logging/trust/current
+model/Windows guards preserved. Only production version metadata changed; CI adds
+portable synthetic-driver test step. No native Codex/profile/turn, paid run, new
+trust or restart. Next human Sol Medium for exact33CI/package; High before
+consequential gate/env/security/native-adapter changes. No live approval request
+for this build. Full93/knownWindowsbounds/Image/native11/WSL gaps incomplete.
+Older status sections below historical.
 
-Source32 authoring/package/CI evidence remains fixed in DEV32-REVIEW/PACKAGE-DEV32
-at sourcecbacb52. Source32 is uninstalled; approved31 remains enabled/usable.
-No product/runtime/test/CI/version or supported native configuration changed.
-Plan/prepared artifacts are not a verified native route. Original Windows bounds
-cause/known Image refusals and nativeWindows11/WSL gaps remain; macOS first.
-
-Next work: implement and dry-test the reviewed driver/real admission controls on
-**GPT-6.1 Sol High**, without model turns. Do not interpret “continue” or plan
-review as an inference grant. No permission request is being made for a live run
-at this checkpoint. Return Medium once the demanding implementation is resolved.
+The planned separate Sol Low/Luna Low tasks remain proposals only. The dry peer's
+names/marker/token counts are artificial; no account/model work occurred. Prior
+source32 authoring/package and installed31 native evidence remain separate. Source33
+CI/exact public clone/archive/spaced packaging are next Medium verification.

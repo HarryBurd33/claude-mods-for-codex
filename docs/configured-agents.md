@@ -141,3 +141,11 @@ validation still reports native execution unverified. V1/V2 differ in public
 resolved-child metadata; V2 history must explicitly be none. Tool-admission and
 cancellation implementation/dry tests remain High work before a live request.
 Existing installed31/parent selection/logging/trust/platform guards unchanged.
+
+## Source33 dry verification — 2026-10-25
+
+The [routing dry driver](routing-driver.md) now implements synthetic protocol/
+admission/cancellation tests with a fixed local Node peer. Its live gate is closed
+and no native adapter exists. It cannot install or invoke this agent candidate.
+Artificial metadata/usage do not establish native routing or permission boundaries.
+Installed31/approved settings/logging/trust/model/Windows guards remain unchanged.

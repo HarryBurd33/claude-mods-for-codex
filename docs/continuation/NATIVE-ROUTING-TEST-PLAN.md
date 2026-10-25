@@ -1,6 +1,10 @@
 # Native configured-agent test plan — 2026-10-25
 
-**Prepared, not authorized or run.** High resumed e462903. Installed31, selected
+**Native trial not authorized or run.** Source33 now implements the
+[synthetic-only dry driver](../routing-driver.md) / [review](DEV33-REVIEW.md).
+Its protocol/admission/cancellation tests pass; native adapter/gate remains absent/
+unverified and this build cannot enable inference. The original proposal below
+still requires native admission review and fresh authorization. High resumed e462903. Installed31, selected
 chat model, logging scope, trust, settings and Windows guards remain unchanged.
 This plan covers a temporary driver for the official CLI app-server, not a new
 product client, plugin agent discovery or interception of this chat's model.
@@ -89,11 +93,11 @@ verified concurrency/depth limits and verified capability reductions. The final
 driver command/override list remains blocked on the admission review below; this
 payload alone is **not** a runnable approved test or a way around that review.
 
-## Execution gates — all pending
+## Execution gates — dry implementation complete, native gates pending
 
-1. Implement and review the bounded test driver **without running inference**.
-   Dry-test it against synthetic protocol streams, including refusal/timeout/
-   cancellation/output overflow/malformed events. No product launcher is requested.
+1. **Implemented for the fixed synthetic peer:** source33 bounded protocol driver,
+   admission/cancellation and framing/process dry tests. It has no native adapter
+   or live enablement path. This does not satisfy native host admission evidence.
 2. Verify non-collaboration tool admission before permitting a model turn. Proposed
    process-only feature reductions remove shell/apps/plugins/memory/permission-request
    capabilities; explicitly configured MCP tools also need separate exclusion.
@@ -114,7 +118,7 @@ payload alone is **not** a runnable approved test or a way around that review.
    the stated access/usage limits. No earlier grant or a plain “continue” supplies it.
    Protected host trust/authentication/review remains human-controlled.
 
-There is currently no live driver and no execution grant. Do not request approval
+There is a tested synthetic-only driver, no native adapter and no execution grant. Do not request approval
 for an improvised run before these gates and its review artifacts are complete.
 
 ## Proposed bounds and stop behavior
@@ -173,7 +177,7 @@ of a particular backend execution/billing identity. Public thread metadata likew
 describes configured state, not per-turn execution telemetry. Model-rerouted events
 must be watched; absent events do not establish an unavailable backend guarantee.
 
-Before a paid trial, synthetic tests must exercise both event families; requested-only
+Source33 synthetic tests exercise both event families; requested-only
 metadata; duplicates/conflicting child IDs; wrong models/efforts/roles/parent; missing
 metadata/usage; malformed input; extra actions; decline/cancel; all deadline/size
 limits; disconnect and cleanup. No synthetic replay establishes native behavior.
@@ -207,7 +211,7 @@ Static source32 bundle/validation/replay/TOML checks passed; registered/installe
 false. Prepared installed31 preservation checker passed before/after. No native
 child run, model call, profile install, shared config, logging/trust/Windows change.
 
-Next work still warrants **Sol High** for admission/cancellation/driver contracts.
-Switch to Medium when those decisions and implementation are resolved and only
-routine verification remains. This plan is not execution authorization or product
+Source33 dry implementation is ready for **Sol Medium** CI/package verification.
+Native adapter/admission remains blocked, requiring High before consequential
+changes and fresh authorization before any inference. This plan is not execution authorization or product
 completion; no extra inference is currently authorized.

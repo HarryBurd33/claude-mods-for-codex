@@ -6,7 +6,16 @@ docs/configured-agents.md. This is remaining EV-15 acceptance, not another autho
 MVP. Installed31/approved settings/logging/trust/parent model stay frozen. No extra
 inference grant remains. Native Windows is later, guards unchanged.
 
-## Current preparation — 2026-10-25
+## Source33 dry checkpoint — current — 2026-10-25
+
+[DEV33-REVIEW](DEV33-REVIEW.md) / [routing-driver](../routing-driver.md) implement
+and test the fixed-peer protocol/admission/cancellation driver. No native adapter,
+no native admission proof or inference. Live gate cannot open in this build.
+Next human Medium for33CI/package; do not enable/live-test/install on Medium.
+High before consequential native gate/env/adapter decisions; no fresh grant exists.
+The older no-driver preparation below is historical. Full93 remains incomplete.
+
+## Historical plan preparation — 2026-10-25
 
 [NATIVE-ROUTING-TEST-PLAN](NATIVE-ROUTING-TEST-PLAN.md) now specifies proposed
 Sol Low/Luna Low tasks/role/reference, exact parent text, bounds, evidence and
