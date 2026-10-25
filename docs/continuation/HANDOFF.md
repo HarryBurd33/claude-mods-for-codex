@@ -1,139 +1,143 @@
-# Source32 configured-agent authoring — next GPT-6.1 Sol Medium
+# Source32 package/CI verified — next GPT-6.1 Sol High
 
-2026-10-24. High resumed fa365ba on **codex/astra-groundwork**. Source0.2.0-dev.32
-implements the demanding native-agent authoring contracts, with local tests/parser
-proof and security review complete within the limits below. Installed31 remains
-unmodified. Full93 incomplete; do not describe this as finished routing/product.
+2026-10-24. Sol Medium resumed **cbacb52** on **codex/astra-groundwork**.
+Routine exact source32 CI/packaging is complete within the limits below. No new
+failure/recovery or source/security fix. Next configured-native-agent acceptance
+requires consequential configuration/security/inference-harness decisions: High.
+Installed31 remains frozen/usable. Full93 remains incomplete.
 
-Read STATUS.md, DEV32-REVIEW.md, REQUIREMENTS.md(EV15/EV16/AU06/AU07/SEC),
-ARCHITECTURE.md(source32/native-agent and usage/routing), TEST-LOG.md latest,
-../configured-agents.md, ../component-authoring.md and ignored root HANDOFF.md.
-ROUTING-NEXT.md is the historical High brief, not current next-stage instructions.
+Read STATUS.md, PACKAGE-DEV32.md, ROUTING-ACCEPTANCE-NEXT.md, DEV32-REVIEW.md,
+REQUIREMENTS.md(EV15/EV16/AU06/AU07/AU16/SEC), ARCHITECTURE.md, TEST-LOG.md latest,
+docs/configured-agents.md, docs/component-authoring.md and latest ignored root
+HANDOFF.md. Source32 authoring is done; ROUTING-NEXT.md is an older High brief.
 
-## Verified source checkpoint identity
+## Verified immutable source identity
 
-Branch **codex/astra-groundwork**. Source checkpoint local HEAD and independently
-verified public remote commit: **8c8c2a7fbb5d7a54f7811d18592267b3bce598d0**;
-full tree **feb1c0d5f0c185e5025d7449420cd49d48140e52**. GitHub tree creation matched
-local full tree; non-force expected-parent ref update, fetched commit/tree comparison,
-connector source readback and anonymous public ls-remote agreed. Original local
-equivalent5c88d4119b57f9b640d6e39322c000ee146fc196 retained separately, not lost.
-[Source checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/8c8c2a7fbb5d7a54f7811d18592267b3bce598d0),
-[development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
-This documentation follow-up records the already verified source identity; its own
-final ref is independently verified and reported in the final/private record. CI
-and packaging remain pending Medium, not inferred from successful GitHub upload.
+Source/package and local starting commit **cbacb5209092ace7ba48a40b947318ea7ce1ed93**,
+full tree **f157d3425d88b7b09bd284f0e3e3abd753a5f84b**.
+[Source checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/cbacb5209092ace7ba48a40b947318ea7ce1ed93),
+[branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
+Anonymous clone exact SHA/tree and264packaged file bytes equal the pre-notes
+workspace. Source32 implementation parent8c8c2a7 is already documented. Later
+continuation notes do not replace this immutable archive/CI target. This final
+notes checkpoint/ref/full tree is verified after upload and reported in final/private
+record; do not guess a self-referential hash here. No force push or commit loss.
 
-## Completed / partial / blocked
+## Complete / partial / unverified / blocked
 
-- Strict source32 agent spec, private component bundle, exact validation, static
-  replay, boolean-only review intent, access/plan, skill guidance and review/install/
-  update/disable/removal/rollback instructions implemented. Native alternative is
-  separate project/user configuration, not plugin agent discovery or custom client.
-- Candidate is **agent-candidate.toml.txt**, because released native discovery scans
-  nested .toml files. It emits only name/description/developer_instructions/model/
-  model_reasoning_effort literal strings. No native enabled flag, arbitrary config,
-  authority or parent prompt/model interception. Instructions are not an OS sandbox.
-- Model/effort must be explicit; model availability/compatibility unverified. Local
-  generation/static replay make0model/network calls; skills and future native
-  orchestration/children consume usage. No run currently authorized, no fallback.
-- Shared invalidJSON fixed-field guidance corrected with literal fallback test.
-  Existing rule/observer/status/interaction bundles remain compatible; no new runtime
-  settings/hook/capture/permissions/exports. Windows before-IO guards unchanged.
-- Native installed31 lifecycle acceptance previously passed. Current preservation
-  checker before/after no-turn proof passed:251cache/config/ownedtrust/settings/
-  data/sources/marketplace unchanged. No production profile/install action taken.
-- Native configured-child execution/discovery/effective inheritance/usage/lifecycle
-  remain **unverified**. Additional inference needs a fresh exact bounded human
-  authorization; do not reuse old grants, spawn collaboration agents, create/send
-  chats or schedule work to bypass model-switch stops.
-- Source32 CI and exact public packaging remain **pending** for Medium. NativeWin/
-  WSL remain unverified; original Windows bounds cause/image failures unresolved.
-  MacOS first; no repeated Windows proof loop or host-availability question.
+- Source32 explicit native-agent scaffold/validate/static replay/review-intent/plan
+  implemented and now package/CI verified. Exactly five literal TOML strings; inert
+  .toml.txt avoids recursive native discovery. agent.selected only selects review
+  intent. Separate native project/user alternative, not established plugin loading.
+- Exact explicit child model/effort/access/usage/inherited authority disclosed. No
+  parent model/prompt mutation, automatic install/launch, new runtime setting,
+  capture/storage/export selection or permission grant. Instructions are not a sandbox.
+- Previous High actual CLI0.164 no-turn valid/malformed parser proof and independent
+  TOML literal round-trip remain limited evidence. Config visibility is not routing.
+- Exact public archive:264files/2,125,103unpackedbytes/644,609archivebytes;
+  SHA25680fdd08497505c02d4273ee4a030a64715c14a2225c1088dcfa495024fc5e735.
+  Hygiene/version/license/defaults and every public/source/package byte verified.
+- Spaced packaged suite85pass0fail1Windows-onlyskip86total; validate3mods/replay4
+  data fixtures pass. Real packaged component CLI all four commands/new synthetic
+  agent/selected intent pass; actual prior28paired/status,31Reviewdesk,32inert-agent
+  bundles validate/replay/plan with original bytes unchanged. No fixture execution.
+- Exact CI run40166622002 headcbacb52 completed failure overall. Four POSIX lanes
+  each252pass0fail112Windows-onlyskips364total and validate/replay success. Windows
+  portable success:3pure agent cases actually pass; component step11pass11POSIXskips.
+  Both Windows integrations25storage passes+85pass1fail86process proofs; ONLYknown
+  Installer Image refusal, links2. Bounds passed295.0142/430.6472ms; original cause
+  unresolved. All7final job logs read. No retry/guard/assertion change/allgreen claim.
+- Native31 prior macOS fields/UI/rollback/disable-reenable acceptance unchanged.
+  Prepared current checker before/after packaging:cache251/shared config/owned
+  trust/settings/sources/marketplace/data unchanged. No new live-host/UI/event claim.
+- **Still unverified:** configured native directory discovery/execution/effective
+  child model/effort/permission inheritance/usage/lifecycle; desktop-specific profile
+  behavior, broader skill/optional event/accessibility/platform acceptance. Source32
+  remains uninstalled. NativeWindows11/WSL and original bounds/image gaps unchanged.
+- **Authorization blocker:** no additional inference grant remains. Native execution
+  needs a precise separately reviewed bounded plan and fresh explicit human grant,
+  covering any parent orchestration as well as child usage. Stage switches stay
+  human-controlled; no collaboration agents, other chats or background continuation.
 
-## Sources / contracts / observed checks
+## Contracts and actual commands/results
 
-Primary links/version pins in DEV32-REVIEW and configured-agents. Reviewed official
-subagent docs plus released CLI163 source83086188ae0614bd882818ff1aa23f3194962012
-and164 source6aaac694803004a63c6f393d153c96d22521a6b9. Current standalone CLI
-**0.164.0** was already installed, unlike prior0.163 inventory; we did not upgrade.
-Exact desktop/internal-server binary independently unverified. Current host
-macOS14.6/Node24.22.0. Inference/permission inheritance is source corroboration,
-not a claimed native runtime test.
+Code remains exactly sourcecbacb52: src/agent-contract.mjs pure strict validation/
+TOML/access/plan/static replay; component-contract exclusive agent shape/selected
+boolean intent; component-authoring private POSIX loader/writer/hash regeneration,
+agent-candidate.toml.txt and fixtures/agent.json only. No installer/launcher/new
+MCP endpoint. src/cli existing command family; skills/mod-scaffolding source32
+route; test/agents6cases; shared invalidJSON literal fallback correction. Windows
+before-IO guards remain. See DEV32-REVIEW/configured-agents for primary docs and
+released CLI163/164 pins; source corroboration is not actual child behavior.
 
-Code:
-- src/agent-contract.mjs: pure exact schema, literal TOML, access/plan/static fixtures/
-  replay. No IO/launch/import authority.
-- src/component-contract.mjs: kind:agent exclusive shape; agent.selected intent only.
-- src/component-authoring.mjs: existing POSIX private loader/writer/hash regeneration,
-  two new exact artifact names, selected base refuses, no .toml output. No installer.
-- src/cli.mjs: existing component command family, updated help.
-- test/agents.test.mjs6cases; components injected-source import includes agent module;
-  rendering literal invalidJSON regression. CI portable step adds agent tests; other
-  Windows processes/integration/guards unchanged.
-- skills/mod-scaffolding/SKILL.md and docs/configured-agents.md: source32-only native
-  profile workflow. package/manifest/server/UI version fields32; installed31 unchanged.
+This Medium stage actually ran:
+- Prepared enabled31 preservation checker before/after (ignored helper; exact path
+  in root handoff). No flag/installation transition rerun or trust hash edit.
+- Anonymous credential-disabled/hooks-disabled clone+detached checkout exact SHA;
+  npm pack --ignore-scripts --offline with isolated local cache; safe tar/file/hash/
+  version/MIT/private metadata/defaults/privacy checks and spaced extraction.
+- node --test agents/interactions/components/appearance/impact-review/impact/
+  rendering/transport-ui/package/dashboard/contracts from actual extraction:
+  85pass1skip86total. Packaged npm run validate3mods/npm run replay4fixtures.
+- Actual packaged component CLI scaffold/validate/replay/plan with synthetic agent,
+  selected intent and existing prior bundles; never native install/invocation.
+- Connected combined status returned no entries; gh absent. Public REST discovered
+  push run/final head+conclusion; connector fetched7job summaries/decoded logs.
+  No tool repair. An initial relative evidence read used extraction cwd, found no
+  files, corrected to workspace; no product failure or missing artifact inferred.
+- No redundant local full-suite repeat for notes; exact source CI supplied four
+  252-pass lanes. No source/runtime/test/CI code change or new paid/native run.
 
-Actually run:
-- `node --test test/agents.test.mjs test/components.test.mjs test/interactions.test.mjs test/rendering.test.mjs`:29pass/1Windows-onlyskip/30total.
-- `npm test`:252pass/112Windows-onlyskip/0fail/364total; `npm run validate`:3validmods;
-  `npm run replay`:fourfixtures expected notice/deny/abstentions, no fixture execution.
-- Source32 real CLI private scaffold, Python tomllib exact five-key hostile literal
-  round-trip including Unicode/quotes/backslashes/LF passed on final .toml.txt.
-- Bounded native app-server initialize/config-read only, child-only config_file
-  overrides: valid candidate no parse warning, malformed control parse warning;
-  both role references visible. **Config visibility is not validation.** No thread/
-  turn start or directory install. Initial sandbox attempts exited; authorized
-  outside-sandbox no-turn checks succeeded. No shared config/home override/tool repair.
-- Skill quick_validate.py attempted twice:PyYAML unavailable in both runtimes;
-  not passed. Independent Ruby YAML frontmatter parse passed; no system repair.
-- All93requirement IDs/order preserved. git diff --check passed. CI/archive not run
-  this High stage. Exact checkpoints/ref/tree verification recorded in final/private
-  record after upload; never guess a self-referential hash here.
+Host macOS14.6/Node24.22.0; standalone CLI previously observed0.164.0, not upgraded.
+Desktop/internal-server exact binary still independently unverified. CI macOS26arm64/
+Ubuntu24 and Windows2025-vs2026 are distinct from native user-host acceptance.
+Optional skill quick_validate.py missingPyYAML remains unresolved/unrepaired from
+High; Ruby YAML parse/packaged skill checks previously passed, not its full validator.
 
-## Configuration and rollback
+## Configuration, installation and rollback
 
-No installation, configuration/trust/model/logging selection changes this stage.
-No native agent file was placed in discovery or persistent config reference added.
-Private proof children used command-line overrides only and were terminated/reaped.
-Private artifacts remain ignored; inspect partial evidence rather than auto-delete.
-No restoration action needed. Installed31 sources/settings and known supported
-selective rollback/disable records remain; do not repeat completed transitions or
-restore whole shared config/cache/trust. Root HANDOFF contains private exact paths.
+Installed **0.2.0-dev.31**, user profile/cache scope, still enabled and approved
+Review desk/settings. No source32 install, native profile, shared config reference,
+selected model, human trust, logging/capture/rules/status/exports/data or Windows
+security change. No restart/trust action required by source packaging. Source32's
+CLI/skill is not magically installed into31; do not claim native32 UI acceptance.
 
-## Next model and precise tasks
+No rollback needed for this stage. Ignored raw archive/clone/extraction/logs/specs
+and exact hashes preserved; root HANDOFF supplies private paths. No private path/
+raw session/config/credential uploaded. Do not delete partial evidence automatically,
+repeat completed native31 transitions, restore whole config or patch caches/trust.
+Existing immutable31/30 and approved settings remain. Future explicit native-profile
+changes need scope/collision review/backups and separate removal/restoration steps.
 
-Select **GPT-6.1 Sol Medium**: security/configuration decisions and implementation
-are done; CI/package verification is routine. Stop for High before consequential
-code/security/config design, unexpected drift, recovery or a new inference harness.
+## Next exact model and priorities
 
-1. Confirm clean checkpoint/remote branch and unchanged installed31 with prepared
-   enabled preservation checker. Do not rerun completed disable/rollback transitions.
-2. Check exact source32 CI. Preserve known Windows bounds/image failures as evidence;
-   no all-green or nativeWin claim. Investigate only sufficiently understood routine
-   packaging issues on Medium; new consequential failures require High checkpoint.
-3. Verify exact public source32 archive/anonymous clone/spaced extraction: manifest/
-   version/files/privacy hygiene, included new module/test/docs, component CLI all
-   four commands and older bundle compatibility. Use synthetic specs; no copy/rename
-   into native discovery, source32 install or trust mutation. Keep archives private.
-4. Record package/CI outcomes in required continuation files. Installed31 remains
-   approved usable baseline; source32 is not loaded. No restart/trust review needed
-   merely for source packaging. Do not invent a release/feature-complete claim.
-5. Native routing remains required/unverified. Before inference, prepare a precise
-   reviewed plan with exact explicit child and any parent orchestration model/effort,
-   project/task/tool/call/usage/deadline/output/cancel limits and fresh authorization.
-   There is no native direct-agent/list/launch proof from schemas. Additional design
-   or launcher/config/security implementation belongs in High, not an improvised
-   Medium probe. No separate client/fork direction without human agreement.
-6. Save/upload/verify meaningful progress then stop at a model or human-action gate.
-   No background work after announcing the switch.
+Select **GPT-6.1 Sol High**. Routine packaging is complete; native discovery/
+invocation/effective authority and inference-harness contracts justify High. This
+is not an unexpected Windows recovery. Follow ROUTING-ACCEPTANCE-NEXT:
+1. Check clean checkpoint and preserved installed31; no source32 plugin update.
+2. Resolve supported native invocation/discovery on intended host through public
+   interfaces, preferring harmless no-inference evidence first. Do not invent
+   agent/list/launch methods or infer release support from schema/main-only code.
+3. Prepare exact disposable native profile/scope/collision/access/install/removal/
+   rollback plan while preserving31/logging/parent model/trust. Any protected
+   host review/reload is human-controlled; never auto-trust.
+4. Before any inference, obtain a fresh exact bounded grant including child and
+   any parent orchestration models/efforts, task/project/call/tool/usage/output/
+   deadline/cancel limits. No self-report substitute for effective model/authority;
+   no silent fallback, destructive command, credential/session or raw prompt logging.
+5. Implement/test the smallest supported harness only after contract/security
+   decisions; record separate discovery/routing/permission/lifecycle evidence and
+   exact blockers. No new logging scope. MacOS first; Windows gaps remain explicit.
+6. Return Medium after demanding work is resolved; save/upload/verify and stop.
+   No delegated model, other chat, scheduled or background work bypassing switches.
 
-## Complete resume instruction
+## Complete copy-and-paste resume instruction
 
-“I’ve switched to GPT‑6.1 Sol, Medium. Continue from the verified source32 checkpoint
-on codex/astra-groundwork. Read docs/continuation/HANDOFF.md, STATUS.md,
-DEV32-REVIEW.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md,
-docs/configured-agents.md and the latest ignored root HANDOFF.md. Verify source32
-CI and packaging; preserve installed31, approved settings, logging scope, parent
-model, human trust and Windows guards. Do not install or invoke a native agent;
-no extra model grant remains. Stop for High before consequential changes or drift.”
+“I’ve switched to GPT‑6.1 Sol, High. Continue from the verified source32 packaging
+checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md, STATUS.md,
+PACKAGE-DEV32.md, ROUTING-ACCEPTANCE-NEXT.md, DEV32-REVIEW.md, REQUIREMENTS.md,
+ARCHITECTURE.md, TEST-LOG.md, docs/configured-agents.md and latest ignored root
+HANDOFF.md. Follow the native configured-agent acceptance handoff. Preserve
+installed31, approved settings, logging scope, parent model, human trust and Windows
+guards. No extra inference is authorized; prepare a bounded reviewable plan first.
+Stop for Medium once stronger reasoning is no longer needed.”

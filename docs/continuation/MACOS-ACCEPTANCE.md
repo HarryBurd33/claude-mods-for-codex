@@ -1,6 +1,15 @@
 # macOS acceptance audit — 2026-10-24
 
-## Native disable/re-enable accepted — current — 2026-10-24
+## Source32 authoring package verified — current — 2026-10-24
+
+[PACKAGE-DEV32](PACKAGE-DEV32.md) completes exact source32 CI/package acceptance;
+installed31 native lifecycle remains previously verified and unchanged. Source32
+is not installed. [Native configured-agent acceptance](ROUTING-ACCEPTANCE-NEXT.md)
+remains required/unverified; next human Sol High before consequential native
+configuration/security/test-harness work, no extra model run currently authorized.
+Earlier next-High authoring brief below is historical; full93 incomplete.
+
+## Native disable/re-enable accepted — historical — 2026-10-24
 
 [REENABLE-DEV31](REENABLE-DEV31.md) completes target-bound disable/restart absence/
 original flag/restart actual8tools/Reviewdesk/harmless effects return.251cache/

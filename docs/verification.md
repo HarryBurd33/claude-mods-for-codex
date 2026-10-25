@@ -1,6 +1,22 @@
 # Verification record
 
-## Source32 configured-agent authoring — current — 2026-10-24
+## Source32 package/CI verified — current — 2026-10-24
+
+[PACKAGE-DEV32](continuation/PACKAGE-DEV32.md): exact anonymous publiccbacb52 archive264files/
+2,125,103bytes matches source; spaced extraction85pass1Windows-onlyskip/86total,
+validate3/replay4 and real packaged component CLI/new agent plus actual prior28/31/
+32bundles passed without edits/install/launch. Four POSIX CI lanes252pass112skips;
+Windows portable success (3pure agent cases). Both Windows integration jobs retain
+only known Installer Image refusal, linkcount2:25storage pass+85/1/86process proofs.
+No allgreen/nativeWindows claim; original bounds cause/guards unchanged. All7final
+job logs read, no retries. Installed31/cache251/config/trust/settings/data/logging/
+parent model preserved. No new model/profile/install/restart/trust action. Full93
+incomplete. Next human Sol High for [native configured-agent acceptance](continuation/ROUTING-ACCEPTANCE-NEXT.md),
+before consequential discovery/invocation/security/inference-harness decisions.
+No extra inference grant remains; source32 authoring alone is not runtime routing.
+All older status sections below are historical.
+
+## Source32 configured-agent authoring — historical — 2026-10-24
 
 [DEV32-REVIEW](continuation/DEV32-REVIEW.md) and [configured-agents](configured-agents.md):
 strict inert native candidate/spec/private bundle/boolean review-intent/static

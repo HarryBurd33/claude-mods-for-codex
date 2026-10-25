@@ -13,7 +13,7 @@ The complete93-capability ledger and continuation handoff govern development;
 these are required gaps, not an exclusion list used to declare completion.
 
 - Remaining accessibility/other-client lifecycle, broader skill invocation and optional-event acceptance. Bounded macOS31 rollback and disable/re-enable passed.
-- Source32 native-agent CI/packaging and separate native configured-child execution/discovery/permission/lifecycle acceptance; no paid test currently authorized.
+- Source32 CI/packaging verified; native configured-child execution/discovery/permission/lifecycle acceptance remains required and unverified. No paid test currently authorized.
 - Windows storage APIs have real NTFS CI; native Codex install/trust/events/UI and
   standard-user permissions remain unverified. Dashboard/project/Git and restore
   stay explicitly refused pending separate reviewed native security gates.

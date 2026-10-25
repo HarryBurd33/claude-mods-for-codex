@@ -2822,3 +2822,39 @@ no ledger rows removed). Source32CI/exactarchive/clone/spacedpackaging pendingMe
 No productioninstall/trust/config/logscope/modelrun/capture/Windowsguard changes.
 Full93incomplete; knownWindowsbounds/imagefailuresunchanged. High decisions/code
 complete, stopforMediumCI/package; Highbeforeconsequentialchanges/unexpectedrecovery.
+
+## Medium source32 exact CI/package — 2026-10-24
+
+Resumedcbacb52 clean. Prepared enabled31 checker before/after cache251/sharedconfig/
+ownedtrust/settings/sources/marketplace/data preserved0modelturns. No transitions,
+source/runtime/test/CI/config/trust/logging/Windows/security change or nativeprofile.
+Anonymouspubliccredential-disabled/hook-disabledcloneexactcbacb5209092ace7ba48a40b947318ea7ce1ed93,
+treef157d3425d88b7b09bd284f0e3e3abd753a5f84b. Offlineignore-scriptsnpmpack isolatedcache:
+264files2,125,103unpacked644,609archiveSHA256
+80fdd08497505c02d4273ee4a030a64715c14a2225c1088dcfa495024fc5e735.
+Allbytesclone/workspaceequal, strict tarpaths/links/specials/modes/case/privatekeys/
+paths/logs/rootHANDOFF hygiene, versions/MIT/private metadata/no dependencies/
+three-hook/journalmetadata-off defaults pass. Newagent module/test/docs included.
+
+Actualspacedextraction focused packagedtests85pass0fail1Windows-onlyskip86total;
+validate3/replay4expected nofixtureexecution. PackagedCLIall4componentcommandsnew
+syntheticagent/selectedintent pass, no .tomloutput/invocation/install/hookcapturegrant.
+Actualprior28paired/status-only31Reviewdesk32inertagentbundles validate/replay/plan,
+alloriginalbytespreserved. First relative evidence read accidentally used extraction
+cwd, missingpath correctedtoworkspace, notproductfailure. No redundantfullsuite.
+
+Connectedstatushadnoentries/PR-onlyrunwrapperinsufficient; ghabsent, no repair.
+AnonymouspublicRESTexactpushrun40166622002 headcbacb52/finalcompletedfailureverified;
+connectorreadall7finaljobmetadata+decodedlogs, no retries. FourPOSIXmacOS/Ubuntu22/24
+laneseach252pass0fail112Windows-onlyskip364total+validate/replay. Windowsportable
+success, component+interaction+agentstep11pass0fail11POSIXskip22total;3newpureagent
+cases actuallypass. Windows22job121088889416and24job121088889431each25storagepass,
+85pass1fail86processproofsONLYknownInstallerImageRefusal/links2,dataReadfalse,
+sampleAcceptedfalse,beforehash/import/executiontrust. Bounds295.0142/430.6472mspass;
+originalintermittentcauseunresolved. Assertions/guardsunchanged,notallgreen/nativeWin.
+No newunexpectedrecovery,Windowsproof/availabilityloop,nativeUI/event/modelrun.
+
+Source32packagecomplete,stilluninstalled;31approvedusable. NextHighnativeconfigured
+agentdiscovery/invocation/authority/usage/harnessdesign, no extra inference grant.
+ROUTING-ACCEPTANCE-NEXT.md governs; full93/nativeplatform/accessibility/optional
+features incomplete. Save/upload/verify notes and stopforhumanHigh, notbackground.

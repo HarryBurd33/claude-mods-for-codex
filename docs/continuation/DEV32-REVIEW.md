@@ -70,9 +70,10 @@ advertised nonempty string, not a fixed enum. Schema presence is not runtime pro
 - Prepared enabled31 preservation checker before/after native proof passed: cache251,
   config/owned trust/settings/sources/marketplace/data unchanged, zero model turns.
 
-## Remaining and next stage
+## Remaining and next stage — updated after Medium verification
 
-Source32 CI/exact archive/public clone/spaced-path packaging remain Medium tasks.
+Medium [PACKAGE-DEV32](PACKAGE-DEV32.md) verified exact CI/public archive/clone/
+spaced extraction. No source or installed31 change. Next High for native acceptance.
 Preserve installed31; do not install source32 or copy any agent to discovery as a
 packaging side effect. Runtime configured-agent routing, native directory discovery,
 effective authority and lifecycle remain unverified. Any paid run needs a precise
