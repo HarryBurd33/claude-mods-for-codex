@@ -1,0 +1,32 @@
+/* Original fixed owned-panel tokens. Host variables remain untouched. */
+:root{
+ --mods-text:var(--color-text-primary,CanvasText);--mods-bg:var(--color-background-primary,Canvas);
+ --mods-muted:var(--color-text-secondary,GrayText);--mods-surface:var(--color-background-secondary,ButtonFace);
+ --mods-border:currentColor;--mods-focus:currentColor;
+ --mods-add:light-dark(#e6ffec,#123020);--mods-remove:light-dark(#ffebe9,#3c2020);
+ --mods-string:light-dark(#086b38,#8bdfa9);--mods-number:light-dark(#1748a3,#a6c6ff);
+ --mods-chart:currentColor;--mods-chart-opacity:.3;
+}
+:root[data-mods-appearance="quiet-dark"]{
+ color-scheme:dark;
+ --mods-text:#D9E2F1;--mods-bg:#171B23;--mods-muted:#91A5BD;--mods-surface:#242B38;
+ --mods-border:#91A5BD;--mods-focus:#F8CB8A;--mods-add:#183C2B;--mods-remove:#46232C;
+ --mods-string:#A6DBA8;--mods-number:#F8CB8A;--mods-chart:#83D9D1;--mods-chart-opacity:1;
+}
+:root[data-mods-appearance="quiet-light"]{
+ color-scheme:light;
+ --mods-text:#172337;--mods-bg:#F7F9FC;--mods-muted:#43546B;--mods-surface:#E5EAF2;
+ --mods-border:#43546B;--mods-focus:#1748A3;--mods-add:#DCF1E2;--mods-remove:#F7DFE3;
+ --mods-string:#145C32;--mods-number:#1748A3;--mods-chart:#235B91;--mods-chart-opacity:1;
+}
+.event-bar{fill:var(--mods-chart);opacity:var(--mods-chart-opacity)}
+.local-flowchart rect{fill:var(--mods-bg);stroke:currentColor}
+.appearance{padding:10px 0}.appearance summary{padding-left:0}
+.appearance select{max-width:100%;min-width:0}
+@media(forced-colors:active){
+ :root,:root[data-mods-appearance]{
+  --mods-text:CanvasText;--mods-bg:Canvas;--mods-muted:CanvasText;--mods-surface:Canvas;
+  --mods-border:CanvasText;--mods-focus:Highlight;--mods-add:Canvas;--mods-remove:Canvas;
+  --mods-string:CanvasText;--mods-number:CanvasText;--mods-chart:CanvasText;--mods-chart-opacity:1;
+ }
+}

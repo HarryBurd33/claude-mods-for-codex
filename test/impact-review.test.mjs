@@ -60,6 +60,7 @@ class Element {
   append(e) { this.children.push(e); }
   replaceChildren() { this.children = []; this.textContent = ''; }
   setAttribute(k, v) { this.attributes[k] = v; }
+  removeAttribute(k) { delete this.attributes[k]; }
 }
 const descendants = e => [e, ...e.children.flatMap(descendants)];
 
@@ -87,7 +88,7 @@ test('actual served offline script navigates/assesses/chooses/clears without too
   const elements = new Map(); const get = id => { if (!elements.has(id)) elements.set(id, new Element('div')); return elements.get(id); };
   const nav = ['activity', 'preview', 'impact'].map(view => Object.assign(new Element('button'), { dataset: { view } }));
   const sections = nav.map(b => Object.assign(new Element('section'), { id: b.dataset.view }));
-  const doc = { querySelector: id => get(id), querySelectorAll: s => s === 'nav button' ? nav : sections, createElement: tag => new Element(tag) };
+  const doc = { documentElement: new Element('html'), querySelector: id => get(id), querySelectorAll: s => s === 'nav button' ? nav : sections, createElement: tag => new Element(tag) };
   const messages = [], callbacks = [], parent = { postMessage: m => messages.push(m) }; let message;
   runInNewContext(script, { document: doc, parent, TextEncoder, setTimeout: f => { callbacks.push(f); return callbacks.length; }, clearTimeout() {}, addEventListener: (name, fn) => { if (name === 'message') message = fn; } }, { timeout: 1000 });
   assert.equal(messages.length, 1); assert.equal(messages[0].method, 'ui/initialize');
@@ -98,6 +99,10 @@ test('actual served offline script navigates/assesses/chooses/clears without too
   get('#impact-source').value = synthetic; get('#impact-assess').onclick();
   const buttons = descendants(get('#impact-result')).filter(n => n.tagName === 'button'); assert.equal(buttons.length, 3);
   for (const b of buttons) b.onclick(); assert.equal(messages.length, 1);
+  const palette = get('#appearance-select'); palette.value = 'quiet-dark'; palette.onchange();
+  assert.equal(doc.documentElement.attributes['data-mods-appearance'], 'quiet-dark');
+  assert.equal(get('#impact-source').value, synthetic); assert.equal(messages.length, 1);
+  get('#appearance-reset').onclick(); assert.equal(doc.documentElement.attributes['data-mods-appearance'], undefined);
   // Host teardown clears sensitive source and prevents retained handlers reuse.
   message({ source: parent, data: { jsonrpc: '2.0', id: 99, method: 'ui/resource-teardown', params: {} } });
   assert.equal(get('#impact-source').value, ''); assert.equal(get('#impact-result').children.length, 0);

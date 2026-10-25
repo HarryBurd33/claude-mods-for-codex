@@ -1,6 +1,20 @@
 # Requirements ledger
 
-## Native29 follow-up — current — 2026-10-24
+## Source30 appearance — current — 2026-10-24
+
+Original fixed palettes now live in the owned dashboard with Follow host default,
+Reset and no persistence or tool/model/network requests. Text/code/diffs/charts/
+focus use reserved owned tokens; system forced colors take precedence. Fixed-color
+contrast and simulated lifecycle/privacy tests pass; disconnected browser verifies
+dark/light/default Reset and retained diagram/tables. Native30, exact new CI/package
+and CLI theme preview remain unverified. Installed29/settings/scope/exports/rules/
+trust and Windows guards unchanged; no config/cache write or extra model run.
+See DEV30-REVIEW.md and themes.md via the handoff. Earlier checkpoint sections
+below record history, not current installation or next-model instructions. All93
+requirements remain incomplete; original Windows bounds failure unresolved.
+
+
+## Native29 follow-up — historical checkpoint — 2026-10-24
 
 [NATIVE-DEV29](NATIVE-DEV29.md): actual loaded Impact review, all3local guidance
 choices, edit invalidation/control/Clear and harmless native rewrites/control/deny
@@ -12,7 +26,7 @@ unchanged. Full93 product incomplete. Next human **Sol High** for bounded
 [appearance controls](THEMES-NEXT.md), before consequential implementation.
 
 
-## Source29 supported update — current — 2026-10-24
+## Source29 supported update — historical checkpoint — 2026-10-24
 
 Prepared immutable234file candidate from the already verified dddd49a archive.
 Only three private overlays: same MCP/settings28 path, unchanged configured mods,
@@ -32,7 +46,7 @@ source. Product runtime matches; proof/test/docs differ. No new archive/full sui
 needed for this unchanged reviewed snapshot. Full93 product incomplete.
 
 
-## Bounded High triage — current — 2026-10-24
+## Bounded High triage — historical checkpoint — 2026-10-24
 
 [Metadata-bounds investigation](METADATA-BOUNDS-INVESTIGATION.md): proof-only fixed
 phase/refusal/cleanup diagnostics added; guards/budgets/production code unchanged.
@@ -45,7 +59,7 @@ Next **GPT-6.1 Sol Medium** for source29 native-review preparation, High before
 new consequential changes. Earlier next-High gate directions are historical.
 
 
-## Source29 Medium CI/package gate — current — 2026-10-24
+## Source29 Medium CI/package gate — historical checkpoint — 2026-10-24
 
 [PACKAGE-DEV29](PACKAGE-DEV29.md):234file public archive passed byte/hygiene/version/
 MIT checks; spaced extraction58pass/0fail. Four POSIX source CI jobs235pass each,
@@ -57,7 +71,7 @@ not broad Windows feature work. No new guard choice/model run. Earlier pending
 CI/package/next-Medium wording is historical. Full93 product remains incomplete.
 
 
-## Source29 follow-up — current — 2026-10-24
+## Source29 follow-up — historical checkpoint — 2026-10-24
 
 [DEV29-REVIEW](DEV29-REVIEW.md) records local impact assessment/explicit guidance,
 no execution/approval/policy edit and the existing deny/review alternative. Local
@@ -67,7 +81,7 @@ selection/model run. Next Medium routine packaging/review preparation. All93 gap
 remain accounted for; earlier next-High impact directions are historical.
 
 
-## Native28 follow-up — current — 2026-10-24
+## Native28 follow-up — historical checkpoint — 2026-10-24
 
 [NATIVE-DEV28](NATIVE-DEV28.md) records actual loaded authored counter/tool/table:
 3pre+2post=5, matching existing selected activity7/same revision; Refresh and
@@ -209,8 +223,8 @@ issues are reports/leads, not reproductions by this project.
 | UI-05 Enter fields and choose options | Input/Select plus local callbacks | Owned form controls and validated tool schemas | UIhost | C-UI; CX-UI | supported | Installed dev6 preview Format/source fields and watch checkbox verified; no general authoring UI fields | Label/keyboard/cancellation/teardown and no implicit model call; verify in actual host | Watch replay0→1 observed; no native composer replacement |
 | UI-06 See status and activity | Reactive state and UI displays | Owned status region and read-only MCP tool | NodeMac; Desk | C-UI; CX-UI; LOCAL; NATIVE-PROOF | supported | Installed dev6 chart/table/scoped count4 rechecked on Medium; earlier native selected-project CLI capture displayed1→4 | Native shared write/Refresh and current dev4 rendering pass; active-Watch native timing/full accessibility remain | Retained delivery counts are not success/lifetime totals/producer health |
 | UI-07 Show band near prompt/transcript | AbovePrompt and named native sites | No equivalent insertion point established; owned panel/notice is candidate alternative | Desk; CLI163 | C-UI; CX-UI; CX-H | unverified | Session notice exists, no band | Identify released public placement API and test; otherwise verify readable notice/owned strip and label placement difference | A strip inside owned UI is not a native above-composer band |
-| UI-08 Apply themes | Theme/native drawing hooks | Supported TUI theme configuration; native prose themes released in 0.164.0 | CLI164; Desk separately unverified | C-UI; CX-THEME; PRISM | supported | Source dev6 original optional syntax palette/setup guide; installed CLI163 lacks164 prose merge, no theme applied | Review theme config, backup only changed entries, test code/prose rendering on 0.164.0+, restore | No silent client update; desktop theme contract remains to establish |
-| UI-09 Set backgrounds | Mod UI/native drawing | CSS background inside owned view; native background only documented theme settings | UIhost; CLI164; Desk | C-UI; CX-UI; CX-THEME | approximation | Proof and production dashboard use host background CSS variables in owned HTML | Light/dark/high-contrast, safe assets, no remote loads and actual new-dashboard rendering remain | Owned background is not whole-app background replacement |
+| UI-08 Apply themes | Theme/native drawing hooks | Owned fixed palettes; supported separate TUI theme configuration | UIhost; CLI163/164; Desk native chrome separately unverified | C-UI; CX-THEME; PRISM; DEV30-REVIEW (2026-10-24) | supported | Source30 Follow host/default, Quiet dark/light, Reset; fixed-token contrast/bridge tests and disconnected browser pass. Installed29 unchanged; no CLI theme applied | Exact source30 package/CI, reviewed update and native keyboard/rendering/reset; separate CLI picker preview, backup and restore; prose check requires164+ | Owned palette is not native client restyling; desktop theme contract remains to establish |
+| UI-09 Set backgrounds | Mod UI/native drawing | Fixed CSS backgrounds inside owned view; separate native theme setting | UIhost; CLI163/164; Desk | C-UI; CX-UI; CX-THEME; DEV30-REVIEW (2026-10-24) | approximation | Source30 owned dark/light/default backgrounds including code/diff/diagram; no arbitrary assets/URLs. Automated contrast and disconnected browser computed colors pass | Native30 light/dark/reset, narrow/wide and system forced-color rendering pending; fixed files/privileges unchanged | Owned background is not whole-app replacement; native chrome follows supported client controls only |
 | UI-10 Show footer information | Mod-rendered footer/native sites | Footer inside owned UI; host-supported status configuration only if confirmed | UIhost; CLI163/164 | C-UI; CX-UI | approximation | Proof explanatory footer; dashboard source labels development state, trust and lack of approval semantics | Human preview resize/one keyboard path passed; footer zoom/screen-reader/readability and accurate labels still need broader checks | No arbitrary native transcript/footer insertion proved |
 | UI-11 Show indicators | Spinner/status sites, reactive components | Owned badges/counters; documented hook `statusMessage` | UIhost; CLI163; Desk | C-UI; CX-H; LOCAL | supported | Installed production connection/counters work; source adds measured-event chart; no native spinner replacement | Native manual refresh and synthetic Watch observed; source chart tested with simulated DOM; native statusMessage remains separate | Native indicator appearance stays host-controlled; missing data unavailable |
 | UI-12 Render rich code | Code components/custom rendering | Native supported syntax themes and escaped owned code renderer | CLI163/164; UIhost | C-UI; PRISM; CX-THEME; CX-UI | supported | Dev6 native highlighted JSON/plain literal code and earlier escaped diffs; markup-looking text remained literal | Automated hostile/control tests pass; actual host JSON/plain rendering passed; native theme/full-language highlighting separate | JSON highlighting only; other languages literal; no native renderer replacement |

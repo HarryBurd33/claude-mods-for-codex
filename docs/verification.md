@@ -1,11 +1,12 @@
 # Verification record
 
-Current2026-10-24: source29 adds local impact assessment/ephemeral guidance;
-[DEV29-REVIEW](continuation/DEV29-REVIEW.md) separates source tests and pending
-CI/package/native29 acceptance. Installed28/native counter checks are recorded in
-[NATIVE-DEV28](continuation/NATIVE-DEV28.md). Existing logging scope/exports/trust
-stay unchanged; no guard opt-in/model run granted. Next Medium package/review
-preparation, High before consequential changes. Earlier dated notes are historical.
+Current2026-10-24: source30 adds fixed owned appearance controls; installed29 remains
+unchanged. [DEV30-REVIEW](continuation/DEV30-REVIEW.md) separates239local passes,
+disconnected browser evidence and pending exact CI/package/native30 checks.
+[NATIVE-DEV29](continuation/NATIVE-DEV29.md) retains actual previous host acceptance
+and lifecycle limits. Logging/trust/Windows guards unchanged; original bounds
+failure unresolved. Next human Sol Medium for routine package/native preparation.
+Earlier dated notes are historical.
 
 
 Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)

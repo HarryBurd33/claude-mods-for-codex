@@ -2486,3 +2486,30 @@ unchanged. Full93 product incomplete. Next human **Sol High** for bounded
 Fresh read-only native inventory3trusted/0errors/0model turns. macOS14.6,
 Node24.22.0, standaloneCLI0.163.0, panel hostchatgpt. Exact internal desktop version
 not independently attested. Source/native/automated evidence separated in NATIVE-DEV29.
+
+## Source30 owned appearance — 2026-10-24 — Sol High
+
+Baseline3a1a6e8; macOS14.6, Node24.22.0. Initial existing focused renderer/impact/
+transport33pass. Added fixed palette sRGB contrast/unknown-ID/reset/disposal,
+served offline asset contracts and actual bundled UI simulation (retained drafts/
+results, reserved host namespace, no requests, teardown). Focused appearance/
+transport/impact29pass0fail. Full `npm test`:351total239pass0fail112Windows-only
+skips; `npm run validate`:3valid mods; `npm run replay`:4expected data-only fixtures.
+Final wording/disconnected assertion affected appearance+impact10pass; corrected
+one undefined test-local variable, no product error. Full run predates only that
+wording/assertion; no repeat solely for documentation.
+
+Disconnected loopback/IAB browser: host default, dark RGB23/27/35+217/226/241,
+light247/249/252+23/35/55, diagram fill follows light,3node rows/source retained;
+Tab→Reset3px outline, Enter→host attr removed/host selected/diagram retained.
+Dark screenshot inspected. This is browser preview, not native30 acceptance;
+forced-colors/width/full accessibility remain pending. Browser closed, fixed
+route service bounded180seconds. Initial sandbox bind EPERM, authorized bounded
+loopback preview succeeded with escalation. No production connection/model run.
+
+Read-only preservation234cache bytes=settings unchanged; shared config only same
+six owned human trust hashes vs fresh pre29 backup;32protected config/hook/state/
+Windows/retention source paths unchanged.93ledger IDs/order preserved. No install,
+config/theme/cache/trust/guard/logging/capture/export change. Exact source30 CI/
+public package/native are next Medium stage; old Windows bounds failure unresolved,
+known image failures/Windows guards unchanged. DEV30-REVIEW contains limits.

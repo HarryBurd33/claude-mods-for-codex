@@ -47,7 +47,7 @@ jobs:
       - name: Selected Git and scope contracts; restore privacy refusal
         run: node --test test/checkpoints.test.mjs test/scope.test.mjs test/restore.test.mjs test/usage.test.mjs test/observations.test.mjs test/impact.test.mjs test/impact-review.test.mjs
       - name: Local rendering contracts (simulated DOM, not native host)
-        run: node --test test/rendering.test.mjs test/observers.test.mjs
+        run: node --test test/rendering.test.mjs test/observers.test.mjs test/appearance.test.mjs
       - name: Bounded static PE parser (synthetic bytes, no image loading)
         run: node --test test/pe-inventory.test.mjs test/pin-diagnostic-frame.test.mjs
       - name: Generated authoring fixtures and offline CLI (synthetic data, no installation)

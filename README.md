@@ -1,57 +1,32 @@
 # Claude Mods for Codex
 
-Current native29 result: Impact review/local guidance/edit/Clear/control and
-harmless hooks passed in the official host. Human keyboard/controlled resize
-reported; earlier unexplained reset remains a lifecycle limit. Logging/settings/
-trust unchanged, impact guard off; Windows bounds failure still unresolved.
-[Evidence](docs/continuation/NATIVE-DEV29.md). Full product remains incomplete.
-Earlier restart-pending statements below are historical.
+Development source **0.2.0-dev.30** adds **Appearance for this panel**: Follow
+host (default), Quiet dark, Quiet light and Reset. These fixed colors apply only
+to the owned dashboard, including code, diffs, charts and focus outlines. Nothing
+is saved or sent to a tool, model or network. Native client appearance is separate.
+See [appearance and limits](docs/themes.md) and [source review](docs/continuation/DEV30-REVIEW.md).
 
+Installed **dev29** remains unchanged and human reviewed. Its bounded Impact review
+and harmless hook checks passed in the official host; broader lifecycle and
+accessibility acceptance remain incomplete. Dev30 is **not installed or natively
+verified**. Local macOS offline checks: **239 passed, 0 failed, 112 Windows-only
+skips (351 total)**; validation/replay passed. A disconnected browser check is
+separate from native Codex acceptance. CI/package checks for this exact new source
+remain next-stage work.
 
-Current verification: source29 package passed234files/58focused tests. Bounded
-High triage added proof-only diagnostics; both Windows bounds/self-tests passed
-one diagnostic run. Original failure cause remains unresolved and known image
-failures/Windows gates remain. Installed28/logging/trust unchanged. Next Medium
-native-review preparation. [Evidence](docs/continuation/METADATA-BOUNDS-INVESTIGATION.md).
+This independent MIT project is not affiliated with or endorsed by Anthropic or
+OpenAI. The full [93-requirement product](docs/continuation/REQUIREMENTS.md) remains
+incomplete; this branch is a development distribution. macOS acceptance comes
+first. The original Windows metadata-bounds failure remains unresolved, known
+image-inventory failures and Windows guards remain in force, and native Windows
+11/WSL acceptance is unverified.
 
-
-macOS acceptance is the current priority. Development source **0.2.0-dev.29** adds
-[command impact review](docs/impact-and-usage.md): a bounded local assessment and
-explicit Stop, Revise request or Review policy separately guidance. Neither a
-choice nor an assessment executes, approves, cancels a pending call or edits policy.
-The existing opt-in lexical guard still denies covered matches, including proposed
-rewrites; normal host permissions remain authoritative. No automatic allow/retry.
-
-Source29 is installed, human-reviewed and has bounded native UI verification; broader acceptance remains incomplete. Local macOS suite: **235 passed,
-0 failed,111 Windows-only skips346total**. CLI validation/replay passed. New UI
-bridge/choice/lifecycle proofs are simulated; exact CI/package/native acceptance
-remain separate. [Source review](docs/continuation/DEV29-REVIEW.md).
-
-Installed human-reviewed **dev28** remains227verified files. Its authored counter,
-read-only tool, Refresh and harmless native rewrites/control/denial passed
-[bounded native checks](docs/continuation/NATIVE-DEV28.md). It reads the same7
-retained records; that is not a health or new-event claim. Scope/rules/exports/data
-and human trust are preserved. Optional lifecycle registration/storage stay off.
-
-Independent MIT-licensed project; not affiliated with or endorsed by Anthropic or OpenAI.
-This development branch is not a finished release; the default branch retains the
-MVP. All [93 requirements](docs/continuation/REQUIREMENTS.md) remain accounted for
-and the product is incomplete. A plugin-owned view is not native client restyling.
-Public defaults keep metadata off and register only the original three hooks.
-Local callbacks make no additional model calls; chat/skills consume selected-model
-usage. No extra test model run, live capture selection or production cleanup.
-
-Windows remains in scope and later. Windows private storage/project/Git/restore/
-retention guards and both known mandatory image-inventory failures are unchanged.
-The new assessment is pure/local and does not add Windows filesystem access;
-portable CI and native Windows11/WSL acceptance remain separate.
-
-Next: **GPT-6.1 Sol Medium** for exact source29 CI/public package/spaced-path checks
-and concrete native review preparation. Keep installed28 frozen until a supported
-reviewed update. New guard activation, changed-hook trust and restart are human
-steps; no new category or additional model run is authorized by the handoff.
-See [handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),
-[runtime access](docs/runtime.md) and [privacy](docs/privacy.md).
+Logging selections, rules, retained data, optional capture, selected exports and
+human trust are unchanged. Local deterministic callbacks make no additional model
+calls; chat and skill invocations consume the selected model's usage. Next:
+**GPT-6.1 Sol Medium** for exact source30 CI/package verification and supported
+native update preparation. Hook trust and restart remain human steps. No new
+capture, guard selection or additional model run is authorized by this checkpoint.
 
 ## What it does
 

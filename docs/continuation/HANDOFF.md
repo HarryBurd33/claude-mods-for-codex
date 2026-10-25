@@ -1,106 +1,102 @@
-# Native29 acceptance handoff — next GPT-6.1 Sol High
+# Source30 appearance handoff — next GPT-6.1 Sol Medium
 
-2026-10-24. Medium resumed efb42ef after restart; bounded native29 verification is
-complete for the stated local workflow. No runtime/test/configuration/install/
-trust write this stage. Human switches to **GPT-6.1 Sol High** before the next
-consequential appearance implementation. Full93 product incomplete; macOS first,
-Windows later/gated. No restart or further trust action needed now.
+2026-10-24. High resumed3a1a6e8 on codex/astra-groundwork and implemented the
+bounded owned appearance workflow. Full product incomplete; macOS acceptance
+first, Windows later/gated. No installation, config/theme/cache/trust change.
+No current restart or trust step needed. Human model switch is the stopping point.
 
 ## Read first
 
-NATIVE-DEV29.md, THEMES-NEXT.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md,
-latest TEST-LOG.md, ../themes.md, ../impact-and-usage.md and ignored root HANDOFF.md.
-PACKAGE-DEV29.md/DEV29-REVIEW.md retain exact installed source/contracts;
-METADATA-BOUNDS-INVESTIGATION.md retains original unresolved Windows failure.
+DEV30-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
+../themes.md, NATIVE-DEV29.md, PACKAGE-DEV29.md, DEV29-REVIEW.md,
+METADATA-BOUNDS-INVESTIGATION.md and latest ignored root HANDOFF.md.
 
-Repo https://github.com/HarryBurd33/claude-mods-for-codex
-Branch codex/astra-groundwork. Start/verified restart:
-[efb42efcc28afd90e021771a9b6cfe78ff0d801e](https://github.com/HarryBurd33/claude-mods-for-codex/commit/efb42efcc28afd90e021771a9b6cfe78ff0d801e),
-tree5fdb74bfc27ca5db3f1dbe809eaa631025e255b7. This stage changes only sanitized
-native evidence/ledger/handoff. Final commit/ref identity verified after upload
-in reply/private handoff, not guessed as a self-hash. No force/history loss.
+Repository https://github.com/HarryBurd33/claude-mods-for-codex
+Branch codex/astra-groundwork. Starting commit
+[3a1a6e80497dd86f6573eea9ee9bc6ee5f6a1925](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3a1a6e80497dd86f6573eea9ee9bc6ee5f6a1925),
+treeacfb12f72bab68db93ca3289d2c3293ffabba881. Final checkpoint/ref is read back
+independently after upload and recorded in final reply/private handoff; no
+self-hash is guessed. Public source identity will be pinned in the checkpoint
+follow-up. No force push, lost history, private root handoff or raw log upload.
 
 ## Completed / partial / unverified
 
-Actual official-host owned seventh Impact review view, harmless quoted-print DATA
-classification/limits, all3guidance choices, edit invalidation, control unknown-
-safety warning and Clear observed. No pending-call authority or policy edit.
-Ordinary production/authored fixed prints rewrote to AFTER, new control unchanged,
-configured harmless denial blocked before execution. Native3hooks trusted/0errors/
-0model turns in read-only inventory. Same7retained records/status5/revision.
-Parent chat outside selected capture; don't manufacture counts or broaden scope.
+Source0.2.0-dev.30: fixed Follow host(default), Quiet dark/light, Reset inside owned
+panel; original tokens for text/background/code/diffs/charts/focus; forced-color
+system fallback. No arbitrary CSS/assets/URLs/storage/tool/model/network requests.
+New UI controller/fixed asset bundler contracts in DEV30-REVIEW and ARCHITECTURE.
+Palette changes preserve preview/review; real teardown still clears sensitive text.
 
-Human reported Tab-to-Assess clear focus/Enter and narrower/wider usability.
-A later snapshot had no result, later empty field, without reported edit/Clear;
-transition cause not instrumented. Controlled repeat: assessment established,
-human only resized, subsequent DOM retained result. Do not call it a confirmed
-resize defect or complete lifecycle acceptance. Final Clear removed our synthetic
-text; do not persist raw command/preview text as an incidental workaround.
-Source/simulated bridge corroborate no local-tool/prompt/model requests, but no
-OS-wide IPC/network trace or full native keyboard/VoiceOver proof was gathered.
-NATIVE-DEV29 records exact limits. Screenshot is private synthetic-only evidence.
+Local macOS14.6/Node24.22.0 full suite351total239pass0fail112Windows skips;
+validate3mods/replay4fixtures pass. Focused29pass; final affected10pass. Token
+contrast and served-script simulations pass. Disconnected browser dark/light,
+diagram/table retention and keyboard Reset observed; native30/forced-colors/full
+accessibility/width/lifecycle and exact CI/package are unverified. No native CLI
+theme preview performed; installed standaloneCLI0.163.0 unchanged. Release164
+prose support separate from installed client; no upgrade. Desktop internal-server
+version not independently attested. Previous hostchatgpt result stays native29.
 
-Native impact-specific guard/category remains unselected/unverified. No new
-category/event/model run authorized, EX-01/EV-07 still approximations/incomplete.
-Optional events/failure/cancel/notice/resume/full accessibility/lifecycle/disable/
-older rollback/themes/routing/context/platforms remain in scope. All93 IDs/order
-preserved; don't claim the product is finished from this usable milestone.
+Installed29: same234files from immutable dddd49a public source+3private overlays;
+same reviewed settings28, four configured mods, three trusted hooks, project
+scope, selected exports/status, data and retention. Impact guard remains off;
+optional lifecycle capture/storage absent. Readback all234bytes/settings equal;
+shared config only same six owned human trust hashes differ from fresh pre29
+backup, all unrelated entries equal.32protected source paths baseline-equal;
+93requirement IDs/order retained. No production cleanup/new capture/model run.
+Older28/27/26/10 sources preserved. Detailed private paths/evidence stay ignored.
 
-## Installed snapshot / host / configuration
+Native29 bounded Impact review/harmless rewrites/control/denial passed earlier.
+Human controlled resize retained assessment; earlier unexplained reset remains
+lifecycle uncertainty, not a confirmed resize defect. Do not add persistence.
+Original Windows bounds failure remains unresolved; diagnostic249a69e passes do
+not prove a fix. Known image failures/Windows guards unchanged. Native Windows11/
+WSL unavailable now, later host available; do not ask again or repeat proof loops.
 
-User-profile cache29 immutable public dddd49a234-file archive +3private overlays;
-all234bytes still match candidate. Current product source/private proof snapshot
-relationship remains disclosed; don't silently repack/replace an installed snapshot.
-Approved existing settings hash unchanged; same status/usage/359byte synthetic
-observation export/rules/project-session scope/data/retention. Impact guard off,
-optional reception/storage absent. Compared to fresh pre29 backup only the same
-3owned trusted_hash+trusted_content_hash fields differ (six); all other config
-fields equal including preserved unrelated node_repl environment entries. Agent
-wrote none; exact timing/cause of host hash bookkeeping not instrumented.
+## Next tasks / acceptance in priority order
 
-Fresh macOS14.6/Node24.22.0/standaloneCLI0.163.0; prior PATH-alias warning, no repair.
-Panel reports connected hostchatgpt; exact running desktop/internal-server version
-not independently attested. Native computer use remains blocked; only permitted
-MCP Apps DOM used, no private APIs/app patch. One panel only, default preview and
-other drafts untouched. No extra model run, cleanup, restore, watcher/native child.
+1. Read exact source30 CI once. Retain failures; no all-green/Windows claim from
+   POSIX or portable passes. High before a new correctness/security investigation.
+2. Exact anonymous public clone/archive, sanitized manifest, versions, MIT,
+   bounds/fixed CSS+JS inclusion, offline served bundle and spaced extraction.
+   Run relevant packaged appearance/transport/impact/rendering contracts, not
+   another full suite solely for notes. Record actual file count/hash/source.
+3. Prepare immutable same-settings native30 candidate and a concrete access/code/
+   rollback review. Original task authorizes reversible supported update once
+   ready; no new access/capture/category grant is inferred. Back up fresh shared
+   config/owned marketplace and preserve all entries; supported same-ID add,
+   exact cache-byte check. Human changed-hook trust and restart separate.
+4. After protected review/restart, verify actual native appearance/default/reset,
+   keyboard outline, synthetic draft/result retention, widths, code/diff/chart
+   fallback tables and forced colors where host permits. Same harmless hooks;
+   no additional model run is authorized. Bound Watch/process work and clean up.
+5. Separate harmless CLI /theme preview per DEV30-REVIEW/themes: no paid prompt,
+   no upgrade/native chrome claim, concrete exclusive XML copy/backup and no save
+   unless human chooses. Verify configuration; retain pending if protected.
+6. Continue remaining macOS acceptance from93ledger; supported unfinished work
+   must not silently become roadmap exclusions. High before consequential code,
+   optional observation/capture/guard changes require concrete user selection.
 
-Original Windows bounds failure is unresolved, not fixed by diagnostic passes.
-Diagnostic249a69e CI40151191583: four POSIX235passes/112skips; portable success;
-each NTFS25storage+85/86process, only known image failure. Native Windows11/WSL
-unverified and guards unchanged. No Windows feature/proof/package loop here.
+## Configuration and rollback
 
-## Next bounded implementation — exact High objective
+None changed this stage. For future30: Reset→host, Clear→remove local draft,
+new view→Follow host. Supported package rollback selects preserved immutable29,
+adds same-ID through host, verifies cache/trust and reload; never copy hashes,
+patch cache, weaken permissions or overwrite entire shared config. No automatic
+cleanup/restore or new model invocation. Public defaults still metadata-off and
+original three hooks. Private config/raw evidence/root HANDOFF.md remain ignored.
 
-Follow THEMES-NEXT.md. UI-08/09 appearance remains a requested substantive gap:
-existing docs/themes.md and original quiet-dark syntax palette are foundations,
-not native installed theme acceptance or an interactive owned appearance workflow.
-High should recheck relevant primary host/Prismantis claims/version boundaries,
-design and implement a fixed local owned palette/background choice with Follow-
-host default and reset, no arbitrary CSS/URL/code/storage/new permissions. Coherent
-accessible text/code/diffs/charts/focus/forced-color behavior, meaningful contrast/
-reset/privacy tests; native CLI preview/configuration is a separate target.
-No silent client upgrade/native restyling/fork/separate client or selected-model
-change. No new guard category/extra model run. Installed29 stays frozen until
-concrete supported review/update; human hook trust/restart separate. Stop for
-Medium once exact CI/package/native preparation is routine. If a genuine hard
-security issue needs Astra, checkpoint and request the human switch explicitly.
+## Exact next setting and complete resume instruction
 
-## Verification and rollback
+Select **GPT-6.1 Sol**; effort **Medium**. High completed bounded appearance design,
+implementation/security review and meaningful tests. Remaining CI/package/native
+preparation is routine. Stop for High if consequential implementation or a new
+security/correctness problem appears; save/upload/verify before every switch.
 
-No source/CI/archive/full-suite repetition solely for native notes. Use exact
-source CI/package evidence separately; no all-green or new Windows claim. Current
-native batch needs no rollback. Old28/27/26/10 sources/settings preserved. Future
-disable/remove/older rollback uses only owned supported selection/add and exact
-cache/trust/reload checks, never whole-config restore/cache edit/trust hash copy,
-permission weakening or automatic data/lock deletion. Private raw records/root
-handoff stay ignored. Save/upload/full-tree/independent-ref verify before stops.
-
-## Complete resume
-
-I've switched to GPT-6.1 Sol, High. Continue from the verified native29 checkpoint
-on codex/astra-groundwork. Read docs/continuation/HANDOFF.md, NATIVE-DEV29.md,
-THEMES-NEXT.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md and
-ignored root HANDOFF.md. Implement the bounded supported appearance workflow,
-preserving installed29, logging scope, human trust, selected exports/status and
-Windows guards; keep the original bounds failure unresolved. No new guard category,
-optional event enrollment or model run. Stop for Medium when sufficient.
+I've switched to GPT-6.1 Sol, Medium. Continue from the verified source30 appearance
+checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
+DEV30-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
+docs/themes.md and ignored root HANDOFF.md. Check exact source30 CI and packaging,
+then prepare supported native appearance review. Preserve installed29 until the
+reviewed update, logging scope, human trust, selected exports/status and Windows
+guards. Keep the original bounds failure unresolved. No new guard/capture/model
+run is authorized. Stop for High before consequential code or security changes.

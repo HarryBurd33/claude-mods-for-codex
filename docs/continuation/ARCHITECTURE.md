@@ -1,6 +1,39 @@
 # Extension architecture and security contracts
 
-## Native29 follow-up — current — 2026-10-24
+## Source30 appearance — current — 2026-10-24
+
+Original fixed palettes now live in the owned dashboard with Follow host default,
+Reset and no persistence or tool/model/network requests. Text/code/diffs/charts/
+focus use reserved owned tokens; system forced colors take precedence. Fixed-color
+contrast and simulated lifecycle/privacy tests pass; disconnected browser verifies
+dark/light/default Reset and retained diagram/tables. Native30, exact new CI/package
+and CLI theme preview remain unverified. Installed29/settings/scope/exports/rules/
+trust and Windows guards unchanged; no config/cache write or extra model run.
+See DEV30-REVIEW.md and themes.md via the handoff. Earlier checkpoint sections
+below record history, not current installation or next-model instructions. All93
+requirements remain incomplete; original Windows bounds failure unresolved.
+
+### Owned appearance contract
+
+`ui/appearance.js` mounts a fixed-ID controller and returns disposal. Its only
+style mutation is the root `data-mods-appearance` attribute (quiet-dark/light),
+removed for host/default/reset/disposal. Unknown/non-string values fall back to
+host without coercion. Disposal disables controls and retained callbacks cannot
+revive selection. No storage, host preference/configuration change or new RPC.
+`ui/appearance.css` owns `--mods-*` tokens, uses normal host color variables for
+defaults, fixed six-digit sRGB tokens for explicit palettes and system tokens
+under forced colors. Host style initialization cannot override `--mods-*`; other
+bridge variables retain existing behavior. Backgrounds contain no URLs/assets.
+`src/dashboard-resource.mjs` reads only two additional fixed bounded package
+assets (16KiB each), checks exactly one CSS marker and forbids closing style/script
+tags before offline injection. Existing CSP/tools/permissions are unchanged.
+Palette changes neither clear nor transmit preview/impact data; real view teardown
+still clears both via their existing paths. No persistence added to address the
+unexplained native29 lifecycle observation. Native CLI `/theme` is a separate host
+setting and does not use this controller or dashboard tools.
+
+
+## Native29 follow-up — historical checkpoint — 2026-10-24
 
 [NATIVE-DEV29](NATIVE-DEV29.md): actual loaded Impact review, all3local guidance
 choices, edit invalidation/control/Clear and harmless native rewrites/control/deny
@@ -12,7 +45,7 @@ unchanged. Full93 product incomplete. Next human **Sol High** for bounded
 [appearance controls](THEMES-NEXT.md), before consequential implementation.
 
 
-## Source29 supported update — current — 2026-10-24
+## Source29 supported update — historical checkpoint — 2026-10-24
 
 Prepared immutable234file candidate from the already verified dddd49a archive.
 Only three private overlays: same MCP/settings28 path, unchanged configured mods,
@@ -32,7 +65,7 @@ source. Product runtime matches; proof/test/docs differ. No new archive/full sui
 needed for this unchanged reviewed snapshot. Full93 product incomplete.
 
 
-## Bounded High triage — current — 2026-10-24
+## Bounded High triage — historical checkpoint — 2026-10-24
 
 [Metadata-bounds investigation](METADATA-BOUNDS-INVESTIGATION.md): proof-only fixed
 phase/refusal/cleanup diagnostics added; guards/budgets/production code unchanged.
@@ -45,7 +78,7 @@ Next **GPT-6.1 Sol Medium** for source29 native-review preparation, High before
 new consequential changes. Earlier next-High gate directions are historical.
 
 
-## Source29 Medium CI/package gate — current — 2026-10-24
+## Source29 Medium CI/package gate — historical checkpoint — 2026-10-24
 
 [PACKAGE-DEV29](PACKAGE-DEV29.md):234file public archive passed byte/hygiene/version/
 MIT checks; spaced extraction58pass/0fail. Four POSIX source CI jobs235pass each,
@@ -57,7 +90,7 @@ not broad Windows feature work. No new guard choice/model run. Earlier pending
 CI/package/next-Medium wording is historical. Full93 product remains incomplete.
 
 
-## Source29 follow-up — current — 2026-10-24
+## Source29 follow-up — historical checkpoint — 2026-10-24
 
 [DEV29-REVIEW](DEV29-REVIEW.md) records local impact assessment/explicit guidance,
 no execution/approval/policy edit and the existing deny/review alternative. Local
@@ -67,7 +100,7 @@ selection/model run. Next Medium routine packaging/review preparation. All93 gap
 remain accounted for; earlier next-High impact directions are historical.
 
 
-## Native28 follow-up — current — 2026-10-24
+## Native28 follow-up — historical checkpoint — 2026-10-24
 
 [NATIVE-DEV28](NATIVE-DEV28.md) records actual loaded authored counter/tool/table:
 3pre+2post=5, matching existing selected activity7/same revision; Refresh and
@@ -91,7 +124,7 @@ After human review, inventory confirms3enabled trusted hooks/0errors;
 restart/loaded28 checks pending. Installed does not mean native accepted. Full93 product incomplete.
 
 
-## Source28 component authoring — current — 2026-10-24
+## Source28 component authoring — historical checkpoint — 2026-10-24
 
 [DEV28-REVIEW](DEV28-REVIEW.md) and [workflow](../component-authoring.md) define new
 version1 observer/status/activity data contracts. Generated private bundles start
@@ -124,7 +157,7 @@ changes. Full93request remains incomplete. Earlier next-High authoring statement
 below are historical planning; this source milestone is implemented.
 
 
-## Source27 restarted native observation — current — 2026-10-24
+## Source27 restarted native observation — historical checkpoint — 2026-10-24
 
 [NATIVE-DEV27](NATIVE-DEV27.md): actual new observation tool and owned table
 return the authorized synthetic failed-command/nonzero/failed-turn snapshot,
@@ -146,7 +179,7 @@ observer/status-component authoring is incomplete. Preserve Windows gates/failur
 Earlier restart-pending statements below are historical package-stage evidence.
 
 
-## Source27 Medium supported update — current — 2026-10-24
+## Source27 Medium supported update — historical checkpoint — 2026-10-24
 
 [PACKAGE-DEV27](PACKAGE-DEV27.md) records the217-file exact54c2330 archive,46focused
 spaced-package passes and decoded source CI (four POSIX217passes/portable success,
@@ -166,7 +199,7 @@ High before consequential code/security work. Earlier source-only statements bel
 record the High implementation stage, not the current installation state.
 
 
-## Source27 selected-export outcomes — current — 2026-10-24
+## Source27 selected-export outcomes — historical checkpoint — 2026-10-24
 
 src/observations.mjs is an independent read-only projection, not a new hook event
 or journal format. One JSON-only thread export supplies fixed turn/command-status/
@@ -195,7 +228,7 @@ optional delivery unverified. [Review](DEV27-REVIEW.md). Next Medium packaging a
 acceptance preparation; High before further consequential implementation.
 
 
-## Dev26 native restart observation — current — 2026-10-24
+## Dev26 native restart observation — historical checkpoint — 2026-10-24
 
 [NATIVE-DEV26](NATIVE-DEV26.md) records actual harmless rewrite/control/deny,
 six-view panel/preview and a fresh human-authorized one-run CLI/shared-state/active

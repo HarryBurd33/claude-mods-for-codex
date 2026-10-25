@@ -100,19 +100,21 @@ class Element {
   append(child) { this.children.push(child); }
   replaceChildren(...children) { this._text = ''; this.children = children; }
   setAttribute(key, value) { this.attributes[key] = value; }
+  removeAttribute(key) { delete this.attributes[key]; }
   createTHead() { const element = new Element('thead'); this.append(element); return element; }
   createTBody() { const element = new Element('tbody'); this.append(element); return element; }
   insertRow() { const element = new Element('tr'); this.append(element); return element; }
 }
-async function dashboard() {
+async function dashboard(hostVariables = {}) {
   const html = await loadDashboardHtml(), script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
   const messages = [], listeners = new Map(), timers = new Map(), elements = new Map(); let nextTimer = 0, now = 0;
   const views = ['activity', 'files', 'changes', 'replay', 'access', 'preview', 'impact'];
-  for (const id of ['connection', 'refresh', 'watch', 'notice', ...views, ...views.map(v=>v+'-result'), 'preview-source', 'preview-format', 'preview-render', 'preview-clear', 'impact-source', 'impact-assess', 'impact-clear']) { const element = new Element(); element.id = id; elements.set('#' + id, element); }
+  for (const id of ['connection', 'refresh', 'watch', 'notice', ...views, ...views.map(v=>v+'-result'), 'preview-source', 'preview-format', 'preview-render', 'preview-clear', 'impact-source', 'impact-assess', 'impact-clear', 'appearance-select', 'appearance-reset', 'appearance-status']) { const element = new Element(); element.id = id; elements.set('#' + id, element); }
   const buttons = views.map(view => { const element = new Element('button'); element.dataset.view = view; return element; });
-  const parent = { postMessage: message => messages.push(message) };
+  const parent = { postMessage: message => messages.push(message) }, hostStyles = new Map();
+  const root = Object.assign(new Element(), { style: { setProperty: (k, v) => hostStyles.set(k, v) } });
   runInNewContext(script, {
-    parent, TextEncoder, document: { querySelector: selector => elements.get(selector), querySelectorAll: selector => selector === 'nav button' ? buttons : views.map(id => elements.get('#' + id)), createElement: tag => new Element(tag), createElementNS: (_namespace, tag) => new Element(tag), documentElement: { style: { setProperty() {} } } },
+    parent, TextEncoder, document: { querySelector: selector => elements.get(selector), querySelectorAll: selector => selector === 'nav button' ? buttons : views.map(id => elements.get('#' + id)), createElement: tag => new Element(tag), createElementNS: (_namespace, tag) => new Element(tag), documentElement: root },
     addEventListener: (name, callback) => listeners.set(name, callback), Date: { now: () => now },
     setTimeout: (callback, delay) => { const id = ++nextTimer; timers.set(id, { callback, delay }); return id; }, clearTimeout: id => timers.delete(id),
   }, { timeout: 1000 });
@@ -120,9 +122,39 @@ async function dashboard() {
   const reply = (request, data) => receive({ id: request.id, result: { structuredContent: data } });
   const latestCall = () => messages.filter(m => m.method === 'tools/call').at(-1);
   const fire = delay => { const match = [...timers].find(([, value]) => value.delay === delay); assert.ok(match, `no ${delay}ms timer`); timers.delete(match[0]); now += delay; match[1].callback(); };
-  receive({ id: messages[0].id, result: { hostCapabilities: { serverTools: true }, hostInfo: { name: 'synthetic-host' } } }); await tick();
-  return { messages, timers, elements, buttons, receive, reply, latestCall, fire };
+  receive({ id: messages[0].id, result: { hostCapabilities: { serverTools: true }, hostInfo: { name: 'synthetic-host' }, hostContext: { styles: { variables: hostVariables } } } }); await tick();
+  return { messages, timers, elements, buttons, receive, reply, latestCall, fire, root, hostStyles };
 }
+test('palette changes preserve literal previews/reviews and host tokens, with no bridge requests (simulated DOM)', async () => {
+  const p = await dashboard({ '--color-text-primary': '#123456', '--mods-bg': 'red', '--MODS-focus': 'red', 'background': 'red' });
+  p.reply(p.latestCall(), { revision: 'a'.repeat(64), records: 0 }); await tick();
+  assert.deepEqual([...p.hostStyles], [['--color-text-primary', '#123456']]);
+  p.buttons.find(b => b.dataset.view === 'preview').onclick();
+  const source = p.elements.get('#preview-source'), result = p.elements.get('#preview-result');
+  source.value = '<script>SYNTHETIC_DRAFT</script>'; p.elements.get('#preview-format').value = 'code'; p.elements.get('#preview-render').onclick();
+  const previewText = result.textContent, previewNodes = [...result.children];
+  p.buttons.find(b => b.dataset.view === 'impact').onclick();
+  const command = p.elements.get('#impact-source'), review = p.elements.get('#impact-result');
+  command.value = 'printf SYNTHETIC_DRAFT'; p.elements.get('#impact-assess').onclick();
+  const reviewNodes = [...review.children], count = p.messages.length;
+  const palette = p.elements.get('#appearance-select'), reset = p.elements.get('#appearance-reset');
+  for (const id of ['quiet-dark', 'quiet-light']) {
+    palette.value = id; palette.onchange();
+    assert.equal(p.root.attributes['data-mods-appearance'], id);
+    p.buttons.find(b => b.dataset.view === 'preview').onclick();
+    assert.equal(source.value, '<script>SYNTHETIC_DRAFT</script>'); assert.equal(result.textContent, previewText); assert.deepEqual(result.children, previewNodes);
+    p.buttons.find(b => b.dataset.view === 'impact').onclick();
+    assert.equal(command.value, 'printf SYNTHETIC_DRAFT'); assert.deepEqual(review.children, reviewNodes);
+  }
+  reset.onclick(); assert.equal(p.root.attributes['data-mods-appearance'], undefined);
+  assert.equal(p.messages.length, count); assert.deepEqual([...p.hostStyles], [['--color-text-primary', '#123456']]);
+  assert.equal(p.messages.some(m => JSON.stringify(m).includes('SYNTHETIC_DRAFT')), false);
+  palette.value = 'quiet-dark'; palette.onchange();
+  p.receive({ id: 99, method: 'ui/resource-teardown' });
+  assert.equal(p.root.attributes['data-mods-appearance'], undefined); assert.equal(palette.disabled, true); assert.equal(reset.disabled, true);
+  assert.equal(command.value, ''); assert.equal(source.value, ''); assert.equal(p.timers.size, 0);
+  palette.value = 'quiet-light'; palette.onchange(); assert.equal(p.root.attributes['data-mods-appearance'], undefined);
+});
 const revision = 'a'.repeat(64);
 function descendants(node){return [node,...node.children.flatMap(descendants)];}
 test('local preview renders/clears without tools or model messages and clears sensitive memory on teardown (simulated DOM)',async()=>{
