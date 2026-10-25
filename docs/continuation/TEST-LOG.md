@@ -3078,3 +3078,29 @@ lifecycle/platform gaps remainincomplete. Save/upload/verify and stopforhumanHig
 - Bounded preservation notes checks passed:10Markdown-only public changes/no
   private user path;93IDs/order preserved; current local links resolve; diff check
   clean. No executable tests run solely for notes; ordinary work stayed stopped.
+
+## 2026-10-25 — Sol High read-only hook-state reconciliation after9f56598
+
+- Classified7added state keys: same other-project hooks.json, seven lifecycle event
+  references, trusted_hash only, no enabled override/handler payload. Current hooks
+  table state-only; all prior entries equal. No foreign project contents/current
+  definition match/human provenance/runtime execution checked or asserted.
+- Retrieved official hooks/advanced-config pages and three pinned0.164source files;
+  schema/state merging/discovery/key lookup/trust comparison establish metadata
+  versus definitions. Never invoked source/trust migration or a Codex command.
+- Owned installed31cache251/settings28+31/data/source30+31/marketplace passed original
+  snapshots. Existing projects/other settings equal; current preferences and same
+  four unrelated additions preserved. No restore/delete/trust/config/model change.
+- Private protected-config hash covers all but model/model_reasoning_effort; full
+  hooks.state/projects retained. Reusable private checker passed. Raw config not
+  copied; private paths/fingerprints remain local. Frozen review PLAN not refreshed.
+- Pure synthetic nativeConfigMatches diagnostic: requirements/nohooks true, same
+  with metadata-only state false. Conservative source34 preflight limitation
+  documented if state exported; no source fix/relaxation/native export claim.
+- No full suite/CI repeat/package/native inference/install/config action; source34
+  code/version/security/Windows guards unchanged. Medium now sufficient for offline
+  packaging; High before native/security work. Full93 remains incomplete.
+- Final preservation helper passed protected fingerprint including all state/
+  projects; raw config equals this High stage initial observation, no config writes.
+  Notes checks:11Markdown-only public changes/no private path/project name;93IDs/
+  order preserved; current links resolve; diff check clean. No executable changes.

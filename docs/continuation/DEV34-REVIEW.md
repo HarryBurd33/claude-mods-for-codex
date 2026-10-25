@@ -1,5 +1,12 @@
 # Source34 prepared native adapter review —2026-10-25
 
+Current update: [STATE-RECONCILIATION-DEV34](STATE-RECONCILIATION-DEV34.md)
+classifies the seven records as other-project trust metadata, verifies owned31
+preservation and leaves the stale proposal/source untouched. Medium can resume
+unchanged source34 packaging. Earlier unclassified-drift stop is historical.
+Native execution/config/inference remains unauthorized and closed.
+
+
 Current continuation: [CI-DEV34](CI-DEV34.md) verifies exact34CI; packaging was
 not started because Medium found seven added hooks.state entries. Next High
 classifies this protected drift read-only; no native/config/inference grant.

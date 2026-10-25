@@ -1,5 +1,12 @@
 # Source34 CI verified — packaging interrupted —2026-10-25
 
+Current update: [STATE-RECONCILIATION-DEV34](STATE-RECONCILIATION-DEV34.md)
+classifies the seven records as other-project trust metadata, verifies owned31
+preservation and leaves the stale proposal/source untouched. Medium can resume
+unchanged source34 packaging. Earlier unclassified-drift stop is historical.
+Native execution/config/inference remains unauthorized and closed.
+
+
 Exact head **be49b515801eee180c15952074f1a3d9ca20b712**, tree
 **b79f94e1eadbccde644a2839209ff8e2c83c56d4**. Run
 [40209560926](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40209560926)
