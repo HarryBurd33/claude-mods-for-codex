@@ -1,11 +1,10 @@
 # Current status — source31 — 2026-10-24
 
-Current native31 follow-up: [Review desk acceptance](docs/continuation/NATIVE-DEV31.md)
-observed fixed local fields/render/edit/fallbacks/retention and harmless hooks after
-restart. Approved settings/logging/trust/Windows guards preserved. Human keyboard/resize/Clear passed;
-teardown and broader lifecycle acceptance remain incomplete; prior restart-
-pending notes describe the earlier checkpoint. Full product remains incomplete.
-
+Current [native31 UI acceptance](docs/continuation/NATIVE-DEV31.md) covers the
+approved Review desk and harmless hooks. [Lifecycle checks](docs/continuation/LIFECYCLE-DEV31.md)
+verified fresh disable/removal and exact reinstallation; the already-loaded service
+continued answering. Restart/verify affected hosts before treating disable/removal
+as effective for their loaded tools. Full product remains incomplete.
 
 Development source **0.2.0-dev.31** adds [authored local-preview cards](docs/local-interactions.md):
 describe labeled plan/JSON/notes fields, generate a disabled private bundle, inspect
@@ -15,8 +14,8 @@ new hooks or capture. Existing rule/observer/status authoring remains compatible
 [Source contracts and verification](docs/continuation/DEV31-REVIEW.md).
 
 Installed **dev31** now matches the reviewed251-file candidate. You authorized
-one local **Review desk** card and reviewed its three hooks. **Restart and actual
-native31 acceptance remain pending.** Prior logging/rules/exports/status/capture
+one local **Review desk** card and reviewed its three hooks. Native rendering,
+keyboard/resize/Clear and fresh-view empty fields were observed. Prior logging/rules/exports/status/capture
 selections and Windows guards are preserved. [Package, CI and update evidence](docs/continuation/PACKAGE-DEV31.md).
 
 Exact public archive/spaced extraction passed79tests with one Windows-only skip,
@@ -33,8 +32,9 @@ known image failures/Windows guards remain, native Windows11/WSL unverified.
 Existing settings/data remain preserved; only the explicitly authorized local
 card is added in a new private settings file. Local callbacks add no model calls;
 chat/skills consume selected-model usage. No new guard/capture/model-run grant.
-Next: restart Codex and reopen this chat on **GPT-6.1 Sol Medium** for native
-authored-card checks. Stop for High before consequential changes.
+Next: **GPT-6.1 Sol Medium** for the prepared older-version rollback and human
+trust/restart/native confirmations. High before unexpected recovery or consequential
+source/security changes. Older-version and restarted-host lifecycle acceptance remain incomplete.
 
 [Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),
 [runtime access](docs/runtime.md), [privacy](docs/privacy.md) and

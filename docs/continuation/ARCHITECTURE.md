@@ -1,6 +1,18 @@
 # Extension architecture and security contracts
 
-## Native31 follow-up — current — 2026-10-24
+## Native31 lifecycle follow-up — current — 2026-10-24
+
+[LIFECYCLE-DEV31](LIFECYCLE-DEV31.md): actual closed view absent/new invocation
+empty; supported disable/remove affect fresh discovery but already-loaded service
+still answers. Original31 reinstalled,251cache/three trusted hooks restored, shared
+config byte-equal; settings/sources/data/marketplace unchanged. No agent trust/
+capture/model run. Older30->31 loaded rollback and restarted-host absence incomplete.
+Next human Sol Medium for the prescribed guarded transitions/human trust/restart;
+High on unexpected drift/recovery/security change. Full93/Windows gaps remain;
+earlier next-High/restart instructions below are historical.
+
+
+## Native31 follow-up — historical UI checkpoint — 2026-10-24
 
 [NATIVE-DEV31](NATIVE-DEV31.md) records actual approved Review desk render/edit/
 literal fallbacks/navigation/palette and harmless native hooks. Cache251/settings/

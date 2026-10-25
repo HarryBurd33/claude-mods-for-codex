@@ -2677,3 +2677,27 @@ freshbackup; allotherconfigequal,32protectedpaths stable. Initial sandbox invent
 closed/cleanup refused; approved outside-sandbox same read-only script succeeded.
 No product/source/test/CI/install/trust/capture/modelrun changes; no fullsuite repeat
 for notes. Same retained7/status5 not new event proof. Full93 and Windows gaps stay.
+
+## Native31 High lifecycle boundary — 2026-10-24
+
+Resumed9e30067. No product/runtime/test/CI code change. See LIFECYCLE-DEV31 for
+actual view/host evidence and primary sources. Human closed tested syntheticNotes
+view withoutClear; inventory onlyotherpanel; fresh dashboard invocation mounted
+empty3fields/statusNoPreview. Exactoldcardreactivation/backendshutdown not tested.
+CLIplugin/add/remove/help and experimental generate-json-schema inspected, actual
+bounded app-server config/read -> expectedVersion config/value/write onlyowned
+booleanfalse/true. Fresh disabled0hooks0errors, loadedmods.status answered5/openview
+stillconnected. Restoretrue fresh3trusted0errors. Supportedpluginremove cache31absent/
+onlyownedenabledentryremoved/fresh0hooks0errors; pluginreadfrommarketstill succeeds,
+loadedstatus still answers5. SameIDadd31 returns251exactcache/3trusted0errors.
+SharedconfigBYTES+parsedequal freshbackup, old/newsettings/source30/source31/selected
+metadata/marketplace hashes same. Actualrestoredproduction/authoredrewritesAFTER,
+controlunchanged/denyblockedno retry. Modelturns0/noagenttrust/newcapture/permissions.
+
+Privatefresh backups/phaseinventory/resultstderr/summary retained ignored. Prepared
+older30->31 helper onlycompiled+verify31run; transitionNOTexecuted, no olderloaded
+acceptance. No fullsuite/package repeat for notes, no newCIclaim. Unscoped desktop
+MCP reload not sent.404 oldv2.rs recorded, common.rs+installedschema retrieved.
+High reasoningcompleteforprescribedsteps; nextMediumprotectedhumanreview/restarts,
+returnHighon drift/recovery/securitychanges. OriginalWindowsboundsunresolvedknown
+imagefailureguardsintact. Full93 remains incomplete.

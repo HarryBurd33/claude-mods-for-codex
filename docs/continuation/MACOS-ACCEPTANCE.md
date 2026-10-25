@@ -1,6 +1,19 @@
 # macOS acceptance audit — 2026-10-24
 
-## Native30 follow-up — current — 2026-10-24
+## Native31 lifecycle follow-up — current — 2026-10-24
+
+[LIFECYCLE-DEV31](LIFECYCLE-DEV31.md) adds closed view/new empty invocation,
+fresh disable/remove and exact31restoration. Loaded service still answered during
+both disabled/removed states: no immediate revocation/unload claim. Current config
+byte-equal,251cache/3trusted restored; scope/settings/data/Windows guards unchanged.
+[NATIVE-DEV31](NATIVE-DEV31.md) covers owned fields/render/fallback/retention and
+human focus/keyboard/Clear/widths. Older30->31 loaded rollback/restarted-host absence
+and full accessibility remain incomplete. Next Medium prescribed acceptance,
+High on unexpected drift/recovery/securitywork. Older Hnow audit rows below are
+historical; no all-product score or completion inferred.
+
+
+## Native30 follow-up — historical checkpoint — 2026-10-24
 
 [NATIVE-DEV30](NATIVE-DEV30.md): actual owned appearance/default/reset/retained
 synthetic source/results, chart/code/diff additions, human keyboard/focus/resize

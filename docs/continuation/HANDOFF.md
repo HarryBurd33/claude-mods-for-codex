@@ -1,85 +1,108 @@
-# Native31 accepted subset — next GPT-6.1 Sol High
+# Native31 lifecycle checkpoint — next GPT-6.1 Sol Medium
 
-2026-10-24. Resumed e062522 on codex/astra-groundwork using Sol Medium after human
-restart. Runnable installed31 unchanged; this checkpoint changes sanitized notes
-only. Full93 incomplete, macOS first/Windows later. No extra model run, config/trust/
-installation/source/runtime/test/CI/security/logging change.
+2026-10-24. Sol High resumed9e30067 on codex/astra-groundwork. Installed31 is now
+restored byte-for-byte after supported disable/remove/reinstall tests. This public
+checkpoint changes sanitized Markdown evidence only; no product/runtime/test/CI
+code, logging/rule/guard/capture/export/status change or extra model run. Full93
+incomplete, macOS acceptance first and Windows later.
 
-Read NATIVE-DEV31.md, LIFECYCLE-NEXT.md, STATUS.md, REQUIREMENTS.md,
-ARCHITECTURE.md, latest TEST-LOG.md, PACKAGE-DEV31.md, docs/local-interactions.md,
-docs/removal.md and latest ignored root HANDOFF.md. Root handoff/private evidence
-must never upload. Final checkpoint commit/tree/ref recorded after independent
-verification in final reply/private handoff; don't guess a self-hash here.
+Read LIFECYCLE-DEV31.md, STATUS.md, affected REQUIREMENTS.md rows, ARCHITECTURE.md,
+latest TEST-LOG.md, NATIVE-DEV31.md, PACKAGE-DEV31.md, docs/removal.md and latest
+ignored root HANDOFF.md. Final exact commit/tree/remote verification are recorded
+after upload in final reply/private handoff; do not guess a public self-hash.
+Root handoff, raw results/private config/machine paths must not upload.
 
-## Completed and evidence
+## Completed and partial
 
-Actual dashboard tool/MCP Apps DOM shows Authored local tools and approved single
-Review desk: three initially empty fixed flowchart/JSON/plain-code fields. Synthetic
-2node1edge diagram plus complete tables, highlighted JSON and literal markup-like
-Notes passed. Edits invalidate only their own preview; unsupported syntax/invalid
-JSON literal fallback, navigation and quietdark->host retention passed. Human Tab/
-clear focus/Enter emptied all fields; DOM corroborates empty fields/no previews/
-Clear active/status. Human narrow/wide reports usable fields/actions. Only second
-of two initially default panels tested; other panel untouched. Tested panel empty,
-Follow host, Watch off. No native multi-card, actual close/reopen or full accessibility
-claim. InvalidJSON says Choose Plain code despite fixed format: misleading guidance
-recorded, safe fallback works; no source patch made.
+- Previously tested Review desk got a synthetic Notes marker, human closed it
+  without clearing, permitted panel inventory confirmed absence. Fresh dashboard
+  invocation opened an empty three-field Review desk. Other panel untouched;
+  current new panel empty, Follow host, Watch off. This is not exact old-card
+  reactivation, backend exit or physical memory erasure. Prior31 keyboard/Clear/
+  width/render/edit/fallback/retention evidence remains NATIVE-DEV31.
+- CLI163 help/current official packaging/released protocol/installed generated
+  schema reviewed. Actual owned bounded app-server config/read expectedVersion
+  -> config/value/write changed only owned enabled false, then true. Fresh hooks
+  absent while false; loaded mods.status still answered5/open panel connected.
+  Restoretrue fresh3enabledtrusted0errors. No trust/permission/model API invoked.
+- Supported production plugin remove deleted active31 cache and owned enabled
+  entry; all other config equal, fresh0hooks0errors. plugin/read from marketplace
+  still succeeds and does not prove installation. Loaded mods.status still answered5
+  after removal. Supported same-ID add31 restored all251files/3trusted/0errors.
+- Final shared config BYTES and parsed structure equal fresh pre-test backup.
+  Owned marketplace/both immutable sources/settings28/settings31/selected metadata
+  hashes unchanged. Existing human trust retained for identical files; no copied
+  hash/agent approval/wholeconfig restore. Restored native production/authored
+  rewrites AFTER, fresh control unchanged and configured denial blocked/no retry.
+  Same7retainedrecords/status5 is not new event delivery; parent chat outside scope.
 
-Production/authored fixed print rewrites returned AFTER; control unchanged;
-configured harmless denial blocked before execution, no retry/escalation/bypass.
-Fresh bounded standaloneCLI inventory3enabledtrusted0errors0modelturns. Initial
-sandbox inventory closed/cleanup refused; same bounded read-only inventory approved
-outside sandbox succeeded. 251cache bytes equal immutable candidate, new settings
-match approved proposal, oldsettingsbytes/alloldchoices same. Only6owned human
-trust hashes differ pre31backup after restart, allotherconfigequal;32protected
-source paths unchanged. Same7retainedrecords/status5/revision, not new delivery or
-producerhealth. Parentchat outside selected logging scope; workdir doesn't grant
-capture. No further paid test grant remains.
+This tested disable/removal does not immediately revoke an already-loaded MCP
+connection. End affected sessions or use supported host reload/restart, then verify
+absence/current version in that host. Fresh inventory and cache absence alone do
+not prove process exit. No unscoped desktop reload/private app control was attempted.
+config/mcpServer/reload generated schema accepts no selected-server argument;
+calling it in another standalone client would not attest this desktop's connection.
 
-Host priorinventorymacOS14.6/Node24.22.0/standaloneCLI0.163.0; desktop/internalserver
-binary not independently attested. Reviewed code/synthetic transport supports local
-callbacks, no independent OS network trace. Unit/CI/package evidence separate:
-PACKAGE-DEV31 exactsource691c399 public251filearchive SHA256
-1c0fba49187fca7750e378972db7995e4f8149d3657fddce47331b012b19f915;
-packaged79pass1Windows skip, fourPOSIX246passes each/portablepass. KnownWindowsimage
-refusal remains; originalbounds cause unresolved even though source31bounds passed.
-No repeat fullsuite/pack for notes, no allgreen/nativeWindows claim.
+## Current environment and installed state
 
-## Configuration, installation and rollback
+Prior inventorymacOS14.6/Node24.22.0/standaloneCLI0.163.0; no upgrade. Exact desktop/
+internal-server binary identity independently unverified. Installed31 user-profile
+cache, not project-only. Original approved Review desk/settings31 selection intact,
+optional lifecycle storage/hooks and impact guard off. All previous sources/settings/
+data preserved; exact private paths/hashes/backups/helpers in ignored root handoff.
 
-Installed supported userprofile/cache source31, not projectonly; approved settings
-adds only Reviewdesk to previous choices. Same3privateoverlays/same3hooks/optional
-captureoff/impactguardoff. Freshpre31config+ownedmarketplacebackups/private settings/
-cache hashes/inventory under ignored local records, exact paths in root handoff.
-Preserved old30source/settings28 and all earlier snapshots/data. No repeated trust
-needed for unchanged31. Never copy trust hashes/edit cache/restorewholeconfig/delete
-productionmetadata or locks. Supported owned marketplace/sameID add and human
-review/restart required if changing code; see PACKAGE-DEV31/removal instructions.
+Source31 CI/archive results remain PACKAGE-DEV31 (implementation691c399); no full
+suite/archive rerun for notes. Four POSIX246passes each/portablepass, packaged79pass/
+1Windows skip; known Windows Image refusal and original bounds cause unresolved.
+No native Windows11/WSL claim, no changed before-IO guard or proof loop. New host
+availability was not requested. Minor fixed-field JSON Choose Plain code guidance
+still misleading; literal fallback works. Batch a minimal context-neutral source
+fix with the next warranted source update, not an authority/format expansion.
 
-## Next tasks, dependency and exact setting
+## Next exact setting and tasks
 
-Select **GPT-6.1 Sol High** for consequential loaded lifecycle/configuration/
-rollback reasoning. Follow LIFECYCLE-NEXT precisely: first controlled close/reopen
-empty acceptance if feasible, discover public supported per-plugin lifecycle,
-prepare exact scoped backups/restoration plan, then verify loaded disable/remove
-and older30->31rollback separately from fresh inventory. Preserve unrelated plugins,
-all selected logging/rules/exports/status/Windows guards. Human owns protected
-trust/restart; no new capture/modelusagegrant, no hotreload/unload claim from just
-inventory. Fix misleading fixedformat JSON guidance only in reviewed source with
-focused tests if needed; do not add actions/dynamic format authority.
+**GPT-6.1 Sol Medium** is sufficient for the prescribed guarded rollback phases and
+human native confirmation. High has resolved the lifecycle boundary and prepared
+fixed selective transitions/invariant checks. This is not authorization for new
+security/runtime changes or automatic approval. Return to High on unexpected drift,
+partial failure/recovery decisions, permission questions or consequential source work.
 
-Stop for Medium once consequential work is resolved and only routine packaging/
-docs/native confirmation remains. Windows later: keep knownimagefailure/original
-bounds unresolved and beforeIOguards unchanged; don't repeat unrelated proofs or
-ask hostavailability again. Full93 gaps remain accounted for, not productcomplete.
+1. Recheck current31 cache/settings/trust/private baseline and clean Git. Read the
+   private concrete rollback review and helper; current sources/settings have not
+   changed. Private prepared helper has only compile+verify31 checks. Actual30
+   transition has NOT run; never mark older-version rollback accepted from it.
+2. Execute the prepared supported owned-marketplace31->preserved30 same-ID add only
+   under the original bounded reversible-testing scope. No new model prompt/run,
+   capture, cleanup or unrelated plugin change. It uses preserved settings28 and
+   temporarily lacks Review desk; logging/rules/export/status remain the same.
+   Verify242cache bytes/currentconfig/settings/data/freshhooks after installation.
+3. Human reviews ONLY the three production version0.2.0-dev.30 hooks in /hooks,
+   even if a host retains trust. Give exact Terminal command from private review,
+   no prompt. Inspect inventory after human confirms; agent never writes trust.
+   Save/upload/refverify, stop for human restart/reopen on Medium before loaded30
+   dashboard/harmless hooks. Existing connections may still31 until restart.
+4. Verify actual loaded30 has no Review desk and same selected data/counters;
+   harmless covered prints/control/deny only after review. Then prepared supported
+   owned source30->31 add restores approved settings31/card. Verify251cache, scoped
+   invariants; human changed-code review again as needed, checkpoint and restart
+   before actual loaded31 confirmation. Do not copy old trust or wholeconfig.
+5. Keep results individually labeled fresh discovery, cached files, actual loaded
+   host, human report and unverified. Restarted disabled/uninstalled host absence
+   remains separate acceptance; do not infer it from this enabled rollback test.
+   Full93/lifecycle/optional events/routing/context/Windows/accessibility gaps stay
+   in scope. No extra paid test grant remains.
 
-Resume instruction:
-I've switched to GPT-6.1 Sol, High. Continue from the verified native31 checkpoint
-on codex/astra-groundwork. Read docs/continuation/HANDOFF.md, NATIVE-DEV31.md and
-LIFECYCLE-NEXT.md plus private handoff. Complete supported macOS loaded lifecycle
-and rollback acceptance, preserve installed31/approved settings/logging scope/human
-trust/Windows guards, and stop for Medium when sufficient. No new capture or extra
-model run is authorized.
+No script retries or blind restoration on failure. Preserve actual partial state,
+record the error and use High for a selective recovery decision. Do not delete
+production journals/locks or patch installed cache to force a test pass.
 
-STOP after verified upload/final until human switches and replies. No background
-work, delegation, model run, scheduling or polling after announcing switch.
+Copy-paste resume:
+I've switched to GPT-6.1 Sol, Medium. Continue from the verified native31 lifecycle
+checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and
+LIFECYCLE-DEV31.md plus the private rollback review. Follow the prepared supported
+30->31 rollback acceptance with human hook trust and restart checkpoints. Preserve
+installed31 for restoration, approved settings/logging scope/Windows guards; no
+new capture or extra model run. Stop for High on unexpected drift or recovery.
+
+STOP after verified checkpoint/final until human switches and replies; no background
+continuation, scheduling, delegation, model run or unchanged CI polling.

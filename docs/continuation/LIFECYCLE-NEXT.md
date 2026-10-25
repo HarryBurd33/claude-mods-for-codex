@@ -1,4 +1,9 @@
-# Next High milestone: supported loaded lifecycle acceptance
+# Lifecycle plan — original High scope, current Medium follow-up
+
+Current results and next setting: [LIFECYCLE-DEV31](LIFECYCLE-DEV31.md) and
+[HANDOFF](HANDOFF.md). Supported fresh disable/remove/exact31restoration now observed,
+loaded service still answers. Next Medium for prescribed guarded older30->31
+acceptance/human trust/restarts; original plan below is historical scope.
 
 2026-10-24. Native31 authored rendering and covered hooks are observed separately
 in NATIVE-DEV31.md. Full product remains incomplete. Prior remove/reinstall proof
@@ -55,6 +60,7 @@ remains. No native Windows11/WSL result. Optional lifecycle capture remains off;
 its separate future acceptance requires explicit event/storage selection review.
 No extra model usage grant or independent evaluator. Full93 ledger remains in scope.
 
-Human next setting: GPT-6.1 Sol High for consequential lifecycle/configuration and
-restoration reasoning. Stop back to Medium when only routine packaging/docs/native
-confirmation remains; never create a background model-switch workaround.
+Original High reasoning milestone is complete within LIFECYCLE-DEV31 limits.
+Human next setting: GPT-6.1 Sol Medium for the prescribed rollback phases/protected
+human trust/restarts and native confirmation; High on unexpected recovery or new
+security work. Never create a background model-switch workaround.
