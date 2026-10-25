@@ -1,20 +1,26 @@
-# Current status — source29 native preparation — 2026-10-24
+# Current status — source29 trusted restart checkpoint — 2026-10-24
 
-## Bounded High triage — current — 2026-10-24
+## Source29 supported update — current — 2026-10-24
 
-[Metadata-bounds investigation](METADATA-BOUNDS-INVESTIGATION.md): proof-only fixed
-phase/refusal/cleanup diagnostics added; guards/budgets/production code unchanged.
-One exact CI run passed bounds and diagnostic self-tests on both Windows lanes;
-both known image failures remain (85/86process proofs each). Original bounds
-failure did not recur and its cause is still unresolved, not claimed fixed.
-All93 requirements remain; Windows gated, macOS acceptance first. Installed28/
-logging/settings/owned trust unchanged; external config drift reported separately.
-Next **GPT-6.1 Sol Medium** for source29 native-review preparation, High before
-new consequential changes. Earlier next-High gate directions are historical.
+Prepared immutable234file candidate from the already verified dddd49a archive.
+Only three private overlays: same MCP/settings28 path, unchanged configured mods,
+and inert hook review comment28→29. No new settings/export/capture/guard selection.
+Supported same-ID update succeeded; all234cache bytes equal candidate. Fresh shared
+config backup/owned marketplace backup saved privately. Settings hash unchanged,
+parsed shared config equal immediately after add, all unrelated entries preserved.
+Human reviewed3hooks; fresh native inventory3enabled trusted/0errors/0model turns.
+Only3owned trusted_hash fields changed after review; every other field equals the
+fresh pre-update backup, including current unrelated node_repl environment entries.
+Agent wrote no trust. Restart/actual loaded native29 acceptance remains pending.
 
-Source29 local impact review is implemented and its exact234-file public package
-passed58focused tests. Native29 UI/impact-specific guard acceptance is pending.
-Product runtime unchanged by the proof diagnostic checkpoint. Four POSIX CI jobs
-235passes/112Windows skips each; native Windows proof results are not Codex host
-compatibility. No new installation, guard category, model run, optional event
-capture, cleanup or production policy change. Full product remains incomplete.
+Original bounds failure is explicitly unresolved. Diagnostic249a69e CI passed
+both bounds/self-tests but did not establish a fix; both known image failures and
+Windows gates remain. Installed snapshot is dddd49a, not the newer proof-only
+source. Product runtime matches; proof/test/docs differ. No new archive/full suite
+needed for this unchanged reviewed snapshot. Full93 product incomplete.
+
+Next exact setting remains GPT-6.1 Sol Medium. Human restarts Codex and reopens
+this same chat, then native local-view/harmless-hook checks. Source29 package58
+focused passes, source POSIX235passes and diagnostic OS results remain separate
+from pending native UI/impact acceptance. No new guard category, optional events,
+paid model test, production cleanup or current background watcher/child.
