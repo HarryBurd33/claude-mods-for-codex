@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { dirname, isAbsolute, join, resolve } from 'node:path';
 import { KNOWN_EVENTS } from './constants.mjs';
 import { componentFromSpec, componentAccess, componentPlan, componentIntent, validateComponent, projectStatusComponents, replayComponentEvent, componentRecord } from './component-contract.mjs';
+import { interactionFixtures, replayInteraction } from './interaction-replay.mjs';
 
 const MAX_FILE = 32768, MAX_TOTAL = 128 * 1024;
 const hash = data => createHash('sha256').update(data).digest('hex');
@@ -101,7 +102,43 @@ partial output: inspect it, do not overwrite/retry/delete it automatically. Wind
 new component IO is unavailable. Pure contracts are portable, not Windows acceptance.
 `;
 
+const INTERACTION_REVIEW = `# Review this disabled owned local-preview component
+
+This is declarative data for a fixed bundled UI, not arbitrary executable code,
+native chrome, slash callback, command tool or an OS sandbox. Labels are private
+authored text in component/access/plan artifacts and the enabled UI resource.
+No input defaults, paths, hooks, capture, storage, exports or permission grants.
+
+Use the verified absolute bin/codex-mods.mjs CLI: validate-component --bundle DIR,
+then replay-component --bundle DIR. Disabled output has no mounted controls.
+Copy component.json to a separate private intent, set only interaction.enabled
+when chosen, replay with --intent FILE and inspect component-plan with that intent.
+Replay uses actual bundled callbacks/renderers with a minimal synthetic DOM:
+render/edit/Clear/invalid/oversized/disposal cases, never executing fixture text.
+Source/title/field/format changes require regeneration and review. Integrity hashes
+are not trust; partial/tampered bundles refuse, no overwrite/repair/automatic cleanup.
+
+Merge only the chosen interactionComponents entry into reviewed private runtime
+settings, preserving all existing project/data/scope/capture/exports/status entries.
+An enabled card has up to four fields of4096characters each. Render/Clear are local
+fixed callbacks; no model/tool/network/file request, approval or policy change.
+Input stays in webview memory, cleared by Clear/real teardown; host controls its UI.
+Do not paste credentials. Fixed JSON/plain/restricted flowchart rendering only.
+No arbitrary CSS/HTML/URLs/JS/modules/shell or raw-text persistence/hot reload.
+
+Keep installed snapshot unchanged until supported reviewed update, human changed-
+hook/code trust and reload when needed. Disabling/removing only this settings
+entry in a reviewed update removes the card; preserve others/data. Rollback selects
+preserved immutable source via supported add, never cache/hash/whole-config edits.
+No extra model run needed. Describing through a skill uses selected-model usage;
+deterministic local generation/replay/render adds none. Windows component IO and
+dashboard settings remain gated; no POSIX-mode-bit workaround. Native rendering,
+keyboard/accessibility/lifecycle acceptance is separate from this replay.
+`;
+
 function artifacts(component) {
+  if (component.interaction) return { 'component.json': json(component), 'access.json': json(componentAccess(component)),
+    'plan.json': json(componentPlan(component)), 'REVIEW.md': INTERACTION_REVIEW, 'fixtures/local.json': json(interactionFixtures(component)) };
   const chosen = component.observer?.events ?? component.status.events;
   const result = { 'component.json': json(component), 'access.json': json(componentAccess(component)), 'plan.json': json(componentPlan(component)),
     'summary.json': json({ available: true, events: Object.fromEntries(chosen.map((event, i) => [event, i + 2])) }), 'REVIEW.md': REVIEW };
@@ -111,7 +148,7 @@ function artifacts(component) {
   result['fixtures/malformed.json'] = json({ ...eventFixture(chosen[0]), session_id: '' });
   return result;
 }
-function requireDisabled(c) { if (c.observer?.reception || c.observer?.retention || c.status?.enabled) refuse(); }
+function requireDisabled(c) { if (c.observer?.reception || c.observer?.retention || c.status?.enabled || c.interaction?.enabled) refuse(); }
 
 export async function scaffoldComponent(spec, destination) {
   assertComponentPlatform();
@@ -148,7 +185,7 @@ export async function loadComponentBundle(input, intentPath) {
     componentRecord(marker, ['version', 'files']);
     if (marker.version !== 1 || !marker.files || typeof marker.files !== 'object' || Array.isArray(marker.files)) refuse();
     const names = Object.keys(marker.files);
-    if (names.length > 15 || !names.length || names.some(name => !/^(component\.json|access\.json|plan\.json|summary\.json|REVIEW\.md|fixtures\/(matching-[0-7]|nonmatching|malformed)\.json)$/.test(name) || !/^[a-f0-9]{64}$/.test(marker.files[name]))) refuse();
+    if (names.length > 15 || !names.length || names.some(name => !/^(component\.json|access\.json|plan\.json|summary\.json|REVIEW\.md|fixtures\/(matching-[0-7]|nonmatching|malformed|local)\.json)$/.test(name) || !/^[a-f0-9]{64}$/.test(marker.files[name]))) refuse();
     const files = {}; let total = Buffer.byteLength(markerText);
     for (const name of names) { const text = await readPrivate(join(path, name)); total += Buffer.byteLength(text); if (total > MAX_TOTAL || hash(text) !== marker.files[name]) refuse(); files[name] = text; }
     const component = validateComponent(JSON.parse(files['component.json'])); requireDisabled(component);
@@ -164,6 +201,7 @@ export async function loadComponentBundle(input, intentPath) {
 }
 
 export function replayComponentBundle(bundle) {
+  if (bundle.component.interaction) return { interaction: replayInteraction(bundle.component, JSON.parse(bundle.files['fixtures/local.json'])), synthetic: true, writes: false, executes: false };
   return { fixtures: Object.keys(bundle.files).filter(name => name.startsWith('fixtures/')).map(name => ({ fixture: name, ...replayComponentEvent(bundle.component, JSON.parse(bundle.files[name])) })),
     status: projectStatusComponents(JSON.parse(bundle.files['summary.json']), bundle.component.status ? [{ id: bundle.component.id, ...bundle.component.status }] : []),
     synthetic: true, writes: false, executes: false };

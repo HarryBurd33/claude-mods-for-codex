@@ -1,19 +1,35 @@
 # Extension architecture and security contracts
 
-## Native30 follow-up — current — 2026-10-24
+## Source31 interaction authoring — current — 2026-10-24
 
-[NATIVE-DEV30](NATIVE-DEV30.md): actual owned default/dark/light/Reset, retained
-synthetic code/impact source+results, chart/table/diff-addition colors and harmless
-hooks passed. Human keyboard/focus/resize report corroborated by DOM. Clear/reset
-left only our tested panel empty/default/Watch off. Separate native0.163 CLI theme
-picker/custom discovery/cancel passed with config byte-unchanged; temporary file/
-new empty dir removed, process exited0, no prompt/upgrade. Physical terminal colors,
-forced-color/native full accessibility/lifecycle remain unverified. Same242cache/
-settings/scope/exports/status/trust/Windows guards,7records/status5. No new startup
-record/delivery claim.32protectedsource paths/93IDs unchanged, original bounds
-failure unresolved. Next human **Sol High** for AUTHORING-UI-NEXT.md, beyond already
-working observer/status authoring; no current restart/trust/new capture/run grant.
-Earlier checkpoint sections below are history, not current install instructions.
+DEV31-REVIEW.md: bounded generated local-preview cards, disabled/private exact
+schema/access/intent/replay/plan, fixed renderer callbacks and inline reviewed
+settings definitions. No new hook/capture/path/tool/model/network/persistence.
+Existing observer/status/rule bundles remain compatible; installed30-generated
+bundle validated/replayed unchanged. Local358/246pass/112Windows skips; real CLI
+and actual-controller synthetic DOM replay pass. Exact new CI/package/native31
+pending; installed30/cache/settings/config/logging/trust/Windows guards unchanged.
+Next human Sol Medium routine verification/native preparation, High before new
+consequential fixes. No current restart/trust action; full93 incomplete, original
+bounds cause unresolved. Earlier records below are historical/versioned evidence.
+
+### Authored local interaction boundary
+
+src/interaction-contract.mjs is shared pure strict data validation: max4cards/
+4fields/4096characters per input, labels96, exact ID/format/boolean shape. Separate
+interaction component cannot combine observer/status or carry defaults/paths/code.
+component-contract/authoring retain private exclusive generation/complete integrity
+and boolean-only intent. Fixed fixtures replay actual ui/interactions.js and
+ui/rendering.js through minimal synthetic DOM, returning counts/booleans only.
+Runtime settings carry inline definitions in existing reviewed private file,
+not dynamic bundle/code paths. Server adds no tool and serializes only enabled
+definitions into fixed offline UI resource. Escape script metacharacters/line
+separators; all labels/source rendered literally. No raw input ever enters RPC/
+settings/state/logs. Local view disables Refresh/Watch; per-card closures isolate
+drafts, edit invalidation/Clear/teardown, closed callbacks cannot revive. Positional
+DOM IDs avoid author-slug collisions. Existing palette/forced colors/tables reused.
+Actual native31 lifecycle/accessibility still pending after supported reviewed
+update, explicit chosen display definition and human changed-code trust/restart.
 
 ### Owned appearance contract
 

@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { runInNewContext } from 'node:vm';
 import { loadDashboardHtml } from '../src/dashboard-resource.mjs';
 
-const source = await readFile(new URL('../ui/rendering.js', import.meta.url), 'utf8');
+const source = (await readFile(new URL('../ui/rendering.js', import.meta.url), 'utf8')).replace('export { parseFlowchart, jsonTokens, renderLocalPreview };', '');
 const api = runInNewContext(source + '\n;({parseFlowchart,jsonTokens,renderLocalPreview})', {}, { timeout: 1000 });
 const plain = value => JSON.parse(JSON.stringify(value));
 

@@ -1,12 +1,11 @@
 # Development dashboard and immediate local commands
 
-Current2026-10-24: [bounded native30 acceptance](continuation/NATIVE-DEV30.md)
-passed for owned appearance/reset/retention, human keyboard/widths and harmless
-hooks. Separate no-save nativeCLI theme discovery/picker passed; physical colors
-unverified. Package242/62tests/CI in PACKAGE-DEV30. Logging/trust/Windows guards
-preserved, original bounds failure unresolved. Next human Sol High for bounded
-authored interaction components; no current restart/trust action.
-Earlier dated notes are historical.
+Current2026-10-24: [source31 authored interactions](continuation/DEV31-REVIEW.md)
+adds disabled bounded local-preview cards/private bundle/access/intent/replay/plan.
+Local246passes/112Windows skips; exact new CI/package/native31 pending. Installed30/
+logging/trust/Windows guards unchanged; original bounds failure unresolved. Next
+human Sol Medium for routine verification/review preparation, High before
+consequential fixes. Earlier dated notes are historical.
 
 
 Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)
@@ -232,3 +231,13 @@ Both journals remain when any retained record is too recent. Deletion may partia
 complete or leave locks after interruption; inspect after stopping writers, do not
 retry automatically. Windows refuses before IO. Configured26 is installed/human-trusted with restart/native acceptance pending; no cleanup
 of installed production records was performed by this milestone.
+
+## Authored local-preview cards — source31
+
+Optional inline interactionComponents entries in the same reviewed private settings
+select bounded labels/formats only. Up to4cards/4fields each; no draft/default text,
+paths, commands, capture or extra tool. Disabled entries omitted from UI resource.
+Actual fields stay in webview memory, local Render/Clear only. Existing settings
+16KiB limit/private outside-project path/Windows before-IO guard unchanged. See
+[authoring/access/rollback](local-interactions.md). No card is selected by default;
+install31/native host acceptance is pending. Preserve other scopes/status/exports.

@@ -1,9 +1,11 @@
 ---
 name: mod-scaffolding
-description: Scaffold reviewable Claude Mods hook rules or lifecycle observer/status data components from a description; disclose native UI and event limits.
+description: Scaffold reviewable Claude Mods hook rules, observer/status data or bounded owned local-preview components from a description; disclose native UI and event limits.
 ---
 
 Resolve the installed package root two levels above this file and verify .codex-plugin/plugin.json names claude-mods-for-codex. Check the actual CLI/features; source features are not necessarily installed. Translate the description into supported declarative data and disclose approximations: a Stop counter counts stopping opportunities, not unique turns; an authored status component lives inside the owned Activity view, not native host chrome. Do not substitute another client or generate arbitrary executable code.
+
+For authored local fields with fixed preview/clear behavior, read docs/local-interactions.md and src/interaction-contract.mjs. Use scaffold-component with kind interaction, name/title and one to four fields (id/label/format: code, json or flowchart). No source defaults, arbitrary code/HTML/CSS/URLs/modules/actions, network, tool/command callbacks or persistence. Generate disabled, validate complete bundle, replay disabled, then use an explicitly chosen private intent changing only interaction.enabled. Replay uses actual bundled callbacks/renderers with a minimal synthetic DOM; it is not native host acceptance. Inspect access/plan and merge only that reviewed interactionComponents entry by unique id into private runtime settings, preserving all existing status/capture/scope/project/export selections. Labels enter the enabled private UI resource; typed input never enters settings/tools/logs. Keep generated artifacts private. No extra model run, hook registration/capture or automatic trust. Confirm actual installed version supports this kind; installed30 does not.
 
 For notice, lexical deny or exact command replacement, read src/scaffold.mjs and use the existing workflow below. For lifecycle observation or a retained-event status counter, read docs/component-authoring.md and src/component-contract.mjs; use scaffold-component, validate-component, replay-component and component-plan from the verified absolute CLI. Choose observer, status or their paired activity kind. Do not choose event names, data/export paths or model calls the description does not justify.
 

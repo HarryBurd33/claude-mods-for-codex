@@ -3,13 +3,13 @@
 :root{color-scheme:light dark;font:16px/1.5 system-ui,sans-serif}body{margin:0;color:var(--mods-text);background:var(--mods-bg)}main{padding:24px;max-width:1000px;margin:auto}h1,h2{line-height:1.2}header p,.muted{color:var(--mods-muted)}nav{display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--mods-border);padding-bottom:12px}button{font:inherit;padding:8px 14px;cursor:pointer;border:1px solid currentColor;border-radius:6px;background:transparent;color:inherit}button:focus,input:focus,textarea:focus,select:focus,summary:focus{outline:3px solid var(--mods-focus);outline-offset:3px}button[aria-current=true]{font-weight:700;background:var(--mods-surface)}section{margin-top:20px}table{border-collapse:collapse;width:100%;text-align:left}th,td{padding:8px;border-bottom:1px solid var(--mods-border);overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:12px;border:1px solid var(--mods-border);border-radius:6px;max-height:500px;overflow:auto}label{display:block;margin:12px 0}svg{width:100%;max-height:240px}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}[hidden]{display:none!important}
 </style>
 <style>
-.file-entry{padding:4px 0 4px 16px;overflow-wrap:anywhere}details{padding-left:16px}summary{cursor:pointer;padding:4px}.diff-add{background:var(--mods-add)}.diff-remove{background:var(--mods-remove)}.diff-hunk{font-weight:bold;text-decoration:underline}pre code{font:inherit}svg{display:block;overflow:visible}
+.interaction-card{min-width:0;margin:16px 0;border:1px solid var(--mods-border)}.interaction-card legend{font-weight:bold;overflow-wrap:anywhere}.file-entry{padding:4px 0 4px 16px;overflow-wrap:anywhere}details{padding-left:16px}summary{cursor:pointer;padding:4px}.diff-add{background:var(--mods-add)}.diff-remove{background:var(--mods-remove)}.diff-hunk{font-weight:bold;text-decoration:underline}pre code{font:inherit}svg{display:block;overflow:visible}
 @media(forced-colors:active){.diff-add,.diff-remove{background:Canvas}.diff-hunk{text-decoration:underline}svg rect{fill:CanvasText;opacity:1}}
 .preview-source{box-sizing:border-box;width:100%;min-height:180px;font:14px/1.5 monospace;color:inherit;background:var(--mods-bg);border:1px solid currentColor;padding:12px}select{font:inherit;color:inherit;background:var(--mods-bg);padding:6px}.syntax-key{font-weight:bold;text-decoration:underline}.syntax-string{color:var(--mods-string)}.syntax-number{color:var(--mods-number)}.syntax-literal{font-weight:bold}.local-flowchart{max-height:480px;border:1px solid var(--mods-border)}
 @media(forced-colors:active){.syntax-string,.syntax-number{color:CanvasText}.local-flowchart rect{fill:Canvas;stroke:CanvasText}}
 </style><style>/* LOCAL_APPEARANCE_CSS */</style><main>
 <header><h1>Claude Mods</h1><p>Local project tools and scoped activity · plugin-owned view</p><p id="connection" role="status">Connecting…</p><details class="appearance"><summary>Appearance for this panel</summary><p>Choose fixed local colors. This changes only the owned view, not native replies, tool rows, dialogs or the CLI theme. No saved setting, network or model call.</p><label for="appearance-select">Panel palette</label><div class="row"><select id="appearance-select"><option value="host">Follow host</option><option value="quiet-dark">Quiet dark</option><option value="quiet-light">Quiet light</option></select><button id="appearance-reset" type="button">Reset to host colors</button></div><p id="appearance-status" role="status" aria-live="polite"></p></details></header>
-<nav aria-label="Views"><button data-view="activity" aria-current="true">Activity</button><button data-view="files">Project files</button><button data-view="changes">Changes</button><button data-view="replay">Replay</button><button data-view="access">Access and usage</button><button data-view="preview">Local preview</button><button data-view="impact">Impact review</button></nav>
+<nav aria-label="Views"><button data-view="activity" aria-current="true">Activity</button><button data-view="files">Project files</button><button data-view="changes">Changes</button><button data-view="replay">Replay</button><button data-view="access">Access and usage</button><button data-view="preview">Local preview</button><button data-view="impact">Impact review</button><button id="interactions-nav" data-view="interactions" hidden>Authored local tools</button></nav>
 <div class="row"><button id="refresh" disabled>Refresh view</button><label><input id="watch" type="checkbox" disabled> Watch activity for 30 seconds</label></div><p id="notice" aria-live="polite"></p>
 <section id="activity"><h2>Retained activity</h2><p>Counts cover observed retained hook deliveries. PostToolUse does not certify process success or cover every tool error. Stop is a stopping opportunity, not unique completed turns; Interrupt is separate. Empty counts do not establish that hooks are connected. Scope follows the native session directory, not a shell call's workdir. Separately selected export outcomes appear in Access and usage.</p><div id="activity-result"></div></section>
 <section id="files" hidden><h2>Project files</h2><p>Only the configured project is read. Ignored paths, links and secret filenames are excluded.</p><div id="files-result"></div></section>
@@ -23,9 +23,11 @@ C["Install after trust review"]
 A --> B
 B --> C</textarea><p>Original restricted renderer, not the Mermaid library. One statement per line: flowchart TD/TB/LR/RL/BT, bare node, A["label"] or A --&gt; B. At most 16 nodes, 24 edges and 64 lines. No HTML, directives, links, styling, subgraphs, other shapes or automatic layout. Labels are literal table text.</p><div class="row"><button id="preview-render">Render locally</button><button id="preview-clear">Clear source and preview</button></div><div id="preview-result" aria-live="polite"></div></section>
 <section id="impact" hidden><h2>Command impact review</h2><p>Paste up to 4,096 characters to assess locally. No command execution, tool/model/network request, policy edit or persistent storage. The text stays in this panel memory until cleared or closed; the host controls its webview. Do not paste credentials. This view is separate from any pending native call and cannot approve or cancel it.</p><label for="impact-source">Command to assess (never executed)</label><textarea id="impact-source" class="preview-source" maxlength="4096" spellcheck="false"></textarea><div class="row"><button id="impact-assess">Assess locally</button><button id="impact-clear">Clear command and review</button></div><div id="impact-result" aria-live="polite"></div></section>
+<section id="interactions" hidden><h2>Authored local tools</h2><p>Explicitly selected fixed preview components. Field text stays in this view memory; no tools, files, model or network calls. No pending-call authority. Use Clear before sharing the screen; the host controls its webview.</p><div id="interactions-result"></div></section>
 <footer><p class="muted">Development checkpoint. A dashboard button never approves a pending native tool call. Configure access through a reviewed runtime settings file; installation and changed-hook trust remain separate steps.</p></footer></main>
 <script>
 /* LOCAL_RENDERING */
+const interactionDefinitions=/* LOCAL_INTERACTIONS_DATA */;
 let nextId=1,closed=false,selected='activity',revision,hostReady=false,refreshTask,refreshWanted=false,watchGeneration=0,watchSleep;
 const pending=new Map(),$=s=>document.querySelector(s),send=m=>parent.postMessage({jsonrpc:'2.0',...m},'*');
 function request(method,params){
@@ -131,7 +133,7 @@ function stopWatch(){
   if(watchSleep){clearTimeout(watchSleep.timer);const resolve=watchSleep.resolve;watchSleep=undefined;resolve();}
 }
 async function refresh(wait=false){
-  if(closed||!hostReady||['preview','impact'].includes(selected))return;
+  if(closed||!hostReady||['preview','impact','interactions'].includes(selected))return;
   if(refreshTask){if(!wait)refreshWanted=true;return refreshTask;}
   const view=selected;$('#refresh').disabled=true;
   refreshTask=(async()=>{
@@ -144,7 +146,7 @@ async function refresh(wait=false){
   })();
   try{await refreshTask;}finally{
     refreshTask=undefined;
-    if(!closed){$('#refresh').disabled=['preview','impact'].includes(selected);if(refreshWanted){refreshWanted=false;void refresh();}}
+    if(!closed){$('#refresh').disabled=['preview','impact','interactions'].includes(selected);if(refreshWanted){refreshWanted=false;void refresh();}}
   }
 }
 async function watch(){
@@ -159,7 +161,7 @@ async function watch(){
 }
 function teardown(){
   closed=true;refreshWanted=false;stopWatch();
-  $('#preview-source').value='';$('#preview-result').replaceChildren();clearImpactReview();clearAppearance();
+  $('#preview-source').value='';$('#preview-result').replaceChildren();clearImpactReview();clearAppearance();clearInteractions();
   for(const p of pending.values()){clearTimeout(p.timer);p.reject(Error('View closed'));}pending.clear();
 }
 addEventListener('message',event=>{
@@ -178,9 +180,11 @@ for(const b of document.querySelectorAll('nav button'))b.onclick=()=>{
   selected=b.dataset.view;stopWatch();
   for(const s of document.querySelectorAll('main>section'))s.hidden=s.id!==selected;
   for(const n of document.querySelectorAll('nav button'))n.setAttribute('aria-current',String(n===b));
-  $('#refresh').disabled=!hostReady||['preview','impact'].includes(selected);$('#watch').disabled=!hostReady||selected!=='activity';
-  if(['preview','impact'].includes(selected))$('#notice').textContent='This local view makes no tool requests.';else void refresh();
+  $('#refresh').disabled=!hostReady||['preview','impact','interactions'].includes(selected);$('#watch').disabled=!hostReady||selected!=='activity';
+  if(['preview','impact','interactions'].includes(selected))$('#notice').textContent='This local view makes no tool requests.';else void refresh();
 };
+$('#interactions-nav').hidden=!interactionDefinitions.some(c=>c.enabled);
+const clearInteractions=mountInteractionCards(document,$('#interactions-result'),interactionDefinitions);
 const clearAppearance=mountAppearance(document,$('#appearance-select'),$('#appearance-reset'),$('#appearance-status'));
 const clearImpactReview=mountImpactReview(document,$('#impact-source'),$('#impact-result'),$('#impact-assess'),$('#impact-clear'));
 $('#preview-render').onclick=()=>{if(!closed)renderLocalPreview(document,$('#preview-result'),$('#preview-format').value,$('#preview-source').value);};
@@ -188,12 +192,12 @@ $('#preview-clear').onclick=()=>{$('#preview-source').value='';$('#preview-resul
 $('#refresh').onclick=()=>refresh();$('#watch').onchange=()=>{if($('#watch').checked&&selected==='activity')void watch();else stopWatch();};
 (async()=>{
   try{
-    const host=await request('ui/initialize',{protocolVersion:'2026-01-26',appInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.30'},appCapabilities:{}});
+    const host=await request('ui/initialize',{protocolVersion:'2026-01-26',appInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.31'},appCapabilities:{}});
     if(closed)return;
     // Host tokens follow the bridge; our fixed palette namespace stays owned.
     for(const[k,v]of Object.entries(host.hostContext?.styles?.variables??{}))if(/^--[a-z0-9-]+$/i.test(k)&&!/^--mods-/i.test(k)&&typeof v==='string')document.documentElement.style.setProperty(k,v);
     hostReady=!!host.hostCapabilities?.serverTools;send({method:'ui/notifications/initialized',params:{}});
-    $('#connection').textContent=`Connected to ${host.hostInfo?.name??'host'}.`;$('#refresh').disabled=!hostReady||['preview','impact'].includes(selected);$('#watch').disabled=!hostReady||selected!=='activity';await refresh();
+    $('#connection').textContent=`Connected to ${host.hostInfo?.name??'host'}.`;$('#refresh').disabled=!hostReady||['preview','impact','interactions'].includes(selected);$('#watch').disabled=!hostReady||selected!=='activity';await refresh();
   }catch{if(!closed)$('#connection').textContent='Host bridge unavailable; use the local CLI and read-only reports.';}
 })();
 </script></html>

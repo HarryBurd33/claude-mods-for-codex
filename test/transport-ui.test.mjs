@@ -105,12 +105,13 @@ class Element {
   createTBody() { const element = new Element('tbody'); this.append(element); return element; }
   insertRow() { const element = new Element('tr'); this.append(element); return element; }
 }
-async function dashboard(hostVariables = {}) {
-  const html = await loadDashboardHtml(), script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
+async function dashboard(hostVariables = {}, interactions = []) {
+  const html = await loadDashboardHtml(interactions), script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
   const messages = [], listeners = new Map(), timers = new Map(), elements = new Map(); let nextTimer = 0, now = 0;
-  const views = ['activity', 'files', 'changes', 'replay', 'access', 'preview', 'impact'];
+  const views = ['activity', 'files', 'changes', 'replay', 'access', 'preview', 'impact', 'interactions'];
   for (const id of ['connection', 'refresh', 'watch', 'notice', ...views, ...views.map(v=>v+'-result'), 'preview-source', 'preview-format', 'preview-render', 'preview-clear', 'impact-source', 'impact-assess', 'impact-clear', 'appearance-select', 'appearance-reset', 'appearance-status']) { const element = new Element(); element.id = id; elements.set('#' + id, element); }
   const buttons = views.map(view => { const element = new Element('button'); element.dataset.view = view; return element; });
+  elements.set('#interactions-nav', buttons.find(b=>b.dataset.view==='interactions'));
   const parent = { postMessage: message => messages.push(message) }, hostStyles = new Map();
   const root = Object.assign(new Element(), { style: { setProperty: (k, v) => hostStyles.set(k, v) } });
   runInNewContext(script, {
@@ -157,6 +158,37 @@ test('palette changes preserve literal previews/reviews and host tokens, with no
 });
 const revision = 'a'.repeat(64);
 function descendants(node){return [node,...node.children.flatMap(descendants)];}
+test('authored cards isolate drafts, use only local callbacks and clear stale handlers on teardown (actual served script, simulated bridge)', async()=>{
+  const field={id:'notes',label:'Literal notes',format:'code'};
+  const cards=[{id:'a-b',enabled:true,title:'<img src=x onerror=alert(1)>',fields:[field]}, {id:'a',enabled:true,title:'Second card',fields:[{...field,id:'b-notes'}]}];
+  const p=await dashboard({},cards);p.reply(p.latestCall(),{revision,records:0});await tick();
+  assert.equal(p.elements.get('#interactions-nav').hidden,false);
+  p.buttons.find(b=>b.dataset.view==='interactions').onclick();await tick();
+  assert.equal(p.elements.get('#refresh').disabled,true);assert.equal(p.elements.get('#watch').disabled,true);
+  const roots=p.elements.get('#interactions-result').children;
+  assert.equal(roots.length,2);assert.match(roots[0].textContent,/<img src=x onerror=alert\(1\)>/);
+  const controls=roots.map(root=>{const all=descendants(root);return {input:all.find(n=>n.tagName==='textarea'),render:all.find(n=>n.attributes['data-interaction-action']==='render'),clear:all.find(n=>n.attributes['data-interaction-action']==='clear'),status:all.find(n=>n.attributes.role==='status'),root};});
+  assert.notEqual(controls[0].input.attributes.id,controls[1].input.attributes.id);
+  const count=p.messages.length;
+  for(let i=0;i<2;i++){controls[i].input.value='<script>SYNTHETIC_DRAFT_'+i+'</script>';controls[i].input.oninput();controls[i].render.onclick();assert.match(controls[i].status.textContent,/Rendered 1 of 1/);}
+  controls[0].clear.onclick();assert.equal(controls[0].input.value,'');assert.match(controls[1].root.textContent,/SYNTHETIC_DRAFT_1/);
+  controls[0].input.value='x'.repeat(4097);controls[0].input.oninput();assert.equal(controls[0].input.value,'');assert.match(controls[0].status.textContent,/Invalid input cleared/);
+  controls[1].input.value='Edited';controls[1].input.oninput();assert.equal(descendants(controls[1].root).some(n=>n.tagName==='pre'),false);
+  controls[1].input.value='SYNTHETIC_DRAFT_1';controls[1].render.onclick();
+  p.elements.get('#appearance-select').value='quiet-dark';p.elements.get('#appearance-select').onchange();
+  p.buttons.find(b=>b.dataset.view==='preview').onclick();p.buttons.find(b=>b.dataset.view==='interactions').onclick();
+  assert.match(controls[1].root.textContent,/SYNTHETIC_DRAFT_1/);assert.equal(p.messages.length,count);
+  assert.equal(p.messages.some(m=>JSON.stringify(m).includes('SYNTHETIC_DRAFT')),false);
+  const oldEdit=controls[1].input.oninput,oldRender=controls[1].render.onclick;
+  p.receive({id:101,method:'ui/resource-teardown'});
+  assert.equal(controls[1].input.value,'');assert.equal(controls[1].input.disabled,true);assert.equal(controls[1].render.disabled,true);
+  oldRender();oldEdit();assert.equal(p.elements.get('#interactions-result').children.length,0);assert.equal(p.timers.size,0);
+});
+test('unselected authored interaction view is hidden and mounts no fields (simulated DOM)',async()=>{
+  const p=await dashboard({},[{id:'off',enabled:false,title:'Hidden',fields:[{id:'notes',label:'Notes',format:'code'}]}]);
+  assert.equal(p.elements.get('#interactions-nav').hidden,true);assert.equal(p.elements.get('#interactions-result').children.length,0);
+  p.receive({id:99,method:'ui/resource-teardown'});
+});
 test('local preview renders/clears without tools or model messages and clears sensitive memory on teardown (simulated DOM)',async()=>{
   const p=await dashboard();p.reply(p.latestCall(),{revision,records:0});await tick();
   const count=p.messages.length;

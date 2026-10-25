@@ -1,5 +1,6 @@
 import { KNOWN_EVENTS, OBSERVER_EVENTS } from './constants.mjs';
 import { validateEventEnvelope } from './dispatcher.mjs';
+import { validateInteraction } from './interaction-contract.mjs';
 
 export function componentError() { throw new Error('Invalid or unsupported component data'); }
 export function componentRecord(value, keys) {
@@ -27,7 +28,11 @@ export function componentFromSpec(spec) {
   // Kind-specific shapes exclude paths, commands, HTML/JS templates and grants.
   if (!spec || typeof spec !== 'object') componentError();
   const kind = Object.getOwnPropertyDescriptor(spec, 'kind');
-  if (!kind || !Object.hasOwn(kind, 'value') || !['observer', 'status', 'activity'].includes(kind.value)) componentError();
+  if (!kind || !Object.hasOwn(kind, 'value') || !['observer', 'status', 'activity', 'interaction'].includes(kind.value)) componentError();
+  if (kind.value === 'interaction') {
+    componentRecord(spec, ['name', 'kind', 'title', 'fields']);
+    return validateComponent({ version: 1, id: id(spec.name), interaction: { enabled: false, title: spec.title, fields: spec.fields } });
+  }
   componentRecord(spec, kind.value === 'observer' ? ['name', 'kind', 'events'] : ['name', 'kind', 'events', 'title']);
   const observer = kind.value !== 'status', status = kind.value !== 'observer';
   return validateComponent({ version: 1, id: id(spec.name),
@@ -38,10 +43,14 @@ export function componentFromSpec(spec) {
 
 export function validateComponent(value) {
   if (!value || typeof value !== 'object') componentError();
-  const keys = ['version', 'id', ...(['observer', 'status'].filter(k => Object.hasOwn(value, k)))];
+  const keys = ['version', 'id', ...(['observer', 'status', 'interaction'].filter(k => Object.hasOwn(value, k)))];
   componentRecord(value, keys);
   if (value.version !== 1 || keys.length === 2) componentError();
   const result = { version: 1, id: id(value.id) };
+  if (Object.hasOwn(value, 'interaction')) {
+    if (keys.length !== 3) componentError(); // Never share raw local input with observers/status.
+    result.interaction = validateInteraction(value.interaction);
+  }
   if (Object.hasOwn(value, 'observer')) {
     componentRecord(value.observer, ['reception', 'retention', 'events']);
     result.observer = Object.freeze({ reception: bool(value.observer.reception), retention: bool(value.observer.retention), events: events(value.observer.events, true) });
@@ -67,6 +76,12 @@ export function validateStatusComponents(value = []) {
 
 export function componentAccess(component) {
   const c = validateComponent(component);
+  if (c.interaction) return { version: 1, id: c.id, component: 'owned local-preview interaction', display: c.interaction.enabled,
+    reception: false, retention: false, requestedReceptionEvents: [], requestedStorageEvents: [],
+    potentialReads: ['Authored labels/formats in this reviewed declaration; user-entered text only in its own webview fields'],
+    potentialWrites: [], network: [], modelCalls: 0, executes: [], localCallbacks: ['render fixed previews', 'clear own fields/previews'],
+    memory: { fields: c.interaction.fields.length, charactersPerField: 4096, persistent: false },
+    limits: ['Fixed bundled render/clear callbacks only; no native call approval, commands or arbitrary code', 'Up to four fields of 4096 characters; in-memory text cleared by Clear or view teardown', 'Labels are included in the private UI resource; no input text is sent to tools or saved', 'No hook, metadata, project, export, scope or permission grant', 'Declarations are not an OS sandbox; the host controls its webview', 'Skill use consumes selected-model usage; local callbacks add no model call'] };
   return { version: 1, id: c.id, component: 'declarative observer/status component',
     reception: c.observer?.reception ?? false, retention: c.observer?.retention ?? false, display: c.status?.enabled ?? false,
     requestedReceptionEvents: c.observer?.reception ? c.observer.events : [],
@@ -90,8 +105,8 @@ export function componentPlan(component) {
   return { version: 1, id: c.id, installed: false, access: componentAccess(c),
     registration: { hooks },
     hookConfig: c.observer?.retention ? { metadataState: { componentObserverEvents: [...c.observer.events] } } : {},
-    runtimeSettings: c.status ? { statusComponents: [{ id: c.id, ...c.status }] } : {},
-    mergeNote: 'Merge only chosen fields. Union componentObserverEvents with reviewed existing authored selections; merge at most one bundled dispatcher per event. Preserve mods, legacy enabled/observerEvents and scope. If metadataState is absent, explicitly create a disabled base with enabled:false and reviewed scope before merging authored events. Shared event capture may serve other components; removal requires review. No project/data selection, installation or trust is performed.',
+    runtimeSettings: c.interaction ? { interactionComponents: [{ id: c.id, ...c.interaction }] } : c.status ? { statusComponents: [{ id: c.id, ...c.status }] } : {},
+    mergeNote: c.interaction ? 'Merge only this reviewed interactionComponents entry by unique id; preserve existing cards, status, project/data/scope/exports and all hook/capture settings. No new path, capture, permission, installation or trust is selected. Definitions load with the reviewed settings snapshot; no hot reload. Enabling publishes authored labels/formats to the private UI resource, never user input.' : 'Merge only chosen fields. Union componentObserverEvents with reviewed existing authored selections; merge at most one bundled dispatcher per event. Preserve mods, legacy enabled/observerEvents and scope. If metadataState is absent, explicitly create a disabled base with enabled:false and reviewed scope before merging authored events. Shared event capture may serve other components; removal requires review. No project/data selection, installation or trust is performed.',
   };
 }
 
@@ -128,6 +143,7 @@ export function componentIntent(base, proposed) {
   const reset = JSON.parse(JSON.stringify(next));
   if (reset.observer) { reset.observer.reception = false; reset.observer.retention = false; }
   if (reset.status) reset.status.enabled = false;
+  if (reset.interaction) reset.interaction.enabled = false;
   if (JSON.stringify(reset) !== JSON.stringify(original)) componentError();
   return next;
 }

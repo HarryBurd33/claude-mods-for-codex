@@ -1,32 +1,29 @@
 # Claude Mods for Codex
 
-Development source **0.2.0-dev.30** adds **Appearance for this panel**: Follow
-host (default), Quiet dark, Quiet light and Reset. These fixed colors apply only
-to the owned dashboard, including code, diffs, charts and focus outlines. Nothing
-is saved or sent to a tool, model or network. Native client appearance is separate.
-See [appearance and limits](docs/themes.md) and [source review](docs/continuation/DEV30-REVIEW.md).
+Development source **0.2.0-dev.31** adds [authored local-preview cards](docs/local-interactions.md):
+describe labeled plan/JSON/notes fields, generate a disabled private bundle, inspect
+access, validate/replay and plan a reviewed display-only settings merge. Render/
+Clear use fixed local callbacks; no raw-text storage, tool/model/network requests,
+new hooks or capture. Existing rule/observer/status authoring remains compatible.
+[Source contracts and verification](docs/continuation/DEV31-REVIEW.md).
 
-Installed **dev30** is human reviewed and now has bounded native appearance
-acceptance: default/dark/light/Reset, retained synthetic previews/reviews, chart/
-code/diff colors, human keyboard/width checks and harmless hooks passed. Separate
-CLI0.163 theme discovery/picker/cancel passed with no saved preference; physical
-terminal colors remain unverified. [Native evidence and limits](docs/continuation/NATIVE-DEV30.md).
-The exact242-file archive passed62packaged tests; four POSIX CI lanes each passed
-239tests. Known Windows failures remain. [Package/CI](docs/continuation/PACKAGE-DEV30.md).
+Local offline suite: **246 passed, 0 failed,112 Windows-only skips (358 total)**;
+validation/replay pass. Real CLI authoring and actual-controller synthetic replay
+passed, including legacy installed30 bundle compatibility. New exact CI/public
+package/actual native31 acceptance remain pending. **Installed30 is unchanged**;
+its bounded native appearance/hooks and no-save CLI picker checks are recorded in
+[NATIVE-DEV30](docs/continuation/NATIVE-DEV30.md). Source31 is not installed.
 
-This independent MIT project is not affiliated with or endorsed by Anthropic or
-OpenAI. The full [93-requirement product](docs/continuation/REQUIREMENTS.md) remains
-incomplete; this branch is a development distribution. macOS acceptance comes
-first. The original Windows metadata-bounds failure remains unresolved, known
-image-inventory failures and Windows guards remain in force, and native Windows
-11/WSL acceptance is unverified.
+Independent MIT project, not affiliated with or endorsed by Anthropic or OpenAI.
+The full [93-requirement product](docs/continuation/REQUIREMENTS.md) is incomplete.
+macOS acceptance first, Windows later. Original Windows bounds failure unresolved;
+known image failures/Windows guards remain, native Windows11/WSL unverified.
 
-Logging selections, rules, data, optional capture, exports/status and human trust
-are preserved. Temporary theme file/directory removed; configuration byte-unchanged
-after preview. Local callbacks make no extra model calls; chat/skills consume
-selected-model usage. Next **GPT-6.1 Sol High** for an authored interactive owned
-component workflow beyond the existing observer/status counters. No new capture,
-guard selection or additional model run is authorized.
+Logging selections, rules, exports/status/data, human trust and shared configuration
+are unchanged. No new guard/capture/model-run grant. Local callbacks add no model
+calls; describing through skills consumes selected-model usage. Next **GPT-6.1 Sol
+Medium** for exact source31 CI/package and concrete native review preparation.
+Human changed-code trust/restart remain separate; High before consequential fixes.
 
 ## What it does
 

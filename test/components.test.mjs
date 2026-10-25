@@ -143,7 +143,7 @@ test('bundle IO rejects links, broad modes, extra/tampered/partial files and can
 test('interrupted-before-marker generation stays partial with no cleanup/retry (copied-source injected fault)', { skip: process.platform === 'win32' }, async t => {
   const dir = await temp(t), path = join(dir, 'partial');
   let source = await readFile(new URL('../src/component-authoring.mjs', import.meta.url), 'utf8');
-  source = source.replace("from './constants.mjs'", 'from ' + JSON.stringify(new URL('../src/constants.mjs', import.meta.url).href)).replace("from './component-contract.mjs'", 'from ' + JSON.stringify(new URL('../src/component-contract.mjs', import.meta.url).href));
+  source = source.replace("from './constants.mjs'", 'from ' + JSON.stringify(new URL('../src/constants.mjs', import.meta.url).href)).replace("from './component-contract.mjs'", 'from ' + JSON.stringify(new URL('../src/component-contract.mjs', import.meta.url).href)).replace("from './interaction-replay.mjs'", 'from ' + JSON.stringify(new URL('../src/interaction-replay.mjs', import.meta.url).href));
   assert.equal(source.split('// Marker is last.').length, 2); source = source.replace('// Marker is last.', "throw new Error('synthetic fault before marker');\n    // Marker is last.");
   const module = join(dir, 'fault.mjs'); await writeFile(module, source, { mode: 0o600 });
   await assert.rejects((await import(pathToFileURL(module).href)).scaffoldComponent(spec, path), /creation incomplete/);

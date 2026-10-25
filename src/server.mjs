@@ -9,6 +9,7 @@ import { CAPTURE_NOTE } from './scope.mjs';
 import { readSelectedUsage } from './usage.mjs';
 import { readSelectedObservations } from './observations.mjs';
 import { projectStatusComponents, validateStatusComponents } from './component-contract.mjs';
+import { validateInteractionComponents } from './interaction-contract.mjs';
 
 const URI = 'ui://claude-mods/dashboard';
 const empty = { type: 'object', properties: {}, additionalProperties: false };
@@ -31,6 +32,7 @@ function scope(settings) {
 const unavailable = reason => ({available:false,reason});
 export function createDashboardHandler(settings) {
   const definitions = validateStatusComponents(settings?.statusComponents);
+  const interactions = validateInteractionComponents(settings?.interactionComponents);
   const withStatus = data => ({...data,statusComponents:projectStatusComponents(data,definitions)});
   const usage=signal=>settings?.usageExport?readSelectedUsage(settings.usageExport,{signal}):unavailable('No private usage export selected. Native hooks do not provide context, token or billing counters.');
   const observations=signal=>settings?.observationExport?readSelectedObservations(settings.observationExport,{signal}):unavailable('No observation export selected. This separate read opt-in never follows the usage export or live hook scope.');
@@ -51,14 +53,14 @@ export function createDashboardHandler(settings) {
   return async (request, {signal} = {}) => {
     const p = request.params ?? {};
     switch (request.method) {
-      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.30'}};
+      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.31'}};
       case 'ping': return {};
       case 'tools/list': return {tools};
       case 'resources/list': return {resources:[{uri:URI,name:'Claude Mods dashboard',mimeType:'text/html;profile=mcp-app'}]};
       case 'resources/templates/list': return {resourceTemplates:[]};
       case 'resources/read':
         if (p.uri !== URI) throw new Error('Unknown resource');
-        return {contents:[{uri:URI,mimeType:'text/html;profile=mcp-app',text:await loadDashboardHtml(),_meta:{ui:{csp:{connectDomains:[],resourceDomains:[]}},'openai/ui':{preferredDisplayMode:'fullscreen',availableDisplayModes:['fullscreen']}}}]};
+        return {contents:[{uri:URI,mimeType:'text/html;profile=mcp-app',text:await loadDashboardHtml(interactions),_meta:{ui:{csp:{connectDomains:[],resourceDomains:[]}},'openai/ui':{preferredDisplayMode:'fullscreen',availableDisplayModes:['fullscreen']}}}]};
       case 'tools/call': {
         if (!tools.some(t => t.name === p.name)) throw new Error('Unknown tool');
         let data;

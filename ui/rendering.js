@@ -139,9 +139,13 @@ function renderLocalPreview(doc, parent, format, source) {
       pre.append(code); parent.append(pre);
     } else throw Error('Unsupported preview format.');
     localText(doc, parent, 'p', 'Rendered locally in this panel. No file, network or model request was made.');
+    return true;
   } catch (error) {
     localText(doc, parent, 'p', error.message);
     // No partial graph: keep the original as bounded, escaped source text.
     localText(doc, parent, 'pre', typeof source === 'string' ? source.slice(0, 4096) : '');
+    return false;
   }
 }
+
+export { parseFlowchart, jsonTokens, renderLocalPreview };

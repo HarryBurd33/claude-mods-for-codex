@@ -1,12 +1,11 @@
 # Final review
 
-Current2026-10-24: [bounded native30 acceptance](continuation/NATIVE-DEV30.md)
-passed for owned appearance/reset/retention, human keyboard/widths and harmless
-hooks. Separate no-save nativeCLI theme discovery/picker passed; physical colors
-unverified. Package242/62tests/CI in PACKAGE-DEV30. Logging/trust/Windows guards
-preserved, original bounds failure unresolved. Next human Sol High for bounded
-authored interaction components; no current restart/trust action.
-Earlier dated notes are historical.
+Current2026-10-24: [source31 authored interactions](continuation/DEV31-REVIEW.md)
+adds disabled bounded local-preview cards/private bundle/access/intent/replay/plan.
+Local246passes/112Windows skips; exact new CI/package/native31 pending. Installed30/
+logging/trust/Windows guards unchanged; original bounds failure unresolved. Next
+human Sol Medium for routine verification/review preparation, High before
+consequential fixes. Earlier dated notes are historical.
 
 
 Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)

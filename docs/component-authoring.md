@@ -1,5 +1,11 @@
 # Author an observer and owned status component — source28
 
+Current source31 also supports [owned local-preview interaction cards](local-interactions.md).
+The observer/status workflow below remains compatible; its dated installed27
+statements are historical. Current installed30 and its logging/trust remain
+unchanged during source31 development. No observer/capture is enabled by a card.
+
+
 Source28 extends the existing notice/deny/replacement workflow with disabled,
 data-only lifecycle observer and retained-event status components. It is a source
 implementation, not installed/native28 acceptance. The reviewed installed27,

@@ -2588,3 +2588,38 @@ Fresh cache242/settings hash/3trusted0errors0inventory turns/32protectedsourcepa
 No runtime/test/CI/config/cache/trust/rule/logging/export/guard/production cleanup
 change. No repeated suite/archive for notes. NATIVE-DEV30/AUTHORING-UI-NEXT record
 limits/nextHigh consequential work; original Windows bounds unresolved, guardssame.
+
+## Source31 local interaction authoring — 2026-10-24 — Sol High
+
+Resumedfdd0667clean. Implemented strict disabled interaction component, same
+private bundle/access/intent/plan CLI, inline reviewed settings definitions and
+fixed owned local Render/Clear UI. No install/config/logging/trust/Windows change.
+Initial existing renderer/bridge37pass. Focused7suites59total58pass0fail1Windows
+skip. Full npm test358total246pass0fail112Windows skips; validate3/replay4 pass.
+New7tests cover contract/default/intent/authority/bounds/getters/hostile labels,
+enabled-only escaped resource/unchanged8tools+CSP, real CLI/synthetic controller
+replay/tamper/privacy/private settings, served bridge per-card isolation/edit/
+Clear/palette/navigation/no messages/stale teardown and hidden disabled view.
+Existing copied-source injected-fault test initially lacked new fixed replay
+import resolution; adapter updated, same refusal/partial-output assertions pass.
+
+Actual Node CLI proof generated disabled3field Review desk6file bundle, validated,
+replayed disabled0controls then private enabled intent3rendered fields/six cases,
+printed fresh settings-only plan/no hooks/capture/installer. Preserved disabled
+bundle. Separate actual installed30 CLI generated legacy status bundle; source31
+validate/replay accepted it and every legacy artifact hash unchanged. Actual trusted
+controller/renderer uses minimal synthetic DOM, not browser/native31. No fixture
+command executed, production metadata writes, arbitrary modules or extra model call.
+
+Existing scaffolding skill route updated using skill-creator guidance. Manual
+frontmatter/reference/CLI check; quick_validate blocked by absent Python yaml,
+no repair/download/pass or independent model evaluation claimed. Exact source31
+CI/public package/native display/focus/accessibility/lifecycle still pending.
+Portable lane now includes interactions tests; existing Windows before-IO guards
+and all known failure evidence retained.
+
+Preservation: installed30cache242files=candidate; approved settings hash and shared
+config bytes unchanged,32protected config/hook/Windows/state/retention source paths
+equal baseline, all93IDs/order retained. Private demos/logs/root handoff ignored.
+No capture/category/model selection/permissions/extra model run/cleanup/install31.
+Full product incomplete; next human Sol Medium exact CI/package/native preparation.
