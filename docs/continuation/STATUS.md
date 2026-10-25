@@ -26,3 +26,9 @@ Windows later. Original bounds failure unresolved, diagnostic pass not a fix;
 known image failures and Windows guards unchanged. Native Windows11/WSL remains
 unverified. Stop for High before consequential/security changes. No new guard,
 optional event or paid model-run selection is granted by this handoff.
+
+Verified implementation source [bdf7fad](https://github.com/HarryBurd33/claude-mods-for-codex/commit/bdf7faddafd78e84715ec6fce34ddc98f4cacc62),
+full tree matched fetched/local checkpoint and anonymous public ref. Exact CI
+[40159257352](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40159257352)
+was queued at readback; no CI outcome claimed. Read source run, not a notes-only
+run, for this checkpoint's acceptance. Disposable preview service exited0.

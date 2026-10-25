@@ -14,10 +14,17 @@ METADATA-BOUNDS-INVESTIGATION.md and latest ignored root HANDOFF.md.
 Repository https://github.com/HarryBurd33/claude-mods-for-codex
 Branch codex/astra-groundwork. Starting commit
 [3a1a6e80497dd86f6573eea9ee9bc6ee5f6a1925](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3a1a6e80497dd86f6573eea9ee9bc6ee5f6a1925),
-treeacfb12f72bab68db93ca3289d2c3293ffabba881. Final checkpoint/ref is read back
-independently after upload and recorded in final reply/private handoff; no
-self-hash is guessed. Public source identity will be pinned in the checkpoint
-follow-up. No force push, lost history, private root handoff or raw log upload.
+treeacfb12f72bab68db93ca3289d2c3293ffabba881. Verified implementation source:
+[bdf7faddafd78e84715ec6fce34ddc98f4cacc62](https://github.com/HarryBurd33/claude-mods-for-codex/commit/bdf7faddafd78e84715ec6fce34ddc98f4cacc62),
+treed4cad6708c11218247667cf1ab21fc6ccae51880. Connector-authored commit, exact local/full fetched tree match;
+anonymous credential-disabled public ref also matched. Equivalent local commit
+80bb528e9b888761a4bbe646ef7e18835a725cee is preserved on
+codex/dev30-appearance-high-source-local-checkpoint. Exact source CI
+[40159257352](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40159257352)
+was queued at readback, no outcome claimed; Medium reads jobs/logs. A subsequent
+notes-only handoff commit does not change these source bytes. Its final ref is
+independently verified in final reply/private handoff rather than guessing a
+self-hash. No force push, lost history, private handoff or raw log upload.
 
 ## Completed / partial / unverified
 

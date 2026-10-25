@@ -2513,3 +2513,12 @@ Windows/retention source paths unchanged.93ledger IDs/order preserved. No instal
 config/theme/cache/trust/guard/logging/capture/export change. Exact source30 CI/
 public package/native are next Medium stage; old Windows bounds failure unresolved,
 known image failures/Windows guards unchanged. DEV30-REVIEW contains limits.
+
+Source30 upload verified bdf7faddafd78e84715ec6fce34ddc98f4cacc62,
+treed4cad6708c11218247667cf1ab21fc6ccae51880. Connector exact tree,
+expected-parent nonforce update, fetched tree and anonymous public ref matched.
+Equivalent local80bb528 preserved on named source checkpoint branch. Source CI
+40159257352 queued at readback; outcomes not inspected/claimed. Local preview
+service observed exit0 after its bounded timer, browser already closed. No
+background work is left for the model-switch stop. Notes-only follow-up needs
+no repeated archive/full suite; Medium checks exact source CI/package next.
