@@ -25,3 +25,7 @@ side effect. Native configured execution/lifecycle needs a separately reviewed
 bounded plan and fresh human authorization; none remains. High before consequential
 code/config/security changes, unsafe surprises or recovery. Windows guards/original
 bounds/image failures unchanged; nativeWindows11/WSL unverified, Windows later.
+
+Verified source checkpoint [8c8c2a7](https://github.com/HarryBurd33/claude-mods-for-codex/commit/8c8c2a7fbb5d7a54f7811d18592267b3bce598d0),
+local/fetched/public ref agreed; exact source tree recorded in HANDOFF. This notes
+follow-up does not change source/test/installed state; final ref verified separately.

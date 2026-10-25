@@ -10,6 +10,20 @@ ARCHITECTURE.md(source32/native-agent and usage/routing), TEST-LOG.md latest,
 ../configured-agents.md, ../component-authoring.md and ignored root HANDOFF.md.
 ROUTING-NEXT.md is the historical High brief, not current next-stage instructions.
 
+## Verified source checkpoint identity
+
+Branch **codex/astra-groundwork**. Source checkpoint local HEAD and independently
+verified public remote commit: **8c8c2a7fbb5d7a54f7811d18592267b3bce598d0**;
+full tree **feb1c0d5f0c185e5025d7449420cd49d48140e52**. GitHub tree creation matched
+local full tree; non-force expected-parent ref update, fetched commit/tree comparison,
+connector source readback and anonymous public ls-remote agreed. Original local
+equivalent5c88d4119b57f9b640d6e39322c000ee146fc196 retained separately, not lost.
+[Source checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/8c8c2a7fbb5d7a54f7811d18592267b3bce598d0),
+[development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
+This documentation follow-up records the already verified source identity; its own
+final ref is independently verified and reported in the final/private record. CI
+and packaging remain pending Medium, not inferred from successful GitHub upload.
+
 ## Completed / partial / blocked
 
 - Strict source32 agent spec, private component bundle, exact validation, static
