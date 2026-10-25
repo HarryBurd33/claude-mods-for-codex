@@ -1,5 +1,7 @@
 # Source35 hook metadata classifier —2026-10-25
 
+Current continuation: [PACKAGE-DEV35](PACKAGE-DEV35.md) and [CI-DEV35](CI-DEV35.md) record later exact-source verification. The original pending directions below are historical; native admission remains closed.
+
 Sol High resumed a2e09fe. Source0.2.0-dev.35 corrects the prepared native preflight's
 blanket refusal of nonempty hooks metadata. No installed configuration, trust,
 logging, model, profile or Windows guard changed. Native execution remains

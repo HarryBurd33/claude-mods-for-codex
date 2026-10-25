@@ -142,7 +142,7 @@ Removing only the private proposal folder discards these review artifacts. Do no
 remove the existing candidate/config, installed31 or unrelated records. There is
 no current running native process/profile/update to roll back. Source35 is an
 incomplete development checkpoint, not a release or full configured-routing result.
-See [DEV35-REVIEW](continuation/DEV35-REVIEW.md) for actual tests and pending checks.
+See [DEV35-REVIEW](continuation/DEV35-REVIEW.md) for classifier tests; [PACKAGE-DEV35](continuation/PACKAGE-DEV35.md) and [CI-DEV35](continuation/CI-DEV35.md) record exact-source verification. Native admission remains closed.
 
 Source35 classifier details/bounds/regression evidence: DEV35-REVIEW. The old34
 proposal remains stale and preserved; the new source review is not an executable

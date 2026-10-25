@@ -3156,3 +3156,28 @@ lifecycle/platform gaps remainincomplete. Save/upload/verify and stopforhumanHig
   External/managed hooks/export compatibility and native run remain unverified.
 - Medium next for exact35CI/package/review/closed-entry. High before new security/
   native work; no inference/install/config grant. Full93 incomplete.
+
+
+## Source35 exact package / CI verification — Sol Medium — 2026-10-25
+
+Resumed f618bc3. Anonymous public clone detached at exact SHA/tree; npm pack
+--ignore-scripts --offline --json with isolated cache. Archive293files,
+2,420,055unpacked/733,195archive bytes; SHA256
+6d2b7e62e26f4a446427536c066ebf0ca011fde3b7fe4f0a3a3c0f6ec984b176.
+Strict extraction/source-byte/integrity/default/version/privacy checks passed.
+Spaced selected packaged suites123pass0fail2skip125total (~6.9sec), validate3/
+replay4 passed; no fixture command execution. Native Node --describe closed and
+--run --plan exit2/stdout0 before plan read/spawn. Initial private assertion expected
+internal exception text, corrected to deliberate fixed CLI message; no source change.
+Synthetic happy-v1/v2 passed/deny-command stopped; fixed peers reaped, no inference.
+Eight review source pins/package match; six frozen34artifacts/archive unchanged;
+no source35PLAN/INPUT or config fingerprint refresh. Preservation checker passed
+before/after all protected config/trust/projects/251installed31files/settings/data/
+sources/marketplace; raw config matches, expected model-picker fields handled apart.
+Exact CI40234846271 for f618bc3: fourPOSIX290pass/0fail/113skip403total plus validate/
+replay; Windows portable native20cases19pass0fail1macOSskip, all6newclassifier cases.
+Both integrations retain known Installer Image/linkcount2 refusal: storage25pass,
+proofs85pass1fail86total each; overall CI failure. Bounds cases passed this run,
+original cause unresolved. See CI-DEV35/PACKAGE-DEV35 for exact evidence and limits.
+No native Codex, install/config/trust/logging/model/Windows guard change or CI rerun.
+Next High for separate source-only native-readiness/proposal review, admission closed.
