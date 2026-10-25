@@ -1,6 +1,17 @@
 # Requirements ledger
 
-## Native31 lifecycle follow-up — current — 2026-10-24
+## Rollback30 follow-up — current — 2026-10-24
+
+[ROLLBACK-DEV30](ROLLBACK-DEV30.md): supported31->30 installed242exactcache, human
+three-hook review verified3trusted/0errors/0turns. Only3owned human trust hashes
+changed; all other config/scoped settings/data/source invariants preserved. Current
+installed30 still needs actual loaded-host acceptance after human restart; approved
+31settings/card/source preserved for return. Stay Sol Medium for restart/native30
+then guarded31restore/humanreview/restart. High on unexpected drift/recovery.
+Full93/Windows gaps remain. Earlier installed31/next-setting notes are historical.
+
+
+## Native31 lifecycle follow-up — historical High checkpoint — 2026-10-24
 
 [LIFECYCLE-DEV31](LIFECYCLE-DEV31.md): actual closed view absent/new invocation
 empty; supported disable/remove affect fresh discovery but already-loaded service
@@ -305,7 +316,7 @@ issues are reports/leads, not reproductions by this project.
 | AU-12 Reload/update safely | Claude development reload/hot reload | Supported immutable marketplace update/restart/cache inspection/human review | CLI163/164; Desk | C-DEV; CX-PKG; CX-TRUST; PACKAGE-DEV26 | supported | Reviewed immutable31 update/restart/native effects and exact same-version restoration observed; loaded service still answers after disable/removal | End/reload/restart affected host then verify absence/current source; older30->31 loaded acceptance pending, no immediate unload/hot-reload claim | No hot reload/cache patch/trust automation; notes-only public changes do not replace installed snapshot |
 | AU-13 Disable without damage | Enable/disable plugin/mod | Supported plugin/project configuration and per-mod config | CLI163/164; Desk | CX-PKG; LOCAL | supported | CLI163 supported version-checked API toggled only owned user-level enabled true->false->true; fresh zero hooks then three trusted; config bytes restored | Loaded MCP service answered while disabled; restarted-host absence/project precedence unverified (LIFECYCLE-DEV31) | User scope tested, project scope documented only. Verify affected host after reload/restart before treating disable as effective |
 | AU-14 Remove cleanly | Plugin removal | Supported plugin/marketplace removal plus separately explicit data cleanup | CLI163; Desk | CX-PKG; LOCAL proofs README | supported | Supported31 removal: active cache/owned enabled entry absent, fresh zero hooks/errors. Exact251-file add restored config bytes/settings/data/trust | Loaded service answered after removal; restarted-host tool absence/process exit unverified; source/plugin-read availability is not installation | Data retained/no lock deletion. End/reload/restart affected host and verify; separate original proof preserved |
-| AU-15 Restore configuration/rollback | Reinstall prior reviewed version | Backups and selective restoration, supported prior snapshot installation | CLI163/164; Desk | CX-PKG; CX-TRUST; LOCAL | supported | Same-version31 reinstatement restored config bytes/cache251/settings/data/trust. Preserved30->31 guarded transitions prepared, not executed | Actual older human review/loaded30/restored31 after restart pending; stop on drift/partial transition for scoped recovery | No whole-config restore/cache patch/trust copy/automatic approval. Both immutable sources and settings preserved |
+| AU-15 Restore configuration/rollback | Reinstall prior reviewed version | Backups and selective restoration, supported prior snapshot installation | CLI163/164; Desk | CX-PKG; CX-TRUST; LOCAL | supported | Same-version31 restoration previously verified. Prepared older31->30 transition now installed242exactcache, human3hooks trusted; settings/data/source31 preserved (ROLLBACK-DEV30) | Actual loaded30 after restart and return31/human review/restart/native restoration still pending; stop on drift/partial failure for scoped recovery | No whole-config restore/cache patch/trust copy/automatic approval. Both immutable sources and settings preserved |
 | AU-16 Package the correct supported distribution | Claude plugin manifest/loading | Compatibility-only hook package; separate portable MCP package if useful | CLI163/164 source; Desk proof | CX-FORMAT; NATIVE-PROOF; LOCAL | supported | Exact source24 public clone/archive/spaced extraction verified; installed dev10 cache149files rechecked; source26 public archive/clone/spaced extraction verified; configured210-file snapshot installed/human-trusted | Bounded native26 hooks/panel/authorized state Watch passed; full lifecycle still pending; no all-platform verification while Windows positive fails | Default three hooks/optional observers separate; development checkpoint is not release |
 
 ## Access, privacy and operational safety

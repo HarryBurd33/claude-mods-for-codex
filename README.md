@@ -1,10 +1,10 @@
 # Claude Mods for Codex
 
-Current [native31 UI acceptance](docs/continuation/NATIVE-DEV31.md) covers the
-approved Review desk and harmless hooks. [Lifecycle checks](docs/continuation/LIFECYCLE-DEV31.md)
-verified fresh disable/removal and exact reinstallation; the already-loaded service
-continued answering. Restart/verify affected hosts before treating disable/removal
-as effective for their loaded tools. Full product remains incomplete.
+Current [rollback acceptance](docs/continuation/ROLLBACK-DEV30.md): the temporary
+older **dev30** snapshot is installed (242 verified files), and its three hooks are
+human-reviewed/trusted. Restart/native30 checks remain pending. Approved dev31
+settings/Review desk and source are preserved for restoration; logging scope and
+Windows guards are unchanged. Full product remains incomplete.
 
 Development source **0.2.0-dev.31** adds [authored local-preview cards](docs/local-interactions.md):
 describe labeled plan/JSON/notes fields, generate a disabled private bundle, inspect
@@ -13,12 +13,13 @@ Clear use fixed local callbacks; no raw-text storage, tool/model/network request
 new hooks or capture. Existing rule/observer/status authoring remains compatible.
 [Source contracts and verification](docs/continuation/DEV31-REVIEW.md).
 
-Installed **dev31** now matches the reviewed251-file candidate. You authorized
-one local **Review desk** card and reviewed its three hooks. Native rendering,
-keyboard/resize/Clear and fresh-view empty fields were observed. Prior logging/rules/exports/status/capture
-selections and Windows guards are preserved. [Package, CI and update evidence](docs/continuation/PACKAGE-DEV31.md).
+Previously installed **dev31** passed bounded [native UI checks](docs/continuation/NATIVE-DEV31.md).
+The current temporary rollback selects preserved dev30/settings28; no settings
+file or capture selection was rewritten. [Lifecycle evidence](docs/continuation/LIFECYCLE-DEV31.md)
+shows existing connections can survive disable/removal, so verify loaded behavior
+after restart rather than inferring it from cache or trust.
 
-Exact public archive/spaced extraction passed79tests with one Windows-only skip,
+The dev31 public archive/spaced extraction passed79tests with one Windows-only skip,
 plus validation/replay. Four POSIX source CI lanes each246passes; Windows portable
 passed. Both Windows integration jobs retain the known image failure; original
 bounds root cause remains unresolved. No all-green/native Windows claim.
@@ -32,8 +33,8 @@ known image failures/Windows guards remain, native Windows11/WSL unverified.
 Existing settings/data remain preserved; only the explicitly authorized local
 card is added in a new private settings file. Local callbacks add no model calls;
 chat/skills consume selected-model usage. No new guard/capture/model-run grant.
-Next: **GPT-6.1 Sol Medium** for the prepared older-version rollback and human
-trust/restart/native confirmations. High before unexpected recovery or consequential
+Next: restart/reopen this chat on **GPT-6.1 Sol Medium** for loaded30 verification,
+then the prepared31 restoration and human trust/restart/native confirmations. High before unexpected recovery or consequential
 source/security changes. Older-version and restarted-host lifecycle acceptance remain incomplete.
 
 ## What it does

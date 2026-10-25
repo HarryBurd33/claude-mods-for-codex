@@ -1,5 +1,10 @@
 # Native31 lifecycle boundary and exact restoration — 2026-10-24
 
+Subsequent [rollback30 checkpoint](ROLLBACK-DEV30.md): installed30/human3hooks
+trusted, actual loaded-host checks await restart;31source/settings preserved.
+The High-stage restored31 results below remain historical, not current install state.
+
+
 GPT-6.1 Sol High resumed9e30067. Bounded macOS host checks completed below. The
 approved installed31 snapshot is restored. No product/runtime/test/CI code change,
 new logging/guard/export/status/capture selection, model run or trust write. Full93

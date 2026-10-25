@@ -1,6 +1,17 @@
 # Extension architecture and security contracts
 
-## Native31 lifecycle follow-up — current — 2026-10-24
+## Rollback30 follow-up — current — 2026-10-24
+
+[ROLLBACK-DEV30](ROLLBACK-DEV30.md): supported31->30 installed242exactcache, human
+three-hook review verified3trusted/0errors/0turns. Only3owned human trust hashes
+changed; all other config/scoped settings/data/source invariants preserved. Current
+installed30 still needs actual loaded-host acceptance after human restart; approved
+31settings/card/source preserved for return. Stay Sol Medium for restart/native30
+then guarded31restore/humanreview/restart. High on unexpected drift/recovery.
+Full93/Windows gaps remain. Earlier installed31/next-setting notes are historical.
+
+
+## Native31 lifecycle follow-up — historical High checkpoint — 2026-10-24
 
 [LIFECYCLE-DEV31](LIFECYCLE-DEV31.md): actual closed view absent/new invocation
 empty; supported disable/remove affect fresh discovery but already-loaded service

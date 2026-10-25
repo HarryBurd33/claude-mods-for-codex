@@ -2701,3 +2701,16 @@ MCP reload not sent.404 oldv2.rs recorded, common.rs+installedschema retrieved.
 High reasoningcompleteforprescribedsteps; nextMediumprotectedhumanreview/restarts,
 returnHighon drift/recovery/securitychanges. OriginalWindowsboundsunresolvedknown
 imagefailureguardsintact. Full93 remains incomplete.
+
+## Medium older30 installation/human review — 2026-10-24
+
+Resumed77a4146 clean. Prepared verify31/controlverify/nativeinventory passed251cache/
+3trusted0errors0turns. Fixedrollback30 supported sameIDadd succeeded, verify30
+242cache exact/settings28+31/data/source30+31 unchanged/allotherconfigequal. Fresh
+inventory3modified0errors0turns. Human explicitlyreviewedtrustedONLY3production30
+hooks, freshinventory3enabledtrusted0errors0turns; verify30 only3ownedhumantrust
+hashchangesvsHighbaseline allotherinvariantsmatch. No unexpecteddrift/recovery,
+agenttrust/newcapture/modelrun/code/test/CI/Windowschange or fullsuite/archive repeat.
+Actual loaded30 not yet observed; currentconnectionmay31. Save/uploadverified
+checkpointthenhumanrestartstayMedium for native30 and guardedreturn31review/restart.
+ROLLBACK-DEV30 records partialscope; earliernative30evidence notsubstituted.
