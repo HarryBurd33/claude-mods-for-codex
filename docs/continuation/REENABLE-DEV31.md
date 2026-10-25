@@ -1,4 +1,29 @@
-# Restart-disabled absence verified; original dev31 enabled flag restored
+# Native dev31 disable/re-enable — verified for the tested target
+
+## Final re-enabled host acceptance — current — 2026-10-24
+
+Medium resumed6d2bd4d after human restart. Current tool discovery returned all eight
+production Claude Mods tools. Enabled preservation/cache251/trust/settings/data/
+sources/marketplace checks passed; fresh3enabledtrusted0errors0modelturns. Actual
+dashboard tool succeeded, new inspected panel4 showed connected/eightviews/
+Authored local tools/approved Reviewdesk3emptyfixedfields/NoPreview/Followhost/
+Watchoff, same selected7records/revision/status5/projectscope. Other panels/drafts
+untouched; no input. Actual production/authored fixed prints rewrote AFTER, fresh
+control unchanged and configured harmless denial blocked/no retry or elevation.
+No unexpected drift/recovery. Current configuration bytes match the pre-disable
+backup; no install/flag/trust/source/policy/logging/Windows change this stage.
+
+Thus the tested user-profile disable -> human restart -> chat registry absence/
+fresh hook absence -> original enabled flag -> human restart -> actual tools/UI/
+covered effects return sequence is verified for the stated macOS target. This is
+not all OS process exit, every client/project precedence or full product acceptance.
+Installed31 is enabled/usable; no further restart or human trust step is needed.
+Native31->30->31 rollback remains separately verified. Full93 still incomplete.
+
+Next: [configured-agent authoring/routing](ROUTING-NEXT.md) needs High before new
+native configuration/security implementation, not because drift was found.
+The pre-final return-pending account below is historical stage evidence.
+
 
 2026-10-24, GPT-6.1 Sol Medium resumed909b2e4 after human restart. The disabled chat
 had no production Claude Mods tools in its available tool registry, and fresh

@@ -1,6 +1,17 @@
 # macOS acceptance audit — 2026-10-24
 
-## Disabled chat absence passed / re-enabled return pending — current — 2026-10-24
+## Native disable/re-enable accepted — current — 2026-10-24
+
+[REENABLE-DEV31](REENABLE-DEV31.md) completes target-bound disable/restart absence/
+original flag/restart actual8tools/Reviewdesk/harmless effects return.251cache/
+config/trust/scoped assets preserved, fresh3trusted0errors0turns; no drift. No current
+restart/trust needed, installed31 enabled/usable. Prior rollback separately verified.
+Not all OS process exit/other-client/project precedence/full93 proof. Next humanHigh
+[configured-agent authoring/routing](ROUTING-NEXT.md) before new security contracts;
+no new model test/capture grant. Windows and other acceptance gaps unchanged.
+
+
+## Disabled absence / flag restoration — historical restart checkpoint — 2026-10-24
 
 [REENABLE-DEV31](REENABLE-DEV31.md): restarted registry0productiontools plus fresh
 0hooks, preserved state, supported onlyenabledtrue restoration/configbytes equal/

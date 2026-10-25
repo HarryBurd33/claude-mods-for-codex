@@ -1,10 +1,10 @@
 # Claude Mods for Codex
 
-The tested [native31->30->31 rollback](docs/continuation/RESTORE-DEV31.md) is verified.
-[Restart-disabled absence](docs/continuation/REENABLE-DEV31.md) passed for this chat's
-tool registry and fresh hooks. **Dev31 is now re-enabled**, with configuration bytes,
-trust, settings, data and251files preserved; another restart/native return check
-remains. Windows guards unchanged. Full product incomplete.
+The tested [native31->30->31 rollback](docs/continuation/RESTORE-DEV31.md) and
+[profile-level disable/re-enable](docs/continuation/REENABLE-DEV31.md) are verified
+for the stated macOS target. **Dev31 is enabled and its tools/Review desk returned
+after restart.** Configuration, trust, settings, data and251files are preserved;
+no restart or trust review is currently needed. Full product remains incomplete.
 
 Development source **0.2.0-dev.31** adds [authored local-preview cards](docs/local-interactions.md):
 describe labeled plan/JSON/notes fields, generate a disabled private bundle, inspect
@@ -15,9 +15,9 @@ new hooks or capture. Existing rule/observer/status authoring remains compatible
 
 The approved **Review desk** returned with three empty fixed-format fields;
 rollback30 had seven views and no Review desk. Both source/settings snapshots remain.
-The original owned enabled flag is restored. Current chat started disabled, so
-verify re-enabled tools after restart rather than inferring loaded behavior from
-configuration, hook inventory or cached panels.
+The original owned enabled flag is restored and actual tools/Review desk return
+was observed after restart. These bounded checks do not establish all OS process
+exit, every client/project configuration or full platform compatibility.
 
 The dev31 public archive/spaced extraction passed79tests with one Windows-only skip,
 plus validation/replay. Four POSIX source CI lanes each246passes; Windows portable
@@ -33,9 +33,9 @@ known image failures/Windows guards remain, native Windows11/WSL unverified.
 Existing settings/data remain preserved; only the explicitly authorized local
 card is added in a new private settings file. Local callbacks add no model calls;
 chat/skills consume selected-model usage. No new guard/capture/model-run grant.
-Next: restart/reopen on **GPT-6.1 Sol Medium** to verify actual re-enabled31 tools,
-Review desk and harmless hooks. No reinstall or further trust review is needed. High before unexpected recovery or consequential
-source/security changes. Older-version and restarted-host lifecycle acceptance remain incomplete.
+Next: **GPT-6.1 Sol High** for [configured-agent authoring/routing](docs/continuation/ROUTING-NEXT.md)
+before new configuration/security contracts; installed31 stays unchanged. Other-client/platform/all-process cleanup and remaining feature acceptance stay
+incomplete; the bounded rollback/disable/re-enable sequences above passed.
 
 ## What it does
 

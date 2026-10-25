@@ -1,6 +1,17 @@
 # Extension architecture and security contracts
 
-## Disabled absence passed / dev31 re-enabled — current — 2026-10-24
+## Re-enabled31 host verified — current — 2026-10-24
+
+[REENABLE-DEV31](REENABLE-DEV31.md): actual eight tools/Reviewdesk/covered harmless
+effects returned after restart; config/cache251/trust/scoped state preserved,
+fresh3trusted0errors0turns. Target-bound disable/re-enable and separate rollback
+verified, not all-process/other-client/full-product proof. No drift or new capture/
+model run/Windows change. Next human Sol High for [configured-agent authoring and
+routing](ROUTING-NEXT.md) before new consequential contracts; no current restart
+or trust action. Earlier return-pending state below is historical; full93 incomplete.
+
+
+## Disabled absence / flag restoration — historical restart checkpoint — 2026-10-24
 
 [REENABLE-DEV31](REENABLE-DEV31.md): restarted chat registry0productiontools and
 fresh0ownedhooks, scoped preservation passed. Supported ONLYoriginal enabled=true

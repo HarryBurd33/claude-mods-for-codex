@@ -8,8 +8,8 @@ fresh inventory alone does not establish immediate revocation or process exit.
 Settings, trust, selected metadata and unrelated config were preserved. The bounded
 [native31->30->31 rollback](continuation/RESTORE-DEV31.md) is now verified; separate
 [restart-disabled chat absence](continuation/REENABLE-DEV31.md) passed. Original
-flag/configuration restored; actual re-enabled loaded return is pending, not all
-process exit.
+flag/configuration and actual re-enabled loaded tools/Reviewdesk return passed for
+this tested chat/host, not all OS process exit.
 No data cleanup was run.
 
 Use the supported Plugins controls in the client where the plugin is active to disable it. Do not simulate disabling by editing trust hashes or deleting cached files while the client is running. If that client does not expose a suitable disable control, uninstall the selected plugin with the CLI command below. End affected sessions or restart the client, then verify that new sessions no longer load its hooks.

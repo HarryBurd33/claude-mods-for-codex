@@ -1,8 +1,8 @@
-# Restart-based dev31 disable acceptance — prepared, host check pending
+# Restart-based dev31 disable acceptance — preparation record
 
 Current [REENABLE-DEV31](REENABLE-DEV31.md): disabled-chat tool/fresh-hook absence
 verified after restart; original enabled flag and exact configuration restored,
-fresh3trustedhooks. Another restart for actual loaded return remains pending.
+fresh3trustedhooks and actual loaded return passed after the next restart.
 The preparation/next-step description below is the earlier stage record.
 
 
