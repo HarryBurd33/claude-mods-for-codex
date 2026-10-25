@@ -53,11 +53,11 @@ Commands:
   replay    Replay saved JSON envelopes offline and print restricted responses.
   scaffold  Generate disabled declarative configuration, access review and
             matching/nonmatching offline replay fixtures. Never executes them.
-  scaffold-component  Create a disabled observer/status/local-preview bundle with review,
+  scaffold-component  Create an inert observer/status/local-preview/native-agent bundle with review,
                       integrity marker and synthetic tests (new POSIX output only).
   validate-component  Verify private complete bundle data; hashes are not trust.
-  component-plan      Print separate registration/storage/display merge fragments.
-  replay-component    Test synthetic events/counts or local UI callbacks; never execute or
+  component-plan      Print registration/storage/display fragments or native-profile review plan.
+  replay-component    Test synthetic events/counts, local UI or static profile contracts; never execute or
                       install. Optional intent changes only activation booleans.
   scope     Check supplied native session/project capture boundary without logging.
             Windows requires the exact explicitly selected root string.

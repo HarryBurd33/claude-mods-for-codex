@@ -89,3 +89,27 @@ This result establishes bounded package/source-map provenance. It does **not** e
 ## Outstanding verification
 
 Live manual install/trust, hook dispatch inside the installed host, skill invocation, UI panels, model-driven behavior, other operating systems, and automation integration were not exercised. The implementation should maintain its own actual check results separately from this research record.
+
+## Targeted configured-agent contract refresh — 2026-10-24
+
+Retrieved official [subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
+and [plugin packaging](https://developers.openai.com/plugins/build/plugins); inspected
+released163/164 agent parser/discovery/loader/role/child and plugin loader sources.
+See [source32 evidence](continuation/DEV32-REVIEW.md) and
+[implementation boundaries](configured-agents.md) for exact pins/primary links.
+Native TOML agents use separate project/user configuration; no plugin agent-directory
+contract established. Native discovery recurses for exact .toml, so review output
+must use inert .toml.txt. Current standaloneCLI0.164.0 no-turn explicit-reference
+parser control succeeded; this is not runtime routing or automatic discovery proof.
+Model effort schema is advertised nonempty string, availability unknown. No upgrade,
+new inference/native profile/shared config/trust/logging change. All model grants
+consumed. Independent TOML literal parsing passed; native effective inheritance
+remains source corroboration only. Desktop/internal version and Windows unverified.
+
+Guessed source paths agent-roles/src/parse.rs and types.rs returned404; guessed
+core-plugins/src/types.rs yielded no usable text; not treated as reviewed sources.
+Actual parser agent_role_config.rs was retrieved. A guessed v2 InitializeResponse
+schema path was absent; schema generation succeeded and actual ClientRequest was
+inspected. No REA rerun, videos or unrelated source/credential investigation.
+Earlier Outstanding verification above is the historical research-stage state;
+current feature-specific native acceptance is in continuation/REQUIREMENTS/TEST-LOG.

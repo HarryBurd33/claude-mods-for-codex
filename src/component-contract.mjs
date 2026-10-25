@@ -1,6 +1,7 @@
 import { KNOWN_EVENTS, OBSERVER_EVENTS } from './constants.mjs';
 import { validateEventEnvelope } from './dispatcher.mjs';
 import { validateInteraction } from './interaction-contract.mjs';
+import { validateAgent, agentAccess, agentPlan } from './agent-contract.mjs';
 
 export function componentError() { throw new Error('Invalid or unsupported component data'); }
 export function componentRecord(value, keys) {
@@ -28,7 +29,12 @@ export function componentFromSpec(spec) {
   // Kind-specific shapes exclude paths, commands, HTML/JS templates and grants.
   if (!spec || typeof spec !== 'object') componentError();
   const kind = Object.getOwnPropertyDescriptor(spec, 'kind');
-  if (!kind || !Object.hasOwn(kind, 'value') || !['observer', 'status', 'activity', 'interaction'].includes(kind.value)) componentError();
+  if (!kind || !Object.hasOwn(kind, 'value') || !['observer', 'status', 'activity', 'interaction', 'agent'].includes(kind.value)) componentError();
+  if (kind.value === 'agent') {
+    componentRecord(spec, ['name', 'kind', 'description', 'instructions', 'model', 'reasoningEffort']);
+    return validateComponent({ version: 1, id: id(spec.name), agent: { selected: false, description: spec.description,
+      instructions: spec.instructions, model: spec.model, reasoningEffort: spec.reasoningEffort } });
+  }
   if (kind.value === 'interaction') {
     componentRecord(spec, ['name', 'kind', 'title', 'fields']);
     return validateComponent({ version: 1, id: id(spec.name), interaction: { enabled: false, title: spec.title, fields: spec.fields } });
@@ -43,10 +49,14 @@ export function componentFromSpec(spec) {
 
 export function validateComponent(value) {
   if (!value || typeof value !== 'object') componentError();
-  const keys = ['version', 'id', ...(['observer', 'status', 'interaction'].filter(k => Object.hasOwn(value, k)))];
+  const keys = ['version', 'id', ...(['observer', 'status', 'interaction', 'agent'].filter(k => Object.hasOwn(value, k)))];
   componentRecord(value, keys);
   if (value.version !== 1 || keys.length === 2) componentError();
   const result = { version: 1, id: id(value.id) };
+  if (Object.hasOwn(value, 'agent')) {
+    if (keys.length !== 3) componentError(); // Profiles never grant hook/UI/state authority.
+    result.agent = validateAgent(value.agent);
+  }
   if (Object.hasOwn(value, 'interaction')) {
     if (keys.length !== 3) componentError(); // Never share raw local input with observers/status.
     result.interaction = validateInteraction(value.interaction);
@@ -76,6 +86,7 @@ export function validateStatusComponents(value = []) {
 
 export function componentAccess(component) {
   const c = validateComponent(component);
+  if (c.agent) return agentAccess(c.id, c.agent);
   if (c.interaction) return { version: 1, id: c.id, component: 'owned local-preview interaction', display: c.interaction.enabled,
     reception: false, retention: false, requestedReceptionEvents: [], requestedStorageEvents: [],
     potentialReads: ['Authored labels/formats in this reviewed declaration; user-entered text only in its own webview fields'],
@@ -98,6 +109,7 @@ export function componentAccess(component) {
 
 export function componentPlan(component) {
   const c = validateComponent(component), hooks = {};
+  if (c.agent) return agentPlan(c.id, c.agent);
   if (c.observer?.reception) for (const event of c.observer.events) hooks[event] = [{ hooks: [{
     type: 'command', command: 'node "${PLUGIN_ROOT}/src/hook-main.mjs"', timeout: ['Interrupt', 'SessionEnd'].includes(event) ? 3 : 5,
     statusMessage: 'Observing opted-in Claude Mods lifecycle metadata',
@@ -144,6 +156,7 @@ export function componentIntent(base, proposed) {
   if (reset.observer) { reset.observer.reception = false; reset.observer.retention = false; }
   if (reset.status) reset.status.enabled = false;
   if (reset.interaction) reset.interaction.enabled = false;
+  if (reset.agent) reset.agent.selected = false;
   if (JSON.stringify(reset) !== JSON.stringify(original)) componentError();
   return next;
 }

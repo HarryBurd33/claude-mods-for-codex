@@ -1,41 +1,16 @@
 # Claude Mods for Codex
 
-The tested [native31->30->31 rollback](docs/continuation/RESTORE-DEV31.md) and
-[profile-level disable/re-enable](docs/continuation/REENABLE-DEV31.md) are verified
-for the stated macOS target. **Dev31 is enabled and its tools/Review desk returned
-after restart.** Configuration, trust, settings, data and251files are preserved;
-no restart or trust review is currently needed. Full product remains incomplete.
+Development source **0.2.0-dev.32** adds [explicit native agent candidates](docs/configured-agents.md): describe a new child with an explicitly chosen model/effort, scaffold a private inert bundle, validate/static-replay and inspect its access/review plan. It never installs or invokes an agent, changes this chat's model/prompt, enables capture or alters permissions. A `.toml.txt` candidate prevents accidental native discovery; installation is a separately reviewed native configuration alternative, not plugin agent loading. [Source32 evidence](docs/continuation/DEV32-REVIEW.md).
 
-Development source **0.2.0-dev.31** adds [authored local-preview cards](docs/local-interactions.md):
-describe labeled plan/JSON/notes fields, generate a disabled private bundle, inspect
-access, validate/replay and plan a reviewed display-only settings merge. Render/
-Clear use fixed local callbacks; no raw-text storage, tool/model/network requests,
-new hooks or capture. Existing rule/observer/status authoring remains compatible.
-[Source contracts and verification](docs/continuation/DEV31-REVIEW.md).
+Installed **0.2.0-dev.31** remains enabled with the approved Review desk, eight tools and unchanged251files/settings/logging/trust/data. Its [native rollback](docs/continuation/RESTORE-DEV31.md) and [disable/re-enable](docs/continuation/REENABLE-DEV31.md) sequences passed within their macOS target. No current install/restart/trust action is needed. Source32 has not been installed.
 
-The approved **Review desk** returned with three empty fixed-format fields;
-rollback30 had seven views and no Review desk. Both source/settings snapshots remain.
-The original owned enabled flag is restored and actual tools/Review desk return
-was observed after restart. These bounded checks do not establish all OS process
-exit, every client/project configuration or full platform compatibility.
+Source32 local tests: **252passed,112Windows-only skips,0failed**; validation/replay passed. Independent TOML round-trip and standalone CLI0.164.0 no-model parser checks passed within their stated limits. Configured-child execution, native directory discovery, model availability and effective permission inheritance remain unverified. Source32 CI/archive/public-clone packaging is next; prior source31 evidence remains separately recorded.
 
-The dev31 public archive/spaced extraction passed79tests with one Windows-only skip,
-plus validation/replay. Four POSIX source CI lanes each246passes; Windows portable
-passed. Both Windows integration jobs retain the known image failure; original
-bounds root cause remains unresolved. No all-green/native Windows claim.
-Synthetic UI replay is separate from actual host acceptance.
+The full [93-requirement product](docs/continuation/REQUIREMENTS.md) remains incomplete. macOS acceptance first, Windows later. Original Windows bounds cause/image failures and all Windows guards remain unchanged; native Windows11/WSL unverified. No extra model run is authorized. Local callbacks add no model calls; chat/skills and native children consume usage.
+
+Next human setting: **GPT-6.1 Sol Medium** for source32 CI and packaging. Preserve installed31 and parent model/logging/trust; return to High before consequential code/config/security changes or unexpected recovery. [Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md), [access/privacy](docs/privacy.md), [removal](docs/removal.md). This is an incomplete development branch; the default branch retains the original MVP.
 
 Independent MIT project, not affiliated with or endorsed by Anthropic or OpenAI.
-The full [93-requirement product](docs/continuation/REQUIREMENTS.md) is incomplete.
-macOS acceptance first, Windows later. Original Windows bounds failure unresolved;
-known image failures/Windows guards remain, native Windows11/WSL unverified.
-
-Existing settings/data remain preserved; only the explicitly authorized local
-card is added in a new private settings file. Local callbacks add no model calls;
-chat/skills consume selected-model usage. No new guard/capture/model-run grant.
-Next: **GPT-6.1 Sol High** for [configured-agent authoring/routing](docs/continuation/ROUTING-NEXT.md)
-before new configuration/security contracts; installed31 stays unchanged. Other-client/platform/all-process cleanup and remaining feature acceptance stay
-incomplete; the bounded rollback/disable/re-enable sequences above passed.
 
 ## What it does
 
@@ -46,6 +21,7 @@ incomplete; the bounded rollback/disable/re-enable sequences above passed.
 - Keeps journaling off by default. When enabled, it stores only time, event name, tool identifier, and a deny outcome in Codex's explicit plugin data directory.
 - Offers explicit POSIX selected-scope retention preview/cleanup, with no automatic deletion.
 - Authors private disabled observer/status bundles, validates complete artifacts and replays synthetic cases without execution/install/trust.
+- Authors inert native agent profile candidates with explicit child model/effort and permission/usage review; no automatic installation or invocation.
 - Displays authored counters inside owned Activity using only existing selected retained metadata, with no new path or capture grant.
 - Summarizes one explicitly selected private exec export, separating command status, exit buckets and turn/error records. Source-only; independent of live hook metadata and usage selection.
 - Uses standard Node.js modules, plus fixed system Windows PowerShell5.1/.NET Framework for Windows private storage; no dependency download or network call.

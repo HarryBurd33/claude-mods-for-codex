@@ -1,6 +1,20 @@
 # Extension architecture and security contracts
 
-## Re-enabled31 host verified — current — 2026-10-24
+## Source32 configured-agent authoring — current — 2026-10-24
+
+[DEV32-REVIEW](DEV32-REVIEW.md) and [configured-agents](../configured-agents.md):
+strict inert native candidate/spec/private bundle/boolean review-intent/static
+replay/plan implemented. Five literal fields, .toml.txt prevents accidental recursive
+native discovery, no installer/launcher/global defaults/parent-model/prompt or
+permission change. Separate reviewed native configuration, not plugin agent loading.
+Local252pass/112Windows-only skips/0fail; actual standaloneCLI0.164 no-turn parser
+check and independent TOML round-trip passed within limits, not configured execution.
+Installed31/config/cache251/trust/settings/data/logging and Windows guards preserved.
+Source32 CI/package/native routing remain unverified; no extra model grant. Next
+human Sol Medium for CI/packaging; High before consequential code/config/security
+changes or recovery. Full93 incomplete. All older status sections below historical.
+
+## Re-enabled31 host verified — historical — 2026-10-24
 
 [REENABLE-DEV31](REENABLE-DEV31.md): actual eight tools/Reviewdesk/covered harmless
 effects returned after restart; config/cache251/trust/scoped state preserved,
@@ -1097,6 +1111,29 @@ capabilities/version, give text fallback, apply host style variables, label
 controls, preserve keyboard focus and close observers on teardown. Avoid remote
 assets or rendering untrusted HTML. Test actual host pixels/interaction, not
 just a browser mock. Core deterministic callbacks and buttons make no model calls.
+
+## Source32 native-agent authoring contract
+
+src/agent-contract.mjs is pure validation/TOML encoding/access/plan/static replay;
+component-contract integrates exclusive kind:agent and boolean-only agent.selected
+intent. component-authoring uses the existing POSIX private IO/hash/regeneration
+loader and adds only agent-candidate.toml.txt and fixtures/agent.json artifact names.
+No runtime-settings/server/tool/hook authority or task launcher is added. Profile
+selection never installs; candidate bytes are identical selected/unselected.
+Released native discovery recurses for exact .toml, so inert .txt suffix is mandatory.
+Native profile five-key parser/discovery/role/child contracts are pinned in
+[configured-agents](../configured-agents.md); source/runtime/no-turn/static evidence
+are separate. Model/effort are explicit bounded literal identifiers, availability
+unverified. Parent permissions/provider/MCP remain authoritative; generated child
+instructions are not a sandbox or parent user-prompt mutation. Unknown options,
+combined components/permission/action/path/parent interception fields refuse.
+
+Support is the separately reviewed native project/user alternative, not established
+plugin agent loading. No current native profile/config/trust change or extra model
+usage grant. Native discovery/execution/effective inheritance/lifecycle remain
+unverified. Installed31 remains251files with approved card/settings/logging unchanged.
+Source32 shared invalidJSON guidance uses literal fallback without an unavailable
+format selector; no rendering authority expansion. Windows before-IO guards unchanged.
 
 ## Usage, routing and skills
 

@@ -78,6 +78,10 @@ test('JSON highlighting preserves exact source before visible control escaping a
 
 test('unsupported preview produces escaped source rather than a partial graph; plain code is literal (simulated DOM)', () => {
   const parent = new Element('div');
+  api.renderLocalPreview(doc, parent, 'json', '{ "x": <script>literal }');
+  assert.ok(descendants(parent).some(n => n.textContent === 'Invalid JSON. Source is shown as literal text.'));
+  assert.ok(descendants(parent).some(n => n.tagName === 'pre' && n.textContent === '{ "x": <script>literal }'));
+  assert.equal(descendants(parent).some(n => n.tagName === 'script'), false);
   api.renderLocalPreview(doc, parent, 'flowchart', 'flowchart LR\nA --> B\nclick A evil');
   assert.equal(descendants(parent).some(n => n.tagName === 'svg'), false);
   assert.ok(descendants(parent).some(n => n.tagName === 'pre' && n.textContent.endsWith('click A evil')));

@@ -38,7 +38,7 @@ function parseFlowchart(source) {
 
 function jsonTokens(source) {
   if (typeof source !== 'string' || source.length > 4096) throw Error('Use at most 4,096 characters.');
-  try { JSON.parse(source); } catch { throw Error('Invalid JSON. Choose Plain code to inspect literal text.'); }
+  try { JSON.parse(source); } catch { throw Error('Invalid JSON. Source is shown as literal text.'); }
   // Parsing checks syntax; this bounded scanner only assigns display classes.
   // It never evaluates a token or creates markup from the input.
   const tokens = [];

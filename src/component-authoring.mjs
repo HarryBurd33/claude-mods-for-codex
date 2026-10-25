@@ -5,6 +5,7 @@ import { dirname, isAbsolute, join, resolve } from 'node:path';
 import { KNOWN_EVENTS } from './constants.mjs';
 import { componentFromSpec, componentAccess, componentPlan, componentIntent, validateComponent, projectStatusComponents, replayComponentEvent, componentRecord } from './component-contract.mjs';
 import { interactionFixtures, replayInteraction } from './interaction-replay.mjs';
+import { agentToml, agentFixtures, replayAgent } from './agent-contract.mjs';
 
 const MAX_FILE = 32768, MAX_TOTAL = 128 * 1024;
 const hash = data => createHash('sha256').update(data).digest('hex');
@@ -136,7 +137,63 @@ dashboard settings remain gated; no POSIX-mode-bit workaround. Native rendering,
 keyboard/accessibility/lifecycle acceptance is separate from this replay.
 `;
 
+const AGENT_REVIEW = `# Review this inert native agent candidate
+
+This bundle authors separate native Codex project/user configuration. It is not
+plugin agent discovery, a tool, hook, slash callback or task launcher. The TOML
+candidate uses .toml.txt so native .toml discovery skips it, even in a nested
+bundle. Keep review output outside native configuration. selected=false is intent;
+it is not a native enabled flag. Copying the candidate to a native agents directory
+can make it discoverable; do not do that during validation or static replay.
+
+Use the verified absolute bin/codex-mods.mjs CLI: validate-component --bundle DIR,
+replay-component --bundle DIR, then inspect component/access/plan JSON and the
+exact agent-candidate.toml.txt. Replay checks selection/forbidden authority fields;
+it never starts a native agent, executes instructions or verifies model access.
+Only five literal TOML fields are emitted. No arbitrary keys, shell interpolation,
+global defaults, parent-model/prompt interception, permissions or capture changes.
+To select a review plan, copy component.json to a separate private intent and
+change only agent.selected to true; use --intent FILE with replay/component-plan.
+Changes to model, effort, description or instructions require regeneration/review.
+Hashes and successful parsing are not author trust or runtime verification.
+
+The native child inherits parent approval/sandbox/provider/MCP constraints and may
+use inherited tools/files/network/environment. Instructions are not a sandbox.
+The exact child model and effort are visible in access/plan/TOML. Availability and
+compatibility are unverified; never silently substitute or change the parent.
+Native invocation consumes usage and needs a separate explicit bounded human
+authorization. No amount/cost guarantee or claim process kill cancels inference.
+Generation/validation/static replay add zero model/network calls; describing with
+a skill consumes the selected model's usage. Keep authored text/artifacts private.
+
+For a supported reviewed install: inspect the target client's actual native-agent
+support, choose ONE project or personal scope from plan.json, and inspect collisions
+in both scopes/configured role names without reading unrelated sessions/secrets.
+Review name/description/instructions/model/effort and preserve any existing target
+privately before an explicitly requested change. Do not overwrite a different
+profile or built-in, edit global agent defaults, mutate trust hashes or automatically
+accept host review. Restart/reload as the native host requires; no hot reload claim.
+No CLI command here installs, copies to discovery, launches or authorizes a task.
+
+Update: regenerate, validate/replay/diff and review a new private candidate; replace
+only the explicitly selected native target after preserving it and reviewing host
+trust/reload needs. Disable/remove: separately review moving only that selected
+profile outside discovery (and any explicit role reference), preserving unrelated
+profiles/global settings. This does not cancel already-running children. Rollback:
+restore only the preserved selected profile/reference after review, not whole shared
+config or plugin caches/trust. Native installation/execution/removal acceptance is
+separate and currently unverified. Plugin installation alone does not install this
+profile. Desktop discovery and native Windows acceptance remain unverified.
+
+Partial/tampered bundles refuse. Inspect without automatic cleanup/overwrite/retry.
+Windows new component IO remains unavailable; pure contracts are not Windows
+native acceptance. See docs/configured-agents.md for the source/version boundary.
+`;
+
 function artifacts(component) {
+  if (component.agent) return { 'component.json': json(component), 'access.json': json(componentAccess(component)),
+    'plan.json': json(componentPlan(component)), 'REVIEW.md': AGENT_REVIEW,
+    'agent-candidate.toml.txt': agentToml(component.id, component.agent), 'fixtures/agent.json': json(agentFixtures()) };
   if (component.interaction) return { 'component.json': json(component), 'access.json': json(componentAccess(component)),
     'plan.json': json(componentPlan(component)), 'REVIEW.md': INTERACTION_REVIEW, 'fixtures/local.json': json(interactionFixtures(component)) };
   const chosen = component.observer?.events ?? component.status.events;
@@ -148,7 +205,7 @@ function artifacts(component) {
   result['fixtures/malformed.json'] = json({ ...eventFixture(chosen[0]), session_id: '' });
   return result;
 }
-function requireDisabled(c) { if (c.observer?.reception || c.observer?.retention || c.status?.enabled || c.interaction?.enabled) refuse(); }
+function requireDisabled(c) { if (c.observer?.reception || c.observer?.retention || c.status?.enabled || c.interaction?.enabled || c.agent?.selected) refuse(); }
 
 export async function scaffoldComponent(spec, destination) {
   assertComponentPlatform();
@@ -185,7 +242,7 @@ export async function loadComponentBundle(input, intentPath) {
     componentRecord(marker, ['version', 'files']);
     if (marker.version !== 1 || !marker.files || typeof marker.files !== 'object' || Array.isArray(marker.files)) refuse();
     const names = Object.keys(marker.files);
-    if (names.length > 15 || !names.length || names.some(name => !/^(component\.json|access\.json|plan\.json|summary\.json|REVIEW\.md|fixtures\/(matching-[0-7]|nonmatching|malformed|local)\.json)$/.test(name) || !/^[a-f0-9]{64}$/.test(marker.files[name]))) refuse();
+    if (names.length > 15 || !names.length || names.some(name => !/^(component\.json|access\.json|plan\.json|summary\.json|REVIEW\.md|agent-candidate\.toml\.txt|fixtures\/(matching-[0-7]|nonmatching|malformed|local|agent)\.json)$/.test(name) || !/^[a-f0-9]{64}$/.test(marker.files[name]))) refuse();
     const files = {}; let total = Buffer.byteLength(markerText);
     for (const name of names) { const text = await readPrivate(join(path, name)); total += Buffer.byteLength(text); if (total > MAX_TOTAL || hash(text) !== marker.files[name]) refuse(); files[name] = text; }
     const component = validateComponent(JSON.parse(files['component.json'])); requireDisabled(component);
@@ -201,6 +258,7 @@ export async function loadComponentBundle(input, intentPath) {
 }
 
 export function replayComponentBundle(bundle) {
+  if (bundle.component.agent) return { agent: replayAgent(bundle.component.id, bundle.component.agent, JSON.parse(bundle.files['fixtures/agent.json'])), synthetic: true, writes: false, executes: false };
   if (bundle.component.interaction) return { interaction: replayInteraction(bundle.component, JSON.parse(bundle.files['fixtures/local.json'])), synthetic: true, writes: false, executes: false };
   return { fixtures: Object.keys(bundle.files).filter(name => name.startsWith('fixtures/')).map(name => ({ fixture: name, ...replayComponentEvent(bundle.component, JSON.parse(bundle.files[name])) })),
     status: projectStatusComponents(JSON.parse(bundle.files['summary.json']), bundle.component.status ? [{ id: bundle.component.id, ...bundle.component.status }] : []),

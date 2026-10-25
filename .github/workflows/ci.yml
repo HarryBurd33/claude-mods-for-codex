@@ -53,7 +53,7 @@ jobs:
       - name: Generated authoring fixtures and offline CLI (synthetic data, no installation)
         run: node --test test/scaffold.test.mjs
       - name: Component pure contracts and actual Windows before-IO refusal (POSIX IO cases skip)
-        run: node --test test/components.test.mjs test/interactions.test.mjs
+        run: node --test test/components.test.mjs test/interactions.test.mjs test/agents.test.mjs
       - name: Retention Windows before-IO refusal (POSIX cleanup cases skip)
         run: node --test test/retention.test.mjs
       - run: npm run validate

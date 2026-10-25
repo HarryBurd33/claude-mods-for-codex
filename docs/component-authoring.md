@@ -1,9 +1,10 @@
 # Author an observer and owned status component — source28
 
-Current source31 also supports [owned local-preview interaction cards](local-interactions.md).
-The observer/status workflow below remains compatible; its dated installed27
-statements are historical. Current installed30 and its logging/trust remain
-unchanged during source31 development. No observer/capture is enabled by a card.
+Current source32 also supports [explicit native agent candidates](configured-agents.md)
+and source31 [owned local-preview cards](local-interactions.md). Installed31 and its
+approved settings/logging/trust remain unchanged. The observer/status workflow
+below remains compatible; dated installed27/30 statements are historical.
+No observer/capture is enabled by a card or native-agent review plan.
 
 
 Source28 extends the existing notice/deny/replacement workflow with disabled,
@@ -14,7 +15,7 @@ logging scope, trust, synthetic observation fixture and old usage export stay un
 The component is part of the existing official-host plugin. A status title and
 counter table appear inside its owned Activity view; this does not create native
 host tabs/bands or change tool rows, dialogs, spinners or transcript rendering.
-No arbitrary code/template loading, slash callback, separate client or model route.
+This observer/status route supplies no arbitrary code/template loading, slash callback, separate client or model invocation.
 
 ## Describe and generate
 

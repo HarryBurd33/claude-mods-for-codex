@@ -1,19 +1,27 @@
-# Current status — native31 lifecycle acceptance passed — 2026-10-24
+# Current status — source32 authoring / installed31 preserved — 2026-10-24
 
-[REENABLE-DEV31](REENABLE-DEV31.md): after restart, eight tools/actual eight-view
-dashboard/approved empty Reviewdesk returned, same7records/status5/scope, harmless
-rewrites/control/deny passed. Cache251/config bytes/trust/settings/data/assets
-preserved, fresh3trusted0errors0turns. Target-bound disable/re-enable sequence and
-separate native31->30->31 rollback are verified. No drift/recovery/new model run,
-source/test/CI/logging/capture/Windows change. No restart/trust action now needed.
+[DEV32-REVIEW](DEV32-REVIEW.md): explicit native-agent candidate scaffold/validate/
+static replay/review-intent/plan implemented. Exact chosen child model/effort,
+inherited permission/usage disclosure, five literal fields, inert .toml.txt suffix
+(no accidental recursive discovery), no automatic install/inference/parent-model/
+prompt/global config/trust or logging changes. Separate native configuration
+alternative; plugin agent-directory loading not established. Small shared JSON
+fallback guidance corrected. Installed31 remains enabled/usable and unmodified.
 
-Installed31 remains enabled/usable. Full93 incomplete; all-process exit/other-client
-and project precedence, full accessibility, optional events, configured-subagent
-routing and platform gaps remain. Original Windows bounds/image failures and all
-before-IO guards unchanged; Windows later, no proof loop/host availability question.
+Local macOS14.6/Node24.22.0:252passed/112Windows-only skips/0failed/364total;
+focused29pass/1skip; validate3mods/replay4fixtures pass. Final candidate independent
+TOML round-trip and real standaloneCLI0.164 no-model initialize/config-read
+valid/malformed parser control succeeded within limits. No configured-child run,
+automatic native discovery, effective permission inheritance or model access proved.
+No new native profile/project/config/shared defaults or model turn created.
 
-Next human **GPT-6.1 Sol High** for [configured-agent authoring/routing](ROUTING-NEXT.md):
-new native configuration/security/visible usage contracts warrant High. Existing
-new-task ephemeral runs are not custom-subagent implementation. Preserve installed31/
-approved settings/parent model/logging scope/trust; no new capture or paid model
-test grant. Return Medium after consequential work is resolved.
+Prepared installed31 checker before/after:251cache/config/ownedtrust/settings/
+sources/marketplace/data unchanged. No runtime/capture scope broadening. Earlier
+macOS rollback/disable-re-enable acceptance remains; full93 incomplete.
+
+Next human **GPT-6.1 Sol Medium** for exact source32 CI/archive/public-clone/spaced
+packaging verification. Do not install/update31 or publish a native profile by
+side effect. Native configured execution/lifecycle needs a separately reviewed
+bounded plan and fresh human authorization; none remains. High before consequential
+code/config/security changes, unsafe surprises or recovery. Windows guards/original
+bounds/image failures unchanged; nativeWindows11/WSL unverified, Windows later.

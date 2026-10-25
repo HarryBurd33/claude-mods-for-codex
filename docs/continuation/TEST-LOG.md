@@ -2783,3 +2783,42 @@ disable/restartabsence/re-enable/restartreturn acceptance passed; NOTallOSproces
 allclients/projectprecedence/full93. No currentrestart/trustrequired.
 NextHigh configuredcustomagent authoring/routing gap EV15/AU06 before new contracts,
 notanunexpectedfailure; no paid call or collaboration/delegatedmodel authorized.
+
+## High source32 configured-agent authoring — 2026-10-24
+
+Resumedfa365ba; installed31 frozen checker before/after cache251/config/ownedtrust/
+settings/sources/marketplace/data unchanged0turns. StandaloneCLI now0.164.0, already
+installed not upgraded; macOS14.6/Node24.22.0, desktop/internal binary unverified.
+Official custom-agent docs/released163+164 parser/discovery/role/child sources read;
+no plugin agent-directory loading established. Separate reviewed native config
+candidate, not existing-request interception. No current inference grant.
+
+Six new agent tests/realCLI cover explicit model/effort/private inert generation,
+boolean review intent, forbidden mixed authorities/keys/accessors/bounds,
+self-rehashed TOML escalation/tamper/activebase refusal, literal injection, and no
+recursive-discoverable .toml artifact. Candidate .toml.txt is mandatory. Prior
+observer/status/interaction/scaffold behavior retained. Shared invalidJSON fallback
+context correction adds literal-source/no-markup regression. Windows entry guard
+unchanged; pure tests added to portableCI, no Windows execution this stage.
+
+Final focused agents/components/interactions/rendering29pass/1skip/30total.
+Final npmtest252pass/112Windows-onlyskip/0fail/364total (~7.4sec); earlier pre-suffix
+suite251pass/112skip, not final. validate3mods/replay4fixtures expected. Real final
+CLI private scaffold; independent Python tomllib exact five keys/hostile literal
+Unicode/quotes/backslash/LF round-trip passed. No fixture text executed.
+
+Initial sandboxed native no-turn app-server checks exited beforeinitialize. Same
+bounded outside-sandbox proof authorized/succeeded, final candidate .toml.txt and
+malformedcontrol eachinitialize/configRead true/rolevisible true; validnoparsewarning,
+malformedparsewarning. Visibilityaloneisnotvalidation. Child-onlyconfig_fileoverrides,
+20sec/client1MiB256messages/rejectserverrequests/terminate+reap,0threadstart/turnstart,
+0modelcalls/nativeprofileinstalls/sharedconfigchanges. Neither automaticdiscovery,
+effective child model/effort/permissions nor runtime routing/lifecycle established.
+
+Skill quick_validate.py both system/bundledPython lacked yaml, blocked/notpassed;
+Ruby safe YAMLfrontmatterparsepassed; no dependencies/tools repaired. diffcheckpassed;
+all93IDs/orderpreserved (first checking regex omitted SK/PL/GOV then corrected;
+no ledger rows removed). Source32CI/exactarchive/clone/spacedpackaging pendingMedium.
+No productioninstall/trust/config/logscope/modelrun/capture/Windowsguard changes.
+Full93incomplete; knownWindowsbounds/imagefailuresunchanged. High decisions/code
+complete, stopforMediumCI/package; Highbeforeconsequentialchanges/unexpectedrecovery.

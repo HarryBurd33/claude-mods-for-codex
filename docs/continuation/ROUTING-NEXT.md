@@ -1,4 +1,8 @@
-# Next High milestone: explicit configured-agent authoring/routing
+# Historical High brief: explicit configured-agent authoring/routing
+
+Current outcome: source32 authoring/parser milestone is recorded in DEV32-REVIEW.md
+and HANDOFF.md. The brief below is historical; next setting is Sol Medium for CI/
+packaging, with native configured execution still unverified and not authorized.
 
 2026-10-24. Native31 rollback and profile-level disable/re-enable acceptance now
 passed within their stated macOS target limits. Installed31/approved settings/trust/

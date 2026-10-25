@@ -1,6 +1,20 @@
 # Verification record
 
-Current2026-10-24: [source31 package/update](continuation/PACKAGE-DEV31.md)
+## Source32 configured-agent authoring — current — 2026-10-24
+
+[DEV32-REVIEW](continuation/DEV32-REVIEW.md) and [configured-agents](configured-agents.md):
+strict inert native candidate/spec/private bundle/boolean review-intent/static
+replay/plan implemented. Five literal fields, .toml.txt prevents accidental recursive
+native discovery, no installer/launcher/global defaults/parent-model/prompt or
+permission change. Separate reviewed native configuration, not plugin agent loading.
+Local252pass/112Windows-only skips/0fail; actual standaloneCLI0.164 no-turn parser
+check and independent TOML round-trip passed within limits, not configured execution.
+Installed31/config/cache251/trust/settings/data/logging and Windows guards preserved.
+Source32 CI/package/native routing remain unverified; no extra model grant. Next
+human Sol Medium for CI/packaging; High before consequential code/config/security
+changes or recovery. Full93 incomplete. All older status sections below historical.
+
+Historical source31 package checkpoint: [source31 package/update](continuation/PACKAGE-DEV31.md)
 verified251files/79passes+1Windows skip. Human authorized local Review desk and
 reviewed3hooks; restart/native31 pending. Logging/rules/exports/status preserved,
 Windows guards unchanged/original bounds unresolved. Exact source CI four246-pass
