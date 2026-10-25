@@ -1,101 +1,105 @@
-# Temporary rollback30 restart handoff — stay GPT-6.1 Sol Medium
+# Returned dev31 restart handoff — stay GPT-6.1 Sol Medium
 
-2026-10-24. Medium resumed77a4146 on codex/astra-groundwork. Prepared older31->30
-supported transition succeeded, and human reviewed the three30hooks. Installed
-cache verified242files; fresh inventory3enabledtrusted/0errors/0modelturns. Actual
-loaded30 still awaits human restart. Full93 incomplete; macOS first/Windows later.
+2026-10-24. Medium resumedaa0e0a9 after human restart, verified actual rollback30
+and covered harmless hooks, then restored31 through the prepared supported flow.
+Human reviewed only three restored31hooks; fresh inventory3enabledtrusted/0errors/
+0modelturns.251cache files verified. Actual returned31/Review desk still awaits
+human restart. Full93 incomplete; macOS first/Windows later.
 
-Read ROLLBACK-DEV30.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest
-TEST-LOG.md, LIFECYCLE-DEV31.md, PACKAGE-DEV30.md, PACKAGE-DEV31.md and latest
-ignored root HANDOFF.md/private rollback review. Root handoff/raw logs/private
-paths/config never upload. Final exact notes commit/tree/ref reported only after
-verification in final reply/private handoff; do not guess a public self-hash.
+Read RESTORE-DEV31.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest
+TEST-LOG.md, ROLLBACK-DEV30.md, LIFECYCLE-DEV31.md, PACKAGE-DEV31.md and latest
+ignored root HANDOFF.md/private rollback review. Private paths/config/raw logs/
+root handoff never upload. Final exact notes commit/tree/remote verification is
+reported after upload in final reply/private handoff, not guessed here.
 
-## Current milestone and evidence
+## Completed evidence and current state
 
-Preflight prepared verify31/controlverify/nativeinventory passed:251cache, saved
-configuration/settings/data/source/marketplace invariants and3trusted hooks. Git
-clean at77a4146. No unexpected drift or recovery issue.
+Post-restart verify30 confirmed242cache exact and scoped invariants, native3trusted/
+0errors/0turns. Six owned definition/content trust fields differed High baseline;
+every other config/scoped settings/source/data value unchanged, no unexpected drift.
+Actual dashboard tool plus permitted MCP Apps DOM showed connected/sevenviews/no
+Authored local tools/Reviewdesk, Activity/Followhost/Watchoff and same selected
+7records/revision,3pre2post2start/status5. Only the new inspected panel read; other
+panels/drafts untouched. This is current rollback30 host evidence, separate from
+historical original NATIVE-DEV30. Actual covered production/authored print inputs
+returned AFTER; control unchanged; harmless denial blocked/no retry/elevation.
+Parentchat outside capture scope, workdir doesn't select journal scope. No new
+model/API test run, synthetic journal insertion, logging expansion or producer claim.
 
-Prepared rollback30 changed only owned marketplace source31->preserved30 and used
-supported same-ID add. All242cache files match preserved reviewed30source. Both
-settings28/settings31, source30/source31 and selected metadata bytes/hashes remain
-unchanged; other shared config equals High baseline. Fresh inventory3modified hooks
-was followed by explicit human review ONLY3production30hooks through /hooks; fresh
-inventory now3enabledtrusted0errors0turns. Only3owned human trust hashes differ from
-High baseline. No agent trust, wholeconfig restore, new model run, logging/rules/
-exports/status/capture/guard/permission/Windows change. No source/runtime/test/CI
-change or full-suite/package repeat for notes.
+Prepared restore31 then backed up owned marketplace exclusively, changed only owned
+source30->preserved31 and used supported same-ID add. Version31/cache251exact,
+settings28/settings31/selecteddata/source30/source31 unchanged, unrelated config
+equal High baseline. Initial3modifiedhooks -> explicit human review ONLY3restored31
+hooks via /hooks -> fresh3enabledtrusted0errors0modelturns. Final verify31 finds only
+3owned human trust fields differ High baseline, allotherconfig/scopedinvariantsmatch.
+No agent trust/hash copy, cache patch, wholeconfig restore, new rule/capture/guard/
+exports/status/permission/model change or Windows change. No source/runtime/test/CI
+change or redundant full-suite/archive run for notes. No drift/recovery/High needed.
 
-Installed target is now0.2.0-dev.30 in user-profile/cache scope, not project-only.
-It selects preserved settings28, same logging/rules/usage/observation/status and
-optional capture/impactguard off. Approved31settings/Reviewdesk and immutable251file
-source are preserved for return. Reviewdesk should be absent only once actual30
-loads; don't claim it from installed cache. Existing desktop service may still31.
-Earlier native30 evidence is historical and cannot replace this rollback check.
+Current installed target is0.2.0-dev.31 in current-user profile/cache, not project-only.
+Approved Review desk/settings31 returns through preserved MCP config; no settings
+rewrite. Both immutable sources/settings remain. Existing desktop service may still30
+until restart; cache/trust alone is not loaded31 evidence. Full older31->30->31
+native rollback sequence cannot be marked verified until returned31 observed.
 
-Prior host inventorymacOS14.6/Node24.22.0/standaloneCLI0.163.0; exact desktop/internal
-server binary independently unverified. Original source30 publicbdf7faddafd78e84715ec6fce34ddc98f4cacc62,
-source31 public691c39918583ecec131470973618dded2e89b8a8 with preserved private overlays.
-No client upgrade. Source31 exact priorCI/archive results unchanged; no allgreen/
-nativeWindows claim. Original Windows bounds cause/known image refusals and all
-beforeIO guards remain; don't ask host availability or repeat Windows proof loops.
+Prior host inventorymacOS14.6/Node24.22.0/standaloneCLI0.163.0; desktop/internal-server
+binary identity independently unverified, no upgrade. Source31 public691c399 and
+source30 bdf7fad exact prior packages/CI remain versioned; no new CI/allgreen/native
+Windows11/WSL claim. Original Windows bounds cause/known image refusals/beforeIO
+guards unchanged; no availability question or proof loop.
 
-## Configuration and guarded restoration
+## Durable private state and rollback limits
 
-Private .local/lifecycle31/ holds High fresh config/marketplace backups, baseline
-hashes, rollback30-marketplace.before.json, supported-install result/stderr and
-native inventory. .local/lifecycle31-rollback.py fixed modes rollback30/restore31/
-verify30/verify31; .local/lifecycle31-inventory.py 30 or31 is bounded read-only.
-Preserved sources under .local/production-marketplace/plugin-0.2.0-dev.30 and31;
-settings files remain unchanged. Exact machine paths and hashes private only.
-Do NOT rerun rollback30: it already executed and exclusive phase files exist.
+.local/lifecycle31/ contains fresh High config/marketplace baseline, rollback30 and
+restore31 per-phase exclusive marketplace backups/results/stderr, inventory-dev30/
+inventory-dev31 and private loaded30 screenshot. .local/lifecycle31-rollback.py
+fixed modes verify31/verify30/rollback30/restore31; both transition phases already
+ran. DO NOT rerun either transition or overwrite its backups. Current owned
+marketplace source31, candidate251/cache exact; settings31/card intact. Exact
+machine paths/hashes in ignored root handoff. Current trust is human-reviewed.
 
-Restore31 checks current30cache/ownedmarketplace/invariants, backs up owned
-marketplace exclusively, changes only source30->31, supported sameIDadd, validates
-251cache/settings/data/config allowing only owned human trust changes. No automatic
-trust/retry/blind rollback. Stop on drift/partial failure; inspect actual state and
-use High for a scoped recovery decision. Never copy hashes, patch cache, replace
-whole config or delete journals/locks.
+If future reversal is needed, inspect actual current config/cache and prepare fresh
+selective backups/phase names rather than deleting completion files or blindly
+reusing scripts. No whole shared config restore/trust copy/cache patch/data/lock
+deletion. High for unexpected drift/partial failure/recovery/security decisions.
+Known baseline allowances cover only three owned definition/content hash pairs;
+do not reset baseline or repair unrelated fields to force a pass.
 
-## Exact next actions after human restart
+## Exact next steps after restart
 
-1. Stay **GPT-6.1 Sol Medium**. Recheck verify30 and fresh inventory30. Host may
-   update same3owned trusted_content_hash fields after restart; record only owned
-   hash changes, don't repair unrelated config or reset baseline to conceal drift.
-2. Call actual installed dashboard. Inspect only permitted MCP Apps interface:
-   expect no Authored local tools/Reviewdesk, same selected7retainedrecords/status5
-   and scope. Existing unrelated panel/drafts untouched; current tool registry/
-   actual loaded view are separate from cache. No private native-app/controlsocket
-   access or custom client substitution. Ask exact panel-expand step only if needed.
-3. Actual covered harmless production/authored fixed print rewrites/control/deny
-   after human review; don't retry denial/elevate/bypass. Parentchat outside selected
-   session scope; workdir isn't capture scope. No extra model run authorized or fake
-   activity count. If actual30 absent/unloaded unexpectedly, inspect and returnHigh
-   for a new recovery/correctness decision rather than installing blindly.
-4. Execute prepared restore31 and verify31/freshinventory31. Human reviews ONLY
-   three production31hooks even if host retains trust; give concrete Terminal/
-   /hooks instructions, no model prompt. Agent never trusts. After human confirmation
-   inspect inventory/config/settings/data, save/upload/verify checkpoint, stop for
-   human restart/reopen on Medium before actual loaded31/Reviewdesk restoration.
-5. Verify actual loaded31 and covered effects after that restart; only then account
-   for the full older30->31 native rollback sequence. Restarted disabled/uninstalled
-   host absence remains separate incomplete acceptance (loaded service answered
-   while disabled/removed in LIFECYCLE-DEV31). Full93/optional events/routing/context/
-   accessibility/Windows gaps remain in scope, not silently completed.
+1. Human restart Codex/reopen this same chat, keep **GPT-6.1 Sol Medium**. No further
+   install or human trust step is needed for unchanged31 before this restart.
+2. Prepared verify31 and bounded native inventory31; host may update same3owned
+   trusted_content_hash fields after restart. Record owned bookkeeping by field
+   names, preserve other entries. ReturnHigh on actual unexpected drift/recovery.
+3. Call actual dashboard, inspect only permitted MCP Apps. Expect Authored local
+   tools/approved Review desk with three empty fixed fields, same project scope/
+   data/retained7records/status5. Do not infer from old panels or selected cache.
+   Other drafts untouched; no new component/capture selection. Actual schema/
+   selected labels/fields demonstrate returned31 distinct from observed30.
+4. Verify only covered harmless production/authored rewrites/control/deny under
+   normal permissions, no retry of denial/bypass/additional model run. Clear only
+   our synthetic inputs if any, Followhost and Watchoff. Keep unit/native/human/
+   unverified evidence distinct. Save exact final preservation and account for
+   tested native31->30->31 rollback only after this returned-host observation.
+5. Continue remaining macOS ledger acceptance within existing scope. Restarted
+   disabled/uninstalled host absence/process exit is separately unverified; loaded
+   service survived disable/removal in LIFECYCLE-DEV31. Full accessibility/optional
+   events/routing/context/Windows gaps stay in scope. Minor fixed-field invalidJSON
+   guidance still misleading; batch minimal context-neutral fix with a warranted
+   reviewed source update, not a new permission/format action.
 
-Current protected action: human restart Codex/reopen this same chat after final
-checkpoint, keep Medium. No further trust/install needed before that restart.
-Return High on unexpected drift, partial failure/recovery, permission decisions or
-consequential runtime/security changes. This stage found no such issue.
+No new capture/extra model test usage grant exists; optional lifecycle hooks/storage
+and impactguard remain off. High before consequential new runtime/security work
+or correctness/recovery investigation. Full93 product not finished by this rollback.
 
 Copy-paste resume:
-I've restarted Codex. Continue on GPT-6.1 Sol Medium from the verified rollback30
+I've restarted Codex. Continue on GPT-6.1 Sol Medium from the verified returned31
 checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and
-ROLLBACK-DEV30.md plus private rollback review. Verify actual loaded30 and harmless
-hooks, then follow the prepared31 restoration with human trust/restart checkpoints.
-Preserve approved settings, logging scope, data and Windows guards; no new capture
-or extra model run. Stop for High on unexpected drift or recovery.
+RESTORE-DEV31.md plus private handoff. Verify actual returned31 Review desk and
+harmless hooks, then record the native rollback sequence. Preserve approved settings,
+logging scope, data, human trust and Windows guards; no new capture or extra model
+run. Stop for High on unexpected drift or consequential changes.
 
 STOP after verified checkpoint/final until human restarts/replies. No background
 continuation/delegation/scheduling/model run or unchanged CI polling.

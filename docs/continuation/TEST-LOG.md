@@ -2714,3 +2714,25 @@ agenttrust/newcapture/modelrun/code/test/CI/Windowschange or fullsuite/archive r
 Actual loaded30 not yet observed; currentconnectionmay31. Save/uploadverified
 checkpointthenhumanrestartstayMedium for native30 and guardedreturn31review/restart.
 ROLLBACK-DEV30 records partialscope; earliernative30evidence notsubstituted.
+
+## Medium actual rollback30 and return31 installation — 2026-10-24
+
+Resumedaa0e0a9 afterhumanrestart clean. verify30 cache242/allscopedinvariants and
+inventory3trusted0errors0turns; sixownedhumantrustdefinition/contenthashesvsHigh
+baseline only. Actualmods_dashboard/permittedMCPApps newpanel3 connected/sevenviews/
+noAuthoredlocaltoolsReviewdesk, FollowhostWatchoff/same7records3pre2post2start/status5/
+revision/scope. Otherpanelsuntouched, no draftedit. Actualproduction/authoredprints
+AFTER/controlunchanged/configureddenialblockednoretry. No extra modelrun/capture.
+
+Preparedrestore31 supported sameIDadd succeeded251exactcache/settings28+31/data/
+source30+31unchanged/allotherconfigequal. Fresh3modified31hooks0errors0turns; human
+review requested before restart; final inventory follows in checkpoint. No drift/
+recovery/agenttrust/source/runtime/test/CI/Windowschange or fullsuite/archive repeat.
+Actualreturned31 remains pending humantrust/restart; fullrollbacknotyetverified.
+Private supportedphasebackup/resultstderr/inventory/screenshot retained ignored.
+
+Human explicitly reviewed/trusted only three restored31hooks. Post-review verify31
+cache251/scopedinvariants/allotherconfigequal, only3ownedhumantrustfieldsvsHighbaseline;
+freshnativeinventory3enabledtrusted0errors0modelturns. No additional native31 effects
+claimed before restart. Currentinstalled31/approvedcardsettingsrestored unchanged;
+actualloadedUI may30. StayMedium humanrestart checkpoint, noHighneeded/no drift.

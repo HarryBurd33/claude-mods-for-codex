@@ -1,6 +1,16 @@
 # Extension architecture and security contracts
 
-## Rollback30 follow-up — current — 2026-10-24
+## Return31 follow-up — current — 2026-10-24
+
+[RESTORE-DEV31](RESTORE-DEV31.md): actual restarted rollback30 seven views/noReviewdesk,
+same7records/status5 and harmless rewrite/control/deny passed. Supported return31
+installed251exactcache with settings/data/sources unchanged; human31three-hook review confirmed
+fresh3trusted0errors0turns/only3ownedhashchanges; restart/native31 confirmation pending. No drift/recovery/modelrun/new
+capture/security/source change. Stay Medium; High on unexpected drift/recovery.
+Full93/Windows gaps remain; earlier current30/next-stage instructions are historical.
+
+
+## Rollback30 follow-up — historical install checkpoint — 2026-10-24
 
 [ROLLBACK-DEV30](ROLLBACK-DEV30.md): supported31->30 installed242exactcache, human
 three-hook review verified3trusted/0errors/0turns. Only3owned human trust hashes

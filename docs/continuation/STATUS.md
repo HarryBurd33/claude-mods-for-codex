@@ -1,19 +1,20 @@
-# Current status — rollback30 trusted, restart pending — 2026-10-24
+# Current status — native rollback30 passed, return31 human-reviewed — 2026-10-24
 
-[ROLLBACK-DEV30](ROLLBACK-DEV30.md): Medium executed the prepared supported31->30
-transition.242cache files equal the preserved reviewed snapshot. Human reviewed
-only three production30hooks; fresh inventory3enabledtrusted/0errors/0modelturns.
-Only3owned human trust hashes differ from the High baseline; all other shared
-configuration/scoped settings/source/data invariants match. No drift/recovery.
+[RESTORE-DEV31](RESTORE-DEV31.md): restarted rollback30 actual seven-view dashboard
+with no authored Review desk, same7retainedrecords/status5/scope, harmless production/
+authored rewrites/control/deny passed. Cache242 exact/3trusted0errors0modelturns.
+Only six owned definition/content trust hashes differ baseline, all other invariants
+match. No unexpected drift/recovery.
 
-Current installed target is30; actual desktop may still31 until human restart.
-Approved settings31/Reviewdesk and immutable251-file31 source are preserved for
-return restoration. No settings file/logging/rule/capture/guard/export/status/model
-selection or extra model run changed.30selects preserved settings28; no new grant.
+Prepared supported restore31 succeeded:251cache files match preserved approved31
+snapshot. Both settings/source snapshots/selected data unchanged, no new logging/
+rule/capture/guard/export/status/model run or source/runtime/test/CI change. Initial
+fresh inventory3modified31hooks; human reviewed only those three, fresh3trusted/
+0errors/0modelturns. Only3owned human trust fields differ baseline/allotherconfigequal. Current desktop may still30 until human restart; no loaded31
+restoration claim yet. Do not rerun restore31 or overwrite its private phase backups.
 
-Restart/reopen same chat on **GPT-6.1 Sol Medium**. Verify actual loaded30/noReviewdesk
-and harmless hooks, then prepared31restore/human trust/checkpoint/restart before
-loaded31 acceptance. High on unexpected drift/recovery/security work. Full93 remains
-incomplete, Windows later/original bounds/image gaps/guards unchanged. Earlier31
-fresh disable/remove/exact reinstall evidence remains LIFECYCLE-DEV31; existing
-service survived disable/removal, so restarted-host absence remains separate.
+Stay **GPT-6.1 Sol Medium**. Human hook review is complete. Verified checkpoint, then restart/
+reopen for actual returned31/Reviewdesk/harmless checks. High on unexpected drift/
+recovery/security decisions. Full93 incomplete, Windows bounds/image gaps/guards
+unchanged; no new Windows proof loop. Restarted disabled/uninstalled host absence
+and remaining platform/accessibility/optional event/routing/context gaps are separate.
