@@ -2736,3 +2736,22 @@ cache251/scopedinvariants/allotherconfigequal, only3ownedhumantrustfieldsvsHighb
 freshnativeinventory3enabledtrusted0errors0modelturns. No additional native31 effects
 claimed before restart. Currentinstalled31/approvedcardsettingsrestored unchanged;
 actualloadedUI may30. StayMedium humanrestart checkpoint, noHighneeded/no drift.
+
+## Medium returned31 verified; separate restart-disable preparation — 2026-10-24
+
+Resumed8e84adc clean. verify31cache251/scopedinvariants/currentconfigNOdifferences
+fromHighbaseline; inventory3trusted0errors0turns. Actualdashboard/newpanel4 connected/
+eightviews/Authoredlocaltools/Reviewdesk3emptyfixedfields/NoPreview/FollowhostWatchoff,
+same7records/revision/status5/projectscope. Otherpaneldrafts untouched; nofieldedit.
+Actualproduction/authoredprintsAFTER/controlunchanged/denialblockednoretry. Thus
+tested native31->30->31 sequence verified for stated reviewed target/settings;
+not fullproduct/otherplatform guarantee. Private returned31 screenshot retained.
+
+Continued prescribed macOS acceptance: fresh exclusive config/marketplace backups,
+same supported config/readexpectedVersion->config/value/write ONLYowned enabledfalse.
+Installed251/cache/source/settings/data/marketplace/storedtrust unchanged; newdisabled
+preservation checker allotherconfigequal. Bounded fresh inventory0ownedhooks0errors/
+0modelturns. Actualdisabled-host absence remains pending HUMANrestart, not inferred.
+No new modelrun/capture/security/source/runtime/test/CI/Windowschange/fullsuite repeat.
+Known API restoration only enabledtrue after absence proof; checkpoint/restartbefore
+loadedreturn. High on unexpected drift/answering service/recovery. Full93 incomplete.

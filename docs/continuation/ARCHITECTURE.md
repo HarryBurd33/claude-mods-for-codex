@@ -1,6 +1,18 @@
 # Extension architecture and security contracts
 
-## Return31 follow-up — current — 2026-10-24
+## Returned31 verified / restart-disable pending — current — 2026-10-24
+
+[RESTORE-DEV31](RESTORE-DEV31.md): actual returned31 Reviewdesk/eightviews/emptyfields/
+same7records/status5/harmless effects observed; tested native31->30->31 complete.
+251cache/3trusted0errors/config equal High baseline/scoped state preserved. Separate
+[restart-disable](DISABLE-RESTART-DEV31.md) now sets only owned enabled=false:
+installed files/trust/settings/data unchanged, fresh0hooks. Human restart on Medium
+for actual loaded-tool absence then original flag restoration/checkpoint/restart.
+No full-product/process-exit claim, new capture/model run or Windows guard change.
+High on unexpected drift/recovery/security decisions; earlier pending31 is historical.
+
+
+## Return31 follow-up — historical restart checkpoint — 2026-10-24
 
 [RESTORE-DEV31](RESTORE-DEV31.md): actual restarted rollback30 seven views/noReviewdesk,
 same7records/status5 and harmless rewrite/control/deny passed. Supported return31

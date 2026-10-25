@@ -1,10 +1,10 @@
 # Current status — source31 — 2026-10-24
 
-Current [return31 acceptance](docs/continuation/RESTORE-DEV31.md): actual native
-rollback30 and harmless hooks passed after restart. Approved **dev31** is now
-reinstalled (251 verified files) and its three hooks are human-trusted; final
-restart/native restoration remain pending. Settings, logging scope, data and Windows guards are
-preserved. Full product remains incomplete.
+The tested [native31->30->31 rollback](docs/continuation/RESTORE-DEV31.md) is verified,
+including returned Review desk and harmless hooks after human reviews/restarts.
+**Dev31 is now temporarily disabled for a separate restart-based lifecycle check**;
+its251files, approved settings, stored trust, data and Windows guards are preserved.
+[Current steps](docs/continuation/DISABLE-RESTART-DEV31.md). Full product incomplete.
 
 Development source **0.2.0-dev.31** adds [authored local-preview cards](docs/local-interactions.md):
 describe labeled plan/JSON/notes fields, generate a disabled private bundle, inspect
@@ -13,11 +13,11 @@ Clear use fixed local callbacks; no raw-text storage, tool/model/network request
 new hooks or capture. Existing rule/observer/status authoring remains compatible.
 [Source contracts and verification](docs/continuation/DEV31-REVIEW.md).
 
-The approved **Review desk** settings and dev31 source are restored for the next
-restart. Actual rollback30 had seven views and no Review desk; the returned31 view
-must be observed separately. [Lifecycle evidence](docs/continuation/LIFECYCLE-DEV31.md)
-shows existing connections can survive source/config changes, so cache or trust
-alone does not establish which UI is loaded.
+The approved **Review desk** returned with three empty fixed-format fields;
+rollback30 had seven views and no Review desk. Both source/settings snapshots remain.
+Only the owned enabled flag is now false; do not infer restarted-tool absence from
+fresh hook inventory or cached panels. Existing connections can survive disabling
+until the affected host is reloaded/restarted and checked.
 
 The dev31 public archive/spaced extraction passed79tests with one Windows-only skip,
 plus validation/replay. Four POSIX source CI lanes each246passes; Windows portable
@@ -33,8 +33,8 @@ known image failures/Windows guards remain, native Windows11/WSL unverified.
 Existing settings/data remain preserved; only the explicitly authorized local
 card is added in a new private settings file. Local callbacks add no model calls;
 chat/skills consume selected-model usage. No new guard/capture/model-run grant.
-Next: restart/reopen on
-**GPT-6.1 Sol Medium** for actual returned31/Reviewdesk verification. High before unexpected recovery or consequential
+Next: restart/reopen on **GPT-6.1 Sol Medium** for the disabled-host absence check,
+then restore only the original enabled flag and verify/restart before loaded return. High before unexpected recovery or consequential
 source/security changes. Older-version and restarted-host lifecycle acceptance remain incomplete.
 
 [Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),

@@ -5,8 +5,10 @@ fresh disable/removal and exact251-file reinstallation. **The already-loaded MCP
 service still answered while disabled and after cache removal.** End affected
 sessions or use a supported host reload/restart, then verify absence in that host;
 fresh inventory alone does not establish immediate revocation or process exit.
-Settings, trust, selected metadata and unrelated config were preserved. Older-version
-loaded rollback/restarted-host absence remain unverified. No data cleanup was run.
+Settings, trust, selected metadata and unrelated config were preserved. The bounded
+[native31->30->31 rollback](continuation/RESTORE-DEV31.md) is now verified; separate
+[restart-disabled host absence](continuation/DISABLE-RESTART-DEV31.md) is pending.
+No data cleanup was run.
 
 Use the supported Plugins controls in the client where the plugin is active to disable it. Do not simulate disabling by editing trust hashes or deleting cached files while the client is running. If that client does not expose a suitable disable control, uninstall the selected plugin with the CLI command below. End affected sessions or restart the client, then verify that new sessions no longer load its hooks.
 

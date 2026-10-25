@@ -1,105 +1,109 @@
-# Returned dev31 restart handoff — stay GPT-6.1 Sol Medium
+# Rollback verified; disabled-host restart check — stay Sol Medium
 
-2026-10-24. Medium resumedaa0e0a9 after human restart, verified actual rollback30
-and covered harmless hooks, then restored31 through the prepared supported flow.
-Human reviewed only three restored31hooks; fresh inventory3enabledtrusted/0errors/
-0modelturns.251cache files verified. Actual returned31/Review desk still awaits
-human restart. Full93 incomplete; macOS first/Windows later.
+2026-10-24. Medium resumed8e84adc. Actual returned31 Review desk/harmless hooks and
+scoped preservation passed, completing tested native31->30->31 rollback. A separate
+restart-based disable check is now prepared: unchanged31 stays installed, only its
+owned enabled flag is false. Human restart/reopen this chat on Medium is next.
+Full93 product incomplete; macOS first/Windows later.
 
-Read RESTORE-DEV31.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest
-TEST-LOG.md, ROLLBACK-DEV30.md, LIFECYCLE-DEV31.md, PACKAGE-DEV31.md and latest
-ignored root HANDOFF.md/private rollback review. Private paths/config/raw logs/
-root handoff never upload. Final exact notes commit/tree/remote verification is
-reported after upload in final reply/private handoff, not guessed here.
+Read DISABLE-RESTART-DEV31.md, RESTORE-DEV31.md, STATUS.md, REQUIREMENTS.md,
+ARCHITECTURE.md, latest TEST-LOG.md, LIFECYCLE-DEV31.md, docs/removal.md and ignored
+root HANDOFF.md. Private paths/raw logs/config/root handoff never upload. Final
+notes identity/tree/ref reported after verification in final reply/private handoff.
 
-## Completed evidence and current state
+## Completed and current evidence
 
-Post-restart verify30 confirmed242cache exact and scoped invariants, native3trusted/
-0errors/0turns. Six owned definition/content trust fields differed High baseline;
-every other config/scoped settings/source/data value unchanged, no unexpected drift.
-Actual dashboard tool plus permitted MCP Apps DOM showed connected/sevenviews/no
-Authored local tools/Reviewdesk, Activity/Followhost/Watchoff and same selected
-7records/revision,3pre2post2start/status5. Only the new inspected panel read; other
-panels/drafts untouched. This is current rollback30 host evidence, separate from
-historical original NATIVE-DEV30. Actual covered production/authored print inputs
-returned AFTER; control unchanged; harmless denial blocked/no retry/elevation.
-Parentchat outside capture scope, workdir doesn't select journal scope. No new
-model/API test run, synthetic journal insertion, logging expansion or producer claim.
+Read-only verify31:251cache exact, settings28/settings31/both immutable sources/
+selected data/marketplace preserved, NO shared-config differences from High
+baseline including restored human trust. Native inventory3enabledtrusted0errors/
+0modelturns. Actual new dashboard panel4 has eight views/Authored local tools/
+approved Review desk3emptyfixedfields/NoPreview, Followhost/Watchoff, same project
+scope/retained7records/revision/status5. Other panels/drafts untouched. No field
+input. Actual returned31 production/authored fixed prints AFTER, control unchanged,
+configured harmless denial blocked/no retry/elevation. No extra model/API test run
+or journal insertion. Parentchat outside selected capture; workdir not scope.
 
-Prepared restore31 then backed up owned marketplace exclusively, changed only owned
-source30->preserved31 and used supported same-ID add. Version31/cache251exact,
-settings28/settings31/selecteddata/source30/source31 unchanged, unrelated config
-equal High baseline. Initial3modifiedhooks -> explicit human review ONLY3restored31
-hooks via /hooks -> fresh3enabledtrusted0errors0modelturns. Final verify31 finds only
-3owned human trust fields differ High baseline, allotherconfig/scopedinvariantsmatch.
-No agent trust/hash copy, cache patch, wholeconfig restore, new rule/capture/guard/
-exports/status/permission/model change or Windows change. No source/runtime/test/CI
-change or redundant full-suite/archive run for notes. No drift/recovery/High needed.
+This completes tested actual31->30->31 for the reviewed sources/settings and known
+macOS host, not universal rollback/OS/process-exit/full-product acceptance. Prior
+original31 render/edit/human keyboard/width tests separate. Prior host inventory
+macOS14.6/Node24.22.0/standaloneCLI0.163.0; desktop/internal-server binary identity
+independently unverified. No upgrade/new CI/full-suite/archive repeat for notes.
 
-Current installed target is0.2.0-dev.31 in current-user profile/cache, not project-only.
-Approved Review desk/settings31 returns through preserved MCP config; no settings
-rewrite. Both immutable sources/settings remain. Existing desktop service may still30
-until restart; cache/trust alone is not loaded31 evidence. Full older31->30->31
-native rollback sequence cannot be marked verified until returned31 observed.
+Then continued remaining authorized macOS acceptance using the SAME previously
+tested supported config/read expectedVersion -> config/value/write owned boolean.
+Fresh private exclusive config/marketplace backups in .local/restart-disable31/.
+Only owned enabled=false, installed251files/stored trust/all other configuration/
+settings/sources/data/marketplace unchanged. Fresh zero owned hooks/zero errors/
+zero model turns. Actual restarted-host tools absence NOT verified yet. Existing
+open service/panels may survive before restart (already observed); no new probe
+or claim of immediate revocation/all machine processes exiting.
 
-Prior host inventorymacOS14.6/Node24.22.0/standaloneCLI0.163.0; desktop/internal-server
-binary identity independently unverified, no upgrade. Source31 public691c399 and
-source30 bdf7fad exact prior packages/CI remain versioned; no new CI/allgreen/native
-Windows11/WSL claim. Original Windows bounds cause/known image refusals/beforeIO
-guards unchanged; no availability question or proof loop.
+## Installed scope, configuration and exact private helpers
 
-## Durable private state and rollback limits
+Current installed31 user-profile/cache scope, not project-only, intentionally
+disabled through the public per-plugin setting. Approved settings31/card retained;
+optional lifecycle capture and impactguard off. Original logging/rules/export/status/
+observation/scope and all Windows guards unchanged. No agent trust/hash copy/cache
+patch/wholeconfig restore/data/lock deletion or source/runtime/test/CI change.
+Both source30/source31 and settings28/settings31 retained. Original Windows bounds
+cause/image refusals unresolved, no nativeWindows11/WSL claim or proof loop.
 
-.local/lifecycle31/ contains fresh High config/marketplace baseline, rollback30 and
-restore31 per-phase exclusive marketplace backups/results/stderr, inventory-dev30/
-inventory-dev31 and private loaded30 screenshot. .local/lifecycle31-rollback.py
-fixed modes verify31/verify30/rollback30/restore31; both transition phases already
-ran. DO NOT rerun either transition or overwrite its backups. Current owned
-marketplace source31, candidate251/cache exact; settings31/card intact. Exact
-machine paths/hashes in ignored root handoff. Current trust is human-reviewed.
+Fresh phase backups: .local/restart-disable31/config.before.toml and
+marketplace.before.json, private disabled-preservation.json/native-disabled-inventory.
+Read-only .local/restart-disable31-check.py disabled|enabled compares only expected
+owned flag delta plus all scoped assets against saved baseline.
+Bounded .local/restart-disable31-inventory.py 31 expects zero owned hooks.
+Known .local/lifecycle31-control.py restore performs ONLY original enabled=true
+through official expected-version API, no install/trust/prompt.
+Known .local/lifecycle31-inventory.py31 expects three enabled hooks after re-enable.
+Exact machine paths/hashes/screenshots in ignored root handoff.
 
-If future reversal is needed, inspect actual current config/cache and prepare fresh
-selective backups/phase names rather than deleting completion files or blindly
-reusing scripts. No whole shared config restore/trust copy/cache patch/data/lock
-deletion. High for unexpected drift/partial failure/recovery/security decisions.
-Known baseline allowances cover only three owned definition/content hash pairs;
-do not reset baseline or repair unrelated fields to force a pass.
+DO NOT run old verify31/controlverify while disabled: they expect enabled=true;
+their expected flag mismatch is not unexpected drift. Use the new disabled checker.
+DO NOT rerun fresh directory/backup preparation or completed rollback30/restore31
+installation phases; exclusive phase files already exist. Do not erase them.
+No new permissions/capture/model test usage grant exists.
 
-## Exact next steps after restart
+## Next exact steps after human restart
 
-1. Human restart Codex/reopen this same chat, keep **GPT-6.1 Sol Medium**. No further
-   install or human trust step is needed for unchanged31 before this restart.
-2. Prepared verify31 and bounded native inventory31; host may update same3owned
-   trusted_content_hash fields after restart. Record owned bookkeeping by field
-   names, preserve other entries. ReturnHigh on actual unexpected drift/recovery.
-3. Call actual dashboard, inspect only permitted MCP Apps. Expect Authored local
-   tools/approved Review desk with three empty fixed fields, same project scope/
-   data/retained7records/status5. Do not infer from old panels or selected cache.
-   Other drafts untouched; no new component/capture selection. Actual schema/
-   selected labels/fields demonstrate returned31 distinct from observed30.
-4. Verify only covered harmless production/authored rewrites/control/deny under
-   normal permissions, no retry of denial/bypass/additional model run. Clear only
-   our synthetic inputs if any, Followhost and Watchoff. Keep unit/native/human/
-   unverified evidence distinct. Save exact final preservation and account for
-   tested native31->30->31 rollback only after this returned-host observation.
-5. Continue remaining macOS ledger acceptance within existing scope. Restarted
-   disabled/uninstalled host absence/process exit is separately unverified; loaded
-   service survived disable/removal in LIFECYCLE-DEV31. Full accessibility/optional
-   events/routing/context/Windows gaps stay in scope. Minor fixed-field invalidJSON
-   guidance still misleading; batch minimal context-neutral fix with a warranted
-   reviewed source update, not a new permission/format action.
+1. Keep GPT-6.1 Sol Medium. Run disabled preservation and fresh zero-hook inventory
+   through the prepared bounded read-only helpers. Any OTHER config/asset drift:
+   preserve state and checkpoint High; don't reset baseline or repair unrelated state.
+2. Inspect available tools for this restarted chat via current tool discovery:
+   expect no production Claude Mods tools. Cached panels/source marketplace/plugin
+   read are not executing connections. If absent, report registry absence plus
+   fresh hook absence only for this chat/client; no global process-exit claim.
+3. If production tools are listed, one existing read-only status call may distinguish
+   stale registration from an answering service. No loop/new model/API run/private
+   desktop control socket. Record result; unexpected answering/loaded behavior
+   requires saved checkpoint and High before a new correctness/recovery decision.
+4. Once expected absence verified, use known supported original flag restoration
+   ONLY (lifecycle31-control.py restore). Then new checker enabled and original
+   native inventory31: expect configuration/stored trust/cache/settings/data/market
+   restored and3trusted0errors. No reinstall/changed-code hook trust needed, bytes
+   unchanged and human review already complete.
+5. Save/upload/full-tree/refverify checkpoint. Stop for human restart/reopen on Medium
+   before claiming actual tools/Reviewdesk return in this chat. After that restart,
+   verify loaded returned view/harmless hooks/scoped preservation and record this
+   separate disable/re-enable sequence within target limits.
+6. Continue remaining macOS acceptance; full accessibility/optional events/routing/
+   context/other platforms/process cleanup remain open. High before consequential
+   new runtime/security work or new correctness investigation. Minor invalidJSON
+   fixed-field guidance awaits a minimal context-neutral reviewed source batch,
+   not dynamic format/action/permission expansion.
 
-No new capture/extra model test usage grant exists; optional lifecycle hooks/storage
-and impactguard remain off. High before consequential new runtime/security work
-or correctness/recovery investigation. Full93 product not finished by this rollback.
+Protected user action now: restart Codex/reopen same chat on Medium after final
+verified save. No trust/install step needed. No blind retries/wholeconfig restore.
+If user instead cancels this test, restore only original flag through the known
+supported API and verify; still don't claim restart absence was tested.
 
-Copy-paste resume:
-I've restarted Codex. Continue on GPT-6.1 Sol Medium from the verified returned31
+Resume:
+I've restarted Codex. Continue on Sol Medium from the verified restart-disable31
 checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and
-RESTORE-DEV31.md plus private handoff. Verify actual returned31 Review desk and
-harmless hooks, then record the native rollback sequence. Preserve approved settings,
-logging scope, data, human trust and Windows guards; no new capture or extra model
-run. Stop for High on unexpected drift or consequential changes.
+DISABLE-RESTART-DEV31.md plus private handoff. Verify disabled-chat tool/hook absence,
+then restore only the original enabled flag and checkpoint before restart. Preserve
+installed31, approved settings/logging scope/data/human trust/Windows guards; no
+new capture or extra model run. Stop for High on unexpected drift or host behavior.
 
-STOP after verified checkpoint/final until human restarts/replies. No background
-continuation/delegation/scheduling/model run or unchanged CI polling.
+STOP after verified checkpoint/final until human restart/reply; no background work,
+delegation/scheduling/model run or unchanged CI polling.

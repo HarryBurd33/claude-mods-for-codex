@@ -1,8 +1,8 @@
 # Rollback to dev30 — installed and human-reviewed, restart pending
 
-Subsequent [return31 checkpoint](RESTORE-DEV31.md) observed actual rollback30 after
-restart and restored the approved31 installation; final loaded31 acceptance remains
-pending. The installed30/restart-pending account below is the earlier stage record.
+The [completed return31 record](RESTORE-DEV31.md) now verifies actual native31->30->31
+for the tested target. A separate restart-disable check is pending. The installed30/
+restart-pending account below is the earlier stage record.
 
 
 2026-10-24, GPT-6.1 Sol Medium resumed77a4146. This is the first half of the prepared

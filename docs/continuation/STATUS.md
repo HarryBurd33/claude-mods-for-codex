@@ -1,20 +1,20 @@
-# Current status — native rollback30 passed, return31 human-reviewed — 2026-10-24
+# Current status — rollback verified, restart-disable check pending — 2026-10-24
 
-[RESTORE-DEV31](RESTORE-DEV31.md): restarted rollback30 actual seven-view dashboard
-with no authored Review desk, same7retainedrecords/status5/scope, harmless production/
-authored rewrites/control/deny passed. Cache242 exact/3trusted0errors0modelturns.
-Only six owned definition/content trust hashes differ baseline, all other invariants
-match. No unexpected drift/recovery.
+[RESTORE-DEV31](RESTORE-DEV31.md) records completed tested native31->30->31 sequence:
+actual returned31 eight views/approved empty Reviewdesk and harmless rewrites/
+control/deny passed after human review/restarts.251cache/3trusted0errors and NO
+config differences from High baseline, all scoped settings/sources/data preserved.
 
-Prepared supported restore31 succeeded:251cache files match preserved approved31
-snapshot. Both settings/source snapshots/selected data unchanged, no new logging/
-rule/capture/guard/export/status/model run or source/runtime/test/CI change. Initial
-fresh inventory3modified31hooks; human reviewed only those three, fresh3trusted/
-0errors/0modelturns. Only3owned human trust fields differ baseline/allotherconfigequal. Current desktop may still30 until human restart; no loaded31
-restoration claim yet. Do not rerun restore31 or overwrite its private phase backups.
+Separate [restart-disable check](DISABLE-RESTART-DEV31.md) is now prepared: fresh
+private backups, supported ONLYowned enabled=false, installed251files/stored trust/
+settings/data/marketplace unchanged, fresh0hooks0errors0modelturns. Restarted desktop
+tool absence remains unverified; existing connections can survive before restart.
+No product/runtime/test/CI/security/logging/rule/capture/Windows change or extra run.
 
-Stay **GPT-6.1 Sol Medium**. Human hook review is complete. Verified checkpoint, then restart/
-reopen for actual returned31/Reviewdesk/harmless checks. High on unexpected drift/
-recovery/security decisions. Full93 incomplete, Windows bounds/image gaps/guards
-unchanged; no new Windows proof loop. Restarted disabled/uninstalled host absence
-and remaining platform/accessibility/optional event/routing/context gaps are separate.
+Human restart/reopen same chat on **Sol Medium**. Verify disabled preservation/fresh
+hooks/current tool absence; only then restore original enabled=true through known
+supported API, verify scoped state and checkpoint/restart before loaded return.
+No reinstall/changed-code trust needed for unchanged31. High on unexpected drift/
+answering service/recovery/security work. Full93 incomplete; Windows later/original
+bounds/image gaps/guards unchanged. Remaining accessibility/optional events/routing/
+context/platform/process-cleanup acceptance stays in scope.

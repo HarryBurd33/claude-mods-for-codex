@@ -1,6 +1,17 @@
 # macOS acceptance audit — 2026-10-24
 
-## Native31 lifecycle follow-up — current — 2026-10-24
+## Native rollback verified; restart-disable pending — current — 2026-10-24
+
+[RESTORE-DEV31](RESTORE-DEV31.md): actual reviewed31->30->31 UI/covered effects/
+scoped preservation passed after human reviews/restarts. Target-bound rollback
+verified; no universal lifecycle/OS claim. Separately installed31 is now disabled
+only by owned flag for [restart absence](DISABLE-RESTART-DEV31.md), fresh0hooks/
+cache251/trust/settings/data unchanged. Human restart on Medium next; actual tools
+absence/flag restoration/restarted return pending. Older audit rows are historical;
+full93/accessibility/optional events/routing/context/Windows gaps stay incomplete.
+
+
+## Native31 lifecycle follow-up — historical High checkpoint — 2026-10-24
 
 [LIFECYCLE-DEV31](LIFECYCLE-DEV31.md) adds closed view/new empty invocation,
 fresh disable/remove and exact31restoration. Loaded service still answered during
