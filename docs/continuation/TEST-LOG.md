@@ -2556,3 +2556,35 @@ write/restore. All remaining fields equal. Initial only-hashes verifier assumpti
 failed; field-name-only inventory recorded drift, preserved values.32protectedsource
 paths/93IDs order unchanged. No new capture/rules/guard/export/model run/theme/
 upgrade/cleanup. Restart/loaded native30 acceptance pending; stay Sol Medium.
+
+## Native30 bounded appearance/CLI picker — 2026-10-24 — Sol Medium
+
+Resumeda13f38aclean afterrestart. Actual native hostchatgpt appearance default/
+dark/light/Reset via MCP Apps DOM. Dark23/27/35+217/226/241/chart131/217/209opacity1;
+light247/249/252+23/35/55; JSON literal markup/string/number, diagram3node/2edge
+tables, diff-addition24/60/43dark220/241/226light plus/hunk semantics passed.
+Synthetic preview/review retained across palettes/navigation. Human TabReset/
+Enter/focus+narrow/wide yes; DOM confirmed host/no attr/Reset focus/retained results.
+Clear removed only our text; final Activity/Follow host/Watch off, other panel
+untouched. No native forced-color/full screen reader/lifecycle/removal-color or
+pixel/OS-wide network trace claim. Earlier29 reset uncertainty preserved.
+
+Actual native fixed production/authored BEFORE->AFTER, fresh control unchanged,
+configured harmless denial PreToolUse blocked without elevated retry. Activity
+same7/status5/revisiond4486db2..., parent chat outside selected capture. No fake
+counts/new paid model run/capture. No newly observed SessionStart from picker;
+previous26evidence remains separate.
+
+Original1502byte XML/private backup/exclusive copy, nativeCLI0.163 /theme custom
+discovery and code/diff sample. First TERM=dumb attempt declined; child-only
+terminal-type retry, update prompt Escape skipped, slash completion confirmed
+before Enter, filter claude found custom. Escape before save, owned exit0. No
+model prompt/selected-model change. Config bytes/theme preference unchanged;
+temporary file/new empty directory removed. Three startup warnings not diagnosed;
+physical terminal colors/164prose unverified. Private sanitized result retained.
+
+Fresh cache242/settings hash/3trusted0errors0inventory turns/32protectedsourcepaths/
+93IDs equal; same6owned human hashes+two earlier host fields, remaining configequal.
+No runtime/test/CI/config/cache/trust/rule/logging/export/guard/production cleanup
+change. No repeated suite/archive for notes. NATIVE-DEV30/AUTHORING-UI-NEXT record
+limits/nextHigh consequential work; original Windows bounds unresolved, guardssame.

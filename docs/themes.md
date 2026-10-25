@@ -23,20 +23,23 @@ checks follow [WCAG contrast guidance](https://www.w3.org/WAI/WCAG22/Understandi
 (retrieved2026-10-24); they do not certify every host theme or all accessibility.
 Tables and literal/sign semantics remain available independently of color.
 
-Automated/simulated checks and a disconnected browser preview passed. Native
-source30 rendering, keyboard/widths/forced colors and exact package acceptance
-are still pending. Installed30 is human reviewed; actual loaded appearance remains pending restart.
+Automated/simulated checks and a disconnected browser preview passed. [Bounded native30](continuation/NATIVE-DEV30.md) default/dark/light/Reset and
+human keyboard/width checks passed; native forced colors/full accessibility remain
+unverified. Exact package242files/62focused tests passed; installed30 is reviewed.
 See [source review](continuation/DEV30-REVIEW.md). No screenshot or browser test
 is presented as an official-host result.
 
-## Native CLI theme — separate supported setup, not yet verified locally
+## Native CLI theme — picker verified, physical colors unverified
 
 Official [CLI customization](https://learn.chatgpt.com/docs/cli-customization),
 retrieved2026-10-24, documents `/theme`, saving to `tui.theme`, and custom
 `.tmTheme` files under `$CODEX_HOME/themes`. The original MIT
 `examples/themes/claude-mods-quiet-dark.tmTheme` is a syntax palette without code
-or external assets. Its XML was checked earlier; native picker/rendering acceptance
-has not been performed. No file or preference was changed during source30 work.
+or external assets. Native0.163 `/theme` discovered the temporary original custom file and showed
+the code/diff sample; Escape cancelled before saving. Config bytes unchanged,
+temporary file/new empty directory removed and owned session exited0. Physical
+terminal color accuracy remains unverified; no preference or client upgrade.
+See [native evidence](continuation/NATIVE-DEV30.md).
 
 On a compatible POSIX CLI, record the previous theme, make a private configuration
 backup, inspect the destination directory and avoid following unexpected links or

@@ -1,5 +1,12 @@
 # Source30 package, CI and supported update — 2026-10-24
 
+Current native follow-up: [NATIVE-DEV30](NATIVE-DEV30.md) records loaded appearance/
+default/reset/retention, human keyboard/width report, harmless hooks and separate
+no-save CLI picker. No current restart/trust action. Earlier preparation and High
+implementation sections below are historical stage records; current STATUS and
+HANDOFF supersede their pending instructions. Full product remains incomplete.
+
+
 GPT-6.1 Sol Medium resumed6b2428d. No product/runtime/test/CI/default policy or
 Windows security changes this stage. Exact package and supported same-settings
 update verified; human reviewed the three changed hooks. **Restart/native30

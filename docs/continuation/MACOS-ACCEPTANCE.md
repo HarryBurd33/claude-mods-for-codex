@@ -1,6 +1,18 @@
 # macOS acceptance audit — 2026-10-24
 
-## Native29 follow-up — current — 2026-10-24
+## Native30 follow-up — current — 2026-10-24
+
+[NATIVE-DEV30](NATIVE-DEV30.md): actual owned appearance/default/reset/retained
+synthetic source/results, chart/code/diff additions, human keyboard/focus/resize
+and harmless hooks passed. Separate nativeCLI163 custom picker/cancel with config
+byte-unchanged passed; physical colors unverified. Native forced colors/full
+accessibility/lifecycle remain open. No source/config/logging/trust/Windows change,
+original bounds failure unresolved. Next human Sol High for authored interaction
+components beyond working28observer/status bundles, per AUTHORING-UI-NEXT.md.
+Older audited Hnow rows remain historical; no scores/full-product closure inferred.
+
+
+## Native29 follow-up — historical checkpoint — 2026-10-24
 
 [NATIVE-DEV29](NATIVE-DEV29.md): actual loaded Impact review, all3local guidance
 choices, edit invalidation/control/Clear and harmless native rewrites/control/deny
@@ -12,7 +24,7 @@ unchanged. Full93 product incomplete. Next human **Sol High** for bounded
 [appearance controls](THEMES-NEXT.md), before consequential implementation.
 
 
-## Bounded High triage — current — 2026-10-24
+## Bounded High triage — historical checkpoint — 2026-10-24
 
 [Metadata-bounds investigation](METADATA-BOUNDS-INVESTIGATION.md): proof-only fixed
 phase/refusal/cleanup diagnostics added; guards/budgets/production code unchanged.
@@ -25,7 +37,7 @@ Next **GPT-6.1 Sol Medium** for source29 native-review preparation, High before
 new consequential changes. Earlier next-High gate directions are historical.
 
 
-## Source29 Medium CI/package gate — current — 2026-10-24
+## Source29 Medium CI/package gate — historical checkpoint — 2026-10-24
 
 [PACKAGE-DEV29](PACKAGE-DEV29.md):234file public archive passed byte/hygiene/version/
 MIT checks; spaced extraction58pass/0fail. Four POSIX source CI jobs235pass each,
@@ -37,7 +49,7 @@ not broad Windows feature work. No new guard choice/model run. Earlier pending
 CI/package/next-Medium wording is historical. Full93 product remains incomplete.
 
 
-## Source29 follow-up — current — 2026-10-24
+## Source29 follow-up — historical checkpoint — 2026-10-24
 
 [DEV29-REVIEW](DEV29-REVIEW.md) records local impact assessment/explicit guidance,
 no execution/approval/policy edit and the existing deny/review alternative. Local
@@ -47,7 +59,7 @@ selection/model run. Next Medium routine packaging/review preparation. All93 gap
 remain accounted for; earlier next-High impact directions are historical.
 
 
-## Native28 follow-up — current — 2026-10-24
+## Native28 follow-up — historical checkpoint — 2026-10-24
 
 [NATIVE-DEV28](NATIVE-DEV28.md) records actual loaded authored counter/tool/table:
 3pre+2post=5, matching existing selected activity7/same revision; Refresh and

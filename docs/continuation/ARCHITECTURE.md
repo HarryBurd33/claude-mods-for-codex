@@ -1,19 +1,19 @@
 # Extension architecture and security contracts
 
-## Dev30 reviewed update — current — 2026-10-24
+## Native30 follow-up — current — 2026-10-24
 
-[PACKAGE-DEV30](PACKAGE-DEV30.md): exact242-file public archive/62packaged tests,
-four POSIX CI239passes each and portable Windows success. Both integration jobs
-retain only known image failure; bounds passed but original cause unresolved.
-Supported same-settings update verified242cache bytes; human3hook review confirmed
-by native3trusted0errors0model turns. Restart/loaded native30/CLI theme preview
-remain unverified. Logging/rules/exports/status/capture/Windows guards unchanged;
-no product/test/CI change or extra model run. Six human trust hash changes plus
-model-availability notice/selected-project entry drift vs fresh backup recorded;
-agent wrote neither extra field, all others equal, preserve both.32protectedsource
-paths and93IDs/order unchanged. Stay Sol Medium for restart/native acceptance;
-High before consequential changes. Full93 product remains incomplete. Earlier
-checkpoint sections below are historical, not current install/model instructions.
+[NATIVE-DEV30](NATIVE-DEV30.md): actual owned default/dark/light/Reset, retained
+synthetic code/impact source+results, chart/table/diff-addition colors and harmless
+hooks passed. Human keyboard/focus/resize report corroborated by DOM. Clear/reset
+left only our tested panel empty/default/Watch off. Separate native0.163 CLI theme
+picker/custom discovery/cancel passed with config byte-unchanged; temporary file/
+new empty dir removed, process exited0, no prompt/upgrade. Physical terminal colors,
+forced-color/native full accessibility/lifecycle remain unverified. Same242cache/
+settings/scope/exports/status/trust/Windows guards,7records/status5. No new startup
+record/delivery claim.32protectedsource paths/93IDs unchanged, original bounds
+failure unresolved. Next human **Sol High** for AUTHORING-UI-NEXT.md, beyond already
+working observer/status authoring; no current restart/trust/new capture/run grant.
+Earlier checkpoint sections below are history, not current install instructions.
 
 ### Owned appearance contract
 

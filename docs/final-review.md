@@ -1,11 +1,12 @@
 # Final review
 
-Current2026-10-24: [source30 package/update](continuation/PACKAGE-DEV30.md) is
-verified242files/62focused passes, human3hooks trusted; restart/native30 acceptance
-pending. Exact CI has four239-pass POSIX lanes/portable success plus the known
-Windows image failures; original bounds failure unresolved. Logging selections,
-exports/rules and Windows guards unchanged. No new model run. Stay Sol Medium for
-native acceptance, High before consequential changes. Earlier dated notes are historical.
+Current2026-10-24: [bounded native30 acceptance](continuation/NATIVE-DEV30.md)
+passed for owned appearance/reset/retention, human keyboard/widths and harmless
+hooks. Separate no-save nativeCLI theme discovery/picker passed; physical colors
+unverified. Package242/62tests/CI in PACKAGE-DEV30. Logging/trust/Windows guards
+preserved, original bounds failure unresolved. Next human Sol High for bounded
+authored interaction components; no current restart/trust action.
+Earlier dated notes are historical.
 
 
 Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)

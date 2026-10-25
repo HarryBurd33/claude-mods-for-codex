@@ -1,7 +1,8 @@
 # Build a local source package
 
 Current source30: see [package/CI/update evidence](continuation/PACKAGE-DEV30.md).
-Human hook review is complete; restart/native acceptance remains pending.
+Human hook review and bounded [native30 acceptance](continuation/NATIVE-DEV30.md)
+are complete within stated limits; broader accessibility/lifecycle remains open.
 Logging selections and Windows guards are unchanged; original bounds failure
 remains unresolved. Earlier package records are dated history.
 

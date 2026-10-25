@@ -1,5 +1,12 @@
 # Source30 owned appearance review — 2026-10-24
 
+Current native follow-up: [NATIVE-DEV30](NATIVE-DEV30.md) records loaded appearance/
+default/reset/retention, human keyboard/width report, harmless hooks and separate
+no-save CLI picker. No current restart/trust action. Earlier preparation and High
+implementation sections below are historical stage records; current STATUS and
+HANDOFF supersede their pending instructions. Full product remains incomplete.
+
+
 Current follow-up: [PACKAGE-DEV30](PACKAGE-DEV30.md) records242verified archive/cache
 files,62packaged passes and exact CI (known Windows image failures remain).
 Supported same-settings update and human3hook review complete; restart/actual

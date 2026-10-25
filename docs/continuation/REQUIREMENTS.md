@@ -1,19 +1,19 @@
 # Requirements ledger
 
-## Dev30 reviewed update — current — 2026-10-24
+## Native30 follow-up — current — 2026-10-24
 
-[PACKAGE-DEV30](PACKAGE-DEV30.md): exact242-file public archive/62packaged tests,
-four POSIX CI239passes each and portable Windows success. Both integration jobs
-retain only known image failure; bounds passed but original cause unresolved.
-Supported same-settings update verified242cache bytes; human3hook review confirmed
-by native3trusted0errors0model turns. Restart/loaded native30/CLI theme preview
-remain unverified. Logging/rules/exports/status/capture/Windows guards unchanged;
-no product/test/CI change or extra model run. Six human trust hash changes plus
-model-availability notice/selected-project entry drift vs fresh backup recorded;
-agent wrote neither extra field, all others equal, preserve both.32protectedsource
-paths and93IDs/order unchanged. Stay Sol Medium for restart/native acceptance;
-High before consequential changes. Full93 product remains incomplete. Earlier
-checkpoint sections below are historical, not current install/model instructions.
+[NATIVE-DEV30](NATIVE-DEV30.md): actual owned default/dark/light/Reset, retained
+synthetic code/impact source+results, chart/table/diff-addition colors and harmless
+hooks passed. Human keyboard/focus/resize report corroborated by DOM. Clear/reset
+left only our tested panel empty/default/Watch off. Separate native0.163 CLI theme
+picker/custom discovery/cancel passed with config byte-unchanged; temporary file/
+new empty dir removed, process exited0, no prompt/upgrade. Physical terminal colors,
+forced-color/native full accessibility/lifecycle remain unverified. Same242cache/
+settings/scope/exports/status/trust/Windows guards,7records/status5. No new startup
+record/delivery claim.32protectedsource paths/93IDs unchanged, original bounds
+failure unresolved. Next human **Sol High** for AUTHORING-UI-NEXT.md, beyond already
+working observer/status authoring; no current restart/trust/new capture/run grant.
+Earlier checkpoint sections below are history, not current install instructions.
 
 ## Native29 follow-up — historical checkpoint — 2026-10-24
 
@@ -224,8 +224,8 @@ issues are reports/leads, not reproductions by this project.
 | UI-05 Enter fields and choose options | Input/Select plus local callbacks | Owned form controls and validated tool schemas | UIhost | C-UI; CX-UI | supported | Installed dev6 preview Format/source fields and watch checkbox verified; no general authoring UI fields | Label/keyboard/cancellation/teardown and no implicit model call; verify in actual host | Watch replay0→1 observed; no native composer replacement |
 | UI-06 See status and activity | Reactive state and UI displays | Owned status region and read-only MCP tool | NodeMac; Desk | C-UI; CX-UI; LOCAL; NATIVE-PROOF | supported | Installed dev6 chart/table/scoped count4 rechecked on Medium; earlier native selected-project CLI capture displayed1→4 | Native shared write/Refresh and current dev4 rendering pass; active-Watch native timing/full accessibility remain | Retained delivery counts are not success/lifetime totals/producer health |
 | UI-07 Show band near prompt/transcript | AbovePrompt and named native sites | No equivalent insertion point established; owned panel/notice is candidate alternative | Desk; CLI163 | C-UI; CX-UI; CX-H | unverified | Session notice exists, no band | Identify released public placement API and test; otherwise verify readable notice/owned strip and label placement difference | A strip inside owned UI is not a native above-composer band |
-| UI-08 Apply themes | Theme/native drawing hooks | Owned fixed palettes; supported separate TUI theme configuration | UIhost; CLI163/164; Desk native chrome separately unverified | C-UI; CX-THEME; PRISM; DEV30-REVIEW (2026-10-24) | supported | Source30 Follow host/default, Quiet dark/light, Reset; fixed-token contrast/bridge tests and disconnected browser pass. Installed30 human reviewed, restart/native pending; no CLI theme applied | Package/CI/62tests verified (PACKAGE-DEV30); native keyboard/rendering/reset after restart; separate CLI picker preview, backup and restore; prose check requires164+ | Owned palette is not native client restyling; desktop theme contract remains to establish |
-| UI-09 Set backgrounds | Mod UI/native drawing | Fixed CSS backgrounds inside owned view; separate native theme setting | UIhost; CLI163/164; Desk | C-UI; CX-UI; CX-THEME; DEV30-REVIEW (2026-10-24) | approximation | Source30 owned dark/light/default backgrounds including code/diff/diagram; no arbitrary assets/URLs. Automated contrast and disconnected browser computed colors pass | 242-file archive/62focused passes; native30 light/dark/reset, widths and forced colors pending; privileges unchanged | Owned background is not whole-app replacement; native chrome follows supported client controls only |
+| UI-08 Apply themes | Theme/native drawing hooks | Owned fixed palettes; supported separate TUI theme configuration | UIhost; CLI163/164; Desk native chrome separately unverified | C-UI; CX-THEME; PRISM; DEV30-REVIEW (2026-10-24) | supported | Source30 Follow host/default, Quiet dark/light, Reset; fixed-token contrast/bridge tests and disconnected browser pass. Native30 palettes/reset/retention and human keyboard/resize passed; nativeCLI163 custom picker discovery/cancel passed with no saved theme | Package/CI/62tests verified; native bounded checks NATIVE-DEV30; full accessibility/forced colors/physical terminal colors unverified; prose164+ separate | Owned palette is not native client restyling; desktop theme contract remains to establish |
+| UI-09 Set backgrounds | Mod UI/native drawing | Fixed CSS backgrounds inside owned view; separate native theme setting | UIhost; CLI163/164; Desk | C-UI; CX-UI; CX-THEME; DEV30-REVIEW (2026-10-24) | approximation | Source30 owned dark/light/default backgrounds including code/diff/diagram; no arbitrary assets/URLs. Automated contrast and disconnected browser computed colors pass | 242-file archive/62tests; native30 light/dark/default/reset and retained draft/results, human widths passed; native forced colors/full lifecycle pending; privileges unchanged | Owned background is not whole-app replacement; native chrome follows supported client controls only |
 | UI-10 Show footer information | Mod-rendered footer/native sites | Footer inside owned UI; host-supported status configuration only if confirmed | UIhost; CLI163/164 | C-UI; CX-UI | approximation | Proof explanatory footer; dashboard source labels development state, trust and lack of approval semantics | Human preview resize/one keyboard path passed; footer zoom/screen-reader/readability and accurate labels still need broader checks | No arbitrary native transcript/footer insertion proved |
 | UI-11 Show indicators | Spinner/status sites, reactive components | Owned badges/counters; documented hook `statusMessage` | UIhost; CLI163; Desk | C-UI; CX-H; LOCAL | supported | Installed production connection/counters work; source adds measured-event chart; no native spinner replacement | Native manual refresh and synthetic Watch observed; source chart tested with simulated DOM; native statusMessage remains separate | Native indicator appearance stays host-controlled; missing data unavailable |
 | UI-12 Render rich code | Code components/custom rendering | Native supported syntax themes and escaped owned code renderer | CLI163/164; UIhost | C-UI; PRISM; CX-THEME; CX-UI | supported | Dev6 native highlighted JSON/plain literal code and earlier escaped diffs; markup-looking text remained literal | Automated hostile/control tests pass; actual host JSON/plain rendering passed; native theme/full-language highlighting separate | JSON highlighting only; other languages literal; no native renderer replacement |
