@@ -73,7 +73,8 @@ this build's live gate; arbitrary external programs are outside this driver cont
 - Prepared enabled31 preservation checker before/after passed:251cache/sharedconfig/
   ownedtrust/settings/data/sources/marketplace unchanged,0modelturns. No new profile,
   native flags, trust hashes, logging scope or permission selection changed.
-- Exact33CI/archive/public-clone/spaced packaging **not yet run**; next Medium.
+- At this historical High checkpoint exact33CI/package was pending; Medium later
+  verified it in PACKAGE-DEV33.md.
   No native host/Windows compatibility inferred from local mocks or Node subprocesses.
 
 Official docs retrieved [hooks](https://learn.chatgpt.com/docs/hooks) and
@@ -83,10 +84,11 @@ actual root response schema was found and read. An early shell glob matched no
 old hold module; no source or tool repair followed. Prior pinned0.164V1/V2 sources
 and no-history findings stand. No REA or unrelated research/native proof loop.
 
-## Remaining / next model
+## Remaining / next model — updated after Medium verification
 
-Switch to **GPT-6.1 Sol Medium** for source33 CI and exact package verification.
-The scoped dry implementation is complete; native admission remains honestly
+Medium [PACKAGE-DEV33](PACKAGE-DEV33.md) verified exact33CI/public package.
+Next **Sol High** for [native admission boundary](NATIVE-ADMISSION-NEXT.md), no
+inference. The scoped dry implementation is complete; native admission remains honestly
 closed, not something Medium may enable with a flag. Preserve31/no inference/no
 new trust/restart/install. High before consequential driver/env/gate/security changes,
 unexpected recovery or any native adapter design. A future native run needs real

@@ -211,7 +211,8 @@ Static source32 bundle/validation/replay/TOML checks passed; registered/installe
 false. Prepared installed31 preservation checker passed before/after. No native
 child run, model call, profile install, shared config, logging/trust/Windows change.
 
-Source33 dry implementation is ready for **Sol Medium** CI/package verification.
+Source33 dry implementation and [CI/package](PACKAGE-DEV33.md) are verified.
+Next **Sol High** for the [native admission boundary](NATIVE-ADMISSION-NEXT.md).
 Native adapter/admission remains blocked, requiring High before consequential
 changes and fresh authorization before any inference. This plan is not execution authorization or product
 completion; no extra inference is currently authorized.

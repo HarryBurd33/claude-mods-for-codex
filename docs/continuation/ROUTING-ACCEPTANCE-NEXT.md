@@ -11,7 +11,8 @@ inference grant remains. Native Windows is later, guards unchanged.
 [DEV33-REVIEW](DEV33-REVIEW.md) / [routing-driver](../routing-driver.md) implement
 and test the fixed-peer protocol/admission/cancellation driver. No native adapter,
 no native admission proof or inference. Live gate cannot open in this build.
-Next human Medium for33CI/package; do not enable/live-test/install on Medium.
+Medium33CI/package verified in PACKAGE-DEV33; next High follows
+NATIVE-ADMISSION-NEXT.md. Do not enable/live-test/install this closed build.
 High before consequential native gate/env/adapter decisions; no fresh grant exists.
 The older no-driver preparation below is historical. Full93 remains incomplete.
 

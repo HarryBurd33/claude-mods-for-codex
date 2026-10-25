@@ -1,29 +1,26 @@
-# Current status — source33 dry driver / installed31 preserved — 2026-10-25
+# Current status — source33 verified / installed31 preserved — 2026-10-25
 
-## Source33 dry driver implemented — current — 2026-10-25
+## Source33 CI/package verified — current — 2026-10-25
 
-[DEV33-REVIEW](DEV33-REVIEW.md) and [routing-driver](../routing-driver.md): fixed
-synthetic Node-peer driver/state machine, separate synthetic pre-dispatch admission,
-typed refusals, scoped cancellation/late-response/deadline/stream/privacy/process
-cleanup implemented.19newtests pass; full271pass0fail112Windows-onlyskips383total,
-validate3/replay4. Native calls0; live adapter absent and live admission always closed.
-No flag/config/grant claim can enable it. Native tool admission/routing remains
-unverified, not proven by mocks, readonly metadata or fail-open hooks.
+[PACKAGE-DEV33](PACKAGE-DEV33.md): exact publicc8ea24d clone/archive276files,
+allbytes source/pre-notes workspace equal, spaced packaged104pass0fail1Windows-only
+skip105total/validate3/replay4. Packaged dry CLI V1/V2 pass, denial stops/--live
+refuses, peers reaped/nativecalls0/livefalse. Prior28/31/32bundles unchanged.
+ExactCI40170652568:4POSIXlanes271pass112skips383total; portableWindows routing18pass
+1POSIXskip. Both integration jobs only known Image refusal/linkcount2,25storage+
+85pass1fail86proofs; original bounds cause unresolved, guards unchanged, no allgreen.
+No source/runtime/test/CI/config/model/logscope/trust/Windows change this Medium
+stage; installed31/cache251/settings/data preserved. Source33 uninstalled and
+native admission closed. Full93/native routing still incomplete. Next human High
+for [native admission boundary](NATIVE-ADMISSION-NEXT.md), not more mock-only
+scaffolding; no inference authorized. Older status sections below historical.
 
-Source0.2.0-dev.33 uninstalled;31/cache251/config/settings/data/logging/trust/current
-model/Windows guards preserved. Only production version metadata changed; CI adds
-portable synthetic-driver test step. No native Codex/profile/turn, paid run, new
-trust or restart. Next human Sol Medium for exact33CI/package; High before
-consequential gate/env/security/native-adapter changes. No live approval request
-for this build. Full93/knownWindowsbounds/Image/native11/WSL gaps incomplete.
-Older status sections below historical.
+The synthetic admission/cancellation driver is tested but cannot enable a live
+transport. Native gate/adapter/discovery/route/permission/usage/lifecycle acceptance
+remains separate. No approval or native install/restart is currently requested.
+Routine33verification is complete; consequential native policy/adapter decisions
+require Sol High. Full93 incomplete, macOS first/Windows later.
 
-The planned separate Sol Low/Luna Low tasks remain proposals only. The dry peer's
-names/marker/token counts are artificial; no account/model work occurred. Prior
-source32 authoring/package and installed31 native evidence remain separate. Source33
-CI/exact public clone/archive/spaced packaging are next Medium verification.
-
-Source33 implementation verified at
-[1427bc5](https://github.com/HarryBurd33/claude-mods-for-codex/commit/1427bc5c3318e960955d9fb25e442a5fccd59d26),
-local/fetched/public full tree agreed; exact identity in HANDOFF. This notes
-follow-up changes no driver/test/installed state; final ref verified separately.
+Immutable verified source/package c8ea24dc506652a636cd35d25d6cf9db79881066/tree
+1a270654bf3c0b926831af2f6667b16d4c362714; SHA256 in PACKAGE-DEV33. Later notes
+are not a new tested archive or native result. No new failure requiring recovery.

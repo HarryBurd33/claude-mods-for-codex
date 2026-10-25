@@ -122,7 +122,9 @@ The six routing modules under proofs/ provide constants/denials/admission, pure
 state transitions, stream framing, fixed fixtures, fixed peer and process runner.
 test/routing-driver.test.mjs adds19meaningful tests. Local macOS14.6/Node24.22.0:
 all19pass; full suite271pass0fail112Windows-onlyskips383total, validate3/replay4.
-Current33 CI and exact public archive verification remain next Medium work.
+Exact33 [CI/public archive](continuation/PACKAGE-DEV33.md) now verified:276files,
+spaced104passes/1skip; fourPOSIX271passes/portableWindows routing18passes/1skip.
+This is still not native routing acceptance.
 
 Portable CI adds a synthetic Node-driver step. It is not Windows Codex, private
 storage, native hooks or agent acceptance; the POSIX signal-specific case skips

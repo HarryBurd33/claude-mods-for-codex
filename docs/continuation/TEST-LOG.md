@@ -2930,3 +2930,38 @@ Nativeadmission/adapter/routingstillunverified/closed, no freshinferencegrant or
 liveapprovalrequest. Full93incomplete. Highscopeddryimplementationready; save/upload/
 verifyandstopforMediumroutineverification. Highbeforegate/env/security/nativeadapter
 changes. No source33install/trust/restart/modelcall/delegation/backgroundcontinuation.
+
+## Medium source33 exact CI/package — 2026-10-25
+
+Resumedc8ea24d clean. Prepared enabled31 checker before/after cache251/config/owned
+trust/settings/data/sources/marketplace unchanged0turns. ActualmacOS14.6/Node24.22.0.
+No source/runtime/test/CI/version/config/logscope/model/trust/Windowschange. No
+nativeCodex/profile/turn/inference/update/approval/restart. Livegateclosed.
+
+Anonymouscredential-disabled/hook-disabledcloneexactc8ea24dc506652a636cd35d25d6cf9db79881066,
+tree1a270654bf3c0b926831af2f6667b16d4c362714. Offlineignore-scriptsnpmpackisolatedcache:
+276files2,251,872unpacked684,708archiveSHA256
+6564c6ade1c1f3b0638b36ec4ed11dc036edde9242536e7a9829f3168ee26d8a.
+Allbytespublicclone/pre-notesworkspaceequal; strict tarpath/traversal/link/special/
+setid/case/privatepaths/key/log/rootHANDOFF hygiene/versions/MIT/private metadata/
+nodeps/default3hooks/journalmetadata-off pass. All6driver modules/newtest/guide/
+review included. Newspacedextraction105total104pass0fail1Windows-onlyskip (~7.0sec),
+validate3/replay4expectednofixtureexecution. ActualpackagedCLIhappyv1/v2exit0pass,
+deny-commandexit1stopped/--liveexit2refused, peersreaped/nativeInference0/livefalse.
+Actualprior28paired31Reviewdesk32agentproposalbundlesvalidate/replay/plan with
+alloriginalbytespreserved. No new fullsuite repeat after exact CI source evidence.
+
+AnonymouspublicRESTpushdiscoveryrun40170652568headc8ea24dcompletedfailure. Connector
+readall7finaljobsteps+decodedlogs, no retry/toolrepair. FourPOSIXNode22/24Ubuntu/
+macOSlaneseach271pass0fail112Windows-onlyskip383total+validate/replay. Windowsportable
+job121100619805 routing18pass0fail1POSIXskip19total; component11pass11POSIXskip22total.
+Windows22job121100619746and24job121100619687each25storagepass+85pass1fail86process
+proofs. ONLYknownInstallerImagerefusal links2/dataReadfalse/sampleAcceptedfalse;
+no hash/import/executiontrust admitted. Bounds361.6409/417.3686mspassednotoriginal
+rootcausefix. Guards/assertionsunchanged; no allgreen/nativeWindows11/WSLclaim.
+No new unsafe failure/recovery. Raw7logs/reports keptignoredlocal0600dir0700.
+
+Routine33package/CIcomplete,33uninstalled31approvedusable. NextHighactualnative
+admissionboundary/adapterdesign perNATIVE-ADMISSION-NEXT, not more mock-only stage.
+No newinferencegrant; liveclosed/codecannotenable. Full93native routing/permission/
+lifecycle/platform gaps remainincomplete. Save/upload/verify and stopforhumanHigh.
