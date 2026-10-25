@@ -1,18 +1,20 @@
-# Current status — source29 verification gate — 2026-10-24
+# Current status — source29 native preparation — 2026-10-24
 
-## Source29 Medium CI/package gate — current — 2026-10-24
+## Bounded High triage — current — 2026-10-24
 
-[PACKAGE-DEV29](PACKAGE-DEV29.md):234file public archive passed byte/hygiene/version/
-MIT checks; spaced extraction58pass/0fail. Four POSIX source CI jobs235pass each,
-Windows portable/new7impact cases passed. Node24 has the known image failure;
-Node22 adds a **new metadata-bounds harness failure** (83/85process passes).
-Cause unresolved. Installed28/logging scope/settings/human trust remain unchanged;
-source29 not installed. Next **GPT-6.1 Sol High** for bounded failure investigation,
-not broad Windows feature work. No new guard choice/model run. Earlier pending
-CI/package/next-Medium wording is historical. Full93 product remains incomplete.
+[Metadata-bounds investigation](METADATA-BOUNDS-INVESTIGATION.md): proof-only fixed
+phase/refusal/cleanup diagnostics added; guards/budgets/production code unchanged.
+One exact CI run passed bounds and diagnostic self-tests on both Windows lanes;
+both known image failures remain (85/86process proofs each). Original bounds
+failure did not recur and its cause is still unresolved, not claimed fixed.
+All93 requirements remain; Windows gated, macOS acceptance first. Installed28/
+logging/settings/owned trust unchanged; external config drift reported separately.
+Next **GPT-6.1 Sol Medium** for source29 native-review preparation, High before
+new consequential changes. Earlier next-High gate directions are historical.
 
-Source29's local impact review and explicit next-step guidance are implemented,
-not native accepted. Native28 authored counter/hooks remain separately verified.
-No code/source test change this Medium stage. Known image failure guards intact;
-new failure must not be called flaky or fixed without evidence. macOS remains
-first delivery target; only bounded new-failure triage precedes further acceptance.
+Source29 local impact review is implemented and its exact234-file public package
+passed58focused tests. Native29 UI/impact-specific guard acceptance is pending.
+Product runtime unchanged by the proof diagnostic checkpoint. Four POSIX CI jobs
+235passes/112Windows skips each; native Windows proof results are not Codex host
+compatibility. No new installation, guard category, model run, optional event
+capture, cleanup or production policy change. Full product remains incomplete.

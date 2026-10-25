@@ -1,10 +1,10 @@
 # Current project status — source29 — 2026-10-24
 
-Current verification gate: source29 packaging passed (234files;58focused tests).
-CI also found a new Windows Node22 metadata-bounds harness failure alongside the
-known image failures. Cause unresolved; High investigation precedes installation.
-Installed28/logging/trust are unchanged. [Exact results](docs/continuation/PACKAGE-DEV29.md).
-Earlier source29 CI/package-pending wording below is superseded; native29 remains pending.
+Current verification: source29 package passed234files/58focused tests. Bounded
+High triage added proof-only diagnostics; both Windows bounds/self-tests passed
+one diagnostic run. Original failure cause remains unresolved and known image
+failures/Windows gates remain. Installed28/logging/trust unchanged. Next Medium
+native-review preparation. [Evidence](docs/continuation/METADATA-BOUNDS-INVESTIGATION.md).
 
 
 macOS acceptance is the current priority. Development source **0.2.0-dev.29** adds

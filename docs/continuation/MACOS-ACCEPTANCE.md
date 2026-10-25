@@ -1,5 +1,18 @@
 # macOS acceptance audit — 2026-10-24
 
+## Bounded High triage — current — 2026-10-24
+
+[Metadata-bounds investigation](METADATA-BOUNDS-INVESTIGATION.md): proof-only fixed
+phase/refusal/cleanup diagnostics added; guards/budgets/production code unchanged.
+One exact CI run passed bounds and diagnostic self-tests on both Windows lanes;
+both known image failures remain (85/86process proofs each). Original bounds
+failure did not recur and its cause is still unresolved, not claimed fixed.
+All93 requirements remain; Windows gated, macOS acceptance first. Installed28/
+logging/settings/owned trust unchanged; external config drift reported separately.
+Next **GPT-6.1 Sol Medium** for source29 native-review preparation, High before
+new consequential changes. Earlier next-High gate directions are historical.
+
+
 ## Source29 Medium CI/package gate — current — 2026-10-24
 
 [PACKAGE-DEV29](PACKAGE-DEV29.md):234file public archive passed byte/hygiene/version/
