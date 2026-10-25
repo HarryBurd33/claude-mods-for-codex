@@ -2471,3 +2471,18 @@ both bounds/self-tests but did not establish a fix; both known image failures an
 Windows gates remain. Installed snapshot is dddd49a, not the newer proof-only
 source. Product runtime matches; proof/test/docs differ. No new archive/full suite
 needed for this unchanged reviewed snapshot. Full93 product incomplete.
+
+## Native29 follow-up — current — 2026-10-24
+
+[NATIVE-DEV29](NATIVE-DEV29.md): actual loaded Impact review, all3local guidance
+choices, edit invalidation/control/Clear and harmless native rewrites/control/deny
+passed. Human keyboard/focus report and controlled resize/DOM corroboration recorded;
+earlier unexplained reset remains a lifecycle uncertainty, no confirmed resize bug.
+Cache234/settings/logging/trust preserved; same7records/status5. Impact guard stays
+off; no new capture/model run. Original bounds failure unresolved, Windows gates
+unchanged. Full93 product incomplete. Next human **Sol High** for bounded
+[appearance controls](THEMES-NEXT.md), before consequential implementation.
+
+Fresh read-only native inventory3trusted/0errors/0model turns. macOS14.6,
+Node24.22.0, standaloneCLI0.163.0, panel hostchatgpt. Exact internal desktop version
+not independently attested. Source/native/automated evidence separated in NATIVE-DEV29.

@@ -1,26 +1,18 @@
-# Current status — source29 trusted restart checkpoint — 2026-10-24
+# Current status — native29 bounded acceptance — 2026-10-24
 
-## Source29 supported update — current — 2026-10-24
+## Native29 follow-up — current — 2026-10-24
 
-Prepared immutable234file candidate from the already verified dddd49a archive.
-Only three private overlays: same MCP/settings28 path, unchanged configured mods,
-and inert hook review comment28→29. No new settings/export/capture/guard selection.
-Supported same-ID update succeeded; all234cache bytes equal candidate. Fresh shared
-config backup/owned marketplace backup saved privately. Settings hash unchanged,
-parsed shared config equal immediately after add, all unrelated entries preserved.
-Human reviewed3hooks; fresh native inventory3enabled trusted/0errors/0model turns.
-Only3owned trusted_hash fields changed after review; every other field equals the
-fresh pre-update backup, including current unrelated node_repl environment entries.
-Agent wrote no trust. Restart/actual loaded native29 acceptance remains pending.
+[NATIVE-DEV29](NATIVE-DEV29.md): actual loaded Impact review, all3local guidance
+choices, edit invalidation/control/Clear and harmless native rewrites/control/deny
+passed. Human keyboard/focus report and controlled resize/DOM corroboration recorded;
+earlier unexplained reset remains a lifecycle uncertainty, no confirmed resize bug.
+Cache234/settings/logging/trust preserved; same7records/status5. Impact guard stays
+off; no new capture/model run. Original bounds failure unresolved, Windows gates
+unchanged. Full93 product incomplete. Next human **Sol High** for bounded
+[appearance controls](THEMES-NEXT.md), before consequential implementation.
 
-Original bounds failure is explicitly unresolved. Diagnostic249a69e CI passed
-both bounds/self-tests but did not establish a fix; both known image failures and
-Windows gates remain. Installed snapshot is dddd49a, not the newer proof-only
-source. Product runtime matches; proof/test/docs differ. No new archive/full suite
-needed for this unchanged reviewed snapshot. Full93 product incomplete.
-
-Next exact setting remains GPT-6.1 Sol Medium. Human restarts Codex and reopens
-this same chat, then native local-view/harmless-hook checks. Source29 package58
-focused passes, source POSIX235passes and diagnostic OS results remain separate
-from pending native UI/impact acceptance. No new guard category, optional events,
-paid model test, production cleanup or current background watcher/child.
+Source29 installation/supported update/human trust and bounded loaded UI are
+observed, not full capability completion. Native impact guard/category acceptance,
+true human hold authority, optional events/failure/cancel, full accessibility/
+lifecycle/older rollback/themes/routing/context/platform gaps remain explicit.
+No runtime/test/configuration edit or repeated archive/full suite this stage.

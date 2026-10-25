@@ -1,5 +1,17 @@
 # Requirements ledger
 
+## Native29 follow-up — current — 2026-10-24
+
+[NATIVE-DEV29](NATIVE-DEV29.md): actual loaded Impact review, all3local guidance
+choices, edit invalidation/control/Clear and harmless native rewrites/control/deny
+passed. Human keyboard/focus report and controlled resize/DOM corroboration recorded;
+earlier unexplained reset remains a lifecycle uncertainty, no confirmed resize bug.
+Cache234/settings/logging/trust preserved; same7records/status5. Impact guard stays
+off; no new capture/model run. Original bounds failure unresolved, Windows gates
+unchanged. Full93 product incomplete. Next human **Sol High** for bounded
+[appearance controls](THEMES-NEXT.md), before consequential implementation.
+
+
 ## Source29 supported update — current — 2026-10-24
 
 Prepared immutable234file candidate from the already verified dddd49a archive.
@@ -278,7 +290,7 @@ issues are reports/leads, not reproductions by this project.
 
 | ID / intended experience | Claude mechanism | Possible Codex mechanism / surface | Target | Evidence | Status | Current implementation | Dependencies and concrete acceptance test | Remaining gap / practical alternative |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| EX-01 blast-radius explains likely command impact | Sample lexical classifier, project measurements, awaited UI decision | Original conservative risk explanation + EV-07 human hold if verified; otherwise deny/retry | CLI163; Desk; UIhost | SAMPLES; CX-H; CX-HOLD | approximation | Source29 local CLI/owned-view assessment and ephemeral Stop/Revise/Policy guidance; enabled existing guard denies original/revised signals with no approve/retry token | Local235passes/111Windows skips; synthetic real CLI/hook and disconnected UI proofs passed; native29 impact workflow pending | Deny/review approximation; unknown targets/extent; local choice changes no policy or pending call; fresh guard opt-in separate |
+| EX-01 blast-radius explains likely command impact | Sample lexical classifier, project measurements, awaited UI decision | Original conservative risk explanation + EV-07 human hold if verified; otherwise deny/retry | CLI163; Desk; UIhost | SAMPLES; CX-H; CX-HOLD | approximation | Source29 local CLI/owned-view assessment and ephemeral Stop/Revise/Policy guidance; enabled existing guard denies original/revised signals with no approve/retry token | Local235passes/111Windows skips; synthetic real CLI/hook and disconnected UI proofs passed; native29 local UI/guidance/edit/Clear/control and ordinary hooks passed (NATIVE-DEV29); native impact guard/category still unselected/unverified | Deny/review approximation; unknown targets/extent; local choice changes no policy or pending call; fresh guard opt-in separate |
 | EX-02 filetree explores selected project with Git status | Pane, file tree/search, Git, context injection | Original bounded read-only MCP explorer and owned UI | UIhost; NodeMac; Win later | FILETREE; CX-UI; LOCAL architecture | supported | Dev6 native files/Git status and nested folder expansion verified | Traversal/privacy/helper/hostile-tree tests pass; synthetic nested file displayed; full accessibility/native platform matrix pending | No file-content explorer preview; no upstream code copied or prompt injection  Source23 macOS availability refusal remains unlocalized; source24 strict listing/diff and independent sentinel checks passed four POSIX lanes, with sanitized future refusal reasons. |
 | EX-03 replay-theater inspects prior-turn edits | Sample records attempted tool edits in memory | Explicit selected Git checkpoint/diff or opt-in sanitized execution export | UIhost; NodeMac | SAMPLES; CX-RUN; LOCAL architecture | approximation | Native dev4 Replay showed only reviewed two synthetic commits and one text diff; read-only | Selected-commit/index/HEAD preservation tests and actual host diff/labels passed | Approximation: explicit commits, not automatic turn capture or pure assistant attribution |
 | EX-04 Restore a reviewed previous change separately | Replay concept can offer restoration | Separate explicitly requested mutation with fresh diff/conflict check | CLI163/Desk; NodeMac | User instruction; LOCAL architecture | supported | Source0.2.0-dev.3 POSIX one-file restore-plan/review/apply with private outside-project versions, exact plan ID and fresh conflict/identity checks; no panel/MCP writer | Disposable-file tests cover conflicts/links/privacy/tampering/concurrency/permissions/index/HEAD/unselected work and reverse plan; installed-host/interruption/disk-failure/extended ACL/xattr pending | Only existing UTF-8 text with unchanged executable mode; add/delete/binary/mode cases refused. Normal explicit host edit is alternative. In-place write not interruption-atomic; Windows ACL unavailable |

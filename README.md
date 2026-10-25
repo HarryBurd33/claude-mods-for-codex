@@ -1,11 +1,11 @@
 # Claude Mods for Codex
 
-Current restart checkpoint: supported source29 update installed234verified files;
-human reviewed/trusted its3hooks. Settings/logging/rules/exports unchanged; impact
-guard remains off. Actual loaded native29 UI checks await restart. Original Windows
-bounds failure remains unresolved; gates/known image failures preserved.
-[Update and rollback](docs/continuation/PACKAGE-DEV29.md). Earlier installed28/pending
-installation statements below describe the previous stage.
+Current native29 result: Impact review/local guidance/edit/Clear/control and
+harmless hooks passed in the official host. Human keyboard/controlled resize
+reported; earlier unexplained reset remains a lifecycle limit. Logging/settings/
+trust unchanged, impact guard off; Windows bounds failure still unresolved.
+[Evidence](docs/continuation/NATIVE-DEV29.md). Full product remains incomplete.
+Earlier restart-pending statements below are historical.
 
 
 Current verification: source29 package passed234files/58focused tests. Bounded
@@ -22,7 +22,7 @@ choice nor an assessment executes, approves, cancels a pending call or edits pol
 The existing opt-in lexical guard still denies covered matches, including proposed
 rewrites; normal host permissions remain authoritative. No automatic allow/retry.
 
-Source29 is installed and human-reviewed; actual native UI verification awaits restart. Local macOS suite: **235 passed,
+Source29 is installed, human-reviewed and has bounded native UI verification; broader acceptance remains incomplete. Local macOS suite: **235 passed,
 0 failed,111 Windows-only skips346total**. CLI validation/replay passed. New UI
 bridge/choice/lifecycle proofs are simulated; exact CI/package/native acceptance
 remain separate. [Source review](docs/continuation/DEV29-REVIEW.md).

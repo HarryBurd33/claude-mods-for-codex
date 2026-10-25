@@ -1,5 +1,17 @@
 # macOS acceptance audit — 2026-10-24
 
+## Native29 follow-up — current — 2026-10-24
+
+[NATIVE-DEV29](NATIVE-DEV29.md): actual loaded Impact review, all3local guidance
+choices, edit invalidation/control/Clear and harmless native rewrites/control/deny
+passed. Human keyboard/focus report and controlled resize/DOM corroboration recorded;
+earlier unexplained reset remains a lifecycle uncertainty, no confirmed resize bug.
+Cache234/settings/logging/trust preserved; same7records/status5. Impact guard stays
+off; no new capture/model run. Original bounds failure unresolved, Windows gates
+unchanged. Full93 product incomplete. Next human **Sol High** for bounded
+[appearance controls](THEMES-NEXT.md), before consequential implementation.
+
+
 ## Bounded High triage — current — 2026-10-24
 
 [Metadata-bounds investigation](METADATA-BOUNDS-INVESTIGATION.md): proof-only fixed
@@ -134,9 +146,9 @@ state acceptance for these changes. Source25 remains uninstalled/package-unverif
 | --- | --- | --- | --- |
 | UI-01 Open a mod-owned pane | I | H10 + Hnow: connected owned pane and six views | Full accessibility and close-pending; owned pane only. |
 | UI-02 Open a persistent side panel | I | H6/10: human close/reopen; Hnow: existing panels available | Backend cleanup while closing a pending call still unmeasured; host manages docking. |
-| UI-03 Use tabs within a mod | I | H6 + Hnow: six view buttons; aria-current changes; H10: keyboard focus | Complete keyboard/screen-reader view navigation. Owned views, not arbitrary host tabs. |
+| UI-03 Use tabs within a mod | I | Native29: seventh owned Impact view/local choices; H6 + Hnow: six prior view buttons; aria-current changes; H10: keyboard focus | Complete keyboard/screen-reader view navigation. Owned views, not arbitrary host tabs. |
 | UI-04 Click buttons locally | V | H6 + Hnow: Render/Clear/view clicks; A25 local callback assertions | Verified for owned controls in dev10, not native approval buttons; lifecycle tracked by SEC-10. |
-| UI-05 Enter fields and choose options | I | Hnow: labeled Format select/source field; JSON selection/render; H10 keyboard subset | Full keyboard/select and assistive-technology interaction; no general mod-authoring form. |
+| UI-05 Enter fields and choose options | I | Native29: labeled impact field, edit/Clear; human keyboard and controlled resize; Hnow: labeled Format select/source field; JSON selection/render; H10 keyboard subset | Full keyboard/select and assistive-technology interaction; no general mod-authoring form. |
 | UI-06 See status and activity | V | Hnow: table/chart show four retained events and project scope; service matches | Verified retained-count display in dev10; no producer-health/exactly-once claim; live changes EV-14. |
 | UI-07 Show band near prompt/transcript | I | D/S163/164: no reviewed native insertion API; notice exists in dispatcher | Verify visible notice, disclose owned strip placement. Newer desktop surface contract not established. |
 | UI-08 Apply themes | W | D/S164 + original palette/source XML check; CLI163 still installed | Compatible CLI theme preview/render/restore and human selection; desktop theme contract unknown. |
