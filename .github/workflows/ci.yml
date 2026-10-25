@@ -57,7 +57,7 @@ jobs:
       - name: Synthetic routing driver only (fixed Node peer, no Codex or inference)
         run: node --test test/routing-driver.test.mjs
       - name: Native routing preparation only (closed execution, no Codex or inference)
-        run: node --test test/routing-native.test.mjs
+        run: node --test test/routing-native.test.mjs test/routing-native-hooks.test.mjs
       - name: Retention Windows before-IO refusal (POSIX cleanup cases skip)
         run: node --test test/retention.test.mjs
       - run: npm run validate

@@ -1,6 +1,7 @@
 // Review-only native launch contract. No filesystem, process, network or model IO.
 import { posix } from 'node:path';
 import { ROUTE, BOUNDS, jsonData } from './routing-contract.mjs';
+import { nativeHookMetadataOnly } from './routing-native-hooks.mjs';
 
 export const NATIVE_TARGET = Object.freeze({ platform: 'darwin', cliVersion: '0.164.0', backend: 'v2' });
 export const NATIVE_PARENT_TEXT = `Perform only this synthetic routing check. Spawn exactly one native agent using
@@ -69,7 +70,8 @@ export function nativeConfigMatches(plan, config) {
   const servers = config.mcp_servers;
   if (servers && (typeof servers !== 'object' || Array.isArray(servers)
     || Object.entries(servers).some(([name, v]) => !plan.input.disabledMcpServers.includes(name) || v?.enabled !== false))) return false;
-  if (config.hooks && (typeof config.hooks !== 'object' || Object.keys(config.hooks).length)) return false;
+  // Metadata classification is neither hook discovery nor execution authority.
+  if (!nativeHookMetadataOnly(config.hooks)) return false;
   if (config.multi_agent_v2?.message_board_remote) return false;
   return true;
 }

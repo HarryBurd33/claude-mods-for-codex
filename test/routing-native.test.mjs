@@ -101,7 +101,7 @@ test('native resolved config check rejects missing reducers, extra MCP, ambient 
   const p = plan(); assert.equal(nativeConfigMatches(p, config()), true);
   for (const change of [v => { delete v.features.plugin_hooks; }, v => { v.features.shell_tool = true; },
     v => { v.mcp_servers.other = { enabled: true }; }, v => { v.mcp_servers.selected_server.enabled = true; },
-    v => { v.hooks = { PreToolUse: [] }; }, v => { v.multi_agent_v2.message_board_remote = {}; }]) {
+    v => { v.hooks = { PreToolUse: [{ hooks: [{ type: 'command', command: 'NEVER_EXECUTE_SYNTHETIC' }] }] }; }, v => { v.multi_agent_v2.message_board_remote = {}; }]) {
     const c = config(); change(c); assert.equal(nativeConfigMatches(p, c), false);
     const a = boot({ configValue: c }); assert.equal(a.report().reason, 'config-mismatch'); assert.equal(a.report().draftTurnStarts, 0);
     assert.ok(out(a).every(q => q.method !== 'thread/start'));

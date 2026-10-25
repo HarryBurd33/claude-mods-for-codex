@@ -1,6 +1,6 @@
-# Prepared native routing adapter — source34
+# Prepared native routing adapter — source35
 
-Source0.2.0-dev.34 prepares a separate temporary CLI app-server test adapter for
+Source0.2.0-dev.35 prepares a separate temporary CLI app-server test adapter for
 the [human-accepted ordinary-read-only design](continuation/NATIVE-ADMISSION-REVIEW.md).
 It is not a native plugin UI extension, a new product client or a Codex fork.
 Installed31 is unchanged. **Execution remains closed by construction**: no human
@@ -33,6 +33,9 @@ unchanged; it cannot be converted into a native transport through an option.
   macOS/CLI0.164.0/V2, intended Sol Low parent/Luna Low named child, no history fork,
   no provider fallback, human reviewer/read-only sandbox, process-only reducers,
   explicit MCP disables, selected binary/candidate/config hashes. No IO/grant.
+- `proofs/routing-native-hooks.mjs`: pure bounded state-versus-definition classifier.
+  Known typed metadata/empty released event defaults accepted; nonempty handlers,
+  unknown or malformed data refused. No path lookup, approval or hook IO.
 - `proofs/routing-native-adapter.mjs`: native public-protocol draft adapter. Config
   confirmation precedes catalog/thread/turn drafts; missing controls stop. V2
   selection, owned parent/role/cwd/version/model/effort, turn identity, usage,
@@ -80,8 +83,10 @@ permission grant, filled answer, token refresh or successful dynamic-tool respon
 
 Required config echoes are corroborating preflight checks, **not a universal tool
 barrier**. Missing/unexported/normalized fields refuse; there is no automatic
-fallback or reducer relaxation. Ambient non-plugin hooks, an unexpected MCP server
-or a remote board refuse. Exact native export compatibility is unverified. The
+fallback or reducer relaxation. Nonempty inline hook definitions, unknown/malformed hook data, an unexpected MCP
+server or a remote board refuse. Typed hooks.state metadata and empty exact
+released event defaults are accepted as data only. External/managed hook discovery
+is not established by that result. Exact native export compatibility is unverified. The
 previous unconfirmed root code_mode.enabled/tools.update_plan.enabled attempts
 are not reused; code-mode flags are under features.
 
@@ -135,6 +140,10 @@ Human trust/authentication remains protected; no auto-trust or application patch
 
 Removing only the private proposal folder discards these review artifacts. Do not
 remove the existing candidate/config, installed31 or unrelated records. There is
-no current running native process/profile/update to roll back. Source34 is an
+no current running native process/profile/update to roll back. Source35 is an
 incomplete development checkpoint, not a release or full configured-routing result.
-See [DEV34-REVIEW](continuation/DEV34-REVIEW.md) for actual tests and pending checks.
+See [DEV35-REVIEW](continuation/DEV35-REVIEW.md) for actual tests and pending checks.
+
+Source35 classifier details/bounds/regression evidence: DEV35-REVIEW. The old34
+proposal remains stale and preserved; the new source review is not an executable
+proposal or run grant. Source35 exact CI/package verification remains separate.

@@ -3133,3 +3133,26 @@ lifecycle/platform gaps remainincomplete. Save/upload/verify and stopforhumanHig
 - Final notes checks:12Markdown-only public changes/no private path/project
   name;93IDs/order preserved; current local links and7source pins pass; diff check
   clean. No executable source/CI/version changes. Raw machine evidence stays ignored/local.
+
+## 2026-10-25 — Sol High source35 hook-metadata classifier aftera2e09fe
+
+- Reused pinned0.164schema/event list/state-discovery evidence. New pure metadata
+  helper accepts known typed state/empty released events, rejects executable/
+  unknown/malformed/bound violations, never looks up IDs or grants trust. Native
+  plan now uses helper; prior actual-handler test uses nonempty synthetic group.
+- Red regression6cases2pass4fail against34 (metadata false refusals/malformed falsy
+  acceptance); green6pass. Combined native20cases19pass1platformskip. Full npm test
+  290pass0fail113skip403total (~8.3sec), validate3/replay4 pass. No native process or
+  fixture command/model execution. Gates remain closed in metadata positive tests.
+- Version metadata35; Windows portable CI step includes new pure tests. No Windows
+  runtime/helper/security paths/default hooks/config/MCP or native gate/driver/
+  inputs/adapter changed. No allgreen/native compatibility claim.35CI/package pending.
+- Before/after preservation passed all protected config/state/projects/owned31cache
+  251/settings/data/sources/marketplace; raw config matches prior observation. No
+  source35 install/trust/profile/restart/config/model/logging change.
+- New ignored source35 review hashes8runtime/input sources and preserved34folder/
+  archive bytes. Only prior runtime pin changed is native-plan; new helper added.
+  Old34proposal intact/stale; no new native execution plan or fingerprint refresh.
+  External/managed hooks/export compatibility and native run remain unverified.
+- Medium next for exact35CI/package/review/closed-entry. High before new security/
+  native work; no inference/install/config grant. Full93 incomplete.

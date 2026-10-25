@@ -1,134 +1,126 @@
-# Source34 package verified — next GPT-6.1 Sol High
+# Source35 classifier fixed offline — next GPT-6.1 Sol Medium
 
-2026-10-25. Sol Medium resumed **f637340** on **codex/astra-groundwork** and
-completed the exact immutable be49b51 package/review checks. No source/runtime/
-config/install/model/trust/logging/Windows change. Native gate stays closed;
-no inference or native process. Full93/native routing/platform acceptance incomplete.
+2026-10-25. Sol High resumed **a2e09fe** on **codex/astra-groundwork**.
+Source0.2.0-dev.35 fixes the hook-metadata classifier with offline regressions.
+Installed31 and protected state/guards preserved. **Native admission stays
+unconditionally closed; no inference, native process, install or config change.**
+Full93/native routing/platform acceptance remains incomplete.
 
-Read STATUS.md, PACKAGE-DEV34.md, STATE-RECONCILIATION-DEV34.md, CI-DEV34.md,
-REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md, DEV34-REVIEW.md,
-docs/routing-native.md and latest private root HANDOFF.md. Do not repeat completed
-packaging/CI/classification for the same unchanged source/state.
+Read STATUS.md, DEV35-REVIEW.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
+docs/routing-native.md, PACKAGE-DEV34.md and latest private root HANDOFF.md.
+Do not repeat source34 packaging/CI, seven-record classification or broad research.
 
-## Completed and exact immutable identity
+## Completed / contracts / risky paths
 
-Package source **be49b515801eee180c15952074f1a3d9ca20b712**, full tree
-**b79f94e1eadbccde644a2839209ff8e2c83c56d4**; anonymous clone detached/clean.
-Archive **0.2.0-dev.34**,287files/2,365,399unpackedbytes/715,761archivebytes;
-SHA256 **4a0460addffee1200e4ce072fe04b76a4998cc56bd37acb3510caa14e98f5dd0**.
-[Exact source](https://github.com/HarryBurd33/claude-mods-for-codex/commit/be49b515801eee180c15952074f1a3d9ca20b712).
+- New proofs/routing-native-hooks.mjs nativeHookMetadataOnly is pure/no IO. Known
+  typed state metadata and exact14released empty event arrays accepted as data.
+  Omitted/empty table/state/entries supported; no approval/provenance/hash-match claim.
+- State fields only enabled:boolean, trusted_hash/trusted_content_hash opaque
+  visibleASCII1–256; max256records; opaque IDs nonblank/wellformed/no control-format,
+  1–4096UTF16units. Bounds are project constraints, not native schema maxima.
+- Any nonempty event group, unknown field, wrong type/null/scalar/array shape,
+  excess/control-bearing data, accessor/custom-prototype/symbol/sparse input
+  refuses. Former falsy malformed roots now refuse. No stripping fields to pass.
+- proofs/routing-native-plan.mjs replaces blanket truthiness/nonempty check with
+  helper. Every other reducer/MCP/remote-board/plan check unchanged. Metadata is
+  not external/project/managed hook discovery, approval or execution authority.
+- Existing native actual-handler negative now uses a nonempty synthetic group;
+  new test/routing-native-hooks.test.mjs covers all14events with trusted/disabled
+  state, defaults, malformed data/bounds/mutation/prototype/getter and closed gates.
+- Unconditional routing-contract, native driver/inputs/adapter, source33 synthetic
+  modules, default hooks/config/MCP registration and Windows implementations unchanged.
+  Version carriers35 only; portable CI list adds the new offline test file.
+- Source35 is uninstalled. No trust review/restart/profile/override applied or needed.
+  No new active native adapter capability/flag/grant/environment shortcut.
 
-Every archive byte matches that public clone; count/size/SHA1/SHA512 integrity,
-strict tar paths/types/private-content/default/version/license/dependency and
-required native/candidate/test/doc checks passed. Current executable/test/CI/
-default/version bytes equal source. Eight archived Markdown differences versus
-f637340notes are intentional; later added notes are not in the historical archive.
-Do not claim all bytes equal today's notes workspace. Prior source33archive intact.
+## Actual tests / observations
 
-Actual spaced extraction tests117pass0fail2platformskips119total (~7sec),
-validate3mods/replay4fixtures pass. Native describe exit0/closed; exact --run --plan
-exit2/stdout0 before plan read/process. Synthetic V1/V2 pass, denial stop, peers
-reaped/nativeInferenceCalls0. Prior actual31Reviewdesk/32inert-agent validate/replay/
-plan passed with original bytes unchanged; no installation action. No fixture
-command execution or native/config/model call.
+1. Preservation checker before/after passed current protected config/all state/
+   projects/owned31cache251/settings28+31/data/source30+31/marketplace. Current raw
+   config matches prior High observation. No current preferences/foreign state edited.
+2. Red6regression cases against34:2pass4fail (metadata false refusal/malformed falsy
+   acceptance), not a missing-module failure. After fix6pass.
+3. New classifier + native adapter20cases:19pass0fail1platformskip on macOS. Metadata
+   positives emit only a review catalog draft, no turn/start/grant; all14event
+   handler negatives stop before catalog/thread/turn. Closed exported/CLI tests pass.
+4. Full local npm test **290pass0fail113platformskips403total** (~8.3sec).
+   npm validate3mods/replay4fixtures pass, no fixture command execution or model.
+5. Reused pinned0.164schema/event/state/discovery sources. No Codex command,
+   model/catalog/thread/turn, native inventory, REA, tool repair or live hook run.
+6. Source34 archive/frozen review hashes preserved; only prior runtime pin changed
+   is native-plan plus the new module. Private source35 manifest hashes8runtime/
+   input sources; no native execution PLAN/INPUT or selected-config refresh created.
 
-Seven public source pins equal package/current workspace/private FILE-HASHES.
-Frozen PLAN/INPUT hash/candidate bytes/internal selected-binary hash record match;
-packaged pure plan validation passed. Binary NOT rehashed/version-refreshed/invoked.
-All original frozen review bytes unchanged, selected-config hash still stale.
+## Separate review revision / incomplete acceptance
 
-## Exact CI reused — no new job run
+New ignored source35 SOURCE-REVIEW.json and NEXT-REVIEW.md are source review records,
+not executable proposals. Old34 PLAN/INPUT/FILE-HASHES/ACCESS/REVIEW preserved with
+old source pins and known stale selected-config hash. Never reuse or silently
+refresh them as a source35 grant. The plan schema/text did not change; source binding
+and selected inputs still need an explicit future proposal revision/review.
 
-CI-DEV34/run40209560926 already verified for be49b51; saved completed head metadata
-checked against the exact clone/source. FourPOSIX284pass0fail113skip397total+
-validate/replay; Windows portable native13pass1macOSskip14total /synthetic18pass
-1POSIXskip19total success. Both integrations25storage passes+85pass1fail86proofs,
-only known Installer Image/linkcount2 refusal before authority/data/sample/hash.
-Original bounds cause/nativeWindows11/WSL unverified, no allgreen or guard change.
-Do not repeat these logs/jobs unless source actually changes.
+Future external/managed hook inventory/export compatibility and effective native
+permission/model/role/discovery/usage/cancel behavior remain unverified. Metadata
+acceptance proves none of them. No native/config/runtime/inference/install grant
+exists; accepted ordinary-read-only design is settled and not permission to run it.
+No exact tool/argument/total-spawn/billing or remote cancellation guarantee.
 
-## Preservation / frozen proposal
+**Source35 exact CI/public package/spaced extraction pending Medium.** Prior34
+be49b51 package/CI in PACKAGE-DEV34 is separate evidence. Known Windows Image/
+original bounds/native11/WSL gaps unchanged; guards and assertions not weakened.
 
-Before/after private checker passed entire protected config including all state/
-projects, owned31cache251/settings28+31/data/source30+31/marketplace. Only expected
-root model/model_reasoning_effort are excluded from fingerprint; never overwrite
-current preferences. Current raw config also matches the reconciliation observation.
-Seven other-project trust fingerprints unchanged; no foreign human provenance/
-current-definition match/runtime attestation. No old config restoration or trust write.
+## Exact locations / configuration / rollback
 
-Frozen native INPUT/PLAN/FILE-HASHES/ACCESS/REVIEW left untouched. Selected-config
-fingerprint remains stale, as expected after classified metadata/preferences.
-Do not suppress that mismatch, restore old config or silently refresh the proposal.
-A future new explicit private proposal revision is separate from a configuration
-change or run grant. Preserve original34proposal/archive for provenance.
+Code: proofs/routing-native-hooks.mjs, routing-native-plan.mjs.
+Tests: test/routing-native-hooks.test.mjs, test/routing-native.test.mjs.
+CI: .github/workflows/ci.yml portable native preparation step (both files).
+Metadata: package.json/.codex-plugin/plugin.json/src/server.mjs/ui/dashboard.html35.
+Contracts/public runtime pins: DEV35-REVIEW.md and docs/routing-native.md.
 
-## Remaining consequential work — High, not activation permission
+No installed configuration changed; no restoration/uninstall/review action needed.
+Leave unrelated seven state entries/current projects/preferences untouched. Private
+checker fingerprints all state/projects/security except expected model picker root
+fields. Raw machine paths/values/logs/source35 manifest/root HANDOFF remain ignored.
+No active owned process or scheduled/background model work remains. Notes/source
+push may trigger existing CI; unknown results are never pass/native evidence.
+Host last observed macOS14.6/Node24.22.0, CLI0.164previous observation (not invoked);
+desktop/internal binary/native runtime remain unverified.
 
-The prepared nativeConfigMatches rejects any nonempty config.hooks, including
-state-only metadata. Synthetic diagnostic confirms that conservative mismatch if
-host exports it; actual export behavior remains unverified. Read-only classification
-was not a source fix. Next High reviews/corrects the distinction with narrow tests:
-
-- Known well-typed trust-state metadata must not be mistaken for executable event
-  definitions or treated as an execution/trust grant.
-- Unknown/malformed or nonempty executable event configuration must not be accepted;
-  cover negative cases, defaults/empty recognized fields and state combinations
-  against pinned released semantics. Never strip unrecognized fields to pass.
-- A config echo/metadata-only table is not an inventory of all external/managed
-  hook sources. Keep that coverage/limitation explicit before any activation;
-  no new native inventory or invocation is authorized under this checkpoint.
-- Keep unconditional execution gate and source33 synthetic/native separation.
-  No model/grant/env/flag shortcut or automatic approval/trust/config mutation.
-- If code changes, establish a distinct source version/evidence identity and an
-  explicit private proposal revision; preserve34archive/old proposal. No source35
-  exists yet. Any actual native config/inference/install step needs separate fresh
-  concrete human authorization after source/access/usage/cancel/removal review.
-
-The ordinary-read-only residual native-tool/read/observational-stop design is already
-accepted; do not ask that same scope question again. It does not authorize one
-Sol Low orchestration/Luna Low child run or any profile/override application.
-Missing child usage/terminal visibility/cancellation/native routing/discovery and
-broader93requirements remain incomplete. Do not claim a finished release/product.
-
-## Code / installation / host
-
-proofs/routing-native-plan.mjs: frozen launch/reducer requirements and nativeConfigMatches.
-routing-native-adapter.mjs: V2 own-scope/evidence/usage/refusal/cancel drafts.
-routing-native-inputs.mjs: macOS selected-file bounds/identity/privacy, no native IO.
-routing-native-driver.mjs: real prepared private transport behind unconditional
-requireLiveAdmission; --run refuses before IO. Candidate.txt remains inert.
-Native14offline tests/source7hashes/contracts in DEV34-REVIEW. Source/runtime/test/
-CI/version unchanged this Medium stage. Original hooks/defaults remain unchanged.
-
-Installed31 enabled/approved settings remains preserved; no native source34 install,
-profile/hook trust/restart or rollback needed. No owned process/background job remains.
-Host last observed macOS14.6/Node24.22.0; CLI0.164.0 previous observation, NOT invoked
-now; exact desktop/internal version/native runtime remains unverified.
-
-## Branch / durable evidence
-
-Starting notes f637340c88fb5befada160b77a396c9b9d653ea3/treec58c07d27c6cc2ff1de5ffb111e8a8e1f1d98ff5.
-[Starting notes](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f637340c88fb5befada160b77a396c9b9d653ea3),
-[branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
-Final notes local equivalent/verified remote commit/tree/link recorded in private
+Starting notes a2e09feda909fe16c119569da325856c12cdc7d8,
+treeb2424c0aa41cc28aa0ee4a1e287d8d21f57d5773.
+[Starting commit](https://github.com/HarryBurd33/claude-mods-for-codex/commit/a2e09feda909fe16c119569da325856c12cdc7d8),
+[development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
+Final source35 local equivalent/verified remote SHA/tree/link recorded in private
 handoff/final after actual non-force upload/readback; no force push/commit loss.
-Private archive/clone/extraction/logs/review verification/root HANDOFF remain ignored.
-No machine/config/plan hashes or private paths published. Public package record
-contains only immutable source/archive evidence. Later notes are not a new archive.
 
-## Next exact setting / resume
+## Next exact setting / bounded tasks
 
-**GPT-6.1 Sol High** for the known native preflight metadata/definition security
-boundary and explicit proposal-refresh planning. Medium routine checks are done;
-do not spend High repeating them. Stop for Medium when consequential source work
-is complete and its routine verification remains. No inference/install/config grant.
+**GPT-6.1 Sol Medium**: demanding classifier change/review done; routine35CI/package
+verification remains. No native process/config/inference/install action authorized.
 
-“I’ve switched to GPT‑6.1 Sol, High. Continue from the verified source34 package
+1. Verify current protected config/owned files with existing private checker. Do not
+   restore old config or repeat classification for unchanged known entries.
+2. Inspect exact uploaded source35 CI head/jobs/logs. New tests must be included.
+   Preserve known Windows Image refusal/bounds uncertainty; no retry-until-green,
+   assertion weakening or unrelated Windows investigation. New failure => High.
+3. Anonymous clone/package the exact verified source35 implementation checkpoint
+   SHA from final/private handoff, NOT old be49b51. Strict archive/source bytes,
+   version35/defaults/private hygiene/helper+tests+docs and spaced packaged checks.
+   Keep old33/34archives/proposal intact. Mark all unit/packet/file tests offline.
+4. Verify8source35review pins and old34frozen byte hashes. No new execution plan
+   prepared; old config/source fingerprint divergence expected, not a new unknown
+   drift. --describe/closed --run refusal permitted via Node, never Codex.
+5. Save/upload/verify results and stop for High before native/security source work,
+   new drift/recovery or activation. Future runtime/config/model actions still need
+   exact concrete review and fresh authorization. No gate toggle or inferred grant.
+
+## Complete resume instruction
+
+“I’ve switched to GPT‑6.1 Sol, Medium. Continue from the verified source35 classifier
 checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
-PACKAGE-DEV34.md, STATE-RECONCILIATION-DEV34.md, STATUS.md, REQUIREMENTS.md,
-ARCHITECTURE.md, TEST-LOG.md and latest private HANDOFF.md. Address the prepared
-native preflight's metadata-versus-executable-hook classifier with narrow offline
-tests and plan an explicit separate review revision. Preserve installed31, current
-preferences/unrelated projects, logging scope, parent model, human trust and Windows
-guards. Keep admission closed; no inference, installation or configuration change.
-Stop for Medium when sufficient.”
+DEV35-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, TEST-LOG.md,
+docs/routing-native.md and latest private HANDOFF.md. Verify exact source35 CI,
+packaging and source-review artifacts; preserve old34proposal/archive. Preserve
+installed31, current preferences/unrelated projects, logging scope, parent model,
+human trust and Windows guards. Keep admission closed; no inference, installation
+or configuration change. Stop for High before native/security work or new drift.”

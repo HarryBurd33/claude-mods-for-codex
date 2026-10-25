@@ -1,23 +1,21 @@
-# Current status — source34 package verified / native gate closed —2026-10-25
+# Current status — source35 classifier / native admission closed —2026-10-25
 
-## Source34 exact package verified — current —2026-10-25
+## Source35 classifier corrected offline — current —2026-10-25
 
-[PACKAGE-DEV34](PACKAGE-DEV34.md): immutable be49b51 public clone/archive287files,
-all bytes equal clone, executable/test/default/CI/version match notes workspace;
-only documented Markdown differences. Spaced packaged117pass0fail2skip119total,
-validate3/replay4; native CLI closed exit2 before process, synthetic V1/V2 pass/
-denial stop/peers reaped. Prior31/32bundles unchanged; no install/native inference.
-Seven source pins/frozen plan/input/candidate consistent, selected-config hash
-remains stale and proposal untouched; binary not rehashed/version-refreshed.
+[DEV35-REVIEW](DEV35-REVIEW.md): pure bounded HookState metadata/empty exact event
+classification replaces blanket hooks refusal. Nonempty handlers, unknown/malformed
+fields/types and out-of-bound data still refuse; malformed falsy roots tightened.
+Metadata is not discovery/trust or execution authority. Unconditional gate and all
+other native/Windows/default guards unchanged. No native/config/install/inference.
 
-Protected current config/state/projects and installed31cache251/settings/data/
-sources/marketplace preservation passed. No logging/model/trust/config/Windows
-change. Exact CI already verified/reused, not rerun; known Windows refusals/gaps
-remain. Next **Sol High** for known metadata-only preflight classifier/security
-review and explicit proposal refresh planning, keep admission closed. No native
-activation/inference/install/config grant. Full93/native routing remains incomplete.
+Regression6cases first2pass4fail; now6pass. Native combined19pass1platformskip20total;
+full290pass0fail113skip403total, validate3/replay4. New35CI/public package pending
+Medium; source34 exact package retained separately. Installed31cache251/stored
+trust/settings/data/current config preserved. Old34proposal/archives untouched;
+new private source review only, no new execution plan/fingerprint refresh.
+Next **Sol Medium** for routine35CI/package/closed-entry checks; High before native/
+security changes. Full93/native export/routing/Windows acceptance incomplete.
 
-Public source package identity and notes divergence: PACKAGE-DEV34.md. Source34
-uninstalled; source31loaded installation/lifecycle evidence remains separate.
-Known metadata-only classifier refusal, stale review hash, native config/routing/
-usage/cancellation/export/Windows gaps remain; no finished release/full product claim.
+Source35 is uninstalled. Source34 package evidence remains PACKAGE-DEV34, not35CI
+or native acceptance. No human trust/restart/action is requested for this source-only
+checkpoint. Accepted ordinary-read-only design remains separate from future run grants.
