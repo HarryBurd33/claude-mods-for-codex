@@ -2661,3 +2661,19 @@ human trusted hash fields differ freshbackup, all other fields equal.32protected
 source paths/93IDs order unchanged. No source/runtime/test/CI/security/logging/
 capture/rule/guard/export/status/paidrun/cleanup change. Restart/actual native31
 pending; stay Sol Medium. PACKAGE-DEV31 and private ignored evidence retain details.
+
+## Native31 Medium post-restart acceptance — 2026-10-24
+
+See NATIVE-DEV31 for actual host DOM evidence. Approved single Review desk empty
+threefields/fixedformats, synthetic flowchart2nodes1edge complete tables, JSON/
+literalNotes, edit-only invalidation, invalidJSON/diagram literal fallback,
+navigation and quietdark->host retention observed. Misleading fixedformat JSON
+Choose Plain code message retained as gap. Human keyboard/focus/width passed; DOM confirms all three fields cleared and Clear
+focused. Actual teardown remains pending.
+Native production/authored prints rewrote, control unchanged, denial blocked before
+execution/no retry. Fresh bounded CLI inventory3trusted0errors0turns, cache251equal,
+approvedsettings/alloldchoices/oldbytes equal, only6owned human trust hashes vs
+freshbackup; allotherconfigequal,32protectedpaths stable. Initial sandbox inventory
+closed/cleanup refused; approved outside-sandbox same read-only script succeeded.
+No product/source/test/CI/install/trust/capture/modelrun changes; no fullsuite repeat
+for notes. Same retained7/status5 not new event proof. Full93 and Windows gaps stay.

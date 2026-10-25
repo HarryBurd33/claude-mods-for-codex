@@ -1,5 +1,12 @@
 # Current status — source31 — 2026-10-24
 
+Current native31 follow-up: [Review desk acceptance](docs/continuation/NATIVE-DEV31.md)
+observed fixed local fields/render/edit/fallbacks/retention and harmless hooks after
+restart. Approved settings/logging/trust/Windows guards preserved. Human keyboard/resize/Clear passed;
+teardown and broader lifecycle acceptance remain incomplete; prior restart-
+pending notes describe the earlier checkpoint. Full product remains incomplete.
+
+
 Development source **0.2.0-dev.31** adds [authored local-preview cards](docs/local-interactions.md):
 describe labeled plan/JSON/notes fields, generate a disabled private bundle, inspect
 access, validate/replay and plan a reviewed display-only settings merge. Render/

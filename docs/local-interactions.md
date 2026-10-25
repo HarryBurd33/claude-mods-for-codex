@@ -2,7 +2,10 @@
 
 This is an authorable component inside the existing plugin-owned MCP App, not
 native client chrome, a separate client, arbitrary executable plugin or immediate
-slash callback. Reviewed source31 is now installed with one explicitly authorized Review desk;\nrestart/actual native acceptance remains pending.
+slash callback. Reviewed source31 is installed with one explicitly authorized Review desk.
+[Native acceptance](continuation/NATIVE-DEV31.md) observed render/edit/fallbacks,
+retention and human keyboard/resize/Clear. Actual close/reopen and full accessibility
+remain unverified.
 Existing observer/status/activity bundles and counters remain compatible.
 
 Describe a useful local review desk: a plan diagram, JSON contract and plain notes.
@@ -73,7 +76,7 @@ into settings, tool messages, metadata or logs. The host owns its webview and ca
 inspect its text; do not paste credentials. Declarations/read-only hints are not
 an OS sandbox for arbitrary local trusted code. No arbitrary HTML/CSS/JS/URLs/
 module/action names accepted. Fixed palette/focus/system forced-color rules apply;
-actual source31 native accessibility remains unverified.
+source31 human focus/keyboard/resize subset passed, full accessibility remains unverified.
 
 Disable/remove only that reviewed settings entry and reload through supported
 update; preserve other components/capture/data. For code rollback select preserved

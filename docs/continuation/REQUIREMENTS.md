@@ -1,6 +1,17 @@
 # Requirements ledger
 
-## Source31 approved update — current — 2026-10-24
+## Native31 follow-up — current — 2026-10-24
+
+[NATIVE-DEV31](NATIVE-DEV31.md) records actual approved Review desk render/edit/
+literal fallbacks/navigation/palette and harmless native hooks. Cache251/settings/
+logging scope/trust/Windows guards preserved; no extra model run. Human keyboard/resize/Clear passed with DOM corroboration;
+close-reopen remains pending, fixed-field JSON guidance is misleading.
+Full93 incomplete. Next human Sol High for [loaded lifecycle and older rollback](LIFECYCLE-NEXT.md);
+no new permissions/capture or source change in this notes milestone. Earlier next
+setting/restart directions below are historical.
+
+
+## Source31 approved update — historical restart checkpoint — 2026-10-24
 
 [PACKAGE-DEV31](PACKAGE-DEV31.md): exact public251files/79packaged passes1Windows
 skip, four POSIX246passes each and portable Windows success. Both integration
