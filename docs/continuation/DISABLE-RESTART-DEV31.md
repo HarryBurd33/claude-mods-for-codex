@@ -1,5 +1,11 @@
 # Restart-based dev31 disable acceptance — prepared, host check pending
 
+Current [REENABLE-DEV31](REENABLE-DEV31.md): disabled-chat tool/fresh-hook absence
+verified after restart; original enabled flag and exact configuration restored,
+fresh3trustedhooks. Another restart for actual loaded return remains pending.
+The preparation/next-step description below is the earlier stage record.
+
+
 2026-10-24, GPT-6.1 Sol Medium. The tested native31->30->31 rollback is complete
 within RESTORE-DEV31 limits. This separate lifecycle check now temporarily disables
 the unchanged installed31 plugin. Full93 remains incomplete; no Windows work.

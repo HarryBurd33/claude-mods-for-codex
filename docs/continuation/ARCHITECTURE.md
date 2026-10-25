@@ -1,6 +1,17 @@
 # Extension architecture and security contracts
 
-## Returned31 verified / restart-disable pending — current — 2026-10-24
+## Disabled absence passed / dev31 re-enabled — current — 2026-10-24
+
+[REENABLE-DEV31](REENABLE-DEV31.md): restarted chat registry0productiontools and
+fresh0ownedhooks, scoped preservation passed. Supported ONLYoriginal enabled=true
+restored, config bytes/pre-disable trust/cache251/settings/data unchanged, fresh
+3trusted0errors0turns. Actual loaded re-enabled tools/Reviewdesk await human restart
+on Medium; no reinstall/trust needed. No drift/modelrun/capture/Windows change.
+Not all-process exit or other-client proof; full93 remains incomplete. Earlier
+disabled/preparation state below is historical. High on unexpected drift/recovery.
+
+
+## Returned31 verified / restart-disable preparation — historical — 2026-10-24
 
 [RESTORE-DEV31](RESTORE-DEV31.md): actual returned31 Reviewdesk/eightviews/emptyfields/
 same7records/status5/harmless effects observed; tested native31->30->31 complete.

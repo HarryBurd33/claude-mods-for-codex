@@ -48,14 +48,11 @@ No source/runtime/test/CI change or full-suite/archive rerun for notes. Source30
 31 exact prior packages/CI remain separate; Windows original bounds cause and known
 image refusals unresolved, before-IO guards unchanged, no nativeWindows11/WSL claim.
 
-Subsequently, the separate [restart-based disable test](DISABLE-RESTART-DEV31.md)
-saved fresh backups and set only enabled=false through the supported API.251files/
-stored trust/settings/data remain intact; fresh0hooks0errors/0turns. Installed31 is
-now temporarily disabled pending human restart and actual loaded-tool absence check.
-That does not invalidate the completed rollback sequence or establish process exit.
-Restore only enabled=true after the prescribed absence check, verify then restart;
-no reinstall/trust copy/data deletion. Existing connections can survive immediate
-disable/remove as observed in LIFECYCLE-DEV31.
+The separate [restart-based disable test](REENABLE-DEV31.md) subsequently verified
+this restarted chat's registry/fresh-hook absence, then restored only enabled=true
+with exact configuration/trust/assets. Actual re-enabled loaded return awaits
+another human restart; all-process exit remains unverified. Existing connections
+can survive immediate disable/remove as observed in LIFECYCLE-DEV31.
 
 Both rollback/restore transition phase files already exist: do not rerun them.
 Use fresh selective review/backups for any later source reversal. Stop for High on

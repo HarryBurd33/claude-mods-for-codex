@@ -1,6 +1,15 @@
 # macOS acceptance audit — 2026-10-24
 
-## Native rollback verified; restart-disable pending — current — 2026-10-24
+## Disabled chat absence passed / re-enabled return pending — current — 2026-10-24
+
+[REENABLE-DEV31](REENABLE-DEV31.md): restarted registry0productiontools plus fresh
+0hooks, preserved state, supported onlyenabledtrue restoration/configbytes equal/
+cache251/trust/settings/data unchanged/fresh3trusted. Actual loaded return after next
+human restart on Medium remains pending; no all-OS-process/other-client proof. Prior
+native31->30->31 verified within RESTORE-DEV31 limits. Full93/other gaps unchanged.
+
+
+## Native rollback verified; restart-disable prepared — historical — 2026-10-24
 
 [RESTORE-DEV31](RESTORE-DEV31.md): actual reviewed31->30->31 UI/covered effects/
 scoped preservation passed after human reviews/restarts. Target-bound rollback

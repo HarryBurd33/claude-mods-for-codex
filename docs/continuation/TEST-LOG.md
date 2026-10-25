@@ -2755,3 +2755,16 @@ preservation checker allotherconfigequal. Bounded fresh inventory0ownedhooks0err
 No new modelrun/capture/security/source/runtime/test/CI/Windowschange/fullsuite repeat.
 Known API restoration only enabledtrue after absence proof; checkpoint/restartbefore
 loadedreturn. High on unexpected drift/answering service/recovery. Full93 incomplete.
+
+## Medium restarted disabled absence / original flag restored — 2026-10-24
+
+Resumed909b2e4 clean. CurrentALL_TOOLS productionClaudeMods filter returned0; no
+ClaudeMods namespace or installed skill entries supplied. No nonexistent tool call.
+Prepareddisabledchecker onlyownedfalse/allothercfg+cache251/trust/settings/data/
+sources/marketplaceunchanged. Boundednativeabsenceinventory0ownedhooks0errors0turns.
+Knownsupportedcontrol.pyrestore expectedVersion ownedtrue only success; enabled
+checker preservesall; freshinventory3enabledtrusted0errors0turns. SharedconfigBYTES
+equal fresh pre-disable backup. Private restore-summary.json loadedHostVerifiedfalse.
+No drift/recovery/Highneeded/agenttrust/reinstall/newsource/tests/CI/Windows/security/
+capture/modelrun or fullsuite/archive repeat. Actual loadedre-enabled31 after human
+restart remains pending; disabledregistry+freshabsence not globalprocess exit.
