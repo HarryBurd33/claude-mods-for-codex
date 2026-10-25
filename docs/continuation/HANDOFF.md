@@ -15,9 +15,15 @@ METADATA-BOUNDS-INVESTIGATION.md and latest ignored root HANDOFF.md.
 Repo https://github.com/HarryBurd33/claude-mods-for-codex
 Branch codex/astra-groundwork. Starting verified checkpoint
 [fdd0667dd5416e7e46840151a79886fca3528131](https://github.com/HarryBurd33/claude-mods-for-codex/commit/fdd0667dd5416e7e46840151a79886fca3528131),
-treeae467a81e4c70a6f8d0ea0d2cded21db9430bcf9. New implementation identity is pinned
-after upload; final checkpoint/ref verified in final reply/private handoff, no
-guessed self-hash, force push/history loss/private record upload.
+treeae467a81e4c70a6f8d0ea0d2cded21db9430bcf9. Verified new implementation:
+[691c39918583ecec131470973618dded2e89b8a8](https://github.com/HarryBurd33/claude-mods-for-codex/commit/691c39918583ecec131470973618dded2e89b8a8),
+treee425263642254c5b3efc4bc3fe8f17258f19a50c. Connector exact tree/fetched local tree/anonymous public ref matched.
+Equivalent local1523db6d08188cde353cb6c01ce3736dfc5e87da retained on
+codex/dev31-authoring-high-source-local-checkpoint. Exact source CI
+[40161665391](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40161665391)
+was queued at readback; outcomes not inspected/claimed. Medium reads this source
+run, not a later notes-only run. Final notes checkpoint/ref verified in final reply/
+private handoff; no guessed self-hash, force/history loss/private record upload.
 
 ## Completed, partial, unverified
 

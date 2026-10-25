@@ -2623,3 +2623,10 @@ config bytes unchanged,32protected config/hook/Windows/state/retention source pa
 equal baseline, all93IDs/order retained. Private demos/logs/root handoff ignored.
 No capture/category/model selection/permissions/extra model run/cleanup/install31.
 Full product incomplete; next human Sol Medium exact CI/package/native preparation.
+
+Verified source31 implementation691c39918583ecec131470973618dded2e89b8a8,
+treee425263642254c5b3efc4bc3fe8f17258f19a50c. Connector exact tree/expected-parent
+nonforce update/fetched complete local tree/anonymous public ref match. Equivalent
+local1523db6 retained on named source branch. ExactCI40161665391 queued, no outcome
+inspected/claimed. Medium reads exact source logs/package next; notes-only follow-up
+requires no repeat full suite/archive. Installed30 remains unchanged.

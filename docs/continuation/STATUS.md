@@ -22,3 +22,8 @@ card selection; preserve existing selections. Human trust/restart separate. High
 before consequential source/security changes. Native31/browser/focus/width/full
 accessibility/lifecycle not verified by synthetic replay. Native30 evidence remains
 versioned separately; no current restart/trust action needed at this model switch.
+
+Implementation [691c399](https://github.com/HarryBurd33/claude-mods-for-codex/commit/691c39918583ecec131470973618dded2e89b8a8)
+full tree matched connector/fetched local tree and anonymous public ref. Exact
+source CI [40161665391](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40161665391)
+queued at readback; no outcome claimed. Follow-up notes do not change source bytes.
