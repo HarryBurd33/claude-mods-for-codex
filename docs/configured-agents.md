@@ -130,3 +130,14 @@ round-tripped all five fields, including quotes, backslashes, Unicode and litera
 key-looking instruction text. Synthetic CLI/security tests are recorded separately.
 No native profile, production setting or model turn was created. Desktop and native
 Windows discovery/execution remain unverified; installed31 preservation passed.
+
+## Native acceptance preparation — 2026-10-25
+
+The [test plan](continuation/NATIVE-ROUTING-TEST-PLAN.md) now provides exact proposed
+separate orchestrator/child settings, inert candidate, native event evidence and
+stop/usage/privacy bounds. Native model-list advertised Sol/Luna Low with no
+thread/turn start. No profile or inference was authorized/started. Source32 static
+validation still reports native execution unverified. V1/V2 differ in public
+resolved-child metadata; V2 history must explicitly be none. Tool-admission and
+cancellation implementation/dry tests remain High work before a live request.
+Existing installed31/parent selection/logging/trust/platform guards unchanged.

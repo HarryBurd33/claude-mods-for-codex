@@ -1,6 +1,25 @@
 # Extension architecture and security contracts
 
-## Source32 package/CI verified — current — 2026-10-24
+## Native routing test plan prepared — current — 2026-10-25
+
+[NATIVE-ROUTING-TEST-PLAN](NATIVE-ROUTING-TEST-PLAN.md) defines a proposed new
+GPT-6.1 Sol Low orchestrator and GPT-6 Luna Low child, exact inert role/task,
+no-history selection, native evidence, deadlines/usage fuses/cleanup and negative
+cases. Native initialize/model-list advertised both proposed Low settings with
+0thread/turn starts. Source32 private candidate/static replay/TOML checks passed;
+no native install/config reference/inference. Installed31/cache251/config/trust/
+logging/settings/data/parent model/Windows guards preserved. No runtime result.
+
+High source review resolves V1 completed collab versus V2 subAgentActivity metadata
+and explicit V2 fork_turns:none (default all). Plan is not execution authorization:
+no driver yet; pre-execution tool admission/cancellation must be implemented and
+dry-tested before requesting any fresh inference grant. Notifications cannot block
+already admitted calls; cwd/read-only instructions are not tool/read confinement.
+Remain Sol High for these consequential contracts; Medium when only routine
+verification remains. Full93 and native routing/platform gaps remain incomplete.
+Older status sections below historical; no current restart/trust action required.
+
+## Source32 package/CI verified — historical — 2026-10-24
 
 [PACKAGE-DEV32](PACKAGE-DEV32.md): exact anonymous publiccbacb52 archive264files/
 2,125,103bytes matches source; spaced extraction85pass1Windows-onlyskip/86total,
@@ -1127,6 +1146,30 @@ capabilities/version, give text fallback, apply host style variables, label
 controls, preserve keyboard focus and close observers on teardown. Avoid remote
 assets or rendering untrusted HTML. Test actual host pixels/interaction, not
 just a browser mock. Core deterministic callbacks and buttons make no model calls.
+
+## Native routing acceptance contract — planned, not implemented
+
+NATIVE-ROUTING-TEST-PLAN.md separates the current chat from a proposed new native
+orchestrator/child. No model override is applied to the current chat. The first
+proposal would reference an inert .toml.txt profile only in an owned test CLI's
+command-line config; no global/project installation, no plugin discovery claim.
+Native catalog read is observed; execution/admission/cancel behavior is not.
+
+Released0.164 V1 emits requested values in spawn item/started and effective values
+in item/completed. V2 emits resolved child creation model/effort through public
+subAgentActivity(kind started); its collab record also goes to analytics, so do
+not require V1 public events from V2. Public thread metadata is configured state,
+not backend billing/execution telemetry. Explicit V2 fork_turns:none is mandatory
+for this test; omission inherits all parent turns. No current chat history enters
+the proposed isolated test. Missing role/parent/usage evidence stays unavailable.
+
+Pre-execution non-collaboration tool admission is an unresolved driver gate. A
+notification observer cannot enforce denial before execution. Capabilities must
+be verified from actual supported controls; instructions/cwd/read-only policy alone
+are insufficient to promise read/MCP/network confinement. No live driver or
+inference grant exists. High implements/dry-tests admission/cancellation first;
+no improvised run or automatic approval. No model/permission/logging/runtime source
+change accompanies this plan. Preserve31 and existing Windows guards.
 
 ## Source32 native-agent authoring contract
 

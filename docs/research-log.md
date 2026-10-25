@@ -113,3 +113,22 @@ schema path was absent; schema generation succeeded and actual ClientRequest was
 inspected. No REA rerun, videos or unrelated source/credential investigation.
 Earlier Outstanding verification above is the historical research-stage state;
 current feature-specific native acceptance is in continuation/REQUIREMENTS/TEST-LOG.
+
+## Native routing acceptance plan — 2026-10-25
+
+Official [subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
+and [app-server](https://learn.chatgpt.com/docs/app-server) retrieved. Targeted
+released0.164 V1/V2 spawn/spec/control source pins and findings are in
+[NATIVE-ROUTING-TEST-PLAN](continuation/NATIVE-ROUTING-TEST-PLAN.md). V1 public
+spawn completion exposes resolved settings; V2 emits public subAgentActivity with
+resolved creation model/effort. V2 fork_turns defaults all; require explicit none.
+This prevents a planned observer from waiting for the wrong event or assuming
+no-history inheritance. Configured metadata is not per-turn/backend billing proof.
+
+Actual native model-list advertised proposed Sol Low/Luna Low with zero thread/
+turn starts. Inert source32 profile/static replay/TOML preparation passed; no native
+install or inference. Pre-execution non-collaboration tool admission and cancellation
+remain driver implementation gates; notifications alone cannot enforce them.
+No Agents API service was substituted for CLI app-server; unrelated search leads
+were not used as evidence. No REA rerun, videos, secret/session discovery or system
+repair. Current31/logging/trust/parent/Windows preservation checker passed.

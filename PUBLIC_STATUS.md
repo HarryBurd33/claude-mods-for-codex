@@ -1,4 +1,4 @@
-# Current status — source32 / installed31 — 2026-10-24
+# Current status — native routing plan / installed31 — 2026-10-25
 
 Development source **0.2.0-dev.32** adds [explicit native agent candidates](docs/configured-agents.md): describe a new child with an explicitly chosen model/effort, scaffold a private inert bundle, validate/static-replay and inspect its access/review plan. It never installs or invokes an agent, changes this chat's model/prompt, enables capture or alters permissions. A `.toml.txt` candidate prevents accidental native discovery; installation is a separately reviewed native configuration alternative, not plugin agent loading. [Source32 evidence](docs/continuation/DEV32-REVIEW.md).
 
@@ -8,6 +8,6 @@ Source32 local tests: **252passed,112Windows-only skips,0failed**; validation/re
 
 The full [93-requirement product](docs/continuation/REQUIREMENTS.md) remains incomplete. macOS acceptance first, Windows later. Original Windows bounds cause/image failures and all Windows guards remain unchanged; native Windows11/WSL unverified. No extra model run is authorized. Local callbacks add no model calls; chat/skills and native children consume usage.
 
-Next human setting: **GPT-6.1 Sol High** for [native configured-agent acceptance](docs/continuation/ROUTING-ACCEPTANCE-NEXT.md). Source32 packaging is complete; native discovery/invocation/security and a bounded inference-test plan need stronger reasoning. Preserve installed31 and parent model/logging/trust; no new inference is authorized. [Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md), [access/privacy](docs/privacy.md), [removal](docs/removal.md). This is an incomplete development branch; the default branch retains the original MVP.
+Current **GPT-6.1 Sol High** work has prepared the [native routing test plan](docs/continuation/NATIVE-ROUTING-TEST-PLAN.md), with proposed separate Sol Low/Luna Low tasks and no current-chat model change. A no-inference catalog check advertised both; no native profile or model turn was created. The live driver and pre-execution tool-admission/cancellation gates still need High implementation and dry tests before any fresh inference authorization. Preserve installed31/logging/trust/Windows guards; switch to Medium when only routine verification remains. [Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md), [access/privacy](docs/privacy.md), [removal](docs/removal.md). This is an incomplete development branch; the default branch retains the original MVP.
 
 Independent MIT project, not affiliated with or endorsed by Anthropic or OpenAI.

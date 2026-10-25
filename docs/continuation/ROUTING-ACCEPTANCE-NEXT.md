@@ -1,10 +1,21 @@
-# Next High: native configured-agent acceptance
+# Native configured-agent acceptance — High continuation
 
 2026-10-24. Source32 authoring is implemented. Medium package/CI evidence belongs
 in PACKAGE-DEV32.md; source design/parser limits are in DEV32-REVIEW.md and
 docs/configured-agents.md. This is remaining EV-15 acceptance, not another authoring
 MVP. Installed31/approved settings/logging/trust/parent model stay frozen. No extra
 inference grant remains. Native Windows is later, guards unchanged.
+
+## Current preparation — 2026-10-25
+
+[NATIVE-ROUTING-TEST-PLAN](NATIVE-ROUTING-TEST-PLAN.md) now specifies proposed
+Sol Low/Luna Low tasks/role/reference, exact parent text, bounds, evidence and
+remaining gates. No native profile/turn was created. Model-list advertised both
+settings without inference; inert bundle/static replay/TOML passed. Released
+V1/V2 evidence paths and V2 default-all history were resolved. Next High focuses
+on a bounded driver and actual pre-execution tool admission/cancellation controls,
+with synthetic dry tests only. No live request until complete review and fresh
+authorization; none remains. Do not redo completed package/CI/authoring research.
 
 ## Resolved boundaries
 

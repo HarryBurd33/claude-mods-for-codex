@@ -2858,3 +2858,35 @@ Source32packagecomplete,stilluninstalled;31approvedusable. NextHighnativeconfigu
 agentdiscovery/invocation/authority/usage/harnessdesign, no extra inference grant.
 ROUTING-ACCEPTANCE-NEXT.md governs; full93/nativeplatform/accessibility/optional
 features incomplete. Save/upload/verify notes and stopforhumanHigh, notbackground.
+
+## High native routing plan / no inference — 2026-10-25
+
+Resumede462903 clean; installed31preparedchecker before/after251cache/config/owned
+trust/settings/sources/marketplace/data unchanged0turns. CurrentstandaloneCLI0.164.0,
+PATHalias sandboxwarning not repaired. No product/runtime/test/CI/version change,
+profile install, native config reference or current-chat model/logging change.
+Retrieved official subagents/appserver docs; read pinned164V1/V2handlers/spawn/spec/
+common/agentcontrol/childcreation plus prior role/child source. V1started=requested,
+completed=resolved; V2publicsubAgentActivitystarted=resolved, collabanalyticsnot
+samepublicpath. V2fork_turnsdefaultsall; explicitnone needed, V1fork_contextfalse.
+Schemascorroboratepacketfields/configured-state-not-perturntelemetry. No backend
+execution/billing guarantee inferred. Private8retrievalsnapshots/index cached,
+normalizedtrailingnewline, not fullcheckoutbyteprovenance. No REA/tool repair.
+
+Actualno-turn CLIappserver initialize/model-list only,25sec1MiB256messages,
+serverrequestsrefused/ownedprocessgroupterminatedreaped. Catalogproposedgpt-6.1-sol
+lowandgpt-6-lunalowadvertised/paginationcomplete.0threadstart/turnstart/inference.
+Proposalnotgrantedmodelselection; currentchatunchanged. Privateemptytestproject
+outsidecurrentcaptureroot, no.codexdirectory. Existingsource32CLIscaffold/validate/
+staticreplaynewunselectedrolebundlepasses7forbiddenfields/0calls/noinstall; independent
+TOMLexact5keys/instruction/model/effort round-trip/no .toml output passes. Candidate
+SHA256f17550c7ea7a60b055f63fd907341207f0c5d3877be798d643f26962fcf5e022.
+
+NATIVE-ROUTING-TEST-PLAN.md explicitfirsttrial/bounds/admission/cleanup/negative
+cases/remainingphases saved. No live driver yet. Notificationsareafteradmission,
+notpreexecutiongate; instructions/cwd/read-onlynotread/MCP/networkconfinement.
+Highnextimplementanddrytestadmission/cancellationrunnerwithoutmodelturns; no
+inferenceapprovalrequestyet. No duplicatefullsuite/archive/CI solelydocschanges.
+Source32packageknownWindowsImagefailures/boundsrootcause/Windowsguardsunchanged,
+nativerouting/discovery/permission/lifecycle/full93 remainincomplete. No cheaper
+switchyet: nextconsequentialdriver/securityworkstillneedsHigh; Mediumwhenresolved.
