@@ -1,11 +1,11 @@
 # Development dashboard and immediate local commands
 
-Current2026-10-24: source29 adds local impact assessment/ephemeral guidance;
-[DEV29-REVIEW](continuation/DEV29-REVIEW.md) separates source tests and pending
-CI/package/native29 acceptance. Installed28/native counter checks are recorded in
-[NATIVE-DEV28](continuation/NATIVE-DEV28.md). Existing logging scope/exports/trust
-stay unchanged; no guard opt-in/model run granted. Next Medium package/review
-preparation, High before consequential changes. Earlier dated notes are historical.
+Current2026-10-24: [source30 package/update](continuation/PACKAGE-DEV30.md) is
+verified242files/62focused passes, human3hooks trusted; restart/native30 acceptance
+pending. Exact CI has four239-pass POSIX lanes/portable success plus the known
+Windows image failures; original bounds failure unresolved. Logging selections,
+exports/rules and Windows guards unchanged. No new model run. Stay Sol Medium for
+native acceptance, High before consequential changes. Earlier dated notes are historical.
 
 
 Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)

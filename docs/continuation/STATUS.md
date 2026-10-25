@@ -1,34 +1,31 @@
-# Current status — source30 appearance — 2026-10-24
+# Current status — dev30 reviewed, restart pending — 2026-10-24
 
-Runnable source0.2.0-dev.30 adds original fixed owned-panel palettes, Follow host
-by default and Reset. No persistence, arbitrary CSS/assets, model/tool/network
-calls or new access. Text/code/diffs/charts/focus use owned tokens; forced colors
-use system colors. [DEV30-REVIEW](DEV30-REVIEW.md) contains contracts and evidence.
-Local macOS full suite239pass/0fail/112Windows skips351total; validate/replay pass.
-Fixed-color contrast and synthetic bridge/default/reset/privacy/teardown pass.
-Disconnected browser dark/light, diagram/table retention and keyboard Reset pass.
-These do not establish native30 rendering or full accessibility.
+Source0.2.0-dev.30 owned Follow host/dark/light/Reset is packaged and installed as
+an immutable242-file candidate. Human reviewed all3hooks; native inventory confirms
+3trusted0errors0model turns. Restart/actual native30 UI acceptance still pending.
+[PACKAGE-DEV30](PACKAGE-DEV30.md) records exact source/archive/CI/update/rollback.
 
-Installed29 remains the same234-file reviewed candidate. Selected settings, scope,
-exports/status, rules, capture and human trust are unchanged. No configuration,
-theme, cache or trust write; no extra model run. Native29 bounded results and
-unexplained earlier reset are retained in NATIVE-DEV29.md. Impact guard stays off.
+Exact sourcebdf7fad: four POSIX CI lanes each239pass0fail112Windows skips351total;
+portable Windows success including3appearance tests. Each Windows integration
+job25storage passes+85/86process, only known Image refusal/links2. Bounds passed
+both; original historical root cause remains unresolved. No all-green/native
+Windows11/WSL claim, no guard weakening or proof loop.
 
-Next human **GPT-6.1 Sol Medium**: inspect exact source30 CI once; verify anonymous
-public archive, packaged fixed assets and spaced extraction; prepare a concrete
-supported update with same selections. Human changed-hook review/restart remains
-separate. Then verify actual native palettes/reset/keyboard/widths and harmless
-existing hooks. Native CLI theme preview is a separate target, not yet performed.
-Do not claim the original XML example or browser screenshot proves TUI rendering.
+Anonymous public archive242files, SHA256
+613e5bc4a76c62274d7b9175662bff379c69a4d2c201599edb313a0da89e764d.
+Fresh spaced extraction62focused passes, validate3/replay4. Source tests/browser/
+mock evidence remain separate from native30. No runtime/test/CI changes this stage.
 
-All93 requirements remain in scope and the product is incomplete. macOS first;
-Windows later. Original bounds failure unresolved, diagnostic pass not a fix;
-known image failures and Windows guards unchanged. Native Windows11/WSL remains
-unverified. Stop for High before consequential/security changes. No new guard,
-optional event or paid model-run selection is granted by this handoff.
+Settings/rules/project-session logging/exports/status/data/retention unchanged;
+impact guard and optional capture off. Fresh backups preserved before supported
+same-ID update; initial parsed shared config equal. After human review only six
+owned trust hashes plus model-availability notice/selected-project entry differ;
+agent wrote neither extra field, origin not instrumented, all others equal.
+Preserve them. Cache242byte-equal;32protected source paths/93ledger order unchanged.
+No additional model run, native theme preference, client upgrade or cleanup.
 
-Verified implementation source [bdf7fad](https://github.com/HarryBurd33/claude-mods-for-codex/commit/bdf7faddafd78e84715ec6fce34ddc98f4cacc62),
-full tree matched fetched/local checkpoint and anonymous public ref. Exact CI
-[40159257352](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40159257352)
-was queued at readback; no CI outcome claimed. Read source run, not a notes-only
-run, for this checkpoint's acceptance. Disposable preview service exited0.
+Next: human restart/reopen this same chat, **stay GPT-6.1 Sol Medium**. Verify actual
+loaded palettes/default/Reset, synthetic draft/results, tables/focus/widths and
+harmless existing hooks. Native CLI theme preview is separate and unperformed.
+Stop for High before consequential/security changes. Full93 product incomplete,
+macOS first, Windows later; NATIVE-DEV29 retains prior lifecycle uncertainty.

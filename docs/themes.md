@@ -25,7 +25,7 @@ Tables and literal/sign semantics remain available independently of color.
 
 Automated/simulated checks and a disconnected browser preview passed. Native
 source30 rendering, keyboard/widths/forced colors and exact package acceptance
-are still pending. Installed29 is unchanged and has no appearance selector.
+are still pending. Installed30 is human reviewed; actual loaded appearance remains pending restart.
 See [source review](continuation/DEV30-REVIEW.md). No screenshot or browser test
 is presented as an official-host result.
 

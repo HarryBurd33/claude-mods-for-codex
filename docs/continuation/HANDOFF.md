@@ -1,109 +1,129 @@
-# Source30 appearance handoff — next GPT-6.1 Sol Medium
+# Dev30 restart handoff — stay GPT-6.1 Sol Medium
 
-2026-10-24. High resumed3a1a6e8 on codex/astra-groundwork and implemented the
-bounded owned appearance workflow. Full product incomplete; macOS acceptance
-first, Windows later/gated. No installation, config/theme/cache/trust change.
-No current restart or trust step needed. Human model switch is the stopping point.
+2026-10-24. Medium resumed6b2428d on codex/astra-groundwork. Exact source30 CI,
+public package/spaced extraction and supported same-settings update are verified.
+Human reviewed3changed hooks; native inventory confirms3trusted0errors0model turns.
+**Human now restarts Codex and reopens this chat on Sol Medium. Native30 remains
+unverified until that restart/check.** No further trust/install step needed now.
+Full93 product incomplete, macOS first, Windows later/gated.
 
 ## Read first
 
-DEV30-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
-../themes.md, NATIVE-DEV29.md, PACKAGE-DEV29.md, DEV29-REVIEW.md,
+PACKAGE-DEV30.md, DEV30-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md,
+latest TEST-LOG.md, ../themes.md, NATIVE-DEV29.md,
 METADATA-BOUNDS-INVESTIGATION.md and latest ignored root HANDOFF.md.
 
 Repository https://github.com/HarryBurd33/claude-mods-for-codex
-Branch codex/astra-groundwork. Starting commit
-[3a1a6e80497dd86f6573eea9ee9bc6ee5f6a1925](https://github.com/HarryBurd33/claude-mods-for-codex/commit/3a1a6e80497dd86f6573eea9ee9bc6ee5f6a1925),
-treeacfb12f72bab68db93ca3289d2c3293ffabba881. Verified implementation source:
+Branch codex/astra-groundwork. Start
+[6b2428dffd7d8e2e7760567a6417ee437649c7d9](https://github.com/HarryBurd33/claude-mods-for-codex/commit/6b2428dffd7d8e2e7760567a6417ee437649c7d9),
+treed4370fab5fcf947b4755c599cb95c02f179e1a40. Exact implementation/archive source
 [bdf7faddafd78e84715ec6fce34ddc98f4cacc62](https://github.com/HarryBurd33/claude-mods-for-codex/commit/bdf7faddafd78e84715ec6fce34ddc98f4cacc62),
-treed4cad6708c11218247667cf1ab21fc6ccae51880. Connector-authored commit, exact local/full fetched tree match;
-anonymous credential-disabled public ref also matched. Equivalent local commit
-80bb528e9b888761a4bbe646ef7e18835a725cee is preserved on
-codex/dev30-appearance-high-source-local-checkpoint. Exact source CI
-[40159257352](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40159257352)
-was queued at readback, no outcome claimed; Medium reads jobs/logs. A subsequent
-notes-only handoff commit does not change these source bytes. Its final ref is
-independently verified in final reply/private handoff rather than guessing a
-self-hash. No force push, lost history, private handoff or raw log upload.
+treed4cad6708c11218247667cf1ab21fc6ccae51880. This stage changes sanitized evidence
+notes only, never product/runtime/test/CI. Final notes checkpoint is read back
+independently after upload and recorded in final reply/private handoff, not guessed
+as a self-hash. No force push, lost commits or private handoff/raw evidence upload.
 
-## Completed / partial / unverified
+## Completed, partial and unverified
 
-Source0.2.0-dev.30: fixed Follow host(default), Quiet dark/light, Reset inside owned
-panel; original tokens for text/background/code/diffs/charts/focus; forced-color
-system fallback. No arbitrary CSS/assets/URLs/storage/tool/model/network requests.
-New UI controller/fixed asset bundler contracts in DEV30-REVIEW and ARCHITECTURE.
-Palette changes preserve preview/review; real teardown still clears sensitive text.
+Anonymous credential-disabled public clone, exact archive242files, SHA256
+613e5bc4a76c62274d7b9175662bff379c69a4d2c201599edb313a0da89e764d,
+581047archive bytes/1927871unpacked. All package bytes public-equal; at initial
+comparison workspace differed only in three expected6b2428d notes. Fixed CSS/JS/
+source tests/review included; path/link/special/case/private/root-HANDOFF checks,
+MIT/private npm metadata/versions/no dependencies/public defaults passed. Only
+JSONL is known359byte public synthetic fixture, not a session log. Fresh spaced
+extraction62focused passes0fail0skips, validate3/replay4. No full-suite repeat
+solely notes. Exact source CI40159257352 all7jobs/decoded logs read:
 
-Local macOS14.6/Node24.22.0 full suite351total239pass0fail112Windows skips;
-validate3mods/replay4fixtures pass. Focused29pass; final affected10pass. Token
-contrast and served-script simulations pass. Disconnected browser dark/light,
-diagram/table retention and keyboard Reset observed; native30/forced-colors/full
-accessibility/width/lifecycle and exact CI/package are unverified. No native CLI
-theme preview performed; installed standaloneCLI0.163.0 unchanged. Release164
-prose support separate from installed client; no upgrade. Desktop internal-server
-version not independently attested. Previous hostchatgpt result stays native29.
+- Four POSIX lanes239pass0fail112Windows skips351total, validate/replay success.
+- Windows portable success including all3appearance cases; simulated DOM only.
+- Windows22/24 each25storage passes+85/86process proofs. Only known Installer Image
+  refusal/links2; no byte/sample/hash/import/version/execution admission. Bounds
+  passed283.8553/247.9878ms, but original source29 failure cause remains unresolved.
+  No all-green, native Windows11/WSL or released compatibility claim.
 
-Installed29: same234files from immutable dddd49a public source+3private overlays;
-same reviewed settings28, four configured mods, three trusted hooks, project
-scope, selected exports/status, data and retention. Impact guard remains off;
-optional lifecycle capture/storage absent. Readback all234bytes/settings equal;
-shared config only same six owned human trust hashes differ from fresh pre29
-backup, all unrelated entries equal.32protected source paths baseline-equal;
-93requirement IDs/order retained. No production cleanup/new capture/model run.
-Older28/27/26/10 sources preserved. Detailed private paths/evidence stay ignored.
+Immutable public source30+three private overlays installed via supported same-ID
+add. .mcp/settings28 path and config/mods byte-equal29; same3hook registrations/
+env/status/timeouts, inert review comment29->30 only. Same project-session logging,
+notice/deny/two fixed rewrites, selected exports/status/data/retention. Impact guard
+and optional capture/storage stay off. No new path/permission/model run. All242cache
+bytes equal candidate, settings hash unchanged; parsed shared config equal right
+after add. Human then reviewed3hooks; fresh native inventory3trusted0errors0turns.
 
-Native29 bounded Impact review/harmless rewrites/control/denial passed earlier.
-Human controlled resize retained assessment; earlier unexplained reset remains
-lifecycle uncertainty, not a confirmed resize defect. Do not add persistence.
-Original Windows bounds failure remains unresolved; diagnostic249a69e passes do
-not prove a fix. Known image failures/Windows guards unchanged. Native Windows11/
-WSL unavailable now, later host available; do not ask again or repeat proof loops.
+After review, six owned human hook hashes plus model-availability notice and
+selected-project entry differ from fresh pre-update backup. Origin/timing of the
+two other fields was not instrumented, neither written by agent; all remaining
+fields equal. Preserve them and do not call all unrelated config byte-unchanged.
+Private field-name-only evidence retained.32protected config/hook/state/Windows/
+retention source paths unchanged, all93ledger IDs/order retained. No cache/hash
+patch, theme preference, client upgrade, capture/guard choice, cleanup or paid run.
 
-## Next tasks / acceptance in priority order
+Runtime host macOS14.6, Node24.22.0, standaloneCLI0.163.0. PATH-alias warning
+unchanged, no repair. Exact desktop/internal-server version not independently
+attested. Current already-open panel may still be loaded29; do not call it30.
+Earlier29 Impact/harmless hooks passed; unexplained earlier reset remains lifecycle
+uncertainty, controlled resize retained result. No raw-text persistence added.
+Source/browser/simulated tests do not prove native30 keyboard/width/forced-color/
+full accessibility/lifecycle. Separate native CLI theme preview remains unperformed.
 
-1. Read exact source30 CI once. Retain failures; no all-green/Windows claim from
-   POSIX or portable passes. High before a new correctness/security investigation.
-2. Exact anonymous public clone/archive, sanitized manifest, versions, MIT,
-   bounds/fixed CSS+JS inclusion, offline served bundle and spaced extraction.
-   Run relevant packaged appearance/transport/impact/rendering contracts, not
-   another full suite solely for notes. Record actual file count/hash/source.
-3. Prepare immutable same-settings native30 candidate and a concrete access/code/
-   rollback review. Original task authorizes reversible supported update once
-   ready; no new access/capture/category grant is inferred. Back up fresh shared
-   config/owned marketplace and preserve all entries; supported same-ID add,
-   exact cache-byte check. Human changed-hook trust and restart separate.
-4. After protected review/restart, verify actual native appearance/default/reset,
-   keyboard outline, synthetic draft/result retention, widths, code/diff/chart
-   fallback tables and forced colors where host permits. Same harmless hooks;
-   no additional model run is authorized. Bound Watch/process work and clean up.
-5. Separate harmless CLI /theme preview per DEV30-REVIEW/themes: no paid prompt,
-   no upgrade/native chrome claim, concrete exclusive XML copy/backup and no save
-   unless human chooses. Verify configuration; retain pending if protected.
-6. Continue remaining macOS acceptance from93ledger; supported unfinished work
-   must not silently become roadmap exclusions. High before consequential code,
-   optional observation/capture/guard changes require concrete user selection.
+## Installation scope, backups and rollback
 
-## Configuration and rollback
+Installed into current Codex user-profile/cache, not project-only. Fresh shared
+config and owned-marketplace backups are private and referenced in ignored root
+handoff. Original source29/28/27/26/10 preserved. Settings/data untouched. This
+update changes only owned marketplace source and supported plugin cache; human
+trust hashes are never written by agent. No rollback executed.
 
-None changed this stage. For future30: Reset→host, Clear→remove local draft,
-new view→Follow host. Supported package rollback selects preserved immutable29,
-adds same-ID through host, verifies cache/trust and reload; never copy hashes,
-patch cache, weaken permissions or overwrite entire shared config. No automatic
-cleanup/restore or new model invocation. Public defaults still metadata-off and
-original three hooks. Private config/raw evidence/root HANDOFF.md remain ignored.
+Reset→host colors; new view→Follow host; Clear→remove local preview/impact text.
+Disable/remove via supported owned-plugin controls, preserve data/other plugins.
+Rollback selects preserved immutable29 in only owned marketplace, supported same-ID
+add, cache/trust/reload checks and human review if required. Never copy hashes,
+edit installed cache, weaken permissions, restore whole shared config or delete
+production data/locks. Preserve unrelated/model notice/project entries.
 
-## Exact next setting and complete resume instruction
+## After restart: tasks and acceptance
 
-Select **GPT-6.1 Sol**; effort **Medium**. High completed bounded appearance design,
-implementation/security review and meaningful tests. Remaining CI/package/native
-preparation is routine. Stop for High if consequential implementation or a new
-security/correctness problem appears; save/upload/verify before every switch.
+1. Read-only native hook inventory/trust/cache242/settings readback. Do not repeat
+   installation/trust absent an actual changed package. Record any host bookkeeping
+   delta by field name only; never repair unrelated config.
+2. Open installed Claude Mods dashboard through its actual tool/panel entry; use
+   permitted MCP Apps DOM only, native app computer access remains blocked. If
+   panel cannot be opened automatically, give precise human open/expand step.
+   Verify dev30 Appearance for this panel exists before calling it loaded30.
+3. Default Follow host, Quiet dark/light and Reset. Use synthetic local preview/
+   impact data, verify palette switches/navigation preserve source/result and
+   Clear removes them. Code/diff/chart tokens and complete equivalent tables,
+   focus outline/Tab/Enter, narrower/wider usable layout, forced colors where
+   feasible. Record actual vs human-reported vs mock/browser separately. Do not
+   persist text to address lifecycle uncertainty. Avoid touching other drafts.
+4. Same harmless ordinary fixed rewrites/control/configured denial. Parent chat
+   is outside selected session capture; shell workdir is not session scope. Do
+   not manufacture activity counts or expand logging. Existing retained counts
+   are not new native delivery proof. No further model-run grant remains.
+5. Separate no-model native CLI /theme preview if safely feasible per themes.md:
+   concrete original XML copy/private backup/no overwrite/no saved selection unless
+   human chooses; verify configuration preserved. It is not owned appearance,
+   native desktop theme API, full prose release164 acceptance or client upgrade.
+6. Continue remaining macOS93ledger acceptance. Broader lifecycle/optional events/
+   impact-specific guard/hold authority/disable/older rollback/routing/context/
+   platforms remain incomplete. Do not silently turn supported work into roadmap
+   exclusions. High before consequential/security source changes/new failure.
 
-I've switched to GPT-6.1 Sol, Medium. Continue from the verified source30 appearance
+No new impact category, optional event/capture, raw export, cleanup, destructive
+demo or paid model run is authorized. Windows original failure/known image gaps
+remain; no Windows proof/package loop or host-availability question now.
+
+## Exact setting and copy-paste resume
+
+**Keep GPT-6.1 Sol, Medium.** Routine post-restart acceptance needs no model switch.
+Stop for human High switch before consequential code/security changes or a new
+correctness investigation; checkpoint/upload/verify first. No background work.
+
+I've restarted Codex. Continue on GPT-6.1 Sol Medium from the verified dev30 restart
 checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
-DEV30-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
-docs/themes.md and ignored root HANDOFF.md. Check exact source30 CI and packaging,
-then prepare supported native appearance review. Preserve installed29 until the
-reviewed update, logging scope, human trust, selected exports/status and Windows
-guards. Keep the original bounds failure unresolved. No new guard/capture/model
-run is authorized. Stop for High before consequential code or security changes.
+PACKAGE-DEV30.md, DEV30-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md,
+latest TEST-LOG.md, docs/themes.md and ignored root HANDOFF.md. Verify the actual
+dev30 dashboard appearance/default/reset and harmless existing hooks. Preserve
+logging scope, human trust, selected exports/status, unrelated configuration and
+Windows guards; keep the original bounds failure unresolved. No new guard/capture/
+model run is authorized. Stop for High before consequential changes.

@@ -2522,3 +2522,37 @@ Equivalent local80bb528 preserved on named source checkpoint branch. Source CI
 service observed exit0 after its bounded timer, browser already closed. No
 background work is left for the model-switch stop. Notes-only follow-up needs
 no repeated archive/full suite; Medium checks exact source CI/package next.
+
+## Source30 Medium exact package/CI/update — 2026-10-24
+
+Resumed6b2428d clean. Anonymous exact public bdf7fad/tree d4cad670 package242files,
+581047archive/1927871unpacked bytes, SHA256
+613e5bc4a76c62274d7b9175662bff379c69a4d2c201599edb313a0da89e764d.
+All files public-equal, initial workspace only3expected notes differences.
+Hygiene/path/link/special/private/root handoff/version/MIT/defaults pass; known
+public359byte JSONL fixture explicitly hash-checked. Fresh spaced extraction
+appearance/impact-review/impact/rendering/transport/package/dashboard/contracts:
+62pass0fail0skips; validate3/replay4 pass. No repeated full suite solely notes.
+Initial wrong relative pack folder/overbroad JSONL rejection and unaccounted3notes
+were verifier assumptions corrected without product changes; partial extraction
+was not called a pass. Exact facts are in PACKAGE-DEV30.md.
+
+All7source CI40159257352jobs/decoded logs read. POSIX mac22job121067155687,
+ubuntu22job121067155730, ubuntu24job121067155772, mac24job121067155798 each
+239pass0fail112Windows skips351total, validate/replay pass. Portablejob121067155684
+success, new3appearance cases actually pass; rendering/observer/appearance step
+16pass2POSIX skips18total. Windows24job121067155592 and22job121067155763 each
+25storage passes+85pass1fail86process, only known Installer Image refusal/links2.
+Bounds247.9878/283.8553ms pass; original historical cause unresolved, no all-green
+or native Windows claim. No rerun until green/guard change/new proof investigation.
+
+Supported immutable source30+same3private overlays, fresh private backups, owned
+marketplace29->30/same-ID add passed.242cache bytes equal candidate, settings28
+hash unchanged, parsed shared config equal immediately after add. Inventory first
+3modified/0errors/0turns. Human reviewed only3hooks; fresh native inventory3trusted/
+0errors/0turns. Post-review compare:6owned trust hashes plus model-availability
+notice/selected-project entry; origin of2other changes uninstrumented, no agent
+write/restore. All remaining fields equal. Initial only-hashes verifier assumption
+failed; field-name-only inventory recorded drift, preserved values.32protectedsource
+paths/93IDs order unchanged. No new capture/rules/guard/export/model run/theme/
+upgrade/cleanup. Restart/loaded native30 acceptance pending; stay Sol Medium.

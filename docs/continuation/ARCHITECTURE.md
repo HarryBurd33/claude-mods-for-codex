@@ -1,17 +1,19 @@
 # Extension architecture and security contracts
 
-## Source30 appearance — current — 2026-10-24
+## Dev30 reviewed update — current — 2026-10-24
 
-Original fixed palettes now live in the owned dashboard with Follow host default,
-Reset and no persistence or tool/model/network requests. Text/code/diffs/charts/
-focus use reserved owned tokens; system forced colors take precedence. Fixed-color
-contrast and simulated lifecycle/privacy tests pass; disconnected browser verifies
-dark/light/default Reset and retained diagram/tables. Native30, exact new CI/package
-and CLI theme preview remain unverified. Installed29/settings/scope/exports/rules/
-trust and Windows guards unchanged; no config/cache write or extra model run.
-See DEV30-REVIEW.md and themes.md via the handoff. Earlier checkpoint sections
-below record history, not current installation or next-model instructions. All93
-requirements remain incomplete; original Windows bounds failure unresolved.
+[PACKAGE-DEV30](PACKAGE-DEV30.md): exact242-file public archive/62packaged tests,
+four POSIX CI239passes each and portable Windows success. Both integration jobs
+retain only known image failure; bounds passed but original cause unresolved.
+Supported same-settings update verified242cache bytes; human3hook review confirmed
+by native3trusted0errors0model turns. Restart/loaded native30/CLI theme preview
+remain unverified. Logging/rules/exports/status/capture/Windows guards unchanged;
+no product/test/CI change or extra model run. Six human trust hash changes plus
+model-availability notice/selected-project entry drift vs fresh backup recorded;
+agent wrote neither extra field, all others equal, preserve both.32protectedsource
+paths and93IDs/order unchanged. Stay Sol Medium for restart/native acceptance;
+High before consequential changes. Full93 product remains incomplete. Earlier
+checkpoint sections below are historical, not current install/model instructions.
 
 ### Owned appearance contract
 

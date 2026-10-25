@@ -1,12 +1,11 @@
 # Final review
 
-Current2026-10-24: source30 adds fixed owned appearance controls; installed29 remains
-unchanged. [DEV30-REVIEW](continuation/DEV30-REVIEW.md) separates239local passes,
-disconnected browser evidence and pending exact CI/package/native30 checks.
-[NATIVE-DEV29](continuation/NATIVE-DEV29.md) retains actual previous host acceptance
-and lifecycle limits. Logging/trust/Windows guards unchanged; original bounds
-failure unresolved. Next human Sol Medium for routine package/native preparation.
-Earlier dated notes are historical.
+Current2026-10-24: [source30 package/update](continuation/PACKAGE-DEV30.md) is
+verified242files/62focused passes, human3hooks trusted; restart/native30 acceptance
+pending. Exact CI has four239-pass POSIX lanes/portable success plus the known
+Windows image failures; original bounds failure unresolved. Logging selections,
+exports/rules and Windows guards unchanged. No new model run. Stay Sol Medium for
+native acceptance, High before consequential changes. Earlier dated notes are historical.
 
 
 Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)

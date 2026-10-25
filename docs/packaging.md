@@ -1,20 +1,9 @@
 # Build a local source package
 
-Current2026-10-24: source29 adds local impact assessment/ephemeral guidance;
-[DEV29-REVIEW](continuation/DEV29-REVIEW.md) separates source tests and pending
-CI/package/native29 acceptance. Installed28/native counter checks are recorded in
-[NATIVE-DEV28](continuation/NATIVE-DEV28.md). Existing logging scope/exports/trust
-stay unchanged; no guard opt-in/model run granted. Next Medium package/review
-preparation, High before consequential changes. Earlier dated notes are historical.
-
-
-Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)
-passed for the selected synthetic outcome tool/table, six owned views and harmless
-ordinary pre-hook behavior. Logging scope/settings/trust selection/fixture remain
-unchanged; optional lifecycle capture off, no extra model/API run or cleanup.
-Earlier restart-pending statements below are historical; wider lifecycle/platform
-acceptance remains incomplete. Next High before broader component authoring.
-
+Current source30: see [package/CI/update evidence](continuation/PACKAGE-DEV30.md).
+Human hook review is complete; restart/native acceptance remains pending.
+Logging selections and Windows guards are unchanged; original bounds failure
+remains unresolved. Earlier package records are dated history.
 
 This is a compatibility-only hook distribution. Its manifest is `.codex-plugin/plugin.json`, with top-level `hooks`, `skills`, and `interface`, plus `extensions.com.openai.onboardingSkill`. All component paths resolve from the package root. There is deliberately no root `plugin.json`: released Codex CLI 0.163.0/0.164.0 would select that portable format and skip bundled hooks. See [release evidence](continuation/CODEX-CONTRACTS.md#released-hook-packaging-contradicts-portable-documentation).
 
@@ -24,16 +13,11 @@ The runtime requires Node.js 22 or newer and has no dependencies to install. Bui
 npm pack --ignore-scripts --pack-destination /absolute/path/to/output
 ```
 
-This creates a local archive; it does not publish or install the plugin. `package.json` is private to prevent accidental npm publication. The previously packaged version is `0.2.0-dev.27`; source28 packaging is pending. Match compatibility manifest,
-server and UI appInfo version when changing versions. [PACKAGE-DEV27](continuation/PACKAGE-DEV27.md)
-records the exact54c2330 public217-file archive, byte/hygiene inspection and fresh
-spaced-path46focused passes/0fail/2skips plus validate/replay. Four POSIX source CI
-lanes each passed217tests; the portable Windows lane passed, while both Windows
-storage jobs retain the known image failure. No native compatibility inference.
-The configured217-file snapshot is installed/human-trusted after explicit selection
-of only a public synthetic observation fixture. Restart/native27 acceptance is
-pending. Private overlays/settings never belong in a public archive. Later notes
-commits do not silently replace that immutable installed snapshot.
+This creates a local archive; it does not publish or install the plugin. `package.json` is private to prevent accidental npm publication. Exact source30 package evidence is in [PACKAGE-DEV30](continuation/PACKAGE-DEV30.md):
+242files,62focused passes, immutable public-source archive and supported reviewed
+update. Native30 is pending restart; package/CI is not host acceptance. Later
+notes-only commits do not silently replace the archive or installed snapshot.
+Private overlays/settings never belong in public archives.
 
 The explicit package file list includes `.codex-plugin/plugin.json`, runtime, configuration, hooks, skills, examples, fixtures, tests, public documentation, and development proofs. npm also includes the package metadata, README, and MIT license. Production does not load `proofs/`; explicit test/proof commands can execute those fixtures, and separate proof plugins require their own installation/review. Production registers its settings-scoped dashboard server via `.mcp.json` and includes `ui/`; it does not register proof servers or enable replacement by default. The Windows production wrapper compiles only `src/windows/PrivateStorage.cs`, excluding test-only partial classes.
 

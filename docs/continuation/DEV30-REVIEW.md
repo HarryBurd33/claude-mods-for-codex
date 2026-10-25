@@ -1,5 +1,12 @@
 # Source30 owned appearance review — 2026-10-24
 
+Current follow-up: [PACKAGE-DEV30](PACKAGE-DEV30.md) records242verified archive/cache
+files,62packaged passes and exact CI (known Windows image failures remain).
+Supported same-settings update and human3hook review complete; restart/actual
+native30 acceptance pending. The High implementation record below is historical.
+No product/runtime/test/CI change during Medium preparation.
+
+
 GPT-6.1 Sol High resumed3a1a6e8 on codex/astra-groundwork. Runnable development
 0.2.0-dev.30 implements UI-08/09 owned appearance, not native client restyling.
 Installed29 remains unchanged. No production configuration/cache/trust/theme
