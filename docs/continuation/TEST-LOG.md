@@ -3202,3 +3202,20 @@ Preservation helper passed protectedconfig/state/projects/rawconfig/251cachefile
 approvedsettings/data/sources/marketplace. Existing source35 CI/package results reused;
 no rerun. Known WindowsImage refusal/originalbounds/native11/WSL gaps unchanged.
 NextMedium routineproposalconsistency/decisionprep; no implementation/native grant.
+
+
+## Proposal35.1 Medium verification / break checkpoint — 2026-10-25
+
+Resumed b8ba342. Read exact public/private proposal and handoff; clean starting tree.
+Independently verified16proposal/source hashes,8runtime pins,6frozen34 artifacts,
+source34/35archive hashes, exact5requests+initialized ordering, samecwd/configbracket,
+32proposedreductions/nohooksoverride, plugin-off conditions, no forbiddenRPC/private
+modes and93ledgerrows. Private result retained locally. Allprotected config/trust/
+project fields and251installed31cachefiles/approvedsettings/data/sources/marketplace
+preservation passed; rootmodelpickerfields handled apart, rawconfig also matched.
+No source/guard/default/version/config/trust/install/logging/model change; no native
+Codex invocation/inspector implementation/inference or unexpected drift. Existing
+source35 test/CI/package results reused, not rerun. Inspector tests remain proposed.
+Saved RESUME-PLAN with ordered future sessions/acceptance/exactsettings and separate
+offline/native/inference permissions. User taking break; no scheduled/background
+continuation. NextworkingstageHigh only after fresh offline-implementation scope.

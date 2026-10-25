@@ -1,9 +1,13 @@
 # Roadmap
 
-Current native routing checkpoint: source34 adapter/review artifacts prepared,
-execution closed, local284passes/113skips; CI/package pending Medium. See
-[DEV34-REVIEW](continuation/DEV34-REVIEW.md). Native acceptance is incomplete.
-
+Current break checkpoint: source35 package/CI verified within
+[PACKAGE-DEV35](continuation/PACKAGE-DEV35.md)/[CI-DEV35](continuation/CI-DEV35.md)
+limits; proposal35.1 independently checked, inspector unimplemented/unauthorized,
+installed31 preserved and native admission closed. Full93 remains incomplete.
+[RESUME-PLAN](continuation/RESUME-PLAN.md) is the ordered future-session plan with
+model/effort, acceptance tests and separate authorization gates. Next working stage
+is High offline inspector implementation only after fresh human scope; no native
+execution, inference, configuration/trust or installation is currently authorized.
 
 The sections below describe the earlier MVP scope. The expanded requested
 capabilities, including supported tool-input rewriting and owned UI, are now

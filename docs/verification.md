@@ -1,6 +1,22 @@
 # Verification record
 
-## Native-readiness proposal 35.1 — current — 2026-10-25
+## Break checkpoint — verified proposal, no active continuation — 2026-10-25
+
+Sol Medium verified proposal35.1:16 artifact/source pins,8 runtime pins,6 frozen34
+artifacts, both34/35 archives, protocol/conditions/private modes and93 ledger rows.
+Installed31 (251 cache files), approved settings/data and protected config/trust/
+projects remain preserved. No unexpected drift, code/guard/config/install/model/
+logging/trust change or native process. Inspector remains unimplemented/unauthorized;
+native admission stays unconditionally closed. No background model continuation.
+
+[RESUME-PLAN](continuation/RESUME-PLAN.md) records ordered future sessions, exact model/effort,
+acceptance criteria and separate offline/native/inference authorization gates.
+Next working stage, after the break and fresh explicit scope: **GPT-6.1 Sol High**
+for offline inspector implementation/testing only. The plan's restart instruction
+grants that scope only when the human later sends it; no implementation is authorized
+now. No repeat package/CI/classification loop. Full93/native routing/Windows incomplete.
+
+## Native-readiness proposal 35.1 — prior preparation — 2026-10-25
 
 [NATIVE-READINESS-DEV35](continuation/NATIVE-READINESS-DEV35.md) is a separate source-only
 inspection proposal, not a driver or permission to run. It specifies five no-turn

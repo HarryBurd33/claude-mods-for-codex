@@ -1,5 +1,10 @@
 # Implementation handoff
 
+The current future-session plan is [RESUME-PLAN](continuation/RESUME-PLAN.md), with
+[HANDOFF](continuation/HANDOFF.md) as the break resume entry. Proposal35.1 is verified
+as data; native inspector implementation/execution remains unperformed and admission
+closed. The historical MVP steps below do not govern current capability completion.
+
 Historical v0.1 plan, completed for that limited MVP. Do not use the model choice
 or exclusions below for the current continuation. See
 [continuation/ARCHITECTURE.md](continuation/ARCHITECTURE.md) and the current handoff.

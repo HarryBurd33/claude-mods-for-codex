@@ -8,7 +8,7 @@ Exact source35 [package verification](docs/continuation/PACKAGE-DEV35.md) passed
 
 [Native-readiness proposal35.1](docs/continuation/NATIVE-READINESS-DEV35.md) is prepared: conditional config/requirements/hook inspection, with no driver or native execution. It discloses builtin omissions, possible plugin trust migration and working-directory differences. Installed31 and all guards remain preserved.
 
-Next human setting: **GPT-6.1 Sol Medium** for proposal consistency and decision preparation. High before native/security implementation; fresh authorization before any native action. Admission remains closed; no inference, installation or configuration change. [Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
+**Work is checkpointed for a break.** Proposal artifacts and installed31 preservation were reverified; no native execution or implementation occurred. [Future sessions and authorization gates](docs/continuation/RESUME-PLAN.md) are saved on this branch. When ready, select **GPT-6.1 Sol High** and use the [handoff](docs/continuation/HANDOFF.md) restart instruction for offline inspector work only. Native admission remains closed; no inference, install/config/trust change or activation is authorized now.
 
 The full [93-requirement product](docs/continuation/REQUIREMENTS.md) remains incomplete. macOS first, Windows later. Skills/chat consume selected-model usage; deterministic offline work adds no model calls. This development branch is not a finished release; the default branch retains the original MVP.
 

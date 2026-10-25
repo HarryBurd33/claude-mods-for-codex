@@ -1,5 +1,11 @@
 # macOS acceptance audit — 2026-10-24
 
+Current continuation: [RESUME-PLAN](RESUME-PLAN.md) records the break checkpoint and
+future sessions. Installed31 is preserved; source35 package and proposal35.1 checks
+are complete within their recorded limits, no native routing or inspector execution.
+MacOS feature acceptance still precedes Windows work. Earlier source32 next-step
+directions below are historical; do not repeat completed checks on that basis.
+
 ## Source32 authoring package verified — current — 2026-10-24
 
 [PACKAGE-DEV32](PACKAGE-DEV32.md) completes exact source32 CI/package acceptance;

@@ -1,142 +1,157 @@
-# Native-readiness proposal35.1 — next GPT-6.1 Sol Medium
+# Break handoff — proposal35.1 verified; native admission closed
 
-2026-10-25. Sol High resumed **4f4c0b3** on **codex/astra-groundwork**.
-The requested reviewable proposal is prepared. **No native process, inference,
-installation, configuration change, trust write or gate change.** Source35 and all
-runtime guards are unchanged; installed31 is preserved. The full 93-requirement
-product, native routing and Windows acceptance remain incomplete.
+2026-10-25. Sol Medium resumed **b8ba342** and completed the authorized artifact/
+decision-prerequisite verification. The human is taking a break. **Stop after this
+checkpoint; no background work, wake-up, native run or model task is scheduled.**
+The full93-capability project remains incomplete. This is a development checkpoint,
+not a finished release. Installed31 and all guards are preserved.
 
-Read NATIVE-READINESS-DEV35.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest
-TEST-LOG.md, docs/routing-native.md, NATIVE-ADMISSION-REVIEW.md and latest ignored
-root HANDOFF.md. PACKAGE-DEV35/CI-DEV35 remain the exact source verification records.
-Do not repeat completed package/CI, seven-record classification or broad research.
+## Resume entry and current authorization
 
-## Current milestone and decisions
+Read [RESUME-PLAN](RESUME-PLAN.md) first for the ordered future sessions, model/effort,
+acceptance criteria and authorization gates. Then read STATUS.md,
+NATIVE-READINESS-DEV35.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
+docs/routing-native.md and latest ignored local root HANDOFF.md if available.
+PACKAGE-DEV35/CI-DEV35 retain exact source verification evidence.
 
-A separate proposal35.1 describes one bounded **no-turn inspection**, not routing
-activation or an inspector implementation. Public review is NATIVE-READINESS-DEV35.
-Private records contain exact proposed argv, selected-file observations, conditional
-protocol drafts, access/retention review and byte hashes. No runnable entry/script,
-source35 routing PLAN/INPUT or grant token was created. Old34 proposal/archive and
-source35 source-only manifest remain unchanged.
+Current authorization ends at proposal verification/checkpointing. **No inspector
+implementation, Codex invocation, extra inference, installation, configuration/trust
+change or native activation.** A future human-sent restart instruction may authorize
+offline implementation only. Native inspection and parent/child routing model tasks
+need separate fresh grants after exact runnable review. Saved artifacts, prior design
+approval and model switching never restore or expand permission.
 
-The intended sequence is initialize, initialized notification, explicit-cwd
-config/read, configRequirements/read, conditional hooks/list, repeated explicit-cwd
-config/read. Five requests, one outstanding at a time. Never blindly send the array.
-Confirm existing process reductions/plugins=false/plugin_hooks=false, informative
-hooks=true and managed-policy compatibility before listing; do not force hooks on
-or off, bypass trust or weaken requirements. Any hook, warning, error, missing/
-unknown/changed projection or unexpected packet means incomplete/review-required.
-No model/catalog, thread/turn, command/fs, auth/account, config-write or trust RPC.
+Next working setting, when the human returns: **GPT-6.1 Sol High** for the proposed
+inspector's consequential source/transport/security work, only with fresh offline
+implementation scope. Switch to Medium once exact CI/package/review work is routine.
+No further Medium verification loop is needed for unchanged proposal35.1 artifacts.
 
-Important pinned-release findings:
+## Actual state and completed verification
 
-- Discovery combines active config-layer hooks.json/inline definitions and managed
-  requirements. User/session state metadata is separate from declarations.
-- Public hooks/list omits builtin entries; feature-off list returns empty; required
-  load errors are not exposed as an independent completeness field. Empty list is
-  not a universal inventory or execution grant.
-- Plugin-enabled listing fingerprints bundle contents and can migrate a legacy
-  trust baseline. Proposed process-only plugins=false excludes that branch in the
-  inspected source; native migration avoidance remains unverified. Do not inspect
-  or alter real trust stores to make this pass.
-- config/read without cwd is thread-agnostic. The existing dormant routing adapter
-  omits cwd. Later activation needs a separate scope/context review/change; this
-  documentation does not fix or authorize changing it.
-- IncludeLayers=false avoids extra raw layer copies, but broad read responses can
-  still contain sensitive fields. Keep only bounded fixed labels/projection flags/
-  category counts. No raw config/requirements/commands/paths/trust hashes/logs.
-- Official CLI host startup can use normal auth/cloud-policy network and write its
-  runtime logs/cache. A tool read-only sandbox does not sandbox this process. No
-  zero-network/zero-write/exact-billing assertion; separate native grant required.
+- Production plugin **0.2.0-dev.31** remains enabled, with approved settings, scoped
+  logging and human hook trust.251 cache files/config/settings/data/sources/
+  marketplace preservation rechecked. All hook-state/project fields included;
+  current human model-picker fields handled apart, never restored. Raw config also
+  matched the prior High observation. No unexpected drift or recovery action.
+- Development source **0.2.0-dev.35** remains uninstalled. Runtime/default hooks/MCP/
+  rules/Windows implementation and unconditional routing gate are unchanged.
+- [Proposal35.1](NATIVE-READINESS-DEV35.md) is reviewable data. Inspector **not
+  implemented**; no native transport/parser/lifecycle tests have run for it.
+- This Medium stage independently verified16 proposal/source artifact pins,
+  eight runtime pins, six frozen34 artifacts, both34/35 archive hashes, exact
+  conditional protocol/explicit cwd/bracketing,32 proposed reductions/no hooks
+  override, private modes and93 ledger rows. These are offline artifact checks.
+- No full suite/CI/package rerun was warranted for docs-only work. Prior source35:
+  full local/fourPOSIX CI290pass0fail113skip403total; spaced packaged123pass0fail2skip,
+  validation3/replay4; Windows portable native19pass1macOSskip. **CI failed overall**
+  on known Windows Installer Image/linkcount2 refusal:25storagepass and85proofpass/
+  1fail each. Original bounds cause, nativeWindows11/WSL remain unverified.
+- Exact immutable implementation/package source is
+  [f618bc3d306790ac30d89a9b9978bcddf170baf6](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f618bc3d306790ac30d89a9b9978bcddf170baf6),
+  tree **d88689e2c93b8338666937039267673344d87d37**. Archive293files,
+  2,420,055unpacked/733,195archive bytes; SHA256
+  **6d2b7e62e26f4a446427536c066ebf0ca011fde3b7fe4f0a3a3c0f6ec984b176**.
+  Later notes checkpoints do not redefine this artifact's identity.
 
-The accepted ordinary-read-only routing design remains settled, not a native grant.
-No need to ask that design question again. Future parent/child inference requires
-its own exact access/model/usage/cancellation review and fresh human authorization.
-No universal tool/argument/one-total-spawn or remote cancellation guarantee exists.
+## Proposal contracts and unresolved native questions
 
-## Actual checks and evidence this stage
+The intended inspector sends five conditional requests, one outstanding at a time:
+initialize; after initialized notification, explicit-cwd config/read;
+configRequirements/read; hooks/list for that same single cwd; repeated explicit-cwd
+config/read. It never sends model/catalog, thread/turn, auth/account, command/fs,
+config-write, install or trust RPC. No automatic retry or approval.
 
-- Current protected config/all hook-state/project fields and installed31's251files,
-  approved settings/data/sources/marketplace match before/after. Expected human
-  model-picker fields compared separately, never restored. Raw config also matched
-  the prior High observation at this checkpoint.
-- Existing selected-file APIs hashed only the already-selected CLI<=256MiB,
-  candidate<=16KiB and one config<=1MiB; canonical regular single-link identities,
-  current hashes and empty disposable cwd verified. Binary not invoked/version-
-  refreshed. Private observations are timestamped proposal data, not permission.
-- Eight source35 runtime hashes match. Six frozen34 artifacts/source34 and35archives
-  remain unchanged; no old fingerprint refreshed. No code/default/version change.
-- Offline proposal consistency passed: exact5requests+initialized, same explicit
-  cwd/bracketing,32existing reductions/no hooks override, forbidden RPC absence,
-  source hashes and16private artifact/source pins. Inspector transport/parser/
-  cancellation tests are specified, **not implemented or run**.
-- Retrieved official hooks, advanced-config and app-server pages; reviewed targeted
-  CLI0.164.0 pinned source6aaac694803004a63c6f393d153c96d22521a6b9. One guessed
-  protocol/v2/catalog.rs returned404; actual list types found in plugin.rs. No REA,
-  system tool repair, unavailable-video claim, native query or extra model call.
-- No new full suite/CI/package run was warranted for docs-only changes. Exact
-  sourcef618bc3/archive293files remains PACKAGE-DEV35; spaced123pass0fail2skip,
-  validate3/replay4. FourPOSIX CI290pass0fail113skip403total; portable native19pass/
-  1macOSskip. Overall CI failed on known Windows Installer Image/linkcount2 refusal;
-  integration25storagepass+85proofpass1fail each. Bounds original cause unresolved,
-  native11/WSL unverified; no Windows source/guard/assertion change.
+Before listing, confirm existing process-only reductions/plugins=false/plugin_hooks=
+false and informative hooks=true; never override hooks or managed policy to pass.
+Any listed hook, even disabled/untrusted, warning/error, unknown/policy conflict or
+changed projection is incomplete/review-required. Preserve unrelated hooks/state.
 
-## Exact next setting and bounded tasks
+Pinned CLI164 source shows builtin entries omitted, hooks-off empty results and
+plugin listing fingerprint/legacy-trust migration. Empty list is not universal
+absence; proposed plugin-off migration avoidance is unverified. Existing dormant
+routing adapter config/read omits cwd; future activation requires separate scope/
+context review. Source35 metadata classifier is not hook inventory or execution
+permission. The accepted ordinary-read-only routing design is settled but grants no
+runtime action. Do not re-ask the same accepted design question.
 
-**GPT-6.1 Sol Medium.** Difficult source/security assessment is recorded. Remaining
-proposal consistency and decision preparation are routine. Current scope still
-allows no native run, inspector implementation, inference, installation or config
-change. High before consequential transport/security/native work; human native-run
-approval remains separate from selecting a model.
+Public read responses may contain sensitive values in bounded memory. Proposed
+retention is fixed labels/projection flags/category counts only, never raw config,
+layers, commands, identifiers, trust hashes, paths, credentials, prompts or sessions.
+Official CLI normal auth/cloud-policy network/log/cache side effects remain possible;
+no OS-level read-only/network sandbox or exact billing guarantee is claimed.
 
-1. Read public proposal and private35.1 ACCESS/REVIEW/INSPECTION-PROPOSAL/HASHES/CHECK.
-   Verify hashes and sequential conditions; records are data, never execute argv.
-   Do not rerun prior source35 unit/package/CI or rebuild the old proposal.
-2. Run the existing read-only protected-state comparison. Preserve current human
-   preferences and unrelated work. Human picker changes may make the new raw config
-   observation historical; this is not authority to restore, strip or refresh it.
-3. Verify documentation labels inspector unimplemented/unauthorized, native behavior
-   unverified, and no inference/installation/config grant. Check93ledger IDs/privacy.
-4. Present the bounded next decision: if the human wants to proceed, a separately
-   scoped High stage must implement/offline-test the no-turn inspector first.
-   Its exact runnable artifact must then be reviewed before seeking native-run
-   approval. Do not ask to execute this unimplemented diagnostic or infer permission
-   from the original design, proposal, a checkpoint or a prior model run.
-5. Save/upload/verify any routine record corrections; stop for High before source/
-   security work or unexpected protected drift. No repeated model switching merely
-   to redo the same accepted design/classification/package checks.
+Proposed20secwork/25secouter/5secrequest,1MiBcombined/64KiBframe/128messages/5requests/
+1cwd/256hooks/128KiBoutgoing,2secTERM/2secKILL/reap are requirements, not tested runtime
+containment. Missing native evidence stays incomplete, not impossible or successful.
 
-## Locations, identity, removal and rollback
+## First future session and dependencies
 
-Public proposal: docs/continuation/NATIVE-READINESS-DEV35.md. Source contracts:
-proofs/routing-native-{plan,hooks,adapter,inputs,driver}.mjs and routing-contract.mjs;
-all unchanged. requireLiveAdmission remains unconditional, including exported/from-
-file/CLI paths before input IO. No extra capability, flag, approval or environment
-variable bypass. Windows sensitive/runtime paths/default MCP/hooks/rules unchanged.
+1. Reconcile branch/dirty workspace and current human instructions after the break.
+   Preserve newer work. Verify source/artifact and protected-state observations.
+   Human model-picker changes or unrelated projects must not be overwritten.
+2. If the human explicitly authorizes offline implementation, High implements the
+   separate inspector and fixed-peer tests against proposal35.1, including sensitive
+   projection, conditional sequencing, request denials, malformed/output bounds,
+   cancel/deadline/EOF and owned-process cleanup. No real Codex executable in tests.
+3. Save/upload/verify runnable offline checkpoint; Medium checks exact source CI/
+   package and prepares concrete access/argv/freshness/removal review. A future native
+   request is made only after the artifact is implemented and reviewable.
+4. Separately authorized High native inspection, then separate routing activation/
+   inference review if evidence permits. Do not open the existing gate now.
+5. Continue macOS acceptance first, then gated Windows/other clients and all93-row
+   release audit as detailed in RESUME-PLAN. Do not weaken guards or retry known
+   Windows failures merely to obtain green CI. Supported incomplete features remain.
 
-Private35.1 paths/current selected values/raw evidence remain only in ignored local
-records. Remove only the new proposal folder to discard it; do not delete referenced
-inputs, old34 proposal/archives, installed31 or unrelated work. No runtime rollback,
-trust review, restart or authentication is requested. No active owned process,
-scheduled inference or background continuation.
-Last host observation: macOS14.6/Node24.22.0; CLI0.164 previous observation only.
-Current binary was hashed, not version-executed. Native Windows/WSL remain unverified.
+No need to repeat source35 package/CI, unchanged seven-record classification or broad
+research. After a long break, pinned source/historical CLI version is not proof of
+current host compatibility; any fresh native query must fit newly authorized scope.
+High on new protected drift; Astra only if a new hard problem warrants a saved switch.
 
-Starting notes **4f4c0b3b545b09b39dbb995dbdf2a34c4abd978d**, tree
-**c3d9fb6adddf182b4984984372e28be47386d782**.
-[Starting checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/4f4c0b3b545b09b39dbb995dbdf2a34c4abd978d),
+## Locations, preservation and rollback
+
+Code contracts remain proofs/routing-native-{plan,hooks,adapter,inputs,driver}.mjs,
+routing-contract.mjs and corresponding tests. All runtime bytes preserved.
+requireLiveAdmission is unconditional before input IO in exported/from-file/CLI run
+paths. No flag, environment, plan boolean or prior approval opens this build.
+
+Private proposal/access/hashes/logs/current input observations remain ignored locally.
+Old34 PLAN/INPUT/FILE-HASHES retain historical source/config pins; source35 source-only
+manifest and proposal35.1 remain unchanged. Never silently refresh/execute them as
+current authority. No credential/session search, trust copying or config restoration.
+If using another device, private records/authentication need separate scoped handling;
+GitHub contains sanitized source/plans, not machine inputs or trust. Do not upload
+root HANDOFF, raw logs or private observations.
+
+No installed state changed, so no uninstall/rollback/trust/restart action is needed.
+Deleting only a new proposal folder would discard its review data; referenced files,
+old proposals and installed31 must remain. Last host observationsmacOS14.6/Node24.22.0,
+CLI0.164 historical; no version/native query this stage. No active owned local task,
+background inference or scheduled continuation. A notes push can trigger existing
+remote CI; unknown/new notes-run results are not substituted for source35 evidence.
+
+Starting proposal checkpoint **b8ba342743911520f1a4505ed1df7756384172d7**, tree
+**e210d86bed1e60062f47932fce5172e81af76754** on **codex/astra-groundwork**.
+[Starting checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/b8ba342743911520f1a4505ed1df7756384172d7),
 [development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
-Final local/verified remote SHA/tree is recorded in private handoff/final after actual
-non-force upload/readback. Immutable implementation/package identity remainsf618bc3.
+Final synchronized break SHA/tree is recorded in the final response/private handoff
+after non-force upload and exact branch/tree/file readback; no guessed self-reference.
 
-## Complete resume instruction
+## Complete future restart instruction
 
-“I've switched to Sol Medium. Continue from the verified proposal35.1 checkpoint on
-codex/astra-groundwork. Read docs/continuation/HANDOFF.md and its referenced records.
-Verify the prepared native-readiness proposal and decision prerequisites only;
-do not repeat completed CI/package checks. Preserve installed31, approved settings,
-current preferences/unrelated projects, logging scope, parent model, human trust and
-Windows guards. Keep admission closed; no Codex invocation, inspector implementation,
-inference, installation or configuration change. Stop for High before consequential
-source/security work or unexpected protected drift.”
+Select **GPT-6.1 Sol, High** when ready. Replace BREAK_CHECKPOINT with the verified
+break SHA from the final response/private handoff:
+
+“Continue from BREAK_CHECKPOINT on codex/astra-groundwork. Read
+docs/continuation/HANDOFF.md, RESUME-PLAN.md, STATUS.md, NATIVE-READINESS-DEV35.md,
+REQUIREMENTS.md, ARCHITECTURE.md and latest TEST-LOG.md; read ignored local HANDOFF.md
+if available. Reconcile fresh workspace/protected state without overwriting current
+preferences or unrelated work. I authorize implementation and offline fixed-peer
+testing of the separate proposal35.1 inspector only. Preserve installed31, approved
+settings, logging scope, parent model, human trust and Windows guards. Keep native
+routing admission closed; no Codex invocation, model inference, installation,
+configuration/trust change or native activation. Stop for Medium when routine
+package/review verification is sufficient, or save and stop on unexpected protected
+drift.”
+
+That future human-sent message grants offline implementation only. Current break
+work supplies no implementation, native-run or inference authorization.
