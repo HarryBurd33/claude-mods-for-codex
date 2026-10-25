@@ -1,5 +1,10 @@
 # Prepared native routing adapter — source35
 
+Current continuation: [proposal35.1](continuation/NATIVE-READINESS-DEV35.md) defines a
+separate no-turn inspection; the inspector is not implemented or authorized. The
+existing routing adapter/driver remains unchanged and closed. Prior34 routing
+artifacts remain preserved; new35.1 records are proposal data only.
+
 Source0.2.0-dev.35 prepares a separate temporary CLI app-server test adapter for
 the [human-accepted ordinary-read-only design](continuation/NATIVE-ADMISSION-REVIEW.md).
 It is not a native plugin UI extension, a new product client or a Codex fork.

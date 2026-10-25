@@ -6,7 +6,9 @@ Development source **0.2.0-dev.35** corrects the prepared native preflight’s h
 
 Exact source35 [package verification](docs/continuation/PACKAGE-DEV35.md) passed: 293 files, all bytes equal the public checkpoint; spaced packaged tests **123 passed, 0 failed, 2 skipped**, validation and replay passed. [CI](docs/continuation/CI-DEV35.md): four macOS/Linux lanes each **290 passed, 0 failed, 113 skipped**; Windows portable native preparation **19 passed, 1 skipped**. **CI failed overall:** both Windows integration lanes retain the known Installer Image refusal; Windows gaps remain unresolved. Native routing, Windows11 and WSL remain unverified.
 
-Next human setting: **GPT-6.1 Sol High** for separate native-readiness/proposal review. Admission remains closed; no inference, installation or configuration change is authorized. [Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
+[Native-readiness proposal35.1](docs/continuation/NATIVE-READINESS-DEV35.md) is prepared: conditional config/requirements/hook inspection, with no driver or native execution. It discloses builtin omissions, possible plugin trust migration and working-directory differences. Installed31 and all guards remain preserved.
+
+Next human setting: **GPT-6.1 Sol Medium** for proposal consistency and decision preparation. High before native/security implementation; fresh authorization before any native action. Admission remains closed; no inference, installation or configuration change. [Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
 
 The full [93-requirement product](docs/continuation/REQUIREMENTS.md) remains incomplete. macOS first, Windows later. Skills/chat consume selected-model usage; deterministic offline work adds no model calls. This development branch is not a finished release; the default branch retains the original MVP.
 

@@ -1,11 +1,11 @@
 # Native routing admission review — 2026-10-25
 
-Current continuation: [DEV34-REVIEW](DEV34-REVIEW.md) prepares the separate native
-adapter and exact private review artifacts under the accepted revised design.
-Execution is still unconditionally closed. No inference, installation or config
-change grant exists. Medium34CI/package next; High before activation/security.
-Earlier directions to prepare the adapter are historical, not new work to repeat.
-
+Current continuation: [proposal35.1](NATIVE-READINESS-DEV35.md) follows exact source35
+package verification with a separate conditional no-turn inspection design. Inspector
+unimplemented/unauthorized; admission closed. Installed31 and all guards preserved.
+The accepted design below remains settled; no inference/config/install/native grant.
+Earlier source34 preparation/packaging directions are historical. Medium may verify
+proposal artifacts; High before inspector/security/native implementation.
 
 ## Recorded human design decision — current
 

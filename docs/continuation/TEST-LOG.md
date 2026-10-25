@@ -3181,3 +3181,24 @@ proofs85pass1fail86total each; overall CI failure. Bounds cases passed this run,
 original cause unresolved. See CI-DEV35/PACKAGE-DEV35 for exact evidence and limits.
 No native Codex, install/config/trust/logging/model/Windows guard change or CI rerun.
 Next High for separate source-only native-readiness/proposal review, admission closed.
+
+
+## Native-readiness proposal35.1 — Sol High — 2026-10-25
+
+Resumed4f4c0b3. No product/runtime code/version/defaults changed. Retrieved official
+hooks/advanced-config/app-server pages and targeted pinnedCLI164 source for listing,
+config reads, requirements and trust migration. One guessed catalog.rs path404;
+actual types resolved in plugin.rs. hooks/list filters builtin entries; hooks-off
+short-circuits; plugin listing can fingerprint/migrate legacy trust baseline.
+Config/read without cwd is thread-agnostic; existing dormant adapter omits cwd.
+New public NATIVE-READINESS-DEV35 records exact protocol/limits/acceptance boundaries;
+new ignored private35.1 proposal observes current selected3file hashes/emptycwd,
+8runtime pins and preserves6old34artifacts/source34+35archives/source35sourcereview.
+Artifact structural check passed:5requests+initialized, conditional plugin-off/
+policy checks, explicit samecwd/configbracketing/no forbiddenRPC,32unchanged proposed
+reductions/no hooks override,16private artifact/source pins. No driver/native spawn/
+inspector synthetic transport tests/inference; tests are proposed, not observed.
+Preservation helper passed protectedconfig/state/projects/rawconfig/251cachefiles/
+approvedsettings/data/sources/marketplace. Existing source35 CI/package results reused;
+no rerun. Known WindowsImage refusal/originalbounds/native11/WSL gaps unchanged.
+NextMedium routineproposalconsistency/decisionprep; no implementation/native grant.
