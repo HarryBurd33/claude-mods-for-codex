@@ -1,29 +1,22 @@
-# Current status — source31 interaction authoring — 2026-10-24
+# Current status — dev31 approved, restart pending — 2026-10-24
 
-Runnable0.2.0-dev.31 adds generated disabled local-preview cards with bounded
-labeled fields/formats and fixed Render/Clear. Existing component CLI/access/intent/
-integrity/plan flow reused; no arbitrary code, input defaults, paths/hooks/capture/
-new tools/persistence. Shared actual controller/renderer replay is synthetic DOM,
-not native acceptance. DEV31-REVIEW.md and ../local-interactions.md give contracts.
+[PACKAGE-DEV31](PACKAGE-DEV31.md): exact251-file public archive/spaced extraction
+79passes/1Windows skip80total; validate3/replay4. Four POSIX source CI246passes each,
+portable Windows success including3new pure cases. Both Windows integration jobs
+25storage+85/86process known Image refusal/links2 only; bounds pass268.9535/340.9046ms
+doesn't fix original cause. No all-green/nativeWindows11/WSL claim/guard change.
 
-Local358total246pass0fail112Windows skips; validate3/replay4 pass. Real CLI generated
-disabled Review desk then private enabled intent replay3fields/sixcases, no install.
-Installed30-generated legacy status bundle accepted by31, artifact hashes unchanged.
-Skill validator blocked by missing Python yaml; manual checks only, no repair/pass.
+Human authorized one Review desk(local plan/JSON/notes fields), new private settings
+only adds its interactionComponents entry. Every old scope/root/export/status/
+capture value preserved; old settings bytes unchanged. Supported same-ID update,
+fresh backups,251cache bytes=candidate and new settings=approved proposal. Human
+three-hook review verified by native3trusted0errors0model turns. All other shared
+config equals fresh pre31 backup; only3owned human trust hashes differ.32protected
+source paths/93IDs stable. No runtime/test/CI/security/logging/rule change this stage.
 
-Installed30cache242/settings/shared config unchanged;32protectedsource paths/93IDs
-order retained. Logging/rules/exports/status/trust/Windows guards unchanged. No new
-capture/category/model run/install31. Original Windows bounds cause unresolved;
-known image failures/Windows11/WSL native gaps remain. Full93 product incomplete.
-
-Next human GPT-6.1 Sol Medium: exact new CI/public archive/spaced tests, concrete
-display-only authored card review/settings delta/native candidate. No silent new
-card selection; preserve existing selections. Human trust/restart separate. High
-before consequential source/security changes. Native31/browser/focus/width/full
-accessibility/lifecycle not verified by synthetic replay. Native30 evidence remains
-versioned separately; no current restart/trust action needed at this model switch.
-
-Implementation [691c399](https://github.com/HarryBurd33/claude-mods-for-codex/commit/691c39918583ecec131470973618dded2e89b8a8)
-full tree matched connector/fetched local tree and anonymous public ref. Exact
-source CI [40161665391](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40161665391)
-queued at readback; no outcome claimed. Follow-up notes do not change source bytes.
+Restart/loaded native31 authored-card/focus/width/lifecycle acceptance pending.
+Current panel may still30; don't infer from package/replay. Keep GPT-6.1 Sol Medium,
+restart/reopen same chat. No repeat install/trust absent actual change. High before
+consequential source/security changes. No new paid model run, capture/category,
+production cleanup or client upgrade. Full93 incomplete, macOS first/Windows later.
+Original bounds uncertainty, known image failures and Windows guards unchanged.

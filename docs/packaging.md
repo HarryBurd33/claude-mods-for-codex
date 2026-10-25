@@ -1,10 +1,8 @@
 # Build a local source package
 
-Current source30: see [package/CI/update evidence](continuation/PACKAGE-DEV30.md).
-Human hook review and bounded [native30 acceptance](continuation/NATIVE-DEV30.md)
-are complete within stated limits; broader accessibility/lifecycle remains open.
-Logging selections and Windows guards are unchanged; original bounds failure
-remains unresolved. Earlier package records are dated history.
+Current source31: [package/CI/update evidence](continuation/PACKAGE-DEV31.md).
+Human card authorization and hook trust complete; restart/native acceptance pending.
+Logging selections and Windows guards unchanged, original bounds unresolved.
 
 This is a compatibility-only hook distribution. Its manifest is `.codex-plugin/plugin.json`, with top-level `hooks`, `skills`, and `interface`, plus `extensions.com.openai.onboardingSkill`. All component paths resolve from the package root. There is deliberately no root `plugin.json`: released Codex CLI 0.163.0/0.164.0 would select that portable format and skip bundled hooks. See [release evidence](continuation/CODEX-CONTRACTS.md#released-hook-packaging-contradicts-portable-documentation).
 
@@ -14,11 +12,12 @@ The runtime requires Node.js 22 or newer and has no dependencies to install. Bui
 npm pack --ignore-scripts --pack-destination /absolute/path/to/output
 ```
 
-This creates a local archive; it does not publish or install the plugin. `package.json` is private to prevent accidental npm publication. Exact source30 package evidence is in [PACKAGE-DEV30](continuation/PACKAGE-DEV30.md):
-242files,62focused passes, immutable public-source archive and supported reviewed
-update. Native30 is pending restart; package/CI is not host acceptance. Later
-notes-only commits do not silently replace the archive or installed snapshot.
-Private overlays/settings never belong in public archives.
+This creates a local archive; it does not publish or install the plugin. `package.json` is private to prevent accidental npm publication. Exact source31 evidence is in [PACKAGE-DEV31](continuation/PACKAGE-DEV31.md):
+251files/79focused passes+1Windows skip, immutable public-source archive and
+supported human-reviewed update with approved display-only Review desk. Native31
+acceptance is pending restart; package/CI is not host acceptance. Later notes
+do not silently replace the archive/installed snapshot. Private overlays/settings
+never belong in public archives.
 
 The explicit package file list includes `.codex-plugin/plugin.json`, runtime, configuration, hooks, skills, examples, fixtures, tests, public documentation, and development proofs. npm also includes the package metadata, README, and MIT license. Production does not load `proofs/`; explicit test/proof commands can execute those fixtures, and separate proof plugins require their own installation/review. Production registers its settings-scoped dashboard server via `.mcp.json` and includes `ui/`; it does not register proof servers or enable replacement by default. The Windows production wrapper compiles only `src/windows/PrivateStorage.cs`, excluding test-only partial classes.
 

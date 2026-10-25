@@ -1,5 +1,12 @@
 # Source31 owned interaction authoring review — 2026-10-24
 
+Current follow-up: [PACKAGE-DEV31](PACKAGE-DEV31.md) records251verified archive/cache
+files,79packaged passes+1skip and exact CI with known Windows image failures.
+Human authorized one Review desk card and reviewed3hooks; restart/native31 pending.
+Earlier High implementation sections below are stage history, not current install
+instructions. No product/runtime/test/CI change during Medium package/update.
+
+
 GPT-6.1 Sol High resumedfdd0667 on codex/astra-groundwork. Runnable development
 0.2.0-dev.31 adds a bounded generated local-preview card workflow inside the
 existing owned MCP App. Installed30/settings/logging/trust remain unchanged.

@@ -1,133 +1,125 @@
-# Source31 authoring handoff — next GPT-6.1 Sol Medium
+# Dev31 restart handoff — stay GPT-6.1 Sol Medium
 
-2026-10-24. High resumedfdd0667 on codex/astra-groundwork and implemented bounded
-generated local-preview cards. Runnable schema/access/bundle/replay/settings/UI
-contracts and meaningful tests complete for this stage. Full93 product incomplete,
-macOS first/Windows later. Installed30 untouched. No current restart/trust action;
-human model switch is the stopping point.
+2026-10-24. Medium resumedfbf8fa2. Exact source31 CI/public package/spaced tests
+passed within stated Windows limits. Human authorized one Review desk and reviewed
+the three changed hooks. Installed251cache files verified; native inventory
+3trusted0errors0model turns. **Human now restarts Codex and reopens this chat on
+Sol Medium. Actual loaded native31 acceptance remains pending.** No repeat
+installation/trust needed now. Full93 incomplete, macOS first/Windows later.
 
 ## Read first
 
-DEV31-REVIEW.md, ../local-interactions.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md,
-latest TEST-LOG.md, NATIVE-DEV30.md, PACKAGE-DEV30.md,
+PACKAGE-DEV31.md, DEV31-REVIEW.md, ../local-interactions.md, STATUS.md,
+REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md, NATIVE-DEV30.md,
 METADATA-BOUNDS-INVESTIGATION.md and latest ignored root HANDOFF.md.
 
 Repo https://github.com/HarryBurd33/claude-mods-for-codex
-Branch codex/astra-groundwork. Starting verified checkpoint
-[fdd0667dd5416e7e46840151a79886fca3528131](https://github.com/HarryBurd33/claude-mods-for-codex/commit/fdd0667dd5416e7e46840151a79886fca3528131),
-treeae467a81e4c70a6f8d0ea0d2cded21db9430bcf9. Verified new implementation:
+Branch codex/astra-groundwork. Starting checkpoint
+[fbf8fa2aa1e96243995a59811202563bc2ca6395](https://github.com/HarryBurd33/claude-mods-for-codex/commit/fbf8fa2aa1e96243995a59811202563bc2ca6395),
+tree0d2ed44f69ecb43aae810f5b73dc76ffce5971c0. Exact implementation/archive
 [691c39918583ecec131470973618dded2e89b8a8](https://github.com/HarryBurd33/claude-mods-for-codex/commit/691c39918583ecec131470973618dded2e89b8a8),
-treee425263642254c5b3efc4bc3fe8f17258f19a50c. Connector exact tree/fetched local tree/anonymous public ref matched.
-Equivalent local1523db6d08188cde353cb6c01ce3736dfc5e87da retained on
-codex/dev31-authoring-high-source-local-checkpoint. Exact source CI
-[40161665391](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40161665391)
-was queued at readback; outcomes not inspected/claimed. Medium reads this source
-run, not a later notes-only run. Final notes checkpoint/ref verified in final reply/
-private handoff; no guessed self-hash, force/history loss/private record upload.
+treee425263642254c5b3efc4bc3fe8f17258f19a50c. Current stage changes sanitized notes
+only, no product/runtime/test/CI. Final notes identity read back after upload in
+final reply/private handoff, not guessed as a self-hash. No force/history loss/
+private raw log/config/root handoff upload. Immutable installed docs snapshot
+stays691c399; later notes don't silently replace its bytes.
 
-## Completed, partial, unverified
+## Completed / partial / unverified
 
-Source0.2.0-dev.31 kind interaction: title+1–4labeled fixed-format fields (plain
-code, JSON, restricted flowchart), disabled default, no observer/status combination,
-paths/commands/defaults/HTML/CSS/JS/URLs/modules/actions or raw persistence. Existing
-component CLI/private complete bundle/access/boolean-only intent/plan reused.
-Inline interactionComponents selection in existing private runtime settings;
-max4cards,4096characters/field, no new tool/CSP/hook/capture/permission/path grant.
-Enabled labels/formats serialized safely in private UI resource; disabled omitted.
-No input text in tool messages/settings/state/logs. Host controls its webview.
+Anonymous exact public archive251files,605989archive/2004853unpacked bytes,
+SHA2561c0fba49187fca7750e378972db7995e4f8149d3657fddce47331b012b19f915.
+All bytes public equal, initial workspace only three knownfbf8fa2notes differences.
+Path/traversal/link/special/case/private-key/log/root-HANDOFF exclusions, known
+public359byte synthetic JSONL hash, required interaction modules/assets/tests,
+MIT/private npm metadata/versions/no dependencies/public defaults verified.
+Fresh spaced extraction80total79pass0fail1Windows skip; validate3/replay4.
+Actual packaged CLI generated disabled bundle/intent/access/plan/replay, no hooks/
+capture/commands/production state. No repeated full suite solely notes.
 
-Actual trusted controller/renderer replay with minimal synthetic DOM, six cases
-render/edit/Clear/malformed/oversized/disposal, counts/booleans not text. UI local
-view disables Refresh/Watch; per-card isolation/unique DOM IDs/bounds/edit
-invalidation/Clear/closed callbacks, palette/navigation retention. No arbitrary
-code execution. Native31/browser/keyboard/width/forced-color/screen-reader/
-lifecycle acceptance pending; synthetic DOM is not native rendering proof.
+Exact source CI40161665391 all7final jobs/decoded logs read. Four POSIX246pass/
+0fail112Windows skips358total/validate+replay pass. Portable success including3new
+pure interaction cases; component step8pass8POSIX skips16total. Windows24job
+121074338218 and22job121074338231 each25storage+85/86process, only known Image
+refusal/links2. Bounds268.9535/340.9046ms pass, original root cause unresolved.
+No all-green/nativeWindows11/WSL claim, retry-until-green or guard weakening.
 
-Host macOS14.6/Node24.22.0. Full358total246pass0fail112Windows skips, focused59/
-58pass1Windows skip, validate3/replay4. Real CLI private3field generation/validate/
-disabled+enabled intent replay/plan passed (no hooks/capture/install). Installed30
-CLI-generated legacy status bundle accepted by31, artifact hashes unchanged.
-Skill route updated/manual checked; quick_validate blocked by missing Python yaml,
-no repair/pass/independent model evaluation. No extra paid model/API run.
+Human expressly authorized single Review desk: empty Plan sketch(restricted
+flowchart), Data contract(JSON), Notes(plain code), Render/Clear only. No input
+defaults/persistence/tool/model/network/file/command/policy action. Labels/formats
+are in enabled private UI resource; typed text only in its view memory. New private
+settings file adds only interactionComponents entry, every prior root/scope/usage/
+observation/status/capture choice same, old settings bytes untouched. Disabled
+generated bundle preserved, separate enabled intent used.
 
-Exact new source CI/public archive/spaced package/native31 acceptance are remaining
-work, not claimed. Windows portable lane includes new tests, IO/refusal/runtime
-guards unchanged. Original Windows metadata-bounds cause unresolved and known
-image failures retained; no all-green/nativeWindows11/WSL claim or proof loop.
+Supported same-ID update via owned marketplace30->31, fresh private shared-config/
+owned-marketplace backups.251cache bytes=candidate, new settings=approved proposal,
+parsed shared config equal after add. Only3private overlays: config/mods same30,
+same3hooks/env/timeouts/status/command plus inert review comment30->31, .mcp same
+process/new approved settings path. Human3hook trust then native3enabled trusted/
+0errors0model turns. Fresh backup comparison only3owned human trust hashes differ,
+all other config equal. After restart host may update same3owned content hashes;
+verify field names, no unrelated repair.32protectedsource paths/93IDs stable.
 
-## Code locations / stable boundaries
+## Installed target / configuration / rollback
 
-DEV31-REVIEW gives detailed review. src/interaction-contract.mjs pure exact schema;
-component-contract.mjs component/access/plan/intent compatibility; component-
-authoring.mjs private6file interaction bundle plus unchanged legacy artifacts;
-interaction-replay.mjs fixed controller/renderer minimal DOM. runtime-settings.mjs
-inline definitions only and unchanged outside-project/private/Windows bounds.
-server.mjs no new tool, resources/read supplies selected definitions; dashboard-
-resource.mjs fixed bounded assets/static imports/exports/escaped JSON markers.
-ui/interactions.js local fieldsets/Render/Clear; ui/rendering.js trusted exports
-and boolean success; dashboard.html conditional owned view/local navigation/
-teardown; no network/process authority. skills/mod-scaffolding routes exact CLI
-workflow and docs/local-interactions. Tests in interactions/components/transport-
-ui/rendering/dashboard, portable CI includes new interactions suite.
+User-profile/cache scope, not project-only. macOS14.6/Node24.22.0/standaloneCLI
+0.163.0; exact desktop/internal-server binary/version not independently attested.
+No client upgrade, extra paid model run, new guard/capture/rule/export/status/
+retention or production cleanup. Optional hooks/storage and impact guard off.
+Prior30/29/28/27/26/10 sources/settings/data kept. Private exact paths/backups/
+hashes/review/inventory in ignored root handoff. Source31 not natively rendered
+yet; current already-open panel/service may still30, never infer loaded31 from
+cache/replay/trust. Existing native30 evidence remains versioned separately.
 
-## Installed state / configuration / rollback
+Clear removes local fields/results. Disable card by reviewed settings entry removal/
+supported reload, preserve others/data. Rollback selects preserved immutable30
+and old reviewed settings28 through owned marketplace/supported same-ID add,
+cache/trust/reload verification, human review if needed. Never whole-config restore,
+installed-cache edit, trust-hash copy, permission weakening or data/lock deletion.
 
-Installed30 user-profile/cache (not project-only) remains exact242file immutable
-publicbdf7fad+3private overlays, prior archiveSHA256
-613e5bc4a76c62274d7b9175662bff379c69a4d2c201599edb313a0da89e764d.
-Existing settings28/rules/project-session scope/exports/status/data/retention/
-human trust preserved. Cache242/settings hash/shared config bytes equal at stage
-end;32protected source paths and93IDs/order unchanged. Previous six human hook
-hash changes+two host fields relative pre30 backup remain preserved, not repaired.
-No source31 candidate/settings merge/install/trust write, extra capture/category/
-model run/cleanup/client upgrade. Native30 evidence remains versioned separately.
-Old29/28/27/26/10 sources and backups kept; private details in ignored root handoff.
+## After restart: priority acceptance
 
-No rollback needed now. Future card disable removes only its reviewed inline
-settings entry and reloads via supported update. Clear/real teardown clears input;
-new view has empty fields. Package rollback selects preserved immutable30 via
-owned marketplace/supported same-ID add, cache/trust/reload checks and human review
-if needed. Never whole shared-config restore, installed-cache edit, trust-hash
-copy, permission weakening or automatic data/lock deletion.
+1. Read-only inventory/cache251/approved settings/old choices/trust/config readback.
+   Do not repeat install or ask trust absent actual changed package. Record any
+   host bookkeeping only by field name; preserve unrelated entries.
+2. Call actual installed dashboard; permitted MCP Apps DOM only. Native app access
+   blocked historically; no private app APIs/patch. If needed give exact human
+   card-expand/sidebar step. Confirm Authored local tools and Review desk before
+   calling it loaded31; no guess from old panels.
+3. Only authorized card3fields/default empty/labels/fixed formats. Use synthetic
+   diagram/JSON/notes; Render, edit invalidation, invalid JSON/unsupported flowchart
+   safe literal fallback, Clear, palette/navigation retention and bounds where
+   harmless. Check equivalent tables/feedback/focus/Tab/Enter/narrow+wide. Clear
+   only our input; don't touch other drafts. Native multi-card isolation isn't
+   proved by one selected card; keep synthetic/native distinctions.
+4. Actual teardown/close-reopen empty new view if feasible without disrupting chat,
+   no invented persistence. Stale callbacks are synthetic tests, not full native
+   accessibility/lifecycle certification. Host forced colors/VoiceOver/zoom remain
+   unverified unless actually exercised.
+5. Same harmless production/authored print rewrites/control/configured denial.
+   Parent chat outside selected capture; shell workdir isn't session scope.
+   No fake activity, scope expansion or further model-run grant. Retained counts
+   alone don't establish event delivery/producer health. Watch bounded/off at end.
+6. Continue remaining macOS93ledger acceptance. Windows original bounds/known
+   image gaps and guards remain, no Windows proof/package loop/availability ask.
+   Lifecycle/optional events/disable/older rollback/routing/context/hold/platform
+   gaps stay in scope. High before consequential new source/security work.
 
-## Next tasks / acceptance, in order
+No fresh capture/category/access path/paid run/cleanup authorization is granted.
+Current new selection is ONLY approved Review desk local display. Original task
+authorization covers harmless supported native checks, not automatic approvals.
 
-1. Read exact source31 CI jobs/logs once available. Keep known Windows failures/
-   original bounds uncertainty. New consequential correctness/security issue
-   requires High before fixes, no rerun-until-green or guard weakening.
-2. Anonymous exact public archive/manifest/hygiene/version/MIT/defaults/spaced
-   extraction; new fixed contract/controller/replay/rendering assets and generated
-   bundle tests. Record actual count/hash/source. Do not repeat full suite solely
-   notes; preserve source-vs-package-vs-native distinctions.
-3. Prepare concrete display-only Review desk intent/access/settings diff and an
-   immutable native candidate. Preserve all existing scope/roots/exports/status/
-   capture/rules. No silent new card selection; explicit reviewed display intent
-   only, no hook/event/storage grant inferred. Do not edit old bundle hashes.
-4. Supported reviewed update with fresh private config/owned-marketplace backups,
-   exact cache bytes/unrelated config verification. Human changed-code hook trust
-   and restart remain separate. No additional model-run grant; original request
-   authorizes reversible supported installation/harmless tests once review ready.
-5. Actual installed authored label/fields/3formats/render/edit invalidation/Clear/
-   multiple-card isolation/defaults/palette/navigation/focus/width/teardown checks.
-   Host UI and human reports separate from replay. Harmless existing native hooks;
-   parent chat outside selected capture, workdir not session scope, no fake counts.
-6. Continue broader93macOS acceptance without silently deferring supported work.
-   Full lifecycle/optional events/disable/older rollback/routing/context/hold/
-   accessibility/platform gaps remain. Windows later, no availability question now.
+## Exact setting and copy-paste resume
 
-## Exact next setting and complete resume
+**Keep GPT-6.1 Sol, Medium.** This is a restart stop, no model switch necessary.
+High before consequential source/security change or new correctness investigation;
+save/upload/verify before switch. No background continuation/schedule/delegation.
 
-Select GPT-6.1 Sol, effort Medium. High completed consequential schema/access/
-lifecycle implementation and tests; remaining exact CI/package/native preparation
-is routine. High before new consequential source/security work; if genuinely hard
-architecture needs Astra checkpoint/request human switch explicitly. No delegation,
-automatic switch, scheduled/background continuation or extra API/model run.
-
-I've switched to GPT-6.1 Sol, Medium. Continue from the verified source31 authoring
+I've restarted Codex. Continue on GPT-6.1 Sol Medium from the verified dev31 restart
 checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md,
-DEV31-REVIEW.md, docs/local-interactions.md, STATUS.md, REQUIREMENTS.md,
-ARCHITECTURE.md, latest TEST-LOG.md and ignored root HANDOFF.md. Check exact source31
-CI and packaging, then prepare the reviewed authored-card native update. Preserve
-installed30 until supported review, logging scope, human trust, selected exports/
-status and Windows guards; keep the original bounds failure unresolved. No new
-capture/guard/model run is authorized. Stop for High before consequential changes.
+PACKAGE-DEV31.md, DEV31-REVIEW.md, docs/local-interactions.md, STATUS.md,
+REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md and ignored root HANDOFF.md.
+Verify the actual source31 Review desk and harmless native hooks. Preserve approved
+display-only settings, logging scope, human trust, exports/status, unrelated
+configuration and Windows guards; keep original bounds failure unresolved.
+No new capture/guard/model run is authorized. Stop for High before consequential changes.

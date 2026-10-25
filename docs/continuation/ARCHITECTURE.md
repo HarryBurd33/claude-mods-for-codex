@@ -1,17 +1,18 @@
 # Extension architecture and security contracts
 
-## Source31 interaction authoring — current — 2026-10-24
+## Source31 approved update — current — 2026-10-24
 
-DEV31-REVIEW.md: bounded generated local-preview cards, disabled/private exact
-schema/access/intent/replay/plan, fixed renderer callbacks and inline reviewed
-settings definitions. No new hook/capture/path/tool/model/network/persistence.
-Existing observer/status/rule bundles remain compatible; installed30-generated
-bundle validated/replayed unchanged. Local358/246pass/112Windows skips; real CLI
-and actual-controller synthetic DOM replay pass. Exact new CI/package/native31
-pending; installed30/cache/settings/config/logging/trust/Windows guards unchanged.
-Next human Sol Medium routine verification/native preparation, High before new
-consequential fixes. No current restart/trust action; full93 incomplete, original
-bounds cause unresolved. Earlier records below are historical/versioned evidence.
+[PACKAGE-DEV31](PACKAGE-DEV31.md): exact public251files/79packaged passes1Windows
+skip, four POSIX246passes each and portable Windows success. Both integration
+jobs retain known image failure only; original bounds cause unresolved. Human
+authorized one local Review desk card; new private settings adds only that entry,
+old logging/scope/rules/exports/status/capture preserved. Supported same-ID update
+verified251cache bytes, new settings=proposal/old settings bytes unchanged. Human
+review3hooks confirmed3trusted0errors0turns. Shared config only3owned human hashes
+differ vs fresh pre31 backup, all other fields equal.32protectedsource/93IDs stable.
+Restart/native31 acceptance pending, stay Sol Medium; High before consequential
+changes. No new capture/category/model-run grant. Full93 incomplete. Earlier stage
+records below are historical, not current install or next-model instructions.
 
 ### Authored local interaction boundary
 

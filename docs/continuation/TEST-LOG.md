@@ -2630,3 +2630,34 @@ nonforce update/fetched complete local tree/anonymous public ref match. Equivale
 local1523db6 retained on named source branch. ExactCI40161665391 queued, no outcome
 inspected/claimed. Medium reads exact source logs/package next; notes-only follow-up
 requires no repeat full suite/archive. Installed30 remains unchanged.
+
+## Source31 Medium package/CI/approved update — 2026-10-24
+
+Resumedfbf8fa2clean. Anonymous public clone691c399/treee4252636, offline ignore-scripts
+npm pack isolated cache251files/2004853unpacked/605989archive bytes SHA256
+1c0fba49187fca7750e378972db7995e4f8149d3657fddce47331b012b19f915.
+Public byte equality/initial3notes-only workspace differences, hygiene/required
+assets/MIT/versions/defaults pass. Fresh spaced extraction10suites80total79pass/
+0fail1Windows skip, validate3/replay4. Real packaged component CLI disabledbundle/
+explicit intent6case replay/plan passed, no fixture execution/production write.
+No verification setup/product failure/repeated full suite this stage.
+
+CI40161665391 exacthead691c399 all7finaljobs/logs read. Ubuntu24job121074338144,
+mac24job121074338182, mac22job121074338212, ubuntu22job121074338348 each246pass0fail/
+112Windows skips358total+validate/replay success. Portablejob121074338075 passed,
+new3interaction cases actually passed, components step8pass8POSIX skips16total.
+Windows24job121074338218 and22job121074338231 each25storage+85/86process, only known
+Installer Image refusal/links2 before proof bytes/admission. Bounds268.9535/
+340.9046ms pass, original historical cause unresolved. No all-green/Windows native
+claim, new proof/policy change or retry-until-green.
+
+Human explicitly authorized one Review desk(local plan/JSON/notes). New private
+settings adds only interactionComponents; all prior choices semantic equal/old
+settings bytes unchanged. Public251+3overlays(candidate config same30, hook comment
+30->31 only, MCP same process/new approved settings path). Fresh backups/supported
+same-ID add/cache251equal/newsettings=proposal/parsedsharedconfigequal afteradd.
+Human three-hook trust; fresh read-only inventory3trusted0errors0turns. Only3owned
+human trusted hash fields differ freshbackup, all other fields equal.32protected
+source paths/93IDs order unchanged. No source/runtime/test/CI/security/logging/
+capture/rule/guard/export/status/paidrun/cleanup change. Restart/actual native31
+pending; stay Sol Medium. PACKAGE-DEV31 and private ignored evidence retain details.

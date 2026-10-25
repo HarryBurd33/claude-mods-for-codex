@@ -1,11 +1,11 @@
 # Final review
 
-Current2026-10-24: [source31 authored interactions](continuation/DEV31-REVIEW.md)
-adds disabled bounded local-preview cards/private bundle/access/intent/replay/plan.
-Local246passes/112Windows skips; exact new CI/package/native31 pending. Installed30/
-logging/trust/Windows guards unchanged; original bounds failure unresolved. Next
-human Sol Medium for routine verification/review preparation, High before
-consequential fixes. Earlier dated notes are historical.
+Current2026-10-24: [source31 package/update](continuation/PACKAGE-DEV31.md)
+verified251files/79passes+1Windows skip. Human authorized local Review desk and
+reviewed3hooks; restart/native31 pending. Logging/rules/exports/status preserved,
+Windows guards unchanged/original bounds unresolved. Exact source CI four246-pass
+POSIX lanes/portable success plus known Windows image failures. Stay Sol Medium
+for native acceptance; High before consequential changes. Earlier dated notes are historical.
 
 
 Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)

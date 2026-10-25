@@ -2,7 +2,7 @@
 
 This is an authorable component inside the existing plugin-owned MCP App, not
 native client chrome, a separate client, arbitrary executable plugin or immediate
-slash callback. Installed30 does not support the new kind until a reviewed update.
+slash callback. Reviewed source31 is now installed with one explicitly authorized Review desk;\nrestart/actual native acceptance remains pending.
 Existing observer/status/activity bundles and counters remain compatible.
 
 Describe a useful local review desk: a plan diagram, JSON contract and plain notes.
