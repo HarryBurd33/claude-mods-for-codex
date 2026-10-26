@@ -1,5 +1,26 @@
 # Current status — source36 package verified, native admission closed
 
+## Inspection activation proposal36.1 — current — 2026-10-26
+
+[INSPECTION-ACTIVATION-DEV36](INSPECTION-ACTIVATION-DEV36.md) records a review-only
+change contract and private byte-bound draft artifacts. No activation/source/gate
+change or native invocation. Source36 cannot be activated as-is: OS spawn cwd is
+inherited; pinned startup schedules an online catalog refresh and resolves persisted
+remote control before inspection responses. Startup state/log/auth/cloud/plugin
+boundaries need review; no extra model-generation RPC was sent or authorized.
+
+The original protected-state checker now fails on one added project trust entry.
+Removing only that addition in memory reproduces the exact prior protected digest;
+all earlier values and owned installed31cache251/settings/data/sources/marketplace
+are unchanged. New entry origin/intent unknown; preserved, not adopted as a new
+baseline. Fresh native inputs remain blocked. Old sealed artifacts remain intact.
+
+Next **GPT-6.1 Sol Medium** for proposal artifact/document verification only. Keep
+all gates closed; no Codex, inference, install/config/trust changes. High and fresh
+scope before inspection-contract/cwd/startup-boundary implementation. Full93/native
+routing/Windows acceptance incomplete; existing exact36CI/package evidence unchanged.
+
+
 ## Source36 exact package and CI verified — current — 2026-10-25
 
 [PACKAGE-DEV36](PACKAGE-DEV36.md): exact9833caf public clone/archive305files,

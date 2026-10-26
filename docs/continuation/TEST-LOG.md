@@ -3284,3 +3284,37 @@ linkcount2refusal (nodata/sample/execauthority); bounds cases passedthisrun, ori
 cause/native11/WSL stillunverified. Sevenlogs savedprivately; no retry/assertionrelax.
 NextHigh inspection-onlyactivation/securityreview and exactfutureartifacts; allgates
 closed/noCodex/inference/install/config/trustgrant. Nativebehavior remainsunverified.
+
+## 2026-10-26 — proposal36.1 activation review only (Sol High)
+
+Resumed ce02f5a. No source/gate/default/Windows guard edit, Codex invocation, extra
+inference, install or host config/trust write. Original source36 preservation checker
+FAILED: one added projects/trust_level entry, intent unknown. Removing only this new
+entry in memory exactly reproduces prior protected digest; no prior protected value
+changed. Baseline/sealed plans unchanged; native inputs not accepted. Independent
+installed31cache251/approved settings/data/sources/marketplace match.
+
+Pure Node machine simulation drafted5conditional same-cwd reads plus initialized
+using historical paths/synthetic replies; native/admission flags false, no transport
+or raw response retention. Four native exported/from-file entries refused before
+Proxy getter access (0reads). Initial ad hoc expected-message regex did not match the
+existing refusal; exact unchanged message assertion then passed all4, no source fix.
+Private proposal hashes/modes/source14+test/sealed prior artifacts/protocol/current
+mismatch and owned-state verifier prepared. Public links/privacy/93ledger IDs/order
+and git diff checked before checkpoint. No broad-test/CI/package rerun for notes-only
+work. Source36 CI failure/packaging remain as PACKAGE-DEV36/CI-DEV36, not new results.
+
+Pinned upstream startup source review found inherited OS cwd, online catalog refresh,
+persisted remote-control resolution and ordinary auth/cloud/SQLite/log/state effects
+before inspection responses. Native behavior not tested; plugin startup/exclusion
+remains unresolved. Seven primary files retrieved; two guessed paths404 explicitly
+recorded. See INSPECTION-ACTIVATION-DEV36 for exact evidence/contract and native blockers.
+Next Medium routine artifacts only; fresh High scope before consequential source work.
+
+Concurrent second-chat checkpoint/ignore edit detected; writes paused. Human confirmed
+that writer was told to stop until this stage finishes. Existing binding/input/review
+preserved; fresh local task state verified and exclusive local lease acquired for
+publication only. No owner was displaced. Commit excludes the unowned .gitignore edit.
+The initial task-input save needed decision objects rather than strings; corrected to
+the declared schema, then checkpoint/verify/resume passed. This is preservation
+harness evidence, not product/native testing or permission restoration.

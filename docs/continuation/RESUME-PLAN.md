@@ -1,4 +1,25 @@
-# Break checkpoint and future sessions — 2026-10-25
+# Future sessions — current proposal36.1 — 2026-10-26
+
+## Inspection activation proposal36.1 — current — 2026-10-26
+
+[INSPECTION-ACTIVATION-DEV36](INSPECTION-ACTIVATION-DEV36.md) records a review-only
+change contract and private byte-bound draft artifacts. No activation/source/gate
+change or native invocation. Source36 cannot be activated as-is: OS spawn cwd is
+inherited; pinned startup schedules an online catalog refresh and resolves persisted
+remote control before inspection responses. Startup state/log/auth/cloud/plugin
+boundaries need review; no extra model-generation RPC was sent or authorized.
+
+The original protected-state checker now fails on one added project trust entry.
+Removing only that addition in memory reproduces the exact prior protected digest;
+all earlier values and owned installed31cache251/settings/data/sources/marketplace
+are unchanged. New entry origin/intent unknown; preserved, not adopted as a new
+baseline. Fresh native inputs remain blocked. Old sealed artifacts remain intact.
+
+Next **GPT-6.1 Sol Medium** for proposal artifact/document verification only. Keep
+all gates closed; no Codex, inference, install/config/trust changes. High and fresh
+scope before inspection-contract/cwd/startup-boundary implementation. Full93/native
+routing/Windows acceptance incomplete; existing exact36CI/package evidence unchanged.
+
 
 Current continuation (2026-10-25): proposal35.1 offline implementation and exact
 source36 package/CI inspection are complete within [PACKAGE-DEV36](PACKAGE-DEV36.md)/
@@ -68,7 +89,7 @@ throughout. Keep macOS feature acceptance ahead of further Windows implementatio
 | --- | --- | --- | --- |
 | 1. Resume and offline inspector | GPT-6.1 Sol High | After explicit offline-implementation scope, reconcile fresh workspace/protected state; implement the separate proposal35.1 inspector with fixed-peer tests for exact request ordering, no forbidden RPC, policy/feature refusal, sensitive-data projection, frame/output limits, deadline/cancel/EOF and cleanup. Native executable is never used by these tests. Review explicit-cwd consistency separately before dormant routing activation. | No native call, inference, install/config/trust change or routing-gate opening. Save runnable offline checkpoint; stop for Medium once routine verification remains. |
 | 2. Package and exact runnable review | GPT-6.1 Sol Medium | Inspect CI for the exact new source, public clone/package/spaced checks as warranted; prepare exact local command, process-only settings, pins, access/network/logging/cleanup and removal review. Keep existing failure evidence. | High for new security failure/drift. Do not ask to run an unimplemented or unreviewed artifact. No native execution without fresh explicit approval. |
-| 3. One no-turn inspection | GPT-6.1 Sol High | Only after the human authorizes the exact bounded native inspection, run its reviewed entry once; no model/catalog/thread/turn RPC. Observe config/requirements/hook discovery with proposed process-only reductions; save only fixed labels/counts. Check preserved state and owned-process cleanup. | Any policy conflict, hook, warning, missing visibility or drift stops without disabling/trusting anything. An empty list is limited evidence, not routing permission. No automatic retry. |
+| 3. One no-turn inspection | GPT-6.1 Sol High | Blocked until proposal36.1 cwd/startup/remote-control/input issues and a separate closed inspection contract are implemented and reviewed under fresh scope. Only after the human authorizes the exact bounded native inspection, run its reviewed entry once; no model/catalog/thread/turn RPC. Observe config/requirements/hook discovery with proposed process-only reductions; save only fixed labels/counts. Check preserved state and owned-process cleanup. | Any policy conflict, hook, warning, missing visibility or drift stops without disabling/trusting anything. An empty list is limited evidence, not routing permission. No automatic retry. |
 | 4. Routing activation review | GPT-6.1 Sol High | Use inspection evidence to review remaining builtin/external-hook/context gaps and any source activation change. Bind a separate current proposal to reviewed source/inputs, intended parent/child models, access, usage, stop and cancellation limits. | Admission remains closed until a separately reviewed change and human authorization. Accepted read-only design is settled, but is not an inference grant. |
 | 5. Bounded native routing acceptance | GPT-6.1 Sol High | Only with fresh authorization for both intended model tasks and exact temporary settings, test configured-child discovery/model inheritance, normal permissions, output, usage availability, unexpected-action stopping and cleanup. | Paid/account usage is visible; no parent-model interception, fallback, silent approval or inferred exact billing/total-spawn guarantee. Missing evidence remains incomplete. |
 | 6. Remaining macOS acceptance | GPT-6.1 Sol Medium for routine checks; High for consequential fixes | Reconcile each remaining ledger row against actual installed host evidence. Prioritize skill invocation, optional lifecycle/failure/turn observation where separately opted in, full accessibility/lifecycle gaps, target-bound update/removal/rollback and honest context/cache limits. | Do not broaden logging/capture or enable optional hooks automatically. Changed code still needs human trust/restart where required. Supported unfinished features stay in scope. |

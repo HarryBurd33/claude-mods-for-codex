@@ -1,5 +1,7 @@
 # Prepared native routing adapter — source35
 
+Current 2026-10-26: [inspection activation review](continuation/INSPECTION-ACTIVATION-DEV36.md) blocks native activation on inherited OS cwd, startup remote-control/side-effect and input-freshness gaps. No routing gate or source change; installed31 preserved. Next Medium artifact verification only.
+
 Current continuation: [source36 package](continuation/PACKAGE-DEV36.md) and
 [CI](continuation/CI-DEV36.md) verify the offline readiness inspector. Both native
 readiness/routing entries remain closed. Next High reviews inspection-only activation

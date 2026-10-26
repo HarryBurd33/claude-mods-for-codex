@@ -1,5 +1,7 @@
 # Verification record
 
+Current 2026-10-26: [proposal36.1](continuation/INSPECTION-ACTIVATION-DEV36.md) is review-only; pure five-request simulation and four native entry refusals checked, no native process. One added project trust entry prevents the old protected-state check passing; prior values/owned31 match, no baseline refresh. No new CI/package result.
+
 ## Source36 exact package and CI verified — current — 2026-10-25
 
 [PACKAGE-DEV36](continuation/PACKAGE-DEV36.md): exact9833caf public clone/archive305files,
