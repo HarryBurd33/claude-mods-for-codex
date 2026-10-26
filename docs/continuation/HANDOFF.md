@@ -1,105 +1,83 @@
-# Stop-only proposal verified offline — next GPT-6.1 Sol Medium
+# Stop-only artifact verification complete — design accepted, execution closed
 
-2026-10-26, High resumed7eff539 under explicit proposal/offline scope. Read
+2026-10-26, Sol Medium resumedffdcded. Read STOP-ONLY-VERIFIED.md,
 STOP-ONLY-PROPOSAL.md, STOP-ONLY-OFFLINE.md, STATUS.md, REQUIREMENTS.md,
 ARCHITECTURE.md, latest TEST-LOG.md, RESUME-PLAN.md and ignored root HANDOFF.md.
 
-## Completed milestone and exact limits
+## Completed and actual human authority
 
-Prepared one **project-local Stop command hook** proposal, not a bundled plugin
-update or new client. Existing observer/component/runtime reused unchanged; no
-runtime/test/CI/version implementation. Disabled private bundle plus four separate
-review intents/plans, unresolved project-hook template and proposed `.json.txt`
-config are inert. No native config directory created. Reception, retention and
-status are independent; no status selection or production dashboard/data change.
+Human accepted **project-local design only; keep all execution gates closed** after
+review of disposable-project/separate-data/installed31-preserved design and its
+other-session/referenced-content trust limits. This is not native launch, inference,
+install/config/trust or logging authorization. Human awayabout1hour asked for needed
+questions; design question was answered. No automation, switch, timed continuation
+or silence-as-approval. No pending question is needed to finish this verification.
 
-Focused existing suite20total19pass0fail1Windows-only skip1.31sec; private focused
-review15cases0fail. Actual Node callbacks prove Stop-only metadata/empty JSON,
-malformed envelope exit1/no stdout, busy/missing config fixed diagnostics, parent/
-sibling exclusion/no-data, descendant inclusion, two session buckets, no raw text
-in retained records and fixture removal. These are synthetic, not native events.
-No full suite/package/CI repetition; existing source38package/CI remains historical.
+32immutable artifact hashes/private modes/single-link regular files pass. Existing
+loader verifies complete disabled Stop-only bundle and4separate boolean-intent plans;
+synthetic pure replay matches, no generation/subprocess callback/state write. Config
+valid, oneStop/timeout5template retains all unresolved placeholders. Prior19pass1skip
+suite and15case callback result are historical, not rerun. Primary source records/
+sourceURLs agree with existing hashes; no new source research/claim of native support.
+Current proposal decision row changed only to record human agreement; prior original
+proposal is still checked historically atffdcded. Sealed manifests unchanged.
 
-Current official hooks/packaging and pinnedCLI164 Stop/discovery/trust code retrieved.
-Important findings: other hooks are additive/Stop continuation can cause extra usage;
-project hooks do not get plugin referenced-content fingerprint verification;
-scope:session isolates storage buckets, not exact one-session reception; project
-matching includes descendants. Source snapshots/hashes do not create trust or native
-input freshness. The proposal describes referenced-code review and local-process
-memory/env authority honestly, with no raw retention/automatic continuation.
+38product pins match9016cb0;20runtime31protected93IDs/251ownedcache/settings/data/
+sources/marketplace and rawconfig match existing observations. Known project-trust
+addition remains unknown/unaccepted; no new baseline. Installed31preserved/source38
+uninstalled; no runtime/test/CI/version/newpackage/fullsuite/nativeUI/CLI/appserver/
+model-run/install/config/trust/input change. NativeWindows11/WSL/bounds/Image gaps
+remain. Current desktop/internal-server identity remains independently unverified.
 
-Native acceptance is **blocked/unverified**. Existing startup/remote-ingress boundary
-is unresolved; no ordinary CLI alternative is presumed safe. No new native PLAN/INPUT,
-binary/config/hash refresh or source37/38research loop. Future effective other hooks
-are unrefreshed, so no exact-one-turn/no-remote-work/billing guarantee. Design agreement,
-launch envelope, config/project trust, hook review and fresh bounded usage grants
-are distinct decisions, none granted by this review. Stop-only request is unexecuted
-text, not argv or authorization. No compaction/subagent/extra inference is proposed.
+## Next exact model and bounded scope
 
-## Current host and preservation
+**GPT-6.1 Sol High.** Artifact verification is complete, no further packaging loop.
+The next consequential question is the **native launch-envelope decision**, not Stop
+implementation. Existing startup/remote-ingress and unrefreshed effective hooks still
+block activation despite design agreement. Native code paths/gates remain closed.
 
-Installed31 enabled approved251-file user-profile snapshot/settings/data/sources/
-marketplace/current model/logging/human trust/Windows guards preserved. Source38
-uninstalled; default3hooks unchanged, optional capture off. Desktop/internal server
-identity remains independently unverified; no fresh native inventory/UI invocation.
-Known added project-trust entry remains unknown/unaccepted; raw config matches
-existing observation, no baseline adoption/restore. Source-only38product files
-match9016cb0; earlier20runtime/31protected/93IDs and sealed artifacts retained.
-New drift requires High read-only classification; do not repair or accept it.
+Use only existing STOP-ONLY proposal and source36–38 review evidence to prepare one
+concrete human choice: retain strict no-launch boundary, or separately review an
+explicit normal-client startup envelope for a later test. State known potential
+state/catalog/remote-ingress/other-hook/usage side effects and actual unknowns. No
+claim they happened on this host; no newly accepted envelope or permission inferred.
+No ordinary CLI/native task may be used to evade the existing gates. If existing
+facts cannot support a concrete choice, keep the exact blocker and stop; do not
+invent a launcher/proof layer or repeat blocked startup/remote-control research.
 
-Native Windows11/WSL and original bounds/Image uncertainty remain incomplete; current
-macOS priority continues. No model-run/native/config/install/trust action this stage,
-no permissions weakened or approval emitted. Synthetic private callback fixtures
-removed; inert review output retained. No rollback/removal needed for installed31.
+No new runtime/security/transport implementation, native execution, inference,
+installation, config/trust changes or native-input refresh. No current binary/config
+snapshot or native PLAN/INPUT. Future exact path/definition review, human trust and
+model usage grants remain separate. Save/upload/verify/stop once reviewable decision
+artifact exists, returning to Medium only when routine verification/recording remains.
+Human-controlled model switch required, no subagent/worker/background bypass.
 
-## Next exact setting and bounded tasks
+## Durable provenance and coordination
 
-**GPT-6.1 Sol Medium.** Difficult design is complete; only routine verification and
-human decisions remain. No source/runtime/security implementation authorized.
+New private verifier retains source38/manual/proposal records historically at their
+exact commits and current verification notes separately. Original proposal32artifacts/
+source pins/manifest remain immutable. Private machine paths/rawlogs/rootHANDOFF/
+.local/.checkpoint excluded from Git. Final actual verified SHA/tree and checkpoint
+ID appear after non-force upload/readback in final/ignored handoff, not guessed here.
 
-1. Coordinate one writer, inspect current state/jobs/lease; preserve other-chat
-   original binding/input/review/generations/.gitignore and waiting automation.
-   Read new private checker named in ignored handoff; verify all closed/source/host
-   pins and exact starting/current commit/tree. Old manifests remain sealed.
-2. Verify exact inert bundle/boolean intents/plans/template/result/source/document
-   hashes, local paths/private permissions, no native config/PLAN/INPUT or runnable
-   substituted command. Check reception-only vs retention-only semantics and15case
-   result separately from the19pass1skip existing suite. Do not rerun an exclusive
-   generator over its existing bundle or repeat full CI/package/source37research.
-3. Check current primary evidence links/pinned source references, complete proposal
-   setup/update/disable/removal/rollback steps and explicit blocked/native uncertainty.
-   No new native/model/client call or input refresh needed for this verification.
-4. Publish safe verification notes/checkpoint and prepare a concise human design
-   decision only: project-local reuse vs retaining the blocker, with content-trust/
-   descendants/session-bucket limits. Accepting design alone cannot open launch,
-   config/trust/usage gates. High before changing those contracts or runtime/security.
-5. Save/upload/verify/stop at the next decision boundary. Do not invent another code
-   change or model switch just to keep working; full93 remains incomplete.
+One writer lease used. Waiting other chat inactive/selfjobpoints to this activechat;
+no retry, originalinput/review/generations/.gitignore/automation preserved. Planner
+localinput/config/signals unavailable, no repair/dispatch/Codexcollector. Fresh
+accountordinaryusageallowed; per-task/API/contextunknown. No ownedbackgroundprocess.
+Releaseleaseafterverifiedprivatecheckpoint. No rollback/removal needed: only safe
+notes/private verification files. No newCI/package result inferred from publication.
 
-## Durable provenance and ownership
-
-Public source notes/requirements/handoff safe; private primary copies/rawlogs/machine
-paths/root handoff/.local/.checkpoint remain ignored. New checker keeps earlier
-manual notes historicalat7eff539 and current proposal records separately; earlier
-hashes unchanged. Exact final remote SHA/tree and local checkpoint after readback
-are in final/ignored handoff, never guessed in this file.
-
-One local lease; waiting other chat inactive and latest self-job reconciled without
-retry. Existing semantic queue preserved; no worker/subagent/new schedule. Planner
-unavailable local config/signals recorded, no repair/dispatch/Codexcollector. Fresh
-ordinary account usage allowed; per-task/API/context unknown. Release lease after
-verified private handoff. Human model switches remain mandatory stopping points.
-
-[Starting checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/7eff5395f994ea72dbbcd4c79ed8333d0e71f75b).
+[Verified starting proposal](https://github.com/HarryBurd33/claude-mods-for-codex/commit/ffdcded9a2eb70a3f520b91d7aa6847e7a5fd761).
 [Development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
 
 ## Complete resume instruction
 
-“I’ve switched to GPT-6.1 Sol Medium. Continue from the verified Stop-only proposal
-checkpoint on codex/astra-groundwork. Follow docs/continuation/HANDOFF.md and verify
-STOP-ONLY-PROPOSAL/OFFLINE plus exact inert private artifacts and preserved guards.
+“I’ve switched to GPT-6.1 Sol High. Continue from the verified Stop-only design-
+acceptance checkpoint on codex/astra-groundwork. Follow docs/continuation/HANDOFF.md
+and STOP-ONLY-VERIFIED.md. Using existing evidence only, prepare the bounded native
+launch-envelope decision review; design acceptance does not authorize execution.
 Preserve installed31, approved settings/current preferences/unrelated entries,
 scoped logging, parent model, human trust and Windows guards. Coordinate one writer;
-all gates closed. No native execution, inference, installation, config/trust change,
-native-input refresh or runtime implementation. Do not repeat blocked startup
-research or completed packaging. Stop for High before consequential changes/drift.”
+all gates closed. No native execution/inference/install/config/trust change, native-
+input refresh, runtime implementation or repeated blocked startup research. Stop
+for Medium when only routine verification/human decision recording remains.”

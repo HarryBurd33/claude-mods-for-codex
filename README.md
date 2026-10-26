@@ -18,9 +18,11 @@ current zoom; screen-reader/enlarged-zoom behavior remains unverified.
 [Stop-only proposal](docs/continuation/STOP-ONLY-PROPOSAL.md) reuses existing components
 with separate project-local registration/config/data. Offline19tests pass/1skip plus
 15focused cases pass; native startup/trust/usage gates remain closed and acceptance
-blocked. No runtime/configuration change. **Next: GPT-6.1 Sol Medium** for exact
-proposal/artifact verification only. [Handoff](docs/continuation/HANDOFF.md),
-[setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
+blocked. No runtime/configuration change. [Exact artifacts verified; human accepted design only](docs/continuation/STOP-ONLY-VERIFIED.md).
+All execution gates remain closed. **Next: GPT-6.1 Sol High** for an existing-evidence
+launch-envelope decision review, with no native action or implementation grant.
+[Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),
+[privacy](docs/privacy.md), [removal](docs/removal.md).
 
 ## What it does
 

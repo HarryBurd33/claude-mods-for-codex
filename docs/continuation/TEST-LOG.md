@@ -1,5 +1,20 @@
 # Continuation verification log
 
+## Stop-only verified; project-local design accepted — current — 2026-10-26
+
+[STOP-ONLY-VERIFIED](STOP-ONLY-VERIFIED.md):32inert artifact hashes/private modes,
+existing loader/4boolean plan/replay states, config/unresolved template,38product
+pins and all prior guards verified without generator/callback/native reruns.
+Human accepted **design only**; installed31 unchanged and every execution gate closed.
+No runtime/install/config/trust/input refresh or extra model run. Current acceptance
+remains blocked by native launch/effective-hook uncertainty; no exact-session filter
+or project-hook referenced-content trust guarantee is inferred.
+
+Next **GPT-6.1 Sol High** for a bounded existing-evidence launch-envelope decision
+review only. No changed envelope accepted, native action or repeated blocked startup
+research. Prepare one concrete human choice or retain blocker; no new implementation.
+Full93/macOS/nativeWindows work remains incomplete. User absence is not authorization.
+
 ## Stop-only proposal/offline review complete — current — 2026-10-26
 
 [STOP-ONLY-PROPOSAL](STOP-ONLY-PROPOSAL.md) proposes one project-local Stop hook

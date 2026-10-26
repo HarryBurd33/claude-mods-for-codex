@@ -136,7 +136,7 @@ No status selection is proposed; displaying counts never grants capture.
 
 | Gate | Current result / required future step |
 | --- | --- |
-| Design agreement | Pending human choice of this project-hook lane and its referenced-content trust/descendant/session-bucket limits. No permission follows from accepting the design alone. |
+| Design agreement | Accepted by human2026-10-26 **design only**: project-hook lane with referenced-content trust/descendant/session-bucket limits. Every execution gate remains closed; [verification/decision record](STOP-ONLY-VERIFIED.md). |
 | Native launch/startup | **Blocked.** Existing source37/38 startup/remote-ingress boundaries remain unresolved; no safe new launch path is established. Do not assume an ordinary CLI run is exempt or repeat the blocked investigation under another name. A revised execution envelope needs separate High review and human agreement. |
 | Effective hooks/permissions | Unrefreshed. Other global/managed/plugin hooks remain active; no exact-one-turn/tool-free guarantee from our empty output. Any future narrowly authorized inventory must preserve other trust/permissions and stop on uncertain effective behavior. |
 | Native install/config/trust | Closed. No `.codex/`/marketplace/native config written here. Future project trust and exact hook review are human actions, not hash writes or a bypass flag. |
