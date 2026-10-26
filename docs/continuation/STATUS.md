@@ -1,5 +1,14 @@
 # Current status — optional call-review source implemented; product incomplete
 
+## Latest: exact artifacts verified on Sol Medium — 2026-10-26
+
+[M1-CALL-REVIEW-VERIFICATION](M1-CALL-REVIEW-VERIFICATION.md):974531d manifest/defaults/
+evidence/93-ID map/closed gates pass. Source/examples reviewed, no drift found; saved
+test results checked, no tests/native/targets rerun. Installed31 unchanged. Proposed
+next [offline dev39 candidate](M1-CALL-REVIEW-CANDIDATE-SCOPE.md) remains unapproved;
+Medium sufficient. High before consequential changes or drift. No network/publication.
+
+
 2026-10-26, Sol High, starting ac0aec2. Current results supersede older next-stage
 instructions below. [M1-CALL-REVIEW-RESULT](M1-CALL-REVIEW-RESULT.md) records a disabled
 optional advisory MCP call review, strict unchanged-only policy, guard precedence,

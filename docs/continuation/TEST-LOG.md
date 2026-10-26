@@ -3584,3 +3584,14 @@ install/live config/trust change. Defaults/core8 plus prior19evidence pins and o
 remaining product pins preserved;93IDs/counts unchanged, both grants consumed/gatesfalse.
 Unversioned/uninstalled source after38, installed31 unchanged. No new CI/package or
 Windows/native claim. Local checkpoint only, publication pending under network ban.
+
+
+## 2026-10-26 — Medium exact call-review artifacts
+
+Starting974531d. Existing private verifier passes17source/artifact hashes,8default/core
+pins,19prior evidence pins, other protected product pins,93IDs/counts and consumed
+grants/gatesclosed. Read final test logs:36focusedpass; relevant152pass/3skip/155cases.
+No tests/validate/replay/package/native/target rerun; no new host/OS/Windows attestation.
+Source unchanged. Separate new records/manifest preserve old sealed evidence.
+See M1-CALL-REVIEW-VERIFICATION and proposed candidate scope. No activation/model/
+network/install/liveconfig/trust change. Local checkpoint/publication pending.
