@@ -1,5 +1,23 @@
 # Continuation verification log
 
+## macOS evidence reconciled — current — 2026-10-26
+
+[Current93-row queue](MACOS-QUEUE-38.md) separates target-bound verification,
+approximations, incomplete/blocked work and reviewed unsupported/policy exclusions.
+Later native31 rollback/re-enable/fresh-view results supersede older pending headers;
+no transition/package/CI rerun. Source32's guidance fix is uninstalled; routing stays
+blocked/closed, optional events unenrolled, current context unknown. No new host
+observation or product/source/config/trust/input change. Installed31 preserved.
+
+Next **GPT-6.1 Sol Medium** can guide the prepared human-only installed31 screen-
+reader/zoom acceptance check if the user chooses it. No extra model run, native
+automation, installation or settings change is authorized. Keep unavailable checks
+unverified. High becomes useful before consequential product/security/integration
+repair or optional-event/native activation work; prepare a fresh bounded contract.
+macOS remains first; Windows Image/bounds/native11/WSL gaps remain explicit. Full
+product incomplete; all93IDs retained, no completion percentage or native claim from
+source-only evidence. The current queue supersedes older next-stage directions below.
+
 ## Source38 exact verification complete — current — 2026-10-26
 
 [PACKAGE-DEV38](PACKAGE-DEV38.md) verifies exact9016cb0/tree85712945:

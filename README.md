@@ -10,10 +10,13 @@ lanes (324pass each), but fails both Windows integration lanes at the known
 Installer Image refusal. Original bounds/nativeWindows gaps remain unresolved.
 Node fixed-peer tests do not establish native execution or descendant containment.
 
-**Next: remain on GPT-6.1 Sol Medium** for read-only macOS acceptance triage;
-High before consequential changes. [Handoff](docs/continuation/HANDOFF.md),
-[future plan](docs/continuation/RESUME-PLAN.md), [setup](docs/setup.md),
-[privacy](docs/privacy.md), [removal](docs/removal.md).
+[Current macOS acceptance queue](docs/continuation/MACOS-QUEUE-38.md) reconciles all93
+requirements against dated host/source evidence. Verified lifecycle work is retained;
+optional native events/routing/current context and broader accessibility remain incomplete.
+**Stay on GPT-6.1 Sol Medium** for the prepared optional human screen-reader/zoom check.
+High before consequential implementation/security/integration; no native automation
+or model-run grant. [Handoff](docs/continuation/HANDOFF.md),
+[setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
 
 ## What it does
 

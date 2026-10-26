@@ -1,88 +1,105 @@
-# Source38 verified — next read-only macOS acceptance triage
+# macOS acceptance reconciled — next optional manual check on Medium
 
-2026-10-26, America/Denver. GPT-6.1 Sol Medium completed the exact-source CI,
-package and closed-entry handoff from9016cb0. **Stay on GPT-6.1 Sol Medium** for the
-next routine read-only step; High is required before consequential implementation,
-security/integration changes or unexpected drift. No product-completion claim.
+2026-10-26, GPT-6.1 Sol Medium. Resumed verified6df3e90; reconciled all93existing
+requirements into [MACOS-QUEUE-38](MACOS-QUEUE-38.md), in exact ledger order. No
+native execution/UI interaction, model run, product source/config/trust change,
+installation, input refresh or new test/CI/package run. All gates remain closed.
 
-Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
-PACKAGE-DEV38.md, CI-DEV38.md, RESUME-PLAN.md and the ignored local HANDOFF.md.
+Read MACOS-QUEUE-38.md (current finite priorities/all93dispositions/manual plan),
+STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md, RESUME-PLAN.md,
+PACKAGE-DEV38.md, CI-DEV38.md and ignored root HANDOFF.md.
 
-## Completed and limits
+## What changed and why
 
-- Source38 exact9016cb0/tree85712945;321-file archive SHA256
-  `f4dc509197b9a6ba0d537c27c02ebb43b95ec1fd973cb19e7bde425e55d81b0b`.
-  Anonymous clone, integrity/default/MIT/private-file checks pass; spaced package
-  tests159total157pass0fail2skip, validate3/replay4. Six entry checks remain closed;
-  fixed Node inspection matched cwd/cleanup. No native run or selected private plan.
-- Exact CI40352685600: four POSIX324pass0fail113skip each; portable reliability
-  1pass5POSIXskip. Overall failure retains known Windows Installer Image refusal
-  in both integration lanes. Bounds cause/nativeWindows11/WSL remain unresolved.
-- Source38 fixed-peer timing/group-result corrections are described in DEV38-REVIEW.
-  They establish no generic descendant containment or native behavior. Gates stay
-  unconditionally closed; native inspection transport is absent.
-- Installed production31 remains enabled/previously human-trusted,251cache files/
-  approved settings/data/sources/marketplace unchanged. Scoped logging, parent model,
-  optional capture/rules and Windows guards preserved. Source38 is not installed.
-- Existing one added project-trust entry remains unknown/unaccepted; all prior
-  protected values match with only it removed in memory. Raw config matches the
-  existing observation; never refresh/adopt/restore this baseline. New drift=>High.
-- No Codex invocation, inference, install/config/trust action or native-input refresh.
-  No new worker/background model task; fixed owned fixtures completed/reaped.
+The old audit/queue mixed dated directions with later results. Native31→30→31
+rollback, disable/restart absence/re-enable/restart return and closed-view/new-empty-
+invocation are accepted for their stated macOS target. Do not repeat them. Exact
+old-card reactivation, backend shutdown/all-process exit remain unverified. Existing
+connections surviving immediate disable/remove remain a real operational limit.
 
-## Next bounded work, in priority order
+Owned31 local controls/palette/keyboard subset/widths/rendering are accepted; full
+screen-reader/zoom/forced-color behavior remains incomplete. The smallest next
+usable acceptance action is a manual screen-reader/zoom check, not more routing
+proof infrastructure. Source32 fixed fixed-field JSON guidance, but installed31
+still has the safe-fallback/misleading-message defect; batch any future update.
 
-1. Coordinate one repository writer using the existing checkpoint lease. Preserve
-   the other chat's `.gitignore` edit, prior checkpoint generations/semantic inputs
-   and waiting automation. No lease stealing or second task queue. Verify branch,
-   source38 private checker/new verification checker and current authorization first.
-2. Read-only reconciliation of REQUIREMENTS93rows, MACOS-ACCEPTANCE, NATIVE-DEV31,
-   REENABLE-DEV31 and later source32–38 evidence. Existing audit/queue historical
-   headers are not current priorities or an aggregate completion score. Produce a
-   short current macOS acceptance queue keyed to requirement IDs: already verified,
-   bounded approximation, unsupported with evidence, or incomplete/blocked. Keep
-   host/version/evidence/test limits explicit. Do not reread private sessions.
-3. Choose one concrete remaining supported macOS acceptance gap that can next
-   advance, and prepare the smallest reviewable action/decision with acceptance
-   criteria. Prefer usable product acceptance over more speculative routing proof
-   infrastructure. Do not repeat completed packaging or blocked native startup
-   research; routing can remain explicitly blocked pending a supported boundary.
-4. If next action needs consequential code/security/integration, save/upload/verify
-   and request human GPT-6.1 Sol High. If it needs a live run/install/config/trust,
-   prepare exact review first and obtain its separate specific authorization. No
-   carried-over model-run grant; human controls selected model/effort and trust.
-5. Preserve the Windows failure/native-host plan for later; human priority is macOS
-   acceptance first. Do not broaden logging or relax Windows guards to close a row.
+Source32–38 inert agent authoring/offline proofs remain source-only. Native configured
+execution/inheritance/startup authority is blocked; no generic containment or native
+inspection transport claim. Optional lifecycle reception/storage remains off, selected
+export outcomes are synthetic rather than live universal failure events, context/
+billing/cache-health remain unknown. Windows Image/bounds/native11/WSL incomplete;
+macOS remains first. No feature is silently dropped or whole-product completion claimed.
 
-Acceptance for next Medium step: all93IDs retained, no source/host mutation, no
-unjustified native/compatibility claim, finite prioritized macOS queue and exact next
-bounded action/model/authorization. This is future scope, not autonomous continuation.
+## Host/source preservation and evidence
 
-## Ownership, artifacts and operations
+Installed31 approved enabled user-profile251-file snapshot/settings/scoped data/
+marketplace unchanged. No new inventory or loaded UI/version attestation in this
+stage; dated native macOS14.6/CLI163 evidence and later CLI164parser evidence stay
+separate from desktop/internal-server identity, which was not independently attested.
+20runtime/31protected files, existing raw config and sealed earlier artifacts verified.
+Known added project-trust entry remains unknown/unaccepted; no baseline refresh or
+restoration. New config/source drift requires High read-only classification.
 
-Private paths/raw logs/machine/config evidence/root handoff remain ignored. New
-verification notes use separate hashes; original38and earlier manifests remain
-sealed. The ignored handoff names exact checker/commands/logs/source/tree, original
-local commit branch, synchronized checkpoint SHA and lease release. Current local
-router/config signals are unavailable; no repair/dispatch or Codex collector. Task
-usage/API dollars/context unknown, never zero. Existing other-chat heartbeat unchanged.
+Exact source38 implementation9016cb0/tree85712945 remains uninstalled; package321
+files, spaced157pass0fail2skip/validate3/replay4 and CI40352685600 fourPOSIX324passes
+are prior verified results, not rerun here. OverallCI still fails known Windows
+Installer Image positive in both lanes. See PACKAGE-DEV38/CI-DEV38 for exact hashes.
 
-No installation/configuration change means no new removal/rollback action. Existing
-setup/use/update/disable/removal instructions remain in docs; installed31 evidence
-cannot be transferred to source38 or a different host.
+Only safe Markdown/current queue notes changed. New private verifier checks source38
+notes historically at6df3e90 and current reconciliation notes separately; older sealed
+manifests unchanged. Private machine paths/rawlogs/root handoff/.checkpoint remain ignored.
+Current public checkpoint commit/tree is recorded after upload/readback in final/ignored
+handoff. No self-referential commit identity is invented here.
 
-[Implementation commit](https://github.com/HarryBurd33/claude-mods-for-codex/commit/9016cb0aca1d43c9d1fd87b058831a3ebb91e78b).
+## Next exact setting and action
+
+**Remain GPT-6.1 Sol Medium.** The user asked notice when High would help; this next
+manual evidence collection needs no stronger model. Only proceed if the user chooses
+the prepared manual check. Give one clear instruction at a time; no screenshot/file
+upload requirement. The user controls their usual screen reader and any temporary
+zoom, then restores it. If unavailable, record unverified, never configure OS settings
+or claim a pass. Use only a new empty Review desk and a fixed synthetic Notes sample;
+never clear existing drafts or change Watch/palette/exports/logging selections.
+
+Acceptance and cleanup are in MACOS-QUEUE-38. Human reports remain distinct from
+later permitted host observations. No inference/native automation/model-run permission
+is carried forward. No Codex/app-server/driver command, install/config/trust change
+or input refresh is permitted under this evidence-only checkpoint. Do not use an
+ordinary CLI run to bypass closed native admission/startup boundaries.
+
+If a reproducible defect needs consequential UI/source/security/integration repair,
+save/upload/verify and stop for human **GPT-6.1 Sol High** with exact files/reproduction/
+acceptance. Optional event reception/storage/native activation likewise needs High
+review and separate precise authorization; earlier grants are consumed. No automatic
+switch, worker, background continuation or new product/client direction.
+
+## Ownership and durable state
+
+Coordinate one writer. Waiting other chat original binding/input/review/generations/
+.gitignore edit and automation preserved. Latest other-chat snapshot points to this
+active chat; no external operation was retried. Its abstract tool names did not map
+to shell executables: resume refused before ownership. Preserved that valid generation,
+then saved the current explicitly authorized task with real tools and resumed the
+existing local lease; no shim/runtime/config modification or new queue.
+
+Task-checkpoint skill now0.5.0 was read; no skill installed/changed here. Planner still
+reports unavailable local inputs/config/signals; no repair, worker dispatch, Codex
+collector or qualification claim. Fresh account-wide usage permits ordinary work;
+attributable usage/API dollars/context unknown. No owned background job. Release
+local writer lease after verified private checkpoint and stop. No rollback needed:
+this stage changes only source documentation/private verification notes.
+
+[Verified starting checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/6df3e9056efa92e2e2f07fe60f5aa5af6f8817f9).
 [Development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
-The final verified notes SHA/tree is recorded after upload/readback in the ignored
-handoff/final response; this file cannot contain its own commit identity.
 
 ## Copy-and-paste resume instruction
 
-“Continue on GPT-6.1 Sol Medium from the verified source38 verification checkpoint
-on codex/astra-groundwork. Follow docs/continuation/HANDOFF.md and the ignored local
-handoff. Reconcile existing93-row macOS acceptance evidence and prepare a finite
-prioritized queue and one next reviewable action only. Preserve installed31, approved
-settings/current preferences/unrelated entries, scoped logging, parent model, human
-trust and Windows guards. Coordinate one writer and keep all gates closed. No Codex,
-inference, install/config/trust change or native-input refresh. Stop for High before
-consequential implementation/security/integration or unexpected drift.”
+“Continue on GPT-6.1 Sol Medium from the verified macOS reconciliation checkpoint
+on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and MACOS-QUEUE-38.md.
+Guide the prepared optional manual installed31 accessibility check only if I choose
+it; otherwise keep it unverified and prepare the next bounded macOS decision.
+Preserve installed31, approved settings/current preferences/unrelated entries,
+scoped logging, parent model, human trust and Windows guards. Coordinate one writer;
+all gates closed. No native automation, extra model run, Codex/app-server execution,
+install/config/trust change or native-input refresh. Stop for High before consequential
+implementation/security/integration or unexpected drift.”
