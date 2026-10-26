@@ -1,9 +1,11 @@
 # Implementation handoff
 
-The current future-session plan is [RESUME-PLAN](continuation/RESUME-PLAN.md), with
-[HANDOFF](continuation/HANDOFF.md) as the break resume entry. Proposal35.1 is verified
-as data; native inspector implementation/execution remains unperformed and admission
-closed. The historical MVP steps below do not govern current capability completion.
+Current continuation is [HANDOFF](continuation/HANDOFF.md): source36 offline
+inspector and exact CI/package verification complete within recorded limits; all
+native gates closed. [RESUME-PLAN](continuation/RESUME-PLAN.md) retains ordered later
+stages. Next High reviews inspection-only activation/future artifacts, no native/
+inference/install/config/trust grant. Historical MVP steps below are not current
+capability completion or an instruction to redo completed work.
 
 Historical v0.1 plan, completed for that limited MVP. Do not use the model choice
 or exclusions below for the current continuation. See

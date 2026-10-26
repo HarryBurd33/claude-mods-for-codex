@@ -1,5 +1,10 @@
 # Source36 readiness inspector — offline implementation review
 
+Current verification: [PACKAGE-DEV36](PACKAGE-DEV36.md) and [CI-DEV36](CI-DEV36.md)
+complete exact-source package/CI inspection. Native admission remains closed;
+original pending-Medium directions below describe the implementation checkpoint.
+Next High for inspection-only activation review, no native/config/inference grant.
+
 2026-10-25. Sol High resumed6649c0a under fresh authorization to implement/offline-test
 proposal35.1 only. **No Codex invocation, extra inference, installation, host config/
 trust write by this agent or native activation.** Installed31, logging scope, parent model and

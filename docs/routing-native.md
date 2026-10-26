@@ -1,10 +1,10 @@
 # Prepared native routing adapter — source35
 
-Current continuation: [source36 readiness inspector](continuation/DEV36-REVIEW.md)
-implements proposal35.1 offline with fixed peers and a closed native entry. The
-routing modules documented below remain unchanged; native context/activation is
-unverified. The sealed35.1 proposal and old34 artifacts are historical data, not
-current runtime permission. No Codex, inference, installation or config/trust change.
+Current continuation: [source36 package](continuation/PACKAGE-DEV36.md) and
+[CI](continuation/CI-DEV36.md) verify the offline readiness inspector. Both native
+readiness/routing entries remain closed. Next High reviews inspection-only activation
+and exact artifacts, no native/inference/install/config/trust grant. Sealed35.1/old34
+records stay preserved; existing routing context/activation remains unverified.
 
 Source0.2.0-dev.35 prepares a separate temporary CLI app-server test adapter for
 the [human-accepted ordinary-read-only design](continuation/NATIVE-ADMISSION-REVIEW.md).

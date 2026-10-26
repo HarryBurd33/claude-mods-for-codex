@@ -3258,3 +3258,29 @@ allcurrentprotectedstate. Oldbaseline/checker/sealedproposals unchanged. No agen
 hostwrite/autoaccept/definitiontrust-match/nativegrant. Future nonempty listing still
 review-required. Original full check failure retained; no false unchanged-whole-config
 claim or repeat classification required for this now-attested transition.
+
+
+## Source36 exact CI/package verification — Sol Medium — 2026-10-25
+
+Resumed9833caf. Read current handoff/DEV36/private14pinreview; source36 preservation
+checkerPASS allcurrentprotectedconfig/trust/projects/251installed31/settings/data/
+sourcesmarketplace, human-attested7globalmetadata included; no repeated old mismatch.
+Anonymous public clone exact9833caf/tree185e73b; clean. npm pack --ignore-scripts
+--offline --json isolatedcache. Archive305files/2534152unpacked/769308archive;
+SHA2561cb64ec70223ee853b5ec00e314ea810405ed8713b82340f54f09a85d48e18c4.
+Strictspaced extraction/sourcebyte/integrity/privatehygiene/version/default/MIT
+passed. Actualpackaged selected142cases140pass0fail2skip~10.4sec;validate3/replay4.
+Packaged Node readiness/routingdescribe closed; run-plan syntheticpath exit2/stdout0.
+FixedemptyCLI exit0/observationcomplete;hookCLI exit1/reviewrequired; peersreaped,
+nativeProcessStarted/nativeInspectionVerifiedfalse. No Codex/nativeprivateplanexecution.
+14runtimepins/testhash+sealed35.1/old34/source35review/34+35archivesunchanged.
+Separatepackageboundreview records source/packageonly; no newnativePLAN/INPUT/
+argv/selectedconfig/binaryrefresh/rungrant. No source/security/install/config/trust/
+logging/model/Windowsguard edit, inference or fullsuite/CIrerun.
+ExactCI40265830772/9833caf completedfailureoverall: fourPOSIXeach307pass0fail113skip420,
+all17readinesstitles; portable readiness15pass2POSIXskip17/native19pass1skip;validate/
+replay. BothWindowsintegration25storagepass+85proofpass1fail86, knownInstallerImage/
+linkcount2refusal (nodata/sample/execauthority); bounds cases passedthisrun, original
+cause/native11/WSL stillunverified. Sevenlogs savedprivately; no retry/assertionrelax.
+NextHigh inspection-onlyactivation/securityreview and exactfutureartifacts; allgates
+closed/noCodex/inference/install/config/trustgrant. Nativebehavior remainsunverified.

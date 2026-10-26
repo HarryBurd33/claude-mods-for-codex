@@ -1,11 +1,12 @@
 # Break checkpoint and future sessions — 2026-10-25
 
-Current continuation (2026-10-25): the human returned and authorized offline
-proposal35.1 implementation. [DEV36-REVIEW](DEV36-REVIEW.md) records that completed
-stage:17newtests/full307passes113skips, native admission still closed. **Next Sol
-Medium for exact source36CI/package/review**, not another inspector implementation.
-The earlier break snapshot/stage1 restart text below is historical. Later native
-inspection, routing activation/inference and Windows gates remain unapproved.
+Current continuation (2026-10-25): proposal35.1 offline implementation and exact
+source36 package/CI inspection are complete within [PACKAGE-DEV36](PACKAGE-DEV36.md)/
+[CI-DEV36](CI-DEV36.md) limits. **Next Sol High for inspection-only activation/security
+review and exact future artifacts, with all gates closed.** No Codex, inference,
+installation or config/trust change authorized. Earlier break snapshot/stages1–2
+instructions below are historical; do not repeat completed implementation/package.
+Later native inspection, routing activation/inference and Windows gates remain.
 
 Work is saved for a human-controlled restart. No local native process, model task,
 background continuation or scheduled wake-up is left running by this stage.

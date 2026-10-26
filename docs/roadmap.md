@@ -1,12 +1,14 @@
 # Roadmap
 
-Current source36: [readiness inspector](continuation/DEV36-REVIEW.md) implemented
-and tested offline (307pass/113skip full suite); native entry remains closed and
-installed31 preserved. Exact36CI/package/review is next on Sol Medium. No native
-Codex invocation, inference, installation or config/trust change authorized.
-[RESUME-PLAN](continuation/RESUME-PLAN.md) retains ordered later sessions and gates;
-its stage1 break instructions are historical. Full93/native routing/Windows remain
-incomplete. Do not repeat completed source35 package or accepted design research.
+Current source36 [package](continuation/PACKAGE-DEV36.md)/
+[CI](continuation/CI-DEV36.md) are verified for exact9833caf:305-file archive,
+spaced140pass2skip, fourPOSIX307pass113skip, portable readiness15pass2skip.
+CI failed overall on the known Windows Image refusal; native gates remain closed,
+installed31 preserved and native/routing/Windows acceptance incomplete.
+Next Sol High reviews an inspection-only activation proposal and exact future
+artifacts with all gates closed; no Codex/inference/install/config/trust grant.
+[RESUME-PLAN](continuation/RESUME-PLAN.md) retains later sessions/gates; do not repeat
+completed implementation/package or accepted design research. Full93 remains scope.
 
 The sections below describe the earlier MVP scope. The expanded requested
 capabilities, including supported tool-input rewriting and owned UI, are now

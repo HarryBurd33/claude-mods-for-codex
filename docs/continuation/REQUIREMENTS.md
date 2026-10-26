@@ -1,36 +1,31 @@
 # Requirements ledger
 
-## Source36 readiness inspector implemented offline — current — 2026-10-25
+## Source36 exact package and CI verified — current — 2026-10-25
 
-[DEV36-REVIEW](DEV36-REVIEW.md): proposal35.1 now has a separate deterministic
-inspection state machine, bounded framing, fixed Node peer runner and dormant native
-transport. Both native entries still refuse through the unchanged unconditional
-gate before input inspection/IO. No native executable, inference, install/config/
-trust change. Installed31 and all guards/approved settings remain preserved.
+[PACKAGE-DEV36](PACKAGE-DEV36.md): exact9833caf public clone/archive305files,
+2,534,152unpacked/769,308archive bytes, SHA256
+1cb64ec70223ee853b5ec00e314ea810405ed8713b82340f54f09a85d48e18c4.
+All bytes equal exact public clone; strict spaced extraction/default/version/privacy
+checks passed. Packaged selected142cases:140pass0fail2skip; validate3/replay4.
+Packaged Node readiness/routing entries describe closed/run-plan exit2/stdout0;
+fixed empty/hook scenarios behave as expected and peers reap. No native process.
 
-Exact5conditional requests, explicit samecwd config bracket, narrow requirements
-projection and hook review refusal are tested. No automatic approval or policy
-relaxation. Only fixed labels/category counts/projection flags are reported; raw
-config/hook data and transient digest are not retained in reports. Empty-list
-observation never establishes hook absence or native compatibility. Existing routing
-adapter/context behavior is unchanged and remains a separate activation review gap.
+[CI-DEV36](CI-DEV36.md): exact9833caf run40265830772 completed failure overall.
+Four POSIX Node22/24 lanes each307pass0fail113skip420total; all17readiness cases
+included. Windows portable readiness15pass0fail2POSIXskip17total. Both integrations
+retain known Image/linkcount2 refusal:25storagepass+85proofpass1fail each. Original
+bounds/native11/WSL gaps remain; no guard/assertion change or retry-until-green.
 
-New17boundary/process cases; targeted37cases36pass0fail1skip. Full local420cases:
-307pass0fail113platformskips; validate3/replay4. Actual fixed-peer output limits,
-cancel/SIGINT and POSIX exited-leader/descendant cleanup tested; native behavior and
-Windows group semantics are not established. New source36 CI/package are pending
-**GPT-6.1 Sol Medium**. Known Windows Image/bounds/native11/WSL gaps remain.
+Current source36 preservation checker passes installed31cache251/settings/data/
+sources/marketplace and protected config/trust/projects, including human-confirmed
+global-hook metadata additions. Old baseline/checker and sealed35.1/old34/source35
+records/archives unchanged. New package-bound review is source verification only;
+no native plan/input/config snapshot or execution grant. Native admission remains
+unconditionally closed; source36 uninstalled. Full93/native routing incomplete.
+Next **GPT-6.1 Sol High** for inspection-only activation/security review and exact
+future artifacts. Keep all gates closed; no Codex, inference, installation or host
+config/trust changes. Never open shared routing gate or disable hooks to inspect.
 
-A late check detected7new user-global hook trust-metadata entries. The human confirmed
-intentional review/trust; all prior config values and owned31files remain unchanged.
-A separate preservation observation records the transition; old baseline/proposals
-are untouched. This agent wrote no host config/trust and verified no hook definitions.
-Any future nonempty native hook list still requires review, no disabling to pass.
-
-Sealed proposal35.1, old34 inputs/artifacts/archives, source35 archive/review and8prior
-runtime pins unchanged. New private36source-only record14runtime pins+test hash;
-no native plan/config fingerprint refresh. High before security changes/activation;
-no native-run grant. Full93-capability project remains incomplete.
 
 ## Prior break checkpoint — 2026-10-25
 
@@ -611,7 +606,7 @@ issues are reports/leads, not reproductions by this project.
 | EV-12 Isolate sessions and deliberately share projects | Session state resets; persistent store shared | Hash project+session scope; project-only scope explicit opt-in | NodeMac; POSIX-CI | C-EVT; LOCAL STATE-PROOF | supported | Default off/session; explicit project aggregate; canonical native-session containment shared by hook/diagnostic; parent-chat exclusion and matching-session capture observed | Two-session/nested/outside-root tests plus parent/sibling scope diagnostics pass; no identifier logging or scope broadening | Per-call shell workdir is not scope identity; sessionId selected explicitly, no private-session discovery |
 | EV-13 Bound retention and cleanup | Persistent store under mod control | Bounded journals,64scopes and explicit selected-scope CLI | NodeMac; POSIX-CI; Windows cleanup unavailable | C-EVT; LOCAL STATE-PROOF; DEV26-REVIEW | supported | Source26 retention-preview/retention-cleanup: reviewed settings, exact project/session, all-old cutoff, fingerprint, locks/fresh checks; old root-wide library API not exposed | Local synthetic CLI/fault/concurrency tests passed; exact CI/native installed/current snapshot acceptance separate | No automatic cleanup or MCP writer; two-file deletion not crash-atomic; kill can leave locks; no automatic retry/reaping |
 | EV-14 Show event-driven live updates | Reactive state/events | Hook scoped state and bounded optional observation | NodeMac; Desk | C-EVT; CX-UI; NATIVE-DEV26 | approximation | Installed26 Watch checked while fresh authorized native CLI added3events; panel4→7, service same revision/scope; Watch stopped | Actual native active-Watch path passed; backend close-pending/full lifecycle remain unverified | Explicit bounded polling, not permanent push; no capture scope expansion or synthetic production replay |
-| EV-15 Route a new explicitly configured agent/task | Claude model/fork APIs and routing hooks | Native custom-subagent model/effort; separately reviewed native configuration alternative | CLI164 parser/source; source32 NodeMac; Desk/nativeWin unverified | C-EVT; CX-AGENT; [DEV32-REVIEW](DEV32-REVIEW.md) | supported | Source32 private inert kind:agent authoring/validation/static replay/intent/plan; explicit child model/effort, no parent interception/install/launch. Earlier authorized ephemeral task runs remain separate | Local/4POSIX CI252pass/112skips, portable pure cases, exact264-file public package and85-pass spaced extraction; actual164 no-turn valid/malformed parser check. No-turn native catalog advertised proposed Sol/Luna Low; exact [test plan](NATIVE-ROUTING-TEST-PLAN.md) and33fixed-peer dry driver/gates implemented/19tests passed; exact276-file public package/spaced104pass1skip/4POSIX271passes/portableWindows18pass1skip verified, no native adapter/inference/profile install. Configured-child execution/discovery/effective inheritance unverified | Live admission stays closed; [native admission review](NATIVE-ADMISSION-REVIEW.md) found no public exact one-spawn/wait-only gate in CLI164. Human accepted ordinary-permissions revised design only on2026-10-25; separate fresh inference authorization still required; no installation/configuration change authorized. Source34 native adapter/input/transport prepared with closed execution;284local passes/113skips, FourPOSIX CI284passes/113skips and portable native13pass1skip verified; exact287file public package/spaced117pass2skip verified; hooks.state additions classified unrelated metadata read-only, owned31 preserved; frozen review stale and source35 typed metadata classifier fixed offline (6newcases/full290passes113skips),35 exact package293files/spaced123passes2skips and fourPOSIX290passes113skips/portable native19passes1skip verified; see PACKAGE-DEV35/CI-DEV35 for integration limits; no activation, old34proposal retained stale. Separate [proposal35.1](NATIVE-READINESS-DEV35.md) specifies conditional no-turn hooks/config/requirements inspection; source36 inspector/fixed peers implemented offline with unconditional native refusal;17newtests/full307passes113skips,36CI/package pending; builtin omissions/listing migration/cwd gaps still limit native acceptance. Native execution/routing/usage/lifecycle unverified; no plugin agent-directory loading established; not full routing verification |
+| EV-15 Route a new explicitly configured agent/task | Claude model/fork APIs and routing hooks | Native custom-subagent model/effort; separately reviewed native configuration alternative | CLI164 parser/source; source32 NodeMac; Desk/nativeWin unverified | C-EVT; CX-AGENT; [DEV32-REVIEW](DEV32-REVIEW.md) | supported | Source32 private inert kind:agent authoring/validation/static replay/intent/plan; explicit child model/effort, no parent interception/install/launch. Earlier authorized ephemeral task runs remain separate | Local/4POSIX CI252pass/112skips, portable pure cases, exact264-file public package and85-pass spaced extraction; actual164 no-turn valid/malformed parser check. No-turn native catalog advertised proposed Sol/Luna Low; exact [test plan](NATIVE-ROUTING-TEST-PLAN.md) and33fixed-peer dry driver/gates implemented/19tests passed; exact276-file public package/spaced104pass1skip/4POSIX271passes/portableWindows18pass1skip verified, no native adapter/inference/profile install. Configured-child execution/discovery/effective inheritance unverified | Live admission stays closed; [native admission review](NATIVE-ADMISSION-REVIEW.md) found no public exact one-spawn/wait-only gate in CLI164. Human accepted ordinary-permissions revised design only on2026-10-25; separate fresh inference authorization still required; no installation/configuration change authorized. Source34 native adapter/input/transport prepared with closed execution;284local passes/113skips, FourPOSIX CI284passes/113skips and portable native13pass1skip verified; exact287file public package/spaced117pass2skip verified; hooks.state additions classified unrelated metadata read-only, owned31 preserved; frozen review stale and source35 typed metadata classifier fixed offline (6newcases/full290passes113skips),35 exact package293files/spaced123passes2skips and fourPOSIX290passes113skips/portable native19passes1skip verified; see PACKAGE-DEV35/CI-DEV35 for integration limits; no activation, old34proposal retained stale. Separate [proposal35.1](NATIVE-READINESS-DEV35.md) specifies conditional no-turn hooks/config/requirements inspection; source36 inspector/fixed peers implemented offline with unconditional native refusal;17newtests/fourPOSIX307passes113skips; exact305file public package/spaced140passes2skips and portable readiness15passes2skips verified (PACKAGE-DEV36/CI-DEV36), known Windows integration failure retained; builtin omissions/listing migration/cwd gaps still limit native acceptance. Native execution/routing/usage/lifecycle unverified; no plugin agent-directory loading established; not full routing verification |
 | EV-16 Intercept/change current selected model or rewrite prompts | `turn.step`/prompt middleware can do this in Claude | No project feature permitted to override user-selected model/prompt | All | C-EVT; User instruction; CX-AGENT | deliberately excluded by policy | No interception/prompt rewrite | Synthetic forbidden fields rejected; skills/UI cannot silently route or alter prompt | Explicit new configured task is EV-15; user selects stage model manually |
 | EV-17 Observe model-request lifecycle separately from routing | Turn/model request events | 0.164.0 observation-only hooks in release #55144 | CLI164; Desk unknown | C-EVT; CX-THEME release; [#55144](https://github.com/openai/codex/pull/55144) | unverified | Release lead recorded, exact fields/host not integrated | Inspect released schema/implementation, test a deliberately authorized bounded run, redact before retention | Observation does not authorize request mutation or create live token feed by itself |
 | EV-18 Avoid automatic approval | Claude tool.check can return approval | Never emit PermissionRequest allow; rewrite carrier is narrowly different | All | C-EVT; CX-H; LOCAL | deliberately excluded by policy | No PermissionRequest approval; rewrite carrier stays paired/typed; hold affirmative path abstained then ordinary execution | Forbidden-output tests and actual rewritten sandbox rejection pass; human confirmed form but MCP provenance not attested | No automated approval, permission/model/prompt rewrite or blanket host guarantee |
