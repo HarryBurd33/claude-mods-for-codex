@@ -3571,3 +3571,16 @@ only4version carriers38 and CI new portable6case suite(5POSIXskips) beyond scope
 No Codex/inference/install/config/trust/input refresh/gate opening. CI38/package pending.
 Primary Node24/Linux/archived Apple syscall references reviewed; POSIX pages403 recorded.
 See DEV38-REVIEW for limits, source locations and preservation/source-only handoff.
+
+
+## 2026-10-26 — optional call-review source (Sol High, ac0aec2)
+
+See M1-CALL-REVIEW-RESULT.md for commands, scope and limitations.36focused pass/0fail;
+relevant155cases152pass/0fail/3platform skips(~5.37s), including the36new cases.
+validate3mods/replay4fixtures pass; replay never executes commands. One new clock
+test's irrelevant earlier-vs-later comparison initially failed, removed; actual
+before-form/recheck deadline checks pass. No target/native/model/network/activation/
+install/live config/trust change. Defaults/core8 plus prior19evidence pins and old
+remaining product pins preserved;93IDs/counts unchanged, both grants consumed/gatesfalse.
+Unversioned/uninstalled source after38, installed31 unchanged. No new CI/package or
+Windows/native claim. Local checkpoint only, publication pending under network ban.

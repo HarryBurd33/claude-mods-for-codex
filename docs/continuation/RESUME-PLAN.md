@@ -1,6 +1,10 @@
 # Resume plan — finite completion milestones
 
-Current next step: UI results are recorded in [M1-UI-ACCEPTANCE](M1-UI-ACCEPTANCE.md). The proposed [call-review source scope](M1-CALL-REVIEW-SCOPE.md) requires explicit human authorization and Sol High. Do not repeat the first UI batch or infer activation/native/model permission. Earlier directions below describe the prior planning milestone.
+Current next step: **GPT-6.1 Sol Medium** verifies the disabled call-review implementation
+in [M1-CALL-REVIEW-RESULT](M1-CALL-REVIEW-RESULT.md) and the new private verifier/manifest.
+Do not rerun the old UI verifier against intentionally changed server/settings files.
+No activation, target/native/extra-model/network/install/live config/trust permission.
+High before consequential fixes or unexpected drift. Older instructions are historical.
 
 2026-10-26. Supersedes old next-stage directions preserved in Git history at e3a98eb.
 Read COMPLETION-PLAN.md/JSON, ANCESTOR-POLICY-DECISION.md and current HANDOFF/STATUS.

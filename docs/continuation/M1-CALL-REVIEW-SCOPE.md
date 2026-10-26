@@ -1,5 +1,9 @@
 # Proposed next bounded scope: source-only optional call review
 
+Historical scope: subsequently authorized by the human at ac0aec2 and implemented
+with offline tests. See [M1-CALL-REVIEW-RESULT](M1-CALL-REVIEW-RESULT.md). The original
+proposal below is retained as the contract; it grants no activation/native authority.
+
 2026-10-26. Prepared on Sol Medium after the UI acceptance batch; **not authorized
 or implemented by this document**. Completion-plan W1 EV-07/EV-10 and W4 EX-01.
 Choose GPT-6.1 Sol High for the consequential composition/transport/security work.

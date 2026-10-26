@@ -1,5 +1,16 @@
 # Extension architecture and security contracts
 
+## Current source delta — optional advisory call review — 2026-10-26
+
+`hold-review.mjs` is a default-off pure controller. Server/runtime settings wire only
+an explicitly enabled ninth MCP tool to existing requestHost form transport and the
+existing shared hook config selection. Existing deny/impact guards run before and
+after confirmation; any enabled rewrite refuses review. Snapshots are not atomic or
+final-argument attestations; external mutating/independent configs are unsupported.
+Acceptance returns{}only; no permission grants, state writes, target/network/model
+access. See [contract](../call-review.md) and [results](M1-CALL-REVIEW-RESULT.md).
+Defaults/installed31/Windows/ancestor/routing guards unchanged; native gates closed.
+
 ## Private checker offline-ready — current — 2026-10-26
 
 [CHECKER-OFFLINE](CHECKER-OFFLINE.md): separate private bounded preflight reader and

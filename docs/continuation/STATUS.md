@@ -1,4 +1,16 @@
-# Current status — completion plan prepared, product incomplete
+# Current status — optional call-review source implemented; product incomplete
+
+2026-10-26, Sol High, starting ac0aec2. Current results supersede older next-stage
+instructions below. [M1-CALL-REVIEW-RESULT](M1-CALL-REVIEW-RESULT.md) records a disabled
+optional advisory MCP call review, strict unchanged-only policy, guard precedence,
+rewrite refusal and asynchronous cancellation/deadline handling.36focused passes;
+relevant155cases:152pass/0fail/3skip. No native acceptance or activation claim.
+Installed31/default hooks/config/registration/logging/model/trust and all gates unchanged.
+Next **GPT-6.1 Sol Medium**: exact source/artifact verification only; current no-target/
+native/extra-model/network/install/live config/trust/activation guards persist.
+Local publication pending. Full93/native/Windows/accessibility gaps remain incomplete.
+
+## Earlier planning context (historical)
 
 ## M1 UI acceptance recorded; next source scope prepared — 2026-10-26
 

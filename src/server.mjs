@@ -1,6 +1,9 @@
-import { pathToFileURL } from 'node:url';
-import { resolve } from 'node:path';
+import { pathToFileURL, fileURLToPath } from 'node:url';
+import { resolve, join, dirname } from 'node:path';
 import { runMcpServer } from './mcp-stdio.mjs';
+import { createCallReviewer } from './hold-review.mjs';
+import { readBoundedFile, parseJsonObject } from './io.mjs';
+import { MAX_CONFIG_BYTES } from './constants.mjs';
 import { loadRuntimeSettings } from './runtime-settings.mjs';
 import { loadDashboardHtml } from './dashboard-resource.mjs';
 import { readMetadataState, observeMetadataState } from './state.mjs';
@@ -30,7 +33,25 @@ function scope(settings) {
   return {projectId:settings.projectRoot,...(settings.stateScope === 'session' ? {sessionId:settings.sessionId}: {})};
 }
 const unavailable = reason => ({available:false,reason});
-export function createDashboardHandler(settings) {
+// Existing hook config selection, lazily read only for opted-in matching reviews.
+async function loadSharedHookConfig({signal}={}) {
+  if(signal?.aborted)throw new Error('Call review cancelled');
+  const path=process.env.CODEX_MODS_CONFIG || join(dirname(fileURLToPath(import.meta.url)),'..','config','mods.json');
+  const value=parseJsonObject(await readBoundedFile(path,MAX_CONFIG_BYTES),'hook config');
+  if(signal?.aborted)throw new Error('Call review cancelled');
+  return value;
+}
+const reviewTool = {
+  name:'mods.review_call',title:'Review an unchanged covered call',
+  description:'Optional advisory MCP hook. Confirmation abstains, never grants permissions. Mutating hooks are unsupported; host failures can fail open and response provenance is not human-attested.',
+  inputSchema:{type:'object',properties:{hook_event_name:{type:'string'},tool_name:{type:'string'},tool_input:{}},
+    required:['hook_event_name','tool_name','tool_input'],additionalProperties:false},
+  annotations:readOnly,
+};
+export function createDashboardHandler(settings, {loadHookConfig=loadSharedHookConfig}={}) {
+  const review=createCallReviewer(settings?.callReview,{loadHookConfig});
+  const selectedTools=review.enabled ? [...tools,reviewTool] : tools;
+  let formAvailable=false;
   const definitions = validateStatusComponents(settings?.statusComponents);
   const interactions = validateInteractionComponents(settings?.interactionComponents);
   const withStatus = data => ({...data,statusComponents:projectStatusComponents(data,definitions)});
@@ -50,19 +71,27 @@ export function createDashboardHandler(settings) {
     }
     return withStatus({available:true,scope:settings.stateScope,...current,producerHealth:'unknown',captureNote:CAPTURE_NOTE});
   }
-  return async (request, {signal} = {}) => {
+  return async (request, {signal,requestHost} = {}) => {
     const p = request.params ?? {};
     switch (request.method) {
-      case 'initialize': return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.38'}};
+      case 'initialize':
+        formAvailable = !!p.capabilities?.elicitation?.form && typeof p.capabilities.elicitation.form==='object' && !Array.isArray(p.capabilities.elicitation.form);
+        return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.38'}};
       case 'ping': return {};
-      case 'tools/list': return {tools};
+      case 'tools/list': return {tools:selectedTools};
       case 'resources/list': return {resources:[{uri:URI,name:'Claude Mods dashboard',mimeType:'text/html;profile=mcp-app'}]};
       case 'resources/templates/list': return {resourceTemplates:[]};
       case 'resources/read':
         if (p.uri !== URI) throw new Error('Unknown resource');
         return {contents:[{uri:URI,mimeType:'text/html;profile=mcp-app',text:await loadDashboardHtml(interactions),_meta:{ui:{csp:{connectDomains:[],resourceDomains:[]}},'openai/ui':{preferredDisplayMode:'fullscreen',availableDisplayModes:['fullscreen']}}}]};
       case 'tools/call': {
-        if (!tools.some(t => t.name === p.name)) throw new Error('Unknown tool');
+        if (!selectedTools.some(t => t.name === p.name)) throw new Error('Unknown tool');
+        if(p.name==='mods.review_call') {
+          const result=await review.review(p.arguments,{signal,elicit:formAvailable && typeof requestHost==='function'
+            ? (params,{signal})=>requestHost('elicitation/create',params,{signal,timeoutMs:settings.callReview.timeoutMs ?? 30000})
+            : undefined});
+          return {content:[{type:'text',text:JSON.stringify(result)}]};
+        }
         let data;
         if (p.name === 'mods.activity') data = await activity(p.arguments,signal);
         else {

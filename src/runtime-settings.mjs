@@ -3,6 +3,7 @@ import { isAbsolute, resolve, dirname, relative, sep } from 'node:path';
 import { readBoundedFile, parseJsonObject } from './io.mjs';
 import { validateStatusComponents } from './component-contract.mjs';
 import { validateInteractionComponents } from './interaction-contract.mjs';
+import { validateCallReviewSettings } from './hold-review.mjs';
 
 // Paths are configuration, never tool parameters. This file can grant local
 // reads and must therefore be reviewed outside the model's project contents.
@@ -22,7 +23,7 @@ export async function loadRuntimeSettings(path) {
     const parent = dirname(cursor); if (parent === cursor) break; cursor = parent;
   }
   const value = parseJsonObject(await readBoundedFile(file, 16384), 'settings');
-  if (Object.keys(value).some(key => !['version','projectRoot','dataDirectory','stateScope','sessionId','allowChanges','checkpoints','usageExport','observationExport','statusComponents','interactionComponents'].includes(key)) || value.version !== 1) throw new Error('Unsupported settings');
+  if (Object.keys(value).some(key => !['version','projectRoot','dataDirectory','stateScope','sessionId','allowChanges','checkpoints','usageExport','observationExport','statusComponents','interactionComponents','callReview'].includes(key)) || value.version !== 1) throw new Error('Unsupported settings');
   for (const key of ['projectRoot','dataDirectory']) {
     if (typeof value[key] !== 'string' || !isAbsolute(value[key]) || value[key].length > 4096 || /\p{Cc}/u.test(value[key])) throw new Error('Settings paths must be absolute and bounded');
   }
@@ -50,7 +51,8 @@ export async function loadRuntimeSettings(path) {
     const exportRelative=relative(projectRoot,resolve(value.observationExport));
     if(exportRelative===''||(!isAbsolute(exportRelative)&&exportRelative!=='..'&&!exportRelative.startsWith(`..${sep}`)))throw new Error('Keep the selected raw observation export outside the project');
   }
+  const callReview = validateCallReviewSettings(value.callReview);
   const statusComponents = validateStatusComponents(value.statusComponents);
   const interactionComponents = validateInteractionComponents(value.interactionComponents);
-  return Object.freeze({ ...value, statusComponents, interactionComponents, projectRoot, dataDirectory: resolve(value.dataDirectory), stateScope: value.stateScope ?? 'session', allowChanges: value.allowChanges === true });
+  return Object.freeze({ ...value, ...(callReview === undefined ? {} : {callReview}), statusComponents, interactionComponents, projectRoot, dataDirectory: resolve(value.dataDirectory), stateScope: value.stateScope ?? 'session', allowChanges: value.allowChanges === true });
 }

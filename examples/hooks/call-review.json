@@ -1,0 +1,23 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^Bash$",
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "claude-mods",
+            "tool": "mods.review_call",
+            "input": {
+              "hook_event_name": "${hook_event_name}",
+              "tool_name": "${tool_name}",
+              "tool_input": "${tool_input}"
+            },
+            "timeout": 35,
+            "statusMessage": "Review covered command"
+          }
+        ]
+      }
+    ]
+  }
+}

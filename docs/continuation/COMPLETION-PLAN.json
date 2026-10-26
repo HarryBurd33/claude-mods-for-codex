@@ -909,10 +909,27 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/M1-CALL-REVIEW-SCOPE.md",
+    "record": "docs/continuation/M1-CALL-REVIEW-RESULT.md",
     "authorized": false,
     "model": "GPT-6.1 Sol",
-    "effort": "High",
-    "kind": "source-only optional call-review integration and offline tests"
-  }
+    "effort": "Medium",
+    "kind": "exact offline source/artifact verification only; no activation"
+  },
+  "sourceImplementationObservations": [
+    {
+      "id": "M1-call-review-source",
+      "record": "docs/continuation/M1-CALL-REVIEW-RESULT.md",
+      "affectedIds": [
+        "EV-07",
+        "EV-10",
+        "EX-01"
+      ],
+      "state": "disabled-implemented-offline-tested",
+      "fullRequirementClosure": false,
+      "focusedPass": 36,
+      "regressionPass": 152,
+      "regressionSkip": 3,
+      "nativeAcceptance": false
+    }
+  ]
 }

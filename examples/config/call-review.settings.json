@@ -1,0 +1,8 @@
+{
+  "callReview": {
+    "enabled": false,
+    "inputPolicy": "unchanged-only",
+    "categories": ["git-clean"],
+    "timeoutMs": 30000
+  }
+}
