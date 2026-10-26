@@ -1,30 +1,39 @@
-# On break — proposal35.1 verified, admission closed
+# Current status — source36 offline inspector, native admission closed
 
-## Break checkpoint — verified proposal, no active continuation — 2026-10-25
+## Source36 readiness inspector implemented offline — current — 2026-10-25
 
-Sol Medium verified proposal35.1:16 artifact/source pins,8 runtime pins,6 frozen34
-artifacts, both34/35 archives, protocol/conditions/private modes and93 ledger rows.
-Installed31 (251 cache files), approved settings/data and protected config/trust/
-projects remain preserved. No unexpected drift, code/guard/config/install/model/
-logging/trust change or native process. Inspector remains unimplemented/unauthorized;
-native admission stays unconditionally closed. No background model continuation.
+[DEV36-REVIEW](DEV36-REVIEW.md): proposal35.1 now has a separate deterministic
+inspection state machine, bounded framing, fixed Node peer runner and dormant native
+transport. Both native entries still refuse through the unchanged unconditional
+gate before input inspection/IO. No native executable, inference, install/config/
+trust change. Installed31 and all guards/approved settings remain preserved.
 
-[RESUME-PLAN](RESUME-PLAN.md) records ordered future sessions, exact model/effort,
-acceptance criteria and separate offline/native/inference authorization gates.
-Next working stage, after the break and fresh explicit scope: **GPT-6.1 Sol High**
-for offline inspector implementation/testing only. The plan's restart instruction
-grants that scope only when the human later sends it; no implementation is authorized
-now. No repeat package/CI/classification loop. Full93/native routing/Windows incomplete.
+Exact5conditional requests, explicit samecwd config bracket, narrow requirements
+projection and hook review refusal are tested. No automatic approval or policy
+relaxation. Only fixed labels/category counts/projection flags are reported; raw
+config/hook data and transient digest are not retained in reports. Empty-list
+observation never establishes hook absence or native compatibility. Existing routing
+adapter/context behavior is unchanged and remains a separate activation review gap.
 
-Source35 remains uninstalled; installed31 is enabled with its approved settings.
-Exact implementation/package identity remains f618bc3. Prior full local/fourPOSIX
-CI290pass0fail113skip403total; spaced packaged123pass0fail2skip; validate3/replay4;
-portable native19pass1skip. CI failed overall on known Windows Image refusal:
-25storagepass+85proofpass1fail each; original bounds/native11/WSL gaps remain.
-These earlier results were not rerun for break documentation.
+New17boundary/process cases; targeted37cases36pass0fail1skip. Full local420cases:
+307pass0fail113platformskips; validate3/replay4. Actual fixed-peer output limits,
+cancel/SIGINT and POSIX exited-leader/descendant cleanup tested; native behavior and
+Windows group semantics are not established. New source36 CI/package are pending
+**GPT-6.1 Sol Medium**. Known Windows Image/bounds/native11/WSL gaps remain.
 
-No current trust review, restart, authentication or user action is required.
-Read [HANDOFF](HANDOFF.md), [RESUME-PLAN](RESUME-PLAN.md) and
-[NATIVE-READINESS-DEV35](NATIVE-READINESS-DEV35.md) when ready to return.
-No agent-owned local task, scheduled wake-up or background inference remains.
-A documentation push may trigger existing GitHub CI; no new result is inferred.
+A late check detected7new user-global hook trust-metadata entries. The human confirmed
+intentional review/trust; all prior config values and owned31files remain unchanged.
+A separate preservation observation records the transition; old baseline/proposals
+are untouched. This agent wrote no host config/trust and verified no hook definitions.
+Any future nonempty native hook list still requires review, no disabling to pass.
+
+Sealed proposal35.1, old34 inputs/artifacts/archives, source35 archive/review and8prior
+runtime pins unchanged. New private36source-only record14runtime pins+test hash;
+no native plan/config fingerprint refresh. High before security changes/activation;
+no native-run grant. Full93-capability project remains incomplete.
+
+No installation, human trust review, restart or authentication is requested.
+Source36 is uninstalled. Installed31 remains selected; current approved logging,
+settings, parent model, user trust and Windows guards are unchanged.
+Original proposal35.1/break plan describe their historical checkpoints; this status
+and HANDOFF/DEV36-REVIEW govern the current continuation.

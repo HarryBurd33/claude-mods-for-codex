@@ -1,13 +1,12 @@
 # Roadmap
 
-Current break checkpoint: source35 package/CI verified within
-[PACKAGE-DEV35](continuation/PACKAGE-DEV35.md)/[CI-DEV35](continuation/CI-DEV35.md)
-limits; proposal35.1 independently checked, inspector unimplemented/unauthorized,
-installed31 preserved and native admission closed. Full93 remains incomplete.
-[RESUME-PLAN](continuation/RESUME-PLAN.md) is the ordered future-session plan with
-model/effort, acceptance tests and separate authorization gates. Next working stage
-is High offline inspector implementation only after fresh human scope; no native
-execution, inference, configuration/trust or installation is currently authorized.
+Current source36: [readiness inspector](continuation/DEV36-REVIEW.md) implemented
+and tested offline (307pass/113skip full suite); native entry remains closed and
+installed31 preserved. Exact36CI/package/review is next on Sol Medium. No native
+Codex invocation, inference, installation or config/trust change authorized.
+[RESUME-PLAN](continuation/RESUME-PLAN.md) retains ordered later sessions and gates;
+its stage1 break instructions are historical. Full93/native routing/Windows remain
+incomplete. Do not repeat completed source35 package or accepted design research.
 
 The sections below describe the earlier MVP scope. The expanded requested
 capabilities, including supported tool-input rewriting and owned UI, are now

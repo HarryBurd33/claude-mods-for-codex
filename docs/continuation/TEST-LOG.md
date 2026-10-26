@@ -3219,3 +3219,42 @@ source35 test/CI/package results reused, not rerun. Inspector tests remain propo
 Saved RESUME-PLAN with ordered future sessions/acceptance/exactsettings and separate
 offline/native/inference permissions. User taking break; no scheduled/background
 continuation. NextworkingstageHigh only after fresh offline-implementation scope.
+
+
+## Source36 inspector offline implementation — Sol High — 2026-10-25
+
+Resumed6649c0a; user authorized offline implementation/testing proposal35.1 only.
+New readiness-machine/frames/driver/fixtures/peer/leaf + test/readiness.test.mjs.
+Native entries/exported/from-file/CLI keep unchanged unconditional routing gate before
+getters/path/input IO/spawn. No arbitrary transport factory; only fixed Node peers
+reachable. Existing8routingruntime pins/defaults/Windows code unchanged; source36
+metadata4carriers and portableCI step only. Sealed35.1/old34/source35review+archives
+preserved; new private36source-only record14runtime pins/testhash, no nativeplan/config
+refresh. No Codex/versionquery/catalog/thread/turn/inference/install/trust/logging/
+model/config action. Current owned-state checker beforeafterPASS251cachefiles/all
+protected config/trust/projects/settings/data/sources/marketplace; rawconfig matches.
+Initial16readinesstests allpass; addedactualPOSIXSIGINT, targeted37cases36pass0fail1skip.
+Fullsuite307pass0fail113skip420total (~10.9sec); final full rerun after allowing valid
+empty optional matcher/status strings again307/0/113/420. validate3/replay4 passed.
+Actual fixed peers exercised sensitive redaction, policy/handler refusals, framing/
+stdoutstderr overflow, late packets, nonzeroexit, stall/cancel/SIGINT and POSIX
+term-ignore/exited-leader leaf holdingpipes; allreaped. Not nativeCodex/Windowsproof.
+Requirements projection deliberately refuses opaque nonnull policies; empty list
+neverprovesabsence, transientconfigdigest notreturned, unknown errors fixedlabels.
+Native preflight/normalenv/network/cache/OSdeadlinebehavior remains unexecuted.
+Source36 exactCI/publicclone/package/spacedchecks pendingMedium; oldWindowsImage/
+bounds/native11/WSL limits preserved, no falseallgreen. NextMediumroutineverification,
+Highbeforesecurity/activation; no nativegrant, neveropen sharedroutinggateforinspector.
+
+
+Source36 late preservation reconciliation: final old-checker run failed on7new
+user-global hooks.state trusted_hash additions (distinct from older seven). Exact
+prior protected baseline reconstructed from retained snapshot+known earlier changes;
+allpriorprotectedvaluesunchanged. Newvaluesmetadataonly/singlesourceunderuserCodex
+home, no command/sourcefile read or execution. Independent251ownedcache/settings/
+data/sources/marketplace passed. Human answered “Yes—I intentionally reviewed/trusted
+global hooks”. Saved separate current preservation observation/checker; it passes
+allcurrentprotectedstate. Oldbaseline/checker/sealedproposals unchanged. No agent
+hostwrite/autoaccept/definitiontrust-match/nativegrant. Future nonempty listing still
+review-required. Original full check failure retained; no false unchanged-whole-config
+claim or repeat classification required for this now-attested transition.

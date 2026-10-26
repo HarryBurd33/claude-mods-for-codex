@@ -1,11 +1,11 @@
 # Native routing admission review — 2026-10-25
 
-Current continuation: [proposal35.1](NATIVE-READINESS-DEV35.md) follows exact source35
-package verification with a separate conditional no-turn inspection design. Inspector
-unimplemented/unauthorized; admission closed. Installed31 and all guards preserved.
-The accepted design below remains settled; no inference/config/install/native grant.
-Earlier source34 preparation/packaging directions are historical. Medium may verify
-proposal artifacts; High before inspector/security/native implementation.
+Current continuation: [DEV36-REVIEW](DEV36-REVIEW.md) implements the separately
+proposed no-turn inspector offline. Pure protocol/fixed-peer/process tests passed;
+native execution still refuses before IO. The accepted ordinary-read-only design
+below remains settled and separate from native/inference authorization. Medium
+exact36CI/package/review next; High before security changes/activation. Do not open
+the shared routing gate to activate a future inspection-only entry.
 
 ## Recorded human design decision — current
 

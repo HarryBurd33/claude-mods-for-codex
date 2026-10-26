@@ -1,157 +1,157 @@
-# Break handoff — proposal35.1 verified; native admission closed
+# Source36 offline readiness inspector — next GPT-6.1 Sol Medium
 
-2026-10-25. Sol Medium resumed **b8ba342** and completed the authorized artifact/
-decision-prerequisite verification. The human is taking a break. **Stop after this
-checkpoint; no background work, wake-up, native run or model task is scheduled.**
-The full93-capability project remains incomplete. This is a development checkpoint,
-not a finished release. Installed31 and all guards are preserved.
+2026-10-25. Sol High resumed **6649c0a** on **codex/astra-groundwork** under the
+human's fresh authorization: implement/offline-test proposal35.1 only. This work
+is complete within that scope. **No Codex invocation, extra inference, installation,
+host config/trust write by this agent or native activation.** Installed31 and all guards remain
+preserved. The full93-capability project/native routing/Windows remain incomplete.
 
-## Resume entry and current authorization
+Read DEV36-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
+docs/routing-native.md and latest ignored root HANDOFF.md. NATIVE-READINESS-DEV35.md
+is sealed historical design; its old unimplemented status is superseded here.
+RESUME-PLAN retains later stages; do not repeat its completed stage1 instructions.
 
-Read [RESUME-PLAN](RESUME-PLAN.md) first for the ordered future sessions, model/effort,
-acceptance criteria and authorization gates. Then read STATUS.md,
-NATIVE-READINESS-DEV35.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
-docs/routing-native.md and latest ignored local root HANDOFF.md if available.
-PACKAGE-DEV35/CI-DEV35 retain exact source verification evidence.
+## Exact next model and bounded objective
 
-Current authorization ends at proposal verification/checkpointing. **No inspector
-implementation, Codex invocation, extra inference, installation, configuration/trust
-change or native activation.** A future human-sent restart instruction may authorize
-offline implementation only. Native inspection and parent/child routing model tasks
-need separate fresh grants after exact runnable review. Saved artifacts, prior design
-approval and model switching never restore or expand permission.
+**GPT-6.1 Sol Medium** for exact source36 CI/public package/closed-entry/source-review
+verification. Demanding implementation/security decisions are recorded. No native
+inspection/inference/install/config/trust change or activation is authorized. High
+before new security/transport source changes, native activation or unexpected drift.
 
-Next working setting, when the human returns: **GPT-6.1 Sol High** for the proposed
-inspector's consequential source/transport/security work, only with fresh offline
-implementation scope. Switch to Medium once exact CI/package/review work is routine.
-No further Medium verification loop is needed for unchanged proposal35.1 artifacts.
+1. Verify current protected state with the new source36 private read-only checker; preserve current
+   human preferences/unrelated work. It incorporates a separately recorded human-
+   confirmed seven-entry user-global hook trust-metadata addition; the old checker
+   still detects that known transition. Do not repeat it as new/unclassified drift,
+   restore old state or update sealed proposal pins. Verify14source36runtime pins/test,
+   sealed35.1/old34 artifacts/archives. No old fingerprint restoration/refresh.
+2. Inspect the exact uploaded source36 implementation CI head/jobs/logs. New17-case
+   suite must appear in full POSIX/Windows portable lanes; POSIX-specific signal/
+   descendant cases skip on Windows. Keep known Image/original-bounds uncertainty;
+   a new failure stops for High, not retry-until-green or relaxed assertions.
+3. Anonymous clone/package the exact source36 checkpoint SHA given in final/private
+   handoff, not oldf618bc3. Check versions36/defaults/private hygiene/new6proof files+
+   test/review inclusion, byte equality, spaced extracted selected checks. Preserve
+   old34/35 archives; do not reinstall/cache-patch or trust the package.
+4. Actual packaged Node --describe/dry-run fixed peers and closed --run refusal may
+   be checked. These never invoke Codex. Native entries must fail before plan/path
+   IO. Do not execute private proposal argv or choose an external transport.
+5. Prepare a separate source36 source/review revision if needed, retaining sealed
+   proposal35.1 and historical old34 PLAN/INPUT untouched. No native-run approval is
+   inferred. Future inspection-only activation is a separate High review/change;
+   **never open the shared routing gate just to run the inspector**. The exact
+   process/access/usage/cleanup/removal artifact must be reviewable before asking
+   for native-run authorization. No native action under current grant.
+6. Save/upload/verify routine results, stop for High before consequential work.
+   Do not redo accepted read-only design/seven-record classification/source35
+   package checks merely because a new session starts. MacOS priority stays first.
 
-## Actual state and completed verification
+## Implemented contracts and exact code locations
 
-- Production plugin **0.2.0-dev.31** remains enabled, with approved settings, scoped
-  logging and human hook trust.251 cache files/config/settings/data/sources/
-  marketplace preservation rechecked. All hook-state/project fields included;
-  current human model-picker fields handled apart, never restored. Raw config also
-  matched the prior High observation. No unexpected drift or recovery action.
-- Development source **0.2.0-dev.35** remains uninstalled. Runtime/default hooks/MCP/
-  rules/Windows implementation and unconditional routing gate are unchanged.
-- [Proposal35.1](NATIVE-READINESS-DEV35.md) is reviewable data. Inspector **not
-  implemented**; no native transport/parser/lifecycle tests have run for it.
-- This Medium stage independently verified16 proposal/source artifact pins,
-  eight runtime pins, six frozen34 artifacts, both34/35 archive hashes, exact
-  conditional protocol/explicit cwd/bracketing,32 proposed reductions/no hooks
-  override, private modes and93 ledger rows. These are offline artifact checks.
-- No full suite/CI/package rerun was warranted for docs-only work. Prior source35:
-  full local/fourPOSIX CI290pass0fail113skip403total; spaced packaged123pass0fail2skip,
-  validation3/replay4; Windows portable native19pass1macOSskip. **CI failed overall**
-  on known Windows Installer Image/linkcount2 refusal:25storagepass and85proofpass/
-  1fail each. Original bounds cause, nativeWindows11/WSL remain unverified.
-- Exact immutable implementation/package source is
-  [f618bc3d306790ac30d89a9b9978bcddf170baf6](https://github.com/HarryBurd33/claude-mods-for-codex/commit/f618bc3d306790ac30d89a9b9978bcddf170baf6),
-  tree **d88689e2c93b8338666937039267673344d87d37**. Archive293files,
-  2,420,055unpacked/733,195archive bytes; SHA256
-  **6d2b7e62e26f4a446427536c066ebf0ca011fde3b7fe4f0a3a3c0f6ec984b176**.
-  Later notes checkpoints do not redefine this artifact's identity.
+- proofs/readiness-machine.mjs: pure protocol drafts/projections. Five conditional
+  requests plus initialized: handshake, same explicit-cwd config, requirements,
+  same-cwd hooks/list, repeated config. No model/catalog/thread/turn/auth/account/
+  command/fs/config-write/enablement/trust requests. Fixed reason enum and counters.
+- proofs/readiness-frames.mjs: bounded UTF8 JSON lines; combined stream bytes;
+  discarded stderr; no failed raw input/error echo.
+- proofs/readiness-driver.mjs: runnable fixed-peer harness and private prepared
+  shared process transport. runFixedReadiness has fixed enum only, Node+fixed peer,
+  env empty; no arbitrary executable/URL/argv/factory. runNativeReadiness and file/
+  CLI entry call unchanged unconditional requireLiveAdmission before getters/IO.
+  Native branch verifies selected inputs and checks lateness/cancel before spawn,
+  but is unreachable/unexecuted. No plan/grant/env/flag opens it.
+- proofs/readiness-fixtures.mjs/readiness-peer.mjs/readiness-leaf.mjs: fixed synthetic
+  config/secret marker and failure scenarios; fixed Node leaf for POSIX group test
+  only. No real config/credentials/session/network/model access. No arbitrary child.
+- test/readiness.test.mjs:17boundary/process cases. New Windows portable CI step;
+  POSIX full suite includes new tests. Production version metadata36 only; source
+  default hooks/rules/MCP/state/Windows paths and8older routing runtime files unchanged.
 
-## Proposal contracts and unresolved native questions
+## Security decisions and material limits
 
-The intended inspector sends five conditional requests, one outstanding at a time:
-initialize; after initialized notification, explicit-cwd config/read;
-configRequirements/read; hooks/list for that same single cwd; repeated explicit-cwd
-config/read. It never sends model/catalog, thread/turn, auth/account, command/fs,
-config-write, install or trust RPC. No automatic retry or approval.
+Before listing, require existing reductions/plugins=false/plugin_hooks=false,
+metadata-only hooks/hookstrue/no extra MCP/remote board/trust bypass. No hook feature
+or policy override. Known null/empty requirements and matching narrow feature/false
+managed-only projections may pass. Unknown or other non-null policies, including a
+potentially compatible approval allowlist, require review. This conservative limit
+is not a claim of host incompatibility. No normalizer/reducer relaxation.
 
-Before listing, confirm existing process-only reductions/plugins=false/plugin_hooks=
-false and informative hooks=true; never override hooks or managed policy to pass.
-Any listed hook, even disabled/untrusted, warning/error, unknown/policy conflict or
-changed projection is incomplete/review-required. Preserve unrelated hooks/state.
+Any hook (disabled/untrusted/managed too), warning/error, wrong/extra cwd, malformed/
+unknown packet or changed config projection stops with fixed labels. Known server
+requests get typed denial; unknown gets error, never approval/filled answer/success.
+Unsent work purges. Only category counts/booleans survive; transient canonical digest
+used between reads is not reported/persisted or called anonymized data.
 
-Pinned CLI164 source shows builtin entries omitted, hooks-off empty results and
-plugin listing fingerprint/legacy-trust migration. Empty list is not universal
-absence; proposed plugin-off migration avoidance is unverified. Existing dormant
-routing adapter config/read omits cwd; future activation requires separate scope/
-context review. Source35 metadata classifier is not hook inventory or execution
-permission. The accepted ordinary-read-only routing design is settled but grants no
-runtime action. Do not re-ask the same accepted design question.
+Observation-complete is limited and always nativeInspectionVerified=false,
+hookAbsenceEstablished=false/liveAdmission=false. Builtins omitted by public list;
+plugin-trust migration avoidance/external hook coverage remain unverified.
+The intentional global-hook trust additions may correspond to discoverable callbacks;
+a future nonempty list still requires review, never disabling unrelated trusted hooks. Existing
+routing adapter still omits cwd; this inspector does not resolve routing activation.
 
-Public read responses may contain sensitive values in bounded memory. Proposed
-retention is fixed labels/projection flags/category counts only, never raw config,
-layers, commands, identifiers, trust hashes, paths, credentials, prompts or sessions.
-Official CLI normal auth/cloud-policy network/log/cache side effects remain possible;
-no OS-level read-only/network sandbox or exact billing guarantee is claimed.
+Bounds20secwork/25secouter/5secrequest,1MiBcombined/64KiBframe/128messages/5requests/
+256hooks/128KiBoutgoing/2secTERM+2secKILL. Fixed peer adds separate4sec test deadline
+and shorter cleanup. Actual SIGINT, term-ignore and exited-leader leaf pipe cleanup
+ran on POSIX. Windows fixed peer direct cleanup is separate, group tests skip.
+processReaped refers to observed direct close, not proof of invisible native helpers
+or remote inference cancellation. OS preflight filesystem stalls are not hard-time
+bounded or interrupted; native env/auth/network/log/cache effects remain unexecuted.
+Normal host process authority is not a tool read-only sandbox. No billing guarantee.
 
-Proposed20secwork/25secouter/5secrequest,1MiBcombined/64KiBframe/128messages/5requests/
-1cwd/256hooks/128KiBoutgoing,2secTERM/2secKILL/reap are requirements, not tested runtime
-containment. Missing native evidence stays incomplete, not impossible or successful.
+## Commands and observed results
 
-## First future session and dependencies
+- Initial node --test test/readiness.test.mjs:16pass. Added actual POSIX SIGINT;
+  node --test test/readiness.test.mjs test/routing-native.test.mjs
+  test/routing-native-hooks.test.mjs: **36pass0fail1platformskip37total**.
+- Full npm test: **307pass0fail113platformskip420total**, ~10.9sec. Final full run
+  after valid empty optional matcher/status handling again307/0/113/420.
+- npm run validate:3mods valid. npm run replay:4fixtures passed; no command execution.
+- Actual fixed peers exercised exact sequence, negative policy/hooks/config, privacy,
+  malformed/incomplete/output overflow, late packets/denials, EOF/nonzeroexit, stall/
+  cancellation/SIGINT and POSIX parent-exit/descendant cleanup. All reaped. Synthetic
+  tests are not native-host event/config/permission/usage/cancellation acceptance.
+- Initial/intermediate preservation checks passed. Late final check detected7added
+  user-global hook trusted_hash metadata entries. Read-only comparison reconstructed
+  the prior baseline and proved all prior protected values unchanged; owned251cache/
+  settings/data/sources/marketplace independently passed. The human explicitly
+  confirmed intentional global-hook review/trust. No source or current-definition
+  trust match is inferred. New separate source36 preservation observation/checker
+  passes and includes the additions; original baseline/checker and sealed proposals
+  are untouched. No host write/restore/auto-trust by this agent. No new run grant.
+- Source-only36 private record14runtime pins+test hash, sealed35.1/old34/current35
+  source review and archives preserved. No native PLAN/INPUT/config refresh or CLI
+  version/catalog/thread/turn/provider/model query. No native process/REA/tool repair.
 
-1. Reconcile branch/dirty workspace and current human instructions after the break.
-   Preserve newer work. Verify source/artifact and protected-state observations.
-   Human model-picker changes or unrelated projects must not be overwritten.
-2. If the human explicitly authorizes offline implementation, High implements the
-   separate inspector and fixed-peer tests against proposal35.1, including sensitive
-   projection, conditional sequencing, request denials, malformed/output bounds,
-   cancel/deadline/EOF and owned-process cleanup. No real Codex executable in tests.
-3. Save/upload/verify runnable offline checkpoint; Medium checks exact source CI/
-   package and prepares concrete access/argv/freshness/removal review. A future native
-   request is made only after the artifact is implemented and reviewable.
-4. Separately authorized High native inspection, then separate routing activation/
-   inference review if evidence permits. Do not open the existing gate now.
-5. Continue macOS acceptance first, then gated Windows/other clients and all93-row
-   release audit as detailed in RESUME-PLAN. Do not weaken guards or retry known
-   Windows failures merely to obtain green CI. Supported incomplete features remain.
+**Source36 exact CI/public package/spaced checks are pending Medium.** Source35
+f618bc3 results remain separate in PACKAGE-DEV35/CI-DEV35: CI failed overall on known
+Windows Image/linkcount2 refusal; original bounds/native11/WSL gaps unchanged.
+No all-green, native Windows compatibility or routing/full-product completion claim.
 
-No need to repeat source35 package/CI, unchanged seven-record classification or broad
-research. After a long break, pinned source/historical CLI version is not proof of
-current host compatibility; any fresh native query must fit newly authorized scope.
-High on new protected drift; Astra only if a new hard problem warrants a saved switch.
+## Host, installation, rollback and checkpoint identity
 
-## Locations, preservation and rollback
+Source36 uninstalled; production31 enabled/approved settings remain selected.
+No human trust/restart/authentication is needed now. No installed change to remove
+or restore. Keep all prior proposals/archives/settings/old snapshots; new source-only
+review can be discarded separately without deleting referenced inputs or installed31.
+Machine paths/raw logs/input hashes remain ignored locally; root HANDOFF is private.
+No active owned process or scheduled/background continuation remains. A push can
+trigger existing CI, whose results remain unknown until observed for exact head.
+Last host observationmacOS14.6/Node24.22.0/CLI0.164historical; no fresh native query.
 
-Code contracts remain proofs/routing-native-{plan,hooks,adapter,inputs,driver}.mjs,
-routing-contract.mjs and corresponding tests. All runtime bytes preserved.
-requireLiveAdmission is unconditional before input IO in exported/from-file/CLI run
-paths. No flag, environment, plan boolean or prior approval opens this build.
-
-Private proposal/access/hashes/logs/current input observations remain ignored locally.
-Old34 PLAN/INPUT/FILE-HASHES retain historical source/config pins; source35 source-only
-manifest and proposal35.1 remain unchanged. Never silently refresh/execute them as
-current authority. No credential/session search, trust copying or config restoration.
-If using another device, private records/authentication need separate scoped handling;
-GitHub contains sanitized source/plans, not machine inputs or trust. Do not upload
-root HANDOFF, raw logs or private observations.
-
-No installed state changed, so no uninstall/rollback/trust/restart action is needed.
-Deleting only a new proposal folder would discard its review data; referenced files,
-old proposals and installed31 must remain. Last host observationsmacOS14.6/Node24.22.0,
-CLI0.164 historical; no version/native query this stage. No active owned local task,
-background inference or scheduled continuation. A notes push can trigger existing
-remote CI; unknown/new notes-run results are not substituted for source35 evidence.
-
-Starting proposal checkpoint **b8ba342743911520f1a4505ed1df7756384172d7**, tree
-**e210d86bed1e60062f47932fce5172e81af76754** on **codex/astra-groundwork**.
-[Starting checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/b8ba342743911520f1a4505ed1df7756384172d7),
+Starting checkpoint **6649c0acac8d98b8d4308dfb113ed4aafd1672c5**, tree
+**24e884942a59f45f9d4d467d52c57e0cfa8353b7**.
+[Starting commit](https://github.com/HarryBurd33/claude-mods-for-codex/commit/6649c0acac8d98b8d4308dfb113ed4aafd1672c5),
 [development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
-Final synchronized break SHA/tree is recorded in the final response/private handoff
-after non-force upload and exact branch/tree/file readback; no guessed self-reference.
+Actual final local/verified remote source36 commit/tree/link recorded in private
+handoff/final after non-force upload/readback, not guessed here.
 
-## Complete future restart instruction
+## Complete resume instruction
 
-Select **GPT-6.1 Sol, High** when ready. Replace BREAK_CHECKPOINT with the verified
-break SHA from the final response/private handoff:
-
-“Continue from BREAK_CHECKPOINT on codex/astra-groundwork. Read
-docs/continuation/HANDOFF.md, RESUME-PLAN.md, STATUS.md, NATIVE-READINESS-DEV35.md,
-REQUIREMENTS.md, ARCHITECTURE.md and latest TEST-LOG.md; read ignored local HANDOFF.md
-if available. Reconcile fresh workspace/protected state without overwriting current
-preferences or unrelated work. I authorize implementation and offline fixed-peer
-testing of the separate proposal35.1 inspector only. Preserve installed31, approved
-settings, logging scope, parent model, human trust and Windows guards. Keep native
-routing admission closed; no Codex invocation, model inference, installation,
-configuration/trust change or native activation. Stop for Medium when routine
-package/review verification is sufficient, or save and stop on unexpected protected
-drift.”
-
-That future human-sent message grants offline implementation only. Current break
-work supplies no implementation, native-run or inference authorization.
+“I've switched to GPT-6.1 Sol, Medium. Continue from the verified source36 checkpoint
+on codex/astra-groundwork. Read docs/continuation/HANDOFF.md, DEV36-REVIEW.md,
+STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md and latest TEST-LOG.md; read ignored
+local HANDOFF.md if available. Verify exact source36 CI, packaging, closed entry and
+review artifacts. Preserve installed31, approved settings/current preferences and
+unrelated projects, logging scope, parent model, human trust and Windows guards.
+Preserve sealed35.1/old34/source35 artifacts. Keep admission closed; no Codex
+invocation, inference, installation or host config/trust changes. Stop for High
+before consequential source/security work, activation or unexpected protected drift.”

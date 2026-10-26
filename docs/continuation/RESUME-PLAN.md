@@ -1,5 +1,12 @@
 # Break checkpoint and future sessions — 2026-10-25
 
+Current continuation (2026-10-25): the human returned and authorized offline
+proposal35.1 implementation. [DEV36-REVIEW](DEV36-REVIEW.md) records that completed
+stage:17newtests/full307passes113skips, native admission still closed. **Next Sol
+Medium for exact source36CI/package/review**, not another inspector implementation.
+The earlier break snapshot/stage1 restart text below is historical. Later native
+inspection, routing activation/inference and Windows gates remain unapproved.
+
 Work is saved for a human-controlled restart. No local native process, model task,
 background continuation or scheduled wake-up is left running by this stage.
 The project is **incomplete**. This plan preserves the full93-capability ledger;
