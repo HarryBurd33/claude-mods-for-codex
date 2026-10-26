@@ -1,5 +1,23 @@
 # Current status — source36 package verified, native admission closed
 
+## Source37 exact CI/package verified — current — 2026-10-26
+
+[PACKAGE-DEV37](PACKAGE-DEV37.md): exactd8d7cab315files, SHA256
+ d57670065ab7149e1cffe17cb2520a1fe971f73800449326297c80995a03058c;
+spaced153cases151pass0fail2skip, validate3/replay4. Packaged Node describe/closed
+entries and fixed-peer cwd/cleanup checks pass without native work.
+[CI-DEV37](CI-DEV37.md): four POSIX318pass113skip; Windows portable inspection7pass
+4POSIXskip; overall failure remains known Installer Image refusal in both Windows
+integration lanes. No source/assertion/gate/default change or native compatibility claim.
+Installed31/owned251/settings/data/raw config unchanged; known unaccepted project-trust
+addition remains explicit, no new baseline. All native gates closed.
+
+Next **GPT-6.1 Sol High** for the recorded offline deadline/descendant reliability
+leads; establish scope/reproduce before consequential changes, no native activation.
+Exact CI/package work is complete; do not repeat it. Full93/macOS/nativeWindows gaps
+remain. New verification notes use separate pins; prior source37 review stays sealed.
+
+
 ## Source37 separate closed inspection path — current — 2026-10-26
 
 [DEV37-REVIEW](DEV37-REVIEW.md): inspection-only plan/entry excludes routing/model

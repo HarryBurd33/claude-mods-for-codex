@@ -3360,3 +3360,22 @@ mismatch. Shared routing/legacy native gates and31protected files byte-unchanged
 source version37 only4metadata carriers plus new code/common protocol/portable CI.
 No Codex/inference/install/config/trust/native-input refresh. Source37 CI/package
 pending Medium; prior Windows failure/old sealed source evidence preserved.
+
+## 2026-10-26 — source37 exact CI and packaging (Sol Medium)
+
+Exact d8d7cab/tree dad8528, anonymous clone clean. Offline ignore-scripts npm package
+315files/2621018unpacked/796196archive bytes; SHA256d57670065ab7149e1cffe17cb2520a1fe971f73800449326297c80995a03058c.
+Strict source/archive/privacy/integrity/default/MIT checks pass. Spaced selected153
+cases151pass0fail2skip~10.2sec; validate3/replay4. Three packaged Node descriptions
+closed; three --run synthetic missing-plan refusals exit2/stdout0; fixed inspection
+cwd/reap/cleanup succeeds with native/admission false. No actual Codex/private plan.
+Exact CI40284031143: fourPOSIX318pass0fail113skip431; portable inspection7pass4skip,
+readiness15pass2skip, native19pass1skip. Both integrations25storagepass+85proofpass1fail
+only known Image/linkcount2 refusal, before data/sample/execution authority. Original
+bounds/native11/WSL gaps unchanged. All7decoded logs retained privately; no retry.
+Starting/ending18runtime/31protected/sealed old/owned251/raw config checks pass within
+known unaccepted one-project difference; no baseline/input refresh. No install/config/
+trust/source/gate changes. Planner status unavailable(required config/signals absent),
+setup.py reference absent; no repair/worker/Codex telemetry collection. Fresh desktop
+account ordinary usage allowed; no inference worker authorized. Manual semantic work
+packages recorded under existing task; no second queue. See PACKAGE-DEV37/CI-DEV37.
