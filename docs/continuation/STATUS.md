@@ -1,5 +1,13 @@
 # Current status — source36 package verified, native admission closed
 
+## High ancestor-policy review prepared — current — 2026-10-26
+
+[ANCESTOR-POLICY-REVIEW](ANCESTOR-POLICY-REVIEW.md) gives a review-only security
+handoff from saved source/evidence. No policy/code/permissions/target/native/model/
+network/config/trust changes. Both grants consumed/gates closed. Next human switch
+Sol High; review must produce one precise bounded decision, then stop for Medium.
+Local checkpoint only under no-network guard; full/native acceptance incomplete.
+
 ## Ancestor observation complete — current — 2026-10-26
 
 [ANCESTOR-RESULT](ANCESTOR-RESULT.md): one authorized metadata-only observation

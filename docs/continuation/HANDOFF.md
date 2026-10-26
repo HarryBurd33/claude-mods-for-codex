@@ -1,30 +1,40 @@
-# Ancestor policy rejection identified — grants consumed
+# Next GPT-6.1 Sol High — ancestor-policy review only
 
-2026-10-26, Sol Medium following local7515ddb. Read ANCESTOR-RESULT.md,
-PREFLIGHT-RESULT.md and CHECKER-OFFLINE.md. One newly authorized5second metadata-only
-observation audited4of7ancestors and stopped at first existing-policy rejection:
-a current-user-owned group-writable directory without the sticky-root exception.
-Exact machine-specific path/mode/index are private, not copied into public records.
+Read ANCESTOR-POLICY-REVIEW.md, ANCESTOR-RESULT.md, PREFLIGHT-RESULT.md and
+CHECKER-OFFLINE.md. Current handoff is prepared on Medium from local811834b.
+Exact machine metadata is private in .local/ancestor-observation/RESULT.json.
 
-Private .local/ancestor-observation holds authorization, original gate, result,
-HASHES/VERIFY and checkpoint receipt. Exclusive real ATTEMPT/OBSERVATION in
-.local/ancestor-request preserved. Gate restored original false. This grant and the
-prior preflight grant are consumed; no retries, resets or further target lookup.
-Original preflight evidence/closed gate and checker policy/source remain unchanged.
+High must review the private ancestor-policy blocker using existing records/source
+only. Distinguish this checker admission rule from Codex permissions/product guards/
+human trust. The historical two-file reader did not apply the newer ancestor mode
+policy; do not run it or treat that as permission to remove the rule. Provide one
+concrete review/decision proposal with bounded acceptance/approval requirements.
 
-No target contents/listing/link resolution/permissions/policy/native/inference/
-network/config/trust/baseline action. Installed31/all guards unchanged. Current
-inspection identified a policy failure, not native execution support or a release.
+No selected target metadata/content/ACL/group lookup, permission/policy/source
+implementation change, native execution, inference, network, setup, config/trust
+write, alternate-path selection or baseline adoption. Installed31 and every guard
+remain unchanged. Both grants consumed, both gates closed; do not reset/delete
+ATTEMPT/OBSERVATION or retry. Historical unused-grant files are not active authority.
 
-Next remain **GPT-6.1 Sol Medium** for records-only result verification or exact
-next decision preparation from saved evidence. No selected path access authorized.
-New access needs a new scope/grant; consequential security/policy/path-selection
-work requires High. Native Stop/full93/Windows gaps remain incomplete.
+Private .local/ancestor-policy-handoff holds source/evidence hashes, verification,
+semantic task and checkpoint receipt. Records-only verification:
+python3 -B .local/ancestor-policy-handoff/VERIFY.py
+No tests or native callbacks rerun during Medium handoff preparation.
 
-Verification: python3 -B .local/ancestor-observation/VERIFY.py
-Old proposal/preflight verifiers expect no observation and are historical; do not
-delete evidence or rewrite them to make post-attempt state appear unstarted.
+Next exact setting **GPT-6.1 Sol High**, because review concerns a security boundary:
+a narrow read-only observation versus later execution/trust. Stop for Medium after
+the hard review decisions are concrete. No implementation under this review scope.
 
-No-network guard prevents GitHub publication/remote verification. Local SHA/tree/
-checkpoint recorded in ignored root HANDOFF.md/private SYNC. Other chat's original
-input/review/generations/heartbeat/.gitignore preserved. No background worker.
+No-network instruction means local checkpoint only; GitHub upload/remote verification
+remain pending. Exact local SHA/tree/private checkpoint in ignored root HANDOFF.md/
+private SYNC.json. Latest previously verified public d3c4682 is historical. Preserve
+other-chat input/review/generations/heartbeat/.gitignore. No background work.
+
+Resume:
+“I’ve switched to GPT-6.1 Sol High. Continue from the local ancestor-policy handoff.
+Read docs/continuation/ANCESTOR-POLICY-REVIEW.md and HANDOFF.md. Review the blocker
+using saved evidence/source only and prepare the next bounded decision proposal.
+Preserve installed31/all guards. No further target reads, permission or policy
+changes, implementation, native execution, inference, network, setup, config/trust
+changes or baseline adoption. Both grants remain consumed. Stop for Medium when
+the difficult review is complete.”
