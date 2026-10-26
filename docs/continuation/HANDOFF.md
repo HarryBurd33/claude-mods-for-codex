@@ -1,116 +1,139 @@
-# Proposal36.1 verified — next GPT-6.1 Sol High
+# Source37 offline inspection path complete — next GPT-6.1 Sol Medium
 
-2026-10-26, America/Denver. Sol Medium resumed **3dfbcd8** and completed the authorized
-artifact/documentation verification. No consequential source/security change, Codex
-invocation, inference, installation, host config/trust change, native-input refresh
-or gate opening. Installed31 and all guards remain preserved. Full93/native routing/
-nativeWindows acceptance is incomplete. macOS acceptance remains the priority.
+2026-10-26, America/Denver. Sol High resumed5e36484 under explicit offline scope.
+Implemented a separate closed inspection-only contract/entry and fixed-peer cwd
+proofs. **No Codex invocation, inference, installation, host config/trust change,
+native-input refresh or gate opening.** Installed31/approved settings/scoped logging/
+parent model/Windows guards preserved. Source37 uninstalled; full93/native routing/
+nativeWindows acceptance incomplete. Native inspection transport is **not implemented**.
 
-Read PROPOSAL36-1-VERIFIED.md, INSPECTION-ACTIVATION-DEV36.md, STATUS.md,
-REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md, RESUME-PLAN.md and the latest
-ignored root HANDOFF.md. PACKAGE-DEV36/CI-DEV36 remain exact prior evidence.
+Read DEV37-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
+RESUME-PLAN.md and latest ignored root HANDOFF.md. Proposal36.1/its Medium review and
+source36 CI/package remain historical evidence, never an execution grant.
 
-## Completed checks and limitations
+## Milestone and stable contracts
 
-- Original revision36.1 verifier ran once against3dfbcd8:19private records,11public
-  documents,14runtime pins/readiness test, sealed35.1/old34/source35 review and34/35
-  archives passed. No fresh native plan, binary/config/candidate fingerprint or grant.
-- Installed31cache251/approved settings/data/sources/marketplace match. Raw config
-  matches the previous36.1 observation. No new drift. The original source36 protected
-  check still fails on the known single project trust entry; origin/intent unknown,
-  preserved and unaccepted. Removing only it in memory reproduces the previous
-  protected digest. Earlier human-attested seven global hook entries unchanged.
-- Exact five conditional requests plus initialized/same cwd, rejected historical
-  argv/blocked status/false native/admission flags verified. No transport execution.
-- Seven cached pinned-source assertions match cwd/startup/catalog/remote-control/
-  SQLite/plugin findings. Not a full source audit or native behavior. No new external
-  research, version query, protocol replay, broad tests, CI retry or packaging repeat.
-- Public path/privacy/local links and93ledger IDs/order pass. Anonymous public branch
-  check returned exact3dfbcd8 before notes. Existing released local checkpoint lease
-  acquired without displacing an owner. Other-chat .gitignore addition and original
-  checkpoint binding/input/review preserved. Only stage-owned Markdown is published.
+- proofs/inspection-contract.mjs: strict inspection-only selected-input review shape;
+  no routing role/candidate/model/effort/thread/turn/prompt or caller grant. Generated
+  argv/spawn cwd match; shell=false; --stdio/--strict-config data only. Multi-agent
+  feature disabled. requireInspectionAdmission unconditionally throws before IO.
+- proofs/inspection-driver.mjs: native exported/from-file entries call that separate
+  gate first; no native transport. Public fixed mode accepts only a scenario enum,
+  creates its own spaced temp cwd and starts only Node/fixed peer with empty env and
+  explicit cwd. No arbitrary argv/executor/transport/cwd/clock factory. CLI options
+  cannot authorize a run; native mode exit2/stdout0/fixed refusal tested.
+- proofs/inspection-fixtures.mjs, inspection-peer.mjs: synthetic config/hook packets;
+  fixed peer reports actual process.cwd in a private test preface, compared/discarded.
+  Existing fixed readiness-leaf used solely for owned POSIX group pipe-holding test.
+- proofs/readiness-machine.mjs: intended source change adds a strict inspection
+  constructor and private shared protocol body. Both public plan constructors keep
+  their own validation; legacy identity/domain/config/refusal behavior retained.
+  No injected callbacks. Five conditional reads/same cwd/typed denials/privacy remain.
+- test/inspection.test.mjs:11new cases, POSIX fixed processes with4Windows skips.
+  CI adds this suite to Windows portable checks, not native Windows acceptance.
+  Four source version carriers become0.2.0-dev.37; no default/MCP/hook/rule change.
 
-See PROPOSAL36-1-VERIFIED for full outcome and sources. Source36 implementation remains
-9833caf2c065f5ffc0419ff57674a3fe98b0632b; archive305files/SHA256
-1cb64ec70223ee853b5ec00e314ea810405ed8713b82340f54f09a85d48e18c4.
-Earlier packaged140pass0fail2skip/validate3/replay4 and CI40265830772 are unchanged:
-four POSIX307pass0fail113skip; Windows portable15pass2POSIXskip; overall failure on
-known Windows Image/linkcount2 refusal. Bounds/native11/WSL gaps remain unresolved.
-No Windows guard/assertion change. Historical macOS14.6/CLI0.164; no new native query.
+Shared requireLiveAdmission, all routing runtime sources, old native readiness
+entry/driver and31protected config/hooks/storage/Windows files are byte-unchanged.
+No selected host inputs were refreshed; private source37 records contain code/review
+hashes only, no executable native PLAN/INPUT or current binary/config candidate.
 
-## Sealed artifacts and next resume check
+## Observed verification
 
-Old36.1 HASHES.json/VERIFY.py remain intact and pin3dfbcd8 documentation. These current
-verification/handoff notes intentionally change some of those public bytes. Running
-that old verifier on the newer worktree would flag historical-note mismatches; do not
-rewrite its pins or call these planned documentation changes new source/config drift.
+- Starting Medium verifier passed19private/11historical+9current public/14runtime+
+  test/sealed earlier artifacts and installed31cache251/settings/data/sources/
+  marketplace. Raw config matches36.1. Original protected check remains failed on
+  the known one added project-trust entry; unknown intent, no baseline acceptance.
+  No new host drift, hook definition read, secret/env/session discovery or host write.
+- First new+legacy target run28cases27pass1fail: test incorrectly treated an empty
+  released hook default as a handler. Corrected fixture to nonempty group and kept
+  positive empty-default case. No classifier/runtime policy relaxation.
+- Targeted inspection/readiness/native/classifier **48cases47pass0fail1platformskip**.
+- Final full npm test **431cases318pass0fail113platformskip**,~10.9sec. validate3mods
+  and replay4fixtures pass; no fixture command executed. No broad repeat needed.
+- Actual fixed Node peers cover spaced OS cwd/empty env, wrong cwd, hook/policy/
+  projection refusal, malformed/partial/overflow streams, server-request denial,
+  late packets/nonzero exit, cancel/stall/term-ignore, exited-leader pipe-holding
+  cleanup and buffered replies after a blocked-parent deadline. Peers reaped and
+  owned empty temp directories removed. This is not a native Codex proof.
+- New source37 verifier checks current intentional source/review hashes, historical
+  docs/source at their exact Git commits, sealed artifacts and all old host/owned
+  preservation comparisons. Exact local paths in ignored handoff; do not run old
+  source36/Medium current-worktree pin checks after intentional source37 changes
+  and misclassify the new machine/metadata/docs as unexpected drift.
 
-A separate private Medium checker verifies the old11public files through git show at
-exact3dfbcd8, the new current notes separately, and retains original private/runtime/
-protected-config/owned-state checks. Its exact path and hashes are in ignored root
-HANDOFF.md. No new config baseline or native-input acceptance. Any new protected/raw
-config or runtime difference still stops for High classification; never restore old
-preferences/trust/project entries. No hook source/command or private session opened.
+Pure/native-on-Windows remains unverified; four new fixed-peer cases skip there.
+Exact source37 CI/public anonymous clone/npm archive/spaced extracted acceptance
+is pending Medium. Retain source36's overall Windows Image/linkcount2 failure and
+original bounds/native11/WSL gaps; no assertion/guard weakening or retry-until-green.
 
-## Next bounded stage — High, fresh explicit offline scope
+## Primary-source startup findings and remaining blockers
 
-Routine verification is complete. **GPT-6.1 Sol High** is needed for consequential
-inspection-contract/process/security work. The following scope is a future proposal,
-not permission from a saved file:
+Pinned release6aaac694803004a63c6f393d153c96d22521a6b9; eight additional source files
+retrieved through directory listings, relevant sections reviewed, no full audit:
 
-1. After the human sends the explicit offline resume instruction below, verify the
-   new private checker, source/branch and expected dirty state. The uncommitted
-   /.checkpoint/ ignore rule belongs to the other chat; preserve it and coordinate
-   one writer. Do not initialize a second binding or steal an active lease.
-2. Implement/offline-test a **separate closed inspection-only contract/entry** per
-   INSPECTION-ACTIVATION-DEV36. Exclude routing/model-turn authority. Keep shared
-   routing requireLiveAdmission and existing native exported/from-file entries
-   unconditionally closed before getters/IO/spawn. Do not expose a generic executor,
-   arbitrary argv/transport, caller grant/token/flag or environment bypass.
-3. Define exact explicit OS spawn cwd and assert consistency with argv/config reads/
-   hooks listing using fixed peers and synthetic data. Preserve conditional five-read
-   sequencing, policy/feature refusal, permissions, privacy, bounds/timeout/cancel/
-   EOF/failure and cleanup. Do not silently broaden schema/policy to make a test pass.
-4. Trace supported process-local remote-control exclusion and plugin startup paths
-   using primary source/docs only. Server startup currently schedules Online catalog
-   refresh, resolves persisted remote mode and can read auth/cloud config/write state
-   and logs before response checks. These are native blockers/residual side effects,
-   not live observations. No undocumented debug controls or installed-client patch.
-   If no supported exclusion is established, retain a blocked native proposal with
-   practical read-only analysis rather than manufacture a green inspection.
-5. Save a runnable **offline** milestone with meaningful acceptance tests, then stop
-   for Medium when suitable. No gate opening, fresh native-input refresh, native
-   process/version/catalog request, extra inference, install/config/trust action is
-   authorized by the proposed offline scope. Native authorization must follow an
-   implemented exact artifact; routing/model inference needs a distinct later grant.
+- Plugin startup manager entry wraps curated sync, marketplace auto-upgrade, remote
+  refresh and featured warmups inside plugins_enabled. Effective plugins=false
+  excludes that entry in source. This does not prove all startup IO is absent.
+- Remote controller gives Disabled for existing managed DisabledByRequirements or
+  absent DB; normal ResolvePersisted gives Unknown and can resolve Enabled by target/
+  account/client enrollment. New client identity is not an exclusion guarantee.
+- DisabledEphemeral is wired through a marker explicitly documented in source as
+  daemon-internal; it was not used. Official docs establish managed policy but no
+  supported per-process disable CLI option for this inspector was established.
+- Existing catalog Online refresh, cloud auth/policy and SQLite/log/installation/
+  recovery side effects remain. Tool read-only permissions do not sandbox the host.
 
-Do not repeat settled read-only routing design, source36 CI/package verification,
-known metadata classification or unrelated Windows proof loops. Full ledger remains
-in scope; no finished release/product claim. No immediate run/trust/restart approval
-is needed or requested now. Current stage installed nothing to remove/roll back.
+DEV37-REVIEW contains exact primary links and source/review limits. **Native launch
+remains blocked**. No policy/state-storage change, internal/debug option, installed
+client patch, hook suppression or credential/DB scan is an authorized workaround.
+A preexisting managed restriction is only a possible separately reviewed alternative;
+current policy was not refreshed/accepted. Any future native grant must follow a
+concrete implementation/exact input/access review; routing inference is separate.
 
-## Checkpoint and publication
+## Next exact setting — Medium verification only
 
-Development branch: [codex/astra-groundwork](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
-The new actual local/verified remote SHA is recorded after upload in the final/private
-handoff, never guessed inside its own commit. Preserve original local commits when
-aligning an identical GitHub-created commit; no force push or lost user work.
+**GPT-6.1 Sol Medium.** Demanding offline contract/cwd work is complete; remaining
+exact-source CI/package/source-only review is routine. No native activation scope.
 
-Only this stage's safe public Markdown notes are uploaded. The other chat's ignore
-change remains unstaged; a clean checkout is not claimed. Private records/root HANDOFF
-and checkpoint state stay ignored. Final checkpoint verified/local lease released;
-no owned local native/model/background continuation or scheduling. A notes push may
-trigger existing remote CI, not a new claimed result or model task.
+1. Inspect current source/branch and checkpoint; run new source37 private verifier.
+   Preserve the unowned .gitignore /.checkpoint/ addition and previous generations.
+   Other chat was idle/waiting this active chat; its existing resumption automation
+   was not changed. Coordinate one writer/acquire released lease; do not steal one.
+   New raw/protected/runtime difference => stop High for read-only classification.
+2. Inspect CI for the **actual verified source37 implementation commit** recorded in
+   the final/private handoff. Match head/tree/logs; distinguish four POSIX tests,
+   portable Windows pure cases/skips and integration failures. No native claim.
+   Do not repair unrelated Windows paths or rerun existing failures speculatively.
+3. Anonymous exact-source clone, offline ignore-scripts npm package with isolated
+   cache, strict archive/source byte/privacy/manifest/version/space-path checks.
+   Verify inclusion of4new inspection modules/test/common machine, no root private
+   HANDOFF/.local/.checkpoint/credentials/logs. Run appropriate packaged selected
+   suites/validate/replay, with no Codex or selected private plan execution.
+4. Review packaged --describe and closed CLI/export behavior, source-only hashes and
+   preserved older records. No new executable native PLAN/INPUT/config snapshot,
+   selected-binary query, current input fingerprint or inspection gate switch.
+5. Checkpoint/upload/verify safe results. High before any new consequential security/
+   native transport/permission work or unexpected failure/drift. All gates closed;
+   no inference/install/config/trust action. Do not repeat source36 package/research.
 
-## Complete human resume instruction
+No runtime installation/rollback/removal/restart/hook review needed. Nothing activated
+by this stage; retain installed31 and sealed old artifacts. New local review records
+can be discarded independently; never delete referenced inputs or normal host logs.
+No model task, native process or background continuation was started by this stage.
+Existing other-chat heartbeat/remote CI are separate; no new automation is scheduled.
 
-“I've switched to GPT-6.1 Sol, High. Continue from the verified proposal36.1 Medium
-checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and the ignored
-local handoff. Implement and offline-test the separate closed inspection-only
-contract/entry, exact cwd handling and acceptance tests per proposal36.1. Investigate
-supported startup/remote-control boundaries using primary source/docs only. Preserve
-installed31, approved settings/current preferences/unrelated entries, logging scope,
-parent model, human trust and Windows guards. Keep all gates closed. No Codex,
-inference, install/config/trust change or native-input refresh. Preserve the known
-unaccepted project-trust difference and coordinate one repository writer. Stop for
-Medium when routine verification is sufficient.”
+[Development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
+Actual local/verified remote commit/tree and private checkpoint/release are recorded
+in the final/ignored handoff after non-force upload and readback, not guessed here.
+
+## Complete resume instruction
+
+“I've switched to GPT-6.1 Sol, Medium. Continue from the verified source37 checkpoint
+on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and the ignored local
+handoff. Verify exact source37 CI, packaging, closed entries and source-only review
+artifacts. Preserve installed31, approved settings/current preferences/unrelated
+entries, logging scope, parent model, human trust and Windows guards. Coordinate one
+repository writer; keep all gates closed. No Codex, inference, install/config/trust
+change or native-input refresh. Preserve the known unaccepted project-trust mismatch.
+Stop for High before consequential source/security work or unexpected drift.”

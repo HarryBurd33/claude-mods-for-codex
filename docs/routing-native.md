@@ -1,5 +1,7 @@
 # Prepared native routing adapter — source35
 
+Current2026-10-26: [source37 closed inspection contract](continuation/DEV37-REVIEW.md) adds fixed-peer OS cwd/deadline proofs, with no native transport or gate opening. Local318pass/113skip; source37 CI/package pending; installed31 preserved.
+
 Current 2026-10-26: [inspection activation review](continuation/INSPECTION-ACTIVATION-DEV36.md) blocks native activation on inherited OS cwd, startup remote-control/side-effect and input-freshness gaps. No routing gate or source change; installed31 preserved. Next Medium artifact verification only.
 
 Current continuation: [source36 package](continuation/PACKAGE-DEV36.md) and

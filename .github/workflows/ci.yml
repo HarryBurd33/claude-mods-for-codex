@@ -60,6 +60,8 @@ jobs:
         run: node --test test/routing-native.test.mjs test/routing-native-hooks.test.mjs
       - name: Readiness inspector fixed peers only (native entry closed, no Codex or inference)
         run: node --test test/readiness.test.mjs
+      - name: Inspection-only contract and closed entry (POSIX peer cases skip, no native client)
+        run: node --test test/inspection.test.mjs
       - name: Retention Windows before-IO refusal (POSIX cleanup cases skip)
         run: node --test test/retention.test.mjs
       - run: npm run validate

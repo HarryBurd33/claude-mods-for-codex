@@ -2,6 +2,7 @@
 import { createHash } from 'node:crypto';
 import { jsonData, rpcId, denyServerRequest } from './routing-contract.mjs';
 import { validateNativePlan, nativeConfigMatches } from './routing-native-plan.mjs';
+import { validateInspectionPlan, inspectionConfigMatches } from './inspection-contract.mjs';
 
 export const READINESS_LIMITS = Object.freeze({ workMs: 20000, outerMs: 25000, requestMs: 5000,
   softReapMs: 2000, hardReapMs: 2000, bytes: 1048576, frameBytes: 65536, messages: 128,
@@ -34,11 +35,11 @@ const POLICY_FIELDS = ['modelProvider', 'modelProviders', 'allowedLoginMethods',
   'application', 'autoReview', 'models', 'sqliteHome', 'logDir', 'modelCatalogJson', 'checkForUpdateOnStartup',
   'allowLoginShell', 'feedback'];
 
-function configProjection(plan, result) {
+function configProjection(plan, result, inspection) {
   if (!fields(result, ['config', 'origins', 'layers']) || !record(result.config)
     || result.layers != null || (Object.hasOwn(result, 'origins') && !record(result.origins))) return null;
   const c = result.config;
-  if (!nativeConfigMatches(plan, c) || c.features?.hooks !== true
+  if (!(inspection ? inspectionConfigMatches(plan, c) : nativeConfigMatches(plan, c)) || c.features?.hooks !== true
     || (Object.hasOwn(c, 'mcp_servers') && !record(c.mcp_servers))
     || (Object.hasOwn(c, 'bypass_hook_trust') && c.bypass_hook_trust !== false)) return null;
   // Only a transient digest is kept between reads; never return config/path/hash
@@ -96,7 +97,14 @@ function hookCategories(hooks) {
 }
 
 export function createReadinessMachine(reviewPlan) {
-  const plan = validateNativePlan(reviewPlan);
+  return createMachine(validateNativePlan(reviewPlan), false);
+}
+export function createInspectionMachine(reviewPlan) {
+  return createMachine(validateInspectionPlan(reviewPlan), true);
+}
+// Both strict public contracts select this private protocol; no injected callback,
+// transport or caller-provided validator can change its admission behavior.
+function createMachine(plan, inspection) {
   let now = 0, started = false, done = false, reason = null, pending = null, out = [], first = null;
   let drafted = 0, completed = 0, configMatched = false, policyMatched = false, stable = false;
   let hookCount = null, warnings = 0, errors = 0, categories = { source: {}, event: {}, trust: {} };
@@ -109,7 +117,7 @@ export function createReadinessMachine(reviewPlan) {
   const readConfig = id => request(id, 'config/read', { includeLayers: false, cwd: plan.input.cwd });
   return Object.freeze({
     start() { if (started || done) return; started = true;
-      request(1, 'initialize', { clientInfo: { name: 'claude_mods_native_readiness_review', version: 'proposal-35.1' },
+      request(1, 'initialize', { clientInfo: { name: inspection ? 'claude_mods_inspection_only' : 'claude_mods_native_readiness_review', version: inspection ? 'offline-37' : 'proposal-35.1' },
         capabilities: { experimentalApi: true } }); },
     receive(packet) {
       if (reason !== null) return;
@@ -128,7 +136,7 @@ export function createReadinessMachine(reviewPlan) {
         if (!record(r)) return stop('malformed-protocol');
         out.push({ method: 'initialized', params: {} }); readConfig(2);
       } else if (id === 2) {
-        first = configProjection(plan, r);
+        first = configProjection(plan, r, inspection);
         if (first === null) return stop('config-mismatch');
         configMatched = true; request(3, 'configRequirements/read', {});
       } else if (id === 3) {
@@ -148,7 +156,7 @@ export function createReadinessMachine(reviewPlan) {
         if (hookCount !== 0) return stop('hooks-require-review');
         readConfig(5);
       } else if (id === 5) {
-        const second = configProjection(plan, r); stable = second !== null && second === first; first = null;
+        const second = configProjection(plan, r, inspection); stable = second !== null && second === first; first = null;
         if (!stable) return stop('config-changed'); done = true;
       }
     },
@@ -159,7 +167,7 @@ export function createReadinessMachine(reviewPlan) {
       else if (pending && now - pending.at >= READINESS_LIMITS.requestMs) stop('request-timeout');
     },
     abort: stop,
-    takeOutbound() { const value = out; out = []; return value.map(rpc => ({ domain: 'readiness-review-draft', executionAuthorized: false, rpc })); },
+    takeOutbound() { const value = out; out = []; return value.map(rpc => ({ domain: inspection ? 'inspection-review-draft' : 'readiness-review-draft', executionAuthorized: false, rpc })); },
     report() { return { done, outcome: done && reason === null ? 'observation-complete' : reason === null ? 'incomplete' : 'review-required',
       reason, requestsDrafted: drafted, completedRequests: completed, configMatched, requirementsCompatible: policyMatched,
       configProjectionStable: stable, listedHookCount: hookCount, warningCount: warnings, errorCount: errors,

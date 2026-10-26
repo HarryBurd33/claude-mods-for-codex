@@ -1,5 +1,21 @@
 # Extension architecture and security contracts
 
+## Source37 separate closed inspection path — current — 2026-10-26
+
+[DEV37-REVIEW](DEV37-REVIEW.md): inspection-only plan/entry excludes routing/model
+payloads and has its own unconditional gate; native transport is not implemented.
+Fixed Node peers prove explicit spaced OS cwd, conditional protocol, refusals,
+privacy/deadline/cancel/cleanup. Legacy native/routing gates and31protected storage/
+Windows/default files unchanged. Full local318pass0fail113skip431; validate3/replay4.
+Pinned source traces exclude the reviewed plugin warmups when plugins=false; a
+supported process-local remote-control exclusion remains unresolved. No native call,
+input refresh, inference, install/config/trust action. Installed31/logging preserved;
+known unaccepted project-trust difference remains, no new config baseline.
+
+Next **GPT-6.1 Sol Medium** for exact37CI/package/source-review verification only.
+Source37 uninstalled; native startup/routing/Windows/full93 incomplete. Gates closed.
+
+
 ## Proposal36.1 verification complete — current — 2026-10-26
 
 [PROPOSAL36-1-VERIFIED](PROPOSAL36-1-VERIFIED.md): Sol Medium checked19private records,

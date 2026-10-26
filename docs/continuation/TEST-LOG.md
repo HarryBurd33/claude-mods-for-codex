@@ -3337,3 +3337,26 @@ current notes get separate pins. Source/protected-config/owned checks retained, 
 native-input refresh or authority. See PROPOSAL36-1-VERIFIED and private handoff.
 No source/gate/Codex/inference/install/config/trust/Windows change or CI/package retry.
 Next High with fresh offline implementation scope; all native gates remain closed.
+
+## 2026-10-26 — source37 closed inspection-only implementation (Sol High)
+
+Fresh user offline scope from5e36484. Separate strict inspection plan/closed native
+entry and fixed Node peer cwd path; private common protocol reuses refusals without
+caller validator/transport injection. Native transport absent/all gates closed.
+First targeted28cases27pass1failure: test fixture incorrectly treated released empty
+hook defaults as handlers. Corrected fixture and kept positive default check; no
+classifier relaxation. Targeted48cases47pass0fail1skip; final full431cases318pass0fail
+113skip (~10.9sec), validate3/replay4 pass. Real spaced temp cwd/environment checks,
+malformed/overflow/policy/hook/server-request/late-packet/exitfail/cancel/stall/term-
+ignore/exitedleader pipe-holder and blocked-parent deadline ran as Node fixtures,
+not Codex. Temp cleanup empty-directory-only, direct child reaped; invisible native
+descendants/Windows acceptance not established. Windows fixed-peer cases skip.
+
+8additional pinned public source files clarify plugin-startup enabled guard and
+remote desired-state/internal-marker behavior. Supported process-local remote
+exclusion unresolved; no host policy, environment marker or installed app altered.
+Starting preservation/owned251 checks passed within known unaccepted project-entry
+mismatch. Shared routing/legacy native gates and31protected files byte-unchanged;
+source version37 only4metadata carriers plus new code/common protocol/portable CI.
+No Codex/inference/install/config/trust/native-input refresh. Source37 CI/package
+pending Medium; prior Windows failure/old sealed source evidence preserved.
