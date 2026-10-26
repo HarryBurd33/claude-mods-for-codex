@@ -1,41 +1,40 @@
 # Claude Mods for Codex
 
-Current development checkpoint: [normal-startup Stop validation plan](docs/continuation/NORMAL-STARTUP-PLAN.md) prepared/offline-checked only. Installed31 unchanged; native test and manual-supervision amendment unapproved. All execution gates closed; full product incomplete.
+Independent MIT project, not affiliated with or endorsed by Anthropic or OpenAI.
+**Development source 0.2.0-dev.38 is uninstalled; the previously approved user-profile
+installation remains 0.2.0-dev.31. The full project is incomplete.**
 
-Development source **0.2.0-dev.38** remains uninstalled. **Installed production is
-0.2.0-dev.31**, with approved settings, scoped logging, selected model and human
-trust preserved. Independent MIT project, not affiliated with or endorsed by
-Anthropic or OpenAI. The full 93-requirement product remains incomplete.
+The [completion plan](docs/continuation/COMPLETION-PLAN.md) now maps all 93 requirements
+to finite delivery milestones. Most macOS core components exist, but significant
+native integration/acceptance and Windows work remain. Supported capability does
+not mean verified completion. The saved acceptance queue has60narrow-target V,
+12 approximations,14 incomplete/blocked,3 unavailable and4policy exclusions; it is not a
+completion percentage.
 
-Latest result: [option B read-only review](docs/continuation/STOP-INPUT-REVIEW.md)
-completed once per file in 0.153 seconds, with no retries or new identity drift. CLI
-bytes match the historical identity; user config matches the existing preservation
-observation. No raw content persisted/printed, native/model execution, configuration/
-trust change or baseline adoption. The two-file observation does **not** refresh an
-accepted native-input plan. The known project-trust addition remains unaccepted.
+Current review retained the private preflight ancestor guard after an authorized
+read-only refusal and metadata-only diagnosis. Both grants are consumed and read
+gates closed. [Policy decision](docs/continuation/ANCESTOR-POLICY-DECISION.md):
+stop the probe chain, retain the blocker, and progress independent work. No policy/
+permissions were changed. This is a private validation blocker, not a demonstrated
+Codex extension limitation. Exact machine evidence remains private.
 
-**All native gates remain closed; native Stop acceptance is blocked.** Static file
-identity cannot resolve startup, remote-ingress or effective-hook uncertainty. No
-native inspection transport is implemented. The [Stop proposal](docs/continuation/STOP-ONLY-PROPOSAL.md)
-is design-only; [launch decision](docs/continuation/STOP-LAUNCH-DECISION.md) records
-the limited review scope rather than permission to run.
+Dated native evidence covers owned UI/Review desk, covered hooks, harmless exact
+rewrite/denial plus ordinary-sandbox rejection, selected metadata/Watch, and reviewed
+user-profile update/disable/remove/rollback. Source38 has321packaged files and
+157 packaged test passes/2skips. Its saved exact CI has four POSIX lanes324passes each;
+Windows integration still has known failures. None of these proves native routing,
+optional-event completion, accessibility or native Windows/Linux/WSL support.
 
-[Source38 package](docs/continuation/PACKAGE-DEV38.md): 321 files, 157 packaged tests
-passed/2skipped. [Exact implementation CI](docs/continuation/CI-DEV38.md): four POSIX
-lanes with 324 passes each; both Windows integration lanes retain the known Installer
-Image refusal. Original bounds/native Windows 11 / WSL gaps remain unresolved. Fixed
-Node proofs are not native execution or universal descendant containment.
+**Next: GPT-6.1 Sol Medium** to verify the saved review/93-ID completion plan and
+prepare one consolidated next-scope decision. Current work is review/planning only:
+no new target reads, implementation, native/model run, network or config/trust change.
+Experimental native/routing gates stay closed; installed31/settings/logging/model/
+human trust and Windows guards are preserved. No separate-client/fork direction agreed.
 
-[Current macOS queue](docs/continuation/MACOS-QUEUE-38.md) retains dated host/source
-acceptance. [Manual visibility](docs/continuation/MANUAL-DEV31-ACCESSIBILITY.md) passed
-at current zoom; screen-reader/enlarged-zoom remains unverified. Optional native events,
-routing/current context and other gaps in the 93-row ledger are not full-product completion.
-
-**Next: GPT-6.1 Sol High** for the human-approved
-[revised normal-startup plan](docs/continuation/NORMAL-STARTUP-SCOPE.md), preparation/
-offline checks only. No execution, config/trust change or additional model-run grant.
-[Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),
-[privacy](docs/privacy.md), [removal](docs/removal.md).
+Current local review/plan checkpoints are not uploaded under the no-network instruction.
+Latest previously verified public commit is historicald3c4682; it was not rechecked.
+[Status](PUBLIC_STATUS.md), [handoff](docs/continuation/HANDOFF.md),
+[setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
 
 ## What it does
 

@@ -1,14 +1,14 @@
 # Roadmap
 
-Current source36 [package](continuation/PACKAGE-DEV36.md)/
-[CI](continuation/CI-DEV36.md) are verified for exact9833caf:305-file archive,
-spaced140pass2skip, fourPOSIX307pass113skip, portable readiness15pass2skip.
-CI failed overall on the known Windows Image refusal; native gates remain closed,
-installed31 preserved and native/routing/Windows acceptance incomplete.
-Next Sol High reviews an inspection-only activation proposal and exact future
-artifacts with all gates closed; no Codex/inference/install/config/trust grant.
-[RESUME-PLAN](continuation/RESUME-PLAN.md) retains later sessions/gates; do not repeat
-completed implementation/package or accepted design research. Full93 remains scope.
+The [completion plan](continuation/COMPLETION-PLAN.md) is the current required work:
+all 93 IDs mapped to7workstreams and6finite milestones, macOS-first then actual platform/
+release acceptance. Current review/planning only; source38 uninstalled, installed31/
+guards preserved. Native validation is blocked by a retained private ancestor policy,
+not a demonstrated Codex limitation. [Decision](continuation/ANCESTOR-POLICY-DECISION.md)
+does not authorize a guard change or another probe. Next Sol Medium verifies the plan.
+
+No further target/native/model/implementation/network/config/trust action under the
+current scope. Local publication pending no-network. The full product is incomplete.
 
 The sections below describe the earlier MVP scope. The expanded requested
 capabilities, including supported tool-input rewriting and owned UI, are now

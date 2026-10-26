@@ -1,0 +1,894 @@
+{
+  "date": "2026-10-26",
+  "kind": "completion-plan-not-execution-authorization",
+  "basis": {
+    "requirements": "docs/continuation/REQUIREMENTS.md",
+    "acceptanceQueue": "docs/continuation/MACOS-QUEUE-38.md",
+    "sourceVersion": "0.2.0-dev.38",
+    "installedVersion": "0.2.0-dev.31",
+    "startingCommit": "e3a98ebc8e62648f34474dfa4b98f5db3c7a14e5",
+    "freshHostInventory": false
+  },
+  "capabilityCounts": {
+    "supported": 65,
+    "unverified": 9,
+    "approximation": 12,
+    "unavailable": 3,
+    "deliberately excluded by policy": 4
+  },
+  "acceptanceCounts": {
+    "V": 60,
+    "B": 14,
+    "A": 12,
+    "U": 3,
+    "P": 4
+  },
+  "countsAreNotCompletionPercentage": true,
+  "allGuardsRemainUnchanged": true,
+  "executionAuthorized": false,
+  "networkAuthorized": false,
+  "workstreams": {
+    "W1": {
+      "name": "Native events, safe tool decisions and live state",
+      "ids": [
+        "EV-01",
+        "EV-02",
+        "EV-03",
+        "EV-04",
+        "EV-05",
+        "EV-06",
+        "EV-07",
+        "EV-08",
+        "EV-09",
+        "EV-10",
+        "EV-11",
+        "EV-12",
+        "EV-13",
+        "EV-14",
+        "EV-17",
+        "EV-19",
+        "PL-01"
+      ]
+    },
+    "W2": {
+      "name": "Configured task/subagent routing",
+      "ids": [
+        "UI-22",
+        "EV-15"
+      ]
+    },
+    "W3": {
+      "name": "Owned UI, accessibility and host fidelity",
+      "ids": [
+        "UI-01",
+        "UI-02",
+        "UI-03",
+        "UI-04",
+        "UI-05",
+        "UI-06",
+        "UI-07",
+        "UI-08",
+        "UI-09",
+        "UI-10",
+        "UI-11",
+        "UI-12",
+        "UI-13",
+        "UI-14",
+        "UI-15",
+        "UI-16",
+        "UI-17",
+        "UI-18",
+        "UI-19",
+        "UI-20",
+        "UI-21",
+        "SEC-10",
+        "EX-08"
+      ]
+    },
+    "W4": {
+      "name": "Authoring, skills and practical examples",
+      "ids": [
+        "AU-01",
+        "AU-02",
+        "AU-03",
+        "AU-04",
+        "AU-05",
+        "AU-06",
+        "AU-07",
+        "AU-08",
+        "AU-09",
+        "AU-10",
+        "AU-11",
+        "AU-12",
+        "AU-13",
+        "AU-14",
+        "AU-15",
+        "EX-01",
+        "EX-02",
+        "EX-03",
+        "EX-04",
+        "EX-05",
+        "EX-06",
+        "EX-07",
+        "SK-01",
+        "SK-02",
+        "SK-03",
+        "SK-04"
+      ]
+    },
+    "W5": {
+      "name": "Security, privacy, retention and process contracts",
+      "ids": [
+        "SEC-01",
+        "SEC-02",
+        "SEC-03",
+        "SEC-04",
+        "SEC-05",
+        "SEC-07",
+        "SEC-08",
+        "SEC-09"
+      ]
+    },
+    "W6": {
+      "name": "Native platform/client compatibility",
+      "ids": [
+        "PL-02",
+        "PL-03",
+        "PL-04",
+        "PL-05"
+      ]
+    },
+    "W7": {
+      "name": "Release, evidence, unsupported/policy dispositions",
+      "ids": [
+        "UI-23",
+        "EV-16",
+        "EV-18",
+        "AU-16",
+        "SEC-06",
+        "PL-06",
+        "GOV-01",
+        "GOV-02",
+        "GOV-03",
+        "GOV-04",
+        "GOV-05",
+        "GOV-06",
+        "GOV-07"
+      ]
+    }
+  },
+  "requirements": [
+    {
+      "id": "UI-01",
+      "experience": "UI-01 Open a mod-owned pane",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-02",
+      "experience": "UI-02 Open a persistent side panel",
+      "capabilityStatus": "unverified",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-03",
+      "experience": "UI-03 Use tabs within a mod",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-04",
+      "experience": "UI-04 Click buttons locally",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-05",
+      "experience": "UI-05 Enter fields and choose options",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-06",
+      "experience": "UI-06 See status and activity",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-07",
+      "experience": "UI-07 Show band near prompt/transcript",
+      "capabilityStatus": "unverified",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-08",
+      "experience": "UI-08 Apply themes",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-09",
+      "experience": "UI-09 Set backgrounds",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-10",
+      "experience": "UI-10 Show footer information",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-11",
+      "experience": "UI-11 Show indicators",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-12",
+      "experience": "UI-12 Render rich code",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-13",
+      "experience": "UI-13 Render tables",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-14",
+      "experience": "UI-14 Render Mermaid",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-15",
+      "experience": "UI-15 Render charts",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-16",
+      "experience": "UI-16 Inspect diffs",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-17",
+      "experience": "UI-17 Restyle native tool rows",
+      "capabilityStatus": "unavailable",
+      "savedAcceptanceDisposition": "U",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-18",
+      "experience": "UI-18 Replace native spinner",
+      "capabilityStatus": "unavailable",
+      "savedAcceptanceDisposition": "U",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-19",
+      "experience": "UI-19 Restyle native dialogs",
+      "capabilityStatus": "unavailable",
+      "savedAcceptanceDisposition": "U",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-20",
+      "experience": "UI-20 Restyle native transcript",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-21",
+      "experience": "UI-21 Distinguish official extension, owned component and companion",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "UI-22",
+      "experience": "UI-22 Consider separate app-server client only with agreement",
+      "capabilityStatus": "unverified",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W2"
+    },
+    {
+      "id": "UI-23",
+      "experience": "UI-23 Avoid unsupported application patch/fork",
+      "capabilityStatus": "deliberately excluded by policy",
+      "savedAcceptanceDisposition": "P",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "EV-01",
+      "experience": "EV-01 Observe session start",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-02",
+      "experience": "EV-02 Observe covered tool start",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-03",
+      "experience": "EV-03 Observe tool completion",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-04",
+      "experience": "EV-04 Observe turn completion",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-05",
+      "experience": "EV-05 Observe compaction, subagent, interruption and other useful triggers",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-06",
+      "experience": "EV-06 Block covered risky calls",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-07",
+      "experience": "EV-07 Hold a covered call for explicit decision",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-08",
+      "experience": "EV-08 Alter harmless tool input opt-in",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-09",
+      "experience": "EV-09 Resolve multiple mod decisions predictably",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-10",
+      "experience": "EV-10 Handle allow/deny/cancel/timeout/malformed/failure safely",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-11",
+      "experience": "EV-11 Share metadata across hook processes",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-12",
+      "experience": "EV-12 Isolate sessions and deliberately share projects",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-13",
+      "experience": "EV-13 Bound retention and cleanup",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-14",
+      "experience": "EV-14 Show event-driven live updates",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-15",
+      "experience": "EV-15 Route a new explicitly configured agent/task",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W2"
+    },
+    {
+      "id": "EV-16",
+      "experience": "EV-16 Intercept/change current selected model or rewrite prompts",
+      "capabilityStatus": "deliberately excluded by policy",
+      "savedAcceptanceDisposition": "P",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "EV-17",
+      "experience": "EV-17 Observe model-request lifecycle separately from routing",
+      "capabilityStatus": "unverified",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "EV-18",
+      "experience": "EV-18 Avoid automatic approval",
+      "capabilityStatus": "deliberately excluded by policy",
+      "savedAcceptanceDisposition": "P",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "EV-19",
+      "experience": "EV-19 Keep local callbacks deterministic and usage transparent",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "AU-01",
+      "experience": "AU-01 Run immediate local user command",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-02",
+      "experience": "AU-02 Invoke a tool through the model",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-03",
+      "experience": "AU-03 Invoke reusable skill",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-04",
+      "experience": "AU-04 Validate/replay/report from CLI",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-05",
+      "experience": "AU-05 Run UI actions without model turns",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-06",
+      "experience": "AU-06 Describe a mod and scaffold supported components",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-07",
+      "experience": "AU-07 Inspect declared access before use",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-08",
+      "experience": "AU-08 Validate contracts before install",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-09",
+      "experience": "AU-09 Replay/test synthetic events safely",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-10",
+      "experience": "AU-10 Review source changes before installation",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-11",
+      "experience": "AU-11 Install through supported local mechanism",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-12",
+      "experience": "AU-12 Reload/update safely",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-13",
+      "experience": "AU-13 Disable without damage",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-14",
+      "experience": "AU-14 Remove cleanly",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-15",
+      "experience": "AU-15 Restore configuration/rollback",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "AU-16",
+      "experience": "AU-16 Package the correct supported distribution",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "SEC-01",
+      "experience": "SEC-01 Understand each process's authority",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W5"
+    },
+    {
+      "id": "SEC-02",
+      "experience": "SEC-02 Keep filesystem operations selected-project scoped",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W5"
+    },
+    {
+      "id": "SEC-03",
+      "experience": "SEC-03 Bound subprocesses and cleanup",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W5"
+    },
+    {
+      "id": "SEC-04",
+      "experience": "SEC-04 Make network access explicit",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W5"
+    },
+    {
+      "id": "SEC-05",
+      "experience": "SEC-05 Minimize event fields and context access",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W5"
+    },
+    {
+      "id": "SEC-06",
+      "experience": "SEC-06 Do not collect secrets/environment values",
+      "capabilityStatus": "deliberately excluded by policy",
+      "savedAcceptanceDisposition": "P",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "SEC-07",
+      "experience": "SEC-07 Keep prompts/transcripts private",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W5"
+    },
+    {
+      "id": "SEC-08",
+      "experience": "SEC-08 Opt in to metadata and sensitive telemetry separately",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W5"
+    },
+    {
+      "id": "SEC-09",
+      "experience": "SEC-09 Preserve private storage under concurrency",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W5"
+    },
+    {
+      "id": "SEC-10",
+      "experience": "SEC-10 Maintain UI accessibility and lifecycle",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "EX-01",
+      "experience": "EX-01 blast-radius explains likely command impact",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "EX-02",
+      "experience": "EX-02 filetree explores selected project with Git status",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "EX-03",
+      "experience": "EX-03 replay-theater inspects prior-turn edits",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "EX-04",
+      "experience": "EX-04 Restore a reviewed previous change separately",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "EX-05",
+      "experience": "EX-05 token-weather shows context occupancy",
+      "capabilityStatus": "unverified",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "EX-06",
+      "experience": "EX-06 Show available usage/activity transparently",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "EX-07",
+      "experience": "EX-07 cache-tax passive cache/cost display",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "EX-08",
+      "experience": "EX-08 prismantis theme/rich rendering equivalent",
+      "capabilityStatus": "approximation",
+      "savedAcceptanceDisposition": "A",
+      "primaryWorkstream": "W3"
+    },
+    {
+      "id": "SK-01",
+      "experience": "SK-01 Systematic debugging automation",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "SK-02",
+      "experience": "SK-02 Verification before completion",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "SK-03",
+      "experience": "SK-03 Review preparation",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "SK-04",
+      "experience": "SK-04 Mod scaffolding automation",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W4"
+    },
+    {
+      "id": "PL-01",
+      "experience": "PL-01 Usable native macOS CLI installation",
+      "capabilityStatus": "unverified",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W1"
+    },
+    {
+      "id": "PL-02",
+      "experience": "PL-02 Usable actual desktop integration",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W6"
+    },
+    {
+      "id": "PL-03",
+      "experience": "PL-03 Linux portability",
+      "capabilityStatus": "unverified",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W6"
+    },
+    {
+      "id": "PL-04",
+      "experience": "PL-04 Native Windows compatibility",
+      "capabilityStatus": "unverified",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W6"
+    },
+    {
+      "id": "PL-05",
+      "experience": "PL-05 WSL compatibility separately",
+      "capabilityStatus": "unverified",
+      "savedAcceptanceDisposition": "B",
+      "primaryWorkstream": "W6"
+    },
+    {
+      "id": "PL-06",
+      "experience": "PL-06 CI separates platform contracts from host tests",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "GOV-01",
+      "experience": "GOV-01 Review full requested primary documentation",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "GOV-02",
+      "experience": "GOV-02 Use REA only for concrete unresolved questions",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "GOV-03",
+      "experience": "GOV-03 Preserve MIT and independent-project status",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "GOV-04",
+      "experience": "GOV-04 Preserve local history and user work",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "GOV-05",
+      "experience": "GOV-05 Publish sanitized durable checkpoints",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "GOV-06",
+      "experience": "GOV-06 Honor human-controlled model switches",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W7"
+    },
+    {
+      "id": "GOV-07",
+      "experience": "GOV-07 Account for every capability before full completion",
+      "capabilityStatus": "supported",
+      "savedAcceptanceDisposition": "V",
+      "primaryWorkstream": "W7"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "M0",
+      "objective": "Saved-evidence reconciliation and native validation decision",
+      "state": "review/planning complete; launch decision pending",
+      "dependencies": [],
+      "scopeNote": "Planning/review complete; native launch choice remains a separate pending decision."
+    },
+    {
+      "id": "M1",
+      "objective": "Finish required macOS source integration and independent acceptance",
+      "state": "planned-not-authorized",
+      "dependencies": [
+        "M0"
+      ],
+      "scopeNote": "Depends on completed planning, not completion of the pending native launch choice."
+    },
+    {
+      "id": "M2",
+      "objective": "One reviewed macOS candidate and native acceptance batch",
+      "state": "planned-not-authorized",
+      "dependencies": [
+        "M1"
+      ],
+      "externalGates": [
+        "human native-launch validation decision",
+        "implementation and candidate review",
+        "exact native/setup/trust/usage campaign approvals"
+      ]
+    },
+    {
+      "id": "M3",
+      "objective": "Windows CI/security and gated platform implementation",
+      "state": "planned-not-authorized",
+      "dependencies": [
+        "M2"
+      ],
+      "externalGates": [
+        "macOS-first milestone",
+        "Windows security implementation and CI/network scope"
+      ]
+    },
+    {
+      "id": "M4",
+      "objective": "Native Windows11, Linux and WSL acceptance",
+      "state": "planned-not-authorized",
+      "dependencies": [
+        "M2"
+      ],
+      "platformDependencies": {
+        "Windows11": [
+          "M3"
+        ],
+        "Linux": [
+          "M2"
+        ],
+        "WSL": [
+          "M2"
+        ]
+      },
+      "externalGates": [
+        "actual selected hosts",
+        "exact native test authorizations"
+      ]
+    },
+    {
+      "id": "M5",
+      "objective": "All-target requirement closure and reproducible release",
+      "state": "planned-not-authorized",
+      "dependencies": [
+        "M2",
+        "M3",
+        "M4"
+      ],
+      "externalGates": [
+        "all required target closure",
+        "publication/network authorization"
+      ]
+    }
+  ],
+  "publication": "local-only-pending-no-network"
+}

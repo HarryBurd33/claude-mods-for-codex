@@ -1,40 +1,49 @@
-# Next GPT-6.1 Sol High — ancestor-policy review only
+# Completion plan and ancestor review complete — next Sol Medium
 
-Read ANCESTOR-POLICY-REVIEW.md, ANCESTOR-RESULT.md, PREFLIGHT-RESULT.md and
-CHECKER-OFFLINE.md. Current handoff is prepared on Medium from local811834b.
-Exact machine metadata is private in .local/ancestor-observation/RESULT.json.
+2026-10-26, Sol High, startinglocale3a98eb. Human added project-wide remaining-work
+and completion planning. Read COMPLETION-PLAN.md/JSON, ANCESTOR-POLICY-DECISION.md,
+M1-FIRST-BATCH.md, current STATUS.md and detailed REQUIREMENTS/MACOS-QUEUE-38.
 
-High must review the private ancestor-policy blocker using existing records/source
-only. Distinguish this checker admission rule from Codex permissions/product guards/
-human trust. The historical two-file reader did not apply the newer ancestor mode
-policy; do not run it or treat that as permission to remove the rule. Provide one
-concrete review/decision proposal with bounded acceptance/approval requirements.
+Completed: saved-evidence security review, all 93 IDs mapped exactly once to7primary
+workstreams/6milestones, concrete first independent macOS acceptance proposal,
+and corrected stale current README/status/roadmap/resume summaries. Historical
+records remain in Git at e3a98eb and their dedicated review/native/package files.
 
-No selected target metadata/content/ACL/group lookup, permission/policy/source
-implementation change, native execution, inference, network, setup, config/trust
-write, alternate-path selection or baseline adoption. Installed31 and every guard
-remain unchanged. Both grants consumed, both gates closed; do not reset/delete
-ATTEMPT/OBSERVATION or retry. Historical unused-grant files are not active authority.
+Saved queue:60 V / 12 A / 14 B / 3 U / 4 P; V is narrow-target evidence, not a completion percentage.
+Remaining implementation includes production decisions/events, native configured
+routing, reproduced UI/lifecycle defects and guarded Windows paths. Acceptance spans
+accessibility/native failures/optional events/examples, actual platforms and release.
+No source/guard changes or new tests/host inventory in this planning stage.
 
-Private .local/ancestor-policy-handoff holds source/evidence hashes, verification,
-semantic task and checkpoint receipt. Records-only verification:
-python3 -B .local/ancestor-policy-handoff/VERIFY.py
-No tests or native callbacks rerun during Medium handoff preparation.
+Review conclusion: retain the strict ancestor refusal and stop the probe chain.
+Recorded write mode already explains it; more metadata cannot pass that unchanged
+predicate. Independent macOS work can progress. One explicit later decision selects
+continued blockage, another official entry, or a validation-trust amendment for a
+human-operated trial. No option accepted/executed; no guard is silently bypassed.
 
-Next exact setting **GPT-6.1 Sol High**, because review concerns a security boundary:
-a narrow read-only observation versus later execution/trust. Stop for Medium after
-the hard review decisions are concrete. No implementation under this review scope.
+Both grants remain consumed/gatesclosed. Installed31/logging/model/permissions/trust/
+Windows guards preserved. No target/permission/policy/implementation/native/additional
+model/network/config/trust/baseline action. No subagent/worker or background work.
 
-No-network instruction means local checkpoint only; GitHub upload/remote verification
-remain pending. Exact local SHA/tree/private checkpoint in ignored root HANDOFF.md/
-private SYNC.json. Latest previously verified public d3c4682 is historical. Preserve
-other-chat input/review/generations/heartbeat/.gitignore. No background work.
+Next exact setting GPT-6.1 Sol Medium: verify the plan/map/source pins, then present
+one consolidated next-scope decision. Start with the prepared independent UI-only
+M1 batch if the human chooses it; no tool/UI opening under verification-only scope.
+Actual implementation/security/routing needs High and a new implementation scope.
+Do not repeat old package/CI/probe loops or re-ask accepted manual-supervision facts.
+
+Records-only verification:
+python3 -B .local/completion-review/VERIFY.py
+
+Private .local/completion-review has reconciliation, preserved19evidence pins,
+verification/semantic task/SYNC. Exact local commit/tree/private checkpoint in ignored
+root HANDOFF.md. Current no-network guard prevents upload/remote verification:
+new local plans are NOT synchronized. Historical last verified publicd3c4682 unqueried.
+Preserve other-chat input/review/generations/heartbeat and unrelated .gitignore.
 
 Resume:
-“I’ve switched to GPT-6.1 Sol High. Continue from the local ancestor-policy handoff.
-Read docs/continuation/ANCESTOR-POLICY-REVIEW.md and HANDOFF.md. Review the blocker
-using saved evidence/source only and prepare the next bounded decision proposal.
-Preserve installed31/all guards. No further target reads, permission or policy
-changes, implementation, native execution, inference, network, setup, config/trust
-changes or baseline adoption. Both grants remain consumed. Stop for Medium when
-the difficult review is complete.”
+“I’ve switched to GPT-6.1 Sol Medium. Continue from the local completion-plan checkpoint.
+Read docs/continuation/HANDOFF.md, COMPLETION-PLAN.md and ANCESTOR-POLICY-DECISION.md.
+Verify the93-ID plan and preserved evidence, then present the prepared next-scope
+choice. Preserve installed31/all guards. No target reads, implementation, permission/
+policy changes, native execution, extra model runs, network or config/trust changes.
+Both grants remain consumed; no retries. Stop for High before consequential work.”
