@@ -1,5 +1,35 @@
 # Continuation verification log
 
+## Source38 exact verification complete — current — 2026-10-26
+
+[PACKAGE-DEV38](PACKAGE-DEV38.md) verifies exact9016cb0/tree85712945:
+321 files; spaced extraction159cases157pass0fail2skip; validate3/replay4.
+Six packaged describe/closed-entry checks and fixed Node inspection passed.
+[CI-DEV38](CI-DEV38.md): four POSIX lanes324pass0fail113skip each;
+Windows portable reliability1pass5POSIXskip. Overall CI remains failed at the
+known Installer Image refusal in both Windows integration lanes. Original bounds
+failure remains unresolved; no native Windows/WSL or generic containment claim.
+Installed31/owned251/settings/data/config preserved; known unaccepted project-trust
+addition remains explicit. Native gates closed, native inspection transport absent.
+No Codex/inference/install/config/trust change or native-input refresh.
+
+Next remains **GPT-6.1 Sol Medium**, for a read-only macOS acceptance triage using
+existing93-row evidence. Do not repeat exact38packaging, blocked native admission
+research or unrelated Windows work. Stop for High before consequential source/
+security/integration changes or new drift. No native/model/install authority carries
+forward. This summary supersedes earlier pending38 and next-High directions below.
+
+Commands actually run on macOS/Node24.22.0: anonymous exact-source clone;
+`npm pack --ignore-scripts --offline --json` with isolated local cache; strict
+archive verifier; selected17packaged test files including reliability; `npm run
+validate`; `npm run replay`; Node-only describe/refusal/fixed inspection entries;
+private source38 preservation verifier. Packaged suite duration14.9sec. All six
+new reliability cases pass in packaged tests and each POSIX CI lane. No broad
+suite repeated just for documentation. An ad-hoc refusal check initially expected
+the word “refused” from all drivers; routing's existing fixed message instead says
+“no run is authorized.” The check was corrected to the documented messages;
+no product code/assertion was changed or product failure hidden.
+
 ## Source28 component authoring — 2026-10-24 — Sol High
 
 Human resumed a2f76b4. [DEV28-REVIEW](DEV28-REVIEW.md) gives exact implementation,

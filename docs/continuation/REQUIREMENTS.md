@@ -1,5 +1,24 @@
 # Requirements ledger
 
+## Source38 exact verification complete — current — 2026-10-26
+
+[PACKAGE-DEV38](PACKAGE-DEV38.md) verifies exact9016cb0/tree85712945:
+321 files; spaced extraction159cases157pass0fail2skip; validate3/replay4.
+Six packaged describe/closed-entry checks and fixed Node inspection passed.
+[CI-DEV38](CI-DEV38.md): four POSIX lanes324pass0fail113skip each;
+Windows portable reliability1pass5POSIXskip. Overall CI remains failed at the
+known Installer Image refusal in both Windows integration lanes. Original bounds
+failure remains unresolved; no native Windows/WSL or generic containment claim.
+Installed31/owned251/settings/data/config preserved; known unaccepted project-trust
+addition remains explicit. Native gates closed, native inspection transport absent.
+No Codex/inference/install/config/trust change or native-input refresh.
+
+Next remains **GPT-6.1 Sol Medium**, for a read-only macOS acceptance triage using
+existing93-row evidence. Do not repeat exact38packaging, blocked native admission
+research or unrelated Windows work. Stop for High before consequential source/
+security/integration changes or new drift. No native/model/install authority carries
+forward. This summary supersedes earlier pending38 and next-High directions below.
+
 ## Source38 offline reliability leads reproduced/corrected — current — 2026-10-26
 
 [DEV38-REVIEW](DEV38-REVIEW.md): fixed Node regressions reproduced late request

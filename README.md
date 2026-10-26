@@ -4,9 +4,16 @@ Development source **0.2.0-dev.38** corrects reproduced offline transport deadli
 
 **Installed production remains 0.2.0-dev.31**, with approved settings, scoped logging and human trust preserved. No Codex invocation, inference, installation, config/trust change or native-input refresh occurred. The known project-trust addition remains unaccepted; no new baseline. Full93-capability work remains incomplete.
 
-Exact source38 CI/package verification is pending. [Source37 CI](docs/continuation/CI-DEV37.md) retains the known Windows Image refusal; native Windows and original bounds gaps remain unresolved. Node fixed-peer tests do not establish native execution or descendant containment.
+Exact source38 [package checks](docs/continuation/PACKAGE-DEV38.md) pass:321files,
+157packaged tests pass,2skip. [CI](docs/continuation/CI-DEV38.md) passes all four POSIX
+lanes (324pass each), but fails both Windows integration lanes at the known
+Installer Image refusal. Original bounds/nativeWindows gaps remain unresolved.
+Node fixed-peer tests do not establish native execution or descendant containment.
 
-**Next: GPT-6.1 Sol Medium** for exact38CI/package/source-only verification. [Handoff](docs/continuation/HANDOFF.md), [future plan](docs/continuation/RESUME-PLAN.md), [setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
+**Next: remain on GPT-6.1 Sol Medium** for read-only macOS acceptance triage;
+High before consequential changes. [Handoff](docs/continuation/HANDOFF.md),
+[future plan](docs/continuation/RESUME-PLAN.md), [setup](docs/setup.md),
+[privacy](docs/privacy.md), [removal](docs/removal.md).
 
 ## What it does
 

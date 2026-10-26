@@ -1,133 +1,88 @@
-# Source38 offline reliability corrected — next GPT-6.1 Sol Medium
+# Source38 verified — next read-only macOS acceptance triage
 
-2026-10-26, America/Denver. Sol High resumed0fcc04e under explicit fixed-Node
-investigation/correction scope. Both recorded leads reproduced and minimal timing/
-result guards were corrected. **No Codex invocation, inference, install/config/trust
-change, native-input refresh or gate opening.** Installed31/all host guards preserved.
-Source38 uninstalled; full93/native routing/nativeWindows acceptance incomplete.
+2026-10-26, America/Denver. GPT-6.1 Sol Medium completed the exact-source CI,
+package and closed-entry handoff from9016cb0. **Stay on GPT-6.1 Sol Medium** for the
+next routine read-only step; High is required before consequential implementation,
+security/integration changes or unexpected drift. No product-completion claim.
 
-Read DEV38-REVIEW.md, STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
-RESUME-PLAN.md and ignored root HANDOFF.md. PACKAGE-DEV37/CI-DEV37 stay exact prior
-source evidence, not source38 results.
+Read STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md,
+PACKAGE-DEV38.md, CI-DEV38.md, RESUME-PLAN.md and the ignored local HANDOFF.md.
 
-## Actual reproduction and acceptance
+## Completed and limits
 
-Before correction, new diagnostic fixtures/regression harness ran6cases:1pass5fail:
+- Source38 exact9016cb0/tree85712945;321-file archive SHA256
+  `f4dc509197b9a6ba0d537c27c02ebb43b95ec1fd973cb19e7bde425e55d81b0b`.
+  Anonymous clone, integrity/default/MIT/private-file checks pass; spaced package
+  tests159total157pass0fail2skip, validate3/replay4. Six entry checks remain closed;
+  fixed Node inspection matched cwd/cleanup. No native run or selected private plan.
+- Exact CI40352685600: four POSIX324pass0fail113skip each; portable reliability
+  1pass5POSIXskip. Overall failure retains known Windows Installer Image refusal
+  in both integration lanes. Bounds cause/nativeWindows11/WSL remain unresolved.
+- Source38 fixed-peer timing/group-result corrections are described in DEV38-REVIEW.
+  They establish no generic descendant containment or native behavior. Gates stay
+  unconditionally closed; native inspection transport is absent.
+- Installed production31 remains enabled/previously human-trusted,251cache files/
+  approved settings/data/sources/marketplace unchanged. Scoped logging, parent model,
+  optional capture/rules and Windows guards preserved. Source38 is not installed.
+- Existing one added project-trust entry remains unknown/unaccepted; all prior
+  protected values match with only it removed in memory. Raw config matches the
+  existing observation; never refresh/adopt/restore this baseline. New drift=>High.
+- No Codex invocation, inference, install/config/trust action or native-input refresh.
+  No new worker/background model task; fixed owned fixtures completed/reaped.
 
-- Legacy readiness delayed timer/late peer reply attempted5requests; required1.
-- Readiness serialization stall attempted2requests; required1.
-- Inspection serialization stall attempted2requests; required1.
-- Both silent-descendant cases reported observation-complete while their old group
-  was still present at the main cleanup snapshot; required review-required.
+## Next bounded work, in priority order
 
-The isolated Node harness stalls only its own timer/serialization at fixed durations.
-No arbitrary public clock/transport/executor or installed-client patch. Silent leaf
-closes standard streams, stays in the fixture group and self-exits after1sec; separate
-signal0-only fixture teardown observed group absence before tests asserted/returned.
-These are reproduced **offline Node** failures, not native Codex failures.
+1. Coordinate one repository writer using the existing checkpoint lease. Preserve
+   the other chat's `.gitignore` edit, prior checkpoint generations/semantic inputs
+   and waiting automation. No lease stealing or second task queue. Verify branch,
+   source38 private checker/new verification checker and current authorization first.
+2. Read-only reconciliation of REQUIREMENTS93rows, MACOS-ACCEPTANCE, NATIVE-DEV31,
+   REENABLE-DEV31 and later source32–38 evidence. Existing audit/queue historical
+   headers are not current priorities or an aggregate completion score. Produce a
+   short current macOS acceptance queue keyed to requirement IDs: already verified,
+   bounded approximation, unsupported with evidence, or incomplete/blocked. Keep
+   host/version/evidence/test limits explicit. Do not reread private sessions.
+3. Choose one concrete remaining supported macOS acceptance gap that can next
+   advance, and prepare the smallest reviewable action/decision with acceptance
+   criteria. Prefer usable product acceptance over more speculative routing proof
+   infrastructure. Do not repeat completed packaging or blocked native startup
+   research; routing can remain explicitly blocked pending a supported boundary.
+4. If next action needs consequential code/security/integration, save/upload/verify
+   and request human GPT-6.1 Sol High. If it needs a live run/install/config/trust,
+   prepare exact review first and obtain its separate specific authorization. No
+   carried-over model-run grant; human controls selected model/effort and trust.
+5. Preserve the Windows failure/native-host plan for later; human priority is macOS
+   acceptance first. Do not broaden logging or relax Windows guards to close a row.
 
-After corrections, reliability+readiness+inspection **34pass0fail**,~14.4sec.
-Full suite after strict identity checks **437cases324pass0fail113skip**,~16.1sec.
-Final full rerun after leader-exit signal guard: same324/0/113/437,~15.9sec.
-validate3mods/replay4fixtures pass; no command executed. Runtime darwin/Node24.22.0.
-All six new reliability cases included; Windows will skip5POSIX cases, run1pure case.
-Exact38CI/package/anonymous clone/spaced extraction remain pending Medium.
+Acceptance for next Medium step: all93IDs retained, no source/host mutation, no
+unjustified native/compatibility claim, finite prioritized macOS queue and exact next
+bounded action/model/authorization. This is future scope, not autonomous continuation.
 
-## Code contracts and justified changes
+## Ownership, artifacts and operations
 
-- proofs/readiness-driver.mjs: monotonic sample before packet acceptance, each outgoing
-  item and after serialization; final clock sample. Local taken queue stops explicitly.
-- proofs/inspection-driver.mjs: retains packet sample, adds each-item/post-serialization
-  checks. Both drivers count only post-check write attempts; no execution/billing claim.
-  Typed denials remain within deadline/cancel bounds; no approval or successful tool.
-- proofs/process-group-observation.mjs: only signal0 to the spawned group's recorded
-  ID; ESRCH=>absent-at-probe, presence=>present-or-reused, other errors=>unavailable.
-  Reject special0/1, negative/noninteger/out-of-range identities. Windows returns
-  not-observed-on-platform before syscall. No process enumeration or broad PID adoption.
-- Both drivers preserve processReaped as direct close, add group/fixture labels and
-  allDescendantsVerified=false. POSIX presence/unknown absence aborts descendants-
-  unresolved. Report pre-fixture-teardown status even if later fixture self-exit succeeds.
-- TERM/KILL stops after leader exit/close except the known fixed pipe-holding leaf
-  scenario whose code cannot change groups. Native/arbitrary descendants get no such
-  exception. A stale/reused group is never killed after leader exit; it is uncertainty.
-- proofs/readiness-{fixtures,peer,leaf}.mjs and inspection-{fixtures,peer}.mjs add only
-  fixed scenarios/bounded silent mode. proofs/reliability-probe.mjs is a fixed isolated
-  Node regression runner; test/reliability.test.mjs6cases. Common machine adds only a
-  fixed reason; four version carriers become0.2.0-dev.38, CI adds portable suite.
+Private paths/raw logs/machine/config evidence/root handoff remain ignored. New
+verification notes use separate hashes; original38and earlier manifests remain
+sealed. The ignored handoff names exact checker/commands/logs/source/tree, original
+local commit branch, synchronized checkpoint SHA and lease release. Current local
+router/config signals are unavailable; no repair/dispatch or Codex collector. Task
+usage/API dollars/context unknown, never zero. Existing other-chat heartbeat unchanged.
 
-All native gate function bodies are byte-identical to0fcc04e. Shared routing/native
-runtime, inspection contract,31protected storage/Windows/config/hooks files, defaults/
-MCP/rules/logging selection unchanged. No new native PLAN/INPUT/current binary/config
-snapshot. Native inspection transport remains absent; old dormant native path closed.
+No installation/configuration change means no new removal/rollback action. Existing
+setup/use/update/disable/removal instructions remain in docs; installed31 evidence
+cannot be transferred to source38 or a different host.
 
-## Limits and primary references
-
-Group absence is a point observation, not proof no child escaped or remote work was
-cancelled. PID reuse, permission errors and zombies are not inferred as safe. Kernel
-stalls/process suspension are not bounded by a JavaScript clock. Generic descendant
-containment needs separately reviewed supported OS supervision; not implemented here.
-
-DEV38-REVIEW links Node24 process.kill, Linux man-pages6.19 and historical Apple BSD
-manual retrieved2026-10-26. Both Open Group POSIX page attempts403, no evidence used.
-No native source/endpoint refresh, unrelated research or host process/credential scan.
-Existing remote-control/startup blockers persist; no internal marker/policy edit/app
-patch or native approval request. Do not repeat that blocked admission research here.
-
-## Preservation and provenance
-
-Starting previous Medium verifier passed. New source38 source-only verifier keeps
-historical37/36.1 artifact checks at exact Git versions while checking current
-intentional38runtime/docs separately. Old manifests/archives untouched. Exact new
-checker named in ignored handoff; old worktree pins would flag these intentional
-source changes, which are not an accepted host config/trust baseline.
-
-Raw config matches36.1; known one added project-trust entry remains unknown/unaccepted,
-prior protected values match after removing only it in memory. Owned installed31cache
-251/settings/data/sources/marketplace unchanged;93ledger IDs/order preserved. No hook
-source/command/private session opened, no environment/key/credential-store discovery.
-New protected/runtime differences must stop for High classification, never restoration.
-
-## Next exact setting — Medium, no native scope
-
-**GPT-6.1 Sol Medium.** Difficult reproduction/correction is complete. Verify exact
-source38 CI, public package/spaced extraction and source-only records:
-
-1. Coordinate one writer; inspect branch/dirty state/current checkpoint, run new38
-   private verifier and acquire released lease. Preserve other-chat .gitignore
-   /.checkpoint/ edit, prior generations/input/review and waiting automation. No steal.
-2. Match exact implementation commit/tree (final/ignored handoff) to CI metadata and
-   decoded logs. Separate4POSIX results, portable pure/skipped tests and integration
-   failures. Source37's known Windows Image failure/bounds/native11/WSL gaps remain;
-   no assertion/guard relaxation, speculative repair or rerun-until-green.
-3. Anonymous exact-source clone; offline ignore-scripts npm archive/isolated cache;
-   strict file/source/private/link/traversal/integrity/version/default/MIT checks.
-   Include process-group-observation/reliability-probe/test and changed peer assets.
-   Run meaningful packaged selected suites/validate/replay; no selected native plan.
-4. Packaged describe/closed entry checks and fixed Node regressions only. No Codex/
-   inference/install/config/trust change, input refresh, gate or native transport work.
-   Save separate source-only verification records; keep sealed older files intact.
-5. Checkpoint/upload/verify then stop before consequential work/drift. Do not redo
-   source37 package/CI/research, old metadata classification or unrelated Windows work.
-
-No restart/trust/install/removal/rollback action needed: nothing installed/activated.
-Temporary fixture groups self-exited or were reaped by bounded owned-group cleanup
-while identity was known; no owned background process/model task left by this stage.
-No new worker/scheduler. Existing other-chat heartbeat is separate; coordinate before
-another writer. Planner unavailable config/signals was recorded; no repair/dispatch/
-Codex telemetry collector. Fresh account observation permitted ordinary usage;
-per-task/API/context measurements remain unknown. Manual semantic packages retained.
-
+[Implementation commit](https://github.com/HarryBurd33/claude-mods-for-codex/commit/9016cb0aca1d43c9d1fd87b058831a3ebb91e78b).
 [Development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
-Actual synchronized source38 commit/tree, private checkpoint and release are recorded
-after non-force upload/readback in final/ignored handoff, never guessed here.
+The final verified notes SHA/tree is recorded after upload/readback in the ignored
+handoff/final response; this file cannot contain its own commit identity.
 
-## Complete resume instruction
+## Copy-and-paste resume instruction
 
-“I've switched to GPT-6.1 Sol, Medium. Continue from the verified source38 checkpoint
-on codex/astra-groundwork. Follow docs/continuation/HANDOFF.md and ignored handoff;
-verify exact source38 CI, packaging, closed entries and source-only artifacts.
-Preserve installed31, approved settings/current preferences/unrelated entries, scoped
-logging, parent model, human trust and Windows guards. Coordinate one writer; keep
-all gates closed. No Codex, inference, install/config/trust change or native-input
-refresh. Preserve the known unaccepted project-trust difference. Stop for High before
-consequential source/security work or unexpected drift.”
+“Continue on GPT-6.1 Sol Medium from the verified source38 verification checkpoint
+on codex/astra-groundwork. Follow docs/continuation/HANDOFF.md and the ignored local
+handoff. Reconcile existing93-row macOS acceptance evidence and prepare a finite
+prioritized queue and one next reviewable action only. Preserve installed31, approved
+settings/current preferences/unrelated entries, scoped logging, parent model, human
+trust and Windows guards. Coordinate one writer and keep all gates closed. No Codex,
+inference, install/config/trust change or native-input refresh. Stop for High before
+consequential implementation/security/integration or unexpected drift.”
