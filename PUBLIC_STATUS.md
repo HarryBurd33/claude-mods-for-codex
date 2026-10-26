@@ -19,7 +19,8 @@ current zoom; screen-reader/enlarged-zoom behavior remains unverified.
 with separate project-local registration/config/data. Offline19tests pass/1skip plus
 15focused cases pass; native startup/trust/usage gates remain closed and acceptance
 blocked. No runtime/configuration change. [Exact artifacts verified; human accepted design only](docs/continuation/STOP-ONLY-VERIFIED.md).
-All execution gates remain closed. **Next: GPT-6.1 Sol High** for an existing-evidence
-launch-envelope decision review, with no native action or implementation grant.
-[Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),
-[privacy](docs/privacy.md), [removal](docs/removal.md).
+All execution gates remain closed. [Launch review-scope decision](docs/continuation/STOP-LAUNCH-DECISION.md) is ready:
+keep no-launch, or separately authorize a bounded two-file identity/config review.
+Neither permits startup; no current inputs refreshed. **Next: GPT-6.1 Sol Medium**
+for artifact verification and that human choice. [Handoff](docs/continuation/HANDOFF.md),
+[setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).

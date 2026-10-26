@@ -1,5 +1,19 @@
 # Extension architecture and security contracts
 
+## Existing-evidence launch decision prepared — current — 2026-10-26
+
+[STOP-LAUNCH-DECISION](STOP-LAUNCH-DECISION.md) separates conditional source startup
+effects from unknown current-host behavior. Existing facts do not justify a runnable
+normal-startup approval. ChoiceA keeps no-launch; choiceB would authorize only an
+exact bounded two-file identity/config-classification review, not native execution.
+Neither is newly chosen; current no-input-refresh instruction remains in force.
+Private scope copies only historical path references, no target refresh or native plan.
+
+Next **GPT-6.1 Sol Medium** for artifact/evidence verification and the A/B review-scope
+decision. Installed31/all guards preserved; no native/inference/install/config/trust/
+input-refresh/runtime action or new research/tests. Accepted Stop project design
+remains separate from every launch/usage/trust gate; full93/nativeWindows incomplete.
+
 ## Stop-only verified; project-local design accepted — current — 2026-10-26
 
 [STOP-ONLY-VERIFIED](STOP-ONLY-VERIFIED.md):32inert artifact hashes/private modes,
