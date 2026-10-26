@@ -1,5 +1,7 @@
 # Current status — source36 package verified, native admission closed
 
+Current2026-10-26 update: human accepted **manual supervision design only**. [Exact next preflight request](MANUAL-PREFLIGHT-REQUEST.md) is prepared but unapproved. Native execution/inference/config/trust/input-read gates remain closed. Earlier pending-design statements below are historical.
+
 ## Normal-startup plan prepared — current — 2026-10-26
 
 [NORMAL-STARTUP-PLAN](NORMAL-STARTUP-PLAN.md) now gives an inert official CLI operator

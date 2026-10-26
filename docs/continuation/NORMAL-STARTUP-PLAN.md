@@ -1,5 +1,7 @@
 # Proposed normal-startup Stop validation — not authorized to run
 
+Current2026-10-26 update: human accepted **manual supervision design only**. [Exact next preflight request](MANUAL-PREFLIGHT-REQUEST.md) is prepared but unapproved. Native execution/inference/config/trust/input-read gates remain closed. Earlier pending-design statements below are historical.
+
 2026-10-26, Sol High, starting7003e22. This completes preparation under
 [NORMAL-STARTUP-SCOPE](NORMAL-STARTUP-SCOPE.md). **No native execution, inference,
 installation, native config/trust write or input reread occurred.** Installed31 and
