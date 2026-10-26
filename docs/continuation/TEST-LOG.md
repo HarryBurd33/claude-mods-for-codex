@@ -1,5 +1,15 @@
 # Continuation verification log
 
+## Private checker offline-ready — current — 2026-10-26
+
+[CHECKER-OFFLINE](CHECKER-OFFLINE.md): separate private bounded preflight reader and
+closed entry adapted;43synthetic tests pass. Original checker/scope/evidence/unused
+grant preserved. No selected target read/native/inference/network/config/trust action.
+Installed31/all guards unchanged. Next Sol Medium: records-only verification, no
+activation. Local commit only; GitHub publication pending under no-network instruction.
+Earlier dated pending-adaptation/readiness sections are historical; actual preflight
+and native/full93acceptance remain incomplete.
+
 ## Normal-startup plan prepared — current — 2026-10-26
 
 [NORMAL-STARTUP-PLAN](NORMAL-STARTUP-PLAN.md) now gives an inert official CLI operator
