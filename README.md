@@ -1,5 +1,7 @@
 # Claude Mods for Codex
 
+Current development checkpoint: [normal-startup Stop validation plan](docs/continuation/NORMAL-STARTUP-PLAN.md) prepared/offline-checked only. Installed31 unchanged; native test and manual-supervision amendment unapproved. All execution gates closed; full product incomplete.
+
 Development source **0.2.0-dev.38** remains uninstalled. **Installed production is
 0.2.0-dev.31**, with approved settings, scoped logging, selected model and human
 trust preserved. Independent MIT project, not affiliated with or endorsed by

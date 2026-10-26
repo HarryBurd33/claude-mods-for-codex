@@ -1,5 +1,19 @@
 # Future sessions — current proposal36.1 — 2026-10-26
 
+## Normal-startup plan prepared — current — 2026-10-26
+
+[NORMAL-STARTUP-PLAN](NORMAL-STARTUP-PLAN.md) now gives an inert official CLI operator
+sequence, exact private artifacts and separate preflight/setup, human trust, usage,
+result-check and cleanup phases. Manual supervision is a **proposed amendment**:
+90second human stop target, no enforced deadline/output cap; human agreement pending.
+Normal startup residual effects disclosed. Installed31/all guards preserved; no
+native/input reread/inference/config/trust/install/runtime action occurred.
+Fresh offline19pass0fail1skip plus6copied-source checks pass. Next **Sol Medium**
+for records-only artifact verification and the supervision-design question.
+All actual gates closed; full93/nativeWindows incomplete. Older dated summaries
+below are historical and do not supersede this current plan.
+
+
 ## Revised normal-startup preparation scope approved — current — 2026-10-26
 
 Human selected **Prepare the revised plan on Sol High**. [NORMAL-STARTUP-SCOPE](NORMAL-STARTUP-SCOPE.md)
