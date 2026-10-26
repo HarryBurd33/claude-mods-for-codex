@@ -1,3 +1,35 @@
+# Preflight grant unused — checker readiness needs Sol High
+
+2026-10-26. Read PREFLIGHT-READINESS.md and MANUAL-PREFLIGHT-REQUEST.md.
+Human authorized the exact read-only preflight, but it has **not started**:
+existing checker is hardcoded to the old two-file grant/output and cannot cover
+the third Node file,39file aggregate bound and absence check unchanged.
+No selected target read/metadata lookup/native/inference/config/trust action.
+
+Private .local/preflight-readiness/AUTHORIZATION.json binds the unused grant to
+the frozen scope. Original proposal/request/checker/observations remain untouched.
+Medium stopped before adapting security code. Next request **GPT-6.1 Sol High**
+plus explicit minimal private checker-adaptation/offline-fixture scope. Keep actual
+target reads blocked during preparation; preserve installed31/all guards.
+No product runtime/native client/installation or permission broadening is needed.
+After reviewed offline checks, the original read grant still covers only its exact
+unchanged scope; no automatic native/setup/model authorization follows.
+
+Final commit/tree/remote verification and private checkpoint are in ignored root
+HANDOFF.md/SYNC.json. One writer; other chat's input/review/heartbeat/.gitignore
+preserved. No owned background work. Full product/native acceptance incomplete.
+
+Suggested resume instruction (also grants the missing preparation scope):
+“I’ve switched to GPT-6.1 Sol High. Continue from the verified preflight-readiness
+checkpoint. Prepare the minimal private checker adaptation and offline synthetic
+tests described in docs/continuation/PREFLIGHT-READINESS.md. Preserve installed31,
+all guards and the old checker/evidence. Keep native target reads blocked during
+this preparation; no native execution, inference, network, setup, config/trust
+changes or baseline adoption. The original exact preflight grant remains unused.
+Stop for Medium when the checker is reviewed and only routine verification remains.”
+
+Previous handoff is historical:
+
 # Manual design accepted — next read-only preflight decision
 
 2026-10-26, Sol Medium, resumed4c2e80f. Human accepted manual supervision **design
