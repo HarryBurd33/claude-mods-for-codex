@@ -1,5 +1,20 @@
 # Future sessions — current proposal36.1 — 2026-10-26
 
+## Installed31 manual check; next High review — current — 2026-10-26
+
+[Manual observation](MANUAL-DEV31-ACCESSIBILITY.md): human confirmed empty Review
+desk and readable/reachable controls without clipping at current unspecified zoom.
+Screen reader did not speak and its running state was uncertain: **unverified**,
+not an established defect. Enlarged zoom/full accessibility remain unverified. One
+explicitly authorized existing dashboard opening only; no extra model/native CLI,
+source/config/trust/install/input change. Installed31 and all guards preserved.
+
+Next **GPT-6.1 Sol High** for the bounded [Stop-only acceptance proposal](LIFECYCLE-OBSERVATION-NEXT.md):
+reuse existing authoring/observers, review separate reception/retention/privacy and
+safe launch/isolation, offline fixtures only. No activation/new runtime/native transport
+or logging expansion grant. Preserve closed gates; source/startup blockers can remain
+explicit rather than prompting another proof loop. Full93/native Windows incomplete.
+
 ## macOS evidence reconciled — current — 2026-10-26
 
 [Current93-row queue](MACOS-QUEUE-38.md) separates target-bound verification,

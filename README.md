@@ -13,10 +13,12 @@ Node fixed-peer tests do not establish native execution or descendant containmen
 [Current macOS acceptance queue](docs/continuation/MACOS-QUEUE-38.md) reconciles all93
 requirements against dated host/source evidence. Verified lifecycle work is retained;
 optional native events/routing/current context and broader accessibility remain incomplete.
-**Stay on GPT-6.1 Sol Medium** for the prepared optional human screen-reader/zoom check.
-High before consequential implementation/security/integration; no native automation
-or model-run grant. [Handoff](docs/continuation/HANDOFF.md),
-[setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
+[Manual visibility check](docs/continuation/MANUAL-DEV31-ACCESSIBILITY.md) passed at
+current zoom; screen-reader/enlarged-zoom behavior remains unverified.
+**Next: GPT-6.1 Sol High** for a Stop-only isolated lifecycle acceptance proposal and
+offline checks. No activation/capture/config/trust/model-run grant.
+[Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),
+[privacy](docs/privacy.md), [removal](docs/removal.md).
 
 ## What it does
 
