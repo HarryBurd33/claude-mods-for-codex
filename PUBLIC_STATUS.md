@@ -15,7 +15,9 @@ requirements against dated host/source evidence. Verified lifecycle work is reta
 optional native events/routing/current context and broader accessibility remain incomplete.
 [Manual visibility check](docs/continuation/MANUAL-DEV31-ACCESSIBILITY.md) passed at
 current zoom; screen-reader/enlarged-zoom behavior remains unverified.
-**Next: GPT-6.1 Sol High** for a Stop-only isolated lifecycle acceptance proposal and
-offline checks. No activation/capture/config/trust/model-run grant.
-[Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),
-[privacy](docs/privacy.md), [removal](docs/removal.md).
+[Stop-only proposal](docs/continuation/STOP-ONLY-PROPOSAL.md) reuses existing components
+with separate project-local registration/config/data. Offline19tests pass/1skip plus
+15focused cases pass; native startup/trust/usage gates remain closed and acceptance
+blocked. No runtime/configuration change. **Next: GPT-6.1 Sol Medium** for exact
+proposal/artifact verification only. [Handoff](docs/continuation/HANDOFF.md),
+[setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).

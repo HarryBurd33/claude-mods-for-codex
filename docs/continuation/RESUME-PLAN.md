@@ -1,5 +1,21 @@
 # Future sessions — current proposal36.1 — 2026-10-26
 
+## Stop-only proposal/offline review complete — current — 2026-10-26
+
+[STOP-ONLY-PROPOSAL](STOP-ONLY-PROPOSAL.md) proposes one project-local Stop hook
+with existing dispatcher, separate private config/data and no production update.
+[Offline checks](STOP-ONLY-OFFLINE.md):19pass0fail1skip plus15focused cases pass.
+Reception/retention/display remain independent; project containment includes
+children, session buckets are not exact-session reception filtering; project hook
+trust does not inherit plugin content fingerprinting. Native launch/effective-hook/
+trust/usage gates remain blocked/closed. No native execution/inference/install/
+config/trust/input refresh or runtime change. Installed31/all guards preserved.
+
+Next **GPT-6.1 Sol Medium** for exact proposal/artifact/document verification only.
+No runtime implementation, activation or extra model grant. Design/launch-scope and
+future human installation/trust/usage decisions are explicit, not implicitly accepted.
+No blocked startup research/packaging repetition; full93/nativeWindows incomplete.
+
 ## Installed31 manual check; next High review — current — 2026-10-26
 
 [Manual observation](MANUAL-DEV31-ACCESSIBILITY.md): human confirmed empty Review
