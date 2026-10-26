@@ -1,6 +1,13 @@
-# Completion plan — source38 / installed31
+# Completion plan — dev39 candidate / installed31
 
-Update2026-10-26: the first UI-only batch is [recorded](M1-UI-ACCEPTANCE.md) with partial acceptance; remaining screen-reader/zoom/reopen gaps stay open. [Next proposed source scope](M1-CALL-REVIEW-SCOPE.md) is unapproved. The plan still covers all93requirements; no implementation or native closure is inferred.
+Current selection2026-10-26: dev39 is offline-packaged and its deployment review
+retains native blockers. The next independent task is the proposed
+[M1 offline authoring-skills batch](M1-AUTHORING-SKILLS-SCOPE.md), W4/AU-06–10 and
+SK-01–04, using existing source/synthetic data only. Scope prepared, exercise not run
+or authorized. Medium sufficient; no native/model/network/config/trust dependency.
+Prior UI results are partial; original call-review scope was subsequently implemented.
+No93-ID/count closure follows from these developments. Dated source38 planning basis
+below remains historical; current candidate39 is disabled/uninstalled,31 preserved.
 
 2026-10-26, GPT-6.1 Sol High. Based only on saved repository evidence, not a new
 host/upstream inventory. Planning/review have begun; implementation and execution
@@ -72,8 +79,9 @@ Prepare one finite gap list from W1–W5, then implement only under a new explic
 scope. Use High for integration/security/routing; Medium for routine docs/packaging
 and acceptance guidance. Keep installed31 stable while building the candidate.
 
-The exact proposed first acceptance batch is [M1-FIRST-BATCH](M1-FIRST-BATCH.md),
-prepared but unapproved. It uses installed31 and can progress without a native launch.
+The first acceptance batch [M1-FIRST-BATCH](M1-FIRST-BATCH.md) has partial results
+in M1-UI-ACCEPTANCE.md. Do not repeat unavailable/unclear checks. The next proposed
+independent batch is M1-AUTHORING-SKILLS-SCOPE.md. It uses installed31 and can progress without a native launch.
 Independent user-guided accessibility/old-card checks can proceed once separately
 authorized, without new model runs or CLI startup. If a screen reader/zoom control is
 unavailable, record that once as unverified; do not repeat unclear button instructions
@@ -169,10 +177,13 @@ full cross-platform project.
 
 ## Immediate next step and operating rules
 
-Select **GPT-6.1 Sol Medium** to verify the plan's93-ID map and current review, then
-present one consolidated next-scope decision: independent macOS acceptance/source
-batch and the separate launch-validation choice. Do not start implementation, open
-UI/CLI, consume another model run, inspect targets or publish under current limits.
+Remain on **GPT-6.1 Sol Medium** for the exact offline authoring-skills batch once
+the human authorizes M1-AUTHORING-SKILLS-SCOPE.md. Use four existing skills in the
+same chat to describe/generate a disabled Evidence desk, validate/replay via a separate
+synthetic intent, diagnose one expected corrupted-copy refusal, and prepare scoped
+review/completion evidence. No source change, native/UI/server/extra-model/network/
+install/config/trust or target/session access. This planning stage does not run it.
+Do not repeat completed artifact-verification stages or reopen native probes.
 
 Authorizations should cover a concrete reviewed milestone/campaign, not a series of
 unprepared tiny helpers. Keep separate genuinely protected trust/authentication and

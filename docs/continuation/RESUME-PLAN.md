@@ -1,10 +1,13 @@
 # Resume plan — finite completion milestones
 
-Current next step: **GPT-6.1 Sol Medium** verifies the disabled call-review implementation
-in [M1-CALL-REVIEW-RESULT](M1-CALL-REVIEW-RESULT.md) and the new private verifier/manifest.
-Do not rerun the old UI verifier against intentionally changed server/settings files.
-No activation, target/native/extra-model/network/install/live config/trust permission.
-High before consequential fixes or unexpected drift. Older instructions are historical.
+Next chosen task is the **unapproved** [M1 offline authoring-skills batch](M1-AUTHORING-SKILLS-SCOPE.md).
+Remain on Sol Medium. One existing-source/synthetic Evidence desk exercise, no new
+runtime implementation, native/UI/server/extra-model/network/install/liveconfig/trust
+or target/session access. Current stage prepared the scope only. Dev39 stays disabled,
+installed31/all guards unchanged. Do not repeat completed review verification as work.
+High only on unexpected consequential source/security defects or drift.
+
+## Earlier planning context (historical)
 
 2026-10-26. Supersedes old next-stage directions preserved in Git history at e3a98eb.
 Read COMPLETION-PLAN.md/JSON, ANCESTOR-POLICY-DECISION.md and current HANDOFF/STATUS.

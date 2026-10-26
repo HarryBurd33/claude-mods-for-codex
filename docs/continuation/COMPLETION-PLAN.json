@@ -909,11 +909,25 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/M1-CALL-REVIEW-RESULT.md",
+    "record": "docs/continuation/M1-AUTHORING-SKILLS-SCOPE.md",
     "authorized": false,
     "model": "GPT-6.1 Sol",
     "effort": "Medium",
-    "kind": "exact offline source/artifact verification only; no activation"
+    "kind": "one existing-source offline same-chat authoring-skills acceptance batch",
+    "affectedIds": [
+      "AU-06",
+      "AU-07",
+      "AU-08",
+      "AU-09",
+      "AU-10",
+      "SK-01",
+      "SK-02",
+      "SK-03",
+      "SK-04"
+    ],
+    "requiresNativeLaunch": false,
+    "requiresExtraModelRun": false,
+    "requiresImplementation": false
   },
   "sourceImplementationObservations": [
     {
@@ -930,6 +944,17 @@
       "regressionPass": 152,
       "regressionSkip": 3,
       "nativeAcceptance": false
+    }
+  ],
+  "planningObservations": [
+    {
+      "id": "next-unblocked-authoring",
+      "date": "2026-10-26",
+      "record": "docs/continuation/M1-AUTHORING-SKILLS-SCOPE.md",
+      "prepared": true,
+      "executed": false,
+      "nativeDev39Disabled": true,
+      "acceptanceCountsChanged": false
     }
   ]
 }

@@ -1,5 +1,14 @@
 # Requirements ledger
 
+## Proposed independent acceptance task — 2026-10-26
+
+[M1-AUTHORING-SKILLS-SCOPE](M1-AUTHORING-SKILLS-SCOPE.md) prepares one W4 same-chat
+source-skill authoring exercise for AU-06/07/08/09/10 and SK-01/02/03/04. Existing
+code only; disabled generation/local replay/review plus one expected copied-bundle
+integrity refusal. Preparation is not invocation/test/native acceptance. No rows/counts
+closed or changed; dev39 remains disabled and all native/platform gaps stay in scope.
+
+
 ## Dev39 native acceptance remains blocked — 2026-10-26
 
 [DEV39-DEPLOYMENT-REVIEW](DEV39-DEPLOYMENT-REVIEW.md): EV-07/EV-10/EX-01 retain their

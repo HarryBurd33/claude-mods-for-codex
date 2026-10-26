@@ -1,5 +1,15 @@
 # Current status — optional call-review source implemented; product incomplete
 
+## Next unblocked task selected — scope only — 2026-10-26
+
+[M1-AUTHORING-SKILLS-SCOPE](M1-AUTHORING-SKILLS-SCOPE.md) selects W4/AU-06–10 and
+SK-01–04: one same-chat existing-source offline Evidence desk authoring acceptance
+batch, with disabled bundle, separate replay intent and one expected integrity refusal.
+Medium sufficient; not executed/authorized by preparation. No new implementation or
+native launch required. Installed31/all guards unchanged, dev39 disabled; native/profile
+blockers retained. No network/config/trust change, no source/acceptance-count closure.
+
+
 ## Latest deployment decision: retain disabled dev39 — 2026-10-26
 
 [DEV39-DEPLOYMENT-REVIEW](DEV39-DEPLOYMENT-REVIEW.md) completes High saved-evidence
