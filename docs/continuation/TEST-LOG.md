@@ -3595,3 +3595,17 @@ No tests/validate/replay/package/native/target rerun; no new host/OS/Windows att
 Source unchanged. Separate new records/manifest preserve old sealed evidence.
 See M1-CALL-REVIEW-VERIFICATION and proposed candidate scope. No activation/model/
 network/install/liveconfig/trust change. Local checkpoint/publication pending.
+
+
+## 2026-10-26 — offline candidate39 package (Sol Medium)
+
+Starting4b3d1ed; exact candidate sourceefccbaa/tree1c906ed8. Four version strings
+only product delta. Offline script-disabled npm pack with isolated config/cache/home;
+354regular files/2,901,402unpacked/885,487archive bytes. Strict member checks and every
+byte equal committed source; SHA256dba733875c8e39d2c81e20f128a650f0aeb8c98385b095bc6baca818c3222717.
+Spaced extracted package: hold-review/package/contracts54pass0fail0skip(~0.55s),
+validate3mods/replay4expectedoutputs, no fixture commands executed. Minimal clean
+environment; fixed Node/in-memory/synthetic peers only. No native closed-entry/client,
+actual forms, target reads, inference, network, install/liveconfig/trust changes.
+Protected8+19pins and consumedgrant/gatesfalse checks pass. No CI/Windows/full-suite
+claim. Old152pass/3skip source regression remains separate. See PACKAGE-DEV39.

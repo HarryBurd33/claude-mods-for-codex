@@ -1,5 +1,9 @@
 # Proposed next scope — offline dev39 candidate packaging
 
+Historical proposal: subsequently authorized by the human “Continue working” and
+completed offline. See [PACKAGE-DEV39](PACKAGE-DEV39.md). Original scope below is
+retained; it grants no native activation or later review/execution authority.
+
 2026-10-26, prepared on Sol Medium after974531d artifact verification. **Proposal only,
 not execution authority.** Medium is sufficient for this routine stage; stop for High
 on any required semantic source/security change or unexpected drift.

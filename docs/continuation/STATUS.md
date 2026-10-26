@@ -1,5 +1,17 @@
 # Current status — optional call-review source implemented; product incomplete
 
+## Latest: disabled dev39 candidate packaged offline — 2026-10-26
+
+[PACKAGE-DEV39](PACKAGE-DEV39.md): exact local sourceefccbaa,354regular archive files,
+byte-for-byte committed-source equality, selected packaged54pass/0fail/0skip, validate3/
+replay4pass. Four product version strings only; disabled/uninstalled. Installed31,
+logging/model/trust/defaults/all guards unchanged; no target/native/inference/network/
+install/config/trust action or new platform attestation. Current source version39;
+older source38/unversioned summaries below are historical. No CI/publication claim.
+Next **Sol High** for one native-deployment/acceptance review using saved evidence only,
+not activation or another probe chain. Both grants consumed/gatesclosed; product incomplete.
+
+
 ## Latest: exact artifacts verified on Sol Medium — 2026-10-26
 
 [M1-CALL-REVIEW-VERIFICATION](M1-CALL-REVIEW-VERIFICATION.md):974531d manifest/defaults/

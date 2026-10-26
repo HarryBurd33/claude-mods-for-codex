@@ -5,7 +5,8 @@ Independent MIT project, not affiliated with or endorsed by Anthropic or OpenAI.
 installation remains 0.2.0-dev.31. The full project is incomplete.**
 
 The dev39 [optional call-review candidate](docs/call-review.md) is disabled
-and offline-tested. It is uninstalled and has no new native acceptance;
+and [offline-packaged](docs/continuation/PACKAGE-DEV39.md). Its selected packaged
+tests passed54/54. It is uninstalled and has no new native acceptance;
 old dev38 package/CI results below do not verify this candidate.
 
 The [completion plan](docs/continuation/COMPLETION-PLAN.md) now maps all 93 requirements

@@ -1,42 +1,65 @@
-# Disabled call-review artifacts verified — next offline candidate scope proposed
+# Disabled dev39 package verified — stop for Sol High native-deployment review
 
-2026-10-26, GPT-6.1 Sol Medium from974531d on codex/astra-groundwork. Read
-M1-CALL-REVIEW-VERIFICATION.md, M1-CALL-REVIEW-RESULT.md, ../call-review.md and
-M1-CALL-REVIEW-CANDIDATE-SCOPE.md. Exact local records SHA/tree/private checkpoint
-in ignored root HANDOFF.md and .local/m1-call-review-verification/SYNC.json.
+2026-10-26, GPT-6.1 Sol Medium, starting4b3d1ed. Human Continue working authorized
+previous concrete offline packaging scope. Exact candidate source:
+efccbaaa7cf729e2ffdf4500918717401b80d6ad, tree1c906ed891c5308989ca4c0b192959cf6e72cdee.
+Read PACKAGE-DEV39.md, ../call-review.md, M1-CALL-REVIEW-RESULT.md,
+ANCESTOR-POLICY-DECISION.md and current STATUS/REQUIREMENTS/COMPLETION-PLAN.
+Private root HANDOFF.md and .local/package39/SYNC.json name resulting records commit.
 
-Verified original17source/artifact manifest,8default/core plus19prior evidence pins,
-other old product pins,93IDs/counts, consumed grants/gatesclosed. Source/examples
-reviewed: no new drift requiring a consequential fix. Saved36focused and152regression
-passes/3skips checked; no test rerun. Original implementation at974531d is unchanged.
-No native/target/input refresh/extra-model/network/activation/install/liveconfig/trust.
-Installed31 remains unchanged by this stage; no fresh installed-file or OS inventory.
+Delivered disabled/uninstalled candidate39: four product version strings only,
+plus candidate/result docs. Offline npm pack, scripts disabled, isolated npm config/
+cache/home/temp.354regular files, every byte equals exact committed source, strict
+archive/private-file checks. SHA256dba733875c8e39d2c81e20f128a650f0aeb8c98385b095bc6baca818c3222717.
+Spaced extraction54pass/0fail/0skip for hold-review/package/contracts; validate3mods/
+replay4expectedoutputs. These are selected packaged tests, not native/full-suite/CI.
+Nodev24.22.0/npm11.19.1 tool observations only. Prior152pass/3skip source regression
+is separate; no unique-test-count inflation. Exact commands/limitations in PACKAGE-DEV39.
 
-Implemented source remains default-off and unversioned after38. Original8tools,
-three hooks/config/MCP unchanged. Optional advisory review: required no-default boolean,
-confirmation{}only, existing deny precedence, all enabled rewrites refused, shared
-config rechecked, one pending form, deadline/cancel cleanup. Host failure may fail open;
-no human provenance/final-argument/global-order/atomicity guarantee. External mutating
-or independent config profiles unsupported. Old native0.0.4 evidence is not acceptance
-of this code. Windows/native routing/accessibility/lifecycle/full93 remain incomplete.
+Installed31 and approved settings/logging/model/human trust untouched. No native/target/
+extra-model/network/install/liveconfig/trust/activation or closed native-entry action.
+Both prior read grants consumed/gatesfalse; old sealed evidence not repinned. Protected
+8default/core plus19prior evidence pins match. Four version carriers normalized back
+prove no semantic change. Windows/ancestor/routing/default hooks/config/.mcp/transport
+unchanged. MIT/independent disclaimer preserved. No rollback of installed31 needed.
+No fresh installed/runtime/client inventory or accepted input baseline. Current39
+supersedes historical source38/unversioned status; old evidence retains its old scope.
 
-Next proposed bounded stage is routine **GPT-6.1 Sol Medium** offline dev39 packaging;
-not yet authorized. Candidate scope permits only four version strings/local offline
-archive and selected packaged tests/docs, with no activation/install/native/target/
-model/network/config/trust. It defines exact provenance/default/privacy acceptance.
-No need to switch to High merely for packaging. High is needed before consequential
-source/security fixes or later native-deployment/acceptance review. Human switches only.
+Optional review remains advisory/default-off: confirmation{}only, known auto-review
+rejection, existing deny precedence, any enabled rewrite refused, config recheck,
+required no-default form, onepending/logical deadline/abort cleanup. External mutating
+or independent config unsupported. No atomicity/final-input/human-provenance guarantee;
+host infrastructure can fail open. Native acceptance and full93 remain incomplete.
+Windows/native routing/optional events/accessibility/lifecycle gaps unchanged.
 
-To resume verification, use .local/m1-call-review-verification/VERIFY.py. Do not rerun
-old UI/source verifiers after intentionally changed notes or repin original evidence.
-Preserve unrelated.gitignore and other-chat checkpoint input/review/generations/
-heartbeat. Local ownership released at this handoff; no worker/background work started.
-Account/API/context allowance unknown; no native collector or inference dispatch.
+## Next exact setting and work
 
-Current network ban means no GitHub upload/remote verification. Repository:
-https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork
-Historical verified publicd3c4682 is not a current synchronization claim.
+**GPT-6.1 Sol High** for consequential native deployment/acceptance boundaries.
+Using saved evidence/package only, prepare one concrete actionable review of:
+shared hook-config binding, no-mutating-hooks profile, hook application versus logging
+scope, supported human trust, provenance/fail-open behavior, harmless test matrix and
+cleanup, and existing blocked launch prerequisites. No runtime/source implementation
+or new generic driver/probe framework. If useful native acceptance remains blocked,
+state one precise blocker/decision and keep the candidate disabled. Do not silently
+relax ancestor policy or disable installed31 rewrite rules to pass the new tool.
 
-Next copyable authorization is in M1-CALL-REVIEW-CANDIDATE-SCOPE.md. Until the human
-chooses it, stop with the source and all execution gates unchanged. No request to
-change host trust, authenticate or restart is needed in this records stage.
+No activation/target input rereads/native/model/network/install/config/trust authority
+comes from this handoff. Any actual host trial/usage needs a separate exact scope.
+Human switches only; no background worker/continuation. Current local lease released.
+Preserve unrelated.gitignore and original shared checkpoint input/review/generations/
+heartbeat. Current semantic task/artifacts are separately saved, not the old Astra job.
+No collector/worker: planner config/signals unavailable, quota/API/context unknown.
+
+On resume verify .local/package39/VERIFY.py and exact local source/archive bindings;
+old version-pinned verifiers remain sealed, not for rerun against version39. No native
+inputs. Private snapshot has runnable artifacts/logs/manifests; no system repair.
+No network upload/remote verification. Historical publicd3c4682 is not current sync.
+Repository: https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork
+
+Copyable resume:
+“Continue on GPT-6.1 Sol High from the local records checkpoint in root HANDOFF.md.
+Review the disabled dev39 candidate's native deployment/acceptance boundaries using
+PACKAGE-DEV39.md and saved evidence only. Prepare one actionable proposal, or one
+precise blocker/decision. Preserve installed31/logging/model/human trust/all guards;
+no activation, target reads, native execution, extra model runs, network, installation,
+config/trust changes or runtime implementation. Stop for Medium when sufficient.”

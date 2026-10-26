@@ -1,5 +1,14 @@
 # Extension architecture and security contracts
 
+## Current candidate boundary — dev39 — 2026-10-26
+
+[PACKAGE-DEV39](PACKAGE-DEV39.md) binds a disabled offline archive to exact local
+efccbaa. Product changes since the tested integration are four version strings only;
+no guard/transport/composition/permission semantics changed. Installed31 untouched.
+Packaged54selected checks pass; native deployment/launch/security acceptance still
+needs separate High review and later exact human scopes. No new execution authority.
+
+
 ## Current source delta — optional advisory call review — 2026-10-26
 
 `hold-review.mjs` is a default-off pure controller. Server/runtime settings wire only
