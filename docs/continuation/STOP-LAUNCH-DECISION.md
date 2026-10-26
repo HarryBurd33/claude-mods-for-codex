@@ -40,17 +40,20 @@ audit of every CLI/desktop route. An unreviewed alternative route is not an excl
 or permission to bypass the current gates. No repeated startup investigation is needed
 for this decision, and no new launcher or proof machinery is proposed.
 
-## The exact human choice — pending
+## Choice B — delegated selection and bounded review completed
 
 | Choice | Authority if explicitly chosen | Gates that remain closed |
 | --- | --- | --- |
-| **A — Keep native launch blocked** (current default) | Record the unresolved native Stop result; preserve design and evidence for later. No new input review | All launch/input-refresh/config/trust/install/inference gates. Full product remains incomplete |
+| **A — Keep native launch blocked** (original default) | Record the unresolved native Stop result; preserve design and evidence for later. No new input review | All launch/input-refresh/config/trust/install/inference gates. Full product remains incomplete |
 | **B — Permit bounded current-input review only** | Read only the two historically selected files under the limits below, without executing either; record fixed classifications privately. Assess readiness for later normal-client review | Native/UI execution, network, inference, installation, config/trust/policy writes, state/credential/transcript reads, native argv/PLAN creation and automatic baseline adoption |
 
-B is **not** acceptance of a normal-startup execution envelope. It reduces historical
-input-identity uncertainty only. Neither the project-root design agreement nor this
-new document chooses B; its approval flag remains false. Current instruction still
-forbids input refresh, so **neither file was refreshed for this artifact**.
+B is **not** acceptance of a normal-startup execution envelope. The human later
+delegated the choice; the agent selected B only and performed its bounded read.
+[Result/authorization record](STOP-INPUT-REVIEW.md): no new identity drift, no native
+execution or configuration/trust/baseline change. Original private scope flags remain
+historical/unmodified; a separate authorization and read-only observation record the
+limited action. Launch remains blocked. The specification below is the exact scope
+used, not continuing permission to reread or an accepted native-input plan.
 
 ### B: exact two-file read scope for later explicit approval
 
@@ -106,17 +109,12 @@ other callbacks could still add requests before an observer notices. A process s
 cannot promise remote cancellation. Do not make that grant from old approvals, a
 synthetic test, elapsed time, the user's absence or an answer about review scope.
 
-## Medium handoff and prepared question
+## Original question resolved; no new execution authority
 
-High review is complete; **GPT-6.1 Sol Medium** can verify this decision/private scope
-against sealed evidence, preserve all guards and present A/B without another research
-or packaging loop. Current stage performs no input refresh. After explicit B approval,
-only the exact bounded file-review scope can become authorized; if that future action
-is outside the then-current user scope, stop. Never interpret either answer as native
-execution or a policy change. High before consequential changes/new drift.
-
-Prepared user question, after artifact verification: “Keep native launch blocked, or
-allow only the two-file read-only review described here? B checks the already-selected
-CLI file identity and user-config classifications; it does not run Codex or open any
-other gate, and may still leave launch blocked.” No answer has been requested or
-received in this High stage. No background continuation/model switch is scheduled.
+Medium verified the sealed scope, presented A/B and selected B under the human's
+explicit delegation. The bounded operation is complete; do not repeat it or treat
+its result as launch permission. [STOP-INPUT-REVIEW](STOP-INPUT-REVIEW.md) is the
+current record. The earlier High document prepared the question; it did not itself
+authorize B. No ordinary-startup execution envelope, native configuration/trust,
+inference or accepted baseline is approved. High before consequential changes,
+otherwise Medium remains sufficient for recording this result.

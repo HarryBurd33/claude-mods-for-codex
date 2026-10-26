@@ -1,26 +1,35 @@
 # Current status — source38 / installed31 — 2026-10-26
 
-Development source **0.2.0-dev.38** corrects reproduced offline transport deadline and descendant-result gaps. Fixed Node fixtures now reject late writes and report ambiguous post-close group presence. **All native gates remain closed; no native inspection transport is implemented or enabled.** [Implementation, tests and limits](docs/continuation/DEV38-REVIEW.md).
+Development source **0.2.0-dev.38** remains uninstalled. **Installed production is
+0.2.0-dev.31**, with approved settings, scoped logging, selected model and human
+trust preserved. Independent MIT project, not affiliated with or endorsed by
+Anthropic or OpenAI. The full 93-requirement product remains incomplete.
 
-**Installed production remains 0.2.0-dev.31**, with approved settings, scoped logging and human trust preserved. No Codex invocation, inference, installation, config/trust change or native-input refresh occurred. The known project-trust addition remains unaccepted; no new baseline. Full93-capability work remains incomplete.
+Latest result: [option B read-only review](docs/continuation/STOP-INPUT-REVIEW.md)
+completed once per file in 0.153 seconds, with no retries or new identity drift. CLI
+bytes match the historical identity; user config matches the existing preservation
+observation. No raw content persisted/printed, native/model execution, configuration/
+trust change or baseline adoption. The two-file observation does **not** refresh an
+accepted native-input plan. The known project-trust addition remains unaccepted.
 
-Exact source38 [package checks](docs/continuation/PACKAGE-DEV38.md) pass:321files,
-157packaged tests pass,2skip. [CI](docs/continuation/CI-DEV38.md) passes all four POSIX
-lanes (324pass each), but fails both Windows integration lanes at the known
-Installer Image refusal. Original bounds/nativeWindows gaps remain unresolved.
-Node fixed-peer tests do not establish native execution or descendant containment.
+**All native gates remain closed; native Stop acceptance is blocked.** Static file
+identity cannot resolve startup, remote-ingress or effective-hook uncertainty. No
+native inspection transport is implemented. The [Stop proposal](docs/continuation/STOP-ONLY-PROPOSAL.md)
+is design-only; [launch decision](docs/continuation/STOP-LAUNCH-DECISION.md) records
+the limited review scope rather than permission to run.
 
-[Current macOS acceptance queue](docs/continuation/MACOS-QUEUE-38.md) reconciles all93
-requirements against dated host/source evidence. Verified lifecycle work is retained;
-optional native events/routing/current context and broader accessibility remain incomplete.
-[Manual visibility check](docs/continuation/MANUAL-DEV31-ACCESSIBILITY.md) passed at
-current zoom; screen-reader/enlarged-zoom behavior remains unverified.
-[Stop-only proposal](docs/continuation/STOP-ONLY-PROPOSAL.md) reuses existing components
-with separate project-local registration/config/data. Offline19tests pass/1skip plus
-15focused cases pass; native startup/trust/usage gates remain closed and acceptance
-blocked. No runtime/configuration change. [Exact artifacts verified; human accepted design only](docs/continuation/STOP-ONLY-VERIFIED.md).
-All execution gates remain closed. [Launch review-scope decision](docs/continuation/STOP-LAUNCH-DECISION.md) is ready:
-keep no-launch, or separately authorize a bounded two-file identity/config review.
-Neither permits startup; no current inputs refreshed. **Next: GPT-6.1 Sol Medium**
-for artifact verification and that human choice. [Handoff](docs/continuation/HANDOFF.md),
+[Source38 package](docs/continuation/PACKAGE-DEV38.md): 321 files, 157 packaged tests
+passed/2skipped. [Exact implementation CI](docs/continuation/CI-DEV38.md): four POSIX
+lanes with 324 passes each; both Windows integration lanes retain the known Installer
+Image refusal. Original bounds/native Windows 11 / WSL gaps remain unresolved. Fixed
+Node proofs are not native execution or universal descendant containment.
+
+[Current macOS queue](docs/continuation/MACOS-QUEUE-38.md) retains dated host/source
+acceptance. [Manual visibility](docs/continuation/MANUAL-DEV31-ACCESSIBILITY.md) passed
+at current zoom; screen-reader/enlarged-zoom remains unverified. Optional native events,
+routing/current context and other gaps in the 93-row ledger are not full-product completion.
+
+**Remain GPT-6.1 Sol Medium** for this completed read-only milestone; no repeated
+read/research/package loop or High switch is needed for the result. Further native/
+runtime work needs a separate scope. [Handoff](docs/continuation/HANDOFF.md),
 [setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).

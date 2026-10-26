@@ -1,5 +1,19 @@
 # Continuation verification log
 
+## Option B bounded read completed — current — 2026-10-26
+
+[STOP-INPUT-REVIEW](STOP-INPUT-REVIEW.md): human delegated A/B choice; agent selected
+B only. Two exact files read once within0.153sec/zero retries. CLI digest matches
+historical identity; config matches existing preservation observation. No new drift,
+raw persistence, execution, inference, config/trust change or baseline adoption.
+A current two-file observation exists; sealed native inputs/plans remain untouched.
+
+Installed31/all runtime/default/Windows guards preserved. Native Stop launch remains
+blocked; static file identity does not resolve startup/remote-ingress/effective hooks.
+**Remain GPT-6.1 Sol Medium**; no High switch or read/research/package repetition for
+this result. Separate scope/authority is required for any next native/envelope/runtime
+work. Full93product remains incomplete; known project-trust difference unaccepted.
+
 ## Existing-evidence launch decision prepared — current — 2026-10-26
 
 [STOP-LAUNCH-DECISION](STOP-LAUNCH-DECISION.md) separates conditional source startup
