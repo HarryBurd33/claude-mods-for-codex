@@ -1,5 +1,15 @@
 # Future sessions — current proposal36.1 — 2026-10-26
 
+## Revised normal-startup preparation scope approved — current — 2026-10-26
+
+Human selected **Prepare the revised plan on Sol High**. [NORMAL-STARTUP-SCOPE](NORMAL-STARTUP-SCOPE.md)
+authorizes preparation/offline checks of a controlled native-validation plan using
+normal Codex auth/catalog/network/local-state startup in the future design. It does
+not authorize execution, config/trust writes, installation, model runs, input rereads,
+baseline adoption, runtime implementation or gate opening. Installed31/all guards
+preserved. Medium records scope only, then stops for the human **GPT-6.1 Sol High**
+switch. No repeat file-review/packaging/startup-isolation loop; full93 incomplete.
+
 ## Option B bounded read completed — current — 2026-10-26
 
 [STOP-INPUT-REVIEW](STOP-INPUT-REVIEW.md): human delegated A/B choice; agent selected

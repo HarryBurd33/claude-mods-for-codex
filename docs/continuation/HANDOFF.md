@@ -1,77 +1,81 @@
-# Option B completed — no new drift, native launch still blocked
+# Revised native-validation preparation approved — next Sol High
 
-2026-10-26, GPT-6.1 Sol Medium, resumed1cb720e and presented the verified A/B scope.
-Human delegated the choice; agent explicitly selected **B only**. Read
-STOP-INPUT-REVIEW.md, STOP-LAUNCH-DECISION.md, STATUS.md, REQUIREMENTS.md,
-ARCHITECTURE.md, latest TEST-LOG.md, RESUME-PLAN.md and ignored root HANDOFF.md.
+2026-10-26, Medium resumed756ee1f. Completed read-only lane needs no rerun. The
+human explicitly selected **“Prepare the revised plan on Sol High.”** Read
+NORMAL-STARTUP-SCOPE.md, STOP-INPUT-REVIEW.md, STOP-ONLY-PROPOSAL.md,
+STATUS.md, REQUIREMENTS.md, ARCHITECTURE.md, latest TEST-LOG.md, RESUME-PLAN.md
+and ignored root HANDOFF.md.
 
-## Completed actual action and authority
+## Exact new authority
 
-Exactly two historical target files, one attempt each,0.1529seconds/zero retries.
-Selected CLI metadata/streaming hash within256MiB; selected user config bounded
-within256KiB with private digest/allowlisted types/trust-metadata classifications.
-Parent directory handles for no-follow/binding checks only, no directory discovery.
-Regular single-link/safe permissions/stable before-after identities. CLI matches
-historical digest; config matches existing preservation observation. No raw contents
-persisted/printed, no credentials/environment/other-config/state/log/session/definition
-reads. Missing fields stay unavailable, not inferred settings. No new identity drift.
+**GPT-6.1 Sol High** may prepare/offline-check a controlled native-validation plan
+using normal Codex startup: usual authentication, catalog/network and local-state
+activity may be part of the proposed design. Do not reimpose startup isolation as
+a prerequisite for merely preparing this revised plan. Known remote-control/other-
+hook uncertainty must still be disclosed, never relabeled disabled/safe.
 
-Separate private AUTHORIZATION.json binds delegated B choice to the unchanged original
-future-read scope; OBSERVATION.json is a completed read-only result. Original scope
-approvalflags remain false as historical draft, not silently mutated. Current two-file
-observation was performed, **not** an accepted native-input baseline/PLAN refresh.
-Old source34INPUT/PLAN and sealed manifests unchanged. No native/client/version/help/
-UI/model/network invocation, config/trust write, installation, permission/model change,
-source/runtime/test/CI implementation or automatic approval. No retry/further read.
+Preparation only. No actual native/UI/startup/model execution, installation,
+config/trust write, input reread, baseline adoption, runtime implementation or gate
+opening. Actual future phases need separate exact approvals. Preserve installed31,
+normal permissions/selected model, scoped logging and human trust. Ordinary state
+activity is not permission for hidden configuration/trust mutations. No unsupported
+flags/internal app patch or automatic approval. Current experimental drivers closed.
 
-Known project-trust addition remains unknown/unaccepted; same raw config observation
-means prior difference unchanged, no project details inspected/adopted/restored. Owned
-plugin config says enabled, not fresh native loaded-host proof. Installed31notupdated/
-removed. Prior251cache/settings/data evidence stays dated; no extra host scan/target
-reread. Source38runtime/default/Windows guards unchanged; source38uninstalled.
-NativeWindows11/WSL/Image/bounds/other93gaps remain. No product-completion claim.
+## What High must complete
 
-## Current blocker and exact next setting
+Follow NORMAL-STARTUP-SCOPE.md: reuse the existing project-local Stop-only design;
+prepare one concrete unexecuted operator/native validation sequence with separate
+discovery/setup/human-trust/model-test phases as needed. Exact client/entry, command/
+path/access review, normal startup effects/residual uncertainty, supported permissions,
+bounds/no retries/stop conditions/cleanup/removal/rollback and minimum human actions.
+Keep standalone CLI and desktop evidence distinct. No new generic framework/client.
 
-**Remain GPT-6.1 Sol Medium.** No High switch needed for this completed routine read;
-no drift was found. Do not repeat input review, source37/38research, generator/callback
-or packaging. No new gate/launch/runtime action follows from a digest match. Native
-Stop acceptance stays blocked: static files cannot prove remote-ingress exclusion,
-effective hooks, safe startup, native delivery or exact usage/cancellation. Existing
-selected-export/deny-review alternatives remain disclosed, not full native equivalents.
+Use existing offline authoring/contracts/fixtures to validate the inert data. Do not
+execute native commands, stage active `.codex/` configuration, install hooks or
+make another model/API run. Any future model test must be visible/authorized/bounded
+and consume usage; no exact billing/remote-cancellation guarantee. Do not assume
+matching historical digests grant execution; include any necessary fresh checks in
+the later phase's approval rather than rereading now. Runtime changes, if genuinely
+necessary, need their own stated defect/acceptance and separate scope.
 
-This bounded milestone is complete. Further native/envelope/implementation work needs
-a separate adequately specified scope/authorization; current B permission is consumed.
-High before consequential privacy/security/integration/envelope/runtime changes or
-new drift. Do not manufacture another planning/model-switch loop just to repeat
-known facts. There is no ready runnable native command or input plan. If asked for
-next work without new scope, state this concrete blocker and identify only the missing
-scope decision; do not quietly relax it or claim the full project finished.
+No repeat source37/38startup-isolation hunt, old generators/packaging, Windows proof
+loop, unrelated REA/system repair or human model-switch bypass. Recheck only targeted
+primary syntax when necessary for the concrete revised plan. Return to Medium after
+difficult integration decisions are complete and only verification/human steps remain.
 
-## Durable records and coordination
+## Preserved state and completed evidence
 
-Private reader/authorization/observation/limits/source evidence remain ignored. New
-verification checks records/source/immutable artifacts only; it must **not reread the
-two targets or invoke older host-reading verifiers** under this consumed grant.
-Current safe notes are separately pinned; prior public launch notes verified at
-1cb720e. Historical manifests/config observations not rewritten. Final verified SHA/
-tree/privatecheckpoint in final/ignored handoff after readback, never invented here.
+Btwo-file read already complete:0.1529sec/zero retries, CLI historical digest and
+existing config observation match, no drift. No raw content saved/output, no config/
+trust/baseline change. Its grant consumed. Known project-trust addition remains
+unknown/unaccepted. Installed31notupdated/removed; source38uninstalled; runtime/
+default/Windows guards unchanged. NativeWindows/WSL/Image/bounds/other93gaps remain.
+No new native inventory/host identity/test/CI/package evidence this Medium save.
 
-One local lease; other chat inactive/selfjob reconciled, foreign original input/
-review/generations/.gitignore/heartbeat preserved. No worker/subagent/new schedule/
-background process or automatic continuation. Planner unavailable local config/
-signals, no repair/dispatch/nativecollector. Freshordinaryusageallowed; per-task/
-API/contextunknown. Save/verify/releaselease at stop. No rollback/removal: only
-private read observations and safe Markdown notes were added.
+New private checker reads local records/source only, never selected targets or older
+host-reading verifiers. Prior completed-read/public notes verified historically at
+756ee1f; new authorization/current notes separately pinned. Old manifests/input
+plans untouched. Private paths/raw logs/rootHANDOFF/.local/.checkpoint ignored.
+Final actual synchronized SHA/tree/checkpoint in final/ignored handoff after exact
+readback; no self-referential identity guessed here. No rollback/removal needed.
 
-[Starting checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/1cb720e5befac442b9c042fe37f35e77488ea6ea).
+Coordinate one writer. Other chat inactive/selfjob reconciled; originalinput/review/
+generations/.gitignore/heartbeat preserved. Planner unavailable local input/signals,
+no repair/dispatch/nativecollector/worker. Fresh ordinary usage allowed; per-task/
+API/context unknown. No background continuation. Verify privatecheckpoint/release
+lease then stop for human Sol High switch, not delegation.
+
+[Starting completed-read checkpoint](https://github.com/HarryBurd33/claude-mods-for-codex/commit/756ee1faf707cdb8e5e643dc31f8db4c11b6267c).
 [Development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork).
 
-## Resume constraint
+## Complete resume instruction
 
-Read this record/STOP-INPUT-REVIEW on Sol Medium. The option B two-file read is
-already complete; no reread, native execution, inference, configuration/trust change,
-accepted baseline refresh or runtime implementation is authorized by this handoff.
-Preserve installed31, approved settings/current preferences/unrelated entries,
-scoped logging, parent model, human trust and Windows guards. Coordinate one writer;
-all execution gates closed. High before consequential new work or unexpected drift.
+“I’ve switched to GPT-6.1 Sol High. Continue from the verified normal-startup-scope
+checkpoint on codex/astra-groundwork. Read docs/continuation/HANDOFF.md and
+NORMAL-STARTUP-SCOPE.md. Prepare and offline-check the revised controlled native-
+validation plan allowing normal Codex startup in its design; reuse the existing
+Stop-only project design. Preserve installed31, permissions, selected model,
+scoped logging, human trust and Windows guards. Coordinate one writer. No actual
+native execution, inference, installation, config/trust change, input reread, runtime
+implementation or gate opening is authorized. Produce exact future approvals and
+stop for Medium when only routine verification/human checkpoints remain.”

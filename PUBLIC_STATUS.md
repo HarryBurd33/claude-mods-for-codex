@@ -29,7 +29,8 @@ acceptance. [Manual visibility](docs/continuation/MANUAL-DEV31-ACCESSIBILITY.md)
 at current zoom; screen-reader/enlarged-zoom remains unverified. Optional native events,
 routing/current context and other gaps in the 93-row ledger are not full-product completion.
 
-**Remain GPT-6.1 Sol Medium** for this completed read-only milestone; no repeated
-read/research/package loop or High switch is needed for the result. Further native/
-runtime work needs a separate scope. [Handoff](docs/continuation/HANDOFF.md),
-[setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
+**Next: GPT-6.1 Sol High** for the human-approved
+[revised normal-startup plan](docs/continuation/NORMAL-STARTUP-SCOPE.md), preparation/
+offline checks only. No execution, config/trust change or additional model-run grant.
+[Handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),
+[privacy](docs/privacy.md), [removal](docs/removal.md).
