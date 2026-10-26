@@ -890,5 +890,29 @@
       ]
     }
   ],
-  "publication": "local-only-pending-no-network"
+  "publication": "local-only-pending-no-network",
+  "acceptanceObservations": [
+    {
+      "id": "M1-ui-first",
+      "record": "docs/continuation/M1-UI-ACCEPTANCE.md",
+      "state": "partial-acceptance",
+      "affectedIds": [
+        "UI-02",
+        "UI-04",
+        "UI-05",
+        "SEC-10",
+        "AU-05"
+      ],
+      "fullRequirementClosure": false,
+      "source": "human reports and permitted owned-panel DOM",
+      "freshVersionAttestation": false
+    }
+  ],
+  "nextProposedScope": {
+    "record": "docs/continuation/M1-CALL-REVIEW-SCOPE.md",
+    "authorized": false,
+    "model": "GPT-6.1 Sol",
+    "effort": "High",
+    "kind": "source-only optional call-review integration and offline tests"
+  }
 }

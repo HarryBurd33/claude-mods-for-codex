@@ -1,5 +1,19 @@
 # Current status — completion plan prepared, product incomplete
 
+## M1 UI acceptance recorded; next source scope prepared — 2026-10-26
+
+[M1-UI-ACCEPTANCE](M1-UI-ACCEPTANCE.md): local Notes rendering/Clear and DOM labels
+passed; human confirmed Clear focus/current-zoom readability. Screen reader, enlarged
+zoom and same-card reopening remain unverified. All sample text cleared; pane open.
+Known installed31 JSON hint reproduced; correction exists in uninstalled source.
+This is partial acceptance; no V/B counts or full accessibility status changed.
+
+[M1-CALL-REVIEW-SCOPE](M1-CALL-REVIEW-SCOPE.md) proposes High source-only optional
+call-review integration/offline tests, default-off and guard-preserving. Unapproved,
+no implementation/activation. Both old read grants consumed; no new target/native/
+extra-model/network/live config/trust action. Local publication pending.
+
+
 2026-10-26, Sol High, startinglocale3a98eb. Saved evidence/source review only.
 This replaces contradictory current/next-step summaries; dated originals remain
 in Git history at e3a98eb and in their specific review/package/native records.

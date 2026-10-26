@@ -1,5 +1,7 @@
 # Resume plan — finite completion milestones
 
+Current next step: UI results are recorded in [M1-UI-ACCEPTANCE](M1-UI-ACCEPTANCE.md). The proposed [call-review source scope](M1-CALL-REVIEW-SCOPE.md) requires explicit human authorization and Sol High. Do not repeat the first UI batch or infer activation/native/model permission. Earlier directions below describe the prior planning milestone.
+
 2026-10-26. Supersedes old next-stage directions preserved in Git history at e3a98eb.
 Read COMPLETION-PLAN.md/JSON, ANCESTOR-POLICY-DECISION.md and current HANDOFF/STATUS.
 

@@ -1,5 +1,7 @@
 # Completion plan — source38 / installed31
 
+Update2026-10-26: the first UI-only batch is [recorded](M1-UI-ACCEPTANCE.md) with partial acceptance; remaining screen-reader/zoom/reopen gaps stay open. [Next proposed source scope](M1-CALL-REVIEW-SCOPE.md) is unapproved. The plan still covers all93requirements; no implementation or native closure is inferred.
+
 2026-10-26, GPT-6.1 Sol High. Based only on saved repository evidence, not a new
 host/upstream inventory. Planning/review have begun; implementation and execution
 are not authorized by this document. Installed31 and all guards remain unchanged.

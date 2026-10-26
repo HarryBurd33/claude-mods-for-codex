@@ -1,49 +1,39 @@
-# Completion plan and ancestor review complete — next Sol Medium
+# UI acceptance recorded — proposed next Sol High source-only integration
 
-2026-10-26, Sol High, startinglocale3a98eb. Human added project-wide remaining-work
-and completion planning. Read COMPLETION-PLAN.md/JSON, ANCESTOR-POLICY-DECISION.md,
-M1-FIRST-BATCH.md, current STATUS.md and detailed REQUIREMENTS/MACOS-QUEUE-38.
+2026-10-26, Sol Medium, local6130779. Read M1-UI-ACCEPTANCE.md,
+M1-CALL-REVIEW-SCOPE.md, COMPLETION-PLAN.md/JSON and ANCESTOR-POLICY-DECISION.md.
 
-Completed: saved-evidence security review, all 93 IDs mapped exactly once to7primary
-workstreams/6milestones, concrete first independent macOS acceptance proposal,
-and corrected stale current README/status/roadmap/resume summaries. Historical
-records remain in Git at e3a98eb and their dedicated review/native/package files.
+Human authorized a 15minute UI-only session, completed in10m36s. Actual DOM checked
+labels/roles, Notes literal rendering and cleanup. Human confirmed Clear focus and
+current unchanged-zoom readability; DOM corroborated focused Clear. VoiceOver,
+enlarged zoom and same-card reopen remain unverified. Pane left open, all three
+fields/preview clear. Sample moved to Data contract by the human, not a product bug.
+Known installed31 JSON hint reproduced; source correction already exists. No new fix.
 
-Saved queue:60 V / 12 A / 14 B / 3 U / 4 P; V is narrow-target evidence, not a completion percentage.
-Remaining implementation includes production decisions/events, native configured
-routing, reproduced UI/lifecycle defects and guarded Windows paths. Acceptance spans
-accessibility/native failures/optional events/examples, actual platforms and release.
-No source/guard changes or new tests/host inventory in this planning stage.
+Current task only records those conversation/tool observations and prepares scope,
+without reopening UI. Installed31/all guards preserved; no target/native/extra-model/
+network/live config/trust change. No implementation/test/installation this stage.
+Both old read grants consumed/gatesclosed. UI acceptance is partial, not SEC-10 closure.
+No new version/cache/OS attestation or OS network trace; don't infer them from the UI.
 
-Review conclusion: retain the strict ancestor refusal and stop the probe chain.
-Recorded write mode already explains it; more metadata cannot pass that unchanged
-predicate. Independent macOS work can progress. One explicit later decision selects
-continued blockage, another official entry, or a validation-trust amendment for a
-human-operated trial. No option accepted/executed; no guard is silently bypassed.
+Next proposed setting **GPT-6.1 Sol High** for the bounded optional call-review source
+integration. It is NOT authorized until human accepts the scope. Required hard work:
+effective-command/deny/rewrite composition, async elicitation/abort/correlation,
+default-off and permission/privacy limits. Reuse existing hold proof/transport/
+impact components. Preserve default three hooks, source config and live settings;
+no activation, target/native/model/network or unrelated Windows/routing/ancestor work.
 
-Both grants remain consumed/gatesclosed. Installed31/logging/model/permissions/trust/
-Windows guards preserved. No target/permission/policy/implementation/native/additional
-model/network/config/trust/baseline action. No subagent/worker or background work.
+Detailed permitted source areas, tests, limits and copyable future authorization are
+in M1-CALL-REVIEW-SCOPE.md. Do not silently broaden them or relabel a proof production.
+If broader changes are essential, stop with one concrete decision. Return to Medium
+once actual source implementation/verification is done. No human switch bypass.
 
-Next exact setting GPT-6.1 Sol Medium: verify the plan/map/source pins, then present
-one consolidated next-scope decision. Start with the prepared independent UI-only
-M1 batch if the human chooses it; no tool/UI opening under verification-only scope.
-Actual implementation/security/routing needs High and a new implementation scope.
-Do not repeat old package/CI/probe loops or re-ask accepted manual-supervision facts.
+Current verification:
+python3 -B .local/m1-ui-record/VERIFY.py
 
-Records-only verification:
-python3 -B .local/completion-review/VERIFY.py
-
-Private .local/completion-review has reconciliation, preserved19evidence pins,
-verification/semantic task/SYNC. Exact local commit/tree/private checkpoint in ignored
-root HANDOFF.md. Current no-network guard prevents upload/remote verification:
-new local plans are NOT synchronized. Historical last verified publicd3c4682 unqueried.
-Preserve other-chat input/review/generations/heartbeat and unrelated .gitignore.
-
-Resume:
-“I’ve switched to GPT-6.1 Sol Medium. Continue from the local completion-plan checkpoint.
-Read docs/continuation/HANDOFF.md, COMPLETION-PLAN.md and ANCESTOR-POLICY-DECISION.md.
-Verify the93-ID plan and preserved evidence, then present the prepared next-scope
-choice. Preserve installed31/all guards. No target reads, implementation, permission/
-policy changes, native execution, extra model runs, network or config/trust changes.
-Both grants remain consumed; no retries. Stop for High before consequential work.”
+Private .local/m1-ui-record contains structured UI evidence, source pins, manifests,
+semantic task and local checkpoint receipt. Exact local SHA/tree/private checkpoint
+in ignored root HANDOFF.md/SYNC.json. No-network instruction means NOT uploaded;
+historical verified publicd3c4682 is not a current synchronization claim.
+Preserve other-chat input/review/generations/heartbeat/.gitignore. No worker/background
+continuation. Full93/native/Windows acceptance remains incomplete.

@@ -1,5 +1,9 @@
 # Continuation verification log
 
+## M1 UI-only batch recorded — 2026-10-26
+
+[M1-UI-ACCEPTANCE](M1-UI-ACCEPTANCE.md) records actual owned-panel DOM checks and separate human reports, 15:19:13–15:29:49 America/Denver. Labels/Notes rendering/Clear/focus/current-zoom passed within stated limits; screen reader/enlarged zoom/same-card reopen unverified. Known installed31 JSON hint reproduced; source fix exists. All sample text cleared. This docs-only recording did not rerun tests, open UI or inspect targets. No full accessibility closure.
+
 ## Authorized preflight stopped — current — 2026-10-26
 
 [PREFLIGHT-RESULT](PREFLIGHT-RESULT.md): exactly one invocation stopped in0.002seconds

@@ -1,5 +1,7 @@
 # Prepared first macOS acceptance batch — not authorized to run
 
+Historical preparation record: the UI-only session was subsequently authorized and completed. See [M1-UI-ACCEPTANCE](M1-UI-ACCEPTANCE.md). Its partial results do not authorize another session; original proposed steps below are retained as evidence.
+
 This is the first independent action in COMPLETION-PLAN M1. It does not depend on
 unblocking the private CLI preflight. Existing installed31 only; no installation,
 restart, native CLI/app-server session, extra model/API run, filesystem target
