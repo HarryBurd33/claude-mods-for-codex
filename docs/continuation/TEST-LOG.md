@@ -3379,3 +3379,25 @@ trust/source/gate changes. Planner status unavailable(required config/signals ab
 setup.py reference absent; no repair/worker/Codex telemetry collection. Fresh desktop
 account ordinary usage allowed; no inference worker authorized. Manual semantic work
 packages recorded under existing task; no second queue. See PACKAGE-DEV37/CI-DEV37.
+
+## 2026-10-26 — source38 offline reliability correction (Sol High)
+
+Resumed0fcc04e; starting Medium37 verifier passes within known unaccepted project
+trust difference. Fixed diagnostic fixtures/probe before correction:6tests1pass5fail.
+Late legacy reply wrote5requests vs1; readiness/inspection serialization stalls wrote2
+vs1; both silent closed-pipe descendant cases returned observation-complete while
+group present. Separate bounded signal0 fixture teardown observed later self-exit
+before assertions; no immortal fixture or stale-group kill used for reproduction.
+
+Corrections sample before packets/every item/after encoding; counters only after
+checks. POSIX group presence/unknown absence now review-required, processReaped stays
+direct-child only, allDescendantsVerified=false. Nonzero group signals after leader
+exit restricted to known fixed pipe-holding leaf; no native/arbitrary exception.
+Unsafe0/1/noninteger/negative/out-of-range group identities refused; Windows no probe.
+Focused34pass0fail~14.4sec. Full437cases324pass0fail113skip~16.1sec; final rerun after
+leader-exit guard same324/0/113/437~15.9sec. validate3/replay4 pass without commands.
+Native gate bodies/shared routing/inspection contract and31protected files unchanged;
+only4version carriers38 and CI new portable6case suite(5POSIXskips) beyond scoped code.
+No Codex/inference/install/config/trust/input refresh/gate opening. CI38/package pending.
+Primary Node24/Linux/archived Apple syscall references reviewed; POSIX pages403 recorded.
+See DEV38-REVIEW for limits, source locations and preservation/source-only handoff.

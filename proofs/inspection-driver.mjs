@@ -9,6 +9,7 @@ import { requireInspectionAdmission, describeInspection, validateInspectionPlan 
 import { createInspectionMachine, READINESS_LIMITS as L } from './readiness-machine.mjs';
 import { createReadinessFrames } from './readiness-frames.mjs';
 import { syntheticInspectionPlan, INSPECTION_SCENARIOS } from './inspection-fixtures.mjs';
+import { observeProcessGroup, settleFixedFixtureGroup } from './process-group-observation.mjs';
 const PEER = fileURLToPath(new URL('./inspection-peer.mjs', import.meta.url));
 const FIXED_MS = 2500;
 
@@ -28,7 +29,7 @@ export async function runFixedInspection(scenario = 'empty') {
   finally {
     // Empty-directory removal only, never recursive traversal/deletion. Leave an
     // unexpected entry or unreaped process for review rather than deleting it.
-    if (result?.processReaped) {
+    if (result?.processReaped && result.fixtureGroupGoneObserved !== false) {
       try { await rmdir(directory); result.temporaryDirectoryRemoved = true; }
       catch { result.temporaryDirectoryRemoved = false; result.outcome = 'review-required'; result.reason = 'transport-error'; }
     }
@@ -41,7 +42,7 @@ export async function runFixedInspection(scenario = 'empty') {
 async function fixedTransport(plan, scenario) {
   const start = performance.now(), elapsed = () => Math.trunc(performance.now() - start);
   const machine = createInspectionMachine(plan);
-  let child, closed = false, spawned = false, failed = false, exitCode = null, signal = null;
+  let child, closed = false, leaderExited = false, spawned = false, failed = false, exitCode = null, signal = null;
   let forced = false, stopping = false, cancelled = false, cwdMatched = false, timer, cancelTimer;
   let sentBytes = 0, sentRequests = 0, settleExit;
   const exited = new Promise(r => { settleExit = r; });
@@ -52,23 +53,37 @@ async function fixedTransport(plan, scenario) {
     // Check the absolute wall clock on packet delivery too, before accepting a
     // buffered response after the parent event loop was blocked.
     if (now >= FIXED_MS) machine.abort('synthetic-transport-deadline');
+    return now < FIXED_MS && !cancelled;
   };
-  const kill = sig => { if (!child?.pid || closed) return; try { process.kill(-child.pid, sig); } catch { /* owned group gone */ } };
+  const kill = sig => {
+    if (!child?.pid || closed || leaderExited && scenario !== 'descendant') return;
+    // Only the fixed pipe-holding fixture can retain a known group after exit.
+    try { process.kill(-child.pid, sig); } catch { /* owned group gone */ }
+  };
   const wait = async ms => {
     let t; try { return await Promise.race([exited.then(() => closed), new Promise(r => { t = setTimeout(() => r(false), ms); })]); }
     finally { clearTimeout(t); }
   };
   const flush = () => {
     for (const item of machine.takeOutbound()) {
+      const canDispatch = () => {
+        if (!advance()) return false;
+        const reason = machine.report().reason;
+        return reason === null || reason === 'server-request-denied' && !Object.hasOwn(item.rpc, 'method');
+      };
+      if (!canDispatch()) return;
       if (item.domain !== 'inspection-review-draft' || item.executionAuthorized !== false || !child || closed || child.stdin.destroyed) { machine.abort('transport-error'); return; }
-      if (item.rpc.method && Object.hasOwn(item.rpc, 'id') && ++sentRequests > L.requests) { machine.abort('request-limit'); return; }
-      const wire = JSON.stringify(item.rpc) + '\n'; sentBytes += Buffer.byteLength(wire);
-      if (sentBytes > L.outgoingBytes) { machine.abort('outgoing-limit'); return; }
+      const request = item.rpc.method && Object.hasOwn(item.rpc, 'id');
+      if (request && sentRequests >= L.requests) { machine.abort('request-limit'); return; }
+      const wire = JSON.stringify(item.rpc) + '\n', bytes = Buffer.byteLength(wire);
+      if (!canDispatch()) return;
+      if (sentBytes + bytes > L.outgoingBytes) { machine.abort('outgoing-limit'); return; }
+      sentBytes += bytes; if (request) sentRequests++;
       try { child.stdin.write(wire); } catch { machine.abort('transport-error'); }
     }
   };
   const frames = createReadinessFrames(packet => {
-    advance();
+    if (!advance()) return;
     if (!cwdMatched) {
       if (machine.report().done) return;
       if (!packet || Object.keys(packet).join(',') !== 'fixedPeerCwd' || packet.fixedPeerCwd !== plan.spawn.cwd) { machine.abort('input-mismatch'); return; }
@@ -81,7 +96,7 @@ async function fixedTransport(plan, scenario) {
       env: {}, stdio: ['pipe', 'pipe', 'pipe'], detached: true, windowsHide: true });
     spawned = true;
     child.on('error', () => { failed = true; machine.abort('transport-error'); settleExit(); });
-    child.on('exit', (code, sig) => { exitCode = code; signal = sig; if (!machine.report().done) machine.abort('peer-disconnected'); });
+    child.on('exit', (code, sig) => { leaderExited = true; exitCode = code; signal = sig; if (!machine.report().done) machine.abort('peer-disconnected'); });
     child.on('close', () => { closed = true; frames.finish(); if (!machine.report().done) machine.abort('peer-disconnected'); settleExit(); });
     child.stdout.on('data', b => frames.push(b)); child.stderr.on('data', b => frames.push(b, true));
     child.stdin.on('error', () => { if (!stopping) machine.abort('transport-error'); });
@@ -103,12 +118,17 @@ async function fixedTransport(plan, scenario) {
     } finally { process.removeListener('SIGINT', cancel); process.removeListener('SIGTERM', cancel); }
   }
   const reaped = spawned && closed && !failed;
+  const processGroupStatus = reaped ? observeProcessGroup(child.pid) : 'unavailable';
+  const fixtureGroupGoneObserved = scenario === 'silent-descendant' && reaped
+    ? await settleFixedFixtureGroup(child.pid) : null;
+  if (processGroupStatus !== 'absent-at-probe') machine.abort('descendants-unresolved');
   if (elapsed() >= FIXED_MS + 1250) machine.abort('outer-timeout');
   if (!reaped || exitCode !== 0 || forced || frames.counters().framingFailed) machine.abort('transport-error');
   return { ...machine.report(), transport: 'fixed-inspection-node-peer', synthetic: true,
     nativeProcessStarted: false, nativeTransportImplemented: false, inspectionAdmission: false,
     processReaped: reaped, peerExitCode: exitCode, peerSignalled: signal !== null,
     forcedTermination: forced, cancelRequested: cancelled, fixedPeerCwdMatched: cwdMatched,
+    processGroupStatus, fixtureGroupGoneObserved, allDescendantsVerified: false,
     planArgvAndSpawnCwdMatched: plan.argv[2] === plan.spawn.cwd && plan.input.cwd === plan.spawn.cwd,
     temporaryDirectoryRemoved: false, ...frames.counters(), sentBytes, sentRequests };
 }

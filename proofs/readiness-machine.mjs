@@ -24,7 +24,7 @@ const REASONS = new Set(['request-limit', 'malformed-protocol', 'server-request-
   'hook-discovery-incomplete', 'hooks-require-review', 'config-changed', 'invalid-clock', 'work-timeout',
   'request-timeout', 'operator-cancelled', 'transport-error', 'outgoing-limit', 'input-mismatch', 'driver-error',
   'synthetic-transport-deadline', 'outer-timeout', 'peer-disconnected', 'byte-limit', 'frame-limit',
-  'message-limit', 'incomplete-frame']);
+  'message-limit', 'incomplete-frame', 'descendants-unresolved']);
 // Pinned ConfigRequirements optional fields. Non-null policies outside the narrow
 // supported projection require review; they are never silently treated as inert.
 const POLICY_FIELDS = ['modelProvider', 'modelProviders', 'allowedLoginMethods', 'cliAuthCredentialsStore',

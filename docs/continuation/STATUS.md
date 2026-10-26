@@ -1,5 +1,17 @@
 # Current status — source36 package verified, native admission closed
 
+## Source38 offline reliability leads reproduced/corrected — current — 2026-10-26
+
+[DEV38-REVIEW](DEV38-REVIEW.md): fixed Node regressions reproduced late request
+writes and completion while a silent descendant's group was present. Both drivers
+now sample before packet acceptance/every dispatch/after serialization and report
+post-close group uncertainty. Signal0 observation is not termination or universal
+containment; real group signals after leader exit are restricted to the known fixed
+pipe-holding fixture. Native gates/31protected files unchanged; installed31 preserved.
+No Codex/inference/install/config/trust/native-input refresh. All gates closed.
+Next **GPT-6.1 Sol Medium** for exact38CI/package verification; native/full93 incomplete.
+
+
 ## Source37 exact CI/package verified — current — 2026-10-26
 
 [PACKAGE-DEV37](PACKAGE-DEV37.md): exactd8d7cab315files, SHA256

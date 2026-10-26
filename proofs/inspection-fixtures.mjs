@@ -3,7 +3,7 @@ import { createInspectionPlan } from './inspection-contract.mjs';
 export const INSPECTION_SECRET = 'SYNTHETIC_INSPECTION_DO_NOT_RETAIN';
 export const INSPECTION_SCENARIOS = Object.freeze(['empty', 'hook', 'policy', 'changed', 'wrong-cwd',
   'malformed', 'partial', 'oversized', 'stderr-overflow', 'server-request', 'late-notification',
-  'exit-failure', 'stall', 'ignore-term', 'cancel', 'descendant', 'delayed']);
+  'exit-failure', 'stall', 'ignore-term', 'cancel', 'descendant', 'delayed', 'silent-descendant']);
 export function syntheticInspectionPlan(cwd = '/synthetic/empty-project') {
   return createInspectionPlan({ cliPath: '/synthetic/never-execute', cliSha256: 'a'.repeat(64), cwd,
     configFiles: [{ path: '/synthetic/config.toml', sha256: 'b'.repeat(64) }], disabledMcpServers: ['synthetic_mcp'] });

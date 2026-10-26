@@ -16,6 +16,10 @@ if (scenario === 'descendant') {
     { stdio: ['ignore', 1, 2], env: {}, detached: false });
   setTimeout(() => process.exit(0), 100);
 }
+if (scenario === 'silent-descendant') {
+  spawn(process.execPath, [fileURLToPath(new URL('./readiness-leaf.mjs', import.meta.url)), 'bounded-silent'],
+    { stdio: 'ignore', env: {}, detached: false }).unref();
+}
 const input = createInterface({ input: process.stdin });
 input.on('line', line => {
   let r; try { r = JSON.parse(line); } catch { process.exitCode = 24; input.close(); return; }

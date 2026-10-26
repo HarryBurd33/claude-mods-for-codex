@@ -8,6 +8,7 @@ import { verifyNativeInputs, readNativeReview } from './routing-native-inputs.mj
 import { createReadinessMachine, READINESS_LIMITS as L } from './readiness-machine.mjs';
 import { createReadinessFrames } from './readiness-frames.mjs';
 import { syntheticReadinessPlan, READINESS_SCENARIOS } from './readiness-fixtures.mjs';
+import { observeProcessGroup, settleFixedFixtureGroup } from './process-group-observation.mjs';
 const PEER = fileURLToPath(new URL('./readiness-peer.mjs', import.meta.url));
 
 export async function runNativeReadiness(plan) {
@@ -20,7 +21,7 @@ export async function runNativeReadinessFromFile(path) {
 }
 export async function runFixedReadiness(scenario = 'empty') {
   if (typeof scenario !== 'string' || !READINESS_SCENARIOS.includes(scenario)
-    || scenario === 'descendant' && process.platform === 'win32') throw Error('Fixed readiness scenario refused');
+    || ['descendant', 'silent-descendant', 'late-packet'].includes(scenario) && process.platform === 'win32') throw Error('Fixed readiness scenario refused');
   return executeReadiness(syntheticReadinessPlan(), scenario);
 }
 
@@ -30,7 +31,7 @@ export async function runFixedReadiness(scenario = 'empty') {
 async function executeReadiness(plan, scenario) {
   const synthetic = scenario !== null, start = performance.now(), elapsed = () => Math.trunc(performance.now() - start);
   const machine = createReadinessMachine(plan);
-  let child, closed = false, spawned = false, spawnFailed = false, exitCode = null, signalled = false;
+  let child, closed = false, leaderExited = false, spawned = false, spawnFailed = false, exitCode = null, signalled = false;
   let forced = false, stopping = false, cancelled = false, timer, sentBytes = 0, sentRequests = 0;
   let cancelTimer, infrastructureFailure = false, nativeInputFailure = false;
   const cancel = () => { cancelled = true; machine.abort('operator-cancelled'); };
@@ -39,8 +40,9 @@ async function executeReadiness(plan, scenario) {
   const exited = new Promise(r => { settleExit = r; });
   function kill(signal) {
     if (!child?.pid || closed) return;
-    // Do not skip an owned POSIX group just because its leader has exited: a
-    // descendant may still hold the pipes. Windows fixed peer has no descendant.
+    // A reaped leader is no longer a stable group identity. The sole exception
+    // is our fixed pipe-holding leaf, which cannot detach/change its group.
+    if (leaderExited && !(synthetic && scenario === 'descendant')) return;
     try { if (process.platform === 'win32') child.kill(signal); else process.kill(-child.pid, signal); }
     catch { /* Group already gone; never target an unrelated PID. */ }
   }
@@ -49,19 +51,37 @@ async function executeReadiness(plan, scenario) {
     try { return await Promise.race([exited.then(() => closed), new Promise(r => { t = setTimeout(() => r(false), ms); })]); }
     finally { clearTimeout(t); }
   }
+  function sampleClock() {
+    const now = elapsed(); machine.advance(now);
+    let within = true;
+    if (synthetic && now >= 4000) { machine.abort('synthetic-transport-deadline'); within = false; }
+    if (now >= L.outerMs - L.softReapMs - L.hardReapMs) { machine.abort('outer-timeout'); within = false; }
+    return within && !cancelled;
+  }
+  const canDispatch = item => {
+    if (!sampleClock()) return false;
+    const reason = machine.report().reason;
+    return reason === null || reason === 'server-request-denied' && !Object.hasOwn(item.rpc, 'method');
+  };
   function flush() {
     for (const item of machine.takeOutbound()) {
+      if (!canDispatch(item)) return;
       if (item.domain !== 'readiness-review-draft' || item.executionAuthorized !== false || !child || closed || child.stdin.destroyed) {
         machine.abort('transport-error'); return;
       }
       // At most five client requests plus one denial of an unexpected server request.
-      if (item.rpc.method && Object.hasOwn(item.rpc, 'id') && ++sentRequests > L.requests) { machine.abort('request-limit'); return; }
-      const wire = JSON.stringify(item.rpc) + '\n'; sentBytes += Buffer.byteLength(wire);
-      if (sentBytes > L.outgoingBytes) { machine.abort('outgoing-limit'); return; }
+      const request = item.rpc.method && Object.hasOwn(item.rpc, 'id');
+      if (request && sentRequests >= L.requests) { machine.abort('request-limit'); return; }
+      const wire = JSON.stringify(item.rpc) + '\n', bytes = Buffer.byteLength(wire);
+      // Serialization can itself cross the deadline; count/write only after a
+      // second sample. A local taken queue is not purged by machine.abort.
+      if (!canDispatch(item)) return;
+      if (sentBytes + bytes > L.outgoingBytes) { machine.abort('outgoing-limit'); return; }
+      sentBytes += bytes; if (request) sentRequests++;
       try { child.stdin.write(wire); } catch { machine.abort('transport-error'); }
     }
   }
-  const frames = createReadinessFrames(p => { machine.receive(p); flush(); }, reason => machine.abort(reason));
+  const frames = createReadinessFrames(p => { if (!sampleClock()) return; machine.receive(p); flush(); }, reason => machine.abort(reason));
   try {
     if (!synthetic) {
       try { await verifyNativeInputs(plan); } catch { nativeInputFailure = true; machine.abort('input-mismatch'); }
@@ -79,7 +99,7 @@ async function executeReadiness(plan, scenario) {
       } catch { spawnFailed = true; closed = true; infrastructureFailure = true; settleExit(); machine.abort('transport-error'); }
       if (child) {
         child.on('error', () => { spawnFailed = true; infrastructureFailure = true; machine.abort('transport-error'); settleExit(); });
-        child.on('exit', (code, signal) => { exitCode = code; signalled = signal !== null;
+        child.on('exit', (code, signal) => { leaderExited = true; exitCode = code; signalled = signal !== null;
           if (!machine.report().done) machine.abort('peer-disconnected'); });
         child.on('close', () => { closed = true; frames.finish();
           if (!machine.report().done) machine.abort('peer-disconnected'); settleExit(); });
@@ -89,9 +109,7 @@ async function executeReadiness(plan, scenario) {
         if (synthetic && scenario === 'cancel') cancelTimer = setTimeout(cancel, 100);
         await new Promise(done => {
           const tick = () => {
-            machine.advance(elapsed());
-            if (synthetic && elapsed() >= 4000) machine.abort('synthetic-transport-deadline');
-            if (elapsed() >= L.outerMs - L.softReapMs - L.hardReapMs) machine.abort('outer-timeout');
+            sampleClock();
             flush();
             if (closed || spawnFailed || machine.report().done || frames.counters().framingFailed) {
               clearInterval(timer); done();
@@ -114,10 +132,16 @@ async function executeReadiness(plan, scenario) {
     } finally { process.removeListener('SIGINT', cancel); process.removeListener('SIGTERM', cancel); }
   }
   const reaped = spawned && closed && !spawnFailed;
+  const processGroupStatus = reaped ? observeProcessGroup(child.pid) : 'unavailable';
+  const fixtureGroupGoneObserved = synthetic && scenario === 'silent-descendant' && reaped
+    ? await settleFixedFixtureGroup(child.pid) : null;
+  if (process.platform !== 'win32' && processGroupStatus !== 'absent-at-probe') machine.abort('descendants-unresolved');
+  sampleClock();
   if (!reaped || exitCode !== 0 || forced || infrastructureFailure || frames.counters().framingFailed) machine.abort('transport-error');
   return { ...machine.report(), transport: synthetic ? 'fixed-synthetic-readiness-peer' : 'dormant-native-readiness',
     synthetic, nativeProcessStarted: !synthetic && spawned, nativeInputFailure, processReaped: reaped,
     peerExitCode: exitCode, peerSignalled: signalled, forcedTermination: forced, cancelRequested: cancelled,
+    processGroupStatus, fixtureGroupGoneObserved, allDescendantsVerified: false,
     ...frames.counters(), sentBytes, sentRequests };
 }
 export function parseReadinessArgs(argv) {

@@ -1,9 +1,9 @@
-# Current status — source37 / installed31 — 2026-10-26
+# Current status — source38 / installed31 — 2026-10-26
 
-Development source **0.2.0-dev.37** adds a separate inspection-only plan and closed native entry. Fixed Node peers verify explicit working-directory handling, protocol refusals, privacy, deadlines and cleanup. **No native inspection transport is implemented or enabled.** [Implementation and limits](docs/continuation/DEV37-REVIEW.md).
+Development source **0.2.0-dev.38** corrects reproduced offline transport deadline and descendant-result gaps. Fixed Node fixtures now reject late writes and report ambiguous post-close group presence. **All native gates remain closed; no native inspection transport is implemented or enabled.** [Implementation, tests and limits](docs/continuation/DEV38-REVIEW.md).
 
-**Installed production remains 0.2.0-dev.31**, with approved settings, logging scope and human trust unchanged. No Codex invocation, additional inference, installation, host config/trust change or native-input refresh occurred. The known added project-trust entry remains preserved and unaccepted; no new baseline. The full93-capability product remains incomplete.
+**Installed production remains 0.2.0-dev.31**, with approved settings, scoped logging and human trust preserved. No Codex invocation, inference, installation, config/trust change or native-input refresh occurred. The known project-trust addition remains unaccepted; no new baseline. Full93-capability work remains incomplete.
 
-[Exact source37 package](docs/continuation/PACKAGE-DEV37.md):315files, spaced tests **151 passed,0 failed,2 skipped**, validation/replay passed. [CI](docs/continuation/CI-DEV37.md): four macOS/Linux lanes each318passed/113skipped; Windows portable inspection7passed/4POSIX skips. **CI failed overall** on the known Windows Installer Image refusal. Native Windows and original bounds gaps remain unresolved.
+Exact source38 CI/package verification is pending. [Source37 CI](docs/continuation/CI-DEV37.md) retains the known Windows Image refusal; native Windows and original bounds gaps remain unresolved. Node fixed-peer tests do not establish native execution or descendant containment.
 
-**Next: GPT-6.1 Sol High** for recorded offline process/deadline reliability leads; no native activation or gate-opening grant. Exact packaging/CI are complete. [Handoff](docs/continuation/HANDOFF.md), [future plan](docs/continuation/RESUME-PLAN.md), [setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
+**Next: GPT-6.1 Sol Medium** for exact38CI/package/source-only verification. [Handoff](docs/continuation/HANDOFF.md), [future plan](docs/continuation/RESUME-PLAN.md), [setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).

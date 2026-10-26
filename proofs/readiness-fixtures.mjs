@@ -2,7 +2,7 @@
 import { createNativePlan, CANDIDATE_SHA256 } from './routing-native-plan.mjs';
 export const READINESS_SCENARIOS = Object.freeze(['empty', 'hook', 'policy', 'changed', 'malformed',
   'partial', 'oversized', 'stderr-overflow', 'late-notification', 'server-request', 'exit-failure',
-  'stall', 'ignore-term', 'cancel', 'descendant']);
+  'stall', 'ignore-term', 'cancel', 'descendant', 'late-packet', 'silent-descendant']);
 export const SECRET = 'SYNTHETIC_SENSITIVE_DO_NOT_RETAIN';
 export function syntheticReadinessPlan() {
   return createNativePlan({ cliPath: '/synthetic/never-execute', cliSha256: 'a'.repeat(64),
