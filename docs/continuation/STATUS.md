@@ -1,5 +1,17 @@
 # Current status — optional call-review source implemented; product incomplete
 
+## Latest deployment decision: retain disabled dev39 — 2026-10-26
+
+[DEV39-DEPLOYMENT-REVIEW](DEV39-DEPLOYMENT-REVIEW.md) completes High saved-evidence
+review. No implementation defect requiring a change established. No admissible
+native trial profile yet satisfies both retained launch admission and unchanged-input/
+shared-config/no-mutating-hooks conditions. Keep disabled, not ready for activation;
+this is a validation/deployment gap, not proof of an unsupported Codex feature.
+No further probes or policy change recommended under current guards. Next Medium:
+verify records and state this decision. All target/native/model/network/install/
+config/trust/activation gates remain closed; full project incomplete.
+
+
 ## Latest: disabled dev39 candidate packaged offline — 2026-10-26
 
 [PACKAGE-DEV39](PACKAGE-DEV39.md): exact local sourceefccbaa,354regular archive files,

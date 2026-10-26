@@ -1,5 +1,17 @@
 # Extension architecture and security contracts
 
+## Dev39 deployment review — 2026-10-26
+
+[DEV39-DEPLOYMENT-REVIEW](DEV39-DEPLOYMENT-REVIEW.md) confirms shared C must be an
+explicit same absolute selection in command and MCP processes; equal relative paths
+or default basenames can diverge. Example claude-mods must not be assumed to route
+to dev39 while the preserved dev31 connection exposes only its earlier tools. A
+future distinct reviewed binding and effective no-mutation profile are prerequisites,
+not implemented isolation. Minimal carrier has no cwd/session authority; settings
+projectRoot scopes dashboard/logging, not hook reception. Existing launch admission
+still refuses the saved entry. No code/config/guard change; candidate stays disabled.
+
+
 ## Current candidate boundary — dev39 — 2026-10-26
 
 [PACKAGE-DEV39](PACKAGE-DEV39.md) binds a disabled offline archive to exact local
