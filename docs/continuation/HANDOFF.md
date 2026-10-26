@@ -1,29 +1,30 @@
-# Ancestor-identification approval request ready — unapproved
+# Ancestor policy rejection identified — grants consumed
 
-2026-10-26, Sol Medium following locale53a7c4. Read ANCESTOR-REQUEST.md and
-PREFLIGHT-RESULT.md. Human asked for request preparation, not target access.
-No new target lookup/native/inference/network/config/trust action.
+2026-10-26, Sol Medium following local7515ddb. Read ANCESTOR-RESULT.md,
+PREFLIGHT-RESULT.md and CHECKER-OFFLINE.md. One newly authorized5second metadata-only
+observation audited4of7ancestors and stopped at first existing-policy rejection:
+a current-user-owned group-writable directory without the sticky-root exception.
+Exact machine-specific path/mode/index are private, not copied into public records.
 
-New private .local/ancestor-request/SCOPE.json pins the saved CLI path's7ancestors;
-proposed one5second metadata-only traversal, unchanged existing parent walk/predicate,
-first failure stop, no retries/content/listing/link resolution/repair/policy change.
-OPERATION.py.txt is an inert instrumented operation; false OPERATOR-REVIEW gate and
-exact future command prepared. Eight synthetic metadata-only tests pass, with a
-fake parent walk; real target walker never called. Original checker source, prior
-preflight markers/result and closed gate preserved; prior grant remains consumed.
+Private .local/ancestor-observation holds authorization, original gate, result,
+HASHES/VERIFY and checkpoint receipt. Exclusive real ATTEMPT/OBSERVATION in
+.local/ancestor-request preserved. Gate restored original false. This grant and the
+prior preflight grant are consumed; no retries, resets or further target lookup.
+Original preflight evidence/closed gate and checker policy/source remain unchanged.
 
-Next remain **GPT-6.1 Sol Medium**: verify request artifacts then present exact
-approval question in ANCESTOR-REQUEST.md. Do not run the proposal or enable its gate
-until human authorizes the new exact scope. Any consequential change => High/new
-scope. No native/config/trust/model/network/setup/baseline authority inferred.
+No target contents/listing/link resolution/permissions/policy/native/inference/
+network/config/trust/baseline action. Installed31/all guards unchanged. Current
+inspection identified a policy failure, not native execution support or a release.
 
-Verification: python3 -B .local/ancestor-request/VERIFY.py
-No need to rerun target preflight, old generators or native inventory. The proposal
-verifier checks saved records/source only and never resolves selected paths.
-No product/runtime change; installed31/logging/model/trust/Windows guards unchanged.
-Native Stop/full93/Windows work remains incomplete.
+Next remain **GPT-6.1 Sol Medium** for records-only result verification or exact
+next decision preparation from saved evidence. No selected path access authorized.
+New access needs a new scope/grant; consequential security/policy/path-selection
+work requires High. Native Stop/full93/Windows gaps remain incomplete.
 
-Current no-network instruction means local commit/checkpoint only, publication
-pending. Exact local SHA/tree in ignored root HANDOFF.md/private receipt.
-Preserve other chat's input/review/generations/heartbeat/.gitignore. No worker or
-background continuation.
+Verification: python3 -B .local/ancestor-observation/VERIFY.py
+Old proposal/preflight verifiers expect no observation and are historical; do not
+delete evidence or rewrite them to make post-attempt state appear unstarted.
+
+No-network guard prevents GitHub publication/remote verification. Local SHA/tree/
+checkpoint recorded in ignored root HANDOFF.md/private SYNC. Other chat's original
+input/review/generations/heartbeat/.gitignore preserved. No background worker.

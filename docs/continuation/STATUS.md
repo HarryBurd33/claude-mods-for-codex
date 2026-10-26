@@ -1,5 +1,14 @@
 # Current status — source36 package verified, native admission closed
 
+## Ancestor observation complete — current — 2026-10-26
+
+[ANCESTOR-RESULT](ANCESTOR-RESULT.md): one authorized metadata-only observation
+stopped after4of7ancestors at the unchanged policy rejection of a current-user-owned,
+group-writable directory. Exact machine metadata remains private. No contents,
+retries, repairs or policy changes; both grants consumed and gates closed. Earlier
+unidentified-ancestor statements refer to the prior preflight only. No native/model/
+network/config/trust action; installed31/all guards preserved. Local publication pending.
+
 ## Authorized preflight stopped — current — 2026-10-26
 
 [PREFLIGHT-RESULT](PREFLIGHT-RESULT.md): exactly one invocation stopped in0.002seconds
