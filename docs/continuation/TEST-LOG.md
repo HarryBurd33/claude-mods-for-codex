@@ -3318,3 +3318,22 @@ publication only. No owner was displaced. Commit excludes the unowned .gitignore
 The initial task-input save needed decision objects rather than strings; corrected to
 the declared schema, then checkpoint/verify/resume passed. This is preservation
 harness evidence, not product/native testing or permission restoration.
+
+## 2026-10-26 — independent proposal36.1 verification (Sol Medium)
+
+Resumed3dfbcd8, expected unowned .gitignore edit only. Original private verifier ran
+once before notes edits:19private/11public/14runtime+test/sealed35.1/old34/source35/
+34+35archives all pass. Owned installed31cache251/settings/data/sources/marketplace
+match; raw config equals36.1 observation, no new difference. Original protected
+check remains failed on the known one added project trust entry, unknown intent;
+prior digest reproduced without that addition in memory; no baseline acceptance.
+Conditional protocol/closed flags/historical argv checked; seven cached upstream
+source assertions match; no new research/native process/simulation/full tests needed.
+Public links/privacy/93IDs-order pass. Anonymous branch was exact3dfbcd8. Existing
+released local lease acquired for this verification/publication only, no owner stolen.
+
+New notes keep old manifest/verifier sealed and check its public docs at exact3dfbcd8;
+current notes get separate pins. Source/protected-config/owned checks retained, no
+native-input refresh or authority. See PROPOSAL36-1-VERIFIED and private handoff.
+No source/gate/Codex/inference/install/config/trust/Windows change or CI/package retry.
+Next High with fresh offline implementation scope; all native gates remain closed.

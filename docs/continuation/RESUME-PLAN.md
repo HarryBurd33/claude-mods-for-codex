@@ -1,5 +1,21 @@
 # Future sessions — current proposal36.1 — 2026-10-26
 
+## Proposal36.1 verification complete — current — 2026-10-26
+
+[PROPOSAL36-1-VERIFIED](PROPOSAL36-1-VERIFIED.md): Sol Medium checked19private records,
+11starting public documents,14runtime pins, sealed earlier artifacts, conditional
+protocol/closed flags, installed31cache251/settings/data/sources/marketplace and93
+ledger IDs/order. No new drift; the known single project-trust addition remains
+unaccepted and its intent unknown. All gates remain closed; no native/Codex/model,
+source/gate implementation, install/config/trust change or input refresh.
+
+Next **GPT-6.1 Sol High**, only after a fresh explicit offline instruction, for a
+separate closed inspection contract/entry, exact OS cwd tests and primary-source
+startup/remote-control boundary work. No activation/native grant. Earlier36.1manifest
+pins3dfbcd8docs; new notes are checked separately, never by rewriting that manifest
+or accepting a new config baseline. See the ignored handoff for the new checker.
+
+
 ## Inspection activation proposal36.1 — current — 2026-10-26
 
 [INSPECTION-ACTIVATION-DEV36](INSPECTION-ACTIVATION-DEV36.md) records a review-only

@@ -6,7 +6,7 @@ Development source **0.2.0-dev.36** implements the proposal35.1 readiness inspec
 
 [Exact source36 package](docs/continuation/PACKAGE-DEV36.md) verified:305 files, all bytes match the public checkpoint; spaced checks **140 passed,0 failed,2 skipped**, validation/replay passed. [CI](docs/continuation/CI-DEV36.md): four macOS/Linux lanes each **307 passed,0 failed,113 skipped**; Windows portable readiness **15 passed,2 skipped**. **CI failed overall** on the known Windows Installer Image refusal. Native Codex/Windows acceptance and original bounds gaps remain unresolved.
 
-[Inspection activation proposal36.1](docs/continuation/INSPECTION-ACTIVATION-DEV36.md) records inherited launch cwd and startup catalog/remote-control blockers. It is review data, not an enabled inspector. **Next: GPT-6.1 Sol Medium** for artifact verification only; High and fresh scope before source/security work. All gates stay closed; no Codex, inference, install/config/trust changes. [Handoff](docs/continuation/HANDOFF.md), [future plan](docs/continuation/RESUME-PLAN.md), [setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
+[Proposal36.1 verification](docs/continuation/PROPOSAL36-1-VERIFIED.md) confirms the closed review artifacts and unchanged installed31 scope. Native activation remains blocked by launch cwd, startup/remote-control and input-freshness gaps. **Next: GPT-6.1 Sol High** for a separately authorized offline inspection-contract milestone; no native or gate-opening grant. [Handoff](docs/continuation/HANDOFF.md), [future plan](docs/continuation/RESUME-PLAN.md), [setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
 
 ## What it does
 
