@@ -1,12 +1,12 @@
 # Claude Mods for Codex
 
 Independent MIT project, not affiliated with or endorsed by Anthropic or OpenAI.
-**Development source 0.2.0-dev.38 is uninstalled; the previously approved user-profile
+**Development source 0.2.0-dev.39 is uninstalled; the previously approved user-profile
 installation remains 0.2.0-dev.31. The full project is incomplete.**
 
-Additional unversioned [optional call-review source](docs/call-review.md) is disabled
-and offline-tested after dev38. It is uninstalled and has no new native acceptance;
-old dev38 package/CI results below do not verify this new source.
+The dev39 [optional call-review candidate](docs/call-review.md) is disabled
+and offline-tested. It is uninstalled and has no new native acceptance;
+old dev38 package/CI results below do not verify this candidate.
 
 The [completion plan](docs/continuation/COMPLETION-PLAN.md) now maps all 93 requirements
 to finite delivery milestones. Most macOS core components exist, but significant

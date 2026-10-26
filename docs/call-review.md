@@ -1,9 +1,10 @@
 # Optional unchanged-input call review — source only
 
 2026-10-26. This component is implemented and offline-tested, uninstalled and disabled
-by default. It is additional unversioned source after dev38, not a shipped dev38
-feature. Installed31 and the default three hooks/config/MCP registration are unchanged.
-Native acceptance, exact candidate packaging and host trust review remain incomplete.
+by default. It is source candidate0.2.0-dev.39, not a released or installed feature.
+Installed31 and the default three hooks/config/MCP registration are unchanged.
+Native acceptance and host trust review remain incomplete. Exact offline candidate
+packaging is a separate record; source changes alone do not establish archive results.
 This is an advisory review, not a complete risky-command enforcement boundary.
 
 ## Contract and composition

@@ -76,7 +76,7 @@ export function createDashboardHandler(settings, {loadHookConfig=loadSharedHookC
     switch (request.method) {
       case 'initialize':
         formAvailable = !!p.capabilities?.elicitation?.form && typeof p.capabilities.elicitation.form==='object' && !Array.isArray(p.capabilities.elicitation.form);
-        return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.38'}};
+        return {protocolVersion:'2025-11-25',capabilities:{tools:{},resources:{}},serverInfo:{name:'claude-mods-for-codex',version:'0.2.0-dev.39'}};
       case 'ping': return {};
       case 'tools/list': return {tools:selectedTools};
       case 'resources/list': return {resources:[{uri:URI,name:'Claude Mods dashboard',mimeType:'text/html;profile=mcp-app'}]};
