@@ -1,5 +1,15 @@
 # Current status — source36 package verified, native admission closed
 
+## Authorized preflight stopped — current — 2026-10-26
+
+[PREFLIGHT-RESULT](PREFLIGHT-RESULT.md): exactly one invocation stopped in0.002seconds
+on unsafe-directory during first selected file ancestor check. Selected file contents
+read0; source/absence checks not reached. No retries/repairs/further target probes.
+Private gate restored closed; exclusive evidence preserved; grant consumed.
+Installed31/all guards unchanged, no native/inference/network/config/trust/baseline
+change. Local publication pending no-network. Older unused/unstarted statements
+below are historical; no grant remains for a rerun.
+
 ## Private checker offline-ready — current — 2026-10-26
 
 [CHECKER-OFFLINE](CHECKER-OFFLINE.md): separate private bounded preflight reader and
