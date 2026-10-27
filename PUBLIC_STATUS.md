@@ -6,8 +6,8 @@ inventory is implied. MIT; independent of Anthropic and OpenAI.
 
 | Milestone | Evidence and limits |
 | --- | --- |
-| [Sol A/C/B candidate](docs/continuation/SOL-ABC-IMPLEMENTATION-2026-10-27.md) | Local392pass/123skips; first CI5jobs pass/2Windows fail on one legacy holder integration error. Both actual modern image digests and new metadata cases passed on Windows22/24. Targeted creator correction passed Astra review; its new exact-source CI remains to be read. |
-| [Astra CI contract review](docs/continuation/ASTRA-CI-CONTRACT-2026-10-27.md) | Latest unchanged-runtime baseline `8219ca2` CI: 3 jobs pass, 4 fail. Both Mac lanes observed EPERM; Windows retains image failures and Node22 metadata deadline/cancellation failures. Finite Mac, Windows harness and linked-image sampling contracts reviewed; repairs not implemented. |
+| [Sol A/C/B milestone](docs/continuation/SOL-ABC-IMPLEMENTATION-2026-10-27.md) | Corrected source `f9af0cb` CI40557201530: **all 7 jobs passed**. Each Windows lane passed25 storage/97 process checks; both modern installed-image digest positives accepted. Local392pass/123skips. Independent Astra diff review passed; prior failed source/run preserved. This is bounded proof/CI acceptance, not production Windows or native-host acceptance. |
+| [Astra CI contract review](docs/continuation/ASTRA-CI-CONTRACT-2026-10-27.md) | Historical baseline `8219ca2` CI: 3 jobs pass, 4 fail. Mac EPERM, Windows image-policy/layout and metadata deadlines motivated the reviewed finite A/C/B contracts. Their subsequent implementation/result is above. |
 | [Earlier bounded CI work](docs/continuation/CI-REPAIR-2026-10-27.md) | Diagnostics/owned-fixture isolation: local377pass/115skips; earlier cccb487 CI5jobs pass/2Windows NTFS fail.379-file development archive matches that source. Later failures above show the Mac issue was not reliably fixed. |
 | [Current Sol progress](docs/continuation/NATIVE-STOP-2026-10-27.md) | Automatic continuation and one real Phase1 setup completed; grant consumed. Later actual human hook trust and one supervised response produced one Stop record. Unchanged owned declaration removed, data/trust retained, qualified preservation passed. Broader native acceptance remains open. |
 | [Prior Astra review](docs/continuation/ASTRA-RUNTIME-REVIEW.md) | Reviewed external runtime; versioned private launcher; 11 actual-runtime/local-Git synthetic passes; 44 selected project passes; validate/replay passed. These are the prior offline results; the subsequent real Phase 1 result is above. |
@@ -31,8 +31,9 @@ that one-use result does not authorize another run.
 No automatic approval, hidden prompt/model change, app patch or private-daemon shortcut.
 
 Current: human-requested **GPT-6.1 Sol High** implementation, with independent
-**GPT-6 Astra Ultra** review before Windows CI. The implementation candidate above
-has local verification; its new CI result must be read separately. The
+**GPT-6 Astra Ultra** review before Windows CI. The bounded milestone above passed
+its corrected-source CI. Next: **GPT-6.1 Sol Medium** for routine offline development
+archive/documentation verification. The
 [consolidated macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md) remains open.
 The previous no-network restriction is superseded for authorized GitHub progress
 publication. Private checkpoints, machine bindings, grants and raw logs are excluded.

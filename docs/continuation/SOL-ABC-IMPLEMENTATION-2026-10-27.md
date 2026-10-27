@@ -138,3 +138,32 @@ portable lifecycle/frame checks passed again (8 tests), and syntax checks pass.
 The full local suite was not repeated for this Windows-only creator change; new
 exact-source CI is required. Astra Ultra reviewed this targeted diff and passed
 the new-source Windows CI gate. No failed run was retried or erased.
+
+## Corrected candidate: all seven CI jobs passed
+
+Exact source **f9af0cbd2a6c96393fdd2be270d4f3f3e9e6dc1e** /
+[run40557201530](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40557201530)
+completed successfully: **7 jobs passed**.
+
+| Actual check | Result |
+| --- | --- |
+| Mac Node22/24, Ubuntu Node22/24 |All four full offline jobs passed |
+| Windows portable |Passed, including lifecycle/frame regressions |
+| Windows NTFS Node22 |25 storage and 97 process checks passed; 0 process failures/cancellations/skips |
+| Windows NTFS Node24 |25 storage and 97 process checks passed; 0 process failures/cancellations/skips |
+| Modern installed-image positives |Both accepted in both lanes; cmd links2, ucrt64 links4; PE not performed |
+| Legacy read-set regression |Passed in both lanes with the lifecycle creator correction |
+
+This accepts the bounded A/C/B CI milestone on the tested runners. Earlier failures
+remain linked above. One passing candidate does not guarantee arbitrary scheduler
+or disk behavior, interrupt synchronous I/O, certify executable provenance, enable
+production Windows Git operations or complete native Windows11/Linux/WSL acceptance.
+All source/native authorization limits remain in force.
+
+The verification follow-up changes Markdown only and uses `[skip ci]`; it does not
+create another passing check. Its runtime/tests/workflow are identical to this
+successful candidate. No release/tag, install, trust/config change or native trial
+was performed. The next suitable assignment is **GPT-6.1 Sol / Medium** for an
+offline development archive and documentation/manifest verification. Preserve the
+exact successful source pin; do not turn that routine task into release or native
+execution authority.
