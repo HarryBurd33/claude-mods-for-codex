@@ -1,3 +1,56 @@
+# Consolidated Stop-only trial request prepared — phase1 approval pending
+
+2026-10-26, GPT-6.1 Sol Medium fromf351f74. Preparation only.
+
+The human chose milestone A, **Stop-only approval-request preparation only**.
+[STOP-CONSOLIDATED-REQUEST](STOP-CONSOLIDATED-REQUEST.md) gives one packet with pending
+owned-setup, native-startup/human-trust, one explicit Sol Medium usage turn, and bounded
+result/removal stages. Exact next request is phase1 only: listed saved source/template
+verification plus45fixed metadata objects and exclusive fresh temporary config/project/
+data creation,20second work budget/zero retries. No grant has been given.39snapshot
+files/five inert artifacts match; no target path inspected. Actual gates remainclosed,
+installed31/guards/dev39disabled preserved. No C/manual-supervision vote repeated.
+Phase2 requires its separately reviewed startup/preservation access; no blank cheque
+for inherited effects. Q39/NM-1, routing, Windows/full-product acceptance stay incomplete.
+
+Read STOP-CONSOLIDATED-REQUEST.md and ignored
+.local/stop-consolidated-request/REQUEST.json before any later grant. The exact
+historical paths/argv/hook/config remain original .local/normal-startup-plan inert
+text.39source files/five artifacts hash-verified, not executed. Snapshot source38
+9016cb0 is separate from31/dev39. Proposed paths have no current existence/type/
+identity observation. CLI/Node bytes and live config/trust not read. Old flags not
+retroactively rewritten as approval; new packet allfalse. No runner/checker added.
+
+Exact next authorization is phase1 only as quoted in the public request: bounded
+source/template checks,45fixed listed metadata objects (within64cap), exclusive new
+T/P/.codex/D0700 and exact C/hook0600, no overwrite/native/global config.20second
+budget/zero retries, stop on drift/collision/unsafe/missing bound or needed consequential
+code. No claimed tested timing helper, no old private checker replay/repair/baseline
+adoption. Source<=8MiB/templates<=256KiB/newconfig<=16KiB. No CLI/Node/live config reads,
+startup/network/trust/model/removal grant. Do not silently substitute a new target.
+
+Phase2 is separate normal-startup/effective-hook/31preservation review and human trust,
+no prompt; it needs its exact access envelope and approval before action. Ordinary
+startup has auth/catalog/plugin/MCP/localstate/remote uncertainty, not proved disabled.
+Phase3 separately authorizes one additional GPT-6.1 Sol Medium response request;
+read-only/on-request, parentunchanged,90secmanual/nohardoutput/billing/request cap,
+no rawlog/no retry, stop unexpected/unknown. Phase4 result/removal separate, retain
+data, no trust deletion/wholeconfig restore. Never sell Stop as heldcall/routing proof.
+
+All actual gates/old consumed grants preserved; installed31/logging/model/permissions/
+human trust/product/Windows guards unchanged; dev39disabled/uninstalled.93counts
+unchanged/fullproject incomplete. No source/activeconfig/driver/tests/target/native/
+extra-model/network/install/liveconfig/trust action. Shared input/heartbeat and unrelated
+.gitignore preserved. Local commit/tree/checkpoint in root private HANDOFF/SYNC; no
+upload/remote verification under no-network. Lease released; no background jobs.
+
+Medium sufficient for this completed preparation. Present phase1 approval once; do
+not rerun an unchanged verification stage. High before consequential security/source
+changes or drift. Saved packet never executes itself. If approved later, check exact
+scope/ownership and safe enforceability before touching targets; stop if inadequate.
+
+## Prior completed combined-design handoff — historical
+
 # C combined design complete — return to Sol Medium
 
 2026-10-26, GPT-6.1 Sol High from6e83d09. No implementation or native work.

@@ -1,5 +1,15 @@
 # Combined C trust and no-mutation design — conditional, not admitted
 
+## Subsequent selected milestone — pending phased approvals
+
+The human selected Stop-only request preparation; see
+[STOP-CONSOLIDATED-REQUEST](STOP-CONSOLIDATED-REQUEST.md). C/manual supervision are
+accepted design facts, not pending votes. The older preflight/setup/usage prompts and
+caps below are historical and must not be replayed as grants. No native approval or
+checker/guard change follows. Current packet retains separate actual setup/startup/
+trust/usage/result gates; all remain closed. Q39/NM-1 remains unresolved.
+
+
 2026-10-26, GPT-6.1 Sol High from6e83d09. Saved evidence/source review only under
 [C-DESIGN-SCOPE](C-DESIGN-SCOPE.md). **Design complete; no native profile admitted.**
 Installed31/product guards are preserved; dev39 remains disabled/uninstalled.

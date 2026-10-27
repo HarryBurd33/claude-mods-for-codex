@@ -1,5 +1,15 @@
 # Stop-only isolated lifecycle acceptance proposal
 
+## Subsequent selected milestone — pending phased approvals
+
+The human selected Stop-only request preparation; see
+[STOP-CONSOLIDATED-REQUEST](STOP-CONSOLIDATED-REQUEST.md). C/manual supervision are
+accepted design facts, not pending votes. The older preflight/setup/usage prompts and
+caps below are historical and must not be replayed as grants. No native approval or
+checker/guard change follows. Current packet retains separate actual setup/startup/
+trust/usage/result gates; all remain closed. Q39/NM-1 remains unresolved.
+
+
 2026-10-26, GPT-6.1 Sol High, resumed7eff539. **Review/offline artifacts only.**
 No Codex/app-server invocation, model run, installation, native config/trust write,
 native-input refresh, runtime implementation or gate opening. Installed31 unchanged;

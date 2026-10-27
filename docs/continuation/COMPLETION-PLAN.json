@@ -932,11 +932,11 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/C-COMBINED-DESIGN.md",
+    "record": "docs/continuation/STOP-CONSOLIDATED-REQUEST.md",
     "authorized": false,
     "model": "GPT-6.1 Sol",
     "effort": "Medium",
-    "kind": "exact combined-design artifact verification and consolidated future milestone/access choice, no repeated source/probe investigation",
+    "kind": "pending phase1 owned temporary Stop-only setup approval only; all later grants separate",
     "requiresNativeLaunch": false,
     "requiresExtraModelRun": false,
     "requiresImplementation": false
@@ -1032,6 +1032,18 @@
       "designComplete": true,
       "profileAdmitted": false,
       "remainingBlocker": "NM-1 complete stable non-mutating effective covered-hook profile under installed31 preservation",
+      "nativeDev39Disabled": true,
+      "acceptanceCountsChanged": false
+    },
+    {
+      "id": "stop-only-consolidated-request-prepared",
+      "date": "2026-10-26",
+      "record": "docs/continuation/STOP-CONSOLIDATED-REQUEST.md",
+      "humanSelectedMilestoneA": true,
+      "preparationExecuted": true,
+      "phase1Authorized": false,
+      "sourceSnapshotFiles": 39,
+      "fixedMetadataObjectsProposed": 45,
       "nativeDev39Disabled": true,
       "acceptanceCountsChanged": false
     }

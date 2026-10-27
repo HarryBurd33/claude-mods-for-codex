@@ -1,5 +1,22 @@
 # Current status — optional call-review source implemented; product incomplete
 
+## Stop-only consolidated request prepared — 2026-10-26
+
+The human chose milestone A, **Stop-only approval-request preparation only**.
+[STOP-CONSOLIDATED-REQUEST](STOP-CONSOLIDATED-REQUEST.md) gives one packet with pending
+owned-setup, native-startup/human-trust, one explicit Sol Medium usage turn, and bounded
+result/removal stages. Exact next request is phase1 only: listed saved source/template
+verification plus45fixed metadata objects and exclusive fresh temporary config/project/
+data creation,20second work budget/zero retries. No grant has been given.39snapshot
+files/five inert artifacts match; no target path inspected. Actual gates remainclosed,
+installed31/guards/dev39disabled preserved. No C/manual-supervision vote repeated.
+Phase2 requires its separately reviewed startup/preservation access; no blank cheque
+for inherited effects. Q39/NM-1, routing, Windows/full-product acceptance stay incomplete.
+
+Older milestone-choice/design-verification directions below are completed history.
+No tests/native/extra-model/network/config/trust action or93-count change.
+
+
 ## Combined C design complete; Q39 remains blocked — 2026-10-26
 
 [C-COMBINED-DESIGN](C-COMBINED-DESIGN.md) completes the High saved-evidence design

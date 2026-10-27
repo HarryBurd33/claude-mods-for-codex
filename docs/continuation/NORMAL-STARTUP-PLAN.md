@@ -1,5 +1,15 @@
 # Proposed normal-startup Stop validation — not authorized to run
 
+## Subsequent selected milestone — pending phased approvals
+
+The human selected Stop-only request preparation; see
+[STOP-CONSOLIDATED-REQUEST](STOP-CONSOLIDATED-REQUEST.md). C/manual supervision are
+accepted design facts, not pending votes. The older preflight/setup/usage prompts and
+caps below are historical and must not be replayed as grants. No native approval or
+checker/guard change follows. Current packet retains separate actual setup/startup/
+trust/usage/result gates; all remain closed. Q39/NM-1 remains unresolved.
+
+
 Current2026-10-26 update: human accepted **manual supervision design only**. [Exact next preflight request](MANUAL-PREFLIGHT-REQUEST.md) is prepared but unapproved. Native execution/inference/config/trust/input-read gates remain closed. Earlier pending-design statements below are historical.
 
 2026-10-26, Sol High, starting7003e22. This completes preparation under
