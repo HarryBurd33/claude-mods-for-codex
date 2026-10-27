@@ -1,11 +1,11 @@
 # Resume plan — finite completion milestones
 
-Next chosen task is the **unapproved** [M1 offline authoring-skills batch](M1-AUTHORING-SKILLS-SCOPE.md).
-Remain on Sol Medium. One existing-source/synthetic Evidence desk exercise, no new
-runtime implementation, native/UI/server/extra-model/network/install/liveconfig/trust
-or target/session access. Current stage prepared the scope only. Dev39 stays disabled,
-installed31/all guards unchanged. Do not repeat completed review verification as work.
-High only on unexpected consequential source/security defects or drift.
+The [offline authoring-skills batch](M1-AUTHORING-SKILLS-RESULT.md) is complete within
+its source-only scope. Do not repeat the batch or add another verification/model-
+switch loop. No new work scope is authorized yet. Installed31/all guards/dev39disabled
+remain; native launch/profile and other completion-plan gaps persist. New concrete
+independent work or an explicit native validation decision must come next. Medium for
+routine work, High before consequential changes; no automatic worker or execution.
 
 ## Earlier planning context (historical)
 

@@ -1,61 +1,73 @@
-# Next unblocked task scoped — offline authoring-skills acceptance
+# Offline authoring-skills batch complete — no model switch needed
 
-2026-10-26, Sol Medium from75559a7. Current human authorized task selection and exact
-scope preparation only. Read M1-AUTHORING-SKILLS-SCOPE.md, COMPLETION-PLAN.md/JSON,
-RESUME-PLAN.md and current STATUS/REQUIREMENTS. Private root HANDOFF.md and
-.local/m1-authoring-plan/SYNC.json name exact local records commit/tree/snapshot.
+2026-10-26, GPT-6.1 Sol Medium, starting7bd32a5 on codex/astra-groundwork. Human
+explicitly authorized M1-AUTHORING-SKILLS-SCOPE.md. Read M1-AUTHORING-SKILLS-RESULT.md,
+current STATUS/REQUIREMENTS and COMPLETION-PLAN.md/JSON. Exact resulting local records
+SHA/tree/private checkpoint in ignored root HANDOFF.md and the private batch receipt.
+No network upload/remote query; repository is not verified current on GitHub.
 
-Selected M1/W4 AU-06/07/08/09/10 and SK-01/02/03/04: one same-chat four-skill Evidence
-desk authoring acceptance using existing source39. Generate one disabled interaction
-bundle from a bounded request, validate/replay disabled and with one separate private
-intent, inspect access/plan, diagnose one expected copied-fixture integrity rejection,
-then prepare review/completion claims. Eight fixed Node CLI invocations, no fixture
-commands executed, no real UI or native server. Exact future files/bounds/outputs and
-complete copyable authorization are in the scope doc. No source/runtime fix planned.
+## Completed work and observed commands
 
-This is an unblocked acceptance gap, not a new authoring framework or repetition of
-unit tests. Existing skill evidence is narrow; this extends observed same-chat source
-workflow only, not independent evaluation, installed discovery/native slash callback,
-live rendering/accessibility, installation/trust/use or full93closure. No extra model
-run/evaluator/agent needed; current selected model still consumes ordinary chat usage.
-The corrupted-copy refusal is a deliberately seeded integrity negative, not a product
-bug. Never repair hashes/bless the copy, change guards or make an unsolicited fix.
+Existing source39 used in this same selected chat with all four original source
+skills: mod-scaffolding, systematic-debugging, prepare-mod-review, verify-mod-completion.
+One disabled six-file Evidence desk interaction bundle; separate intent changes only
+interaction.enabled for replay. Eight fixed Node source CLI operations completed:
+scaffold, validate-original, replay-disabled, plan-disabled, replay-intent, plan-intent,
+validate-corrupted(copy) and revalidate-original(control). Seven succeeded; the expected
+altered-copy validation refused exit1. No unexpected failure or runtime/source fix.
 
-## Current limits and evidence
+Six actual fixed-controller/renderer minimal-DOM scenarios pass: render3fields, edit
+invalidation, Clear, malformed/oversized input clearing and disposal. Disabled replay
+has0controls. Raw fixture input absent from replay summary, no command execution or
+real UI. Both plans grant no hooks/capture/path/permission. Original disabled files
+hash-identical. Copied valid-JSON fixture differs by one trailing ASCIIspace; old marker
+retained, rejection diagnosed at integrity boundary. Copy kept unblessed, no repair.
 
-Scope prepared; **exercise not run or authorized**. Future private execution root
-.local/m1-authoring-skills not created. Current source/skills/tests/default hooks/.mcp/
-config/Windows/ancestor/routing guards/dev39 archive unchanged; no installed31 access/
-logging/model/trust update. Both old grants consumed/gatesfalse; no native baseline
-adoption. No native/UI/server/extra-model/network/install/config/trust action. Only
-planning docs/private checkpoint records changed. No runtime tests/generator invoked.
-Starting dev39 review verifier passed; current plan verifier preserves frozen evidence
-and source,93IDs/counts and no-execution flags. Old sealed note verifiers remain intact;
-do not rerun/repin them against intentionally changed planning notes.
+Eight children used absolute reviewed repository CLI, shell=false, PATH-only clean env,
+10second supervision/64KiB combined output limit/core dumps off. Output7,863bytes;
+summed child duration0.337s, not total conversation time or hard real-time assurance.
+Private modes/owner/one-link/count/size checked within64files/2MiB. Details are private
+in .local/m1-authoring-skills: request/spec/original-bundle/replay-intent/corrupted-bundle,
+SOURCE-HASHES/ORIGINAL-HASHES, COMMANDS/logs/COMMAND-RESULTS, SKILL-APPLICATION, REVIEW,
+CLAIMS and RESULT. No generated executable/product/test code. Artifacts retained.
 
-Dev39 remains disabled/uninstalled. Keep DEV39-DEPLOYMENT-REVIEW decision: retained
-launch admission and effective no-mutating-hooks/shared-config profile are not jointly
-established. This independent authoring task does not resolve them or need new probes.
-Native routing/events, accessibility and Windows/platform/release gaps remain incomplete.
-Do not reopen already unavailable VoiceOver/reopen checks or repeat package/version/
-trust/restart cycles solely for these planning records.
+## Evidence limits and unchanged guards
 
-## Next scope and model
+This completes only the scoped offline same-chat source workflow. It is not independent
+skill evaluation/general quality, installed skill discovery/native slash invocation,
+live rendering/accessibility, install/trust/live effect, platform acceptance or full
+project completion. Existing54packaged/152regression results remain prior evidence,
+not rerun or summed as new unique tests. No fresh native/OS/runtime/installed inventory.
 
-**Stay on GPT-6.1 Sol Medium.** After human authorization, execute the one exact batch
-in M1-AUTHORING-SKILLS-SCOPE.md, not another verification-only stage. No model switch
-needed for routine data-only existing-source CLI work. High before an unexpected
-consequential source/security/process failure or drift; preserve evidence and stop,
-no runtime repair in that scope. Preserve unrelated.gitignore and shared checkpoint
-input/review/generations/heartbeat. Local lease released, no worker/background work.
-No native collector; quota/API/context unknown. Scope cannot authorize extra inference.
+Product source/skills/tests/defaults/archive/version unchanged. Installed31 untouched;
+dev39 stays disabled/uninstalled. No native/UI/server/extra-model/network/install/live
+config/trust/logging/model/permission changes. Both old read grants consumed/gatesfalse,
+no native baseline adopted. Current chat uses ordinary selected-model usage; callbacks
+added no model requests. Account/API/context allowance remains unmeasured, no collector.
 
-On resume use .local/m1-authoring-plan/VERIFY.py and the scope's exact copyable
-authorization. It explicitly permits only future private synthetic authoring artifacts/
-intent/known corrupted copy and result records, no live configuration merge or install.
-Current preparation gives no permission to run those commands.
+Native launch/profile blockers remain in DEV39-DEPLOYMENT-REVIEW and ancestor decision.
+Windows/other platform, optional native events/routing and remaining accessibility
+still incomplete. No need to weaken guards or launch another probe to accept this
+source-only batch. Private outputs or integrity hashes are not human/host trust.
 
-GitHub upload/query not attempted under current no-network instruction. Repository:
-https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork
-Historical publicd3c4682 is not current synchronization. Exact latest local SHA/tree
-in the private receipt; full project remains incomplete.
+## Stop and future work
+
+The authorized batch is complete. **Do not add another verification-only/model-switch
+stage or rerun it as progress.** No High switch needed: there was no unexpected failure.
+Future work needs a new concrete independent implementation/acceptance scope or explicit
+native launch/profile decision, bounded by the remaining completion plan. Medium for
+routine existing-source work; High before consequential source/security/integration
+changes. No automatic worker, schedule or background continuation.
+
+Preserve private artifacts by default; no cleanup/delete action was included. No
+restoration of installed31 needed. Preserve unrelated.gitignore and original shared
+checkpoint input/review/generations/heartbeat. Local exclusive lease released at stop.
+All fixed command children completed, no persistent job started.
+
+The old .local/m1-authoring-plan/VERIFY.py expects the future root absent, so do not
+rerun or repin it after this authorized exercise. The scoped private result/command
+receipt, original/source and artifact hashes plus verified runtime checkpoint provide
+the completed-batch evidence. Do not generate another runner/proof framework to resume.
+
+Repository: https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork
+Local records only under explicit no-network restriction; no current remote sync claim.

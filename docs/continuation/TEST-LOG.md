@@ -3636,3 +3636,18 @@ trust/source change. New plan artifact checks preserve source/default/evidence p
 93IDs/counts, consumed grants/gatesclosed, dev39disabled; scope unapproved.
 See M1-AUTHORING-SKILLS-SCOPE for exact future8CLIcalls, six simulated cases, expected
 copy-integrity rejection, privacy/usage/write limits and stop conditions.
+
+
+## 2026-10-26 — eight-command offline authoring-skills acceptance (Sol Medium)
+
+Explicit7bd32a5 scope. Existing source39 CLI, clean PATH-only child env, no shell.
+Generation/validate/disabled replay/disabled plan/intent replay/intent plan all pass;
+copied valid-JSON fixture with one trailing space refuses exit1 as intended; original
+control revalidation passes. Exactly8operations:7success+1expectedrefusal, not8unit tests.
+Six actual-controller/renderer minimal-DOM scenarios pass; original6files unchanged
+and disabled, separate intent only interaction.enabled. No raw input in summary.
+Output7,863bytes, summed CLI duration0.337s. Perchild10s/64KiB bound, no core dumps.
+No product/test/skill/version change or native/UI/server/network/model/install/live
+config/trust action. Private artifacts kept; no integrity repair or product defect
+claim. Saved source/default/archive/93-ID/gate checks pass. See result for limitations.
+No extra test/package/CI cycle. Batch complete, no further model switch required.

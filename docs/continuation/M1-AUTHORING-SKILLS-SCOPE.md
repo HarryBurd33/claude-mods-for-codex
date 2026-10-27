@@ -1,5 +1,9 @@
 # Next unblocked task: one offline authoring-skills acceptance batch
 
+Historical scope: explicitly authorized by the human from7bd32a5 and completed.
+See [M1-AUTHORING-SKILLS-RESULT](M1-AUTHORING-SKILLS-RESULT.md). Original preparation
+wording below is retained; it does not authorize a repeat or live deployment.
+
 2026-10-26, prepared on GPT-6.1 Sol Medium from75559a7. **Scope preparation only;
 the exercise below is not yet authorized or run.** No model switch is needed to
 perform this routine batch after the human authorizes it. No implementation is planned.

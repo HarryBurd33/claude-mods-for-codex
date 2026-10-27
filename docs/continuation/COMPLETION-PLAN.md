@@ -1,13 +1,12 @@
 # Completion plan — dev39 candidate / installed31
 
-Current selection2026-10-26: dev39 is offline-packaged and its deployment review
-retains native blockers. The next independent task is the proposed
-[M1 offline authoring-skills batch](M1-AUTHORING-SKILLS-SCOPE.md), W4/AU-06–10 and
-SK-01–04, using existing source/synthetic data only. Scope prepared, exercise not run
-or authorized. Medium sufficient; no native/model/network/config/trust dependency.
-Prior UI results are partial; original call-review scope was subsequently implemented.
-No93-ID/count closure follows from these developments. Dated source38 planning basis
-below remains historical; current candidate39 is disabled/uninstalled,31 preserved.
+Current2026-10-26: the [offline authoring-skills batch](M1-AUTHORING-SKILLS-RESULT.md)
+completed its narrow existing-source scope:8CLIoperations,7success+1expectedrefusal,
+6simulated scenarios; same-chat four-skill application, no native/independent evaluation.
+Dev39 remains disabled with native launch/profile blockers. No93-ID/count closure.
+This batch does not need a further verification-only/model-switch stage. Next work
+needs a new concrete scope from the remaining workstreams. Dated source38 planning
+basis below is historical; current candidate39 uninstalled, installed31 preserved.
 
 2026-10-26, GPT-6.1 Sol High. Based only on saved repository evidence, not a new
 host/upstream inventory. Planning/review have begun; implementation and execution
@@ -177,13 +176,12 @@ full cross-platform project.
 
 ## Immediate next step and operating rules
 
-Remain on **GPT-6.1 Sol Medium** for the exact offline authoring-skills batch once
-the human authorizes M1-AUTHORING-SKILLS-SCOPE.md. Use four existing skills in the
-same chat to describe/generate a disabled Evidence desk, validate/replay via a separate
-synthetic intent, diagnose one expected corrupted-copy refusal, and prepare scoped
-review/completion evidence. No source change, native/UI/server/extra-model/network/
-install/config/trust or target/session access. This planning stage does not run it.
-Do not repeat completed artifact-verification stages or reopen native probes.
+The exact offline authoring-skills batch is complete; do not repeat it or create a
+verification-only stage as new progress. Preserve its disabled artifact/evidence and
+all native gates. Future work requires a concrete independent implementation or
+acceptance scope, or an explicit native launch/profile decision. Medium remains
+sufficient for routine existing-code work; High before consequential source/security/
+integration changes. Full completion still requires the remaining stated acceptance.
 
 Authorizations should cover a concrete reviewed milestone/campaign, not a series of
 unprepared tiny helpers. Keep separate genuinely protected trust/authentication and

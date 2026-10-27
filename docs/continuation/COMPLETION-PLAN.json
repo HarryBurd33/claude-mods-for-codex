@@ -906,25 +906,37 @@
       "fullRequirementClosure": false,
       "source": "human reports and permitted owned-panel DOM",
       "freshVersionAttestation": false
+    },
+    {
+      "id": "M1-offline-authoring-skills",
+      "record": "docs/continuation/M1-AUTHORING-SKILLS-RESULT.md",
+      "state": "completed-source-only-same-chat-acceptance",
+      "affectedIds": [
+        "AU-06",
+        "AU-07",
+        "AU-08",
+        "AU-09",
+        "AU-10",
+        "SK-01",
+        "SK-02",
+        "SK-03",
+        "SK-04"
+      ],
+      "fullRequirementClosure": false,
+      "cliInvocations": 8,
+      "successfulCommands": 7,
+      "expectedRefusals": 1,
+      "simulatedScenarios": 6,
+      "nativeAcceptance": false,
+      "independentEvaluation": false
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/M1-AUTHORING-SKILLS-SCOPE.md",
+    "record": "docs/continuation/M1-AUTHORING-SKILLS-RESULT.md",
     "authorized": false,
     "model": "GPT-6.1 Sol",
     "effort": "Medium",
-    "kind": "one existing-source offline same-chat authoring-skills acceptance batch",
-    "affectedIds": [
-      "AU-06",
-      "AU-07",
-      "AU-08",
-      "AU-09",
-      "AU-10",
-      "SK-01",
-      "SK-02",
-      "SK-03",
-      "SK-04"
-    ],
+    "kind": "batch complete; await new concrete independent work scope or native launch/profile decision",
     "requiresNativeLaunch": false,
     "requiresExtraModelRun": false,
     "requiresImplementation": false

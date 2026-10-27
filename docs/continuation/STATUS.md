@@ -1,5 +1,16 @@
 # Current status — optional call-review source implemented; product incomplete
 
+## Latest: scoped offline authoring-skills batch complete — 2026-10-26
+
+[M1-AUTHORING-SKILLS-RESULT](M1-AUTHORING-SKILLS-RESULT.md): existing-source same-chat
+four-skill exercise delivered one disabled private card bundle. Eight CLI operations,
+seven successes plus one expected integrity refusal(exit1); six simulated interaction
+scenarios passed. Original unchanged, separate intent replay only. No source/native/
+UI/extra-model/network/install/liveconfig/trust change; installed31/all guards preserved,
+dev39 disabled. No full93/native/platform closure. Batch complete; no High switch or
+another verification-only stage needed. New work requires a concrete scope.
+
+
 ## Next unblocked task selected — scope only — 2026-10-26
 
 [M1-AUTHORING-SKILLS-SCOPE](M1-AUTHORING-SKILLS-SCOPE.md) selects W4/AU-06–10 and
