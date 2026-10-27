@@ -24,15 +24,22 @@ export async function settleFixedFixtureGroup(pid) {
 export async function settleFixedFixtureGroupDetail(pid) {
   const start = performance.now(), end = start + 2000;
   let probe = observeProcessGroupDetail(pid), probeCount = 1;
+  let epermProbeCount = probe.error === 'EPERM' ? 1 : 0;
   const initial = probe;
-  while (probe.status === 'present-or-reused' && performance.now() < end) {
-    await delay(10); probe = observeProcessGroupDetail(pid); probeCount++;
+  while ((probe.status === 'present-or-reused' || probe.status === 'unavailable' && probe.error === 'EPERM')
+    && performance.now() < end) {
+    await delay(10);
+    // A delayed timer must not authorize one last probe beyond the same budget.
+    if (performance.now() >= end) break;
+    probe = observeProcessGroupDetail(pid); probeCount++;
+    if (probe.error === 'EPERM') epermProbeCount++;
   }
   const finished = performance.now();
   // Diagnostic values only: no PID, exception text, new signal or authority.
-  // Keep the original loop/budget and ESRCH-only absence result unchanged.
+  // EPERM remains unavailable, including while we spend the remaining fixed
+  // observation budget. Only a later actual ESRCH can establish this sample.
   return {initialStatus:initial.status, initialError:initial.error,
-    finalStatus:probe.status, finalError:probe.error, probeCount,
+    finalStatus:probe.status, finalError:probe.error, probeCount, epermProbeCount,
     elapsedMs:Math.max(0, Math.trunc(finished - start)), deadlineReached:finished >= end,
     goneObserved:probe.status === 'absent-at-probe'};
 }

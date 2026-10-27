@@ -3,8 +3,26 @@
 import { performance } from 'node:perf_hooks';
 import { runFixedReadiness } from './readiness-driver.mjs';
 import { runFixedInspection } from './inspection-driver.mjs';
+import { settleFixedFixtureGroupDetail } from './process-group-observation.mjs';
 const mode = process.argv[2];
-if (process.argv.length !== 3 || !['readiness-late', 'readiness-serialize', 'inspection-serialize'].includes(mode)) process.exit(2);
+if (process.argv.length !== 3 || !['readiness-late', 'readiness-serialize', 'inspection-serialize', 'settlement-late'].includes(mode)) process.exit(2);
+if (mode === 'settlement-late') {
+  const kill = process.kill;
+  let calls = 0;
+  try {
+    process.kill = () => {
+      calls++;
+      if (calls === 1) setTimeout(() => {
+        const end = performance.now() + 2100;
+        while (performance.now() < end) { /* isolated event-loop stall */ }
+      }, 0);
+      throw Object.assign(new Error('fixed'), {code:'EPERM'});
+    };
+    const report = await settleFixedFixtureGroupDetail(12345);
+    process.stdout.write(JSON.stringify({calls, ...report}) + '\n');
+  } finally { process.kill = kill; }
+  process.exit(0);
+}
 const interval = globalThis.setInterval, stringify = JSON.stringify;
 let stalled = false;
 try {

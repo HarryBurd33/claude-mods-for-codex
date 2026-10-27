@@ -1,5 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { observeProcessGroup, observeProcessGroupDetail, settleFixedFixtureGroup,
   settleFixedFixtureGroupDetail } from '../proofs/process-group-observation.mjs';
 
@@ -31,14 +33,47 @@ test('fixed settlement records an unavailable probe without inferring absence or
   try {
     const result = await settleFixedFixtureGroupDetail(12345);
     assert.deepEqual(Object.keys(result).sort(), ['initialStatus','initialError','finalStatus','finalError',
-      'probeCount','elapsedMs','deadlineReached','goneObserved'].sort());
+      'probeCount','epermProbeCount','elapsedMs','deadlineReached','goneObserved'].sort());
     assert.equal(result.initialStatus,'unavailable'); assert.equal(result.finalStatus,'unavailable');
     assert.equal(result.initialError,'EPERM'); assert.equal(result.finalError,'EPERM');
-    assert.equal(result.probeCount,1); assert.equal(result.goneObserved,false); assert.equal(result.deadlineReached,false);
+    assert.ok(result.probeCount > 1); assert.equal(result.epermProbeCount,result.probeCount);
+    assert.equal(result.goneObserved,false); assert.equal(result.deadlineReached,true);
     assert.ok(Number.isInteger(result.elapsedMs) && result.elapsedMs >= 0);
     assert.equal(await settleFixedFixtureGroup(12345),false);
     assert.doesNotMatch(JSON.stringify(result), /12345|SYNTHETIC_SECRET/);
   } finally { mock.mock.restore(); }
+});
+
+for (const sequence of [[null,'EPERM','ESRCH'],['EPERM','ESRCH'],[null,'EPERM',null,'ESRCH']]) {
+  test('fixed settlement observes actual absence after ' + JSON.stringify(sequence), {skip:process.platform === 'win32'}, async t => {
+    let calls=0;
+    t.mock.method(process,'kill',(pid,signal) => {
+      assert.equal(pid,-12345); assert.equal(signal,0);
+      const code=sequence[calls++]; assert.ok(calls<=sequence.length);
+      if(code)throw Object.assign(new Error('SYNTHETIC_SECRET'),{code});
+      return true;
+    });
+    const result=await settleFixedFixtureGroupDetail(12345);
+    assert.equal(result.goneObserved,true);assert.equal(result.finalError,'ESRCH');
+    assert.equal(result.epermProbeCount,1);assert.equal(result.probeCount,sequence.length);
+    assert.equal(result.deadlineReached,false);
+  });
+}
+for (const code of ['EINVAL','UNRECOGNIZED']) {
+  test('fixed settlement keeps terminal error ' + code, {skip:process.platform === 'win32'}, async t => {
+    const mock=t.mock.method(process,'kill',()=>{throw Object.assign(new Error('secret'),{code});});
+    const result=await settleFixedFixtureGroupDetail(12345);
+    assert.equal(result.goneObserved,false);assert.equal(result.probeCount,1);
+    assert.equal(result.epermProbeCount,0);assert.equal(mock.mock.callCount(),1);
+  });
+}
+test('delayed settlement timer never probes after its fixed deadline', {skip:process.platform === 'win32'}, () => {
+  const child=spawnSync(process.execPath,[fileURLToPath(new URL('../proofs/reliability-probe.mjs',import.meta.url)),'settlement-late'],
+    {env:{},encoding:'utf8',timeout:12000});
+  assert.equal(child.status,0,child.stderr);
+  const result=JSON.parse(child.stdout);
+  assert.equal(result.calls,1);assert.equal(result.probeCount,1);assert.equal(result.goneObserved,false);
+  assert.equal(result.finalError,'EPERM');assert.equal(result.deadlineReached,true);
 });
 
 test('fixed settlement preserves a present-to-ESRCH transition and the conservative boolean API', {skip:process.platform === 'win32'}, async t => {
