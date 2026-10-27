@@ -1,3 +1,69 @@
+# C combined design complete — return to Sol Medium
+
+2026-10-26, GPT-6.1 Sol High from6e83d09. No implementation or native work.
+
+[C-COMBINED-DESIGN](C-COMBINED-DESIGN.md) completes the High saved-evidence design
+from6e83d09. Accepted C changes only the proposed installation-trust assumption;
+the checker/old evidence stay unchanged. Conditional Q39 profile is **not admitted**:
+NM-1 requires a complete stable non-mutating effective covered-hook set while preserving
+installed31. Project config/separate connection/digest cannot establish that. Owned
+policy selection must not redirect inherited31 hooks. No implementation/native/target/
+extra-model/network/config/trust changes; dev39disabled/all guards/93counts preserved.
+Existing impact/deny is the practical current alternative; future Stop-only delivery
+is a narrower separately approved milestone, not dev39/no-mutation/routing acceptance.
+Next **GPT-6.1 Sol Medium** for exact design-record verification and one consolidated
+future milestone/access choice. No new C/supervision vote or preflight/probe framework.
+
+## Design and evidence
+
+Read C-COMBINED-DESIGN.md and its primary citations. Six cached Rust files matched
+prior retrieved digests (hook discovery/config states/plugin trust, PreToolUse,
+command runner and tool registry); six repository source/example pins recorded.
+Primary source was previously retrieved at pinned0.164commit6aaac694, not fresh
+release/current-client evidence. Candidate still source39efccbaa/package354files;
+installed31 retains its own identity/settings. Current native inventory unknown.
+
+Q39 binds only new owned processes to absolute C39/S39/R; exporting those variables
+to the whole host could redirect inherited31 and is prohibited. Non-mutation applies
+to the complete effective covered path; a harmless planned string is not an enforced
+input gate, a blank project is not isolation and a review{} is not an argument veto.
+Config/plugin trust has differing invalidation coverage; before/after digests detect
+some changes, not atomic preservation. Unknown sources/updates/coverage mean blocked.
+C does not waive NM-1. Design includes separate future review/setup/human code trust/
+normal-startup-network/visible bounded usage/observation/owned cleanup requirements,
+no argv/active config and no authority. Manual90second target has no enforced output/
+billing/request/remote cancellation cap; known host fail-open/provenance limits stay.
+
+## Exact next task
+
+**GPT-6.1 Sol Medium**, routine exact artifact/decision verification only. Read current
+public design/HANDOFF and ignored .local/c-combined-design receipts/source pins/current
+hashes/SYNC. Verify links/design requirements/closed gates/protected source and old
+archive without tests, native reads, setup, extra models or network. Preserve sealed
+historical manifests; new intended docs change old document hashes, do not repin them.
+No further source investigation without changed evidence/scope. Then present one
+consolidated choice of future milestone/access: retain blocked with existing impact/
+deny; consider separately authorized narrower Stop-only campaign; or provide concrete
+new support/evidence for an admissible Q39 profile. Do not ask C or manual supervision
+again, invent global exclusions or keep an unchanged verification/probe loop running.
+Stop for High if consequential design/security drift arises; actual native/setup/
+network/usage/trust requires its own exact later human scope.
+
+Installed31/logging/model/human trust/product/Windows guards preserved; dev39disabled,
+both read grants consumed/gatesfalse.93counts unchanged; full native/platform/release
+work incomplete. Local commit/tree/checkpoint in ignored root HANDOFF and
+.local/c-combined-design/SYNC.json. No upload/remote verification under network ban.
+No persistent child/worker/schedule; local lease released at handoff. Preserve unrelated
+.gitignore/shared checkpoint semantic input/review/heartbeat. No background continuation.
+
+Resume: “Continue on Sol Medium from the combined C-design checkpoint. Verify
+C-COMBINED-DESIGN.md and exact saved artifacts only, then present its consolidated
+future milestone/access choice. Preserve installed31/guards and dev39 disabled.
+No implementation, target reads, tests, native/extra model runs, network or config/
+trust changes. Stop for High on consequential work or unexpected drift.”
+
+## Prior C acceptance — historical handoff
+
 # Option C accepted for design only — stop for Sol High
 
 2026-10-26, GPT-6.1 Sol Medium fromad3014c.

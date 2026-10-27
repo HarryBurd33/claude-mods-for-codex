@@ -1,5 +1,23 @@
 # Ancestor-policy review: keep the guard, stop the probe chain
 
+## Subsequent combined design — no native admission
+
+[C-COMBINED-DESIGN](C-COMBINED-DESIGN.md) completes the High saved-evidence design
+from6e83d09. Accepted C changes only the proposed installation-trust assumption;
+the checker/old evidence stay unchanged. Conditional Q39 profile is **not admitted**:
+NM-1 requires a complete stable non-mutating effective covered-hook set while preserving
+installed31. Project config/separate connection/digest cannot establish that. Owned
+policy selection must not redirect inherited31 hooks. No implementation/native/target/
+extra-model/network/config/trust changes; dev39disabled/all guards/93counts preserved.
+Existing impact/deny is the practical current alternative; future Stop-only delivery
+is a narrower separately approved milestone, not dev39/no-mutation/routing acceptance.
+Next **GPT-6.1 Sol Medium** for exact design-record verification and one consolidated
+future milestone/access choice. No new C/supervision vote or preflight/probe framework.
+
+The dated original review and failed preflight below remain evidence; no checker
+pass or current-host effective profile is inferred.
+
+
 ## Subsequent human decision — design only
 
 The human accepted **Option C for design preparation only**, explicitly accepting

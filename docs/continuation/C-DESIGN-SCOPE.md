@@ -1,5 +1,10 @@
 # Option C accepted for design preparation — combined High scope
 
+**Execution record:** authorized High design completed from6e83d09; see
+[C-COMBINED-DESIGN](C-COMBINED-DESIGN.md). The scope below is historical, not an
+unused design/execution grant. Q39 remains unadmitted; next human setting Medium.
+
+
 2026-10-26, human decision after localad3014c. **Design preparation only.**
 
 > Accept C for design preparation only, including weaker installation-identity assurance. Address the no-mutation profile too. Preserve installed31 and product guards; keep dev39 disabled. No execution, network, model runs or config/trust changes.

@@ -932,12 +932,11 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/C-DESIGN-SCOPE.md",
-    "authorized": true,
-    "authorizationExtent": "Design preparation only; requires human High switch; all execution/config/trust/network gates closed",
+    "record": "docs/continuation/C-COMBINED-DESIGN.md",
+    "authorized": false,
     "model": "GPT-6.1 Sol",
-    "effort": "High",
-    "kind": "combined accepted weaker-installation-trust and unresolved effective no-mutation profile security design from saved evidence",
+    "effort": "Medium",
+    "kind": "exact combined-design artifact verification and consolidated future milestone/access choice, no repeated source/probe investigation",
     "requiresNativeLaunch": false,
     "requiresExtraModelRun": false,
     "requiresImplementation": false
@@ -1022,6 +1021,17 @@
       "humanAcceptedDesign": true,
       "weakerInstallationIdentityAssuranceAccepted": true,
       "noMutationProfileResolved": false,
+      "nativeDev39Disabled": true,
+      "acceptanceCountsChanged": false
+    },
+    {
+      "id": "c-combined-design-complete",
+      "date": "2026-10-26",
+      "record": "docs/continuation/C-COMBINED-DESIGN.md",
+      "executed": true,
+      "designComplete": true,
+      "profileAdmitted": false,
+      "remainingBlocker": "NM-1 complete stable non-mutating effective covered-hook profile under installed31 preservation",
       "nativeDev39Disabled": true,
       "acceptanceCountsChanged": false
     }
