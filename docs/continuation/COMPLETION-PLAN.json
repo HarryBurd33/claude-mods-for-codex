@@ -932,14 +932,14 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/STOP-CONSOLIDATED-REQUEST.md",
+    "record": "docs/continuation/STOP-PHASE1-ENFORCEMENT-SCOPE.md",
     "authorized": false,
     "model": "GPT-6.1 Sol",
-    "effort": "Medium",
-    "kind": "pending phase1 owned temporary Stop-only setup approval only; all later grants separate",
+    "effort": "High",
+    "kind": "offline-only bounded Phase1 mechanism review/implementation/tests under future human resume; real grant unused",
     "requiresNativeLaunch": false,
     "requiresExtraModelRun": false,
-    "requiresImplementation": false
+    "requiresImplementation": true
   },
   "sourceImplementationObservations": [
     {
@@ -1044,6 +1044,19 @@
       "phase1Authorized": false,
       "sourceSnapshotFiles": 39,
       "fixedMetadataObjectsProposed": 45,
+      "nativeDev39Disabled": true,
+      "acceptanceCountsChanged": false
+    },
+    {
+      "id": "phase1-authorized-unstarted-enforcement-handoff",
+      "date": "2026-10-26",
+      "record": "docs/continuation/STOP-PHASE1-ENFORCEMENT-SCOPE.md",
+      "phase1Authorized": true,
+      "invocationsStarted": 0,
+      "grantConsumed": false,
+      "enforcementReady": false,
+      "targetReads": 0,
+      "setupWrites": 0,
       "nativeDev39Disabled": true,
       "acceptanceCountsChanged": false
     }
