@@ -6,7 +6,7 @@ inventory is implied. MIT; independent of Anthropic and OpenAI.
 
 | Milestone | Evidence and limits |
 | --- | --- |
-| [Bounded CI repair](docs/continuation/CI-REPAIR-2026-10-27.md) | Fixed-peer process-group diagnostics added; local377pass/115skips. Git2.56 upstream layout change explains the stale internal path. Existing Windows guards/mandatory positives remain; full CI repair is not established. |
+| [Bounded CI repair](docs/continuation/CI-REPAIR-2026-10-27.md) | Diagnostics/owned-fixture isolation verified: local377pass/115skips; exact cccb487 CI5jobs pass/2Windows NTFS fail.379-file development archive matches source. Git2.56 layout finding recorded; Windows contract/security review remains. |
 | [Current Sol progress](docs/continuation/NATIVE-STOP-2026-10-27.md) | Automatic continuation and one real Phase1 setup completed; grant consumed. Later actual human hook trust and one supervised response produced one Stop record. Unchanged owned declaration removed, data/trust retained, qualified preservation passed. Broader native acceptance remains open. |
 | [Prior Astra review](docs/continuation/ASTRA-RUNTIME-REVIEW.md) | Reviewed external runtime; versioned private launcher; 11 actual-runtime/local-Git synthetic passes; 44 selected project passes; validate/replay passed. These are the prior offline results; the subsequent real Phase 1 result is above. |
 | [Dev39 candidate](docs/continuation/PACKAGE-DEV39.md) | Historical efccbaa package: 354 files, 54 selected packaged passes. Remains disabled; no native held-call acceptance. |
