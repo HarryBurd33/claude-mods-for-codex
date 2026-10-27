@@ -1,4 +1,19 @@
-# Astra checkpoint complete — next GPT-6.1 Sol Ultra
+# Sol integration: Phase 1 complete; native phases pending
+
+## Current Sol integration — 2026-10-27
+
+[Phase 1 result](SOL-PHASE1-RESULT.md): automatic continuation was observed in a
+distinct later turn, then the human explicitly activated the original setup grant.
+One real invocation succeeded in 0.067 seconds; the original ledger is consumed and
+both admissions are closed. Never rerun Phase 1. Native startup/trust/model/result
+phases 2–4 remain unapproved. Source dev39 stays disabled/uninstalled. Phase 1 made no
+installed31, production, global trust or configuration change. All 93 ledger dispositions
+and full native/platform/release gaps remain unchanged. Stay on Sol Ultra for the
+consolidated milestone; no further automatic transition is scheduled.
+
+The earlier Astra summaries below are dated history, including then-unused-grant
+and then-pending-model directions. They do not override this current result.
+
 
 Read [ASTRA-RUNTIME-REVIEW.md](ASTRA-RUNTIME-REVIEW.md), then
 [SOL-ULTRA-MILESTONE.md](SOL-ULTRA-MILESTONE.md), and the current local

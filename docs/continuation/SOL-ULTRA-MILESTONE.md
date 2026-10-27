@@ -1,9 +1,14 @@
 # Sol Ultra: complete one macOS integration milestone
 
 Current handoff after [Astra runtime review](ASTRA-RUNTIME-REVIEW.md).
-Select **GPT-6.1 Sol → Ultra** manually. Do not launch another model automatically.
+The requested **GPT-6.1 Sol → Ultra** handoff occurred through the separately
+authorized one-use Model Switcher route. That schedule is deleted; no further
+automatic transition is authorized by that receipt.
 The full project is incomplete. Start from this document and the current checkpoint,
 not the historical Medium/High directions embedded in older records.
+
+[Current result](SOL-PHASE1-RESULT.md): real Phase1 succeeded once and its grant is
+consumed. Do not invoke it again. Continue the still-pending native phases2–4 below.
 
 ## Intake once, then deliver behavior
 

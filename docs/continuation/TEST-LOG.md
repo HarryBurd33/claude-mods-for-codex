@@ -1,5 +1,29 @@
 # Continuation verification log
 
+## Sol source verification — 2026-10-27
+
+Full local Node suite:370pass/0fail/113Windows-only skips/483total,15.892seconds.
+Validate3mods/replay4 passed. This follows per-image subtest isolation, with all
+mandatory actual-image positive assertions and C# guards unchanged. A controlled
+local child-test probe deliberately failed its first child and observed the second
+child execute while the parent stayed failed; it is expected-failure harness evidence,
+not part of the370passing repository tests. Exact-head CI remains separate.
+
+## Current Sol integration — 2026-10-27
+
+[Phase 1 result](SOL-PHASE1-RESULT.md): automatic continuation was observed in a
+distinct later turn, then the human explicitly activated the original setup grant.
+One real invocation succeeded in 0.067 seconds; the original ledger is consumed and
+both admissions are closed. Never rerun Phase 1. Native startup/trust/model/result
+phases 2–4 remain unapproved. Source dev39 stays disabled/uninstalled. Phase 1 made no
+installed31, production, global trust or configuration change. All 93 ledger dispositions
+and full native/platform/release gaps remain unchanged. Stay on Sol Ultra for the
+consolidated milestone; no further automatic transition is scheduled.
+
+The earlier Astra summaries below are dated history, including then-unused-grant
+and then-pending-model directions. They do not override this current result.
+
+
 ## Phase1 private mechanism verified synthetically — 2026-10-26
 
 [STOP-PHASE1-OFFLINE](STOP-PHASE1-OFFLINE.md) completes the High synthetic-only

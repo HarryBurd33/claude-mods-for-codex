@@ -395,11 +395,15 @@ test('Windows CI explicit Installer inventory profile obtains hashes and static 
   const root=process.env.CODEX_MODS_CI_GIT_ROOT;assert.equal(root,'C:\\Program Files\\Git');
   const {data,exe}=await setup(),project=join(data,'Installer inventory project');await mkdir(project);
   for(const relative of ['cmd/git.exe','mingw64/bin/git.exe']) {
-    const result=await installedImageRead(exe,data,win32.join(root,...relative.split('/')),root,project,{known:true,installer:true,read:true});
-    t.diagnostic(JSON.stringify({target:relative,...result,version:'not-queried',authenticity:'unverified',loaderClosure:'unverified',productionGateChanged:false}));
-    assert.deepEqual(result.frames,installerReadFrames('unchanged'));
-    assert.equal(result.dataRead,true);assert.equal(result.sampleAccepted,true);assert.match(result.sample.sha256,/^[a-f0-9]{64}$/);
-    assert.equal(result.executionAuthority,false);
+    // Both installed images remain mandatory positives. A failed first image
+    // must not hide the second image's actual policy/result evidence.
+    await t.test(relative, async candidate => {
+      const result=await installedImageRead(exe,data,win32.join(root,...relative.split('/')),root,project,{known:true,installer:true,read:true});
+      candidate.diagnostic(JSON.stringify({target:relative,...result,version:'not-queried',authenticity:'unverified',loaderClosure:'unverified',productionGateChanged:false}));
+      assert.deepEqual(result.frames,installerReadFrames('unchanged'));
+      assert.equal(result.dataRead,true);assert.equal(result.sampleAccepted,true);assert.match(result.sample.sha256,/^[a-f0-9]{64}$/);
+      assert.equal(result.executionAuthority,false);
+    });
   }
 });
 test('Windows static inventory keeps code pins across reads and refuses before bytes on unsafe code', native, async () => {

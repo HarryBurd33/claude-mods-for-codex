@@ -11,12 +11,12 @@ capability support does not mean every host or workflow has passed acceptance.
 The [dev39 call-review candidate](docs/call-review.md) is packaged and offline-tested,
 but remains disabled pending its unchanged-input deployment and native campaign.
 
-The latest [Astra milestone](docs/continuation/ASTRA-RUNTIME-REVIEW.md) resolved the
-external ownership-runtime review and hardened a private setup launcher. Its actual
-runtime/local-Git synthetic integration passed 11 tests. Public held-call and restore
-regressions passed 44 tests; validation and all four replay fixtures passed.
-**Real Phase 1 setup remains unstarted and its grant unused.** No native/trust/model
-operation is implied by those tests or by publication.
+The latest [Sol milestone](docs/continuation/SOL-PHASE1-RESULT.md) observed an automatic
+model handoff and completed the explicitly activated real Phase 1 setup once, in
+0.067 seconds. **Its one-use grant is consumed and both admissions are closed.**
+The earlier [Astra review](docs/continuation/ASTRA-RUNTIME-REVIEW.md) supplied the
+reviewed launcher and 11 synthetic integration passes. Native startup, human trust,
+the Stop model probe and result/removal phases remain unapproved.
 
 Remaining work: native lifecycle/failure/cancel and held-call/configured-agent routing;
 screen reader, enlarged zoom, panel reopening and Watch teardown; one complete
@@ -25,7 +25,7 @@ actual Windows/Linux/WSL acceptance; then a frozen candidate and release verific
 The [93-requirement plan](docs/continuation/COMPLETION-PLAN.md) retains
 60V/14B/12A/3U/4P narrow dispositions, not completion percentages.
 
-The next implementation stage is [GPT-6.1 Sol Ultra](docs/continuation/SOL-ULTRA-MILESTONE.md).
+The current implementation stage is [GPT-6.1 Sol Ultra](docs/continuation/SOL-ULTRA-MILESTONE.md).
 The accepted C/manual-supervision design is retained; later native scopes still need
 their concrete approval packet. GitHub progress publication is now authorized;
 private checkpoints, grants, machine bindings and raw logs stay local.
