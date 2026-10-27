@@ -109,3 +109,32 @@ No installed plugin, native trust/configuration or model trial changed. The Phas
 grant and human-present Stop trial remain spent. The broader native/UI/authoring,
 Windows11/Linux/WSL and frozen release milestones remain open. This source candidate
 is not a completed release or full Windows support claim.
+
+## First actual CI and targeted integration correction
+
+Exact source `3412f417381192a5074547e902dcab6620389fa1` /
+[run40556019173](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40556019173)
+finished with **5 passing jobs and 2 Windows NTFS failures**. All Mac/Ubuntu lanes
+and Windows portable passed. Both Windows lanes passed 25 storage checks and
+96 process checks, with one failing process test out of 97. The sole failure was
+`holder.check is not a function` in the old read-set holder, which still returned
+its earlier interface while the shared finish helper now requires lifecycle methods.
+
+Both actual modern installed-image positives passed in both Windows lanes:
+`cmd/git.exe` reported 2 links/45,400 bytes, and `ucrt64/bin/git.exe` reported
+4 links/4,413,272 bytes. Each produced a digest with PE analysis not performed.
+The synthetic linked-object/writer/mapping/negative cases, full-size metadata and
+split oversize checks also passed. These are actual runner observations, not Mac
+skips, production Git execution or Windows11/native Codex acceptance.
+
+Mac Node22 recorded one EPERM during each fixed-fixture settlement, followed by
+actual ESRCH at 1032/1037 ms. Node24 observed ESRCH at 1027/1048 ms without EPERM.
+The original unresolved-descendant reports/assertions remained unchanged.
+
+The correction moves the old read-set holder onto the same lifecycle helper,
+preserving its 20-second lifetime, 5-second readiness limit and output bound.
+It restores the required interface instead of making its check optional. The
+portable lifecycle/frame checks passed again (8 tests), and syntax checks pass.
+The full local suite was not repeated for this Windows-only creator change; new
+exact-source CI is required. Astra Ultra reviewed this targeted diff and passed
+the new-source Windows CI gate. No failed run was retried or erased.

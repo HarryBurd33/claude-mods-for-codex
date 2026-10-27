@@ -907,22 +907,18 @@ async function readsetProject(name) {
   await windowsStorageRequest('prepare-directory',project);return {data,exe,project};
 }
 async function readsetHolder(project,paths,mode='readset-hold') {
-  const {exe}=await setup();let text='';
-  const child=spawn(exe,['run',mode,project,...paths],{windowsHide:true,stdio:['pipe','pipe','ignore']});
-  const closed=new Promise((resolve,reject)=>{child.once('close',resolve);child.once('error',reject);});
-  const deadline=setTimeout(()=>child.kill(),20000);child.once('close',()=>clearTimeout(deadline));
+  const {exe}=await setup();
+  const h=lifecycle.start(exe,['run',mode,project,...paths],
+    {stdio:['pipe','pipe','pipe'],readyMs:5000,stdoutLimit:8192});
+  const closed=h.completion.then(r=>r.code);closed.catch(()=>{});
   try {
-    await new Promise((resolve,reject)=>{
-      const timer=setTimeout(()=>reject(new Error('Synthetic read-set readiness deadline')),5000);
-      child.stdout.setEncoding('utf8');child.stdout.on('data',value=>{
-        text+=value;if(text.length>8192){child.kill();reject(new Error('Synthetic read-set output bound'));}
-        if(text.includes('\n')){clearTimeout(timer);resolve();}
-      });
-      child.once('error',e=>{clearTimeout(timer);reject(e);});
-      child.once('close',()=>{clearTimeout(timer);if(!text.includes('\n'))reject(new Error('Synthetic read-set closed before readiness'));});
-    });
-    assert.match(text,/^captured\|\d+\|\d+/);return {child,closed,output:()=>text};
-  } catch(e){child.kill();await closed;throw e;}
+    assert.match(await h.firstLine,/^captured\|\d+\|\d+/);h.check();
+    return {...h,closed};
+  } catch(error) {
+    h.stop(new Error('Synthetic read-set refused'));
+    try{await h.completion;}catch{}
+    throw error;
+  }
 }
 test('Windows read-set captures only explicit bounded Unicode paths and keeps source and Git sentinel bytes unchanged',native,async()=>{
   const {project,exe}=await readsetProject('literal Ω');
