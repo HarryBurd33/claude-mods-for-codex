@@ -6,7 +6,7 @@ inventory is implied. MIT; independent of Anthropic and OpenAI.
 
 | Milestone | Evidence and limits |
 | --- | --- |
-| [Current Sol progress](docs/continuation/SOL-PHASE1-RESULT.md) | Automatic later-turn continuation observed; one real Phase 1 setup succeeded, grant consumed, admissions closed. Native phases 2–4 remain unapproved. |
+| [Current Sol progress](docs/continuation/NATIVE-STOP-2026-10-27.md) | Automatic continuation and one real Phase1 setup completed; grant consumed. Later actual human hook trust and one supervised response produced one Stop record. Unchanged owned declaration removed, data/trust retained, qualified preservation passed. Broader native acceptance remains open. |
 | [Prior Astra review](docs/continuation/ASTRA-RUNTIME-REVIEW.md) | Reviewed external runtime; versioned private launcher; 11 actual-runtime/local-Git synthetic passes; 44 selected project passes; validate/replay passed. These are the prior offline results; the subsequent real Phase 1 result is above. |
 | [Dev39 candidate](docs/continuation/PACKAGE-DEV39.md) | Historical efccbaa package: 354 files, 54 selected packaged passes. Remains disabled; no native held-call acceptance. |
 | [UI batch](docs/continuation/M1-UI-ACCEPTANCE.md) | Dated installed31 owned UI observations. Screen reader, enlarged zoom, reopening and backend lifecycle still incomplete. |
@@ -22,8 +22,9 @@ Windows11/Linux/WSL and final frozen-candidate release checks remain.
 The accepted C design and manual supervision are no longer pending design choices.
 The original Phase 1 setup grant is now consumed by one successful invocation;
 its immutable old authorization does not override the actual attempt/result ledger.
-Later startup/trust/model/result-removal
-scopes still require their concrete [packet](docs/continuation/STOP-CONSOLIDATED-REQUEST.md).
+The separate Stop startup/trust/probe/result/removal packet was subsequently authorized
+and completed once. Further native scopes still need a concrete consolidated packet;
+that one-use result does not authorize another run.
 No automatic approval, hidden prompt/model change, app patch or private-daemon shortcut.
 
 Current: **GPT-6.1 Sol Ultra**, with [one consolidated macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md).

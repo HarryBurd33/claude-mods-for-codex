@@ -1,6 +1,18 @@
 # Continuation verification log
 
-## Sol source verification — 2026-10-27
+## Resumed native and source verification — 2026-10-27
+
+[Native Stop](NATIVE-STOP-2026-10-27.md): one event observed; bounded read3entries/
+57bytes; unchanged-owned-declaration removal and8final preservation checks passed.
+Local macOS full Node suite: **374pass/0fail/114Windows-only skips/488total**,
+15.961seconds. Selected portable decoder/PE tests15pass; validate3mods/replay4pass.
+The new Windows missing/wrong-kind/null-descriptor/junction assertions have not run
+locally. Both mandatory actual Git positives remain unchanged. Proof-only directory
+stage diagnostics add closed categories; no production predicate/share/link change.
+Astra Ultra source review found no blocker; actual Windows compile/run is pending
+exact-commit CI. Prior CI40466158310 remains failed in both Windows NTFS lanes.
+
+## Earlier Sol source verification — 2026-10-27
 
 Full local Node suite:370pass/0fail/113Windows-only skips/483total,15.892seconds.
 Validate3mods/replay4 passed. This follows per-image subtest isolation, with all
@@ -11,14 +23,16 @@ not part of the370passing repository tests. Exact-head CI remains separate.
 
 ## Current Sol integration — 2026-10-27
 
-[Phase 1 result](SOL-PHASE1-RESULT.md): automatic continuation was observed in a
-distinct later turn, then the human explicitly activated the original setup grant.
-One real invocation succeeded in 0.067 seconds; the original ledger is consumed and
-both admissions are closed. Never rerun Phase 1. Native startup/trust/model/result
-phases 2–4 remain unapproved. Source dev39 stays disabled/uninstalled. Phase 1 made no
-installed31, production, global trust or configuration change. All 93 ledger dispositions
-and full native/platform/release gaps remain unchanged. Stay on Sol Ultra for the
-consolidated milestone; no further automatic transition is scheduled.
+[Native Stop result](NATIVE-STOP-2026-10-27.md): the human completed actual hook
+review/trust and one supervised Sol Medium response. The selected bucket contains
+one Stop event. Only the unchanged owned declaration was removed; data and trust
+records were retained. Final qualified installed31/source/config checks passed.
+The old whole-profile fingerprint still fails and was not replaced. Phase1 remains
+consumed; never replay it or the completed probe. Source dev39 stays uninstalled.
+Failure/cancel, production held-call NM-1, configured routing, UI/full authoring,
+platform and frozen-release acceptance remain open; the 93-row disposition counts
+are unchanged. Continue Sol Ultra for substantive integration. No further automatic
+transition or native run is authorized by this receipt.
 
 The earlier Astra summaries below are dated history, including then-unused-grant
 and then-pending-model directions. They do not override this current result.

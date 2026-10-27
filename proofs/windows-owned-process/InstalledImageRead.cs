@@ -27,6 +27,28 @@ namespace CodexMods {
    return "inventory-image-observed|"+(opened?1:0)+"|"+(queried?1:0)+"|"+(disk?1:0)+"|"+info.Links.ToString(System.Globalization.CultureInfo.InvariantCulture)
     +"|"+((info.Attributes&Reparse)!=0?1:0)+"|"+((info.Attributes&Directory)!=0?1:0)+"|"+(name?1:0);
   }
+  static string DirectoryOpenError(int error) {
+   if(error==2 || error==3)return "Missing";
+   if(error==5)return "AccessDenied";
+   if(error==32)return "Sharing";
+   return "OpenOther";
+  }
+  static string ObserveInventoryDirectory(SafeFileHandle h,string path,int segment,string operation,int openError) {
+   // Fresh metadata from the SAME held handle after refusal. Only failed-open
+   // error was captured at its operation; later queries are not an atomic cause.
+   FileInfo info=new FileInfo();bool opened=!h.IsInvalid;
+   bool queried=opened && GetFileInformationByHandle(h,out info);
+   if(!queried)info=new FileInfo();
+   bool disk=opened && GetFileType(h)==1,name=false;
+   if(opened) {
+    var b=new System.Text.StringBuilder(512);uint n=GetFinalPathNameByHandleW(h,b,512,0);
+    name=n>0 && n<512 && String.Equals(b.ToString(),@"\\?\"+path,StringComparison.OrdinalIgnoreCase);
+   }
+   return "installer-directory-observed|"+segment.ToString(System.Globalization.CultureInfo.InvariantCulture)
+    +"|"+operation+"|"+(operation=="Open"?DirectoryOpenError(openError):"NotApplicable")
+    +"|"+(opened?1:0)+"|"+(queried?1:0)+"|"+(disk?1:0)+"|"+info.Links.ToString(System.Globalization.CultureInfo.InvariantCulture)
+    +"|"+((info.Attributes&Reparse)!=0?1:0)+"|"+((info.Attributes&Directory)!=0?1:0)+"|"+(name?1:0);
+  }
   // This composition freshly applies an explicit READ-INVENTORY policy while
   // handles are held; it never accepts an old assessment enum as authority.
   sealed class InstalledImageRead : IDisposable {
@@ -38,25 +60,29 @@ namespace CodexMods {
    readonly List<byte[]> descriptors=new List<byte[]>();
    readonly ImageReadProfile profile;
    bool disposed;
-   static byte[] Sample(SafeFileHandle h,ImageReadProfile profile) {
+   static byte[] Sample(SafeFileHandle h,ImageReadProfile profile,Action<string> operation=null) {
     if(profile==ImageReadProfile.StrictCode)CodeAccess(h); // Original policy unchanged.
+    if(operation!=null)operation("Descriptor");
     var sd=Descriptor(h);
     // Explicit READ-ONLY profile, freshly evaluated on EACH validated scoped
     // object. Not inherited authority and never used by CodeAccess/ProgramPins.
     if(profile==ImageReadProfile.InstallerInventory) {
+     if(operation!=null)operation("Assessment");
      var assessment=AssessKnownCodeDescriptor(sd,true);
      if(assessment!=CodeAncestorAssessment.MatchesDraftRule)throw new InstallerInventoryRefusal(assessment);
     }
     var bytes=new byte[sd.BinaryLength];sd.GetBinaryForm(bytes,0);return bytes;
    }
-   static byte[] CaptureSample(SafeFileHandle h,int segment,ImageReadProfile profile,ref string observation) {
-    try {return Sample(h,profile);}
+   static byte[] CaptureSample(SafeFileHandle h,string path,int segment,ImageReadProfile profile,ImageReadPhase phase,ref string observation) {
+    string operation="Descriptor";
+    try {return Sample(h,profile,delegate(string value){operation=value;});}
     catch(InstallerInventoryRefusal refusal) {
      observation="installer-read-assessment|"+refusal.Assessment;throw;
     }
     catch(IOException) {
      // NEW descriptor observation after refusal, not an atomic cause or authority.
      if(profile==ImageReadProfile.StrictCode)observation="inventory-read-repeat|"+segment.ToString(System.Globalization.CultureInfo.InvariantCulture)+"|"+ProbeAccessDetail(h,true);
+     else if(phase==ImageReadPhase.CodeDirectory)observation=ObserveInventoryDirectory(h,path,segment,operation,0);
      throw;
     }
    }
@@ -71,7 +97,15 @@ namespace CodexMods {
      phase=ImageReadPhase.CodeDirectory;
      while(true) {
       var h=CreateFileW(cursor,ReadControl|Attributes|1,3,IntPtr.Zero,3,Backup|OpenReparse,IntPtr.Zero);
-      handles.Add(h);var info=Info(h,cursor,true);var bytes=CaptureSample(h,paths.Count,profile,ref observation);
+      // Preserve the failed-open error before any further native query.
+      int openError=h.IsInvalid?System.Runtime.InteropServices.Marshal.GetLastWin32Error():0;
+      handles.Add(h);FileInfo info;
+      try {info=Info(h,cursor,true);}
+      catch(IOException) {
+       if(profile==ImageReadProfile.InstallerInventory)observation=ObserveInventoryDirectory(h,cursor,paths.Count,h.IsInvalid?"Open":"Info",openError);
+       throw;
+      }
+      var bytes=CaptureSample(h,cursor,paths.Count,profile,phase,ref observation);
       paths.Add(cursor);identities.Add(info);descriptors.Add(bytes);
       if(String.Equals(cursor,directory,StringComparison.OrdinalIgnoreCase))break;
       string remaining=directory.Substring(cursor.Length+1);int slash=remaining.IndexOf('\\');
@@ -84,7 +118,7 @@ namespace CodexMods {
      catch(IOException) {if(profile==ImageReadProfile.InstallerInventory)observation=ObserveInventoryImage(image,target);throw;}
      long size=((long)imageInfo.SizeHigh<<32)|imageInfo.SizeLow;
      if(size<64 || size>32*1024*1024)throw Refuse();
-     var imageBytes=CaptureSample(image,0,profile,ref observation);
+     var imageBytes=CaptureSample(image,target,0,profile,phase,ref observation);
      paths.Add(target);identities.Add(imageInfo);descriptors.Add(imageBytes);
      Verify();
     } catch {Dispose();throw;}

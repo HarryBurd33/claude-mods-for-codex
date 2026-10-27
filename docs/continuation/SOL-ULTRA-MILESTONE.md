@@ -8,7 +8,7 @@ The full project is incomplete. Start from this document and the current checkpo
 not the historical Medium/High directions embedded in older records.
 
 [Current result](SOL-PHASE1-RESULT.md): real Phase1 succeeded once and its grant is
-consumed. Do not invoke it again. Continue the still-pending native phases2–4 below.
+consumed. Do not invoke it again. The separately authorized phases2–4 now produced one [native Stop callback](NATIVE-STOP-2026-10-27.md) and unchanged-owned-declaration removal. Do not replay them; continue the broader integration acceptance below.
 
 ## Intake once, then deliver behavior
 

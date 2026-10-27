@@ -48,19 +48,14 @@ alter global configuration, or perform network access. The selected immutable so
 snapshot is the earlier Stop-only proposal, not a production dev39 installation.
 Private setup paths and receipts remain in the local checkpoint.
 
-## Native work still needs its next boundary
+## Native follow-up completed after separate authorization
 
-Continue the existing [consolidated packet](STOP-CONSOLIDATED-REQUEST.md) and
-[Sol Ultra milestone](SOL-ULTRA-MILESTONE.md). Phase 1 is complete; phases 2–4 remain
-unapproved. They cover current entry/dependency/preservation review, normal startup
-and human trust, one human-supervised Sol Medium Stop probe, then bounded results
-and unchanged owned-registration removal. Accepted C design and manual supervision
-need no repeat vote. Do not start native work merely because setup succeeded.
-
-Source dev39 remains disabled/uninstalled. This operation made no installed31,
-production hook, global trust or configuration change. Independent current native
-preservation/compatibility checks remain part of phase 2. The full project and the
-93-requirement ledger dispositions remain incomplete and unchanged.
+The human subsequently authorized phases2–4, resumed after a pause and completed
+actual review/trust plus the single supervised probe. [Native Stop result](NATIVE-STOP-2026-10-27.md)
+records one callback, unchanged-owned-declaration removal, retained data/trust and
+qualified preservation. Those effects occurred in the later native stage; they do
+not change the limited Phase1 result above. The broader consolidated native/UI/
+authoring/platform/release milestone remains incomplete. No replay or extra trial.
 
 ## Windows failure diagnosed; mandatory check retained
 

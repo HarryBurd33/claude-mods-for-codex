@@ -269,3 +269,22 @@ identity/ACL checks on the actual opened handle. It never repairs permissions or
 changes share modes. Outer15s/optional1500ms deadlines still bound the operation.
 This models a short-lived creator handle; it is not proof of the exact cause of
 a previously intermittent public-state CI failure.
+
+
+## Directory refusal diagnostics
+
+The Installer read-inventory proof now distinguishes previously unobserved directory
+boundaries: failed Open, Info, Descriptor and Assessment. Failed-open error is captured
+immediately into Missing/AccessDenied/Sharing/OpenOther. Other metadata is a **new
+observation from the same retained handle after refusal**, never its atomic cause or
+an admission. Frames contain only a segment index, closed categories, flags and link
+count; no paths, SIDs, security descriptors, exception text or environment values.
+Typed assessment refusals retain their existing closed assessment frame.
+
+Portable decoder tests reject arbitrary/approval-shaped/oversized/inconsistent
+frames. Native fixtures add missing/wrong-kind/null-descriptor and junction evidence;
+macOS skips do not verify these. Production predicates, share modes, the single-link
+rule and both mandatory installed-Git positives remain unchanged. The exact Windows
+CI result must be checked before claiming these native assertions passed. The
+previous two-link Image refusal and unclassified CodeDirectory refusal remain open
+until the corresponding evidence is obtained; neither becomes a passing inventory.

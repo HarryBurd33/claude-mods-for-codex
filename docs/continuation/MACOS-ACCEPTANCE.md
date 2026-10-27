@@ -1,6 +1,15 @@
 # macOS acceptance audit — 2026-10-24
 
-## macOS evidence reconciled — current — 2026-10-26
+## Native Stop follow-up — 2026-10-27
+
+[One native Stop event](NATIVE-STOP-2026-10-27.md) was observed on official CLI0.164.0
+with the pinned isolated source and actual human trust. The owned declaration was
+removed and scoped installed31/config preservation passed. This supersedes earlier
+statements that optional Stop delivery is wholly untested. It does not establish the
+full current candidate, failure/cancel, other event delivery or general lifecycle
+acceptance. Earlier next-model directions below are historical; use current HANDOFF.
+
+## macOS evidence reconciled — historical — 2026-10-26
 
 [Current93-row queue](MACOS-QUEUE-38.md) separates target-bound verification,
 approximations, incomplete/blocked work and reviewed unsupported/policy exclusions.
@@ -259,7 +268,7 @@ state acceptance for these changes. Source25 remains uninstalled/package-unverif
 | EV-01 Observe session start | I | H1: authorized CLI SessionStart capture; Hnow: trusted inventory only | Visible notice, desktop start, resume/reset semantics. Do not reuse consumed separate-run grant. |
 | EV-02 Observe covered tool start | I | H4/6: covered pre-hook rewrite/deny/control; Hnow: trusted inventory | Other covered tools and failure/permission matrix; no hosted-search/continuation coverage claim. |
 | EV-03 Observe tool completion | I | H1: successful PostToolUse metadata; Hnow inventory | Failure event not integrated; native nonzero/cancel distinction and privacy acceptance remain. |
-| EV-04 Observe turn completion | W | S163 schema + A lifecycle replay; optional Stop hook absent from installed hooks | Explicit registration plus event-storage opt-in, human changed-hook review and authorized native trigger. |
+| EV-04 Observe turn completion | I | [Native Stop](NATIVE-STOP-2026-10-27.md): official CLI164, actual human trust, one event-only callback after one normal Sol Medium response; owned declaration removed | Full candidate/repeated/failure/cancel/other-client acceptance remains. Stop counts stopping opportunities, not unique turns. |
 | EV-05 Observe compaction, subagent, interruption and other useful triggers | W | S163/164 + A seven lifecycle fixture/privacy cases; optional hooks off | Review event-by-event access, opt in only chosen events; native triggers remain unverified. |
 | EV-06 Block covered risky calls | I | H4/6: harmless fixed denial before execution; A lexical guards/rewrite checks | Native near-match/failure/malformed matrix and impact-specific fixture; lexical guard is advisory. |
 | EV-07 Hold a covered call for explicit decision | A | H hold0.0.4: human-confirmed accept, decline, cancellation, 30s deadline; then removed | Separate limited hold approximation, not production enforcement; disconnected fail-open/human provenance unresolved. |

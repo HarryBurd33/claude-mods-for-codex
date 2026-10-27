@@ -15,8 +15,10 @@ The latest [Sol milestone](docs/continuation/SOL-PHASE1-RESULT.md) observed an a
 model handoff and completed the explicitly activated real Phase 1 setup once, in
 0.067 seconds. **Its one-use grant is consumed and both admissions are closed.**
 The earlier [Astra review](docs/continuation/ASTRA-RUNTIME-REVIEW.md) supplied the
-reviewed launcher and 11 synthetic integration passes. Native startup, human trust,
-the Stop model probe and result/removal phases remain unapproved.
+reviewed launcher and 11 synthetic integration passes. The later separately authorized
+[native Stop trial](docs/continuation/NATIVE-STOP-2026-10-27.md) recorded one event
+after actual human trust and one supervised response. The unchanged trial declaration
+was removed; data/trust were retained and qualified installed31 preservation passed.
 
 Remaining work: native lifecycle/failure/cancel and held-call/configured-agent routing;
 screen reader, enlarged zoom, panel reopening and Watch teardown; one complete
