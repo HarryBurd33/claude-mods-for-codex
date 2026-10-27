@@ -6,7 +6,8 @@ inventory is implied. MIT; independent of Anthropic and OpenAI.
 
 | Milestone | Evidence and limits |
 | --- | --- |
-| [Bounded CI repair](docs/continuation/CI-REPAIR-2026-10-27.md) | Diagnostics/owned-fixture isolation verified: local377pass/115skips; exact cccb487 CI5jobs pass/2Windows NTFS fail.379-file development archive matches source. Git2.56 layout finding recorded; Windows contract/security review remains. |
+| [Astra CI contract review](docs/continuation/ASTRA-CI-CONTRACT-2026-10-27.md) | Latest unchanged-runtime baseline `8219ca2` CI: 3 jobs pass, 4 fail. Both Mac lanes observed EPERM; Windows retains image failures and Node22 metadata deadline/cancellation failures. Finite Mac, Windows harness and linked-image sampling contracts reviewed; repairs not implemented. |
+| [Earlier bounded CI work](docs/continuation/CI-REPAIR-2026-10-27.md) | Diagnostics/owned-fixture isolation: local377pass/115skips; earlier cccb487 CI5jobs pass/2Windows NTFS fail.379-file development archive matches that source. Later failures above show the Mac issue was not reliably fixed. |
 | [Current Sol progress](docs/continuation/NATIVE-STOP-2026-10-27.md) | Automatic continuation and one real Phase1 setup completed; grant consumed. Later actual human hook trust and one supervised response produced one Stop record. Unchanged owned declaration removed, data/trust retained, qualified preservation passed. Broader native acceptance remains open. |
 | [Prior Astra review](docs/continuation/ASTRA-RUNTIME-REVIEW.md) | Reviewed external runtime; versioned private launcher; 11 actual-runtime/local-Git synthetic passes; 44 selected project passes; validate/replay passed. These are the prior offline results; the subsequent real Phase 1 result is above. |
 | [Dev39 candidate](docs/continuation/PACKAGE-DEV39.md) | Historical efccbaa package: 354 files, 54 selected packaged passes. Remains disabled; no native held-call acceptance. |
@@ -28,7 +29,9 @@ and completed once. Further native scopes still need a concrete consolidated pac
 that one-use result does not authorize another run.
 No automatic approval, hidden prompt/model change, app patch or private-daemon shortcut.
 
-Current: human-requested **GPT-6.1 Sol High** for the bounded CI repair. The
+Current: human-requested **GPT-6 Astra Ultra** contract review; next implementation
+assignment **GPT-6.1 Sol High**. This review changes documentation only and does not
+rerun tests or establish passing CI. The
 [consolidated macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md) remains open.
 The previous no-network restriction is superseded for authorized GitHub progress
 publication. Private checkpoints, machine bindings, grants and raw logs are excluded.

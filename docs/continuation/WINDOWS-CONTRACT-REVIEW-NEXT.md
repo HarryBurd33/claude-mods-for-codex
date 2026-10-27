@@ -1,5 +1,12 @@
 # Windows inventory contract: concrete review boundary
 
+**Review completed, 2026-10-27:** see the
+[Astra CI contract](ASTRA-CI-CONTRACT-2026-10-27.md). It selects a separate proof-only
+linked-image digest profile, an explicit modern path family, and a preceding
+cancellation/diagnostic repair. Implementation and actual Windows acceptance remain
+outstanding. The original review request below is preserved as context; it does not
+supersede the new finite contract or grant native execution authority.
+
 Use GPT-6 Astra / Ultra for this consequential security decision, then return a
 finite implementation contract to Sol High. This is source/evidence review only;
 it authorizes no installation, Git execution on a Windows target, Codex/model trial,
