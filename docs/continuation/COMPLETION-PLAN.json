@@ -821,7 +821,7 @@
     {
       "id": "M1",
       "objective": "Finish required macOS source integration and independent acceptance",
-      "state": "partial source integration/offline acceptance; next restore scope prepared, not authorized",
+      "state": "partial source integration/offline acceptance; eight synthetic restore failure cases complete, native/platform gaps retained",
       "dependencies": [
         "M0"
       ],
@@ -932,21 +932,14 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/M1-RESTORE-FAILURE-SCOPE.md",
+    "record": "docs/continuation/M1-RESTORE-FAILURE-RESULT.md",
     "authorized": false,
     "model": "GPT-6.1 Sol",
-    "effort": "High",
-    "kind": "bounded synthetic POSIX restore failure/interruption acceptance; conditional existing-contract fix only",
-    "affectedIds": [
-      "EX-04",
-      "SEC-02",
-      "SEC-03",
-      "SEC-07",
-      "SEC-09"
-    ],
+    "effort": "Medium",
+    "kind": "exact artifact/records and packaging-readiness verification only; no fault rerun or packaging/activation",
     "requiresNativeLaunch": false,
     "requiresExtraModelRun": false,
-    "requiresImplementation": true
+    "requiresImplementation": false
   },
   "sourceImplementationObservations": [
     {
@@ -962,6 +955,25 @@
       "focusedPass": 36,
       "regressionPass": 152,
       "regressionSkip": 3,
+      "nativeAcceptance": false
+    },
+    {
+      "id": "M1-restore-failure-tests",
+      "record": "docs/continuation/M1-RESTORE-FAILURE-RESULT.md",
+      "affectedIds": [
+        "EX-04",
+        "SEC-02",
+        "SEC-03",
+        "SEC-07",
+        "SEC-09"
+      ],
+      "state": "eight-synthetic-posix-cases-passed-no-runtime-change",
+      "fullRequirementClosure": false,
+      "baselinePass": 6,
+      "baselineSkip": 1,
+      "faultCasesPass": 8,
+      "fixtureGuardReproFail": 1,
+      "fixtureGuardAfterPass": 1,
       "nativeAcceptance": false
     }
   ],
@@ -980,7 +992,7 @@
       "date": "2026-10-26",
       "record": "docs/continuation/M1-RESTORE-FAILURE-SCOPE.md",
       "prepared": true,
-      "executed": false,
+      "executed": true,
       "nativeDev39Disabled": true,
       "acceptanceCountsChanged": false
     }

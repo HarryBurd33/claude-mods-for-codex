@@ -95,7 +95,9 @@ is not an OS boundary against hostile same-user processes or arbitrary concurren
 editors. Don't edit the selected file concurrently. If a crash leaves the lock,
 first establish that no restore process is active and inspect the file/plan;
 remove only that empty owned lock through an explicit recovery action. No automatic
-lock stealing, background cleanup or automatic recovery write is performed.
+lock stealing, background cleanup or automatic **post-crash** recovery write is performed.
+The ordinary-error rollback above is synchronous within the already requested apply;
+if that rollback also fails, the command rejects and requires manual recovery.
 
 After success, a second application conflicts rather than repeating the restore.
 To undo deliberately, review a new plan with the two checkpoints reversed. Keep
@@ -105,5 +107,15 @@ permissions. Nothing uploads its contents or retains it in activity metadata.
 Automated tests use disposable repositories: selected-file restore/reversal,
 late conflicts, exact plan ID, unchanged other edits/index/HEAD, inode/mode/owner,
 competing calls, permissions/links, tampered plans and unsupported content/modes.
-Actual installed-host apply, extended ACL/xattr verification and interrupted/disk
-failure recovery still need acceptance; passing these tests is not that evidence.
+Source-only [restore failure acceptance](continuation/M1-RESTORE-FAILURE-RESULT.md)
+adds eight isolated POSIX cases around the actual restore module: control/short writes,
+zero progress, partial-write/truncate/sync errors, rollback-write failure, and real
+fixed-child death after a confirmed prefix write. The ordinary-error cases restored
+expected bytes; failed rollback reported manual recovery; interruption left partial
+bytes and its lock. Plans, index/HEAD/unselected files and checked inode/mode/owner
+were preserved. This does not assert unchanged file times, extended ACLs or xattrs.
+
+I/O errors were injected on only the synthetic selected handle, not created by disk
+exhaustion/hardware faults. Actual installed-host apply, physical power-loss/disk
+failure durability, extended ACL/xattr and Windows acceptance remain unverified.
+No automatic post-crash cleanup/retry/recovery or atomicity guarantee is added.

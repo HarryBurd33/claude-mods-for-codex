@@ -1,61 +1,69 @@
-# Next unblocked task scoped — High POSIX restore failure/interruption acceptance
+# Synthetic restore failure acceptance complete — return to Sol Medium
 
-2026-10-26, Sol Medium fromcce1ec4 on codex/astra-groundwork. Current human authorized
-selection and exact scope preparation only. Read M1-RESTORE-FAILURE-SCOPE.md,
-docs/replay.md, EX-04/security ledger rows, COMPLETION-PLAN.md/JSON and RESUME-PLAN.md.
-Exact resulting local records commit/tree/private checkpoint in ignored root HANDOFF.md
-and .local/m1-restore-scope/SYNC.json. Network ban means no upload/remote query.
+2026-10-26, GPT-6.1 Sol High from245c3bd on codex/astra-groundwork. Current human
+scope M1-RESTORE-FAILURE-SCOPE.md executed with synthetic fixtures only. Local commit,
+tree and verified private checkpoint in ignored root HANDOFF.md and
+.local/m1-restore-failure/SYNC.json. No network upload/remote verification permitted.
 
-## Selection and prepared task
+## Completed and runnable checkpoint
 
-M1/W4 EX-04 plus W5 SEC-02/03/07/09: source restore write/recovery/interruption
-acceptance explicitly remains unverified. Existing tests cover happy path/refusal,
-not injected overwrite/truncate/sync/recovery failures or controlled process death.
-Independent of blocked native launch/profile, UI, models/network and Windows hosts.
-No defect reproduced or runtime fix chosen during planning. Previous authoring batch
-complete; do not repeat it or its verification as new progress.
+Read M1-RESTORE-FAILURE-RESULT.md, STATUS.md, TEST-LOG.md, REQUIREMENTS.md EX-04,
+COMPLETION-PLAN.md/JSON and RESUME-PLAN.md. Baseline restore suite6pass/1Windows skip;
+eight new sequential fault/interruption cases8pass. Product runtime unchanged.
+Test helper no-IPC diagnostic side effect separately reproduced in owned empty cwd
+(exit1) and fixed; focused control1pass afterward. Initial8case matrix predates this
+helper entry/diagnostic-only correction. No broader rerun was needed.
 
-Scope proposes at most eight bounded cases: no-fault control, short writes, zero
-progress, partial then error, truncate failure, sync failure, failed rollback, and
-fixed owned-child mid-write interruption. Real source algorithm, test-only fault
-instrumentation bound to selected synthetic FileHandle; no product-configurable IO
-adapter/flags/API. Private disposable Git projects/plan siblings only. No disk filling,
-real restore target, force/lock stealing, post-crash recovery/retry or broader guards.
-Exactly what to preserve/observe and validate is in the scope document.
+Code: test/restore-failure.test.mjs supervises fixed children and independently checks
+bytes/identity/plan/index/HEAD/unselected work; test/fixtures/restore-failure-peer.mjs
+creates and reviews its own new Git/plan fixtures; restore-fault-io.mjs wraps only the
+selected actual FileHandle in that isolated child. No product IO seam or copied
+restore algorithm. No runtime contract violation established or fixed.
 
-Future permitted files: new test/restore-failure.test.mjs and minimal fixed helpers
-under test/fixtures; src/restore.mjs minimal correction only if saved reproducer proves
-an existing-contract violation; docs/replay.md/continuation notes. No workspace/Git/
-Windows/native/routing/hook/UI/skill/config/version/CI changes. No atomic rename redesign,
-metadata-policy/API expansion or claim that a known non-atomic interruption is a bug.
-New tests/fixes would be unversioned after39, not current archive/installed31 bytes.
+Zero-progress/write/truncate/sync errors rejected and rolled back expected bytes.
+Recovery-write failure rejected with manual-recovery warning and retained partial
+bytes. Interruption killed only the owned child after a verified prefix-write barrier;
+partial file, original plan/two versions and empty lock retained. No retry/recovery/
+lock removal. Direct close observed; all descendants, power loss, physical ENOSPC,
+ACL/xattrs, native Codex and Windows remain unverified. No interruption atomicity claim.
+Selected metadata assertion covers dev/inode/uid/mode only, not write times/ACL/xattr.
 
-## Model and exact stopping point
+## Preserved boundaries and evidence
 
-**Select GPT-6.1 Sol High.** File mutation/rollback/data-integrity/controlled child
-interruption needs stronger reasoning. Current Medium preparation is complete; test,
-fixture and source implementation are NOT authorized by this record. Full copyable
-future authorization at end of M1-RESTORE-FAILURE-SCOPE.md. Stop for the human switch.
-No delegation/worker can bypass it. Return Medium when the demanding batch is verified
-and only routine result review remains. No generic preflight/client/probe framework.
+Installed31 untouched; dev39 remains disabled/uninstalled. Logging/capture/rules,
+parent model/permissions/human trust, Windows/ancestor/launch/routing guards unchanged.
+Both old target-read grants consumed, flagsfalse; no reread/repin/baseline adoption.
+No native/UI/server/extra-model/network/install/liveconfig/trust action. No version
+bump/archive/CI invocation or new OS/client inventory.93IDs/counts unchanged; full
+macOS/native/platform delivery remains incomplete.
 
-## Current preservation and evidence
+Private .local/m1-restore-failure contains all receipts/logs/synthetic fixtures; preserve
+partial cases and lock. Checkpoint regular-file backups exclude synthetic .git internals
+and cannot recreate an empty lock; reports retain checked hashes/lock state. Transfer
+whole private evidence root separately if needed. Do not publish private root HANDOFF,
+.local or .checkpoint. Unrelated .gitignore addition and shared checkpoint semantic
+input/review/generations/heartbeat belong to existing integration; preserve them.
+No persistent job/worker/schedule started. Exclusive local lease released at final
+handoff. No work continues until the human switches and resumes.
 
-Source/skills/tests/defaults/candidate archive unchanged; existing authoring private
-artifacts preserved/hash-verified without rerun. Installed31/approved logging/model/
-human trust untouched; dev39disabled/uninstalled. Old native launch/profile blockers
-remain, both read grants consumed/gatesfalse. No source/runtime/test fixture change,
-native/UI/server/extra-model/network/install/liveconfig/trust action. No native baseline
-adoption. No new test result/OS/client/installed inventory or93-ID/count closure.
+## Exact next task
 
-Before future implementation, .local/m1-restore-scope/VERIFY.py checks exact planning records/source/evidence/
-previous result preservation and false execution flags. Do not repin/rerun old sealed
-verifiers against intentionally changed planning notes. Future fixture root not created.
-Once authorized new test/source files exist, preserve this old planning manifest rather
-than repin it or rerun its absent-file assertions as a new acceptance stage.
-Local lease released at handoff; no persistent child/provider/worker/schedule. Preserve
-unrelated.gitignore and shared checkpoint input/review/generations/heartbeat. Account/
-API/context unknown; no native collector or dispatch. Saved plan never grants authority.
+**GPT-6.1 Sol, Medium** is sufficient for exact artifacts/records and packaging-readiness
+verification. Read public result and ignored .local/m1-restore-failure/VERIFY.py,
+VERIFY-RESULT.json, HASHES.json, RESULT.json, GUARD-BEFORE.json, GUARD-AFTER.json and
+SYNC.json. Verify source hashes/defaults/gates, retained reports and exact committed
+changes without rerunning faults or mutating fixtures/locks. Inspect package inclusion
+rules only; no version bump/archive generation/CI/network. Do not run the old absent-
+file planning verifier or repin old manifests. Stop for High on consequential source/
+security defects or drift. No activation/target reads/native/model/install/config/trust.
+Then choose the next finite unblocked completion-plan task; existing native and
+Windows gates require separate scopes. No repeated verification-only loop.
+
+Resume: “Continue on Sol Medium from the local restore-failure checkpoint. Follow
+M1-RESTORE-FAILURE-RESULT.md and HANDOFF.md; verify exact artifacts and packaging
+readiness only. Preserve installed31/all guards; keep dev39 disabled. No fault reruns,
+target reads, native/extra model runs, network, packaging or live config/trust changes.
+Stop for High on consequential changes or unexpected drift.”
 
 Repository: https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork
-No current remote synchronization claim. Full project/native/Windows work incomplete.
+Local-only work; no current GitHub synchronization claim under the network prohibition.

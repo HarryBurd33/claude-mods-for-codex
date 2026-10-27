@@ -1,5 +1,25 @@
 # Continuation verification log
 
+## Synthetic restore failures and interruption — 2026-10-26
+
+[M1-RESTORE-FAILURE-RESULT](M1-RESTORE-FAILURE-RESULT.md): authorized synthetic POSIX
+acceptance completed on Sol High from245c3bd. Baseline6pass/1Windows skip; eight
+fault/interruption cases8pass. No runtime defect/fix. A fixture-only no-IPC diagnostic
+write defect was separately reproduced and corrected; focused control1pass afterward.
+Partial bytes/plan/lock evidence retained, no automatic recovery. No native/platform
+closure, version bump, package/CI rerun or93-ID/count change. Installed31 untouched,
+dev39 disabled; all native/logging/model/trust/Windows guards unchanged. Network ban:
+local checkpoint only. Next human setting **GPT-6.1 Sol Medium** for exact artifacts,
+records and packaging readiness only, without rerunning faults or activating anything.
+
+Actual commands: `node --test test/restore.test.mjs` (6pass/1skip),
+`node --test test/restore-failure.test.mjs` (8pass), then
+`node --test --test-name-pattern "POSIX restore control:" test/restore-failure.test.mjs`
+(fixture guard repro exit1, after helper correction1pass). Last focused command runs
+only control on this Node version, not seven additional skipped cases. Initial full
+matrix predates the entry/diagnostic helper guard correction; no product source changed.
+
+
 ## M1 UI-only batch recorded — 2026-10-26
 
 [M1-UI-ACCEPTANCE](M1-UI-ACCEPTANCE.md) records actual owned-panel DOM checks and separate human reports, 15:19:13–15:29:49 America/Denver. Labels/Notes rendering/Clear/focus/current-zoom passed within stated limits; screen reader/enlarged zoom/same-card reopen unverified. Known installed31 JSON hint reproduced; source fix exists. All sample text cleared. This docs-only recording did not rerun tests, open UI or inspect targets. No full accessibility closure.

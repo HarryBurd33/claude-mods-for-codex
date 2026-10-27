@@ -1,12 +1,21 @@
 # Resume plan — finite completion milestones
 
-Next selected scope: [M1-RESTORE-FAILURE-SCOPE](M1-RESTORE-FAILURE-SCOPE.md), prepared
-only. Human switch to **GPT-6.1 Sol High** and explicit scope authorization precede
-any test/fixture/source work. Synthetic POSIX restore failure/interruption acceptance,
-no native/extra-model/network/install/liveconfig/trust or real-project restore. All
-guards/installed31 preserved; dev39 stays disabled. No repeated authoring/verification
-loops. Conditional minimal runtime fix only for reproduced existing-contract violation;
-return Medium once demanding work is done. Full project remains incomplete.
+[M1-RESTORE-FAILURE-RESULT](M1-RESTORE-FAILURE-RESULT.md): authorized synthetic POSIX
+acceptance completed on Sol High from245c3bd. Baseline6pass/1Windows skip; eight
+fault/interruption cases8pass. No runtime defect/fix. A fixture-only no-IPC diagnostic
+write defect was separately reproduced and corrected; focused control1pass afterward.
+Partial bytes/plan/lock evidence retained, no automatic recovery. No native/platform
+closure, version bump, package/CI rerun or93-ID/count change. Installed31 untouched,
+dev39 disabled; all native/logging/model/trust/Windows guards unchanged. Network ban:
+local checkpoint only. Next human setting **GPT-6.1 Sol Medium** for exact artifacts,
+records and packaging readiness only, without rerunning faults or activating anything.
+
+Medium next: verify exact changed files, protected hashes/closed gates and retained
+reports; inspect test packaging rules without generating another archive. Do not
+rerun earlier absent-file planning verification or repin old manifests. Commit safe
+records locally; GitHub upload remains blocked by current no-network scope. Stop for
+High on a consequential source/security defect or drift. Choose a new finite scope
+only after this result is verified; native/Windows work remains separately gated.
 
 ## Earlier planning context (historical)
 

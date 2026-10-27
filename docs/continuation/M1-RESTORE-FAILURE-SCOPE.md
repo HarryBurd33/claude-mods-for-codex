@@ -1,5 +1,10 @@
 # Next unblocked scope: POSIX restore failure and interruption acceptance
 
+**Execution record:** human authorized and High completed this finite scope from245c3bd.
+See [M1-RESTORE-FAILURE-RESULT](M1-RESTORE-FAILURE-RESULT.md). This historical scope is
+not an unused test grant and does not authorize a repeat, packaging or activation.
+
+
 2026-10-26, prepared on Sol Medium fromcce1ec4. **Preparation only, not authorization
 or evidence that these cases pass.** Next setting: **GPT-6.1 Sol High** for file-mutation,
 rollback and controlled-child interruption reasoning. No implementation/test run now.
@@ -159,7 +164,7 @@ framework. Return to Medium when only routine result/package-review work remains
 Installed31/all guards remain untouched and dev39 disabled throughout. Full native/
 Windows/project completion is not established by these source-only tests.
 
-## Future authorization — not yet given
+## Historical proposed authorization — subsequently granted and executed
 
 “Continue on GPT-6.1 Sol High from the scoped checkpoint. Implement and run the bounded
 synthetic POSIX restore failure/interruption acceptance in M1-RESTORE-FAILURE-SCOPE.md.

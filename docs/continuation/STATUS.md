@@ -1,13 +1,16 @@
 # Current status — optional call-review source implemented; product incomplete
 
-## Next unblocked task: restore failure/interruption scope — 2026-10-26
+## Latest: synthetic restore failure/interruption acceptance complete — 2026-10-26
 
-[M1-RESTORE-FAILURE-SCOPE](M1-RESTORE-FAILURE-SCOPE.md) prepares EX-04/W5 synthetic
-POSIX write/rollback/interruption acceptance, an explicit remaining gap. Eight finite
-cases, fixed Node/local Git fixtures only; High for consequential mutation/recovery.
-Scope unapproved/not run. No source defect established; documented non-atomic crash
-behavior alone is not a bug. Installed31/all guards preserved, dev39 disabled; no
-native/model/network/liveconfig/trust action. No93-ID/count reclassification.
+[M1-RESTORE-FAILURE-RESULT](M1-RESTORE-FAILURE-RESULT.md): authorized synthetic POSIX
+acceptance completed on Sol High from245c3bd. Baseline6pass/1Windows skip; eight
+fault/interruption cases8pass. No runtime defect/fix. A fixture-only no-IPC diagnostic
+write defect was separately reproduced and corrected; focused control1pass afterward.
+Partial bytes/plan/lock evidence retained, no automatic recovery. No native/platform
+closure, version bump, package/CI rerun or93-ID/count change. Installed31 untouched,
+dev39 disabled; all native/logging/model/trust/Windows guards unchanged. Network ban:
+local checkpoint only. Next human setting **GPT-6.1 Sol Medium** for exact artifacts,
+records and packaging readiness only, without rerunning faults or activating anything.
 
 
 ## Latest: scoped offline authoring-skills batch complete — 2026-10-26

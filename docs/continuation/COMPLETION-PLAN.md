@@ -1,12 +1,14 @@
 # Completion plan — dev39 candidate / installed31
 
-Current2026-10-26: the offline authoring-skills batch is complete. Next selected
-independent task is [POSIX restore failure/interruption acceptance](M1-RESTORE-FAILURE-SCOPE.md),
-EX-04/W5 security boundaries. Scope prepared only; future High test implementation
-uses disposable repositories/fixed Node/local Git and preserves all guards. No native
-launch/network/model prerequisite. A minimal runtime fix is conditional on a reproduced
-existing-contract violation, not the documented non-atomic crash limit. Dev39 stays
-disabled/uninstalled; installed31 preserved. No93-ID/count closure or new test result.
+[M1-RESTORE-FAILURE-RESULT](M1-RESTORE-FAILURE-RESULT.md): authorized synthetic POSIX
+acceptance completed on Sol High from245c3bd. Baseline6pass/1Windows skip; eight
+fault/interruption cases8pass. No runtime defect/fix. A fixture-only no-IPC diagnostic
+write defect was separately reproduced and corrected; focused control1pass afterward.
+Partial bytes/plan/lock evidence retained, no automatic recovery. No native/platform
+closure, version bump, package/CI rerun or93-ID/count change. Installed31 untouched,
+dev39 disabled; all native/logging/model/trust/Windows guards unchanged. Network ban:
+local checkpoint only. Next human setting **GPT-6.1 Sol Medium** for exact artifacts,
+records and packaging readiness only, without rerunning faults or activating anything.
 
 2026-10-26, GPT-6.1 Sol High. Based only on saved repository evidence, not a new
 host/upstream inventory. Planning/review have begun; implementation and execution
