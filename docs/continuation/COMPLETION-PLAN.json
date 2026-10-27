@@ -821,7 +821,7 @@
     {
       "id": "M1",
       "objective": "Finish required macOS source integration and independent acceptance",
-      "state": "planned-not-authorized",
+      "state": "partial source integration/offline acceptance; next restore scope prepared, not authorized",
       "dependencies": [
         "M0"
       ],
@@ -932,14 +932,21 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/M1-AUTHORING-SKILLS-RESULT.md",
+    "record": "docs/continuation/M1-RESTORE-FAILURE-SCOPE.md",
     "authorized": false,
     "model": "GPT-6.1 Sol",
-    "effort": "Medium",
-    "kind": "batch complete; await new concrete independent work scope or native launch/profile decision",
+    "effort": "High",
+    "kind": "bounded synthetic POSIX restore failure/interruption acceptance; conditional existing-contract fix only",
+    "affectedIds": [
+      "EX-04",
+      "SEC-02",
+      "SEC-03",
+      "SEC-07",
+      "SEC-09"
+    ],
     "requiresNativeLaunch": false,
     "requiresExtraModelRun": false,
-    "requiresImplementation": false
+    "requiresImplementation": true
   },
   "sourceImplementationObservations": [
     {
@@ -963,6 +970,15 @@
       "id": "next-unblocked-authoring",
       "date": "2026-10-26",
       "record": "docs/continuation/M1-AUTHORING-SKILLS-SCOPE.md",
+      "prepared": true,
+      "executed": false,
+      "nativeDev39Disabled": true,
+      "acceptanceCountsChanged": false
+    },
+    {
+      "id": "next-unblocked-restore-failure",
+      "date": "2026-10-26",
+      "record": "docs/continuation/M1-RESTORE-FAILURE-SCOPE.md",
       "prepared": true,
       "executed": false,
       "nativeDev39Disabled": true,

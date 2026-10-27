@@ -1,12 +1,12 @@
 # Completion plan — dev39 candidate / installed31
 
-Current2026-10-26: the [offline authoring-skills batch](M1-AUTHORING-SKILLS-RESULT.md)
-completed its narrow existing-source scope:8CLIoperations,7success+1expectedrefusal,
-6simulated scenarios; same-chat four-skill application, no native/independent evaluation.
-Dev39 remains disabled with native launch/profile blockers. No93-ID/count closure.
-This batch does not need a further verification-only/model-switch stage. Next work
-needs a new concrete scope from the remaining workstreams. Dated source38 planning
-basis below is historical; current candidate39 uninstalled, installed31 preserved.
+Current2026-10-26: the offline authoring-skills batch is complete. Next selected
+independent task is [POSIX restore failure/interruption acceptance](M1-RESTORE-FAILURE-SCOPE.md),
+EX-04/W5 security boundaries. Scope prepared only; future High test implementation
+uses disposable repositories/fixed Node/local Git and preserves all guards. No native
+launch/network/model prerequisite. A minimal runtime fix is conditional on a reproduced
+existing-contract violation, not the documented non-atomic crash limit. Dev39 stays
+disabled/uninstalled; installed31 preserved. No93-ID/count closure or new test result.
 
 2026-10-26, GPT-6.1 Sol High. Based only on saved repository evidence, not a new
 host/upstream inventory. Planning/review have begun; implementation and execution
@@ -176,12 +176,13 @@ full cross-platform project.
 
 ## Immediate next step and operating rules
 
-The exact offline authoring-skills batch is complete; do not repeat it or create a
-verification-only stage as new progress. Preserve its disabled artifact/evidence and
-all native gates. Future work requires a concrete independent implementation or
-acceptance scope, or an explicit native launch/profile decision. Medium remains
-sufficient for routine existing-code work; High before consequential source/security/
-integration changes. Full completion still requires the remaining stated acceptance.
+Next **GPT-6.1 Sol High**, after human authorization, executes the exact
+M1-RESTORE-FAILURE-SCOPE.md synthetic failure/interruption batch. Do not repeat the
+authoring or artifact-verification stages. Current selection/preparation grants no
+implementation or test execution. Keep all native/profile/Windows guards closed,
+installed31 untouched and dev39 disabled. Return Medium once consequential work is
+done and only routine result review remains. Full completion still needs the other
+stated workstreams/native/platform acceptance; this batch cannot substitute for them.
 
 Authorizations should cover a concrete reviewed milestone/campaign, not a series of
 unprepared tiny helpers. Keep separate genuinely protected trust/authentication and

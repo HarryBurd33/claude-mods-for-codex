@@ -1,5 +1,15 @@
 # Requirements ledger
 
+## Proposed next acceptance gap — restore failure/interruption — 2026-10-26
+
+[M1-RESTORE-FAILURE-SCOPE](M1-RESTORE-FAILURE-SCOPE.md) selects EX-04 and SEC-02/03/07/09
+for bounded disposable POSIX fault/interruption proofs. Existing happy-path/refusal
+tests do not establish write/truncate/sync/rollback error or process-death acceptance.
+Planning only: no test run, reproduced defect or fix claimed. High required for the
+future source/test work; conditional minimal fix cannot weaken guards/metadata/API.
+Native/platform and all93counts unchanged, installed31/dev39 state preserved.
+
+
 ## Added source-workflow acceptance — 2026-10-26
 
 [M1-AUTHORING-SKILLS-RESULT](M1-AUTHORING-SKILLS-RESULT.md) records AU-06/07/08/09/10,

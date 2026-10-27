@@ -1,5 +1,15 @@
 # Current status — optional call-review source implemented; product incomplete
 
+## Next unblocked task: restore failure/interruption scope — 2026-10-26
+
+[M1-RESTORE-FAILURE-SCOPE](M1-RESTORE-FAILURE-SCOPE.md) prepares EX-04/W5 synthetic
+POSIX write/rollback/interruption acceptance, an explicit remaining gap. Eight finite
+cases, fixed Node/local Git fixtures only; High for consequential mutation/recovery.
+Scope unapproved/not run. No source defect established; documented non-atomic crash
+behavior alone is not a bug. Installed31/all guards preserved, dev39 disabled; no
+native/model/network/liveconfig/trust action. No93-ID/count reclassification.
+
+
 ## Latest: scoped offline authoring-skills batch complete — 2026-10-26
 
 [M1-AUTHORING-SKILLS-RESULT](M1-AUTHORING-SKILLS-RESULT.md): existing-source same-chat

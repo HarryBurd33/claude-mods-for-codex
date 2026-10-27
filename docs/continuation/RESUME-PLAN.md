@@ -1,11 +1,12 @@
 # Resume plan — finite completion milestones
 
-The [offline authoring-skills batch](M1-AUTHORING-SKILLS-RESULT.md) is complete within
-its source-only scope. Do not repeat the batch or add another verification/model-
-switch loop. No new work scope is authorized yet. Installed31/all guards/dev39disabled
-remain; native launch/profile and other completion-plan gaps persist. New concrete
-independent work or an explicit native validation decision must come next. Medium for
-routine work, High before consequential changes; no automatic worker or execution.
+Next selected scope: [M1-RESTORE-FAILURE-SCOPE](M1-RESTORE-FAILURE-SCOPE.md), prepared
+only. Human switch to **GPT-6.1 Sol High** and explicit scope authorization precede
+any test/fixture/source work. Synthetic POSIX restore failure/interruption acceptance,
+no native/extra-model/network/install/liveconfig/trust or real-project restore. All
+guards/installed31 preserved; dev39 stays disabled. No repeated authoring/verification
+loops. Conditional minimal runtime fix only for reproduced existing-contract violation;
+return Medium once demanding work is done. Full project remains incomplete.
 
 ## Earlier planning context (historical)
 

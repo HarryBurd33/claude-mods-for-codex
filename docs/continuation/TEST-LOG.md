@@ -3651,3 +3651,14 @@ No product/test/skill/version change or native/UI/server/network/model/install/l
 config/trust action. Private artifacts kept; no integrity repair or product defect
 claim. Saved source/default/archive/93-ID/gate checks pass. See result for limitations.
 No extra test/package/CI cycle. Batch complete, no further model switch required.
+
+
+## 2026-10-26 — restore failure/interruption next scope prepared (Sol Medium)
+
+Startingcce1ec4 completed-authoring artifact/source pins match, no rerun. Read restore
+algorithm/replay docs/existing tests and explicit EX-04 gap. Proposed eight-case High
+synthetic POSIX fault/interruption batch; no test/fixture/source implementation now,
+no bug reproduced or correction selected. No native/model/network/install/liveconfig/
+trust action. Current plan checks preserve source/skills/archive/protectedpins,
+93mapping/counts and consumedgrant/gatesfalse. See M1-RESTORE-FAILURE-SCOPE for exact
+files/cases/process/data/access bounds, conditional-fix acceptance and copyable scope.

@@ -1,73 +1,61 @@
-# Offline authoring-skills batch complete — no model switch needed
+# Next unblocked task scoped — High POSIX restore failure/interruption acceptance
 
-2026-10-26, GPT-6.1 Sol Medium, starting7bd32a5 on codex/astra-groundwork. Human
-explicitly authorized M1-AUTHORING-SKILLS-SCOPE.md. Read M1-AUTHORING-SKILLS-RESULT.md,
-current STATUS/REQUIREMENTS and COMPLETION-PLAN.md/JSON. Exact resulting local records
-SHA/tree/private checkpoint in ignored root HANDOFF.md and the private batch receipt.
-No network upload/remote query; repository is not verified current on GitHub.
+2026-10-26, Sol Medium fromcce1ec4 on codex/astra-groundwork. Current human authorized
+selection and exact scope preparation only. Read M1-RESTORE-FAILURE-SCOPE.md,
+docs/replay.md, EX-04/security ledger rows, COMPLETION-PLAN.md/JSON and RESUME-PLAN.md.
+Exact resulting local records commit/tree/private checkpoint in ignored root HANDOFF.md
+and .local/m1-restore-scope/SYNC.json. Network ban means no upload/remote query.
 
-## Completed work and observed commands
+## Selection and prepared task
 
-Existing source39 used in this same selected chat with all four original source
-skills: mod-scaffolding, systematic-debugging, prepare-mod-review, verify-mod-completion.
-One disabled six-file Evidence desk interaction bundle; separate intent changes only
-interaction.enabled for replay. Eight fixed Node source CLI operations completed:
-scaffold, validate-original, replay-disabled, plan-disabled, replay-intent, plan-intent,
-validate-corrupted(copy) and revalidate-original(control). Seven succeeded; the expected
-altered-copy validation refused exit1. No unexpected failure or runtime/source fix.
+M1/W4 EX-04 plus W5 SEC-02/03/07/09: source restore write/recovery/interruption
+acceptance explicitly remains unverified. Existing tests cover happy path/refusal,
+not injected overwrite/truncate/sync/recovery failures or controlled process death.
+Independent of blocked native launch/profile, UI, models/network and Windows hosts.
+No defect reproduced or runtime fix chosen during planning. Previous authoring batch
+complete; do not repeat it or its verification as new progress.
 
-Six actual fixed-controller/renderer minimal-DOM scenarios pass: render3fields, edit
-invalidation, Clear, malformed/oversized input clearing and disposal. Disabled replay
-has0controls. Raw fixture input absent from replay summary, no command execution or
-real UI. Both plans grant no hooks/capture/path/permission. Original disabled files
-hash-identical. Copied valid-JSON fixture differs by one trailing ASCIIspace; old marker
-retained, rejection diagnosed at integrity boundary. Copy kept unblessed, no repair.
+Scope proposes at most eight bounded cases: no-fault control, short writes, zero
+progress, partial then error, truncate failure, sync failure, failed rollback, and
+fixed owned-child mid-write interruption. Real source algorithm, test-only fault
+instrumentation bound to selected synthetic FileHandle; no product-configurable IO
+adapter/flags/API. Private disposable Git projects/plan siblings only. No disk filling,
+real restore target, force/lock stealing, post-crash recovery/retry or broader guards.
+Exactly what to preserve/observe and validate is in the scope document.
 
-Eight children used absolute reviewed repository CLI, shell=false, PATH-only clean env,
-10second supervision/64KiB combined output limit/core dumps off. Output7,863bytes;
-summed child duration0.337s, not total conversation time or hard real-time assurance.
-Private modes/owner/one-link/count/size checked within64files/2MiB. Details are private
-in .local/m1-authoring-skills: request/spec/original-bundle/replay-intent/corrupted-bundle,
-SOURCE-HASHES/ORIGINAL-HASHES, COMMANDS/logs/COMMAND-RESULTS, SKILL-APPLICATION, REVIEW,
-CLAIMS and RESULT. No generated executable/product/test code. Artifacts retained.
+Future permitted files: new test/restore-failure.test.mjs and minimal fixed helpers
+under test/fixtures; src/restore.mjs minimal correction only if saved reproducer proves
+an existing-contract violation; docs/replay.md/continuation notes. No workspace/Git/
+Windows/native/routing/hook/UI/skill/config/version/CI changes. No atomic rename redesign,
+metadata-policy/API expansion or claim that a known non-atomic interruption is a bug.
+New tests/fixes would be unversioned after39, not current archive/installed31 bytes.
 
-## Evidence limits and unchanged guards
+## Model and exact stopping point
 
-This completes only the scoped offline same-chat source workflow. It is not independent
-skill evaluation/general quality, installed skill discovery/native slash invocation,
-live rendering/accessibility, install/trust/live effect, platform acceptance or full
-project completion. Existing54packaged/152regression results remain prior evidence,
-not rerun or summed as new unique tests. No fresh native/OS/runtime/installed inventory.
+**Select GPT-6.1 Sol High.** File mutation/rollback/data-integrity/controlled child
+interruption needs stronger reasoning. Current Medium preparation is complete; test,
+fixture and source implementation are NOT authorized by this record. Full copyable
+future authorization at end of M1-RESTORE-FAILURE-SCOPE.md. Stop for the human switch.
+No delegation/worker can bypass it. Return Medium when the demanding batch is verified
+and only routine result review remains. No generic preflight/client/probe framework.
 
-Product source/skills/tests/defaults/archive/version unchanged. Installed31 untouched;
-dev39 stays disabled/uninstalled. No native/UI/server/extra-model/network/install/live
-config/trust/logging/model/permission changes. Both old read grants consumed/gatesfalse,
-no native baseline adopted. Current chat uses ordinary selected-model usage; callbacks
-added no model requests. Account/API/context allowance remains unmeasured, no collector.
+## Current preservation and evidence
 
-Native launch/profile blockers remain in DEV39-DEPLOYMENT-REVIEW and ancestor decision.
-Windows/other platform, optional native events/routing and remaining accessibility
-still incomplete. No need to weaken guards or launch another probe to accept this
-source-only batch. Private outputs or integrity hashes are not human/host trust.
+Source/skills/tests/defaults/candidate archive unchanged; existing authoring private
+artifacts preserved/hash-verified without rerun. Installed31/approved logging/model/
+human trust untouched; dev39disabled/uninstalled. Old native launch/profile blockers
+remain, both read grants consumed/gatesfalse. No source/runtime/test fixture change,
+native/UI/server/extra-model/network/install/liveconfig/trust action. No native baseline
+adoption. No new test result/OS/client/installed inventory or93-ID/count closure.
 
-## Stop and future work
-
-The authorized batch is complete. **Do not add another verification-only/model-switch
-stage or rerun it as progress.** No High switch needed: there was no unexpected failure.
-Future work needs a new concrete independent implementation/acceptance scope or explicit
-native launch/profile decision, bounded by the remaining completion plan. Medium for
-routine existing-source work; High before consequential source/security/integration
-changes. No automatic worker, schedule or background continuation.
-
-Preserve private artifacts by default; no cleanup/delete action was included. No
-restoration of installed31 needed. Preserve unrelated.gitignore and original shared
-checkpoint input/review/generations/heartbeat. Local exclusive lease released at stop.
-All fixed command children completed, no persistent job started.
-
-The old .local/m1-authoring-plan/VERIFY.py expects the future root absent, so do not
-rerun or repin it after this authorized exercise. The scoped private result/command
-receipt, original/source and artifact hashes plus verified runtime checkpoint provide
-the completed-batch evidence. Do not generate another runner/proof framework to resume.
+Before future implementation, .local/m1-restore-scope/VERIFY.py checks exact planning records/source/evidence/
+previous result preservation and false execution flags. Do not repin/rerun old sealed
+verifiers against intentionally changed planning notes. Future fixture root not created.
+Once authorized new test/source files exist, preserve this old planning manifest rather
+than repin it or rerun its absent-file assertions as a new acceptance stage.
+Local lease released at handoff; no persistent child/provider/worker/schedule. Preserve
+unrelated.gitignore and shared checkpoint input/review/generations/heartbeat. Account/
+API/context unknown; no native collector or dispatch. Saved plan never grants authority.
 
 Repository: https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork
-Local records only under explicit no-network restriction; no current remote sync claim.
+No current remote synchronization claim. Full project/native/Windows work incomplete.
