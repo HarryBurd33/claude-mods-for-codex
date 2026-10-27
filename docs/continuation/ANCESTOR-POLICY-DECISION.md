@@ -1,5 +1,19 @@
 # Ancestor-policy review: keep the guard, stop the probe chain
 
+## Subsequent human decision — design only
+
+The human accepted **Option C for design preparation only**, explicitly accepting
+weaker installation-identity assurance and requiring the no-mutation profile to be
+addressed too. See [C-DESIGN-SCOPE](C-DESIGN-SCOPE.md). Actual checker/product guards,
+installed31, consumed grants/closed gates and dev39disabled remain unchanged. No
+execution/target/extra-model/network/install/config/trust authority. The no-mutation
+profile is unresolved. **Next GPT-6.1 Sol High** for the combined security design;
+Medium records the decision and stops before that work. No repeated C/supervision vote.
+
+The original review below is preserved. Its C-not-accepted wording is historical;
+its observed failure, no-mutation limits and actual closed-gate state remain valid.
+
+
 2026-10-26, GPT-6.1 Sol High, saved evidence/source only, startinglocale3a98eb.
 No target read, implementation, permission/policy/gate change, native execution,
 additional inference, network, config/trust write or baseline adoption occurred.

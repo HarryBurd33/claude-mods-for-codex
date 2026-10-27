@@ -1,3 +1,45 @@
+# Option C accepted for design only — stop for Sol High
+
+2026-10-26, GPT-6.1 Sol Medium fromad3014c.
+
+The human accepted **Option C for design preparation only**, explicitly accepting
+weaker installation-identity assurance and requiring the no-mutation profile to be
+addressed too. See [C-DESIGN-SCOPE](C-DESIGN-SCOPE.md). Actual checker/product guards,
+installed31, consumed grants/closed gates and dev39disabled remain unchanged. No
+execution/target/extra-model/network/install/config/trust authority. The no-mutation
+profile is unresolved. **Next GPT-6.1 Sol High** for the combined security design;
+Medium records the decision and stops before that work. No repeated C/supervision vote.
+
+Read C-DESIGN-SCOPE.md, the saved ancestor decision, DEV39-DEPLOYMENT-REVIEW and
+NORMAL-STARTUP-PLAN/STOP-ONLY-PROPOSAL. Human accepted ordinary installation trust
+for a proposed manual trial, not a changed checker, live trust record or an execution
+grant. No preflight rerun or current identity/effective-hook inventory occurred.
+Complete no-mutation profile remains a separate prerequisite; accepting C does not
+waive it. No active artifact/setup/argv, runtime implementation or new tests prepared.
+
+High must produce one supported conditional profile or precise blocker/alternative,
+with exact evidence/unknowns and later separately authorized review/setup/trust/
+startup-network/usage/cleanup boundaries. No global-hook disable, production rewrite
+change, authentication copy, CODEX_HOME reset, custom client or hidden host isolation.
+Stop-only evidence cannot substitute for native held-call/no-mutation/routing proof.
+Accepted supervision limits stay disclosed; do not ask for their agreement again.
+Return Medium once consequential design/review complete, before another routine stage.
+
+Current records/source/hash checks and checkpoint only; installed31/logging/model/
+human trust/product/Windows guards untouched; dev39disabled/uninstalled.93counts
+unchanged, full product incomplete. Local commit/checkpoint in ignored root HANDOFF
+and .local/c-design-acceptance; network ban means no upload/remote verification.
+Preserve old seals and shared checkpoint input/review/heartbeat/unrelated.gitignore.
+No child/worker started; exclusive local lease released at handoff.
+
+Select GPT-6.1 Sol High. Resume: “Continue from the C-design acceptance checkpoint.
+Run C-DESIGN-SCOPE.md using saved evidence only; prepare combined installation-trust
+and no-mutation-profile design. Preserve installed31/product guards and dev39 disabled.
+No implementation, target reads, native/extra model runs, network or config/trust
+changes. Stop for Medium when sufficient.”
+
+## Prior completed docs stage — historical
+
 # Public entry docs reconciled — native prerequisite decision remains
 
 2026-10-26, GPT-6.1 Sol Medium from6943888.

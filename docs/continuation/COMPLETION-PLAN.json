@@ -932,11 +932,12 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/DEV39-DEPLOYMENT-REVIEW.md",
-    "authorized": false,
+    "record": "docs/continuation/C-DESIGN-SCOPE.md",
+    "authorized": true,
+    "authorizationExtent": "Design preparation only; requires human High switch; all execution/config/trust/network gates closed",
     "model": "GPT-6.1 Sol",
-    "effort": "Medium",
-    "kind": "existing M0 human native-validation prerequisite decision; no new probe/review loop or execution authority",
+    "effort": "High",
+    "kind": "combined accepted weaker-installation-trust and unresolved effective no-mutation profile security design from saved evidence",
     "requiresNativeLaunch": false,
     "requiresExtraModelRun": false,
     "requiresImplementation": false
@@ -1011,6 +1012,16 @@
       "date": "2026-10-26",
       "record": "docs/continuation/M1-PUBLIC-DOCS-RESULT.md",
       "executed": true,
+      "nativeDev39Disabled": true,
+      "acceptanceCountsChanged": false
+    },
+    {
+      "id": "option-c-design-only-accepted",
+      "date": "2026-10-26",
+      "record": "docs/continuation/C-DESIGN-SCOPE.md",
+      "humanAcceptedDesign": true,
+      "weakerInstallationIdentityAssuranceAccepted": true,
+      "noMutationProfileResolved": false,
       "nativeDev39Disabled": true,
       "acceptanceCountsChanged": false
     }

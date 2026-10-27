@@ -1,5 +1,19 @@
 # Requirements ledger
 
+## Option C design acceptance — 2026-10-26
+
+The human accepted **Option C for design preparation only**, explicitly accepting
+weaker installation-identity assurance and requiring the no-mutation profile to be
+addressed too. See [C-DESIGN-SCOPE](C-DESIGN-SCOPE.md). Actual checker/product guards,
+installed31, consumed grants/closed gates and dev39disabled remain unchanged. No
+execution/target/extra-model/network/install/config/trust authority. The no-mutation
+profile is unresolved. **Next GPT-6.1 Sol High** for the combined security design;
+Medium records the decision and stops before that work. No repeated C/supervision vote.
+
+Older pending-choice/keep-A statements below describe historical design status;
+actual native execution still remains blocked. No93-ID/count closure follows.
+
+
 ## Added narrow restore-failure acceptance — 2026-10-26
 
 [M1-RESTORE-FAILURE-RESULT](M1-RESTORE-FAILURE-RESULT.md): authorized synthetic POSIX
