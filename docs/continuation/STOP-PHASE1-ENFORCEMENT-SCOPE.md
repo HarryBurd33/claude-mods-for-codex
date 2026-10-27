@@ -1,5 +1,10 @@
 # Phase1 enforcement handoff — grant authorized, operation unstarted
 
+**Offline execution record:** High implementation and30synthetic tests complete;
+see [STOP-PHASE1-OFFLINE](STOP-PHASE1-OFFLINE.md). The actual grant/targets remain
+unused/unobserved. Scope below is historical, not authority to repeat or run targets.
+
+
 2026-10-26, GPT-6.1 Sol Medium from5f230f3. The human authorized the exact single
 20second/zero-retry Phase1 check/setup in [STOP-CONSOLIDATED-REQUEST](STOP-CONSOLIDATED-REQUEST.md).
 **Grant unused: zero Phase1 invocations, target metadata/source checks or setup writes.**

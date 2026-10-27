@@ -1,3 +1,64 @@
+# Phase1 private mechanism tested — return to Sol Medium
+
+2026-10-26, GPT-6.1 Sol High fromccffef3.
+
+[STOP-PHASE1-OFFLINE](STOP-PHASE1-OFFLINE.md) completes the High synthetic-only
+mechanism batch fromccffef3:30tests pass. Initial harness import mismatch and close-
+accounting failure were retained/fixed; admitted copied-entry lease is simulated.
+Private fixed entry remainsclosed, realledgerempty and original grant hash unchanged.
+No real39source/fivetemplate/45metadata operation or setup. The exclusive entry
+receipt prevents repeat even on early core refusal; marker precedes target work.
+Protected product/31/guards/dev39disabled/93counts remain unchanged. Next human
+**GPT-6.1 Sol Medium** for exact artifact review and only a future explicit resume's
+one actual operation using the already authorized unused grant. No native/model/
+network/trust authority or repeated Phase1/C vote follows this offline result.
+
+Read STOP-PHASE1-OFFLINE.md plus private .local/phase1-implementation files: core,
+entry, test suite, BINDING/SEAL/ADMISSION/RESULT and intake grant pin. No product
+source/test/package changes. Private code is backed up in the local checkpoint,
+not present in GitHub/archive/installed31. No target source contents/metadata or
+five artifact checks ran outside synthetic roots. Manifests/names/digests were data.
+
+SEAL pins exact binding/programs/unchanged original grant and existing local task-
+checkpoint runtime. Real entry checks fresh60second admission bound to whole SEAL,
+actual local owner/token; remote ownership refused. It compiles verified coordinator
+bytes only. Empty RESULT or attempt marker means consumed/unknown, never retry. The
+core uses one20second monotonic/POSIX alarm budget; exact source/read/output bounds,
+handles/type/permissions/identity, exclusive dirs/files, readback, sync/close and partial
+outcomes. Kernel-stall/process-death/hostile-same-user/Windows and actual task-runtime
+integration are not tested. Copied open entry uses a simulated runtime; ownership-
+refusal test uses simulated metadata. No child-tree cancellation claim.
+
+Medium: first verify exact implementation/record pins and scope, unused original
+AUTHORIZATION bytes and empty real-ledger; no old source/template verifier/preflight
+outside the one operation. Current ADMISSION.allowAttempt=false. Existing Phase1
+authorization persists, do not ask same permission again. If a later explicit resume
+requests actualPhase1 and review is satisfied, make fresh admission with seal/binding/
+scope hashes and current local owner/token/time, then fixed entry once. No path or
+command selectors. Code/scope drift or inadequate safety means stopHigh, not repair
+in place. All native/global/trust/model/network and later phases remain closed.
+After an actual attempt close admission and preserve authoritative RESULT/attempt
+ledger; original authorization is historical, not sole evidence of unused status.
+No cleanup or retry. A successful setup does not authorize startup/trust/model use.
+
+Ledger is local coordination, not cross-device one-use security. Current real-ledger
+is empty: regular-file checkpoint cannot recreate emptydirs. Preserve entire private
+implementation and ledger across transfer; missing ledger after uncertainty never
+permits recreating/assuming grantunused. Synthetic bulk/partial fixtures remain on
+disk, not full checkpoint backups; prior runs did not retain a complete per-case
+fixture-directory map. Source/tests/logs/receipts do retain acceptance evidence.
+Shared checkpoint input/heartbeat/unrelated.gitignore preserved. No worker/provider/
+child/schedule active; lease released at final handoff. Exact localcommit/tree/private
+checkpoint in root HANDOFF/SYNC. No upload/remote verification under network ban.
+
+Select GPT-6.1 Sol Medium. Resume: “Continue from the Phase1 offline checkpoint.
+Verify exact artifacts and scope only; preserve the unused grant, installed31/guards
+and dev39 disabled. No actual Phase1 target/source checks or setup, tests, native/
+extra model runs, network or trust changes. Stop for High on consequential drift.”
+This review-only resume is deliberately separate from requesting the actual operation.
+
+## Prior enforcement handoff — historical
+
 # Phase1 grant unused — stop for Sol High enforcement work
 
 2026-10-26, Sol Medium from5f230f3.

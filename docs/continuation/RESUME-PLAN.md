@@ -1,5 +1,21 @@
 # Resume plan — finite completion milestones
 
+## Phase1 private mechanism verified synthetically — 2026-10-26
+
+[STOP-PHASE1-OFFLINE](STOP-PHASE1-OFFLINE.md) completes the High synthetic-only
+mechanism batch fromccffef3:30tests pass. Initial harness import mismatch and close-
+accounting failure were retained/fixed; admitted copied-entry lease is simulated.
+Private fixed entry remainsclosed, realledgerempty and original grant hash unchanged.
+No real39source/fivetemplate/45metadata operation or setup. The exclusive entry
+receipt prevents repeat even on early core refusal; marker precedes target work.
+Protected product/31/guards/dev39disabled/93counts remain unchanged. Next human
+**GPT-6.1 Sol Medium** for exact artifact review and only a future explicit resume's
+one actual operation using the already authorized unused grant. No native/model/
+network/trust authority or repeated Phase1/C vote follows this offline result.
+
+Older missing-mechanism/next-High instructions below are historical.
+
+
 ## Phase1 authorized; stopped before target access — 2026-10-26
 
 The human authorized exact Phase1 from5f230f3, but the operation is **unstarted and

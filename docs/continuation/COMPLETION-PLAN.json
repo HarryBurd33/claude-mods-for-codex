@@ -932,14 +932,14 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/STOP-PHASE1-ENFORCEMENT-SCOPE.md",
+    "record": "docs/continuation/STOP-PHASE1-OFFLINE.md",
     "authorized": false,
     "model": "GPT-6.1 Sol",
-    "effort": "High",
-    "kind": "offline-only bounded Phase1 mechanism review/implementation/tests under future human resume; real grant unused",
+    "effort": "Medium",
+    "kind": "exact private mechanism artifact review; real authorized Phase1 remains unused and requires explicit execution resume",
     "requiresNativeLaunch": false,
     "requiresExtraModelRun": false,
-    "requiresImplementation": true
+    "requiresImplementation": false
   },
   "sourceImplementationObservations": [
     {
@@ -1057,6 +1057,18 @@
       "enforcementReady": false,
       "targetReads": 0,
       "setupWrites": 0,
+      "nativeDev39Disabled": true,
+      "acceptanceCountsChanged": false
+    },
+    {
+      "id": "phase1-private-mechanism-offline",
+      "date": "2026-10-26",
+      "record": "docs/continuation/STOP-PHASE1-OFFLINE.md",
+      "syntheticPass": 30,
+      "realEntryClosed": true,
+      "realGrantUnchangedUnused": true,
+      "actualTargetReads": 0,
+      "actualSetupWrites": 0,
       "nativeDev39Disabled": true,
       "acceptanceCountsChanged": false
     }
