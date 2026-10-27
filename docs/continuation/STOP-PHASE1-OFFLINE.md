@@ -1,5 +1,18 @@
 # Private Phase1 mechanism — synthetic acceptance, real entry closed
 
+## Final preservation finding — external runtime pin drift
+
+After the30passing synthetic cases and initial verification, the separately installed
+task-checkpoint runtime changed outside this repository. The private entry's sealed
+runtime digest no longer matches; **actual execution remains blocked**. The seal was
+not updated and no new baseline adopted. Both digests are preserved privately. This
+does not invalidate the synthetic core results, but current ownership-adapter code
+needs High review before any real operation. The earlier Medium handoff below is superseded: **remain GPT-6.1 Sol High**
+for a source-only review of the changed ownership adapter, without repinning or
+executing Phase1. No actual
+grant consumed/targets touched. No extra source investigation was started at the stop.
+
+
 2026-10-26, GPT-6.1 Sol High fromccffef3 under
 [STOP-PHASE1-ENFORCEMENT-SCOPE](STOP-PHASE1-ENFORCEMENT-SCOPE.md). **30synthetic tests
 pass. Real Phase1 grant remains unused; no selected target checks/setup performed.**
