@@ -1,5 +1,14 @@
 # Current status — optional call-review source implemented; product incomplete
 
+## Bounded CI repair — 2026-10-27
+
+[Sol High follow-up](CI-REPAIR-2026-10-27.md) adds fixed-peer process-group
+diagnostics, preserving all absence/cleanup assertions and existing native limits.
+Local377tests pass,115skip. Primary Git2.56 notes explain the old internal-path
+failure; no Windows guard or mandatory image contract was changed. Previous exact
+CI remained failed; new-source CI must be inspected separately. Native/UI/authoring,
+platform and release acceptance remain open; no one-use native trial is replayed.
+
 ## Current Sol integration — 2026-10-27
 
 [Native Stop result](NATIVE-STOP-2026-10-27.md): the human completed actual hook

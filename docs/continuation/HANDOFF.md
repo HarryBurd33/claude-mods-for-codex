@@ -1,5 +1,15 @@
 # Sol integration: one native Stop callback observed; broader acceptance open
 
+## Sol High bounded CI follow-up — 2026-10-27
+
+Read [CI repair evidence](CI-REPAIR-2026-10-27.md) and the private root handoff.
+Fixed-peer process-group diagnostics now distinguish unavailable probes from
+settling expiry, without changing absence criteria, deadlines, signals or assertions.
+Primary Git2.56 release notes explain the obsolete mingw64 path. Both mandatory
+Windows positives and guards remain; new exact CI still needs observation.
+The completed Stop trial and Phase1 are never replayable. Further native/model/
+trust/config/install work still needs its concrete authority boundary.
+
 ## Current Sol integration — 2026-10-27
 
 [Native Stop result](NATIVE-STOP-2026-10-27.md): the human completed actual hook

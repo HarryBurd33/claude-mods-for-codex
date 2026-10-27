@@ -8,7 +8,7 @@ import { verifyNativeInputs, readNativeReview } from './routing-native-inputs.mj
 import { createReadinessMachine, READINESS_LIMITS as L } from './readiness-machine.mjs';
 import { createReadinessFrames } from './readiness-frames.mjs';
 import { syntheticReadinessPlan, READINESS_SCENARIOS } from './readiness-fixtures.mjs';
-import { observeProcessGroup, settleFixedFixtureGroup } from './process-group-observation.mjs';
+import { observeProcessGroup, settleFixedFixtureGroupDetail } from './process-group-observation.mjs';
 const PEER = fileURLToPath(new URL('./readiness-peer.mjs', import.meta.url));
 
 export async function runNativeReadiness(plan) {
@@ -133,15 +133,16 @@ async function executeReadiness(plan, scenario) {
   }
   const reaped = spawned && closed && !spawnFailed;
   const processGroupStatus = reaped ? observeProcessGroup(child.pid) : 'unavailable';
-  const fixtureGroupGoneObserved = synthetic && scenario === 'silent-descendant' && reaped
-    ? await settleFixedFixtureGroup(child.pid) : null;
+  const fixtureGroupSettlement = synthetic && scenario === 'silent-descendant' && reaped
+    ? await settleFixedFixtureGroupDetail(child.pid) : null;
+  const fixtureGroupGoneObserved = fixtureGroupSettlement?.goneObserved ?? null;
   if (process.platform !== 'win32' && processGroupStatus !== 'absent-at-probe') machine.abort('descendants-unresolved');
   sampleClock();
   if (!reaped || exitCode !== 0 || forced || infrastructureFailure || frames.counters().framingFailed) machine.abort('transport-error');
   return { ...machine.report(), transport: synthetic ? 'fixed-synthetic-readiness-peer' : 'dormant-native-readiness',
     synthetic, nativeProcessStarted: !synthetic && spawned, nativeInputFailure, processReaped: reaped,
     peerExitCode: exitCode, peerSignalled: signalled, forcedTermination: forced, cancelRequested: cancelled,
-    processGroupStatus, fixtureGroupGoneObserved, allDescendantsVerified: false,
+    processGroupStatus, fixtureGroupGoneObserved, ...(fixtureGroupSettlement ? {fixtureGroupSettlement} : {}), allDescendantsVerified: false,
     ...frames.counters(), sentBytes, sentRequests };
 }
 export function parseReadinessArgs(argv) {

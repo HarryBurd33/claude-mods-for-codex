@@ -63,7 +63,7 @@ jobs:
       - name: Inspection-only contract and closed entry (POSIX peer cases skip, no native client)
         run: node --test test/inspection.test.mjs
       - name: Offline reliability contracts (five POSIX probes skip, no native client)
-        run: node --test test/reliability.test.mjs
+        run: node --test test/reliability.test.mjs test/process-group-observation.test.mjs
       - name: Retention Windows before-IO refusal (POSIX cleanup cases skip)
         run: node --test test/retention.test.mjs
       - run: npm run validate

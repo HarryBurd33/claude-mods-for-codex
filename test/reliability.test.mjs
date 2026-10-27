@@ -17,11 +17,16 @@ for (const mode of ['readiness-late', 'readiness-serialize', 'inspection-seriali
   });
 }
 for (const [name, run] of [['readiness', runFixedReadiness], ['inspection', runFixedInspection]]) {
-  test('direct-child close does not establish group absence: ' + name, { skip: !posix }, async () => {
+  test('direct-child close does not establish group absence: ' + name, { skip: !posix }, async t => {
     const r = await run('silent-descendant');
+    // Fixed categories/counters only; failure must retain enough evidence to
+    // distinguish an unavailable probe from deadline expiry without a PID/log.
+    const diagnostic = JSON.stringify({processReaped:r.processReaped, processGroupStatus:r.processGroupStatus,
+      fixtureGroupSettlement:r.fixtureGroupSettlement ?? null});
+    t.diagnostic(diagnostic);
     // Fixture self-exit has been observed before this test asserts/returns. No
     // retained PID, stale-group signal or arbitrary process adoption is used.
-    assert.equal(r.fixtureGroupGoneObserved, true);
+    assert.equal(r.fixtureGroupGoneObserved, true, diagnostic);
     assert.equal(r.processReaped, true); assert.equal(r.processGroupStatus, 'present-or-reused');
     assert.equal(r.allDescendantsVerified, false); assert.equal(r.nativeProcessStarted, false);
     assert.equal(r.outcome, 'review-required');

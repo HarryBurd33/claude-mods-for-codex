@@ -9,7 +9,7 @@ import { requireInspectionAdmission, describeInspection, validateInspectionPlan 
 import { createInspectionMachine, READINESS_LIMITS as L } from './readiness-machine.mjs';
 import { createReadinessFrames } from './readiness-frames.mjs';
 import { syntheticInspectionPlan, INSPECTION_SCENARIOS } from './inspection-fixtures.mjs';
-import { observeProcessGroup, settleFixedFixtureGroup } from './process-group-observation.mjs';
+import { observeProcessGroup, settleFixedFixtureGroupDetail } from './process-group-observation.mjs';
 const PEER = fileURLToPath(new URL('./inspection-peer.mjs', import.meta.url));
 const FIXED_MS = 2500;
 
@@ -119,8 +119,9 @@ async function fixedTransport(plan, scenario) {
   }
   const reaped = spawned && closed && !failed;
   const processGroupStatus = reaped ? observeProcessGroup(child.pid) : 'unavailable';
-  const fixtureGroupGoneObserved = scenario === 'silent-descendant' && reaped
-    ? await settleFixedFixtureGroup(child.pid) : null;
+  const fixtureGroupSettlement = scenario === 'silent-descendant' && reaped
+    ? await settleFixedFixtureGroupDetail(child.pid) : null;
+  const fixtureGroupGoneObserved = fixtureGroupSettlement?.goneObserved ?? null;
   if (processGroupStatus !== 'absent-at-probe') machine.abort('descendants-unresolved');
   if (elapsed() >= FIXED_MS + 1250) machine.abort('outer-timeout');
   if (!reaped || exitCode !== 0 || forced || frames.counters().framingFailed) machine.abort('transport-error');
@@ -128,7 +129,7 @@ async function fixedTransport(plan, scenario) {
     nativeProcessStarted: false, nativeTransportImplemented: false, inspectionAdmission: false,
     processReaped: reaped, peerExitCode: exitCode, peerSignalled: signal !== null,
     forcedTermination: forced, cancelRequested: cancelled, fixedPeerCwdMatched: cwdMatched,
-    processGroupStatus, fixtureGroupGoneObserved, allDescendantsVerified: false,
+    processGroupStatus, fixtureGroupGoneObserved, ...(fixtureGroupSettlement ? {fixtureGroupSettlement} : {}), allDescendantsVerified: false,
     planArgvAndSpawnCwdMatched: plan.argv[2] === plan.spawn.cwd && plan.input.cwd === plan.spawn.cwd,
     temporaryDirectoryRemoved: false, ...frames.counters(), sentBytes, sentRequests };
 }

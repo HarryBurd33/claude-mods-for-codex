@@ -6,6 +6,7 @@ inventory is implied. MIT; independent of Anthropic and OpenAI.
 
 | Milestone | Evidence and limits |
 | --- | --- |
+| [Bounded CI repair](docs/continuation/CI-REPAIR-2026-10-27.md) | Fixed-peer process-group diagnostics added; local377pass/115skips. Git2.56 upstream layout change explains the stale internal path. Existing Windows guards/mandatory positives remain; full CI repair is not established. |
 | [Current Sol progress](docs/continuation/NATIVE-STOP-2026-10-27.md) | Automatic continuation and one real Phase1 setup completed; grant consumed. Later actual human hook trust and one supervised response produced one Stop record. Unchanged owned declaration removed, data/trust retained, qualified preservation passed. Broader native acceptance remains open. |
 | [Prior Astra review](docs/continuation/ASTRA-RUNTIME-REVIEW.md) | Reviewed external runtime; versioned private launcher; 11 actual-runtime/local-Git synthetic passes; 44 selected project passes; validate/replay passed. These are the prior offline results; the subsequent real Phase 1 result is above. |
 | [Dev39 candidate](docs/continuation/PACKAGE-DEV39.md) | Historical efccbaa package: 354 files, 54 selected packaged passes. Remains disabled; no native held-call acceptance. |
@@ -27,7 +28,8 @@ and completed once. Further native scopes still need a concrete consolidated pac
 that one-use result does not authorize another run.
 No automatic approval, hidden prompt/model change, app patch or private-daemon shortcut.
 
-Current: **GPT-6.1 Sol Ultra**, with [one consolidated macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md).
+Current: human-requested **GPT-6.1 Sol High** for the bounded CI repair. The
+[consolidated macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md) remains open.
 The previous no-network restriction is superseded for authorized GitHub progress
 publication. Private checkpoints, machine bindings, grants and raw logs are excluded.
 The public [development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork)

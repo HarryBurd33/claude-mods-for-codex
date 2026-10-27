@@ -27,7 +27,10 @@ actual Windows/Linux/WSL acceptance; then a frozen candidate and release verific
 The [93-requirement plan](docs/continuation/COMPLETION-PLAN.md) retains
 60V/14B/12A/3U/4P narrow dispositions, not completion percentages.
 
-The current implementation stage is [GPT-6.1 Sol Ultra](docs/continuation/SOL-ULTRA-MILESTONE.md).
+The current [bounded CI repair](docs/continuation/CI-REPAIR-2026-10-27.md) runs on the
+human-requested GPT-6.1 Sol High: fixed-peer cleanup diagnostics and an evidence-backed
+Git2.56 layout finding, with all existing guards and mandatory positives retained.
+The broader [macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md) remains open.
 The accepted C/manual-supervision design is retained; later native scopes still need
 their concrete approval packet. GitHub progress publication is now authorized;
 private checkpoints, grants, machine bindings and raw logs stay local.

@@ -1,5 +1,14 @@
 # Continuation verification log
 
+## High bounded CI diagnostics — 2026-10-27
+
+[Repair record](CI-REPAIR-2026-10-27.md): local377pass/0fail/115skips/492total,
+15.981seconds; focused9pass/1skip; validate3/replay4pass. New closed error and
+settlement metadata preserve ESRCH-only absence, deadlines/signals and assertions.
+Source b57b85a CI40536497015 was not retried:4jobs passed, Mac22/2Windows failed.
+Git2.56 official notes explain the missing internal path; Windows security/image
+acceptance remains unresolved. New exact-commit CI is separate from these results.
+
 ## Resumed native and source verification — 2026-10-27
 
 [Native Stop](NATIVE-STOP-2026-10-27.md): one event observed; bounded read3entries/
