@@ -103,6 +103,7 @@ public static class Harness {
    if(a.Length>1 && a[0]=="child")return Child(a);
    if(a.Length<3 || a[0]!="run")return 2;
    string mode=a[1],directory=a[2];
+   if(mode=="metadata-bounds" || mode=="capture" || mode=="capture-hold")CodexMods.PrivateStorage.BeginMetadataTraceProof();
    if(mode=="metadata-operation" || mode=="metadata-operation-cancel" || mode=="metadata-operation-pre-cancel") {
     using(var cancellation=new CancellationTokenSource()) {
      if(mode=="metadata-operation-pre-cancel")cancellation.Cancel();
@@ -151,6 +152,33 @@ public static class Harness {
    if(mode=="known-image-read" || mode=="synthetic-image-read") {
     if(mode=="known-image-read")CodexMods.PrivateStorage.KnownInstalledImageReadHarnessProof(a[3],a[4],a[5]);
     else CodexMods.PrivateStorage.SyntheticInstalledImageReadHarnessProof(a[3],a[4],a[5]);
+    return 0;
+   }
+   if(mode=="linked-attribute-change") {
+    string path=Path.GetFullPath(a[3]);
+    if(!path.StartsWith(Path.GetFullPath(directory)+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase))throw new IOException();
+    FileAttributes before=File.GetAttributes(path);File.SetAttributes(path,before^FileAttributes.Hidden);
+    if(File.GetAttributes(path)==before)throw new IOException();
+    Console.WriteLine("attributes-changed");return 0;
+   }
+   if(mode=="linked-mapping-holder") {
+    string path=Path.GetFullPath(a[3]);
+    if(!path.StartsWith(Path.GetFullPath(directory)+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase))throw new IOException();
+    IntPtr mapping=IntPtr.Zero,view=IntPtr.Zero;
+    try {
+     using(var file=new FileStream(path,FileMode.Open,FileAccess.ReadWrite,FileShare.ReadWrite|FileShare.Delete)) {
+      mapping=CreateFileMappingW(file.SafeFileHandle,IntPtr.Zero,4,0,0,IntPtr.Zero);
+      if(mapping==IntPtr.Zero)throw new IOException();
+      view=MapViewOfFile(mapping,2,0,0,UIntPtr.Zero);if(view==IntPtr.Zero)throw new IOException();
+     }
+     // The write file handle is closed, but the actual writable view stays live.
+     Console.WriteLine("mapping-held");Console.Out.Flush();Console.In.Read();return 0;
+    } finally {if(view!=IntPtr.Zero)UnmapViewOfFile(view);if(mapping!=IntPtr.Zero)CloseHandle(mapping);}
+   }
+   if(mode=="known-linked-inventory" || mode=="synthetic-linked-inventory") {
+    if(a.Length!=7)throw new IOException();
+    if(mode=="known-linked-inventory")CodexMods.PrivateStorage.KnownLinkedInventoryHarnessProof(a[3],a[4],a[5],a[6]);
+    else CodexMods.PrivateStorage.SyntheticLinkedInventoryHarnessProof(a[3],a[4],a[5],a[6]);
     return 0;
    }
    if(mode=="known-installer-read" || mode=="synthetic-installer-read") {

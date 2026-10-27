@@ -1,30 +1,41 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { spawn } from 'node:child_process';
-import { mkdtemp, readFile, writeFile, readdir, rm, rmdir, access, realpath, mkdir, copyFile, symlink, link, open, rename } from 'node:fs/promises';
+import { OwnedFixtureScope } from './owned-fixture-lifecycle.mjs';
+const lifecycle = new OwnedFixtureScope();
+const restoreSpawnTracking=process.platform==='win32'?lifecycle.trackExternalSpawns():()=>{};
+const spawn = (...args) => lifecycle.spawn(...args);
+import { mkdtemp, readFile, writeFile as rawWriteFile, readdir, rm as rawRm, rmdir as rawRmdir, access, realpath, mkdir as rawMkdir, copyFile as rawCopyFile, symlink as rawSymlink, link as rawLink, open, rename as rawRename } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, win32 } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import test from 'node:test';
-import { windowsStorageRequest } from '../src/windows-storage.mjs';
+import { windowsStorageRequest as rawWindowsStorageRequest } from '../src/windows-storage.mjs';
 import { peImports, MAX_PE_BYTES } from '../proofs/windows-owned-process/pe-imports.mjs';
+import { LINKED_LAYOUT, linkedImageFamily, linkedInventoryFrame } from '../proofs/windows-owned-process/linked-inventory-frame.mjs';
 import { pinRefusal } from '../proofs/windows-owned-process/pin-diagnostic-frame.mjs';
 import { directoryObservation as parseDirectoryObservation } from '../proofs/windows-owned-process/directory-diagnostic-frame.mjs';
+
+const windowsStorageRequest=(...args)=>lifecycle.externalIO(args[2]?.signal,()=>rawWindowsStorageRequest(...args));
+const writeFile=(...args)=>lifecycle.io(undefined,()=>rawWriteFile(...args));
+const mkdir=(...args)=>lifecycle.io(undefined,()=>rawMkdir(...args));
+const rm=(...args)=>lifecycle.io(undefined,()=>rawRm(...args));
+const rmdir=(...args)=>lifecycle.io(undefined,()=>rawRmdir(...args));
+const copyFile=(...args)=>lifecycle.io(undefined,()=>rawCopyFile(...args));
+const symlink=(...args)=>lifecycle.io(undefined,()=>rawSymlink(...args));
+const link=(...args)=>lifecycle.io(undefined,()=>rawLink(...args));
+const rename=(...args)=>lifecycle.io(undefined,()=>rawRename(...args));
 
 // Real Windows OS tests only. No mocked paths, model calls, Codex installation,
 // production API integration, user project traversal or executable-trust claim.
 const native = { skip: process.platform !== 'win32', timeout: 45000 };
 let fixture;
+function metadataTrace(text) {
+  const lines=text.split(/\r?\n/).filter(Boolean);
+  const valid=lines.filter(frame=>/^metadata-stage\|(?:acquire|read|verify|scratch-root|directory-objects|directory-refs|directory-info|config|head|index|exclude|write|flush|final-check|dispose|truncated)\|(?:start|end)\|[0-9]{1,12}$/.test(frame));
+  return JSON.stringify({metadataStages:valid.slice(0,128),invalidOrIncompleteFrame:valid.length!==lines.length||valid.length>128});
+}
 async function run(exe, args, options = {}) {
-  return new Promise((resolve, reject) => {
-    const p = spawn(exe, args, { windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'], ...options });
-    const timer = setTimeout(() => { p.kill(); reject(new Error('Proof harness deadline')); }, 20000);
-    let out = '', err = '';
-    p.stdout.on('data', b => { out += b; if (out.length > 32768) p.kill(); });
-    p.stderr.on('data', b => { err += b; if (err.length > 8192) p.kill(); });
-    p.on('error', e => { clearTimeout(timer); reject(e); });
-    p.on('close', code => { clearTimeout(timer); code === 0 ? resolve(out.trim()) : reject(new Error(`Public proof failed: ${code}: ${out}: ${err}`)); });
-  });
+  return lifecycle.run(exe,args,options);
 }
 async function setup() {
   fixture ??= (async () => {
@@ -37,7 +48,7 @@ async function setup() {
   })();
   return fixture;
 }
-test.after(async () => { if (fixture) { const { root } = await fixture; await rm(root, { recursive: true, force: true }); } });
+test.after(async () => {try {if (fixture) {const {root}=await fixture;lifecycle.assertCleanupSafe();await rm(root,{recursive:true,force:true});}}finally{restoreSpawnTracking();}});
 function result(frame) {
   const [kind, code, out, err, extra] = frame.split('|');
   assert.equal(kind, 'ok'); assert.equal(extra, undefined);
@@ -420,22 +431,109 @@ test('Windows Installer directory refusal reports missing, wrong-kind and descri
   assert.equal((await inventory()).sampleAccepted,true);
   await rename(f.code,real);await rename(real,f.code);
 });
-test('Windows CI explicit Installer inventory profile obtains hashes and static imports without executable trust',{
+// Explicit migration: the obsolete mandatory cmd/mingw64+parent-PE contract
+// failed on8219ca2. The modern contract requires BOTH same-handle digest samples;
+// old profiles and synthetic strict hardlink negatives remain above unchanged.
+async function linkedSample(f,{known=false,target=f.target,layout=LINKED_LAYOUT,during,control='v',signal,terminate=false}={}) {
+  const h=lifecycle.start(f.exe,['run',known?'known-linked-inventory':'synthetic-linked-inventory',f.data,target,f.code,f.project,layout],
+    {signal,stdio:['pipe','pipe','pipe'],lifetimeMs:15000,readyMs:5000,stdoutLimit:512});
+  try {
+    const first=await h.firstLine;
+    if(first==='linked-inventory-held' && during)await during();
+    h.check();
+    if(terminate)h.child.kill();else if(first==='linked-inventory-held'&&!h.hasClosed())h.child.stdin.end(control);
+    const exit=await h.completion;h.check();assert.equal(h.error(),'');
+    if(terminate){assert.notEqual(exit.signal,null);return {accepted:false,executionAuthority:false};}
+    assert.equal(exit.code,0);return linkedInventoryFrame(h.output());
+  } finally {if(!h.hasClosed()){h.stop(new Error('Linked inventory teardown'));try{await h.completion;}catch{}}}
+}
+test('Windows linked inventory samples one and two links through the held handle while legacy guards refuse links',native,async t=>{
+  const f=await imageReadFixture('linked positive'),alias=join(f.parent,'outside-code-alias.exe');
+  const expected=createHash('sha256').update(await readFile(f.target)).digest('hex');
+  assert.deepEqual(await linkedSample(f,{signal:t.signal}),{accepted:true,bytes:(await readFile(f.target)).length,links:1,sha256:expected,pe:'not-performed',executionAuthority:false});
+  await link(f.target,alias);
+  const sampled=await linkedSample(f,{signal:t.signal,during:async()=>{
+    for(const path of [f.target,alias])await assert.rejects(open(path,'r+'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+    await assert.rejects(rename(f.target,f.target+'.moved'),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+    await assert.rejects(rm(f.target),e=>['EPERM','EACCES','EBUSY'].includes(e.code));
+  }});
+  assert.equal(sampled.accepted,true);assert.equal(sampled.links,2);assert.equal(sampled.sha256,expected);
+  for(const options of [{read:true},{installer:true,read:true}])assert.equal((await installedImageRead(f.exe,f.data,f.target,f.code,f.project,options)).dataRead,false);
+  assert.equal(await run(f.exe,['run','pin',f.data,f.target,f.code,f.project]),'refused');
+  await assert.rejects(windowsStorageRequest('private-read',f.target,{limit:1048576}),/Private Windows/);
+  for(const path of [f.target,alias]){const writer=await open(path,'r+');await writer.close();}
+});
+test('Windows linked inventory refuses actually retained writers and writable mappings through either name',native,async t=>{
+  const f=await imageReadFixture('linked contenders'),alias=join(f.parent,'contender-alias.exe');await link(f.target,alias);
+  for(const path of [f.target,alias]) {
+    const writer=await open(path,'r+'); // Acquisition must succeed before the negative.
+    try {assert.equal((await linkedSample(f,{signal:t.signal})).accepted,false);}
+    finally {await writer.close();}
+    const h=lifecycle.start(f.exe,['run','linked-mapping-holder',f.data,path],{signal:t.signal,stdio:['pipe','pipe','pipe'],readyMs:5000});
+    try {
+      assert.equal(await h.firstLine,'mapping-held');assert.equal(h.hasClosed(),false);
+      assert.equal((await linkedSample(f,{signal:t.signal})).accepted,false);
+      h.child.stdin.end('v');assert.equal((await h.completion).code,0);
+    } finally {if(!h.hasClosed()){h.stop(new Error('Mapping fixture teardown'));try{await h.completion;}catch{}}}
+  }
+  assert.equal((await linkedSample(f,{signal:t.signal})).accepted,true,'contenders release actual object handles');
+});
+for(const action of ['rename','delete','add']) {
+  test('Windows linked inventory observes other-alias topology operation '+action,native,async t=>{
+    const f=await imageReadFixture('alias '+action),alias=join(f.parent,'other-alias.exe');await link(f.target,alias);let changed=false;
+    const sample=await linkedSample(f,{signal:t.signal,during:async()=>{
+      try {
+        if(action==='rename')await rename(alias,alias+'.moved');
+        else if(action==='delete')await rm(alias);
+        else await link(f.target,alias+'.added');
+        changed=true;
+      } catch(e){assert.ok(['EPERM','EACCES','EBUSY'].includes(e.code));}
+    }});
+    t.diagnostic(JSON.stringify({action,performed:changed,aliasTopologyGuaranteed:false}));
+    assert.equal(sample.accepted,!(changed&&action!=='rename'));
+  });
+}
+test('Windows linked inventory refuses changed descriptors, foreign grants and partial scope acquisition',native,async t=>{
+  const f=await imageReadFixture('linked refusal');
+  assert.equal((await linkedSample(f,{signal:t.signal,during:async()=>{
+    assert.equal(await run(f.exe,['run','linked-attribute-change',f.data,f.target],{signal:t.signal}),'attributes-changed');
+  }})).accepted,false);
+  assert.equal((await linkedSample({...f,project:f.code},{signal:t.signal})).accepted,false);
+  await fixtureAcl(f.code,'null');
+  try{assert.equal((await linkedSample(f,{signal:t.signal})).accepted,false);}finally{await fixtureAcl(f.code,'private');}
+  await rm(f.target);await mkdir(f.target);
+  try{assert.equal((await linkedSample(f,{signal:t.signal})).accepted,false);}finally{await rmdir(f.target);await copyFile(f.exe,f.target);await fixtureAcl(f.target,'private');}
+  assert.equal((await linkedSample(f,{signal:t.signal,during:()=>fixtureAcl(f.target,'broad')})).accepted,false);
+  await fixtureAcl(f.target,'private');
+  for(const mode of ['installer-foreign-deny-allow','null']) {
+    await fixtureAcl(f.target,mode);
+    try {assert.equal((await linkedSample(f,{signal:t.signal})).accepted,false);}
+    finally {await fixtureAcl(f.target,'private');}
+  }
+  for(const opts of [{layout:'unknown'},{target:f.target+':ads'},{known:true}])assert.equal((await linkedSample(f,{...opts,signal:t.signal})).accepted,false);
+  const moved=f.code+'.real';await rename(f.code,moved);
+  try {
+    assert.equal((await linkedSample(f,{signal:t.signal})).accepted,false);
+    await symlink(moved,f.code,'junction');
+    try{assert.equal((await linkedSample(f,{signal:t.signal})).accepted,false);}finally{await rm(f.code);}
+  } finally {await rename(moved,f.code);}
+  for(const control of ['c','','x'])assert.equal((await linkedSample(f,{control,signal:t.signal})).accepted,false);
+  await linkedSample(f,{terminate:true,signal:t.signal});
+  assert.equal((await linkedSample(f,{signal:t.signal})).accepted,true);
+  await rename(f.target,f.target+'.released');await rename(f.target+'.released',f.target);
+});
+test('Windows CI modern linked installed-image contract requires both same-handle digests, PE not performed',{
   ...native,skip:process.platform!=='win32'||!process.env.CODEX_MODS_CI_GIT_ROOT,
 },async t=>{
-  const root=process.env.CODEX_MODS_CI_GIT_ROOT;assert.equal(root,'C:\\Program Files\\Git');
-  const {data,exe}=await setup(),project=join(data,'Installer inventory project');await mkdir(project);
-  for(const relative of ['cmd/git.exe','mingw64/bin/git.exe']) {
-    // Both installed images remain mandatory positives. A failed first image
-    // must not hide the second image's actual policy/result evidence.
-    await t.test(relative, async candidate => {
-      const result=await installedImageRead(exe,data,win32.join(root,...relative.split('/')),root,project,{known:true,installer:true,read:true});
-      candidate.diagnostic(JSON.stringify({target:relative,...result,version:'not-queried',authenticity:'unverified',loaderClosure:'unverified',productionGateChanged:false}));
-      assert.deepEqual(result.frames,installerReadFrames('unchanged'));
-      assert.equal(result.dataRead,true);assert.equal(result.sampleAccepted,true);assert.match(result.sample.sha256,/^[a-f0-9]{64}$/);
-      assert.equal(result.executionAuthority,false);
-    });
-  }
+  const code=process.env.CODEX_MODS_CI_GIT_ROOT;assert.equal(code,'C:\\Program Files\\Git');
+  const layout=process.env.CODEX_MODS_CI_GIT_LAYOUT,images=linkedImageFamily(layout);
+  const {data,exe}=await setup(),project=join(data,'modern inventory project');await mkdir(project);
+  for(const relative of images)await t.test(relative,async candidate=>{
+    const value=await linkedSample({data,exe,code,project,target:win32.join(code,...relative.split('/'))},{known:true,layout,signal:candidate.signal});
+    candidate.diagnostic(JSON.stringify({target:relative,...value,authenticity:'unverified',loaderClosure:'unverified',productionGateChanged:false}));
+    assert.equal(value.accepted,true);assert.match(value.sha256,/^[a-f0-9]{64}$/);
+    assert.equal(value.pe,'not-performed');assert.equal(value.executionAuthority,false);
+  });
 });
 test('Windows static inventory keeps code pins across reads and refuses before bytes on unsafe code', native, async () => {
   const {data,exe} = await setup(), code = join(data,'inventory code'), project = join(data,'inventory project');
@@ -710,33 +808,28 @@ test('Windows directory pins tolerate a short sharing lease and refuse a held le
 
 // Private synthetic paths stay inside this disposable fixture; no project/index/
 // refs/credentials are copied. The helper never scans for abandoned directories.
-async function scratchHolder(mode, marker, commandArgs) {
-  const {data,exe}=await setup();
-  const child=spawn(exe,commandArgs??['run',mode,data,...(marker?[marker]:[])],{windowsHide:true,stdio:['pipe','pipe','pipe']});
-  let text='',error='';
-  const closed=new Promise((resolve,reject)=>{child.once('close',resolve);child.once('error',reject);});
-  const deadline=setTimeout(()=>child.kill(),20000);child.once('close',()=>clearTimeout(deadline));
-  const first=new Promise((resolve,reject)=>{
-    const timer=setTimeout(()=>{child.kill();reject(new Error('Synthetic content readiness deadline'));},5000);
-    child.stdout.setEncoding('utf8');child.stdout.on('data',value=>{
-      text+=value;
-      if(text.length>8192){child.kill();reject(new Error('Synthetic content output bound'));}
-      if(text.includes('\n')){clearTimeout(timer);resolve(text.split(/\r?\n/)[0]);}
-    });
-    child.stderr.on('data',value=>{error+=value;if(error.length>8192)child.kill();});
-    child.once('error',e=>{clearTimeout(timer);reject(e);});
-    child.once('close',()=>{clearTimeout(timer);if(!text.includes('\n'))reject(new Error('Synthetic content closed before readiness'));});
-  });
+async function scratchHolder(mode, marker, commandArgs, signal, onDiagnostic) {
+  lifecycle.check(signal);
+  const {data,exe}=await setup();lifecycle.check(signal);
+  const h=lifecycle.start(exe,commandArgs??['run',mode,data,...(marker?[marker]:[])],
+    {signal,onDiagnostic,stdio:['pipe','pipe','pipe'],readyMs:5000,stdoutLimit:8192});
+  const closed=h.completion.then(r=>r.code);closed.catch(()=>{});
   try {
-    const paths=(await first).split('|').map(value=>Buffer.from(value,'base64').toString());
+    const paths=(await h.firstLine).split('|').map(value=>Buffer.from(value,'base64').toString());
+    h.check();
     assert.ok(paths[0].startsWith((commandArgs?commandArgs[3]:data)+win32.sep+'owned-'));
     if(paths.length===2)assert.equal(paths[1],join(paths[0],'slot-0000.bin'));
-    return {child,closed,paths,output:()=>text};
-  } catch(e) {child.kill();await closed;throw e;}
+    return {...h,closed,paths};
+  } catch(e) {
+    h.stop(new Error('Synthetic holder refused'));
+    try {await h.completion;}catch{}
+    throw e;
+  }
 }
 async function finishHolder(holder, kill=false) {
+  holder.check();
   if(kill)holder.child.kill();else holder.child.stdin.end('\n');
-  const code=await holder.closed;
+  const code=await holder.closed;holder.check();
   if(!kill)assert.equal(code,0);
 }
 async function absent(path) {
@@ -953,7 +1046,7 @@ test('Windows metadata scratch creates a fixed private layout readable only with
 test('Windows metadata scratch enforces typed HEAD and existing 32MiB index/1MiB exclude bounds without residue',native,async t=>{
   const {data,exe}=await setup(),before=(await readdir(data)).sort();
   let failure;
-  try {assert.equal(await run(exe,['run','metadata-bounds',data]),'bounded');}catch(error){failure=error;}
+  try {assert.equal(await run(exe,['run','metadata-bounds',data],{signal:t.signal,onDiagnostic:text=>t.diagnostic(metadataTrace(text))}),'bounded');}catch(error){failure=error;}
   // Check residue even after a child refusal; preserve both independent failures.
   try {assert.deepEqual((await readdir(data)).sort(),before);}catch(error){if(failure)throw new AggregateError([failure,error],'Bounds proof failed and retained unexpected entries');throw error;}
   if(failure){t.diagnostic('metadata-bounds parent inventory restored after refusal');throw failure;}
@@ -1029,17 +1122,19 @@ test('Windows metadata scratch reports a live unowned reader and does not claim 
 // Source14: explicit synthetic metadata roots only; bytes remain inside the
 // compiled helper. No Git discovery, valid index parser or real user project.
 let captureNumber=0;
-async function captureFixture() {
-  const {data,exe}=await setup(),id=++captureNumber;
+async function captureFixture(signal) {
+  lifecycle.check(signal);
+  const {data,exe}=await setup(),id=++captureNumber;lifecycle.check(signal);
   const source=join(data,`capture source ${id}`),parent=join(data,`capture parent ${id}`);
-  await windowsStorageRequest('prepare-directory',source);await windowsStorageRequest('prepare-directory',parent);
-  await mkdir(join(source,'info'));
-  await writeFile(join(source,'index'),Buffer.from([68,73,82,67,0,255]));
-  await writeFile(join(source,'info','exclude'),'synthetic-ignore\n');
+  await lifecycle.io(signal,()=>windowsStorageRequest('prepare-directory',source,{signal}));
+  await lifecycle.io(signal,()=>windowsStorageRequest('prepare-directory',parent,{signal}));
+  await lifecycle.io(signal,()=>mkdir(join(source,'info')));
+  await lifecycle.io(signal,()=>writeFile(join(source,'index'),Buffer.from([68,73,82,67,0,255])));
+  await lifecycle.io(signal,()=>writeFile(join(source,'info','exclude'),'synthetic-ignore\n'));
   return {source,parent,exe};
 }
-async function captureHolder(f,selection='both',mode='capture-hold') {
-  return scratchHolder(mode,undefined,['run',mode,f.source,f.parent,selection]);
+async function captureHolder(f,selection='both',mode='capture-hold',signal,onDiagnostic) {
+  return scratchHolder(mode,undefined,['run',mode,f.source,f.parent,selection],signal,onDiagnostic);
 }
 test('Windows metadata capture retains exact source handles and composes private scratch without bridge content',native,async()=>{
   const f=await captureFixture();await writeFile(join(f.source,'config'),'unselected-config-sentinel');
@@ -1059,22 +1154,26 @@ test('Windows metadata capture retains exact source handles and composes private
     assert.deepEqual(await readdir(f.parent),[]);
   } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
 });
-test('Windows metadata capture copies full 32MiB index and 1MiB exclude locally and refuses either oversize before scratch',native,async()=>{
-  const f=await captureFixture(),index=Buffer.alloc(33554432,0xa5),exclude=Buffer.alloc(1048576,0x5a);
+test('Windows metadata capture copies full 32MiB index and 1MiB exclude locally',native,async t=>{
+  const f=await captureFixture(t.signal),index=Buffer.alloc(33554432,0xa5),exclude=Buffer.alloc(1048576,0x5a);
   index[0]=68;index[index.length-1]=255;
-  await writeFile(join(f.source,'index'),index);await writeFile(join(f.source,'info','exclude'),exclude);
-  const h=await captureHolder(f),root=h.paths[0];
+  await lifecycle.io(t.signal,()=>writeFile(join(f.source,'index'),index));
+  await lifecycle.io(t.signal,()=>writeFile(join(f.source,'info','exclude'),exclude));
+  const h=await captureHolder(f,'both','capture-hold',t.signal,text=>t.diagnostic(metadataTrace(text))),root=h.paths[0];
   try {
-    assert.deepEqual(await readFile(join(root,'index')),index);assert.deepEqual(await readFile(join(root,'info','exclude')),exclude);
+    assert.deepEqual(await lifecycle.io(t.signal,()=>readFile(join(root,'index'))),index);
+    assert.deepEqual(await lifecycle.io(t.signal,()=>readFile(join(root,'info','exclude'))),exclude);
     await finishHolder(h);assert.match(h.output(),/verified-capture/);await absent(root);
-  } finally {if(h.child.exitCode===null){h.child.kill();await h.closed;}}
-  for(const [path,bytes] of [[join(f.source,'index'),Buffer.alloc(33554433)],[join(f.source,'info','exclude'),Buffer.alloc(1048577)]]) {
-    await writeFile(path,bytes);
-    assert.equal(await run(f.exe,['run','capture',f.source,f.parent,'both']),'refused');
-    assert.deepEqual(await readdir(f.parent),[]);
-    await writeFile(path,path.endsWith('index')?index:exclude);
-  }
+  } finally {if(!h.hasClosed()){h.stop(new Error('Maximum capture teardown'));try{await h.completion;}catch{}}}
 });
+for(const [name,size] of [['index',33554433],['info/exclude',1048577]]) {
+  test('Windows metadata capture refuses oversized '+name+' before scratch',native,async t=>{
+    const f=await captureFixture(t.signal);
+    await lifecycle.io(t.signal,()=>writeFile(join(f.source,...name.split('/')),Buffer.alloc(size)));
+    assert.equal(await run(f.exe,['run','capture',f.source,f.parent,'both'],{signal:t.signal,onDiagnostic:text=>t.diagnostic(metadataTrace(text))}),'refused');
+    assert.deepEqual(await lifecycle.io(t.signal,()=>readdir(f.parent)),[]);
+  });
+}
 test('Windows metadata capture selection is explicit: missing selected file refuses, omitted source is untouched',native,async()=>{
   const f=await captureFixture();await rm(join(f.source,'info','exclude'));
   assert.equal(await run(f.exe,['run','capture',f.source,f.parent,'both']),'refused');

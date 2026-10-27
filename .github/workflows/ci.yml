@@ -49,7 +49,7 @@ jobs:
       - name: Local rendering contracts (simulated DOM, not native host)
         run: node --test test/rendering.test.mjs test/observers.test.mjs test/appearance.test.mjs
       - name: Bounded static PE parser (synthetic bytes, no image loading)
-        run: node --test test/pe-inventory.test.mjs test/pin-diagnostic-frame.test.mjs test/directory-diagnostic-frame.test.mjs
+        run: node --test test/pe-inventory.test.mjs test/pin-diagnostic-frame.test.mjs test/directory-diagnostic-frame.test.mjs test/linked-inventory-frame.test.mjs test/owned-fixture-lifecycle.test.mjs
       - name: Generated authoring fixtures and offline CLI (synthetic data, no installation)
         run: node --test test/scaffold.test.mjs
       - name: Component pure contracts and actual Windows before-IO refusal (POSIX IO cases skip)
@@ -98,4 +98,6 @@ jobs:
           # Explicit fixed root documented by actions/runner-images Install-Git.ps1.
           # Read-only object/static import inventory, never execute or trust Git.
           CODEX_MODS_CI_GIT_ROOT: 'C:\Program Files\Git'
+          # Explicit reviewed modern family; missing targets fail, no probing fallback.
+          CODEX_MODS_CI_GIT_LAYOUT: 'git-for-windows-ucrt64-v1'
         run: node --test test/windows-owned-process.test.mjs

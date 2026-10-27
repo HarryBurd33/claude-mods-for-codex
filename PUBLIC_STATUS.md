@@ -6,6 +6,7 @@ inventory is implied. MIT; independent of Anthropic and OpenAI.
 
 | Milestone | Evidence and limits |
 | --- | --- |
+| [Sol A/C/B candidate](docs/continuation/SOL-ABC-IMPLEMENTATION-2026-10-27.md) | Reviewed source implements bounded Mac observation, Windows fixture cancellation/timing and a separate linked-file digest profile. Local392pass/123skips; Astra actual-diff gate passed before first Windows CI. New exact-source CI and Windows compilation/OS outcomes remain separate gates. |
 | [Astra CI contract review](docs/continuation/ASTRA-CI-CONTRACT-2026-10-27.md) | Latest unchanged-runtime baseline `8219ca2` CI: 3 jobs pass, 4 fail. Both Mac lanes observed EPERM; Windows retains image failures and Node22 metadata deadline/cancellation failures. Finite Mac, Windows harness and linked-image sampling contracts reviewed; repairs not implemented. |
 | [Earlier bounded CI work](docs/continuation/CI-REPAIR-2026-10-27.md) | Diagnostics/owned-fixture isolation: local377pass/115skips; earlier cccb487 CI5jobs pass/2Windows NTFS fail.379-file development archive matches that source. Later failures above show the Mac issue was not reliably fixed. |
 | [Current Sol progress](docs/continuation/NATIVE-STOP-2026-10-27.md) | Automatic continuation and one real Phase1 setup completed; grant consumed. Later actual human hook trust and one supervised response produced one Stop record. Unchanged owned declaration removed, data/trust retained, qualified preservation passed. Broader native acceptance remains open. |
@@ -29,9 +30,9 @@ and completed once. Further native scopes still need a concrete consolidated pac
 that one-use result does not authorize another run.
 No automatic approval, hidden prompt/model change, app patch or private-daemon shortcut.
 
-Current: human-requested **GPT-6 Astra Ultra** contract review; next implementation
-assignment **GPT-6.1 Sol High**. This review changes documentation only and does not
-rerun tests or establish passing CI. The
+Current: human-requested **GPT-6.1 Sol High** implementation, with independent
+**GPT-6 Astra Ultra** review before Windows CI. The implementation candidate above
+has local verification; its new CI result must be read separately. The
 [consolidated macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md) remains open.
 The previous no-network restriction is superseded for authorized GitHub progress
 publication. Private checkpoints, machine bindings, grants and raw logs are excluded.

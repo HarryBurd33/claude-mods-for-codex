@@ -29,20 +29,21 @@ namespace CodexMods {
     // slot/read-set proof. No arbitrary config/ref/file/directory name supplied.
     if(headCommit!=null && !System.Text.RegularExpressions.Regex.IsMatch(headCommit,@"\A[a-f0-9]{40}\z"))throw Refuse();
     if(index!=null && index.Length>33554432 || exclude!=null && exclude.Length>1048576)throw Refuse();
-    var clock=Stopwatch.StartNew();Check(cancellation,clock);root=new ScratchProof(parent);
+    var clock=Stopwatch.StartNew();Check(cancellation,clock);MetadataMarkProof("scratch-root","start");root=new ScratchProof(parent);MetadataMarkProof("scratch-root","end");
     string phase="directories";
     try {
      foreach(string name in new string[]{"objects","refs","info"}) {
-      phase="directory-"+name;Check(cancellation,clock);string path=System.IO.Path.Combine(Path,name);PathInput(path);
+      phase="directory-"+name;MetadataMarkProof(phase,"start");Check(cancellation,clock);string path=System.IO.Path.Combine(Path,name);PathInput(path);
       CreateDirectoryPrivate(path);var pin=new Pins(path,false,true);
       try {directories.Add(pin);pin=null;names.Add(path);}finally {if(pin!=null)pin.Dispose();}
+      MetadataMarkProof(phase,"end");
      }
-     phase="config";Add("config",GitScratchConfig,cancellation,clock);
+     phase="config";MetadataMarkProof(phase,"start");Add("config",GitScratchConfig,cancellation,clock);MetadataMarkProof(phase,"end");
      byte[] head=Encoding.ASCII.GetBytes(headCommit==null?"ref: refs/heads/mods-inspection\n":headCommit+"\n");
-     phase="head";Add("HEAD",head,cancellation,clock);
-     if(index!=null){phase="index";Add("index",index,cancellation,clock);}
-     if(exclude!=null){phase="exclude";Add(System.IO.Path.Combine("info","exclude"),exclude,cancellation,clock);}
-     phase="final-check";Check(cancellation,clock);
+     phase="head";MetadataMarkProof(phase,"start");Add("HEAD",head,cancellation,clock);MetadataMarkProof(phase,"end");
+     if(index!=null){phase="index";MetadataMarkProof(phase,"start");Add("index",index,cancellation,clock);MetadataMarkProof(phase,"end");}
+     if(exclude!=null){phase="exclude";MetadataMarkProof(phase,"start");Add(System.IO.Path.Combine("info","exclude"),exclude,cancellation,clock);MetadataMarkProof(phase,"end");}
+     phase="final-check";MetadataMarkProof(phase,"start");Check(cancellation,clock);MetadataMarkProof(phase,"end");
     } catch(Exception failure) {
      bool cleanupRefused=false;try {Dispose();}catch(IOException){cleanupRefused=true;}
      // Closed source-owned labels only. Keep the original exception/refusal and
@@ -53,7 +54,7 @@ namespace CodexMods {
     }
    }
    public void Dispose() {
-    if(disposed)return;disposed=true;bool refused=false;
+    if(disposed)return;disposed=true;bool refused=false;MetadataMarkProof("dispose","start");
     // Exact created file objects only. Child readers can delay namespace removal.
     foreach(var file in files)file.Dispose();files.Clear();
     for(int i=directories.Count-1;i>=0;i--)directories[i].Dispose();directories.Clear();
@@ -61,7 +62,7 @@ namespace CodexMods {
     // recursively remove, adopt a stale root or delete an unexpected entry.
     for(int i=names.Count-1;i>=0;i--) {try {System.IO.Directory.Delete(names[i],false);}catch(IOException){refused=true;}}
     try {root.Dispose();}catch(IOException){refused=true;}
-    if(refused)throw Refuse();
+    if(refused)throw Refuse();MetadataMarkProof("dispose","end");
    }
   }
   // Independent fixed reader for the synthetic fixture. Shares read/write/delete

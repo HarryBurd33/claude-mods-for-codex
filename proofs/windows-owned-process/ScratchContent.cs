@@ -2,12 +2,27 @@
 // Flat, owner-created, bounded synthetic files; not a Git snapshot or a writer.
 using System;
 using System.IO;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Microsoft.Win32.SafeHandles;
 
 namespace CodexMods {
  public static partial class PrivateStorage {
+  static Stopwatch metadataTraceClock;static int metadataTraceFrames;
+  public static void BeginMetadataTraceProof() {metadataTraceClock=Stopwatch.StartNew();metadataTraceFrames=0;}
+  static void MetadataMarkProof(string phase,string state) {
+   if(metadataTraceClock==null || metadataTraceFrames>=128)return;
+   switch(phase) {
+    case "acquire":case "read":case "verify":case "scratch-root":case "directory-objects":case "directory-refs":case "directory-info":
+    case "config":case "head":case "index":case "exclude":case "write":case "flush":case "final-check":case "dispose":break;
+    default:throw Refuse();
+   }
+   if(state!="start" && state!="end")throw Refuse();
+   if(metadataTraceFrames==127){phase="truncated";state="end";}
+   metadataTraceFrames++;
+   Console.Error.WriteLine("metadata-stage|"+phase+"|"+state+"|"+metadataTraceClock.ElapsedMilliseconds.ToString(System.Globalization.CultureInfo.InvariantCulture));
+  }
   [DllImport("kernel32.dll",SetLastError=true)] static extern bool WriteFile(SafeFileHandle handle,byte[] bytes,uint count,out uint written,IntPtr overlapped);
   [DllImport("kernel32.dll",SetLastError=true)] static extern bool FlushFileBuffers(SafeFileHandle handle);
 
@@ -26,7 +41,11 @@ namespace CodexMods {
      } finally {Marshal.FreeHGlobal(descriptor);}
     }
     Info(handle,path,false);Access(handle,true);uint written;
-    if(!WriteFile(handle,content,(uint)content.Length,out written,IntPtr.Zero) || written!=(uint)content.Length || !FlushFileBuffers(handle))throw Refuse();
+    MetadataMarkProof("write","start");
+    if(!WriteFile(handle,content,(uint)content.Length,out written,IntPtr.Zero) || written!=(uint)content.Length)throw Refuse();
+    MetadataMarkProof("write","end");MetadataMarkProof("flush","start");
+    if(!FlushFileBuffers(handle))throw Refuse();
+    MetadataMarkProof("flush","end");
     Info(handle,path,false);Access(handle,true);
     var result=handle;handle=null;return result;
    } finally {if(handle!=null)handle.Dispose();}
