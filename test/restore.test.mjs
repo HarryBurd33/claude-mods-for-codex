@@ -8,7 +8,9 @@ import { prepareRestorePlan,reviewRestorePlan,applyRestorePlan } from '../src/re
 import { runCli } from '../src/cli.mjs';
 
 const posix={skip:process.platform==='win32'};
-function git(root,...args){const r=spawnSync('git',['-c','user.name=Synthetic Test','-c','user.email=synthetic@example.invalid',...args],{cwd:root,encoding:'utf8',timeout:5000,
+// Keep this owned fixture static between synchronous commands. Production must
+// still refuse changing object stores; no retry or weaker assertion is added.
+function git(root,...args){const r=spawnSync('git',['-c','gc.auto=0','-c','maintenance.auto=false','-c','user.name=Synthetic Test','-c','user.email=synthetic@example.invalid',...args],{cwd:root,encoding:'utf8',timeout:5000,
   env:{PATH:process.env.PATH,GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_TERMINAL_PROMPT:'0'}});assert.equal(r.status,0,r.stderr||r.error?.message);return r.stdout.trim();}
 async function fixture(t){
   const base=await mkdtemp(join(await realpath(tmpdir()),'mods-restore-'));t.after(()=>rm(base,{recursive:true,force:true}));
