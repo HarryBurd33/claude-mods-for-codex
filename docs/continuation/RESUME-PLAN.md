@@ -1,5 +1,17 @@
 # Resume plan — finite completion milestones
 
+[M1-RESTORE-ARTIFACT-REVIEW](M1-RESTORE-ARTIFACT-REVIEW.md) completed on Sol Medium
+from6aac542: exact saved source/evidence/default/archive hashes,93IDs/closed grants
+and nine retained reports verified. Static package allowlist/import/CI-discovery
+readiness only; no fault reruns, pack/CI/native/platform result or runtime change.
+Installed31/all guards preserved, dev39 disabled. Next finite unblocked task is
+[M1-PUBLIC-DOCS-SCOPE](M1-PUBLIC-DOCS-SCOPE.md), Sol Medium, prepared only; fix stale
+entry summaries from saved evidence. No High work required for this completed review.
+Local-only checkpoint; no GitHub upload permitted. Full project remains incomplete.
+
+The restore artifact review below is completed historical context, not another next step.
+
+
 [M1-RESTORE-FAILURE-RESULT](M1-RESTORE-FAILURE-RESULT.md): authorized synthetic POSIX
 acceptance completed on Sol High from245c3bd. Baseline6pass/1Windows skip; eight
 fault/interruption cases8pass. No runtime defect/fix. A fixture-only no-IPC diagnostic

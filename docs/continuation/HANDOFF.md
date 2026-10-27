@@ -1,3 +1,36 @@
+# Restore artifacts verified — next finite public-docs scope
+
+2026-10-26, GPT-6.1 Sol Medium from6aac542. Read
+[M1-RESTORE-ARTIFACT-REVIEW](M1-RESTORE-ARTIFACT-REVIEW.md) for exact observations and
+[M1-PUBLIC-DOCS-SCOPE](M1-PUBLIC-DOCS-SCOPE.md) for the next proposed task.
+
+[M1-RESTORE-ARTIFACT-REVIEW](M1-RESTORE-ARTIFACT-REVIEW.md) completed on Sol Medium
+from6aac542: exact saved source/evidence/default/archive hashes,93IDs/closed grants
+and nine retained reports verified. Static package allowlist/import/CI-discovery
+readiness only; no fault reruns, pack/CI/native/platform result or runtime change.
+Installed31/all guards preserved, dev39 disabled. Next finite unblocked task is
+[M1-PUBLIC-DOCS-SCOPE](M1-PUBLIC-DOCS-SCOPE.md), Sol Medium, prepared only; fix stale
+entry summaries from saved evidence. No High work required for this completed review.
+Local-only checkpoint; no GitHub upload permitted. Full project remains incomplete.
+
+Current human artifact/readiness scope is complete. Next human instruction can
+explicitly authorize the finite Medium public-docs batch; no model switch is needed.
+No activation, target reads, fault reruns, native/extra model runs, packaging, network
+or live config/trust changes. High before consequential code/security work or drift.
+No persistent job/worker started; lease released after preservation. Unrelated.gitignore
+and shared checkpoint input/review/heartbeat preserved. Local exact commit/tree and
+verified private checkpoint are in ignored root HANDOFF and .local/m1-restore-review.
+Old .local/m1-restore-failure/HASHES binds the prior6aac542 docs: preserve that seal;
+new current-summary edits intentionally change those document hashes. Do not rerun
+or repin its old verifier after this records update. New receipt seals this stage.
+
+Resume: “Continue on Sol Medium. Run M1-PUBLIC-DOCS-SCOPE.md using saved repository
+evidence only. Preserve installed31/all guards; keep dev39 disabled. No source/runtime/
+test changes, target reads, fault/native/extra model runs, packaging, network or live
+config/trust changes. Stop for High on consequential work or drift.”
+
+## Prior completed High stage — historical handoff
+
 # Synthetic restore failure acceptance complete — return to Sol Medium
 
 2026-10-26, GPT-6.1 Sol High from245c3bd on codex/astra-groundwork. Current human

@@ -1,5 +1,11 @@
 # Completion plan — dev39 candidate / installed31
 
+Current artifact review is complete: [result](M1-RESTORE-ARTIFACT-REVIEW.md).
+Next proposed finite task: [public entry documentation reconciliation](M1-PUBLIC-DOCS-SCOPE.md),
+Sol Medium using saved evidence only. Earlier next-review instructions below are
+historical. No runtime/native/platform completion or execution grant follows this plan.
+
+
 [M1-RESTORE-FAILURE-RESULT](M1-RESTORE-FAILURE-RESULT.md): authorized synthetic POSIX
 acceptance completed on Sol High from245c3bd. Baseline6pass/1Windows skip; eight
 fault/interruption cases8pass. No runtime defect/fix. A fixture-only no-IPC diagnostic

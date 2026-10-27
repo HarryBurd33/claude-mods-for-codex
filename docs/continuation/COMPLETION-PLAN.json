@@ -932,11 +932,11 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/M1-RESTORE-FAILURE-RESULT.md",
+    "record": "docs/continuation/M1-PUBLIC-DOCS-SCOPE.md",
     "authorized": false,
     "model": "GPT-6.1 Sol",
     "effort": "Medium",
-    "kind": "exact artifact/records and packaging-readiness verification only; no fault rerun or packaging/activation",
+    "kind": "finite current public-entry documentation reconciliation using saved evidence only",
     "requiresNativeLaunch": false,
     "requiresExtraModelRun": false,
     "requiresImplementation": false
@@ -993,6 +993,16 @@
       "record": "docs/continuation/M1-RESTORE-FAILURE-SCOPE.md",
       "prepared": true,
       "executed": true,
+      "nativeDev39Disabled": true,
+      "acceptanceCountsChanged": false
+    },
+    {
+      "id": "restore-artifacts-verified-public-docs-next",
+      "date": "2026-10-26",
+      "record": "docs/continuation/M1-RESTORE-ARTIFACT-REVIEW.md",
+      "executed": true,
+      "faultReruns": 0,
+      "staticPackagingReadiness": true,
       "nativeDev39Disabled": true,
       "acceptanceCountsChanged": false
     }
