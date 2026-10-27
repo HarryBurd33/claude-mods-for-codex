@@ -1,5 +1,19 @@
 # Resume plan — finite completion milestones
 
+## Public entry reconciliation complete — 2026-10-26
+
+[M1-PUBLIC-DOCS-RESULT](M1-PUBLIC-DOCS-RESULT.md) completes the authorized Sol Medium
+batch from6943888. Five public entry pages now consistently distinguish disabled
+source39, historical approved installed31, post39 test-only additions and incomplete
+native/platform delivery. Added links/protected hashes/closed gates/93counts checked;
+no tests/native/model/network/install/config/trust actions. Local-only checkpoint.
+No High needed for this completed docs batch and no repeated verification loop.
+Next substantive task is the recorded M0 native-validation prerequisite decision;
+current action keeps native work blocked/dev39disabled. No policy amendment authorized.
+
+The older next-stage directions below are historical.
+
+
 [M1-RESTORE-ARTIFACT-REVIEW](M1-RESTORE-ARTIFACT-REVIEW.md) completed on Sol Medium
 from6aac542: exact saved source/evidence/default/archive hashes,93IDs/closed grants
 and nine retained reports verified. Static package allowlist/import/CI-discovery

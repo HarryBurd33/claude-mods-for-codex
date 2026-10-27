@@ -1,45 +1,51 @@
 # Claude Mods for Codex
 
 Independent MIT project, not affiliated with or endorsed by Anthropic or OpenAI.
-**Development source 0.2.0-dev.39 is uninstalled; the previously approved user-profile
-installation remains 0.2.0-dev.31. The full project is incomplete.**
+**Development source 0.2.0-dev.39 is disabled/uninstalled; the previously approved
+user-profile installation remains 0.2.0-dev.31. The full project is incomplete.**
+This is saved evidence, not a fresh installation or client inventory.
 
-The dev39 [optional call-review candidate](docs/call-review.md) is disabled
-and [offline-packaged](docs/continuation/PACKAGE-DEV39.md). Its selected packaged
-tests passed54/54. It is uninstalled and has no new native acceptance;
-old dev38 package/CI results below do not verify this candidate.
+The dev39 [optional call-review candidate](docs/call-review.md) was
+[packaged offline](docs/continuation/PACKAGE-DEV39.md) from exact local source
+`efccbaa`:354files,54 selected packaged test passes. It has no native acceptance.
+[Deployment review](docs/continuation/DEV39-DEPLOYMENT-REVIEW.md) retains it disabled:
+launch admission and a complete unchanged-input/no-mutating-hook profile remain
+unresolved. Installing the archive alone does not activate call review.
 
-The [completion plan](docs/continuation/COMPLETION-PLAN.md) now maps all 93 requirements
-to finite delivery milestones. Most macOS core components exist, but significant
-native integration/acceptance and Windows work remain. Supported capability does
-not mean verified completion. The saved acceptance queue has60narrow-target V,
-12 approximations,14 incomplete/blocked,3 unavailable and4policy exclusions; it is not a
-completion percentage.
+Later source-only work adds [restore failure/interruption tests](docs/continuation/M1-RESTORE-FAILURE-RESULT.md):
+baseline6passes/1Windows skip,8synthetic fault-case passes, then a fixture-only guard
+correction with1focused control pass. Product runtime did not change. These post39
+tests/results are absent from the immutable dev39 archive and installed31.
+[Artifact review](docs/continuation/M1-RESTORE-ARTIFACT-REVIEW.md) established static
+packaging readiness only; no new archive or CI/platform result.
 
-Current review retained the private preflight ancestor guard after an authorized
-read-only refusal and metadata-only diagnosis. Both grants are consumed and read
-gates closed. [Policy decision](docs/continuation/ANCESTOR-POLICY-DECISION.md):
-stop the probe chain, retain the blocker, and progress independent work. No policy/
-permissions were changed. This is a private validation blocker, not a demonstrated
-Codex extension limitation. Exact machine evidence remains private.
+Dated macOS evidence covers owned UI/Review desk, covered hooks, harmless exact
+rewrite/denial and ordinary-sandbox rejection, selected metadata/Watch, and reviewed
+user-profile update/disable/remove/rollback. The later
+[UI batch](docs/continuation/M1-UI-ACCEPTANCE.md) leaves screen-reader, enlarged-zoom
+and exact-card/backend lifecycle acceptance incomplete.
+[Authoring-skills acceptance](docs/continuation/M1-AUTHORING-SKILLS-RESULT.md) used
+existing source and simulated rendering; it did not install its disabled bundle.
 
-Dated native evidence covers owned UI/Review desk, covered hooks, harmless exact
-rewrite/denial plus ordinary-sandbox rejection, selected metadata/Watch, and reviewed
-user-profile update/disable/remove/rollback. Source38 has321packaged files and
-157 packaged test passes/2skips. Its saved exact CI has four POSIX lanes324passes each;
-Windows integration still has known failures. None of these proves native routing,
-optional-event completion, accessibility or native Windows/Linux/WSL support.
+The [completion plan](docs/continuation/COMPLETION-PLAN.md) maps all93requirements.
+The saved queue has60narrow-target V,12approximations,14incomplete/blocked,
+3unavailable and4policy exclusions. These are not completion percentages or universal
+platform acceptance. Native lifecycle/held-call/routing integration, accessibility,
+Windows security and native Windows/Linux/WSL, and final release acceptance remain.
+Source38 package/CI results are historical and do not verify dev39 or later test additions.
 
-**Next: GPT-6.1 Sol Medium** to verify the saved review/93-ID completion plan and
-prepare one consolidated next-scope decision. Current work is review/planning only:
-no new target reads, implementation, native/model run, network or config/trust change.
-Experimental native/routing gates stay closed; installed31/settings/logging/model/
-human trust and Windows guards are preserved. No separate-client/fork direction agreed.
+Both earlier private read grants are consumed; native/routing/read gates remain
+closed. The [ancestor-policy decision](docs/continuation/ANCESTOR-POLICY-DECISION.md)
+retains the blocker; no more metadata probes or permission changes were made.
+Before native integration, launch trust and the admissible no-mutation deployment
+profile need one explicit decision together. Current action remains keep blocked;
+this documentation does not authorize a policy amendment, native run or installation.
 
-Current local review/plan checkpoints are not uploaded under the no-network instruction.
-Latest previously verified public commit is historicald3c4682; it was not rechecked.
-[Status](PUBLIC_STATUS.md), [handoff](docs/continuation/HANDOFF.md),
-[setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
+Current local checkpoints are not uploaded under the no-network instruction.
+Historical last verified public commit `d3c4682` has not been rechecked; no current
+remote equality is claimed. [Status](PUBLIC_STATUS.md),
+[handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),
+[privacy](docs/privacy.md), [removal](docs/removal.md).
 
 ## What it does
 

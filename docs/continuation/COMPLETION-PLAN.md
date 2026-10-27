@@ -1,5 +1,17 @@
 # Completion plan — dev39 candidate / installed31
 
+[M1-PUBLIC-DOCS-RESULT](M1-PUBLIC-DOCS-RESULT.md) completes the authorized Sol Medium
+batch from6943888. Five public entry pages now consistently distinguish disabled
+source39, historical approved installed31, post39 test-only additions and incomplete
+native/platform delivery. Added links/protected hashes/closed gates/93counts checked;
+no tests/native/model/network/install/config/trust actions. Local-only checkpoint.
+No High needed for this completed docs batch and no repeated verification loop.
+Next substantive task is the recorded M0 native-validation prerequisite decision;
+current action keeps native work blocked/dev39disabled. No policy amendment authorized.
+
+Earlier proposed public-docs/artifact stages below are completed historical context.
+
+
 Current artifact review is complete: [result](M1-RESTORE-ARTIFACT-REVIEW.md).
 Next proposed finite task: [public entry documentation reconciliation](M1-PUBLIC-DOCS-SCOPE.md),
 Sol Medium using saved evidence only. Earlier next-review instructions below are

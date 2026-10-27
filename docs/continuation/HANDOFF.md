@@ -1,3 +1,44 @@
+# Public entry docs reconciled — native prerequisite decision remains
+
+2026-10-26, GPT-6.1 Sol Medium from6943888.
+
+[M1-PUBLIC-DOCS-RESULT](M1-PUBLIC-DOCS-RESULT.md) completes the authorized Sol Medium
+batch from6943888. Five public entry pages now consistently distinguish disabled
+source39, historical approved installed31, post39 test-only additions and incomplete
+native/platform delivery. Added links/protected hashes/closed gates/93counts checked;
+no tests/native/model/network/install/config/trust actions. Local-only checkpoint.
+No High needed for this completed docs batch and no repeated verification loop.
+Next substantive task is the recorded M0 native-validation prerequisite decision;
+current action keeps native work blocked/dev39disabled. No policy amendment authorized.
+
+Read M1-PUBLIC-DOCS-RESULT.md for exact changes/checks; the five public entry pages
+are README, PUBLIC_STATUS, docs/verification, docs/final-review and docs/roadmap.
+Old sealed records/manifests are preserved. Current intentional summary edits have
+new private scoped hashes; do not rerun/repin historical document manifests.
+No current remote synchronization claim under explicit no-network scope. Local
+commit/tree/private checkpoint are in ignored root HANDOFF and .local/m1-public-docs.
+Installed31/logging/model/human trust/Windows guards untouched. Both grants consumed,
+gatesclosed, dev39disabled. No owned active child/worker/schedule; lease released.
+Unrelated.gitignore and shared checkpoint input/review/heartbeat preserved.
+
+## Next finite task and authority
+
+Resolve the existing native-validation decision in ANCESTOR-POLICY-DECISION.md and
+DEV39-DEPLOYMENT-REVIEW.md: launch admission and a complete no-mutation deployment
+profile together. Current action remains keep blocked. The human must choose the
+changed prerequisite/scope before consequential integration; no more metadata probes
+or identical saved-evidence reviews. High would be useful for the resulting native
+integration/security task, but no model switch or action is requested by this docs
+result alone. Accessibility/Windows/native/release work remains required, not waived.
+
+Future resume: “Continue from the public-docs checkpoint using saved evidence only.
+Present the existing native-validation prerequisite decision once, without rereads,
+probes, implementation, target/native/extra-model runs, network or config/trust changes.
+Preserve installed31/all guards and dev39disabled.” This is a proposed narrow discussion
+scope, not permission to change policy or execute its later stages.
+
+## Prior completed artifact review — historical handoff
+
 # Restore artifacts verified — next finite public-docs scope
 
 2026-10-26, GPT-6.1 Sol Medium from6aac542. Read

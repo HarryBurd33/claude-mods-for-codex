@@ -1,5 +1,10 @@
 # Proposed finite scope — reconcile public entry documentation
 
+**Execution record:** the human authorized this scope from6943888 and Sol Medium
+completed it. See [M1-PUBLIC-DOCS-RESULT](M1-PUBLIC-DOCS-RESULT.md). The proposed
+wording below is historical, not an unused grant for another batch.
+
+
 Prepared2026-10-26 after source6aac542 artifact review. **Not execution authorization.**
 Use **GPT-6.1 Sol Medium**; no consequential source/security work is proposed.
 

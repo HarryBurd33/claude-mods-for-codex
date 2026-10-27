@@ -1,4 +1,43 @@
-# Final review
+# Review status
+
+## Current saved-evidence summary — 2026-10-26
+
+Development source **0.2.0-dev.39 is disabled/uninstalled**; approved user-profile
+installation **0.2.0-dev.31** remains preserved. The full project is incomplete.
+No fresh host inventory, upstream retrieval, native run or release approval occurred
+in this documentation reconciliation.
+
+[Dev39 package](continuation/PACKAGE-DEV39.md): exact local efccbaa/354files,
+54selected packaged passes. [Deployment decision](continuation/DEV39-DEPLOYMENT-REVIEW.md):
+keep disabled pending launch admission and a complete no-mutation deployment profile.
+[UI acceptance](continuation/M1-UI-ACCEPTANCE.md) is partial;
+[authoring-skills acceptance](continuation/M1-AUTHORING-SKILLS-RESULT.md) is source-only.
+[Restore failure tests](continuation/M1-RESTORE-FAILURE-RESULT.md) add8synthetic POSIX
+passes after a6pass/1Windows-skip baseline, then a fixture-only guard correction/1focused
+pass. Product runtime unchanged; post39 tests/results are absent from the old archive
+and installed31. [Artifact review](continuation/M1-RESTORE-ARTIFACT-REVIEW.md) is static
+readiness, not a new archive/CI/native/platform result.
+
+[Completion plan](continuation/COMPLETION-PLAN.md) and
+[ledger](continuation/REQUIREMENTS.md) retain all93requirements and remaining native
+lifecycle/held-call/routing, accessibility/backend lifecycle, Windows security/native
+platform and release work.60V/12A/14B/3U/4P are narrow dispositions, not completion
+percentages. Source38/earlier CI and native results below remain dated evidence only.
+Both target-read grants are consumed/gatesclosed; installed31/logging/model/human
+trust/Windows guards remain unchanged. No-network scope prevents publication or
+current remote verification. Historical public d3c4682 has not been rechecked.
+
+Next substantive native work requires the recorded launch-trust and admissible
+no-mutation-profile decision together; current action keeps it blocked. No new probe,
+policy amendment, implementation or installation is authorized by this page.
+See [current handoff](continuation/HANDOFF.md). MIT and independent-project disclaimer
+remain as stated in the repository.
+
+## Historical dated records — superseded stage directions
+
+The records below preserve previous observations/failures and their then-current next
+steps. Pending/next/model/version statements there are historical, not instructions
+to repeat completed stages. They do not override the current summary or human scope.
 
 Current2026-10-24: [source31 package/update](continuation/PACKAGE-DEV31.md)
 verified251files/79passes+1Windows skip. Human authorized local Review desk and

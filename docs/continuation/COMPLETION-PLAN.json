@@ -932,11 +932,11 @@
     }
   ],
   "nextProposedScope": {
-    "record": "docs/continuation/M1-PUBLIC-DOCS-SCOPE.md",
+    "record": "docs/continuation/DEV39-DEPLOYMENT-REVIEW.md",
     "authorized": false,
     "model": "GPT-6.1 Sol",
     "effort": "Medium",
-    "kind": "finite current public-entry documentation reconciliation using saved evidence only",
+    "kind": "existing M0 human native-validation prerequisite decision; no new probe/review loop or execution authority",
     "requiresNativeLaunch": false,
     "requiresExtraModelRun": false,
     "requiresImplementation": false
@@ -1003,6 +1003,14 @@
       "executed": true,
       "faultReruns": 0,
       "staticPackagingReadiness": true,
+      "nativeDev39Disabled": true,
+      "acceptanceCountsChanged": false
+    },
+    {
+      "id": "public-entry-docs-complete",
+      "date": "2026-10-26",
+      "record": "docs/continuation/M1-PUBLIC-DOCS-RESULT.md",
+      "executed": true,
       "nativeDev39Disabled": true,
       "acceptanceCountsChanged": false
     }
