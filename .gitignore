@@ -11,3 +11,4 @@ activity.previous.jsonl
 .activity-journal.lock/
 /HANDOFF.md
 .local/
+/.checkpoint/

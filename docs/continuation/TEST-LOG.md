@@ -3788,3 +3788,13 @@ no bug reproduced or correction selected. No native/model/network/install/liveco
 trust action. Current plan checks preserve source/skills/archive/protectedpins,
 93mapping/counts and consumedgrant/gatesfalse. See M1-RESTORE-FAILURE-SCOPE for exact
 files/cases/process/data/access bounds, conditional-fix acceptance and copyable scope.
+
+
+## Astra runtime integration — 2026-10-26
+
+See [ASTRA-RUNTIME-REVIEW](ASTRA-RUNTIME-REVIEW.md): final11 current-runtime/local-Git
+synthetic tests pass after environment hardening; selected public hold-review/restore-
+failure tests44pass0fail0skip; validate3mods and replay4fixtures pass. Historical30core
+cases not rerun. Original grant/binding/core preserved, both admissions closed, same
+real ledger empty. No real targets/setup, native Codex, trust, new package or platform
+acceptance. Source39/installed31/guards unchanged.

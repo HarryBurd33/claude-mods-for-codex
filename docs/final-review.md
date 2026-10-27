@@ -1,37 +1,32 @@
 # Review status
 
-## Current saved-evidence summary — 2026-10-26
+## Current Astra milestone — 2026-10-26
 
-Development source **0.2.0-dev.39 is disabled/uninstalled**; approved user-profile
-installation **0.2.0-dev.31** remains preserved. The full project is incomplete.
-No fresh host inventory, upstream retrieval, native run or release approval occurred
-in this documentation reconciliation.
+[Astra runtime review](continuation/ASTRA-RUNTIME-REVIEW.md) resolves the external
+ownership-dependency review and supplies a versioned private launcher. Final current-
+runtime/local-Git integration: **11 passes**. Selected public held-call/restore tests:
+**44 passes**; default configuration and four replay fixtures passed. The historical
+30-case core run was not repeated. These are offline results, not native acceptance.
 
-[Dev39 package](continuation/PACKAGE-DEV39.md): exact local efccbaa/354files,
-54selected packaged passes. [Deployment decision](continuation/DEV39-DEPLOYMENT-REVIEW.md):
-keep disabled pending launch admission and a complete no-mutation deployment profile.
-[UI acceptance](continuation/M1-UI-ACCEPTANCE.md) is partial;
-[authoring-skills acceptance](continuation/M1-AUTHORING-SKILLS-RESULT.md) is source-only.
-[Restore failure tests](continuation/M1-RESTORE-FAILURE-RESULT.md) add8synthetic POSIX
-passes after a6pass/1Windows-skip baseline, then a fixture-only guard correction/1focused
-pass. Product runtime unchanged; post39 tests/results are absent from the old archive
-and installed31. [Artifact review](continuation/M1-RESTORE-ARTIFACT-REVIEW.md) is static
-readiness, not a new archive/CI/native/platform result.
+The real Phase 1 setup remains unstarted, its original grant unused, both admissions
+closed and its shared ledger empty. The last narrow execution instruction was
+synthetic-only; a later explicit activation may use the existing grant once. Accepted
+C design/manual supervision need no repeat vote. Later startup/trust/model/result
+boundaries remain in the [consolidated packet](continuation/STOP-CONSOLIDATED-REQUEST.md).
+No native Codex process, host inventory or production installation change occurred.
 
-[Completion plan](continuation/COMPLETION-PLAN.md) and
-[ledger](continuation/REQUIREMENTS.md) retain all93requirements and remaining native
-lifecycle/held-call/routing, accessibility/backend lifecycle, Windows security/native
-platform and release work.60V/12A/14B/3U/4P are narrow dispositions, not completion
-percentages. Source38/earlier CI and native results below remain dated evidence only.
-Both target-read grants are consumed/gatesclosed; installed31/logging/model/human
-trust/Windows guards remain unchanged. No-network scope prevents publication or
-current remote verification. Historical public d3c4682 has not been rechecked.
+Source **0.2.0-dev.39 stays disabled/uninstalled**; installed31 is preserved. The full
+project remains incomplete. Native lifecycle/failure/cancel, held-call NM-1 and
+configured routing, UI accessibility/reopen/Watch teardown, full authoring lifecycle,
+Windows security/native Windows/Linux/WSL and frozen-candidate release acceptance
+remain. The 93-row ledger's 60V/14B/12A/3U/4P counts are unchanged and are not a
+completion percentage. Source38/39 package and CI evidence remains version-specific.
 
-Next substantive native work requires the recorded launch-trust and admissible
-no-mutation-profile decision together; current action keeps it blocked. No new probe,
-policy amendment, implementation or installation is authorized by this page.
-See [current handoff](continuation/HANDOFF.md). MIT and independent-project disclaimer
-remain as stated in the repository.
+The user now authorized GitHub progress publication; earlier no-network directions
+below are historical for that purpose. Private checkpoints, machine bindings, grants
+and raw logs stay local. Next **GPT-6.1 Sol Ultra**, following the
+[consolidated implementation milestone](continuation/SOL-ULTRA-MILESTONE.md).
+No automatic Sol dispatch or background continuation is scheduled.
 
 ## Historical dated records — superseded stage directions
 

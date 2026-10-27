@@ -1,41 +1,32 @@
 # Public status — incomplete development project
 
-2026-10-26, saved repository evidence only; no new host inventory or upstream retrieval.
-Development source **0.2.0-dev.39 is disabled/uninstalled**. Previously approved
-user-profile installation **0.2.0-dev.31** and its logging/settings/model/trust remain
-preserved. The full project is incomplete; supported capability is not verified delivery.
+2026-10-26 project date. Source **0.2.0-dev.39 is disabled/uninstalled**;
+previously approved user-profile **0.2.0-dev.31** is preserved. No fresh installed-host
+inventory is implied. MIT; independent of Anthropic and OpenAI.
 
-| Evidence | Stated result and limit |
+| Milestone | Evidence and limits |
 | --- | --- |
-| [Dev39 package](docs/continuation/PACKAGE-DEV39.md) | Exact local source efccbaa;354files;54selected packaged passes; validate/replay passed. No native acceptance or new CI result. |
-| [Dev39 deployment review](docs/continuation/DEV39-DEPLOYMENT-REVIEW.md) | Keep disabled: launch admission and complete unchanged-input/no-mutating-hook profile unresolved. Not evidence of a Codex feature being unavailable. |
-| [Installed31 UI batch](docs/continuation/M1-UI-ACCEPTANCE.md) | Selected owned labels/render/Clear/focus/current-zoom observations. Screen reader, enlarged zoom and exact-card/backend lifecycle incomplete. |
-| [Authoring skills](docs/continuation/M1-AUTHORING-SKILLS-RESULT.md) | Eight existing-source CLI operations:7successes/1expected integrity refusal;6simulated scenarios. Bundle stayed disabled/uninstalled; no installed skill-discovery proof. |
-| [Restore fault tests](docs/continuation/M1-RESTORE-FAILURE-RESULT.md) | Baseline6passes/1Windows skip;8synthetic POSIX fault-case passes; fixture-only guard correction then1focused pass. Runtime unchanged; partial interruption/rollback-failure evidence retained. |
-| [Artifact readiness](docs/continuation/M1-RESTORE-ARTIFACT-REVIEW.md) | Exact saved evidence/static packaging rules verified. Post39 tests are absent from the old archive/installed31. No pack/CI/fault rerun. |
+| [Current Astra review](docs/continuation/ASTRA-RUNTIME-REVIEW.md) | Reviewed external runtime; versioned private launcher; 11 actual-runtime/local-Git synthetic passes; 44 selected project passes; validate/replay passed. Real grant unused, admissions closed, original ledger empty. |
+| [Dev39 candidate](docs/continuation/PACKAGE-DEV39.md) | Historical efccbaa package: 354 files, 54 selected packaged passes. Remains disabled; no native held-call acceptance. |
+| [UI batch](docs/continuation/M1-UI-ACCEPTANCE.md) | Dated installed31 owned UI observations. Screen reader, enlarged zoom, reopening and backend lifecycle still incomplete. |
+| [Authoring skills](docs/continuation/M1-AUTHORING-SKILLS-RESULT.md) | Source/simulated workflows; disabled bundle not installed. Full candidate authoring-to-removal chain remains. |
+| [Restore faults](docs/continuation/M1-RESTORE-FAILURE-RESULT.md) | Synthetic POSIX failures and direct-child interruption; no all-descendant, power-loss or native Windows guarantee. |
 
-Earlier dated native evidence covers covered hooks/owned UI, rewrite/deny/sandbox
-rejection, selected shared Watch, update/disable/remove/rollback. Source38's321-file
-package/157passes+2skips and four324-pass POSIX CI lanes are historical; they do not
-establish dev39/post39 or native Windows support. Known Windows Image/bounds/reliability
-uncertainties remain, alongside guarded project/Git/restore functionality.
+The [93-requirement ledger](docs/continuation/REQUIREMENTS.md) retains
+**60V/14B/12A/3U/4P**; these are narrow evidence dispositions, not a completion
+percentage. Native lifecycle/failure/cancel, held-call unchanged-input profile NM-1,
+configured routing, UI acceptance, full authoring lifecycle, Windows security/native
+Windows11/Linux/WSL and final frozen-candidate release checks remain.
 
-[COMPLETION-PLAN](docs/continuation/COMPLETION-PLAN.md) maps all93requirements;
-[REQUIREMENTS](docs/continuation/REQUIREMENTS.md) retains detailed evidence and
-[MACOS-QUEUE-38](docs/continuation/MACOS-QUEUE-38.md) is the dated acceptance queue.
-Its60V/12A/14B/3U/4P dispositions are not completion percentages. Required native
-lifecycle/held-call/configured-routing integration, accessibility/close lifecycle,
-example/context/turn fidelity, Windows security/native Windows11/Linux/WSL and final
-candidate/release acceptance remain. Native optional Stop delivery is unverified.
+The accepted C design and manual supervision are no longer pending design choices.
+The original Phase 1 setup grant is preserved for explicit activation; it is separate
+from the two older consumed read grants. Later startup/trust/model/result-removal
+scopes still require their concrete [packet](docs/continuation/STOP-CONSOLIDATED-REQUEST.md).
+No automatic approval, hidden prompt/model change, app patch or private-daemon shortcut.
 
-Both read grants remain consumed/gatesclosed. The
-[ancestor decision](docs/continuation/ANCESTOR-POLICY-DECISION.md) retains the current
-blocker; no new probe is recommended. Next substantive native step needs an explicit
-launch-trust and admissible no-mutation-profile decision together. Until then keep
-native work blocked and dev39 disabled. No automatic approval, exact billing/cache
-health/current-context claim or separate-client/fork direction is implied.
-
-This docs-only reconciliation changed no runtime, installation, capture, permissions,
-model, logging, settings or trust. Current no-network instruction prevents uploading
-recent local checkpoints or verifying remote equality. Historical last verified public
-commit d3c4682 was not rechecked. MIT and independent-project disclaimer preserved.
+Next: **GPT-6.1 Sol Ultra**, with [one consolidated macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md).
+The previous no-network restriction is superseded for authorized GitHub progress
+publication. Private checkpoints, machine bindings, grants and raw logs are excluded.
+The public [development branch](https://github.com/HarryBurd33/claude-mods-for-codex/tree/codex/astra-groundwork)
+is not a completed release. Exact remote-commit verification is recorded by the
+publishing session; old dated commit references do not establish present equality.

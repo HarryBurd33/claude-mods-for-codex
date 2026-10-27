@@ -3,49 +3,34 @@
 Independent MIT project, not affiliated with or endorsed by Anthropic or OpenAI.
 **Development source 0.2.0-dev.39 is disabled/uninstalled; the previously approved
 user-profile installation remains 0.2.0-dev.31. The full project is incomplete.**
-This is saved evidence, not a fresh installation or client inventory.
+This describes saved installation evidence, not a fresh host inventory.
 
-The dev39 [optional call-review candidate](docs/call-review.md) was
-[packaged offline](docs/continuation/PACKAGE-DEV39.md) from exact local source
-`efccbaa`:354files,54 selected packaged test passes. It has no native acceptance.
-[Deployment review](docs/continuation/DEV39-DEPLOYMENT-REVIEW.md) retains it disabled:
-launch admission and a complete unchanged-input/no-mutating-hook profile remain
-unresolved. Installing the archive alone does not activate call review.
+The project provides scoped hooks, exact opted-in Bash rewriting, owned UI, selected
+activity/history tools and reviewable skill authoring. Dated macOS proofs exist;
+capability support does not mean every host or workflow has passed acceptance.
+The [dev39 call-review candidate](docs/call-review.md) is packaged and offline-tested,
+but remains disabled pending its unchanged-input deployment and native campaign.
 
-Later source-only work adds [restore failure/interruption tests](docs/continuation/M1-RESTORE-FAILURE-RESULT.md):
-baseline6passes/1Windows skip,8synthetic fault-case passes, then a fixture-only guard
-correction with1focused control pass. Product runtime did not change. These post39
-tests/results are absent from the immutable dev39 archive and installed31.
-[Artifact review](docs/continuation/M1-RESTORE-ARTIFACT-REVIEW.md) established static
-packaging readiness only; no new archive or CI/platform result.
+The latest [Astra milestone](docs/continuation/ASTRA-RUNTIME-REVIEW.md) resolved the
+external ownership-runtime review and hardened a private setup launcher. Its actual
+runtime/local-Git synthetic integration passed 11 tests. Public held-call and restore
+regressions passed 44 tests; validation and all four replay fixtures passed.
+**Real Phase 1 setup remains unstarted and its grant unused.** No native/trust/model
+operation is implied by those tests or by publication.
 
-Dated macOS evidence covers owned UI/Review desk, covered hooks, harmless exact
-rewrite/denial and ordinary-sandbox rejection, selected metadata/Watch, and reviewed
-user-profile update/disable/remove/rollback. The later
-[UI batch](docs/continuation/M1-UI-ACCEPTANCE.md) leaves screen-reader, enlarged-zoom
-and exact-card/backend lifecycle acceptance incomplete.
-[Authoring-skills acceptance](docs/continuation/M1-AUTHORING-SKILLS-RESULT.md) used
-existing source and simulated rendering; it did not install its disabled bundle.
+Remaining work: native lifecycle/failure/cancel and held-call/configured-agent routing;
+screen reader, enlarged zoom, panel reopening and Watch teardown; one complete
+candidate author/install/trust/effect/update/remove workflow; Windows security and
+actual Windows/Linux/WSL acceptance; then a frozen candidate and release verification.
+The [93-requirement plan](docs/continuation/COMPLETION-PLAN.md) retains
+60V/14B/12A/3U/4P narrow dispositions, not completion percentages.
 
-The [completion plan](docs/continuation/COMPLETION-PLAN.md) maps all93requirements.
-The saved queue has60narrow-target V,12approximations,14incomplete/blocked,
-3unavailable and4policy exclusions. These are not completion percentages or universal
-platform acceptance. Native lifecycle/held-call/routing integration, accessibility,
-Windows security and native Windows/Linux/WSL, and final release acceptance remain.
-Source38 package/CI results are historical and do not verify dev39 or later test additions.
-
-Both earlier private read grants are consumed; native/routing/read gates remain
-closed. The [ancestor-policy decision](docs/continuation/ANCESTOR-POLICY-DECISION.md)
-retains the blocker; no more metadata probes or permission changes were made.
-Before native integration, launch trust and the admissible no-mutation deployment
-profile need one explicit decision together. Current action remains keep blocked;
-this documentation does not authorize a policy amendment, native run or installation.
-
-Current local checkpoints are not uploaded under the no-network instruction.
-Historical last verified public commit `d3c4682` has not been rechecked; no current
-remote equality is claimed. [Status](PUBLIC_STATUS.md),
-[handoff](docs/continuation/HANDOFF.md), [setup](docs/setup.md),
-[privacy](docs/privacy.md), [removal](docs/removal.md).
+The next implementation stage is [GPT-6.1 Sol Ultra](docs/continuation/SOL-ULTRA-MILESTONE.md).
+The accepted C/manual-supervision design is retained; later native scopes still need
+their concrete approval packet. GitHub progress publication is now authorized;
+private checkpoints, grants, machine bindings and raw logs stay local.
+[Status](PUBLIC_STATUS.md), [handoff](docs/continuation/HANDOFF.md),
+[setup](docs/setup.md), [privacy](docs/privacy.md), [removal](docs/removal.md).
 
 ## What it does
 

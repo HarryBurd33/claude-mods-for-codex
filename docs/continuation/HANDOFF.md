@@ -1,3 +1,55 @@
+# Astra checkpoint complete — next GPT-6.1 Sol Ultra
+
+Read [ASTRA-RUNTIME-REVIEW.md](ASTRA-RUNTIME-REVIEW.md), then
+[SOL-ULTRA-MILESTONE.md](SOL-ULTRA-MILESTONE.md), and the current local
+`.checkpoint` generation. The private checkpoint contains the reviewed launcher,
+tests, seals and preserved grant; the public repository deliberately does not.
+
+## Current Astra milestone — 2026-10-26
+
+[Astra runtime review](ASTRA-RUNTIME-REVIEW.md) resolves the external
+ownership-dependency review and supplies a versioned private launcher. Final current-
+runtime/local-Git integration: **11 passes**. Selected public held-call/restore tests:
+**44 passes**; default configuration and four replay fixtures passed. The historical
+30-case core run was not repeated. These are offline results, not native acceptance.
+
+The real Phase 1 setup remains unstarted, its original grant unused, both admissions
+closed and its shared ledger empty. The last narrow execution instruction was
+synthetic-only; a later explicit activation may use the existing grant once. Accepted
+C design/manual supervision need no repeat vote. Later startup/trust/model/result
+boundaries remain in the [consolidated packet](STOP-CONSOLIDATED-REQUEST.md).
+No native Codex process, host inventory or production installation change occurred.
+
+Source **0.2.0-dev.39 stays disabled/uninstalled**; installed31 is preserved. The full
+project remains incomplete. Native lifecycle/failure/cancel, held-call NM-1 and
+configured routing, UI accessibility/reopen/Watch teardown, full authoring lifecycle,
+Windows security/native Windows/Linux/WSL and frozen-candidate release acceptance
+remain. The 93-row ledger's 60V/14B/12A/3U/4P counts are unchanged and are not a
+completion percentage. Source38/39 package and CI evidence remains version-specific.
+
+The user now authorized GitHub progress publication; earlier no-network directions
+below are historical for that purpose. Private checkpoints, machine bindings, grants
+and raw logs stay local. Next **GPT-6.1 Sol Ultra**, following the
+[consolidated implementation milestone](SOL-ULTRA-MILESTONE.md).
+No automatic Sol dispatch or background continuation is scheduled.
+
+## First next action
+
+Verify artifacts, current authorization, jobs and exclusive ownership. The dependency
+review is complete: do not restart it unless bytes changed. If the human resume
+explicitly invokes the unchanged Phase 1 grant, perform its single bounded local setup
+through the versioned launcher, close admission and retain every receipt. No uncounted
+real-target preflight, retry or native startup follows. Then pursue the consolidated
+macOS integration milestone, using one concrete packet for still-missing startup,
+human trust, model-usage and result/removal boundaries. Advance independently authorized
+UI/authoring work while approval is pending. Source39 and installed31 remain distinct.
+
+After stable native behavior and candidate acceptance, save/verify and upload progress,
+then stop for GPT-6.1 Sol Medium packaging and bounded verification. New security or
+architecture findings need stronger review. Do not launch Sol automatically.
+
+## Historical handoffs — do not follow superseded model directions
+
 # Phase1 private mechanism tested — return to Sol Medium
 
 ## Final preservation finding — external runtime pin drift

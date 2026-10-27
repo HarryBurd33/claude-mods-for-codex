@@ -102,7 +102,9 @@ regressions are recorded in `docs/continuation/M1-CALL-REVIEW-RESULT.md`.
 
 No native host, Windows host or current upstream-contract check occurred in this
 stage. Saved proof results do not establish this component's native acceptance.
-Next: routine source/artifact review on Medium, then a separately authorized exact
-candidate review. Native activation and any model usage require their own scope.
-Until then leave the examples inert. Nothing was installed, so removal/rollback for
-this stage is source Git review/reversion only; installed31 needs no restoration.
+Candidate [packaging](continuation/PACKAGE-DEV39.md) and
+[deployment review](continuation/DEV39-DEPLOYMENT-REVIEW.md) are complete. Remaining
+prerequisite NM-1 is an admissible unchanged-input deployment profile and native
+acceptance, carried by the [Sol Ultra milestone](continuation/SOL-ULTRA-MILESTONE.md).
+Native activation and model usage need their own concrete scope. Keep examples inert
+until then. No installed31 restoration is required by this source-only work.
