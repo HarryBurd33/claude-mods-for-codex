@@ -1,5 +1,17 @@
 # Requirements ledger
 
+## Current acceptance preparation — 2026-10-28
+
+[UI readiness result](UI-READINESS-RESULT-2026-10-28.md): all93 IDs reconciled against
+the acceptance queue with unchanged60V/14B/12A/3U/4P dispositions;34 source UI/transport
+checks pass. The [consolidated packet](MACOS-UI-PACKET-2026-10-28.md) is ready for one
+bounded existing-installed-panel UI batch, pending human approval. Native results
+remain not-run. [Exact-source offline archive](OFFLINE-ARCHIVE-2026-10-28.md) verified
+386files against3e5c874;28selected passes/1Windows-only skip,validate3/replay4.
+These source/preparation results do not close native, whole-requirement or release
+gaps. Keep Sol Medium for defined observations; no new native/model/trust/install
+authority follows from the historical stage directions below. Phase1/Stop remain spent.
+
 ## Current Sol integration — 2026-10-27
 
 [Native Stop result](NATIVE-STOP-2026-10-27.md): the human completed actual hook

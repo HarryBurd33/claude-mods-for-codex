@@ -1,0 +1,88 @@
+{
+  "prepared_at": "2026-10-28",
+  "packet": "MACOS-UI-PACKET-2026-10-28.md",
+  "state": "pending-approval",
+  "target": "existing approved installed31 panel; current exact host identity unverified",
+  "native_actions_performed": false,
+  "host": null,
+  "host_identity_evidence": null,
+  "initial_zoom": null,
+  "tested_zoom": null,
+  "zoom_restored": null,
+  "initial_watch_state": null,
+  "final_watch_state": null,
+  "allowed_statuses": [
+    "not-run",
+    "pass",
+    "fail",
+    "unverified"
+  ],
+  "cases": [
+    {
+      "id": "UI-A1",
+      "status": "not-run",
+      "evidence_type": null,
+      "observation": null
+    },
+    {
+      "id": "UI-A2",
+      "status": "not-run",
+      "evidence_type": null,
+      "observation": null
+    },
+    {
+      "id": "UI-A3",
+      "status": "not-run",
+      "evidence_type": null,
+      "observation": null
+    },
+    {
+      "id": "UI-A4",
+      "status": "not-run",
+      "evidence_type": null,
+      "observation": null
+    },
+    {
+      "id": "UI-A5",
+      "status": "not-run",
+      "evidence_type": null,
+      "observation": null
+    },
+    {
+      "id": "UI-A6",
+      "status": "not-run",
+      "evidence_type": null,
+      "observation": null
+    },
+    {
+      "id": "UI-A7",
+      "status": "not-run",
+      "evidence_type": null,
+      "observation": null
+    },
+    {
+      "id": "UI-A8",
+      "status": "not-run",
+      "evidence_type": null,
+      "observation": null
+    },
+    {
+      "id": "UI-A9",
+      "status": "not-run",
+      "evidence_type": null,
+      "observation": null
+    },
+    {
+      "id": "UI-A10",
+      "status": "not-run",
+      "evidence_type": null,
+      "observation": null
+    }
+  ],
+  "backend_teardown": {
+    "status": "unverified",
+    "direct_receipt": null
+  },
+  "private_data_retained": false,
+  "whole_requirement_closure": false
+}
