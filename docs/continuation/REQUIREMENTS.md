@@ -1,5 +1,15 @@
 # Requirements ledger
 
+## Existing-panel attempt — 2026-10-28
+
+[Actual UI batch result](MACOS-UI-RESULT-2026-10-28.md): human approved the prepared
+packet, but the expected panel/empty desk was not established. One dashboard call
+returned configured service metadata; MCP Apps tab inventories were empty and the
+human reported a missing or different panel. Batch stopped without field/Watch/zoom/
+closure interactions, native client, model trial, install or trust change. Native
+acceptance remains unverified; all93 dispositions unchanged. The next concrete
+blocker is panel availability, not another offline packaging or source-test run.
+
 ## Current acceptance preparation — 2026-10-28
 
 [UI readiness result](UI-READINESS-RESULT-2026-10-28.md): all93 IDs reconciled against
