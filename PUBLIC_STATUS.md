@@ -1,5 +1,12 @@
 # Public status — incomplete development project
 
+[Native-readiness preparation](docs/continuation/NATIVE-READINESS-RESULT-2026-10-28.md):
+16 source pins verified, offline eight-tool contract observed, optional review
+still disabled and routing closed. One consolidated existing-client observation
+packet awaits approval; no native action or permission change. Completed UI and
+archive checks were reused. Native admission and full completion remain open.
+
+
 2026-10-28 project date. Source **0.2.0-dev.39 is disabled/uninstalled**;
 previously approved user-profile **0.2.0-dev.31** is preserved. No fresh installed-host
 inventory is implied. MIT; independent of Anthropic and OpenAI.

@@ -14,38 +14,36 @@ does not create new runtime or native-host evidence. Installed31 is the preserve
 historical installation; dev39 remains disabled/uninstalled. No fresh host inventory
 is implied. The original Phase1 and supervised Stop grants are consumed.
 
-The existing-panel UI packet is already concrete. Use it rather than preparing
-another UI proposal. The human-authorized batch is now terminal: one dashboard call returned metadata,
-no inspectable MCP App tab was available, and the human reported a missing/different
-panel. Zero field changes, Watch windows or reopens occurred. UI-A1 is unverified;
-other observations were not run. Public result `990067e` and released ownership
-were reconciled before this plan. Do not automatically retry or treat the ended
-approval window as fresh authority.
+The bounded UI continuation is terminal: [result](UI-CONTINUATION-RESULT-2026-10-28.md)
+records seven narrow accepted cases and three unverified cases. VoiceOver was
+unavailable; exact 200% zoom and an independent quiet-close case remain unverified.
+Backend cancellation is unverified. Final desk fields are blank, Watch is off and
+zoom restoration is human-confirmed. Do not repeat accepted cases or renew spent
+Watch/reopen allowances. The earlier missing-panel attempt remains dated history;
+the subsequent navigation diagnosis found Review desk under Authored local tools.
+
+The next Medium milestone is the [source-readiness result](NATIVE-READINESS-RESULT-2026-10-28.md)
+and its pinned manifest. One [existing-client observation packet](NATIVE-OBSERVATION-PACKET-2026-10-28.md)
+is proposed for approval. It neither admits NM-1 nor starts the consequential
+stage B contract work.
 
 ## Milestones, dependencies and acceptance gates
 
 | Stage | Work and prerequisite | Evidence required to accept | Assignment and stop gate |
 | --- | --- | --- | --- |
-| A — existing macOS panel | First diagnose the missing/different panel under a fresh bounded human-visible scope; no reinstall, extra dashboard opening or host inspection from this plan. Once the prerequisite is established, obtain a finite continuation based on the existing UI packet. | Case-by-case keyboard, spoken labels/order/feedback, actual tested zoom, equivalent table, Watch stop and close/reopen observations; restore initial zoom, clear only owned sample and leave Watch off. | Sol Medium execution/result reconciliation. Sol High only for a reproducible consequential defect. Missing tooling stays unverified. |
+| A — existing macOS panel | Bounded continuation completed; reuse its seven narrow accepted outcomes. Remaining cases require available human tooling and a fresh finite scope; no repeat from this plan. | Case-by-case keyboard, spoken labels/order/feedback, actual tested zoom, equivalent table, Watch stop and close/reopen observations; restore initial zoom, clear only owned sample and leave Watch off. | Sol Medium execution/result reconciliation. Sol High only for a reproducible consequential defect. Missing tooling stays unverified. |
 | B — native contract and candidate readiness | Review lifecycle failure/cancel, held-call NM-1, routing and installation preservation together using existing source and saved reviews. | One exact source/host/access/case manifest, preserved31 plan, unchanged-input proof for the effective covered-hook set or an explicit blocker; supported routing and cancellation observations specified; concrete cleanup and usage bounds. | Sol High prepares; Astra Ultra reviews unresolved security/architecture decisions and exact consequential contract. No trial until its concrete packet is approved. |
 | C — one macOS native campaign | Depends on B admission and human approval of exact artifacts plus actual human trust. Use a reviewed candidate and harmless disposable project; batch cases, not ad hoc retries. | Actual lifecycle/failure/cancel, held-call decision and configured-agent receipts, then representative authoring/install/effect/update/remove chain. Each claim names CLI versus desktop and actual candidate. | Sol High for execution and isolated fixes within approved scope; Medium for fixed observation/result steps. Unexpected calls, unknown effects, changed artifacts or failed prerequisites stop the affected batch. |
 | D — Windows implementation readiness | Reuse successful A/C/B proof CI. Read the separate security contract before any production project/Git/restore enabling. Actual host access is a dependency. | Exact access/ACL/path/handle/link/process/deadline policy; reviewed implementation and negative regressions; appropriate Windows CI; retained refusal paths where support remains unavailable. | Sol High implementation, Astra Ultra before consequential security admission changes. Digest sampling is not executable provenance or loader-closure admission. |
 | E — actual platform matrix | Stable candidate plus available native Windows11, Linux and WSL hosts, each separately identified and authorized. Linux/WSL may proceed independently after macOS readiness. | Standard-user supported install/trust, covered hooks/permissions, applicable owned UI, private-state and process cleanup, update/disable/remove/rollback. Record shell, filesystem, client and exact source. | Sol High for new platform integration; Medium for an approved fixed checklist. Missing host is unverified, never a skipped test counted as pass. |
 | F — frozen release | One final immutable candidate; all prior evidence reconciled to it. Refresh relevant official contracts before claiming current compatibility. | All93 IDs dispositioned with evidence; applicable full tests/CI and clean archive/clone, actual supported install/update/remove, security/license/access docs and exact public contents verified. | Astra Ultra final claim/security review; Medium packaging/publication after review and applicable authority. No release/tag/npm publication inferred from development-push permission. |
 
-## Immediate panel-availability prerequisite
+## Immediate remaining prerequisite
 
-Sol Medium can prepare a short symptom checklist: which expected dashboard card
-the human sees, whether an expansion control exists, whether expansion produces
-the owned Review desk, and whether the supported MCP Apps tab becomes inspectable.
-Retain categorical observations only; no screenshot or draft capture by default.
-Actual UI openings/interactions require the new bounded scope, because the prior
-batch ended on its missing-prerequisite/time stop. No installation defect is proven.
-If the surface remains absent, record the exact symptom once and escalate an
-evidence-backed integration defect to Sol High; do not loop through installs or
-source-only tests to manufacture native acceptance. If an upgrade is warranted,
-fold it into the reviewed candidate transition and authoring chain rather than a
-cosmetic or diagnostic-only trust cycle.
+Reconcile source and installed-host identity using the proposed read-only packet
+only after human approval. Missing supported surfaces stay unavailable. Do not
+launch another client or infer the complete effective-hook profile from a visible
+list. Consequential native contracts remain stage B work with its review gate.
 
 ## Native campaign cases to make concrete in stage B
 

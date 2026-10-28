@@ -1,5 +1,14 @@
 # Requirements ledger
 
+## Source readiness preparation — 2026-10-28
+
+[Readiness result](NATIVE-READINESS-RESULT-2026-10-28.md): 16 source pins and the
+offline unconfigured eight-tool contract verified. Optional review stays disabled,
+routing admission closed; source and unknown-version UI cohorts remain separate.
+One existing-client read-only packet is proposed, not executed. No ledger
+disposition changes or repetition of completed UI/archive checks.
+
+
 ## Existing-panel UI continuation — 2026-10-28
 
 [UI continuation result](UI-CONTINUATION-RESULT-2026-10-28.md): observed blank desk,
