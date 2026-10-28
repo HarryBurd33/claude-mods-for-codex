@@ -1,5 +1,11 @@
 # Reviewed local setup
 
+For an already-installed dashboard that appears different, first follow
+[Find Review desk](local-interactions.md#find-review-desk): choose **Authored local
+tools**, then find the **Review desk** group. A different selected view is not
+an installation or trust failure. The [panel diagnosis](continuation/PANEL-DIAGNOSIS-2026-10-28.md)
+verified this navigation recovery on the existing panel without an update.
+
 Current2026-10-24: [source31 package/update](continuation/PACKAGE-DEV31.md)
 verified251files/79passes+1Windows skip. Human authorized local Review desk and
 reviewed3hooks; restart/native31 pending. Logging/rules/exports/status preserved,

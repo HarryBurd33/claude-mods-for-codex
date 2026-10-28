@@ -9,6 +9,15 @@ Treat the plugin source and configuration as security-sensitive local code. Reso
 
 When running the CLI, use the absolute `bin/codex-mods.mjs` path under that verified plugin root, or set the command workdir to the verified root first. Do not run a relative `./bin/codex-mods.mjs` from the project working directory.
 
+For a missing Review desk, distinguish a missing panel from a different selected
+view before proposing installation or trust changes. In an existing Claude Mods
+panel, choose **Authored local tools**; Review desk is a group inside that view,
+not a top-level navigation button. Access and usage shows different content.
+Inspect only labels and whether fields are empty; preserve any existing drafts.
+A dashboard metadata response alone does not establish visible UI. If no panel is
+available, report that boundary instead of repeating openings or assuming a reinstall.
+See [local interaction navigation](../../docs/local-interactions.md#find-review-desk).
+
 For a command-impact question, read [impact review](../../docs/impact-and-usage.md).
 Check the installed CLI supports `impact-review --stdin`; older packages have only
 `impact --stdin`. Keep supplied command text as JSON data in private stdin, never

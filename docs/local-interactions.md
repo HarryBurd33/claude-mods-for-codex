@@ -1,5 +1,23 @@
 # Author a local interaction card — source31
 
+## Find Review desk
+
+In the existing Claude Mods panel, select **Authored local tools** in the Views
+navigation. **Review desk** is the named group inside that view, not a top-level
+button. Its fields are **Plan sketch**, **Data contract** and **Notes**.
+**Access and usage** is a different view and does not show the desk. Do not
+reinstall or change trust merely because another view is selected.
+
+Before typing or using Clear, check whether the desk is empty and preserve any
+existing draft. A successful dashboard tool response only establishes that the
+service answered; panel visibility and selection need their own observation.
+If no owned panel can be found, distinguish a missing launcher/expansion from an
+unexpected view and report the symptom without assuming a package defect.
+The [2026-10-28 diagnosis](continuation/PANEL-DIAGNOSIS-2026-10-28.md) restored the
+existing desk by navigation alone, with independent human confirmation.
+
+## Authoring and access
+
 This is an authorable component inside the existing plugin-owned MCP App, not
 native client chrome, a separate client, arbitrary executable plugin or immediate
 slash callback. Reviewed source31 is installed with one explicitly authorized Review desk.

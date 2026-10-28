@@ -6,6 +6,7 @@ inventory is implied. MIT; independent of Anthropic and OpenAI.
 
 | Milestone | Evidence and limits |
 | --- | --- |
+| [Panel diagnosis and recovery](docs/continuation/PANEL-DIAGNOSIS-2026-10-28.md) | Existing panel was on Access and usage. Selecting Authored local tools exposed the empty Review desk; live DOM and independent human confirmation agree. Navigation fixed, guidance corrected; no install/trust/runtime change. Broader UI checks remain open. |
 | [Consolidated acceptance campaign](docs/continuation/ACCEPTANCE-CAMPAIGN-2026-10-28.md) | Reconciles the blocked panel batch and sequences UI availability, native contracts/authoring, Windows security implementation, actual Windows11/Linux/WSL and frozen release gates. Documentation only; later native actions require concrete scope and approval. Sol High precedes consequential integration; Astra Ultra reviews unresolved security decisions and final release. |
 | [Existing-panel UI attempt](docs/continuation/MACOS-UI-RESULT-2026-10-28.md) | Approved batch stopped at missing/different-panel prerequisite. One dashboard service response; no inspectable MCP App tab; human could not confirm expected empty Review desk. Keyboard/VoiceOver/zoom/Watch/closure checks not run. No install/trust/permission change or native acceptance pass. |
 | [UI acceptance readiness](docs/continuation/UI-READINESS-RESULT-2026-10-28.md) | All93 IDs reconciled with unchanged dispositions;34 source UI/transport tests pass. One bounded existing-panel approval packet and not-run result template prepared. VoiceOver/zoom/Watch native acceptance pending; no installation/model trial requested for this batch. |
@@ -38,8 +39,9 @@ The human-requested **GPT-6.1 Sol High** implementation and independent
 **GPT-6 Astra Ultra** review passed the bounded corrected-source CI milestone.
 The **GPT-6.1 Sol Medium** offline archive/documentation follow-up and subsequent
 UI acceptance preparation are verified within the limits above. Next is the
-panel-availability diagnosis after the approved [existing-panel batch](docs/continuation/MACOS-UI-RESULT-2026-10-28.md)
-stopped before interaction. Native acceptance and final release remain open. The
+bounded UI continuation after [panel navigation recovery](docs/continuation/PANEL-DIAGNOSIS-2026-10-28.md).
+The earlier approved [batch](docs/continuation/MACOS-UI-RESULT-2026-10-28.md) stopped
+before its acceptance checks; those checks and final release remain open. The
 [consolidated macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md) remains open.
 The previous no-network restriction is superseded for authorized GitHub progress
 publication. Private checkpoints, machine bindings, grants and raw logs are excluded.
