@@ -1,5 +1,13 @@
 # Requirements ledger
 
+## Native contract draft — 2026-10-28
+
+[Sol High review](NATIVE-CONTRACT-2026-10-28.md) separates lifecycle interruption,
+nonzero-command outcomes, held-call NM-1, routing and authoring admission. The
+consolidated packet is blocked, with exact host/candidate/registration and independent
+review missing. No native acceptance or disposition changes; existing permissions
+and closed gates remain intact.
+
 ## Human existing-client inventory — 2026-10-28
 
 [Inventory result](NATIVE-OBSERVATION-RESULT-2026-10-28.md): app name/version and

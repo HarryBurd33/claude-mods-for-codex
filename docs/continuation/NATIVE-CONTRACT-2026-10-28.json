@@ -1,0 +1,173 @@
+{
+  "kind": "native-contract-review-not-execution-grant",
+  "date": "2026-10-28",
+  "sourceCommit": "0516288bc2730d4b3e2b1c9df18d6c66915945f3",
+  "sourceVersion": "0.2.0-dev.39",
+  "modelAssignment": "GPT-6.1 Sol High, human picker confirmation; automated readback unavailable",
+  "pins": [
+    {
+      "path": "src/hold-review.mjs",
+      "gitBlob": "0bec199fad1c8184952172ac1d35088d0ca402f7",
+      "sha256": "0e159c08c0839c6d202d07700b8a427abc572b3b613e17fe35b70712242fa868"
+    },
+    {
+      "path": "src/server.mjs",
+      "gitBlob": "ec17bcb610a91cffbd0b207171d5d1b532f2afe1",
+      "sha256": "f094be8ef526542caf2c67b8ac76f959fa4ea7bcc091a09be810f6a42e60fc64"
+    },
+    {
+      "path": "src/hook-main.mjs",
+      "gitBlob": "2f5fadc1a6119de37ccd33930f6b1197fdde5080",
+      "sha256": "8955fcb35ed1249f89d2ac8fb7f83de7791576d16728cfafa0785498c3de397b"
+    },
+    {
+      "path": "src/dispatcher.mjs",
+      "gitBlob": "c8685cd03fff0efd98abc52205f724d191abc6ac",
+      "sha256": "98561f8eea24ad325a38bf983c3414f567e315b2dc7f375e90cdfa3fbbfe1ffa"
+    },
+    {
+      "path": "src/runtime-settings.mjs",
+      "gitBlob": "78b1a58ae5ba322f4895031ef9dd78248c3979cf",
+      "sha256": "05728db121ee95f83a11fc173a55a302acb6f627bb5d8a6b0c3d122ecacfbbfd"
+    },
+    {
+      "path": "examples/hooks/observe-lifecycle.json",
+      "gitBlob": "abbd3a8c41a068864df43cdd3935c4f369660f7d",
+      "sha256": "72357c1040ec0e4b31980b76d2bed202e32b13ba513853d874012db1b60ecbbb"
+    },
+    {
+      "path": "examples/hooks/call-review.json",
+      "gitBlob": "f0a8fd3a969262508ecf19b738b0211e26c99aba",
+      "sha256": "75d23a4af66bebd76168271a388b8fafd5d80dba8157086377a9cbe14a08b746"
+    },
+    {
+      "path": "examples/config/call-review.settings.json",
+      "gitBlob": "2d7778b798c7d988f63524146d32e06534b382b4",
+      "sha256": "d7b08437115382fd14d20ca7b3b4b7b7ce728590a9fb17342d20b60f861074fb"
+    },
+    {
+      "path": "proofs/routing-contract.mjs",
+      "gitBlob": "04f394da76788515a853d8dde0706854d1dbbd0d",
+      "sha256": "3671cacc590d541daac14502f89f5cbe2f342869945f53a04d676e843c95c69b"
+    },
+    {
+      "path": "proofs/inspection-contract.mjs",
+      "gitBlob": "6213373b7e2c1c1ee661084d64068806d940c6ed",
+      "sha256": "0dd7d93f300304f7977267ab4c4201a61a17e0ed577caa2c66bd5bd138a54bd2"
+    },
+    {
+      "path": "proofs/inspection-driver.mjs",
+      "gitBlob": "7989e54f220d160591b56905fe66df68b7bc6074",
+      "sha256": "9898ce8a87235f24636a159a7cf8803fa87d5c6633ce63c038bf547c7e1861f1"
+    },
+    {
+      "path": "proofs/routing-native-plan.mjs",
+      "gitBlob": "1b7a651dc795202bd41b9ce4268fbeef8033e551",
+      "sha256": "5b5fadae8c4cd13dafebbd8ae9734fc364701aacc35225368f1ad04ce6a6dbf4"
+    }
+  ],
+  "gates": {
+    "G-HOST": "blocked: exact executable/client build, local versus cloud orchestration and supported entry unbound",
+    "G-CANDIDATE": "blocked: immutable native trial package/settings/project/data paths not prepared; old archive evidence reused only within its cohort",
+    "G-REGISTRATION": "blocked: exact supported owned registration and metadata retention diff not approved; preserve existing hooks and policy",
+    "G-NM1": "blocked: complete stable effective non-mutating covered-hook set absent",
+    "G-ROUTING": "blocked: native inspection/routing entries unconditionally refuse; no native inspection transport in inspection-driver",
+    "G-REVIEW": "pending: independent Astra Ultra security/architecture review before executable admission changes; no reviewer dispatched",
+    "G-APPROVAL": "pending: one fully bound packet required before any native startup/install/trust/model action"
+  },
+  "cases": [
+    {
+      "id": "NC-L1",
+      "family": "lifecycle interruption",
+      "status": "blocked",
+      "requires": [
+        "G-HOST",
+        "G-CANDIDATE",
+        "G-REGISTRATION",
+        "G-REVIEW",
+        "G-APPROVAL"
+      ],
+      "proposedStimulus": "One new harmless response-only Sol High turn; human Stop once while active. No tool request.",
+      "attempts": 1,
+      "newTurns": 1,
+      "deadline": "Human stop target90seconds; stop request at5seconds if still active; no hard lifetime/billing promise",
+      "acceptance": "Actual main-thread Interrupt delivery; empty observer decision; selected event/time only; separate terminal outcome and cleanup observation",
+      "excludes": "No repeat Stop-only proof; interrupted turn without visible event remains unverified"
+    },
+    {
+      "id": "NC-F1",
+      "family": "command outcome/failure",
+      "status": "blocked",
+      "requires": [
+        "G-HOST",
+        "G-CANDIDATE",
+        "G-REGISTRATION",
+        "G-REVIEW",
+        "G-APPROVAL"
+      ],
+      "proposedStimulus": "One separately bounded turn asks for exactly one shell command: /usr/bin/false; no files or network. Only if selected host actually supports Bash hooks.",
+      "attempts": 1,
+      "newTurns": 1,
+      "deadline": "Manual90second stop target; no retry or enforced cost cap",
+      "acceptance": "Report command exit1 separately from any PostToolUse delivery; invocation error and missing notification remain distinct",
+      "excludes": "No PostToolUseFailure subscription, no process killing or forced model/backend error"
+    },
+    {
+      "id": "NC-H1",
+      "family": "held-call unchanged input",
+      "status": "excluded-until-NM1",
+      "requires": [
+        "G-HOST",
+        "G-CANDIDATE",
+        "G-NM1",
+        "G-REVIEW",
+        "G-APPROVAL"
+      ],
+      "proposedStimulus": null,
+      "attempts": 0,
+      "newTurns": 0,
+      "acceptance": "Full stable effective non-mutating covered-hook profile plus exact connection/config binding must precede any harmless case",
+      "excludes": "No enabling review, disabling inherited mutators, fabricated pending events or auto approval"
+    },
+    {
+      "id": "NC-R1",
+      "family": "configured routing",
+      "status": "excluded-closed-runner",
+      "requires": [
+        "G-HOST",
+        "G-CANDIDATE",
+        "G-ROUTING",
+        "G-REVIEW",
+        "G-APPROVAL"
+      ],
+      "proposedStimulus": null,
+      "attempts": 0,
+      "newTurns": 0,
+      "acceptance": "Reviewed supported admission and owned model/effort/role/history/usage/cancel observations before inference",
+      "excludes": "No gate edits, alternate spawn, old SolLow/LunaLow plan execution or silent model fallback"
+    },
+    {
+      "id": "NC-A1",
+      "family": "authoring install/update/remove chain",
+      "status": "excluded-unbound-installation",
+      "requires": [
+        "G-HOST",
+        "G-CANDIDATE",
+        "G-REGISTRATION",
+        "G-REVIEW",
+        "G-APPROVAL"
+      ],
+      "proposedStimulus": null,
+      "attempts": 0,
+      "newTurns": 0,
+      "acceptance": "One immutable reviewed package and concrete preservation/install/trust/update/remove contract; actual human trust",
+      "excludes": "No installation, trust copying, cache edits or deletion of retained data"
+    }
+  ],
+  "executionReady": false,
+  "approvalRequested": false,
+  "nativeActionsPerformed": 0,
+  "newNativeModelCalls": 0,
+  "runtimeOrPermissionsChanged": false,
+  "fullProductComplete": false
+}

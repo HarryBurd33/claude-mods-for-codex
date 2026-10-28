@@ -1,5 +1,12 @@
 # Public status — incomplete development project
 
+[Sol High native contract review](docs/continuation/NATIVE-CONTRACT-2026-10-28.md)
+pins twelve source artifacts and five case decisions. One consolidated campaign
+packet is a blocked review draft: exact host/candidate/registration bindings and
+independent review are missing. Interruption and harmless exit1 cases are proposed;
+held-call, routing and installation remain excluded. No native action, permission
+change or completed-check rerun. This is contract preparation, not admission.
+
 [Existing-client inventory](docs/continuation/NATIVE-OBSERVATION-RESULT-2026-10-28.md)
 completed within the approved window: human reported app26.1023.50603 and the
 Claude Mods for Codex entry. Plugin version/state unknown; no existing CLI, so

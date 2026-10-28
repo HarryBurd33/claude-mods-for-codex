@@ -28,6 +28,15 @@ was approved and completed once; [inventory result](NATIVE-OBSERVATION-RESULT-20
 records app version and plugin name, unknown plugin version/state, and no existing
 CLI. It neither admits NM-1 nor starts consequential stage B contract work.
 
+## Stage B contract draft — 2026-10-28
+
+The human selected Sol High for the [native contract review](NATIVE-CONTRACT-2026-10-28.md).
+Its [manifest](NATIVE-CONTRACT-2026-10-28.json) binds source and case budgets; the
+[single packet](NATIVE-CAMPAIGN-PACKET-2026-10-28.md) is blocked before execution
+approval. Host orchestration, exact candidate and registration/retention bindings
+remain missing; independent security review is pending. No repeated UI/Stop/archive/
+inventory or native action occurred. Stage B execution readiness is not accepted.
+
 ## Milestones, dependencies and acceptance gates
 
 | Stage | Work and prerequisite | Evidence required to accept | Assignment and stop gate |
