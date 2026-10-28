@@ -1,5 +1,15 @@
 # Requirements ledger
 
+## Existing-panel UI continuation — 2026-10-28
+
+[UI continuation result](UI-CONTINUATION-RESULT-2026-10-28.md): observed blank desk,
+literal render/Clear, human keyboard/table outcomes and bounded Watch/close/reopen
+checks add narrow actual UI evidence. Seven case outcomes accepted; VoiceOver,
+exact200% zoom and an independent quiet-close case remain unverified. Backend
+cancellation is not established. Final fields blank/Watch off, zoom restoration
+human-confirmed. No install/trust/nativepermission or capture change. All93
+dispositions unchanged; no full native/accessibility/release closure.
+
 ## Existing-panel attempt — 2026-10-28
 
 [Actual UI batch result](MACOS-UI-RESULT-2026-10-28.md): human approved the prepared
