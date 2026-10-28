@@ -1,5 +1,14 @@
 # Native contract review — 2026-10-28
 
+## Subsequent exact bindings and security review
+
+The [binding result](NATIVE-BINDING-RESULT-2026-10-28.md) resolves preparation bindings
+and records independent conditional security review. The same single packet is now
+approval-ready for its narrow supervised envelope, with actual native permission/
+trust/outcome gates still mandatory. No native action ran. The original review below
+retains its date and prior blocked state; NM-1/routing exclusions remain unchanged.
+
+
 Prepared on human-confirmed GPT-6.1 Sol High; automatic model-setting readback is
 unavailable. Baseline `0516288bc2730d4b3e2b1c9df18d6c66915945f3`, source dev39.
 The [case manifest](NATIVE-CONTRACT-2026-10-28.json) pins twelve reviewed source

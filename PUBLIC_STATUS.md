@@ -1,5 +1,12 @@
 # Public status — incomplete development project
 
+[Bound native packet](docs/continuation/NATIVE-BINDING-RESULT-2026-10-28.md): host,
+40-file component and owned Interrupt registration artifacts are pinned; independent
+security review passed conditional readiness after focused helper corrections.
+One packet awaits approval, with at most3startups/2turns in15minutes. Actual native
+permission/trust/readback gates remain; no native action or permission change occurred.
+
+
 [Sol High native contract review](docs/continuation/NATIVE-CONTRACT-2026-10-28.md)
 pins twelve source artifacts and five case decisions. One consolidated campaign
 packet is a blocked review draft: exact host/candidate/registration bindings and

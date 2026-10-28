@@ -1,0 +1,74 @@
+{
+  "kind": "offline-native-campaign-review-seal",
+  "sourceCommit": "61a990aa2484342a38f0be14b3479daa9feb02dc",
+  "entries": {
+    "cli": {
+      "sha256": "d8990e3ee7acfbc26f91265b12a1a83f0fee40d0e0f8f1f40a37d4ec21f499cf",
+      "bytes": 260293200
+    },
+    "node": {
+      "sha256": "49098713938c2537a0cbca663d79b427b8faeed50c34de1e89177778d4c447e8",
+      "bytes": 248201648
+    },
+    "python": {
+      "sha256": "27a60408225a353de0bfd44c443261120f3d247d31c807df7bfd0f58ee183c10",
+      "bytes": 34488
+    }
+  },
+  "sourceFiles": {
+    "LICENSE": "747b45fb70bbc46628a8a6b642f3c1283899f54b16f83398b527d96492d364ae",
+    "src/agent-contract.mjs": "4df7300cf81a18c66131eeb6e547726239f41bb51e55e74d2a95a89726b3d306",
+    "src/cli.mjs": "d9cb3c2daacb609f609243c7c8b0dda907cc308b26089a79d2d0fd70a4439bb6",
+    "src/component-authoring.mjs": "40017ccec9dc876a4e8ed8dc0a62e1cbad8cade8e3c9ef3bac35bd695de07039",
+    "src/component-contract.mjs": "43d8630080bbadb025b4c7a28c34deef2884fd89caf7c1019078ff917e94be65",
+    "src/config.mjs": "672b2ed9071349fd61e8f9503a3079cd8dcdf3e2cf33f91bc35e1b49ec37f02a",
+    "src/constants.mjs": "ad9c56ec519bf1bd5f48b4476cd76151ef7330f211283122c9c024a3bb1f8a1a",
+    "src/dashboard-resource.mjs": "f6ded2dd07a00ba7cd8494761e047bec10073d22c6b31a96815cc863408c8499",
+    "src/dispatcher.mjs": "98561f8eea24ad325a38bf983c3414f567e315b2dc7f375e90cdfa3fbbfe1ffa",
+    "src/hold-review.mjs": "0e159c08c0839c6d202d07700b8a427abc572b3b613e17fe35b70712242fa868",
+    "src/hook-main.mjs": "8955fcb35ed1249f89d2ac8fb7f83de7791576d16728cfafa0785498c3de397b",
+    "src/impact-review.mjs": "14231dae286bf368e3bd52d5fad070e62ad6ab80afb32b76123be2d7bdabb5e2",
+    "src/impact.mjs": "93c22fad587868f382f0dcd6907f9853394da1f04d20e4082d1abc2228b0b84c",
+    "src/interaction-contract.mjs": "2c62007158ac901dc1ce291fdfbfee7432f705a56663d490af7a558ed8b7ce0e",
+    "src/interaction-replay.mjs": "e652ff6ec37bd20d592ca4f92de4a6f38926715b26ec6083d9bd84a7f6d7c4d8",
+    "src/io.mjs": "6b73669f9647d9598971a7ee7659ea24b3fc494157055d2d3ee9524b36e41006",
+    "src/journal.mjs": "6c4fa198ad48c26bff24f4938780922f7fee85933a6e262045a2b3fef44ed39c",
+    "src/mcp-stdio.mjs": "d5d76e549c55e25b4c068d89c52b273d4d443a9883eae842215d3641460984f1",
+    "src/mods/activity-journal.mjs": "22c71eb877fe7f382857bd8dce3c594caeacfa5428a7269e9c24524f14a849e8",
+    "src/mods/blast-radius-guard.mjs": "8cf3d7a185e58b4e58bc495d25c3dae5cc4f67fa62d570ce7fed2273bdaeaf42",
+    "src/mods/deny-guard.mjs": "1564c99a6503219916956702e35585d11ed1f6d764650244ff5ff6a441c01185",
+    "src/mods/exact-command-rewrite.mjs": "df9ad5b687400c8dcfe250f6fc0673709e94e27ffcdedae6d3b9ecfd992a839e",
+    "src/mods/registry.mjs": "e0655ae71d4af8ca7e66f847d4588d7c23968710974773065a7558ed199c94e9",
+    "src/mods/session-notice.mjs": "e91dcab6272cf4cc5abd2e174c84bb90ca4eb57ccf9df4e8f20e890277853c2e",
+    "src/observations.mjs": "a2568e9e65bf31ec00f1a574a15a7b6b61b337395dbc005449726d265b6b0a89",
+    "src/restore.mjs": "dc1c11b10464e2eb8fb70d3b2271dd53dc32cfd8758a8d944cbc401c20a226a3",
+    "src/retention.mjs": "2f24e68d8470dd653f93be76133cd4678cf3b489775e6b5c369a2ed2b44a6cf9",
+    "src/runtime-settings.mjs": "05728db121ee95f83a11fc173a55a302acb6f627bb5d8a6b0c3d122ecacfbbfd",
+    "src/scaffold.mjs": "a7f987182faf58caa205cfb1ac997c10250a726db569dd5fc48371d33ed78598",
+    "src/scope.mjs": "0d52acc33a419b6ea77453578f585ee388d76189c6a161a845cc10d0c3517b20",
+    "src/server.mjs": "f094be8ef526542caf2c67b8ac76f959fa4ea7bcc091a09be810f6a42e60fc64",
+    "src/state-lock-budget.mjs": "9395da508ca996b3ef192ace57686fa5fd330e85134de3f73a4d29d4edbc1ad6",
+    "src/state.mjs": "0a6690915a3ac07841625b5c02eca94a045936536a4b0e1a7a7a9325f56e67a0",
+    "src/usage.mjs": "ef3341fbc04d87baf1a4e9697e03109366a82bdf26486f778d151a4bd9f56de6",
+    "src/windows-hook.mjs": "e7210daa55bc7d99ef11ec84dbe9cfc19f1e1fa6773d8f43ef69d4d84f26716a",
+    "src/windows-state.mjs": "0d55302e61f4621e83fac0ab7ab3d1a9b9a0f4c89e9a49eed29aa5ed9dbed8f9",
+    "src/windows-storage.mjs": "86cce08d7ef440295e023b11ca9db384f7bff36eb00ede45946174d8666d3e84",
+    "src/windows/PrivateStorage.cs": "c9493eb2bf7401577bf4cfd289a8726ec5b4281c87de250e3342e03fc1fb59bd",
+    "src/windows/private-storage.ps1": "b5f53b4a2c81f9b1456a024ce23e65d2ec1fda18f9898e55cad8011b3a7eba88",
+    "src/workspace.mjs": "64d1cfa1a62f5d471259f247e671c83e151fe84adef4d95afd1ba82441e7ad92"
+  },
+  "reviewFiles": {
+    "BINDING.json": "88dbcd7e0d787e53ece914e1597968880bd224ba31dfd1b412c51dc3b493619a",
+    "manage.py": "3c76e8ce1110f2db18b5ce734773aa5b5b5c4744507489415c040fcbb145af71",
+    "read-interrupt.py": "a8daea1efa399b24f496b93242654658cd68bde24808071f14bc5a5ab662ced4",
+    "HUMAN-PACKET.md": "4fe3982f1778afeb719d1ab55422a244a0fbba159dd2328320a5d8b35e2b6345",
+    "CACHE31-BINDING.json": "6e4beb99123d32403916450bc0311eb517e3568c2a921c6240aba70405280af2",
+    "interrupt-config.json": "dea1efdf5aa9887f6f789e344274eb5b0978cf433a11038c0cf431073b1c8d7b",
+    "interrupt-hook.json": "54d658fdffcdeaf6be0cdd3bca54c87483bdc70524a4a5309ec87891dd99a4b6"
+  },
+  "permissionsOverridden": false,
+  "nativeStarted": false,
+  "registrationActive": false,
+  "privateReviewSealSha256": "73885e2db33d34752d2c7777366accf9bd5b2cae7a0ffbe442a0aed6ae593b1c",
+  "bindingMeaning": "Exact prepared artifacts; native human trust, displayed permissions and case outcomes remain execution gates, not established observations"
+}

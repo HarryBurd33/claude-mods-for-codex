@@ -67,19 +67,19 @@
     }
   ],
   "gates": {
-    "G-HOST": "blocked: exact executable/client build, local versus cloud orchestration and supported entry unbound",
-    "G-CANDIDATE": "blocked: immutable native trial package/settings/project/data paths not prepared; old archive evidence reused only within its cohort",
-    "G-REGISTRATION": "blocked: exact supported owned registration and metadata retention diff not approved; preserve existing hooks and policy",
+    "G-HOST": "prepared: exact selected local CLI/runtime digests/cwd; actual permission/locality/project readback remains mandatory after approval",
+    "G-CANDIDATE": "prepared:40file Git snapshot and Interrupt-only component config, private fixture and exactseal; no plugin install",
+    "G-REGISTRATION": "prepared:owned project Interrupt declaration, exclusive stage/removal and retention delta; native trust/registration not performed",
     "G-NM1": "blocked: complete stable effective non-mutating covered-hook set absent",
     "G-ROUTING": "blocked: native inspection/routing entries unconditionally refuse; no native inspection transport in inspection-driver",
-    "G-REVIEW": "pending: independent Astra Ultra security/architecture review before executable admission changes; no reviewer dispatched",
-    "G-APPROVAL": "pending: one fully bound packet required before any native startup/install/trust/model action"
+    "G-REVIEW": "passed:independent read-only reviewer dispatched gpt-6-astra Ultra, four exact artifact digests; conditional packet readiness only",
+    "G-APPROVAL": "pending:one explicit human decision on fully bound conditionalpacket; zero native actions authorized sofar"
   },
   "cases": [
     {
       "id": "NC-L1",
       "family": "lifecycle interruption",
-      "status": "blocked",
+      "status": "approval-ready-conditional",
       "requires": [
         "G-HOST",
         "G-CANDIDATE",
@@ -91,13 +91,13 @@
       "attempts": 1,
       "newTurns": 1,
       "deadline": "Human stop target90seconds; stop request at5seconds if still active; no hard lifetime/billing promise",
-      "acceptance": "Actual main-thread Interrupt delivery; empty observer decision; selected event/time only; separate terminal outcome and cleanup observation",
+      "acceptance": "Human terminal interruption plus one fresh Interrupt/time record before F1; sourceemptyoutput separate fromnativewireoutput; CLI exit/work reconciliation separate",
       "excludes": "No repeat Stop-only proof; interrupted turn without visible event remains unverified"
     },
     {
       "id": "NC-F1",
       "family": "command outcome/failure",
-      "status": "blocked",
+      "status": "approval-ready-conditional",
       "requires": [
         "G-HOST",
         "G-CANDIDATE",
@@ -109,8 +109,9 @@
       "attempts": 1,
       "newTurns": 1,
       "deadline": "Manual90second stop target; no retry or enforced cost cap",
-      "acceptance": "Report command exit1 separately from any PostToolUse delivery; invocation error and missing notification remain distinct",
-      "excludes": "No PostToolUseFailure subscription, no process killing or forced model/backend error"
+      "acceptance": "Visible actualfinalcommand /usr/bin/false andexit1 only; typedprompt/modelstatement insufficient; no PostToolUse subscription/failurecompleteness claim",
+      "excludes": "No PostToolUseFailure subscription, no process killing or forced model/backend error",
+      "predecessor": "NC-L1 actual terminal interruption and fresh event result"
     },
     {
       "id": "NC-H1",
@@ -165,9 +166,12 @@
     }
   ],
   "executionReady": false,
-  "approvalRequested": false,
+  "approvalRequested": true,
   "nativeActionsPerformed": 0,
   "newNativeModelCalls": 0,
   "runtimeOrPermissionsChanged": false,
-  "fullProductComplete": false
+  "fullProductComplete": false,
+  "boundPacket": "NATIVE-CAMPAIGN-PACKET-2026-10-28.md",
+  "boundCandidate": "NATIVE-BOUND-CANDIDATE-2026-10-28.json",
+  "approvalReady": true
 }

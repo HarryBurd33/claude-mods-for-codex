@@ -28,6 +28,14 @@ was approved and completed once; [inventory result](NATIVE-OBSERVATION-RESULT-20
 records app version and plugin name, unknown plugin version/state, and no existing
 CLI. It neither admits NM-1 nor starts consequential stage B contract work.
 
+## Stage B prepared envelope — 2026-10-28
+
+[Exact binding and independent review](NATIVE-BINDING-RESULT-2026-10-28.md) make the
+same single packet approval-ready for conditional NC-L1/NC-F1 only. The native host
+and candidate are selected and sealed; actual permission/trust/outcome gates remain
+after approval. No native action occurred. Stage B broader admission and excluded
+NM-1/routing/installation cases remain open. Earlier draft blockers below are history.
+
 ## Stage B contract draft — 2026-10-28
 
 The human selected Sol High for the [native contract review](NATIVE-CONTRACT-2026-10-28.md).

@@ -1,84 +1,111 @@
-# Consolidated native campaign packet — blocked review draft
+# Single native campaign approval packet
 
-**Not ready for execution approval.** Prepared under the current human instruction
-for Sol High native contract work. The [contract](NATIVE-CONTRACT-2026-10-28.md)
-and [manifest](NATIVE-CONTRACT-2026-10-28.json) are the exact review set.
-This packet grants no native action. Keep all current permissions and trust intact.
+**Approval-ready for a conditional human-supervised trial; not yet approved or run.**
+The independent read-only security review passed for the exact sealed artifacts.
+See [binding and verification result](NATIVE-BINDING-RESULT-2026-10-28.md) and
+[public candidate seal](NATIVE-BOUND-CANDIDATE-2026-10-28.json). The private operational
+copy supplies the complete resolved commands, cwd, paths and per-file hashes; retain
+it with the task checkpoint. No placeholders need execution or later interpretation.
 
-## Proposed narrow batch
+## One decision requested
 
-After all bindings and independent review below are complete, one decision would
-cover only NC-L1 (one interrupted response-only turn) and NC-F1 (one harmless
-nonzero-exit command turn). Maximum two new turns, each one attempt, no retries,
-children, history forks or model fallback. Intended task model is Sol High; no new
-API budget or paid fallback. One human-present window at most 15 minutes, with a
-90-second manual stop target per turn. Human stopping is not an enforced lifetime,
-network/output/token or billing cap; missing terminal acknowledgment is uncertain.
-Unused cases cannot be exchanged for extra prompts. Current chat remains selected.
+Approve one human-present window of at most **15 minutes**, starting before setup,
+with at most **three normal interactive CLI startups and two Sol High model turns**.
+No retries, children, fallback, paid API spending, background work or extra cases.
+The whole-window clock cannot be reset by beginning a turn. Ninety seconds per turn
+is a human stop target, not a hard lifetime, output or billing cap.
 
-The exact NC-L1 prompt would be: “Write the word READY once, then explain counting
-from one to one hundred in plain text. Use no tools or agents.” Human Stop once
-while active, aiming at five seconds; if it finishes first, record unavailable and
-no retry. NC-F1 would request: “Run exactly /usr/bin/false once, report its exit
-status, and stop. Do not use other tools, agents, files or network.” These instructions
-are task limits, not an enforced tool confinement mechanism. Normal native policy
-must remain authoritative. Neither prompt may be sent under this draft.
+The selected target is the previously reviewed local standalone official CLI0.164.0;
+its fresh on-disk digest matches the earlier reviewed entry. Native startup has not
+been repeated. A separate 40-file snapshot from `61a990a` supplies the hook component.
+No plugin install/update or source-cache substitution is proposed. New owned fixture
+project/data paths are bound, canonical and private; the registration artifact is
+staged outside the project and remains inactive.
 
-NC-H1 held-call, NC-R1 routing and NC-A1 authoring/install chain are excluded with
-zero turns/attempts. Completed Stop-only, UI, archive and inventory checks are
-excluded. Do not manufacture a native backend failure or invoke a destructive case.
+The new registration is **Interrupt only**, a three-second command hook, with its own
+per-command source/config/project/data environment. The config has no mods, ordinary
+metadata disabled, and only the Interrupt component observer selected. Stop and
+PostToolUse are neither registered nor captured by this lane. Existing installed31
+and inherited hooks/policy remain additive and unchanged.
 
-## Required bindings before a human can approve execution
+## Ordered stages and actual human gates
 
-| Binding | Required concrete artifact | Present state |
-| --- | --- | --- |
-| Host | Human-selected official entry; exact build/executable identity; local versus cloud orchestration and supported hook/tool path | Unknown; desktop26.1023.50603 report cannot supply a CLI or execution topology. |
-| Candidate | Immutable package path/hash and manifest, referenced Node/code, exact project/settings/data paths and byte-pinned config | Source baseline pinned only; no new trial installation prepared. Prior archive is dated source evidence. |
-| Registration | Supported install/update mechanism and exact owned Interrupt declaration, scope and separate retention opt-in diff; preservation/removal plan | Not prepared or approved. Preserve existing policy, selectors and unrelated hooks; no all-seven-events merge. |
-| Native argv | Fully resolved startup/registration/readback/cleanup argument vectors, child environment and cwd with reviewed access/side effects | Intentionally absent: no supported bound target, and native inspection/routing runners remain closed. Placeholders must never be executed. |
-| Permissions | Actual applicable sandbox/reviewer/managed rules and same settings before/after | Unknown for the future target. No override, elevation, auto approval, hooks suppression, trust migration or policy repair authorized. |
-| Independent gate | Astra Ultra review of exact consequential artifacts and remaining security/architecture choices | Pending; no reviewer dispatched and no approval inferred from prior source reviews. |
+1. **Owned setup:** isolated bound Python verifies the sealed source/runtime/config
+   and preserved cache baseline, opens the one-use original clock, and exclusively
+   creates only the owned project declaration. It never writes native user config or
+   trust. Existing destination, input drift or unknown state stops the batch.
+2. **Review startup, zero prompts:** exact normal CLI argv binds both OS cwd and -C,
+   and selects Sol High. It contains no sandbox, reviewer or approval-policy override,
+   global trial environment or relocated CODEX_HOME. Human confirms the actual local
+   project/model and supported display of compatible unchanged native permissions.
+   If those limits cannot be established or would be weaker, stop without changing
+   them. Review/trust only the exact owned hook and referenced code/config through
+   the advertised native control. Exit without a model prompt. Verify preservation.
+3. **Trial startup:** after actual human review/trust confirmation, begin the fresh
+   empty-data attempt window without extending the original clock, then reopen the
+   same command. Submit NC-L1: “Write the word READY once, then explain counting from
+   one to one hundred in plain text. Use no tools or agents.” Stop once while active,
+   aiming at five seconds. Completion first, ambiguous terminal state or unexpected
+   activity ends the batch with no retry. While the owned CLI is idle after confirmed
+   terminal interruption, one bounded selected-data read must report exactly one
+   canonical Interrupt/time record in its fresh bucket. Missing, duplicate, malformed,
+   changing or out-of-window data ends the batch; no NC-F1.
+4. **Conditional NC-F1 in the same trial session:** only after both L1 gates pass,
+   submit “Run exactly /usr/bin/false once, report its exit status, and stop. Do not
+   use other tools, agents, files or network.” Require the visible actual final command
+   and exit1; the typed prompt or model report alone is insufficient because inherited
+   hooks may mutate input. Missing evidence stays unverified, with no retry. This is
+   command-outcome observation, not a complete failure subscription or PostToolUse
+   test. Decline unexpected native approval and stop. Exit the owned CLI.
+5. **Owned removal and readback:** after human confirmation of CLI exit and reconciled
+   work, verify config/cache preservation and remove only the exact unchanged owned
+   declaration through descriptor/hash checks. Keep source, config, project, data and
+   native trust records. A third startup, zero prompts, may verify the owned declaration
+   absent through the supported native hook view, then exit. The clock guard refuses
+   startup after expiry; necessary safe removal can finish, with readback unverified.
 
-Missing bindings stop the whole batch before startup. Do not treat approval of
-this draft, a package hash or the earlier accepted C/manual-supervision design as
-satisfying them. Existing ancestor checker failures are preserved, not worked around.
-No new config/credential/session scan or native inspection is authorized to fill gaps.
+The exact private command copy includes the clock guards, isolated interpreter,
+exclusive creation, one-use result handling, refusal labels and cleanup commands.
+Its reviewed hash is pinned in the public seal. An unchanged hash identifies the
+reviewed artifact; it does not establish human approval or actual native trust.
 
-## Access and side effects to review in the bound revision
+## Permissions, privacy and residual effects
 
-Ordinary native startup may read authentication/configuration and write local state,
-refresh catalog/plugin data or communicate with remote services. New names and an
-empty project do not prevent that. No private API, relocated CODEX_HOME, copied
-credentials/trust or internal remote-control flag is proposed. Current no-change
-permission scope cannot be traded for a supposedly cleaner profile. Explicitly list
-actual source/config/data reads, metadata writes, processes and startup network
-uncertainty before requesting approval. An extension has OS-user authority separate
-from a model sandbox. A response-only prompt does not technically exclude all tools.
+Native permissions and managed controls remain authoritative. Accepted C installation
+trust/manual supervision is reused; no old ancestor checker or closed inspection/
+routing driver is changed or bypassed. No private API, internal remote-control flag,
+credential/trust copy, inherited-hook suppression or automatic approval is proposed.
 
-Retain only event/time/categorical outcome and per-case preservation/terminal flags
-in the selected private scope; no raw commands, event envelopes, transcripts, paths,
-identifiers, credentials or screenshots in public results. Native host transcript
-and ordinary startup retention are separate effects and must be disclosed, not
-claimed absent. Retained data deletion is outside this proposed batch.
+Normal startup can read authentication/configuration, write local state/trust/project
+selections, refresh catalogs/plugins/network and resolve remote-control enrollment.
+It is not isolated or write-free. The hook receives the full native envelope in memory
+with OS-user authority; only event/time is retained by this component. Session hashes
+are not anonymity or reception isolation. Ordinary native transcripts/startup retention
+are separate effects. No other work may use this fixture during the batch.
 
-## Stop, cleanup and acceptance
+Only new exact typed owned project trust-level and hook trusted-hash leaves are allowed
+by the config preservation check; prior leaves and empty-table structure must match.
+The selected251-file cache byte cohort is checked separately. Drift means stop and
+preserve evidence, never shared-config restoration or cache repair. These comparisons
+do not prove loaded trust, remote inactivity or all startup-state preservation.
 
-Stop at changed hashes/config/policy, missing host or scoped event support, unexpected
-input/trust/approval request, unexpected tool/agent/model, window expiry, unknown
-outcome or failed preservation. Do not answer an unexpected native request or retry.
-Use only supported Stop/cancel for the owned turn; terminal state is separate from
-an accepted cancellation request. Do not kill user clients or claim remote/descendant
-closure from a closed panel or reaped parent.
+## Stop, exclusions and acceptance limits
 
-Before any cleanup, reconcile active owned work. Remove/disable only unchanged
-owned additions through the reviewed supported mechanism; preserve changed/unknown
-files for review. Keep unrelated configuration, trust, installed31 evidence and
-retained data. No shared-config restoration, cache editing, stale-lock stealing or
-recursive deletion. Readback of supported host state and byte comparisons must
-show what was preserved; inability to establish closure is reported unverified.
+Stop at drift, missing supported controls, unknown/weak policy, unrelated trust/auth/
+approval requests, unexpected tool/agent/model/remote work, deadline or ambiguous
+outcome. Task instructions are not a technical tool-admission gate. Stop cannot undo
+already admitted effects. Reconcile uncertain work before cleanup or lease release;
+never kill user clients, steal locks, recursively delete data or automatically retry.
 
-Accept each case only against the manifest's distinct observations and cleanup.
-A single event count is not a unique turn or complete failure/cancellation proof.
-No full product, native Windows/platform, held-call or routing checkmark follows.
-Publication permission covers sanitized verified GitHub progress, not releases,
-packages/tags, installs, new native execution or weakened permissions.
+NC-L1 requires human terminal evidence plus the selected event, separately. Empty
+observer output is verified source behavior, not captured native wire-output evidence.
+NC-F1 requires actual visible command/result. Interruption acknowledgment, terminal
+turn, CLI exit, descendant closure and remote billing/cancellation remain distinct.
+No global isolation, exact billing, unique-producer or full failure guarantee follows.
+
+Completed Stop/UI/archive/inventory checks are excluded. Held-call NM-1, routing,
+app-server inspection, plugin installation/authoring chain and platform acceptance
+retain zero attempts. No package/release/tag publication is covered. Publish only
+sanitized categorical results, preserving explicit unavailable and unverified facts.
+The packet's preparation and independent review authorize no native execution; an
+explicit human approval of this complete packet is still required.

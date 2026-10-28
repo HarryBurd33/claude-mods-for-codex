@@ -1,5 +1,12 @@
 # Requirements ledger
 
+## Bound native packet — 2026-10-28
+
+[Prepared bindings and independent security review](NATIVE-BINDING-RESULT-2026-10-28.md)
+pass conditional packet readiness. No native trials/permission changes; human
+approval and actual native readback/trust remain gates. No disposition changes.
+
+
 ## Native contract draft — 2026-10-28
 
 [Sol High review](NATIVE-CONTRACT-2026-10-28.md) separates lifecycle interruption,
