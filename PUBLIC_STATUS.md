@@ -1,11 +1,12 @@
 # Public status — incomplete development project
 
-2026-10-27 project date. Source **0.2.0-dev.39 is disabled/uninstalled**;
+2026-10-28 project date. Source **0.2.0-dev.39 is disabled/uninstalled**;
 previously approved user-profile **0.2.0-dev.31** is preserved. No fresh installed-host
 inventory is implied. MIT; independent of Anthropic and OpenAI.
 
 | Milestone | Evidence and limits |
 | --- | --- |
+| [Offline archive verification](docs/continuation/OFFLINE-ARCHIVE-2026-10-28.md) | Exact `3e5c874` development archive: 386 files equal Git blobs, manifest/integrity verified, fresh extraction with spaces; 28 selected tests pass/1 Windows-only skip, 3 mods valid, 4 fixtures replayed. Private archive, no package publication/install or new native acceptance. |
 | [Sol A/C/B milestone](docs/continuation/SOL-ABC-IMPLEMENTATION-2026-10-27.md) | Corrected source `f9af0cb` CI40557201530: **all 7 jobs passed**. Each Windows lane passed25 storage/97 process checks; both modern installed-image digest positives accepted. Local392pass/123skips. Independent Astra diff review passed; prior failed source/run preserved. This is bounded proof/CI acceptance, not production Windows or native-host acceptance. |
 | [Astra CI contract review](docs/continuation/ASTRA-CI-CONTRACT-2026-10-27.md) | Historical baseline `8219ca2` CI: 3 jobs pass, 4 fail. Mac EPERM, Windows image-policy/layout and metadata deadlines motivated the reviewed finite A/C/B contracts. Their subsequent implementation/result is above. |
 | [Earlier bounded CI work](docs/continuation/CI-REPAIR-2026-10-27.md) | Diagnostics/owned-fixture isolation: local377pass/115skips; earlier cccb487 CI5jobs pass/2Windows NTFS fail.379-file development archive matches that source. Later failures above show the Mac issue was not reliably fixed. |
@@ -30,10 +31,10 @@ and completed once. Further native scopes still need a concrete consolidated pac
 that one-use result does not authorize another run.
 No automatic approval, hidden prompt/model change, app patch or private-daemon shortcut.
 
-Current: human-requested **GPT-6.1 Sol High** implementation, with independent
-**GPT-6 Astra Ultra** review before Windows CI. The bounded milestone above passed
-its corrected-source CI. Next: **GPT-6.1 Sol Medium** for routine offline development
-archive/documentation verification. The
+The human-requested **GPT-6.1 Sol High** implementation and independent
+**GPT-6 Astra Ultra** review passed the bounded corrected-source CI milestone.
+The **GPT-6.1 Sol Medium** offline archive/documentation follow-up is now verified
+within the limits above. Native acceptance and final release remain open. The
 [consolidated macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md) remains open.
 The previous no-network restriction is superseded for authorized GitHub progress
 publication. Private checkpoints, machine bindings, grants and raw logs are excluded.
