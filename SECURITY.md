@@ -1,11 +1,11 @@
 # Security policy
 
-Source20 POSIX state acquisition uses a1000ms no-observed-handoff allowance and
-2500ms total checked budget. Only validated private lock-object identity changes
-may extend contention waiting; no stale-lock stealing, event retry or additional
-persisted metadata. Pending filesystem IO/critical-section sync is not universally bounded
-by that schedule. Windows policy and installed dev10 are unchanged. See
-[review](docs/continuation/DEV20-REVIEW.md).
+Current development status and dated evidence are in [PUBLIC_STATUS.md](PUBLIC_STATUS.md).
+Source dev39 remains disabled/uninstalled; the latest human inventory did not
+establish the installed plugin version or effective hook profile. Held-call NM-1
+and production Windows project/Git/restore admission remain gated. Native Codex
+permissions, sandboxing and trust checks remain authoritative. Completed trial
+grants and read-only inventory windows cannot authorize another run.
 
 ## Supported versions
 
@@ -71,3 +71,15 @@ values stay unavailable and default zero counters are not evidence of free use.
 The original blast-radius example is disabled by default, lexical and deny-only.
 It neither measures target scope nor approves/holds calls; documented misses and
 false positives remain. See [impact and usage](docs/impact-and-usage.md).
+
+## Historical source20 lock-budget note
+
+This dated note describes its source cohort; installed dev10 is historical, not a
+current host inventory. Later evidence is indexed above.
+
+Source20 POSIX state acquisition uses a1000ms no-observed-handoff allowance and
+2500ms total checked budget. Only validated private lock-object identity changes
+may extend contention waiting; no stale-lock stealing, event retry or additional
+persisted metadata. Pending filesystem IO/critical-section sync is not universally bounded
+by that schedule. Windows policy and installed dev10 are unchanged. See
+[review](docs/continuation/DEV20-REVIEW.md).

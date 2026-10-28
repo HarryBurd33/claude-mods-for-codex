@@ -21,15 +21,22 @@ after actual human trust and one supervised response. The unchanged trial declar
 was removed; data/trust were retained and qualified installed31 preservation passed.
 
 Remaining work: native lifecycle/failure/cancel and held-call/configured-agent routing;
-screen reader, enlarged zoom, panel reopening and Watch teardown; one complete
-candidate author/install/trust/effect/update/remove workflow; Windows security and
-actual Windows/Linux/WSL acceptance; then a frozen candidate and release verification.
+VoiceOver, exact 200% zoom, an independent quiet-close case and backend cancellation;
+one complete candidate author/install/trust/effect/update/remove workflow; Windows
+security and actual Windows/Linux/WSL acceptance; then frozen-candidate release
+verification. The [completed UI continuation](docs/continuation/UI-CONTINUATION-RESULT-2026-10-28.md)
+accepted seven bounded cases; do not repeat them. The later
+[human inventory](docs/continuation/NATIVE-OBSERVATION-RESULT-2026-10-28.md) reported
+app version 26.1023.50603 and the plugin name, with plugin version/state unknown and
+no existing CLI. It does not refresh the historical installed31 version evidence.
 The [93-requirement plan](docs/continuation/COMPLETION-PLAN.md) retains
 60V/14B/12A/3U/4P narrow dispositions, not completion percentages.
 
-The current [bounded CI repair](docs/continuation/CI-REPAIR-2026-10-27.md) runs on the
-human-requested GPT-6.1 Sol High: fixed-peer cleanup diagnostics and an evidence-backed
-Git2.56 layout finding, with all existing guards and mandatory positives retained.
+The [completed A/C/B milestone](docs/continuation/SOL-ABC-IMPLEMENTATION-2026-10-27.md)
+records seven passing exact-source CI jobs for `f9af0cb`, following reviewed Sol High
+implementation and independent Astra review. Earlier failed runs remain recorded.
+Current bounded follow-up uses human-selected Sol Medium; consequential native
+contracts retain the [campaign review gates](docs/continuation/ACCEPTANCE-CAMPAIGN-2026-10-28.md).
 The broader [macOS milestone](docs/continuation/SOL-ULTRA-MILESTONE.md) remains open.
 The accepted C/manual-supervision design is retained; later native scopes still need
 their concrete approval packet. GitHub progress publication is now authorized;

@@ -1,5 +1,36 @@
 # Review status
 
+## Current evidence and authority — 2026-10-28
+
+Use the [current evidence index](../PUBLIC_STATUS.md) and
+[acceptance campaign](continuation/ACCEPTANCE-CAMPAIGN-2026-10-28.md) for remaining work.
+The [A/C/B result](continuation/SOL-ABC-IMPLEMENTATION-2026-10-27.md) records seven passing
+CI jobs for exact source `f9af0cb`; this does not establish native-host acceptance.
+The [UI continuation](continuation/UI-CONTINUATION-RESULT-2026-10-28.md) accepted seven
+bounded cases, with three unverified cases and backend cancellation unverified.
+The [read-only inventory](continuation/NATIVE-OBSERVATION-RESULT-2026-10-28.md) supplied a
+human-reported app version and plugin name; installed plugin version/state remain
+unknown and no CLI was running. Saved installed31 evidence is historical; source
+dev39 remains disabled/uninstalled.
+
+Phase 1 and the separate supervised Stop trial completed once; their grants are
+consumed. The UI and inventory windows are also spent. Do not repeat them from
+old instructions below. Native permissions and trust remain unchanged. Held-call
+NM-1, native routing, lifecycle/cancellation, full authoring and platform/release
+gates remain open; all 93 ledger dispositions are unchanged.
+
+The current human assignment is Sol Medium for bounded unblocked work. The campaign
+assigns consequential native contracts to Sol High with the applicable independent
+review gate. No model switch, new native action or automatic continuation follows
+from this document. Any new native batch needs one concrete consolidated approval
+packet. Private root HANDOFF.md and checkpoint data remain local.
+
+## Historical snapshots — evidence only
+
+Everything below records its dated state, including old “current,” “next,” unused-
+grant and model directions. Those directions are superseded by the summary above
+and current human authorization; historical evidence and failures are retained.
+
 ## Current Astra milestone — 2026-10-26
 
 [Astra runtime review](continuation/ASTRA-RUNTIME-REVIEW.md) resolves the external

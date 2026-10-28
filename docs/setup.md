@@ -6,37 +6,26 @@ tools**, then find the **Review desk** group. A different selected view is not
 an installation or trust failure. The [panel diagnosis](continuation/PANEL-DIAGNOSIS-2026-10-28.md)
 verified this navigation recovery on the existing panel without an update.
 
-Current2026-10-24: [source31 package/update](continuation/PACKAGE-DEV31.md)
-verified251files/79passes+1Windows skip. Human authorized local Review desk and
-reviewed3hooks; restart/native31 pending. Logging/rules/exports/status preserved,
-Windows guards unchanged/original bounds unresolved. Exact source CI four246-pass
-POSIX lanes/portable success plus known Windows image failures. Stay Sol Medium
-for native acceptance; High before consequential changes. Earlier dated notes are historical.
+## Current installation evidence and approval boundary
 
-
-Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)
-passed for the selected synthetic outcome tool/table, six owned views and harmless
-ordinary pre-hook behavior. Logging scope/settings/trust selection/fixture remain
-unchanged; optional lifecycle capture off, no extra model/API run or cleanup.
-Earlier restart-pending statements below are historical; wider lifecycle/platform
-acceptance remains incomplete. Next High before broader component authoring.
-
-
-Current native follow-up: [dev26 restart acceptance](continuation/NATIVE-DEV26.md)
-verified the bounded hooks/owned UI and one explicitly authorized active-Watch
-update. No configuration/trust/scope/production cleanup changes; optional events
-off and the extra run grant consumed. Broader lifecycle/platform limits remain.
-
+Source dev39 is disabled/uninstalled. The preserved installed31 record is dated
+history; the [latest human inventory](continuation/NATIVE-OBSERVATION-RESULT-2026-10-28.md)
+reported only the plugin name, with version/state unknown and no existing CLI.
+Do not infer the installed version from this checkout or use the old restart-
+pending notes as an instruction to repeat completed UI checks. See the
+[current status](../PUBLIC_STATUS.md) and [acceptance campaign](continuation/ACCEPTANCE-CAMPAIGN-2026-10-28.md).
+New installation, trust or native trials require their own concrete approved packet.
+The setup procedure below is reference material, not approval to perform it.
 
 This development package uses **only `.codex-plugin/plugin.json`**. Released Codex CLI 0.163.0 and 0.164.0 skip bundled hooks when a schema-recognized root `plugin.json` selects the portable format. Do not restore the old root manifest or add it beside the compatibility manifest. Paths in the compatibility manifest resolve from the package root. See the release-source evidence and observed inventory correction in [Codex contracts](continuation/CODEX-CONTRACTS.md#released-hook-packaging-contradicts-portable-documentation).
 
-The installed reviewed source27 package is `0.2.0-dev.27` (separately selected private command/turn export summaries, retained POSIX selected-scope retention CLI and unintegrated Windows proofs), a development checkpoint, not a completed product release. Its registered components include the session notice, lexical guard, opt-in metadata journal/state, exact-command replacement and management skill, plus the local dashboard MCP service. Default configuration does not enable replacement or metadata storage. See [runtime access](runtime.md) before configuring its project/session scope. The included `proofs/` directory contains separate development harnesses and the unintegrated Windows OS proof. Installing the main package does not register those proof servers, panels, probes or an arbitrary execution tool. Actual host results and remaining blockers are recorded in the [continuation test log](continuation/TEST-LOG.md).
+The historical reviewed source27 package was `0.2.0-dev.27` (separately selected private command/turn export summaries, retained POSIX selected-scope retention CLI and unintegrated Windows proofs), a development checkpoint, not a completed product release. Its registered components include the session notice, lexical guard, opt-in metadata journal/state, exact-command replacement and management skill, plus the local dashboard MCP service. Default configuration does not enable replacement or metadata storage. See [runtime access](runtime.md) before configuring its project/session scope. The included `proofs/` directory contains separate development harnesses and the unintegrated Windows OS proof. Installing the main package does not register those proof servers, panels, probes or an arbitrary execution tool. Actual host results and remaining blockers are recorded in the [continuation test log](continuation/TEST-LOG.md).
 
-Configured macOS27 is installed with217verified cache files and three personally
+Historical macOS27 was installed with217verified cache files and three personally
 reviewed/trusted hooks; native inventory has zero errors/model turns. Human selected
 only the public359-byte synthetic observation fixture in a new settings copy;
 existing logging scope/rules/data/usage selection remain unchanged, optional
-lifecycle reception/storage off. **Desktop restart/native27 acceptance pending.**
+lifecycle reception/storage off. **At that date, desktop restart/native27 acceptance was pending.**
 Reviewed26/10 retained for selective rollback. [Package/install record](continuation/PACKAGE-DEV27.md).
 Earlier26bounded native results remain version-specific. Source edits alone never
 update caches or establish trust; no extra model run or production cleanup occurred.
@@ -125,3 +114,29 @@ codex plugin add claude-mods-for-codex@claude-mods-local --json
 `codex plugin marketplace upgrade` refreshes configured **Git** marketplace snapshots; it is not a local-source hot-reload command. The explicit remove/add sequence above is a conservative local update path. A versioned immutable local snapshot followed by `codex plugin add` also updated the installed fixture on CLI0.163.0; verify the actual new cache/version/trust before claiming success. Removal and data retention are covered in [removal and rollback](removal.md).
 
 References: [official packaging guide](https://developers.openai.com/plugins/build/plugins), [official hooks guide](https://learn.chatgpt.com/docs/hooks), and [released compatibility manifest parser](https://github.com/openai/codex/blob/83086188ae0614bd882818ff1aa23f3194962012/codex-rs/core-plugins/src/manifest.rs).
+
+## Historical installation notes — superseded stage directions
+
+These dated observations retain their original wording; “current,” pending restart
+and model directions here do not override the current evidence above.
+
+Current2026-10-24: [source31 package/update](continuation/PACKAGE-DEV31.md)
+verified251files/79passes+1Windows skip. Human authorized local Review desk and
+reviewed3hooks; restart/native31 pending. Logging/rules/exports/status preserved,
+Windows guards unchanged/original bounds unresolved. Exact source CI four246-pass
+POSIX lanes/portable success plus known Windows image failures. Stay Sol Medium
+for native acceptance; High before consequential changes. Earlier dated notes are historical.
+
+
+Current native27 follow-up: [bounded post-restart checks](continuation/NATIVE-DEV27.md)
+passed for the selected synthetic outcome tool/table, six owned views and harmless
+ordinary pre-hook behavior. Logging scope/settings/trust selection/fixture remain
+unchanged; optional lifecycle capture off, no extra model/API run or cleanup.
+Earlier restart-pending statements below are historical; wider lifecycle/platform
+acceptance remains incomplete. Next High before broader component authoring.
+
+
+Current native follow-up: [dev26 restart acceptance](continuation/NATIVE-DEV26.md)
+verified the bounded hooks/owned UI and one explicitly authorized active-Watch
+update. No configuration/trust/scope/production cleanup changes; optional events
+off and the extra run grant consumed. Broader lifecycle/platform limits remain.
