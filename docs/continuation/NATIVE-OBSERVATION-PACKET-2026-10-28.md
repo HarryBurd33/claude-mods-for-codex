@@ -1,6 +1,7 @@
 # Consolidated existing-client observation packet
 
-Status: proposed; human approval pending. Prepared for human-selected Sol Medium.
+Status: human approved and completed once; window spent. See the
+[result](NATIVE-OBSERVATION-RESULT-2026-10-28.md). Prepared for human-selected Sol Medium.
 Source baseline: `6fa33e0cade140ae8c24b53bbc29f54ee85f00a0`, dev39.
 See [source evidence](NATIVE-READINESS-MANIFEST-2026-10-28.json) and
 [readiness result](NATIVE-READINESS-RESULT-2026-10-28.md).

@@ -1,5 +1,12 @@
 # Requirements ledger
 
+## Human existing-client inventory — 2026-10-28
+
+[Inventory result](NATIVE-OBSERVATION-RESULT-2026-10-28.md): app name/version and
+plugin name reported; plugin version/state unknown, hook inventory unavailable
+because no CLI was running. One approved read-only window completed; no native
+trial or permission change. No requirement dispositions changed.
+
 ## Source readiness preparation — 2026-10-28
 
 [Readiness result](NATIVE-READINESS-RESULT-2026-10-28.md): 16 source pins and the

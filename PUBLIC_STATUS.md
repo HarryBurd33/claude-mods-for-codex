@@ -1,9 +1,15 @@
 # Public status — incomplete development project
 
+[Existing-client inventory](docs/continuation/NATIVE-OBSERVATION-RESULT-2026-10-28.md)
+completed within the approved window: human reported app26.1023.50603 and the
+Claude Mods for Codex entry. Plugin version/state unknown; no existing CLI, so
+hook inventory unavailable. No native trial or permission change; admission gates
+and all93 dispositions unchanged.
+
 [Native-readiness preparation](docs/continuation/NATIVE-READINESS-RESULT-2026-10-28.md):
 16 source pins verified, offline eight-tool contract observed, optional review
 still disabled and routing closed. One consolidated existing-client observation
-packet awaits approval; no native action or permission change. Completed UI and
+packet was subsequently approved and completed with the limited result above. Completed UI and
 archive checks were reused. Native admission and full completion remain open.
 
 

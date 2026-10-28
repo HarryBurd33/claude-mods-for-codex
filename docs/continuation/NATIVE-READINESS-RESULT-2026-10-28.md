@@ -22,7 +22,8 @@ loaded source version remains unknown. Source dev39 and historical installed31
 must not be conflated. No full effective-hook profile is established by this audit.
 
 The [single observation packet](NATIVE-OBSERVATION-PACKET-2026-10-28.md) is ready
-for human approval. It permits only bounded readings from already-open supported
+for human approval at preparation time. It was subsequently approved and
+[completed once](NATIVE-OBSERVATION-RESULT-2026-10-28.md). It permits only bounded readings from already-open supported
 client surfaces, with no settings, trust, installation or model activity. Nothing
 in this result approves or performs those observations. NM-1, native routing,
 lifecycle/cancellation, full authoring lifecycle and remaining platform acceptance

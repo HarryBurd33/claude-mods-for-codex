@@ -24,8 +24,9 @@ the subsequent navigation diagnosis found Review desk under Authored local tools
 
 The next Medium milestone is the [source-readiness result](NATIVE-READINESS-RESULT-2026-10-28.md)
 and its pinned manifest. One [existing-client observation packet](NATIVE-OBSERVATION-PACKET-2026-10-28.md)
-is proposed for approval. It neither admits NM-1 nor starts the consequential
-stage B contract work.
+was approved and completed once; [inventory result](NATIVE-OBSERVATION-RESULT-2026-10-28.md)
+records app version and plugin name, unknown plugin version/state, and no existing
+CLI. It neither admits NM-1 nor starts consequential stage B contract work.
 
 ## Milestones, dependencies and acceptance gates
 
@@ -40,8 +41,9 @@ stage B contract work.
 
 ## Immediate remaining prerequisite
 
-Reconcile source and installed-host identity using the proposed read-only packet
-only after human approval. Missing supported surfaces stay unavailable. Do not
+The approved read-only packet is spent. Installed plugin version/state and the
+effective hook profile remain unknown after the bounded inventory. Missing
+supported surfaces stay unavailable. Do not
 launch another client or infer the complete effective-hook profile from a visible
 list. Consequential native contracts remain stage B work with its review gate.
 
