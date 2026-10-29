@@ -1,12 +1,15 @@
-# Fresh native campaign packet — revision3
+# Spent native campaign packet — revision3
 
-**Independent conditional security review passed. Fresh human approval is pending;
-no native action is authorized.**
+**Historical reviewed packet: approved once, expired, owned hook removed and cleanup
+verified. No restart or further native action is authorized.** See the
+[revision3 cleanup result](NATIVE-V3-EXPIRED-CLEANUP-2026-10-29.md). The preparation
+and proposed steps below are retained as history, not a current approval request.
 Revision2 and all prior execution windows remain spent. [Read-only reconciliation](CONFIG-RECONCILIATION-2026-10-29.md)
 accounts for the exact two changed environment leaves; the [revision3 seal](NATIVE-CONFIG-V3-2026-10-29.json)
 binds fresh private paths/windows, current service identities and the unchanged helpers.
 The exact private revision3 command packet remains a required checkpoint artifact.
-No declaration is registered, no clock is open and no client has started.
+At preparation time no declaration was registered, no clock was open and no client
+had started. The later human review launch and expired cleanup are recorded above.
 
 ## Required informed acceptance before any startup
 
@@ -40,7 +43,7 @@ module, metadata, source and semantic config bindings, then checks the original
 clock. Failure prevents launch. A previous successful startup is not a new binding
 or permission to run changed files.
 
-## One decision requested
+## Historical decision requested
 
 Approve one human-present window of at most **15 minutes**, starting before setup,
 with at most **three normal interactive CLI startups and two Sol High model turns**.
@@ -142,5 +145,7 @@ Completed Stop/UI/archive/inventory checks are excluded. Held-call NM-1, routing
 app-server inspection, plugin installation/authoring chain and platform acceptance
 retain zero attempts. No package/release/tag publication is covered. Publish only
 sanitized categorical results, preserving explicit unavailable and unverified facts.
-The packet's preparation and independent review authorize no native execution; an
-explicit human approval of this complete packet is still required.
+Preparation and independent review alone authorized no native execution. The human
+later approved this packet once; that window is now spent. These retained steps
+must not be reused for a restart. Future native work requires a fresh reviewed packet
+and new approval.

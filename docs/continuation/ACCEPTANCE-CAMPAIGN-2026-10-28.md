@@ -28,6 +28,16 @@ was approved and completed once; [inventory result](NATIVE-OBSERVATION-RESULT-20
 records app version and plugin name, unknown plugin version/state, and no existing
 CLI. It neither admits NM-1 nor starts consequential stage B contract work.
 
+## Revision3 expired; cleanup verified — October29
+
+The [revision3 cleanup result](NATIVE-V3-EXPIRED-CLEANUP-2026-10-29.md) records human
+CLI closure with no prompts, absent owned hook, empty data, matching sealed source
+and cache, and no selected CLI/project process match. One unrelated added project
+trust leaf still fails the baseline check and was retained; current config bytes
+were unchanged. The exact receipted collector service is disabled and unloaded.
+No trial restart, fresh native readback or new acceptance is claimed. The approved
+window is spent; current scope is verification/publication only.
+
 ## Revision3 reconciled preparation — October29
 
 [Read-only config reconciliation](CONFIG-RECONCILIATION-2026-10-29.md) proves the

@@ -1,5 +1,9 @@
 # Two configuration differences reconciled — October29,2026
 
+Historical preparation result. The later [revision3 expired cleanup](NATIVE-V3-EXPIRED-CLEANUP-2026-10-29.md)
+verified owned-hook absence and preservation, while retaining a newly added unrelated
+project trust leaf that fails the baseline check. The window is spent; no restart.
+
 Read-only reconciliation identifies exactly two changed semantic leaves relative
 to the revision2 preparation baseline:
 

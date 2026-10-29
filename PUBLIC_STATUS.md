@@ -1,5 +1,13 @@
 # Public status — incomplete development project
 
+[Revision3 expired cleanup](docs/continuation/NATIVE-V3-EXPIRED-CLEANUP-2026-10-29.md) verified October29:
+owned hook absent, exact CLI/project process unmatched, data empty and sealed
+source/cache preserved. The baseline config check still refuses one unrelated added
+project trust leaf; it was retained. Current config bytes and native permissions
+were unchanged by verification. The exact receipted collector service is now disabled
+and unloaded. No trial restart; approval spent. All93 dispositions are unchanged.
+Earlier packet-readiness entries below are historical and grant no new execution.
+
 [Revision3 reconciliation](docs/continuation/CONFIG-RECONCILIATION-2026-10-29.md): exactly two environment leaves track
 browser app metadata and a single module-path version substitution. Independent
 review passes fresh-packet approval readiness with inherited MCP startup exposure
