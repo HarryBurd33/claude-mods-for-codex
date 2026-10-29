@@ -69,11 +69,11 @@
   "gates": {
     "G-HOST": "prepared: exact selected local CLI/runtime digests/cwd; actual permission/locality/project readback remains mandatory after approval",
     "G-CANDIDATE": "prepared:40file Git snapshot and Interrupt-only component config, private fixture and exactseal; no plugin install",
-    "G-REGISTRATION": "exactunchangedownedv2declarationremoved afterclosure. Currentconfigretained despitebaseline drift. Native removalreadback unverified.",
+    "G-REGISTRATION": "fresh v3 exact component declaration prepared, no registration/window/native startup",
     "G-NM1": "blocked: complete stable effective non-mutating covered-hook set absent",
     "G-ROUTING": "blocked: native inspection/routing entries unconditionally refuse; no native inspection transport in inspection-driver",
-    "G-REVIEW": "revision2 independent conditional readiness passed after native-shaped format regressions",
-    "G-APPROVAL": "revision2 spent, no retry or restart"
+    "G-REVIEW": "independent v3 conditional approval readiness passed, unknown codeprovenance/equivalence/dependencies disclosed",
+    "G-APPROVAL": "fresh v3 informed approval before inherited MCP startup, actual native human gates before prompts"
   },
   "cases": [
     {
@@ -173,9 +173,10 @@
   "fullProductComplete": false,
   "boundPacket": "NATIVE-CAMPAIGN-PACKET-2026-10-28.md",
   "boundCandidate": "NATIVE-BOUND-CANDIDATE-2026-10-28.json",
-  "approvalReady": false,
-  "approvalState": "revision2 approved once,expired,and safelycleaned with no trialprompts",
+  "approvalReady": true,
+  "approvalState": "revision3 prepared and independently reviewed, fresh informed human approval pending, old approvals spent",
   "batchResult": "NATIVE-BATCH-RESULT-2026-10-28.md",
-  "nextPreparedPacketRevision": "NATIVE-TRUST-FORMAT-V2-2026-10-28.json",
-  "latestCleanup": "NATIVE-V2-EXPIRED-CLEANUP-2026-10-29.md"
+  "nextPreparedPacketRevision": "NATIVE-CONFIG-V3-2026-10-29.json",
+  "latestCleanup": "NATIVE-V2-EXPIRED-CLEANUP-2026-10-29.md",
+  "configurationReconciliation": "CONFIG-RECONCILIATION-2026-10-29.md"
 }

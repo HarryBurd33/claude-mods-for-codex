@@ -1,5 +1,11 @@
 # Requirements ledger
 
+[Revision3 reconciliation](CONFIG-RECONCILIATION-2026-10-29.md): exactly two environment leaves track
+browser app metadata and a single module-path version substitution. Independent
+review passes fresh-packet approval readiness with inherited MCP startup exposure
+and unknown provenance/code equivalence disclosed. Five new next-drift checks pass;
+helpers unchanged. No live settings/permission writes, native action or93-ledger change.
+
 [Expired revision2 batch cleanup](NATIVE-V2-EXPIRED-CLEANUP-2026-10-29.md) verified October29:
 selected CLI absent, exact owned declaration removed, data empty and cache cohort
 unchanged. Two preparation-baseline config differences were retained; cleanup itself

@@ -28,6 +28,15 @@ was approved and completed once; [inventory result](NATIVE-OBSERVATION-RESULT-20
 records app version and plugin name, unknown plugin version/state, and no existing
 CLI. It neither admits NM-1 nor starts consequential stage B contract work.
 
+## Revision3 reconciled preparation — October29
+
+[Read-only config reconciliation](CONFIG-RECONCILIATION-2026-10-29.md) proves the
+two exact string-level changes. The fresh packet passed independent conditional
+security review; informed approval must precede current inherited MCP startup.
+No native action, live config write or old-check rerun occurred. Helpers remain
+unchanged and later drift still aborts. Old approvals remain spent; no new approval
+or native outcome is inferred from this preparation.
+
 ## Revision2 expired and safely cleaned — October29
 
 The [cleanup result](NATIVE-V2-EXPIRED-CLEANUP-2026-10-29.md) verifies exact owned

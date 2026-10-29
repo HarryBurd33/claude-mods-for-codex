@@ -1,27 +1,44 @@
-# Fresh native campaign packet — revision2
+# Fresh native campaign packet — revision3
 
-## Revision2 execution approval spent
+**Independent conditional security review passed. Fresh human approval is pending;
+no native action is authorized.**
+Revision2 and all prior execution windows remain spent. [Read-only reconciliation](CONFIG-RECONCILIATION-2026-10-29.md)
+accounts for the exact two changed environment leaves; the [revision3 seal](NATIVE-CONFIG-V3-2026-10-29.json)
+binds fresh private paths/windows, current service identities and the unchanged helpers.
+The exact private revision3 command packet remains a required checkpoint artifact.
+No declaration is registered, no clock is open and no client has started.
 
-The approved window expired. The human reports one review launch and no model
-prompts. [Verified October29 cleanup](NATIVE-V2-EXPIRED-CLEANUP-2026-10-29.md) removed
-only the unchanged owned declaration; no trial or new startup occurred. Configuration
-drift was retained without restoration. No retry or restart is authorized. The
-preparation and proposed execution text below is historical, not current authority.
+## Required informed acceptance before any startup
 
+The browser app-version value changed from26.1023.50603 to26.1023.51421. Current
+version matches app bundle metadata. The whole old trusted-service map hash is
+reconstructed by that single version-token substitution in the browser module path;
+map structure and sky entry remain unchanged. This establishes the config relationship,
+not the update's actor/provenance, module code equivalence or effective authority.
+The old module is absent. Current NodeRepl/browser-module/app-metadata bytes are
+captured by hashes, without a complete dependency or publisher attestation.
 
-**Approval-ready for a conditional supervised trial; not approved or run.**
-This fresh revision replaces the [stopped batch](NATIVE-BATCH-RESULT-2026-10-28.md);
-its old approval/window remain spent. See the [format fix and review](NATIVE-TRUST-FORMAT-FIX-2026-10-28.md)
-and [revision2 seal](NATIVE-TRUST-FORMAT-V2-2026-10-28.json). New private project,
-data, config, declaration and one-use window paths are bound. The old sealed packet
-is unchanged. The exact private revision2 command copy is required with the checkpoint.
+**Fresh approval must cover normal startup with these exact current inherited MCP
+bindings.** Enabled extension processes may read/load/connect before the permission
+display. Native Workspace Ask and hook/project trust do not validate or sandbox that
+code. NodeRepl, browser and sky actions are excluded from the trial tasks by instructions,
+not enforced confinement. Native policy settings are not changed by this proposal;
+inherited extension authority remains a separate residual. If this startup exposure
+is not accepted, do not launch. No old approval supplies that acceptance.
 
-The preservation helper now accepts only canonical `sha256:` plus64 lowercase ASCII
-hex at the exact new owned hook-trust field. It rejects bare digests and other formats;
-this is syntax validation, never native trust or authorization. Existing trust records
-remain baseline data and are not copied to the new declaration. Permissions and actual
-human review/trust gates below are unchanged. Independent read-only review passed
-conditional readiness for the exact revised artifacts; no native action followed.
+The fresh baseline captures only the two reconciled changes, with all other leaves
+preserved. Future semantic drift still aborts. There is no broad exception, automatic
+recapture, service disabling or new capability enablement. Preparation writes no live
+config; a later approved review may add only exact owned project/hook trust metadata,
+with no permission-setting change.
+The raw config SHA is a preparation observation; ongoing preservation compares
+semantic leaves/structure and the exact permitted owned trust additions.
+
+Before **every** proposed native startup, including final removal readback, the
+exact private command runs the unchanged helper's preflight for current executable,
+module, metadata, source and semantic config bindings, then checks the original
+clock. Failure prevents launch. A previous successful startup is not a new binding
+or permission to run changed files.
 
 ## One decision requested
 
@@ -53,13 +70,15 @@ and inherited hooks/policy remain additive and unchanged.
 2. **Review startup, zero prompts:** exact normal CLI argv binds both OS cwd and -C,
    and selects Sol High. It contains no sandbox, reviewer or approval-policy override,
    global trial environment or relocated CODEX_HOME. Human confirms the actual local
-   project/model and supported display of compatible unchanged native permissions.
+   project/model and displayed **Workspace (Ask for approval)** with unchanged native
+   permissions.
    If those limits cannot be established or would be weaker, stop without changing
    them. Review/trust only the exact owned hook and referenced code/config through
    the advertised native control. Exit without a model prompt. Verify preservation.
 3. **Trial startup:** after actual human review/trust confirmation, begin the fresh
    empty-data attempt window without extending the original clock, then reopen the
-   same command. Submit NC-L1: “Write the word READY once, then explain counting from
+   same command. Reconfirm displayed **Workspace (Ask for approval)** and personal
+   hook trust before any prompt. Submit NC-L1: “Write the word READY once, then explain counting from
    one to one hundred in plain text. Use no tools or agents.” Stop once while active,
    aiming at five seconds. Completion first, ambiguous terminal state or unexpected
    activity ends the batch with no retry. While the owned CLI is idle after confirmed
