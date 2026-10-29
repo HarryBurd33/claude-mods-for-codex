@@ -1,5 +1,13 @@
 # Requirements ledger
 
+## Approved native batch stopped — 2026-10-28
+
+[Actual batch result](NATIVE-BATCH-RESULT-2026-10-28.md): one human review startup,
+no model prompts; preservation helper's bare64hex assumption rejected native
+sha256-prefixed trust metadata. Exact owned removal verified; native readback not
+run. No permission change, acceptance closure or ledger disposition change.
+
+
 ## Bound native packet — 2026-10-28
 
 [Prepared bindings and independent security review](NATIVE-BINDING-RESULT-2026-10-28.md)

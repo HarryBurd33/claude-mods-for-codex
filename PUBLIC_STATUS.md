@@ -1,5 +1,11 @@
 # Public status — incomplete development project
 
+[Native batch stopped](docs/continuation/NATIVE-BATCH-RESULT-2026-10-28.md): human
+review/trust/status completed, then preservation check rejected a sha256-prefixed
+trust hash. Zero model prompts/trial cases; owned declaration removed, data empty,
+cache cohort unchanged. Native permission controls unchanged. Packet spent; no retry.
+
+
 [Bound native packet](docs/continuation/NATIVE-BINDING-RESULT-2026-10-28.md): host,
 40-file component and owned Interrupt registration artifacts are pinned; independent
 security review passed conditional readiness after focused helper corrections.

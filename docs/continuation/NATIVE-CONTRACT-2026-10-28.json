@@ -69,17 +69,17 @@
   "gates": {
     "G-HOST": "prepared: exact selected local CLI/runtime digests/cwd; actual permission/locality/project readback remains mandatory after approval",
     "G-CANDIDATE": "prepared:40file Git snapshot and Interrupt-only component config, private fixture and exactseal; no plugin install",
-    "G-REGISTRATION": "prepared:owned project Interrupt declaration, exclusive stage/removal and retention delta; native trust/registration not performed",
+    "G-REGISTRATION": "owned exact declaration staged and humantrusted,thenremoved; source/data/trust retained; native removalreadback unverified",
     "G-NM1": "blocked: complete stable effective non-mutating covered-hook set absent",
     "G-ROUTING": "blocked: native inspection/routing entries unconditionally refuse; no native inspection transport in inspection-driver",
-    "G-REVIEW": "passed:independent read-only reviewer dispatched gpt-6-astra Ultra, four exact artifact digests; conditional packet readiness only",
-    "G-APPROVAL": "pending:one explicit human decision on fully bound conditionalpacket; zero native actions authorized sofar"
+    "G-REVIEW": "prior conditional readiness passed; actual native trust serialization mismatch not covered; future correction requires new review",
+    "G-APPROVAL": "spent: no new startup/prompt/retry; failed exact checker retained"
   },
   "cases": [
     {
       "id": "NC-L1",
       "family": "lifecycle interruption",
-      "status": "approval-ready-conditional",
+      "status": "not-run: batch stopped before trial",
       "requires": [
         "G-HOST",
         "G-CANDIDATE",
@@ -97,7 +97,7 @@
     {
       "id": "NC-F1",
       "family": "command outcome/failure",
-      "status": "approval-ready-conditional",
+      "status": "not-run: batch stopped before trial",
       "requires": [
         "G-HOST",
         "G-CANDIDATE",
@@ -166,12 +166,14 @@
     }
   ],
   "executionReady": false,
-  "approvalRequested": true,
+  "approvalRequested": false,
   "nativeActionsPerformed": 0,
   "newNativeModelCalls": 0,
   "runtimeOrPermissionsChanged": false,
   "fullProductComplete": false,
   "boundPacket": "NATIVE-CAMPAIGN-PACKET-2026-10-28.md",
   "boundCandidate": "NATIVE-BOUND-CANDIDATE-2026-10-28.json",
-  "approvalReady": true
+  "approvalReady": false,
+  "approvalState": "approved once; batch stopped at trust-hash format mismatch; spent",
+  "batchResult": "NATIVE-BATCH-RESULT-2026-10-28.md"
 }

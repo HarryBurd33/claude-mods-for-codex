@@ -28,6 +28,14 @@ was approved and completed once; [inventory result](NATIVE-OBSERVATION-RESULT-20
 records app version and plugin name, unknown plugin version/state, and no existing
 CLI. It neither admits NM-1 nor starts consequential stage B contract work.
 
+## Actual native batch — stopped 2026-10-28
+
+The [approved batch](NATIVE-BATCH-RESULT-2026-10-28.md) stopped at its review-only
+preservation gate because the helper assumed bare64hex rather than native
+sha256-prefixed trust hashes. Neither trial ran. Owned removal verified, no native
+permission change; source/data/trust retained. The packet is spent. Future helper
+correction and exact packet review cannot reuse that execution approval.
+
 ## Stage B prepared envelope — 2026-10-28
 
 [Exact binding and independent review](NATIVE-BINDING-RESULT-2026-10-28.md) make the

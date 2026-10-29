@@ -1,5 +1,14 @@
 # Single native campaign approval packet
 
+## Packet spent — batch stopped
+
+The human approved this exact packet once. The review-only startup occurred, then
+the preservation helper rejected the native trust-hash encoding. The batch stopped
+before model prompts; the unchanged owned declaration was removed. Read the
+[result](NATIVE-BATCH-RESULT-2026-10-28.md). No retry, reopened window or format-check
+repair is authorized by this packet. Preparation wording below is dated history.
+
+
 **Approval-ready for a conditional human-supervised trial; not yet approved or run.**
 The independent read-only security review passed for the exact sealed artifacts.
 See [binding and verification result](NATIVE-BINDING-RESULT-2026-10-28.md) and
