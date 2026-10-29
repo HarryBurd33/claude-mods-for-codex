@@ -28,6 +28,13 @@ was approved and completed once; [inventory result](NATIVE-OBSERVATION-RESULT-20
 records app version and plugin name, unknown plugin version/state, and no existing
 CLI. It neither admits NM-1 nor starts consequential stage B contract work.
 
+## Fresh packet revision2 — 2026-10-28
+
+The [offline trust-format correction](NATIVE-TRUST-FORMAT-FIX-2026-10-28.md) passes
+regression and independent security review. New packet paths/windows are inactive;
+old execution approval stays spent. Actual native permission/trust gates and all
+excluded cases remain unchanged. No trial was rerun. Fresh approval is pending.
+
 ## Actual native batch — stopped 2026-10-28
 
 The [approved batch](NATIVE-BATCH-RESULT-2026-10-28.md) stopped at its review-only

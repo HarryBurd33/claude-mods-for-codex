@@ -1,5 +1,10 @@
 # Requirements ledger
 
+[Trust-format revision2](NATIVE-TRUST-FORMAT-FIX-2026-10-28.md): strict native-shaped predicate fixed,
+20 format vectors and18 integrated/18 helper regressions pass; independent security
+review passes conditional readiness. Fresh packet awaits new approval. No native
+trial rerun, permission change or93-ledger disposition change.
+
 ## Approved native batch stopped — 2026-10-28
 
 [Actual batch result](NATIVE-BATCH-RESULT-2026-10-28.md): one human review startup,

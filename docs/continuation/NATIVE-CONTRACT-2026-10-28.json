@@ -69,11 +69,11 @@
   "gates": {
     "G-HOST": "prepared: exact selected local CLI/runtime digests/cwd; actual permission/locality/project readback remains mandatory after approval",
     "G-CANDIDATE": "prepared:40file Git snapshot and Interrupt-only component config, private fixture and exactseal; no plugin install",
-    "G-REGISTRATION": "owned exact declaration staged and humantrusted,thenremoved; source/data/trust retained; native removalreadback unverified",
+    "G-REGISTRATION": "freshrevision2 exactartifactprepared,notregistered; olddeclarationremoved/trustretained",
     "G-NM1": "blocked: complete stable effective non-mutating covered-hook set absent",
     "G-ROUTING": "blocked: native inspection/routing entries unconditionally refuse; no native inspection transport in inspection-driver",
-    "G-REVIEW": "prior conditional readiness passed; actual native trust serialization mismatch not covered; future correction requires new review",
-    "G-APPROVAL": "spent: no new startup/prompt/retry; failed exact checker retained"
+    "G-REVIEW": "revision2 independent conditional readiness passed after native-shaped format regressions",
+    "G-APPROVAL": "fresh revision2 human approval pending; old window never reused"
   },
   "cases": [
     {
@@ -173,7 +173,8 @@
   "fullProductComplete": false,
   "boundPacket": "NATIVE-CAMPAIGN-PACKET-2026-10-28.md",
   "boundCandidate": "NATIVE-BOUND-CANDIDATE-2026-10-28.json",
-  "approvalReady": false,
-  "approvalState": "approved once; batch stopped at trust-hash format mismatch; spent",
-  "batchResult": "NATIVE-BATCH-RESULT-2026-10-28.md"
+  "approvalReady": true,
+  "approvalState": "old approval spent; revision2 independently reviewed,prepared for fresh approval,no execution",
+  "batchResult": "NATIVE-BATCH-RESULT-2026-10-28.md",
+  "nextPreparedPacketRevision": "NATIVE-TRUST-FORMAT-V2-2026-10-28.json"
 }

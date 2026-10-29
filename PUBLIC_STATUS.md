@@ -1,5 +1,10 @@
 # Public status — incomplete development project
 
+[Trust-format revision2](docs/continuation/NATIVE-TRUST-FORMAT-FIX-2026-10-28.md): strict native-shaped predicate fixed,
+20 format vectors and18 integrated/18 helper regressions pass; independent security
+review passes conditional readiness. Fresh packet awaits new approval. No native
+trial rerun, permission change or93-ledger disposition change.
+
 [Native batch stopped](docs/continuation/NATIVE-BATCH-RESULT-2026-10-28.md): human
 review/trust/status completed, then preservation check rejected a sha256-prefixed
 trust hash. Zero model prompts/trial cases; owned declaration removed, data empty,

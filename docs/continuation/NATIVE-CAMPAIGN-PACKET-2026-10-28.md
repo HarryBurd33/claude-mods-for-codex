@@ -1,20 +1,18 @@
-# Single native campaign approval packet
+# Fresh native campaign packet — revision2
 
-## Packet spent — batch stopped
+**Approval-ready for a conditional supervised trial; not approved or run.**
+This fresh revision replaces the [stopped batch](NATIVE-BATCH-RESULT-2026-10-28.md);
+its old approval/window remain spent. See the [format fix and review](NATIVE-TRUST-FORMAT-FIX-2026-10-28.md)
+and [revision2 seal](NATIVE-TRUST-FORMAT-V2-2026-10-28.json). New private project,
+data, config, declaration and one-use window paths are bound. The old sealed packet
+is unchanged. The exact private revision2 command copy is required with the checkpoint.
 
-The human approved this exact packet once. The review-only startup occurred, then
-the preservation helper rejected the native trust-hash encoding. The batch stopped
-before model prompts; the unchanged owned declaration was removed. Read the
-[result](NATIVE-BATCH-RESULT-2026-10-28.md). No retry, reopened window or format-check
-repair is authorized by this packet. Preparation wording below is dated history.
-
-
-**Approval-ready for a conditional human-supervised trial; not yet approved or run.**
-The independent read-only security review passed for the exact sealed artifacts.
-See [binding and verification result](NATIVE-BINDING-RESULT-2026-10-28.md) and
-[public candidate seal](NATIVE-BOUND-CANDIDATE-2026-10-28.json). The private operational
-copy supplies the complete resolved commands, cwd, paths and per-file hashes; retain
-it with the task checkpoint. No placeholders need execution or later interpretation.
+The preservation helper now accepts only canonical `sha256:` plus64 lowercase ASCII
+hex at the exact new owned hook-trust field. It rejects bare digests and other formats;
+this is syntax validation, never native trust or authorization. Existing trust records
+remain baseline data and are not copied to the new declaration. Permissions and actual
+human review/trust gates below are unchanged. Independent read-only review passed
+conditional readiness for the exact revised artifacts; no native action followed.
 
 ## One decision requested
 
