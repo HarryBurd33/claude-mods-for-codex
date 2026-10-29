@@ -1,5 +1,14 @@
 # Fresh native campaign packet — revision2
 
+## Revision2 execution approval spent
+
+The approved window expired. The human reports one review launch and no model
+prompts. [Verified October29 cleanup](NATIVE-V2-EXPIRED-CLEANUP-2026-10-29.md) removed
+only the unchanged owned declaration; no trial or new startup occurred. Configuration
+drift was retained without restoration. No retry or restart is authorized. The
+preparation and proposed execution text below is historical, not current authority.
+
+
 **Approval-ready for a conditional supervised trial; not approved or run.**
 This fresh revision replaces the [stopped batch](NATIVE-BATCH-RESULT-2026-10-28.md);
 its old approval/window remain spent. See the [format fix and review](NATIVE-TRUST-FORMAT-FIX-2026-10-28.md)

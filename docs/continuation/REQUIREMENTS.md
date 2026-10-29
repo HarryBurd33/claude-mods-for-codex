@@ -1,5 +1,11 @@
 # Requirements ledger
 
+[Expired revision2 batch cleanup](NATIVE-V2-EXPIRED-CLEANUP-2026-10-29.md) verified October29:
+selected CLI absent, exact owned declaration removed, data empty and cache cohort
+unchanged. Two preparation-baseline config differences were retained; cleanup itself
+left config bytes and native permissions unchanged. No trial restart; approval spent.
+All93 dispositions remain unchanged.
+
 [Trust-format revision2](NATIVE-TRUST-FORMAT-FIX-2026-10-28.md): strict native-shaped predicate fixed,
 20 format vectors and18 integrated/18 helper regressions pass; independent security
 review passes conditional readiness. Fresh packet awaits new approval. No native

@@ -28,6 +28,14 @@ was approved and completed once; [inventory result](NATIVE-OBSERVATION-RESULT-20
 records app version and plugin name, unknown plugin version/state, and no existing
 CLI. It neither admits NM-1 nor starts consequential stage B contract work.
 
+## Revision2 expired and safely cleaned — October29
+
+The [cleanup result](NATIVE-V2-EXPIRED-CLEANUP-2026-10-29.md) verifies exact owned
+removal after CLI closure and zero trial prompts. The current configuration was
+preserved; two prior baseline differences remain unexplained and untouched. The
+window/approval is spent. No trial, new startup, permission change or native removal
+readback occurred. Further native work requires a fresh reviewed scope and approval.
+
 ## Fresh packet revision2 — 2026-10-28
 
 The [offline trust-format correction](NATIVE-TRUST-FORMAT-FIX-2026-10-28.md) passes
