@@ -67,19 +67,19 @@
     }
   ],
   "gates": {
-    "G-HOST": "prepared: exact selected local CLI/runtime digests/cwd; actual permission/locality/project readback remains mandatory after approval",
+    "G-HOST": "prepared v4: current0.165.0 canonical CLI, package metadata/resources pinned; no native invocation, fresh host acceptance and actual version/flags/project/model/permission readback required",
     "G-CANDIDATE": "prepared:40file Git snapshot and Interrupt-only component config, private fixture and exactseal; no plugin install",
-    "G-REGISTRATION": "spent v3: owned declaration absent, data empty, no ATTEMPT; no restart",
+    "G-REGISTRATION": "prepared v4 exact Interrupt declaration; fresh fixture, no registration/window/startup",
     "G-NM1": "blocked: complete stable effective non-mutating covered-hook set absent",
     "G-ROUTING": "blocked: native inspection/routing entries unconditionally refuse; no native inspection transport in inspection-driver",
-    "G-REVIEW": "independent v3 conditional approval readiness passed, unknown codeprovenance/equivalence/dependencies disclosed",
-    "G-APPROVAL": "v3 approved once and expired; current authority cleanup verification/publication only; future native work needs new approval"
+    "G-REVIEW": "independent v4 exact-seal review passed conditional approval-readiness; native0.165 behavior remains unverified",
+    "G-APPROVAL": "fresh v4 informed approval must include new0.165.0 host and inherited pre-display MCP exposure; current authority preparation/publication only"
   },
   "cases": [
     {
       "id": "NC-L1",
       "family": "lifecycle interruption",
-      "status": "not-run:revision3 expired without trial prompts",
+      "status": "not-run:v4 execution unapproved, prior trial windows spent",
       "requires": [
         "G-HOST",
         "G-CANDIDATE",
@@ -97,7 +97,7 @@
     {
       "id": "NC-F1",
       "family": "command outcome/failure",
-      "status": "not-run:revision3 expired without trial prompts",
+      "status": "not-run:v4 execution unapproved, prior trial windows spent",
       "requires": [
         "G-HOST",
         "G-CANDIDATE",
@@ -171,14 +171,17 @@
   "newNativeModelCalls": 0,
   "runtimeOrPermissionsChanged": false,
   "fullProductComplete": false,
-  "boundPacket": "NATIVE-CAMPAIGN-PACKET-2026-10-28.md",
+  "boundPacket": "NATIVE-APPROVAL-V4-2026-10-29.md",
   "boundCandidate": "NATIVE-BOUND-CANDIDATE-2026-10-28.json",
-  "approvalReady": false,
-  "approvalState": "revision3 spent and cleanup verified; one unrelated added project trust leaf retained, baseline configcheck refuses; no trial restart",
+  "approvalReady": true,
+  "approvalState": "v4 exact packet independently reviewed; fresh informed human host/startup approval pending, no native execution",
   "batchResult": "NATIVE-BATCH-RESULT-2026-10-28.md",
   "latestCleanup": "NATIVE-V3-EXPIRED-CLEANUP-2026-10-29.md",
   "configurationReconciliation": "CONFIG-RECONCILIATION-2026-10-29.md",
   "spentPacketRevision": "NATIVE-CONFIG-V3-2026-10-29.json",
   "nativeActionEvidence": "human reported one v3 review startup and CLI closure without prompts; no captured native trial telemetry",
-  "collectorState": "exact receipted service disabled and unloaded, plist retained"
+  "collectorState": "exact receipted service disabled and unloaded, plist retained",
+  "nextPreparedPacketRevision": "NATIVE-CONFIG-V4-2026-10-29.json",
+  "currentPreparationNativeActions": 0,
+  "trustReconciliation": "one added unrelated project-trust leaf explicitly retained in new baseline; no live write, actor/cause unknown; later drift refuses"
 }

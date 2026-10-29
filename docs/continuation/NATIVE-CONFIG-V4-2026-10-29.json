@@ -1,0 +1,276 @@
+{
+  "kind": "offline-native-campaign-review-seal-v4",
+  "sourceCommit": "61a990aa2484342a38f0be14b3479daa9feb02dc",
+  "entries": {
+    "cli": {
+      "sha256": "a45099154d7fb4a5ed8a56f40966a95deb938e508bab23e6985035c709e9a85a",
+      "bytes": 261834624
+    },
+    "node": {
+      "sha256": "49098713938c2537a0cbca663d79b427b8faeed50c34de1e89177778d4c447e8",
+      "bytes": 248201648
+    },
+    "python": {
+      "sha256": "27a60408225a353de0bfd44c443261120f3d247d31c807df7bfd0f58ee183c10",
+      "bytes": 34488
+    },
+    "nodeReplService": {
+      "sha256": "0148e77c1179060505603c81d30ad4b9c1cd782b977f737eddacf2205275dedd",
+      "bytes": 19310480
+    },
+    "browserServiceModule": {
+      "sha256": "057d842c9863da65738ec73f3fdc3fb921367bdf804ee5e92727081040031180",
+      "bytes": 1613521
+    },
+    "appVersionMetadata": {
+      "sha256": "d557a4639b8192ef5b69edad941113cbe2a101426e77dc56d871d7e329c41ffe",
+      "bytes": 20738
+    },
+    "cliPackageMetadata": {
+      "sha256": "16dd728c56a7a2030359a65dde422b7ca5f5659bb4eea060fcf9b454439b439f",
+      "bytes": 200
+    },
+    "cliResource0": {
+      "sha256": "5a933cb69f193f074413c8ed49d7de3099d22be3cc145040d237fee7828bb1e0",
+      "bytes": 4030432
+    },
+    "cliResource1": {
+      "sha256": "40097a1799441051aa0b6645cdc819cceb19be73cdd265eb602aa2b15e0b1f48",
+      "bytes": 2403
+    },
+    "cliResource2": {
+      "sha256": "7513cb74461830c90c18e89030e873f025b0e7fb58116e7231246d33c9e9a6c1",
+      "bytes": 9992496
+    },
+    "cliResource3": {
+      "sha256": "5ef108a137c3b709767cf9e5deeb9f4e9c84e60072d56a5e1266d78ce94e7eaf",
+      "bytes": 136768
+    },
+    "cliResource4": {
+      "sha256": "865d7c3d0bf2a654a7dc982e70818550f7d07ccc5876dfb1933bb154643265fa",
+      "bytes": 1902992
+    },
+    "cliResource5": {
+      "sha256": "6010889b93a61ab1b37e3bce9793270fa52878f37641d3344172417a443b14a5",
+      "bytes": 1353984
+    },
+    "cliResource6": {
+      "sha256": "406a3d9b72ba8b780604b29ac4157fb5569195a2fbb951439c3ae374da13540c",
+      "bytes": 68720
+    },
+    "cliResource7": {
+      "sha256": "de5094ef05e68ddbaace30789d429d4504c903629cdc1feb8830eb21ebc3b12b",
+      "bytes": 416896
+    },
+    "cliResource8": {
+      "sha256": "e79817caa337877c9e440f493a1bf0248783727d1cbf5e87babdca6ba05cdfd1",
+      "bytes": 151984
+    },
+    "cliResource9": {
+      "sha256": "167e68872070a5a38020e5be38414fa7cfd623c45a1dbc552d88a695be3d2119",
+      "bytes": 560336
+    },
+    "cliResource10": {
+      "sha256": "572dd56cf4e44b1d1a00ab6326e2e922edaf3505d31d99c6b0675439b124d0f4",
+      "bytes": 520240
+    },
+    "cliResource11": {
+      "sha256": "7e97a795600cedacc6cdb2248f11954d9a08bf55bb2ac72c605a0f2cef211713",
+      "bytes": 115920
+    },
+    "cliResource12": {
+      "sha256": "23858f50fa53d60c5e81fe34d6fdcf5f17e529fa4d4d5bac5b42aaef50b1de43",
+      "bytes": 323552
+    },
+    "cliResource13": {
+      "sha256": "db8b64d6970e95dec672270b0b9a3420cd9bf2ee4e2ddae9c138507ffb412a1f",
+      "bytes": 1341328
+    },
+    "cliResource14": {
+      "sha256": "48050ee34b3bc18e406a1a39253ccabc92ac847669fd096bfb8911bf7547ac03",
+      "bytes": 222176
+    },
+    "cliResource15": {
+      "sha256": "fa808edd6bd443c875017cbafb6020d20b6da07a1a4be283f3998122d75c9a69",
+      "bytes": 283280
+    },
+    "cliResource16": {
+      "sha256": "e29d50e948304cb0ca9bf910503e7adf4162931d1546e9b849961453acf0298b",
+      "bytes": 932496
+    },
+    "cliResource17": {
+      "sha256": "fbdaf6402f4944d72c2089a3e5e663576708494c27bad7bf73944b8b2f31dace",
+      "bytes": 50080
+    },
+    "cliResource18": {
+      "sha256": "4a09d9ef7a5615fe14a15982cada9da9b3a2ecb2b0cda630b757af71bf9249c4",
+      "bytes": 504080
+    },
+    "cliResource19": {
+      "sha256": "10d5e035a6b57028f388212104672b469ee0869311bfdfc466d5dd60b550ba7f",
+      "bytes": 456816
+    },
+    "cliResource20": {
+      "sha256": "9968e2813484043c0d6b6a1a406a9b242ad376d4627db839e52593932941dadc",
+      "bytes": 123312
+    },
+    "cliResource21": {
+      "sha256": "ad2eec519ebd4b5df86ea84dff24ae3bfa2edea846a703b58902dd221ae375db",
+      "bytes": 26431
+    },
+    "cliResource22": {
+      "sha256": "01e1167d54a096d123cf6dfbbeb19587278845c6481d2d66d545669846079551",
+      "bytes": 1945
+    },
+    "cliResource23": {
+      "sha256": "197d8a73ffee0d6b09adba2f9c677b5f5aede24edf89258a68e48248d010d811",
+      "bytes": 4011
+    },
+    "cliResource24": {
+      "sha256": "17b64dc60f3b6897a60f971e288b973f655c2edcdf08b25f3c3dd5549857881c",
+      "bytes": 1132
+    },
+    "cliResource25": {
+      "sha256": "d245807f90032872d1438d741ed21e2490e1175dc8aa3afa5ddb6c8e529b58e5",
+      "bytes": 25292
+    },
+    "cliResource26": {
+      "sha256": "5f216505c0f6ea3273caec89e766eef93cdeb7bbb0c429f9360116d7c938feeb",
+      "bytes": 1444
+    },
+    "cliResource27": {
+      "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+      "bytes": 1002
+    },
+    "cliResource28": {
+      "sha256": "080028da3d7d64f087af9d0ac6d3c6321689a53f7725d438ff1d9f8c8b604e26",
+      "bytes": 4637
+    },
+    "cliResource29": {
+      "sha256": "c909f070ba3d1448c8f36ed40c6cdedb857fb0d39e093f645f0534ebc27bb8c7",
+      "bytes": 49872
+    },
+    "cliResource30": {
+      "sha256": "1b41df12154b4efe0f20eff1c7c9ad0a8adc3a6ca42bb9c89bfb5cb5e2d9bb4d",
+      "bytes": 93344
+    },
+    "cliResource31": {
+      "sha256": "081586c12ab4a09c69467cca7203965265f1c5f5da8836bd6ce2dc4b688f67d8",
+      "bytes": 91696
+    },
+    "cliResource32": {
+      "sha256": "ba0ac5ef2203de98ef25f5241ac435e66196d91c639718ef207d3613db0511f6",
+      "bytes": 458768
+    },
+    "cliResource33": {
+      "sha256": "92f0747c80599eaea9c6611d8d2aeaff46a3dccb701086dcdf6dd4e18b8248cb",
+      "bytes": 131120
+    },
+    "cliResource34": {
+      "sha256": "1fe4057dbf4a042b3aeb84f14b933944edf7fc0081270a0d738e536380c3a3df",
+      "bytes": 674896
+    },
+    "cliResource35": {
+      "sha256": "152f7a7ef5e29d73f5aaeab427ab0998449e73ab13688b04b1cdffca6b654ae2",
+      "bytes": 538368
+    },
+    "cliResource36": {
+      "sha256": "b70b78bc100fbf99598009e6e1d3c6796ba7992b5f3997eba5d018d1f9da16c6",
+      "bytes": 14915
+    },
+    "cliResource37": {
+      "sha256": "e2f6b124f6277e7c3c4f5c7cc8830c66190f671ad65e972bb2cc9507dbfcb937",
+      "bytes": 4911
+    }
+  },
+  "sourceFiles": {
+    "LICENSE": "747b45fb70bbc46628a8a6b642f3c1283899f54b16f83398b527d96492d364ae",
+    "src/agent-contract.mjs": "4df7300cf81a18c66131eeb6e547726239f41bb51e55e74d2a95a89726b3d306",
+    "src/cli.mjs": "d9cb3c2daacb609f609243c7c8b0dda907cc308b26089a79d2d0fd70a4439bb6",
+    "src/component-authoring.mjs": "40017ccec9dc876a4e8ed8dc0a62e1cbad8cade8e3c9ef3bac35bd695de07039",
+    "src/component-contract.mjs": "43d8630080bbadb025b4c7a28c34deef2884fd89caf7c1019078ff917e94be65",
+    "src/config.mjs": "672b2ed9071349fd61e8f9503a3079cd8dcdf3e2cf33f91bc35e1b49ec37f02a",
+    "src/constants.mjs": "ad9c56ec519bf1bd5f48b4476cd76151ef7330f211283122c9c024a3bb1f8a1a",
+    "src/dashboard-resource.mjs": "f6ded2dd07a00ba7cd8494761e047bec10073d22c6b31a96815cc863408c8499",
+    "src/dispatcher.mjs": "98561f8eea24ad325a38bf983c3414f567e315b2dc7f375e90cdfa3fbbfe1ffa",
+    "src/hold-review.mjs": "0e159c08c0839c6d202d07700b8a427abc572b3b613e17fe35b70712242fa868",
+    "src/hook-main.mjs": "8955fcb35ed1249f89d2ac8fb7f83de7791576d16728cfafa0785498c3de397b",
+    "src/impact-review.mjs": "14231dae286bf368e3bd52d5fad070e62ad6ab80afb32b76123be2d7bdabb5e2",
+    "src/impact.mjs": "93c22fad587868f382f0dcd6907f9853394da1f04d20e4082d1abc2228b0b84c",
+    "src/interaction-contract.mjs": "2c62007158ac901dc1ce291fdfbfee7432f705a56663d490af7a558ed8b7ce0e",
+    "src/interaction-replay.mjs": "e652ff6ec37bd20d592ca4f92de4a6f38926715b26ec6083d9bd84a7f6d7c4d8",
+    "src/io.mjs": "6b73669f9647d9598971a7ee7659ea24b3fc494157055d2d3ee9524b36e41006",
+    "src/journal.mjs": "6c4fa198ad48c26bff24f4938780922f7fee85933a6e262045a2b3fef44ed39c",
+    "src/mcp-stdio.mjs": "d5d76e549c55e25b4c068d89c52b273d4d443a9883eae842215d3641460984f1",
+    "src/mods/activity-journal.mjs": "22c71eb877fe7f382857bd8dce3c594caeacfa5428a7269e9c24524f14a849e8",
+    "src/mods/blast-radius-guard.mjs": "8cf3d7a185e58b4e58bc495d25c3dae5cc4f67fa62d570ce7fed2273bdaeaf42",
+    "src/mods/deny-guard.mjs": "1564c99a6503219916956702e35585d11ed1f6d764650244ff5ff6a441c01185",
+    "src/mods/exact-command-rewrite.mjs": "df9ad5b687400c8dcfe250f6fc0673709e94e27ffcdedae6d3b9ecfd992a839e",
+    "src/mods/registry.mjs": "e0655ae71d4af8ca7e66f847d4588d7c23968710974773065a7558ed199c94e9",
+    "src/mods/session-notice.mjs": "e91dcab6272cf4cc5abd2e174c84bb90ca4eb57ccf9df4e8f20e890277853c2e",
+    "src/observations.mjs": "a2568e9e65bf31ec00f1a574a15a7b6b61b337395dbc005449726d265b6b0a89",
+    "src/restore.mjs": "dc1c11b10464e2eb8fb70d3b2271dd53dc32cfd8758a8d944cbc401c20a226a3",
+    "src/retention.mjs": "2f24e68d8470dd653f93be76133cd4678cf3b489775e6b5c369a2ed2b44a6cf9",
+    "src/runtime-settings.mjs": "05728db121ee95f83a11fc173a55a302acb6f627bb5d8a6b0c3d122ecacfbbfd",
+    "src/scaffold.mjs": "a7f987182faf58caa205cfb1ac997c10250a726db569dd5fc48371d33ed78598",
+    "src/scope.mjs": "0d52acc33a419b6ea77453578f585ee388d76189c6a161a845cc10d0c3517b20",
+    "src/server.mjs": "f094be8ef526542caf2c67b8ac76f959fa4ea7bcc091a09be810f6a42e60fc64",
+    "src/state-lock-budget.mjs": "9395da508ca996b3ef192ace57686fa5fd330e85134de3f73a4d29d4edbc1ad6",
+    "src/state.mjs": "0a6690915a3ac07841625b5c02eca94a045936536a4b0e1a7a7a9325f56e67a0",
+    "src/usage.mjs": "ef3341fbc04d87baf1a4e9697e03109366a82bdf26486f778d151a4bd9f56de6",
+    "src/windows-hook.mjs": "e7210daa55bc7d99ef11ec84dbe9cfc19f1e1fa6773d8f43ef69d4d84f26716a",
+    "src/windows-state.mjs": "0d55302e61f4621e83fac0ab7ab3d1a9b9a0f4c89e9a49eed29aa5ed9dbed8f9",
+    "src/windows-storage.mjs": "86cce08d7ef440295e023b11ca9db384f7bff36eb00ede45946174d8666d3e84",
+    "src/windows/PrivateStorage.cs": "c9493eb2bf7401577bf4cfd289a8726ec5b4281c87de250e3342e03fc1fb59bd",
+    "src/windows/private-storage.ps1": "b5f53b4a2c81f9b1456a024ce23e65d2ec1fda18f9898e55cad8011b3a7eba88",
+    "src/workspace.mjs": "64d1cfa1a62f5d471259f247e671c83e151fe84adef4d95afd1ba82441e7ad92"
+  },
+  "reviewFiles": {
+    "BINDING.json": "e17e511e3dad762aa4ac137fcc23b89834b95a1035300d690b47ef10f1dc1fcc",
+    "HUMAN-PACKET.md": "3e33aca0d4559238d46e3290b9d5d271830404a0fa0ddf72f56e4157a9508756",
+    "manage.py": "cdf08915c2b5842b5a3fae135b62d3272d343e51a30c1fbfbf9ed75fb27573a0",
+    "read-interrupt.py": "a8daea1efa399b24f496b93242654658cd68bde24808071f14bc5a5ab662ced4",
+    "CACHE31-BINDING.json": "6e4beb99123d32403916450bc0311eb517e3568c2a921c6240aba70405280af2",
+    "interrupt-config.json": "dea1efdf5aa9887f6f789e344274eb5b0978cf433a11038c0cf431073b1c8d7b",
+    "interrupt-hook.json": "094e7b597785cff4501fe324e33a71b2ca07fc302c779457e84ed4d6c4967c30",
+    "TRUST-RECONCILIATION.json": "4b79540a76971c1c1c22a97e7ad1cd9ee6fa84a25c592028fa35b96ef1598df8",
+    "HOST-CHANGE.json": "d2185cec2f7ec0d86b2a88c4d1fdfe52d9c11d5e6c71b495acf1c5390a2f6ffc",
+    "NEW-REGRESSIONS.json": "829ead4e4da337120edcd21631a0eb0c8f1c79e05630f7e4f92186cf45622a1a",
+    "test_boundaries.py": "b2ad5694fa336d47c593af7343e3277a8596f64ee4a714a598c966e656292e34",
+    "render_packet.py": "2893d05b06af85b53d6d82bd0bc950126054b450849fb724f4f870ef90eae07f"
+  },
+  "nativeStarted": false,
+  "registrationActive": false,
+  "batchOpened": false,
+  "nativePolicyWrites": false,
+  "freshHostAcceptanceRequired": true,
+  "oldManualHostAcceptanceReused": false,
+  "startupAuthority": "Fresh approval must cover new CLI0.165.0 and inherited pre-display MCP/network/startup exposure",
+  "unknowns": [
+    "actor/cause of unrelated project trust addition",
+    "host publisher/provenance",
+    "native0.165 compatibility before approved review",
+    "transitive dependency identity",
+    "inherited browser module code equivalence"
+  ],
+  "privateReviewSealSha256": "5a0c0493aa13d8620da1d065a4ec960e0e468d4f5574f8f23c16175eae588083",
+  "trustReconciliation": {
+    "differenceCount": 1,
+    "category": "added unrelated project trust leaf",
+    "canonicalExistingDisjointDirectory": true,
+    "trustScopeExpansionForOtherProject": true,
+    "actorAndCause": "unknown",
+    "liveConfigWrites": 0,
+    "baselineRetainedExplicitly": true,
+    "laterUnrelatedTrustDriftRefused": true
+  },
+  "hostChange": {
+    "oldVersionMetadata": "0.164.0",
+    "oldPathAbsent": true,
+    "currentPackageVersion": "0.165.0",
+    "nativeVersionInvocation": false,
+    "resourcesPinned": 38
+  },
+  "collectorDisabledUnloaded": true,
+  "approvalState": "independent review passed for approval-readiness only; execution remains unapproved"
+}

@@ -28,6 +28,18 @@ was approved and completed once; [inventory result](NATIVE-OBSERVATION-RESULT-20
 records app version and plugin name, unknown plugin version/state, and no existing
 CLI. It neither admits NM-1 nor starts consequential stage B contract work.
 
+## Revision4 trust reconciliation and fresh host packet — October29
+
+The [fresh packet](NATIVE-APPROVAL-V4-2026-10-29.md) retains one unrelated added
+project-trust leaf as an explicitly disclosed current baseline; its actor/cause are
+unknown and future drift still refuses. CLI0.164.0 is absent; canonical installed
+0.165.0, metadata and38 resource files are newly pinned. Old host acceptance is not
+reused. Eleven new synthetic checks pass, helpers/source stay unchanged, independent
+exact-packet review passed conditional approval-readiness only. Execution remains
+unapproved. Collector remains disabled/unloaded; no live config
+write, registration, clock or startup. Fresh informed host/startup approval and actual
+native human gates remain mandatory. This is preparation, not trial acceptance.
+
 ## Revision3 expired; cleanup verified — October29
 
 The [revision3 cleanup result](NATIVE-V3-EXPIRED-CLEANUP-2026-10-29.md) records human

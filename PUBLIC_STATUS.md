@@ -1,5 +1,14 @@
 # Public status — incomplete development project
 
+[Fresh revision4 packet](docs/continuation/NATIVE-APPROVAL-V4-2026-10-29.md) explicitly retains the single unrelated
+project-trust addition and binds the newly installed CLI0.165.0, package metadata and38
+resources. Other prior runtime/service entries match; current config is unchanged.
+New host acceptance and inherited MCP startup exposure require fresh informed approval.
+Eleven new synthetic boundary checks pass; independent security review passed
+conditional approval-readiness only. Execution remains unapproved. Collector
+remains disabled/unloaded. No declaration, clock, native startup or trial; all93
+ledger dispositions unchanged. Earlier packet-readiness entries are historical.
+
 [Revision3 expired cleanup](docs/continuation/NATIVE-V3-EXPIRED-CLEANUP-2026-10-29.md) verified October29:
 owned hook absent, exact CLI/project process unmatched, data empty and sealed
 source/cache preserved. The baseline config check still refuses one unrelated added
