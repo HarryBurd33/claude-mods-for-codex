@@ -99,6 +99,15 @@ approval. Host orchestration, exact candidate and registration/retention binding
 remain missing; independent security review is pending. No repeated UI/Stop/archive/
 inventory or native action occurred. Stage B execution readiness is not accepted.
 
+## Next unblocked source work — October29
+
+The [production Windows storage lifecycle audit](WINDOWS-STORAGE-LIFECYCLE-AUDIT-2026-10-29.md)
+reproduces three simulated request-failure paths that settle without helper-close
+evidence. This is a source-level lifecycle-result gap, not an observed native leak.
+Astra Extra High should review the finite failure/cleanup contract before a production
+patch. The actual v4 trial remains separately gated on human approval; no completed
+UI/archive/Stop or prior Windows proof checks were repeated.
+
 ## Milestones, dependencies and acceptance gates
 
 | Stage | Work and prerequisite | Evidence required to accept | Assignment and stop gate |

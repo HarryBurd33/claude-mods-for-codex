@@ -1,5 +1,11 @@
 # Public status — incomplete development project
 
+[Windows storage lifecycle audit](docs/continuation/WINDOWS-STORAGE-LIFECYCLE-AUDIT-2026-10-29.md)
+reproduces three failure-result/close orderings with simulated processes and one
+normal-close control. Production transport is unchanged; no actual Windows leak or
+new fix is claimed. A finite Astra Extra High contract review is next. Native v4
+approval remains pending, collector disabled, and all93 dispositions unchanged.
+
 [Fresh revision4 packet](docs/continuation/NATIVE-APPROVAL-V4-2026-10-29.md) explicitly retains the single unrelated
 project-trust addition and binds the newly installed CLI0.165.0, package metadata and38
 resources. Other prior runtime/service entries match; current config is unchanged.
