@@ -93,3 +93,34 @@ test('callbacks retaining a closed operation cannot spawn or write',async()=>{
   release();await assert.rejects(late,/already closed/);assert.equal(writes,0);
   assert.throws(()=>scope.assertCleanupSafe(),/unresolved/);
 });
+
+test('queued IO refuses effects after its enclosing operation closes',async()=>{
+  const scope=new OwnedFixtureScope();let late,writes=0;
+  const parent=scope.externalIO(undefined,()=>{
+    queueMicrotask(()=>queueMicrotask(()=>{
+      late=scope.io(undefined,()=>writes++);late.catch(()=>{});
+    }));
+  });
+  await assert.rejects(parent,/close unresolved/);
+  await assert.rejects(late,/unresolved/);
+  assert.equal(writes,0);assert.equal(scope.writes.size,0);
+  assert.equal(scope.children.size,0);assert.equal(scope.unresolved,true);
+  assert.throws(()=>scope.assertCleanupSafe(),/unresolved/);
+});
+test('abort after queueing refuses effects and drains otherwise safe IO',async()=>{
+  const scope=new OwnedFixtureScope(),controller=new AbortController();let writes=0;
+  const pending=scope.io(controller.signal,()=>writes++);
+  assert.equal(scope.writes.size,1);assert.throws(()=>scope.assertCleanupSafe(),/unresolved/);
+  controller.abort();await assert.rejects(pending,{name:'AbortError'});
+  assert.equal(writes,0);assert.equal(scope.writes.size,0);
+  assert.equal(scope.unresolved,false);scope.assertCleanupSafe();
+});
+test('healthy nested and overlapping IO retain values and cleanup barriers',async()=>{
+  const scope=new OwnedFixtureScope();let release;
+  const first=scope.externalIO(undefined,()=>scope.io(undefined,()=>new Promise(r=>{release=r;})));
+  const second=scope.externalIO(undefined,()=>scope.io(undefined,()=>42));
+  assert.equal(await second,42);assert.equal(scope.unresolved,false);
+  assert.throws(()=>scope.assertCleanupSafe(),/unresolved/);
+  release(17);assert.equal(await first,17);
+  assert.equal(scope.writes.size,0);scope.assertCleanupSafe();
+});

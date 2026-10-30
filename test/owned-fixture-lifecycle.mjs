@@ -45,7 +45,10 @@ export class OwnedFixtureScope {
 
   async io(signal, operation) {
     this.check(signal);
-    const pending = Promise.resolve().then(operation);
+    const pending = Promise.resolve().then(() => {
+      this.check(signal);
+      return operation();
+    });
     this.writes.add(pending);
     const frames=[];for(let f=this.context.getStore();f;f=f.parent){f.pending.add(pending);frames.push(f);}
     try { const value = await pending; this.check(signal); return value; }
