@@ -1,5 +1,11 @@
 # Public status — incomplete development project
 
+[WS-L2 implementation candidate](docs/continuation/WINDOWS-STORAGE-L2-RESULT-2026-10-29.md)
+corrects fixture attribution and copied diagnostic cleanup/instrumentation. Local
+22 focused tests and 43 VM cases pass; full suite 408 pass / 123 skips. Actual
+Windows Node 22/24 corrected-source CI and Astra final review remain acceptance gates.
+Permissions unchanged, collector disabled and native trial held.
+
 [WS-L1 CI review and WS-L2 contract](docs/continuation/WINDOWS-STORAGE-CI-REVIEW-2026-10-29.md)
 are complete. A new pinned synthetic audit reproduces sibling-process misattribution
 and a thrown-spawn cleanup gap; copied diagnostic instrumentation and cleanup also

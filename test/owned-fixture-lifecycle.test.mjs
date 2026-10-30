@@ -54,3 +54,42 @@ test('unchanged transport spawn imports are tracked until actual helper close',a
     assert.throws(()=>scope.assertCleanupSafe(),/unresolved/,'uncertain effect remains latched for review');
   }finally{restore();}
 });
+
+test('overlapping external operations own their children independently',async()=>{
+  const scope=new OwnedFixtureScope();let first,second;
+  const a=scope.externalIO(undefined,async()=>{
+    first=scope.start(process.execPath,args("setTimeout(()=>process.exit(0),50)"),{env:{}});
+    await first.completion;return 'first';
+  });
+  const b=scope.externalIO(undefined,async()=>{
+    second=scope.start(process.execPath,args("setInterval(()=>{},1000)"),{env:{}});
+    await second.completion;return 'second';
+  });
+  await Promise.resolve();assert.equal(scope.children.size,2);
+  assert.equal(await a,'first');assert.equal(scope.unresolved,false);
+  assert.throws(()=>scope.assertCleanupSafe(),/unresolved/);
+  second.child.kill();assert.equal(await b,'second');scope.assertCleanupSafe();
+});
+test('spawn throw latches uncertainty without creating an adopted child',async()=>{
+  const scope=new OwnedFixtureScope();
+  await assert.rejects(scope.externalIO(undefined,()=>scope.spawn(42,[],{})));
+  assert.equal(scope.children.size,0);assert.equal(scope.unresolved,true);
+  assert.throws(()=>scope.assertCleanupSafe(),/unresolved/);
+});
+test('nested pending IO prevents enclosing operation cleanup',async()=>{
+  const scope=new OwnedFixtureScope();let finish,nested;
+  await assert.rejects(scope.externalIO(undefined,async()=>{
+    nested=scope.externalIO(undefined,()=>new Promise(r=>{finish=r;}));nested.catch(()=>{});
+    await Promise.resolve();
+  }),/close unresolved/);
+  assert.throws(()=>scope.assertCleanupSafe(),/unresolved/);finish();await assert.rejects(nested);
+});
+test('callbacks retaining a closed operation cannot spawn or write',async()=>{
+  const scope=new OwnedFixtureScope();let release,late;let writes=0;
+  await scope.externalIO(undefined,async()=>{
+    late=new Promise(r=>{release=r;}).then(()=>scope.io(undefined,()=>writes++));
+    late.catch(()=>{});
+  });
+  release();await assert.rejects(late,/already closed/);assert.equal(writes,0);
+  assert.throws(()=>scope.assertCleanupSafe(),/unresolved/);
+});

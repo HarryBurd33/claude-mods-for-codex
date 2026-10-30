@@ -1,16 +1,20 @@
 // Test-only ownership of explicitly spawned disposable fixtures. No PID adoption.
 import childProcess from 'node:child_process';
+import { AsyncLocalStorage } from 'node:async_hooks';
 import { syncBuiltinESMExports } from 'node:module';
 const nativeSpawn=childProcess.spawn;
 import { performance } from 'node:perf_hooks';
 
 export class OwnedFixtureScope {
   children = new Set();
-  observers = new Set();
+  context = new AsyncLocalStorage();
   writes = new Set();
   unresolved = false;
   check(signal) {
     if(this.unresolved)throw new Error('Owned fixture stopped: unresolved work');
+    for(let frame=this.context.getStore();frame;frame=frame.parent) {
+      if(frame.closed){this.unresolved=true;throw new Error('Owned fixture operation already closed');}
+    }
     signal?.throwIfAborted();
   }
   trackExternalSpawns() {
@@ -24,22 +28,28 @@ export class OwnedFixtureScope {
     };
   }
   async externalIO(signal,operation) {
-    const seen=new Set();this.observers.add(seen);let value,failure;
-    try {value=await this.io(signal,operation);}catch(error){failure=error;}
-    finally {this.observers.delete(seen);}
-    if([...seen].some(child=>this.children.has(child))) {
-      this.unresolved=true;
-      const uncertain=new Error('Storage helper close unresolved');
-      failure=failure?new AggregateError([failure,uncertain],'Storage operation and close failed'):uncertain;
-    }
-    if(failure)throw failure;return value;
+    this.check(signal);
+    const frame={seen:new Set(),parent:this.context.getStore(),closed:false,pending:new Set()};
+    return this.context.run(frame,async()=>{
+      let value,failure;
+      try {value=await this.io(signal,operation);}catch(error){failure=error;}
+      finally {frame.closed=true;}
+      if([...frame.seen].some(child=>this.children.has(child)) || frame.pending.size) {
+        this.unresolved=true;
+        const uncertain=new Error('Storage helper close unresolved');
+        failure=failure?new AggregateError([failure,uncertain],'Storage operation and close failed'):uncertain;
+      }
+      if(failure)throw failure;return value;
+    });
   }
+
   async io(signal, operation) {
     this.check(signal);
     const pending = Promise.resolve().then(operation);
     this.writes.add(pending);
+    const frames=[];for(let f=this.context.getStore();f;f=f.parent){f.pending.add(pending);frames.push(f);}
     try { const value = await pending; this.check(signal); return value; }
-    finally { this.writes.delete(pending); }
+    finally { this.writes.delete(pending); for(const f of frames)f.pending.delete(pending); }
   }
   assertCleanupSafe() {
     if (this.unresolved || this.children.size || this.writes.size)
@@ -47,9 +57,11 @@ export class OwnedFixtureScope {
   }
   spawn(executable, args, options) {
     this.check();
-    const child = nativeSpawn(executable, args, options);
+    let child;
+    try {child=nativeSpawn(executable,args,options);}
+    catch(error){this.unresolved=true;throw error;}
     this.children.add(child);
-    for(const observer of this.observers)observer.add(child);
+    for(let frame=this.context.getStore();frame;frame=frame.parent)frame.seen.add(child);
     child.once('close', () => this.children.delete(child));
     return child;
   }

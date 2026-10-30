@@ -22,7 +22,7 @@ async function load(body, url, context, bindings) {
   });
   await module.evaluate(); return module.namespace;
 }
-async function fixture({throwAt=-1, missingPid=false, killMode='ok', writeThrow=false}={}) {
+async function fixture({throwAt=-1, missingPid=false, killMode='ok', writeThrow=false, abortDuringSpawn=false}={}) {
   let now=0, spawnCalls=0;
   const children=[], timers=[];
   const context=vm.createContext({Buffer,URL,AbortSignal,process:{platform:'win32',env:{SystemRoot:'C:\\Windows'}},
@@ -35,7 +35,7 @@ async function fixture({throwAt=-1, missingPid=false, killMode='ok', writeThrow=
     child.kill=()=>{child.kills++;if(killMode==='throw')throw new Error('SYNTHETIC_PRIVATE');return killMode!=='false';};
     child.stdin=new EventEmitter();child.stdout=new EventEmitter();
     child.stdin.end=()=>{child.writes++;if(writeThrow)throw new Error('SYNTHETIC_PRIVATE');};
-    children.push(child);return child;
+    children.push(child);if(index===0&&abortDuringSpawn)c.abort();return child;
   };
   const api=await load(source,sourceURL,context,{'node:child_process':{spawn},'node:url':{fileURLToPath},'node:path':{win32},'node:perf_hooks':{performance:{now:()=>now}}});
   const c=new AbortController();let settled=false,value,error;
@@ -100,6 +100,27 @@ for(const [op,path,opts] of [['bad','C:\\x',{}],['prepare-directory','relative',
   const f=await fixture();f.request();await f.advance(1000);assert.equal(f.settled,false);await f.advance(1000);
   f.refused('unresolved','unresolved'); // Delayed operation callback earns no new500ms.
 }
+// WS-L2 fills raced-abort, terminator failure, exit/close and disposal gaps.
+{
+ const f=await fixture({abortDuringSpawn:true});f.request();
+ assert.equal(f.children[0].writes,0);assert.equal(f.calls,2);
+ f.close(0);f.close(1,1);await f.flush();f.refused('closed','closed');
+ assert.ok(f.timers.every(t=>t.cleared));
+}
+{
+ const f=await fixture();let added=0,removed=0;
+ const add=f.c.signal.addEventListener.bind(f.c.signal),remove=f.c.signal.removeEventListener.bind(f.c.signal);
+ f.c.signal.addEventListener=(...a)=>{added++;return add(...a);};
+ f.c.signal.removeEventListener=(...a)=>{removed++;return remove(...a);};
+ f.request();f.c.abort();f.setNow(200);
+ f.children[0].emit('error',Error('duplicate'));f.children[0].stdout.emit('error',Error('duplicate'));
+ assert.equal(f.calls,2);assert.equal(f.timers.length,2);assert.equal(f.timers[1].at,500);
+ f.close(1,7);assert.equal(f.children[0].kills,1);
+ f.children[0].exitCode=0;f.children[0].emit('exit',0);await f.flush();assert.equal(f.settled,false);
+ await f.advance(500);f.refused('unresolved','closed');
+ assert.equal(f.children[0].kills,1);assert.equal(added,1);assert.equal(removed,1);
+ assert.ok(f.timers.every(t=>t.cleared));
+}
 // Evaluate the real hook module with fixed caller dependencies; no filesystem IO.
 const hookURL=new URL('../src/windows-hook.mjs',import.meta.url),hook=await readFile(hookURL,'utf8');
 for(const failure of ['plain','never-started','closed','unresolved',null,'journal-off']){
@@ -115,6 +136,19 @@ for(const failure of ['plain','never-started','closed','unresolved',null,'journa
   const result=await api.writeWindowsHookMetadata({event:{cwd:'synthetic'},projectRoot:'synthetic',dataDirectory:'unused',journal:failure==='journal-off'?null:{},stateMetadata:{},stateScope:'project'});
   assert.equal(journal,failure==='journal-off'?0:1);assert.equal(state,!failure||failure==='journal-off'?1:0);
   assert.equal(result.state,state?'recorded':'unavailable');cases++;
+}
+for(const elapsed of [1200,1450]){
+ let now=0,stateBudget=null,journalBudget;
+ const context=vm.createContext({Buffer});
+ const api=await load(hook,hookURL,context,{
+  'node:perf_hooks':{performance:{now:()=>now}},
+  './windows-storage.mjs':{windowsStorageRequest:async(op,path,options)=>{journalBudget=options.timeoutMs;now=elapsed;}},
+  './scope.mjs':{windowsHookProjectMatches:()=>true},'./journal.mjs':{encodeJournalRecord:()=> '{}'},
+  './state.mjs':{metadataScopeKey:()=> '1'.repeat(64)},
+  './windows-state.mjs':{recordWindowsMetadata:async(a,b,c,d,budget)=>{stateBudget=budget;}},
+ });
+ await api.writeWindowsHookMetadata({event:{cwd:'synthetic'},projectRoot:'synthetic',dataDirectory:'unused',journal:{},stateMetadata:{},stateScope:'project'});
+ assert.equal(journalBudget,1500);assert.equal(stateBudget,elapsed===1200?300:null);cases++;
 }
 // Caller propagation: no filesystem or timer activity is allowed in these paths.
 const noIO = () => { throw new Error('Unexpected fixture IO'); };
