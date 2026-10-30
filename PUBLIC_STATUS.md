@@ -1,5 +1,18 @@
 # Public status — incomplete development project
 
+[Native revision 5 preparation](docs/continuation/NATIVE-APPROVAL-V5-2026-10-30.md)
+reconciles the three marketplace/plugin additions and two newer browser-service
+configuration changes. Existing native permission and trust leaves match revision 4;
+no live configuration was written. The new packet binds current inherited service and
+maintenance-plugin files and adds an exact read-only system-launcher identity check,
+preserving the existing helper's single-link/trust checks. Eighteen new synthetic
+checks and live read-only preflight/cache checks pass. The first independent review
+required explicit optimized-Python refusal and chained command gates; both are fixed,
+with 17 focused correction checks passing. Final independent security review passed
+conditional approval-readiness; no execution approval, hook registration, batch clock
+or trial startup.
+Collector disabled/unloaded; all 93 requirement dispositions unchanged.
+
 [WS-L2-R1 final review](docs/continuation/WINDOWS-STORAGE-L2-R1-REVIEW-2026-10-30.md)
 accepts the bounded WS-L1/WS-L2/R1 storage milestone. The execution-time fixture IO
 check closes the remaining race; all three regressions and the preserved cleanup
@@ -7,11 +20,9 @@ barriers satisfy the contract. Exact candidate CI41005748850 passed all seven jo
 including Windows NTFS Node 22/24. This is source/test acceptance, not native Codex
 host acceptance or a release. All 93 requirement dispositions remain unchanged.
 
-The collector is disabled/unloaded and the native v4 trial remains held. This review
-made no permission/configuration changes. Read-only comparison found three added
-marketplace/plugin configuration leaves; existing permission/trust leaves match the
-saved baseline. The additions were retained, with origin and startup implications
-unverified. A future native batch must revalidate that drift before approval/execution.
+The storage review made no permission/configuration changes. Its read-only comparison
+found three added marketplace/plugin leaves, now addressed by revision 5 preparation
+above. The collector remains disabled/unloaded and native execution remains unapproved.
 
 Earlier storage campaign records below describe their own commits and gates at the time:
 
