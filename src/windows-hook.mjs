@@ -23,7 +23,7 @@ export async function writeWindowsHookMetadata({event,projectRoot,dataDirectory,
       const data = Buffer.from(encodeJournalRecord(journal)).toString('base64');
       await windowsStorageRequest('journal-append',dataDirectory,{data,timeoutMs:remaining()});
       result.journal = 'recorded';
-    } catch { /* optional telemetry cannot replace a guard decision */ }
+    } catch { return result; /* No follow-on write after uncertain journal failure. */ }
   }
   if (stateMetadata !== null) {
     try {

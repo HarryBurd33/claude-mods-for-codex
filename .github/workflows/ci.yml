@@ -23,6 +23,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
+      - run: node --experimental-vm-modules proofs/windows-storage-lifecycle-contract.mjs
       - run: npm test
       - run: npm run validate
       - run: npm run replay
@@ -82,6 +83,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
+      - name: WS-L1 simulated failure lifecycle (no real helper)
+        run: node --experimental-vm-modules proofs/windows-storage-lifecycle-contract.mjs
       - name: Independent fixed-output PowerShell startup and selected OS environment
         run: node test/windows-startup.mjs
       - name: Compile original public helper source under Windows PowerShell5.1

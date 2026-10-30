@@ -1,13 +1,13 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { mkdtemp, mkdir, readFile, readdir, writeFile, cp, link, symlink, rm, realpath } from 'node:fs/promises';
+import { mkdtemp, mkdir as rawMkdir, readFile, readdir, writeFile as rawWriteFile, cp as rawCp, link as rawLink, symlink as rawSymlink, rm as rawRm, realpath } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, win32 } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import test from 'node:test';
 import { windowsHookProjectMatches } from '../src/windows-hook.mjs';
-import { validateWindowsPrivatePath, windowsStorageRequest, readWindowsPrivateFile, parseWindowsStorageResponse } from '../src/windows-storage.mjs';
+import { validateWindowsPrivatePath, windowsStorageRequest as rawRequest, readWindowsPrivateFile as rawPrivateRead, parseWindowsStorageResponse } from '../src/windows-storage.mjs';
 import { appendJournalEntry, prepareDataDirectory, readJournalEntries } from '../src/journal.mjs';
 import { recordMetadataEvent, readMetadataState, pruneMetadataState } from '../src/state.mjs';
 import { loadRuntimeSettings } from '../src/runtime-settings.mjs';
@@ -15,12 +15,48 @@ import { readSelectedUsage } from '../src/usage.mjs';
 import { describeProject, listProjectFiles, inspectProjectChanges, inspectCheckpointChanges, readCheckpointPair } from '../src/workspace.mjs';
 import { runCli } from '../src/cli.mjs';
 
+// This file runs in its own Node test process; interception never ships in runtime.
+import { OwnedFixtureScope } from './owned-fixture-lifecycle.mjs';
+const lifecycle = new OwnedFixtureScope();
+const restoreSpawns = process.platform === 'win32' ? lifecycle.trackExternalSpawns() : () => {};
+let activeSignal;
+test.beforeEach(t => { activeSignal = t.signal; });
+test.after(() => restoreSpawns());
+const writeFile = (...args) => lifecycle.io(activeSignal, () => rawWriteFile(...args));
+const mkdir = (...args) => lifecycle.io(activeSignal, () => rawMkdir(...args));
+const cp = (...args) => lifecycle.io(activeSignal, () => rawCp(...args));
+const link = (...args) => lifecycle.io(activeSignal, () => rawLink(...args));
+const symlink = (...args) => lifecycle.io(activeSignal, () => rawSymlink(...args));
+const rm = (...args) => lifecycle.io(activeSignal, () => rawRm(...args));
+const requestOptions = options => ({ ...options, signal: options?.signal && activeSignal
+  ? AbortSignal.any([options.signal, activeSignal]) : options?.signal ?? activeSignal });
+const windowsStorageRequest = (op, path, options) => lifecycle.externalIO(activeSignal,
+  () => rawRequest(op, path, requestOptions(options)));
+const readWindowsPrivateFile = (path, limit, options) => lifecycle.externalIO(activeSignal,
+  () => rawPrivateRead(path, limit, requestOptions(options)));
+const descendants = new Set();
+function cleanup(t, root) {
+  t.after(async () => {
+    try {
+      lifecycle.assertCleanupSafe();
+      assert.equal(descendants.has(root), false, 'Synthetic descendant absence unresolved; root retained');
+      await rawRm(root, { recursive: true, force: true });
+    } catch (error) { lifecycle.unresolved = true; throw error; }
+  });
+}
+async function allOwned(operations) {
+  const results = await Promise.allSettled(operations);
+  const failures = results.filter(r => r.status === 'rejected').map(r => r.reason);
+  if (failures.length) throw new AggregateError(failures, 'Concurrent storage failures');
+  return results.map(r => r.value);
+}
+
 const native = { skip: process.platform !== 'win32' };
 const fixtureScript = fileURLToPath(new URL('./windows-fixtures.ps1', import.meta.url));
 const fixedRecord = Buffer.from('{"recordedAt":"2026-10-23T12:00:00.000Z","event":"SessionStart"}\n').toString('base64');
 async function directory(t) {
   const root = await mkdtemp(join(await realpath(tmpdir()), 'mods-windows-'));
-  t.after(() => rm(root, { recursive: true, force: true }));
+  cleanup(t, root);
   const data = join(root, 'private data Ω🚀');
   await windowsStorageRequest('prepare-directory', data);
   return { root, data };
@@ -92,7 +128,7 @@ test('native Windows private reader refuses hardlinks and junction ancestors',na
 
 test('native Windows journal candidate appends, serializes processes and reports without writes',native,async t=>{
   const {data}=await directory(t);
-  await Promise.all(Array.from({length:4},()=>windowsStorageRequest('journal-append',data,{data:fixedRecord})));
+  await allOwned(Array.from({length:4},()=>windowsStorageRequest('journal-append',data,{data:fixedRecord})));
   const before=await readdir(data);
   const files=await windowsStorageRequest('journal-read',data);
   assert.equal(files.map(b=>b.toString('utf8')).join('').trim().split('\n').length,4);
@@ -132,7 +168,7 @@ test('native Windows private reader rejects a null DACL and mutable ancestor',na
 
 
 test('native Windows owned-process deadline simulation kills helper and child tree',{...native,timeout:30000},async t=>{
-  const root=await mkdtemp(join(tmpdir(),'mods-timeout-'));t.after(()=>rm(root,{recursive:true,force:true}));
+  const root=await mkdtemp(join(tmpdir(),'mods-timeout-'));cleanup(t, root);
   const runtime=await readFile(new URL('../src/windows-storage.mjs',import.meta.url),'utf8');
   await writeFile(join(root,'windows-storage.mjs'),runtime);await mkdir(join(root,'windows'));
   await writeFile(join(root,'windows/private-storage.ps1'),`
@@ -147,11 +183,15 @@ $child = [System.Diagnostics.Process]::Start($info)
 [System.Threading.Thread]::Sleep(60000)
 `);
   const candidate=await import(pathToFileURL(join(root,'windows-storage.mjs')).href);
+  descendants.add(root);
   const start=performance.now();
-  await assert.rejects(candidate.windowsStorageRequest('private-read',join(root,'synthetic.txt'),{limit:10}),/Private Windows/);
+  await assert.rejects(candidate.windowsStorageRequest('private-read',join(root,'synthetic.txt'),{limit:10,signal:t.signal}), error => {
+    assert.equal(error.code,'ERR_WINDOWS_STORAGE_UNAVAILABLE');assert.equal(error.storageLifecycle.helper,'closed');
+    assert.equal(error.storageLifecycle.terminator,'closed');return true;
+  });
   assert.ok(performance.now()-start>=14000);assert.ok(performance.now()-start<23000);
   const pid=Number(await readFile(join(root,'windows/child.pid'),'utf8'));assert.ok(Number.isInteger(pid)&&pid>0);
-  assert.throws(()=>process.kill(pid,0),{code:'ESRCH'});
+  assert.throws(()=>process.kill(pid,0),{code:'ESRCH'});descendants.delete(root);
 });
 
 
@@ -161,7 +201,7 @@ test('native Windows scoped candidate isolates sessions, preserves concurrent re
   assert.deepEqual((await windowsStorageRequest('state-read',data,{data:one})).map(b=>b.length),[0,0]);
   assert.deepEqual(await readdir(data),[]);
   await assert.doesNotReject(windowsStorageRequest('state-record',data,{data:one+':'+fixedRecord}),'first synthetic state record');
-  await assert.doesNotReject(Promise.all(Array.from({length:3},()=>windowsStorageRequest('state-record',data,{data:one+':'+fixedRecord}))),'concurrent synthetic state records');
+  await assert.doesNotReject(allOwned(Array.from({length:3},()=>windowsStorageRequest('state-record',data,{data:one+':'+fixedRecord}))),'concurrent synthetic state records');
   await windowsStorageRequest('state-record',data,{data:two+':'+fixedRecord});
   const first=await windowsStorageRequest('state-read',data,{data:one});
   assert.equal(first[1].toString('utf8').trim().split('\n').length,4);
@@ -182,7 +222,7 @@ test('Windows hook scope predicate is exact, explicit and never infers a child o
 });
 
 test('native Windows candidate shares a short telemetry budget and mismatched scope has no effects',{...native,timeout:15000},async t=>{
-  const root=await mkdtemp(join(await realpath(tmpdir()),'mods-budget-'));t.after(()=>rm(root,{recursive:true,force:true}));
+  const root=await mkdtemp(join(await realpath(tmpdir()),'mods-budget-'));cleanup(t, root);
   const source=join(root,'src');await cp(new URL('../src/',import.meta.url),source,{recursive:true});
   const project=join(root,'project'),data=join(root,'data');await mkdir(project);
   const spy=join(source,'windows/starts.txt');
@@ -265,7 +305,7 @@ test('native Windows dashboard/project boundary refuses before project reads or 
 });
 
 test('native Windows cancelled private reader stops its owned helper tree and pre-abort starts nothing',{...native,timeout:15000},async t=>{
-  const root=await mkdtemp(join(await realpath(tmpdir()),'mods-abort-'));t.after(()=>rm(root,{recursive:true,force:true}));
+  const root=await mkdtemp(join(await realpath(tmpdir()),'mods-abort-'));cleanup(t, root);
   await writeFile(join(root,'windows-storage.mjs'),await readFile(new URL('../src/windows-storage.mjs',import.meta.url),'utf8'));await mkdir(join(root,'windows'));
   const pidfile=join(root,'windows/child.pid');
   await writeFile(join(root,'windows/private-storage.ps1'),`
@@ -281,7 +321,7 @@ $child = [System.Diagnostics.Process]::Start($info)
   const candidate=await import(pathToFileURL(join(root,'windows-storage.mjs')).href),pre=AbortSignal.abort();
   await assert.rejects(candidate.readWindowsPrivateFile(join(root,'synthetic'),100,{signal:pre}),/Private Windows/);
   await assert.rejects(readFile(pidfile),{code:'ENOENT'});
-  const controller=new AbortController();
+  const controller=new AbortController();descendants.add(root);
   // Attach rejection immediately; abort is deliberately issued after child startup.
   const read=assert.rejects(candidate.readWindowsPrivateFile(join(root,'synthetic'),100,{signal:controller.signal}),/Private Windows/);
   let pid;
@@ -291,11 +331,11 @@ $child = [System.Diagnostics.Process]::Start($info)
   }
   assert.ok(Number.isInteger(pid)&&pid>0,'owned synthetic child must start');
   const start=performance.now();controller.abort();await read;
-  assert.ok(performance.now()-start<2000);assert.throws(()=>process.kill(pid,0),{code:'ESRCH'});
+  assert.ok(performance.now()-start<2000);assert.throws(()=>process.kill(pid,0),{code:'ESRCH'});descendants.delete(root);
 });
 
 test('native Windows hook subprocess preserves deny under stalled telemetry and excludes mismatched scope',{...native,timeout:15000},async t=>{
-  const root=await mkdtemp(join(await realpath(tmpdir()),'mods-hook-'));t.after(()=>rm(root,{recursive:true,force:true}));
+  const root=await mkdtemp(join(await realpath(tmpdir()),'mods-hook-'));cleanup(t, root);
   const source=join(root,'src');await cp(new URL('../src/',import.meta.url),source,{recursive:true});
   const config=JSON.parse(await readFile(new URL('../config/mods.json',import.meta.url),'utf8'));
   config.mods.find(mod=>mod.type==='activityJournal').enabled=true;

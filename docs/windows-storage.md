@@ -141,10 +141,10 @@ are narrowly allowlisted, never the full environment or credential/API-key vars.
 No shell interpolation, PATH-selected helper, elevation, policy override, module
 import/discovery, profile or downloaded code. Internal v2 frames are ASCII with
 base64 fields, bounded32KiB request/3MiB response. Default15s plus500ms cleanup requests
-termination of the owned helper tree via fixed system taskkill. Current rejection
-does not certify helper, terminator or descendant closure; see the
+termination of the owned helper tree via fixed system taskkill. Request errors carry a fixed immutable lifecycle snapshot distinguishing observed
+direct close from unresolved helper/terminator state; descendant closure is unverified; see the
 [WS-L1 correction contract](continuation/WINDOWS-STORAGE-CONTRACT-2026-10-29.md).
-The correction is reviewed but unimplemented. A shorter shared telemetry
+The implementation candidate awaits Windows CI and diff review. A shorter shared telemetry
 budget is required before native-hook activation; do not put15s work before a
 five-second host guard response. Errors sanitized, no native diagnostics/paths/SIDs
 returned to model. Explicit private-file bytes go only to the calling local process.
