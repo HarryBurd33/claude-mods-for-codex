@@ -1,10 +1,19 @@
 # Public status — incomplete development project
 
-[WS-L2-R1 candidate](docs/continuation/WINDOWS-STORAGE-L2-R1-RESULT-2026-10-29.md)
-adds the execution-time fixture IO check and three regressions. Local focused13 and
-full411pass/123skips pass; validation/replay pass. Corrected-source CI41005748850
-passed all seven jobs; Astra final diff/evidence review remains the acceptance gate. Permissions unchanged, collector disabled,
-native trial held.
+[WS-L2-R1 final review](docs/continuation/WINDOWS-STORAGE-L2-R1-REVIEW-2026-10-30.md)
+accepts the bounded WS-L1/WS-L2/R1 storage milestone. The execution-time fixture IO
+check closes the remaining race; all three regressions and the preserved cleanup
+barriers satisfy the contract. Exact candidate CI41005748850 passed all seven jobs,
+including Windows NTFS Node 22/24. This is source/test acceptance, not native Codex
+host acceptance or a release. All 93 requirement dispositions remain unchanged.
+
+The collector is disabled/unloaded and the native v4 trial remains held. This review
+made no permission/configuration changes. Read-only comparison found three added
+marketplace/plugin configuration leaves; existing permission/trust leaves match the
+saved baseline. The additions were retained, with origin and startup implications
+unverified. A future native batch must revalidate that drift before approval/execution.
+
+Earlier storage campaign records below describe their own commits and gates at the time:
 
 [WS-L2 final review](docs/continuation/WINDOWS-STORAGE-L2-REVIEW-2026-10-29.md)
 confirmed the seven-job CI pass but found one remaining queued-IO fixture race:

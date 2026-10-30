@@ -1,0 +1,136 @@
+{
+  "review": "WS-L2-R1 final review",
+  "date": "2026-10-30",
+  "status": "accepted within frozen WS-L1/WS-L2/R1 scope",
+  "assignment": "GPT-6 Astra / Extra High, human-selected; serial cross-model review",
+  "baseline": "54733050fa90c84b473988f5610e30bcac63fe1a",
+  "candidate": "71da77dcf698ebb6c9929ea00b3404e2c8860968",
+  "candidate_tree": "9570cf7e1138922dfb09a42794bf0ca8e15736d0",
+  "result_commit": "3fdf54ca1eb727ffecba678f4a3aa50e1f27b005",
+  "findings": [],
+  "resolved_findings": [
+    "R1"
+  ],
+  "acceptance": {
+    "WS-01\u201312": "accepted within contract scope",
+    "WSL2-01\u201308": "accepted within contract scope",
+    "WS-L2-R1": "accepted",
+    "whole_project": "incomplete",
+    "native_codex_host_acceptance": false,
+    "release": false
+  },
+  "source_pins": [
+    {
+      "path": "src/windows-storage.mjs",
+      "sha256": "4b4f1def595887f2e8b374b602ca42de25bd2321c6448b2e349c98028514ccee"
+    },
+    {
+      "path": "src/windows-hook.mjs",
+      "sha256": "f324a7430c66a1e2ce205badf9efd9306f1aaaab5a7ea413a38cecddbeea45c8"
+    },
+    {
+      "path": "test/owned-fixture-lifecycle.mjs",
+      "sha256": "79b24828cbd56f35fb81813ae00ed2b1335de6d726c69983ca7188d223c5ac8a"
+    },
+    {
+      "path": "test/owned-fixture-lifecycle.test.mjs",
+      "sha256": "4ff3c446f1a1c27320744330f12bfa2981a04a00a761da1759a43a8d6ad1229e"
+    },
+    {
+      "path": "test/windows-state-trace.test.mjs",
+      "sha256": "09675a63900c2913762c49c62868ed6c538eba854d9903fa5bc29bc000e4b732"
+    },
+    {
+      "path": "test/windows-storage.test.mjs",
+      "sha256": "bc1f5180f48e2d132c0f242456ce91dd94028d3f8e8e6800ba21cd364821e7bc"
+    },
+    {
+      "path": "proofs/windows-state-trace.mjs",
+      "sha256": "51238ded657bbb3cb36f4eabe0ed8668e074f535f02d5bcd8570482df5673a09"
+    },
+    {
+      "path": "proofs/windows-state-trace-instrumentation.mjs",
+      "sha256": "41ea5d4769a6b1b59ca3d7bf9e89f19247d40f615926299d97e87aab047238b4"
+    },
+    {
+      "path": "proofs/windows-storage-lifecycle-contract.mjs",
+      "sha256": "e0d13d029b4ce98f48a1b1fb3e6430d257a9bf723160c6047a01bf26f4f38c4d"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "fc6fea630c942530f2b98c76cdc7935b5a36080f55b737305b32ec5264b3fb74"
+    },
+    {
+      "path": "docs/continuation/REQUIREMENTS.md",
+      "sha256": "60215a4ba887ac62faa85e4f4326426e44d55352f5dce4e3a37e2d8376754543"
+    },
+    {
+      "path": "docs/continuation/WINDOWS-STORAGE-CONTRACT-2026-10-29.md",
+      "sha256": "0652f8f2320d7f86e917bbcc14d9f7bdb543389d2380d3dfdecab401ab77a836"
+    },
+    {
+      "path": "docs/continuation/WINDOWS-STORAGE-CI-REVIEW-2026-10-29.md",
+      "sha256": "6c692e2bb0122552fbd23836050e7f48df25b6abd80b54163c83b6179289288f"
+    },
+    {
+      "path": "docs/continuation/WINDOWS-STORAGE-L2-REVIEW-2026-10-29.md",
+      "sha256": "81aaa1eb40cb340d9db7ade13e935638601d380e638d9784102ce4da130daf3e"
+    },
+    {
+      "path": "docs/continuation/WINDOWS-STORAGE-L2-REVIEW-2026-10-29.json",
+      "sha256": "7883da936a8399f8eee7e2e2e524718378e65a174e70cc97c513887e8f026477"
+    },
+    {
+      "path": "docs/continuation/WINDOWS-STORAGE-L2-R1-RESULT-2026-10-29.md",
+      "sha256": "5995964ee18bd2afc761a1b567110ab25611e09b8c9919b71fb9af46394e31fa"
+    }
+  ],
+  "ci": {
+    "run_id": 41005748850,
+    "attempt": 1,
+    "head": "71da77dcf698ebb6c9929ea00b3404e2c8860968",
+    "conclusion": "success",
+    "jobs": 7,
+    "windows_node_versions": [
+      "22.23.4",
+      "24.22.1"
+    ],
+    "each_windows": {
+      "diagnostic_regressions_pass": 12,
+      "storage_pass": 25,
+      "owned_process_pass": 97,
+      "skips": 0,
+      "transport_simulated_cases": 43,
+      "actual_copied_diagnostic": "passed"
+    },
+    "posix_full_suite_jobs": 4,
+    "new_r1_regressions_pass_in_each_posix_job": 3
+  },
+  "retained_local_evidence": {
+    "node": "24.22.0",
+    "focused_pass": 13,
+    "full_pass": 411,
+    "full_skips": 123,
+    "full_fail": 0,
+    "mods_validated": 3,
+    "replay_fixtures": 4,
+    "local_windows_node22": "unavailable"
+  },
+  "review_runtime_reruns": 0,
+  "other_prior_source_pins_unchanged": 11,
+  "native_observation": {
+    "live_config_writes": 0,
+    "existing_config_leaves_match": true,
+    "new_config_leaves": {
+      "marketplace_source": 1,
+      "marketplace_source_type": 1,
+      "plugin_enabled": 1
+    },
+    "addition_origin_and_startup_implications": "unverified",
+    "prior_v4_seal": "unchanged",
+    "future_native_batch": "requires drift revalidation and fresh approval",
+    "collector": "disabled/unloaded",
+    "trial": "held; not restarted"
+  },
+  "requirements_dispositions": "93 unchanged"
+}
