@@ -2,8 +2,8 @@
 
 [WS-L2-R1 candidate](docs/continuation/WINDOWS-STORAGE-L2-R1-RESULT-2026-10-29.md)
 adds the execution-time fixture IO check and three regressions. Local focused13 and
-full411pass/123skips pass; validation/replay pass. One corrected-source hosted matrix
-and Astra final review remain gates. Permissions unchanged, collector disabled,
+full411pass/123skips pass; validation/replay pass. Corrected-source CI41005748850
+passed all seven jobs; Astra final diff/evidence review remains the acceptance gate. Permissions unchanged, collector disabled,
 native trial held.
 
 [WS-L2 final review](docs/continuation/WINDOWS-STORAGE-L2-REVIEW-2026-10-29.md)
