@@ -1,10 +1,12 @@
 # Public status — incomplete development project
 
-[Windows storage lifecycle audit](docs/continuation/WINDOWS-STORAGE-LIFECYCLE-AUDIT-2026-10-29.md)
-reproduces three failure-result/close orderings with simulated processes and one
-normal-close control. Production transport is unchanged; no actual Windows leak or
-new fix is claimed. A finite Astra Extra High contract review is next. Native v4
-approval remains pending, collector disabled, and all93 dispositions unchanged.
+[Windows storage contract review](docs/continuation/WINDOWS-STORAGE-CONTRACT-2026-10-29.md)
+is complete: WS-L1 specifies finite direct-process reconciliation, sanitized failure
+receipts and no follow-on state telemetry after journal failure. Twelve acceptance
+groups are frozen for Sol High implementation and Astra Extra High diff review.
+Production transport remains unchanged; no actual Windows leak, repair or new CI
+pass is claimed. The original three simulated traces are preserved without rerun.
+Native v4 approval remains pending, collector disabled, and all93 dispositions unchanged.
 
 [Fresh revision4 packet](docs/continuation/NATIVE-APPROVAL-V4-2026-10-29.md) explicitly retains the single unrelated
 project-trust addition and binds the newly installed CLI0.165.0, package metadata and38

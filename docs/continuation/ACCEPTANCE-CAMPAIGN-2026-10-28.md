@@ -101,12 +101,15 @@ inventory or native action occurred. Stage B execution readiness is not accepted
 
 ## Next unblocked source work — October29
 
-The [production Windows storage lifecycle audit](WINDOWS-STORAGE-LIFECYCLE-AUDIT-2026-10-29.md)
-reproduces three simulated request-failure paths that settle without helper-close
-evidence. This is a source-level lifecycle-result gap, not an observed native leak.
-Astra Extra High should review the finite failure/cleanup contract before a production
-patch. The actual v4 trial remains separately gated on human approval; no completed
-UI/archive/Stop or prior Windows proof checks were repeated.
+The [WS-L1 storage contract review](WINDOWS-STORAGE-CONTRACT-2026-10-29.md) is complete
+on the human-confirmed Astra Extra High selection. It selects finite direct-process
+reconciliation, fixed sanitized failure receipts, stopping optional telemetry after
+journal failure, and guarded owned-fixture cleanup. Twelve acceptance groups and a
+finite file list are frozen for Sol High implementation, followed by Astra Extra High
+diff review. Source is unchanged; the original three simulated audit traces are
+retained. No actual leak, repair, new CI pass or native acceptance is claimed. The
+v4 trial remains separately gated on human approval; no completed UI/archive/Stop
+or prior Windows proof checks were repeated.
 
 ## Milestones, dependencies and acceptance gates
 

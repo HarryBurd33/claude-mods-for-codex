@@ -140,8 +140,11 @@ src/windows-storage.mjs launches only fixed Windows PowerShell5.1 with -NoProfil
 are narrowly allowlisted, never the full environment or credential/API-key vars.
 No shell interpolation, PATH-selected helper, elevation, policy override, module
 import/discovery, profile or downloaded code. Internal v2 frames are ASCII with
-base64 fields, bounded32KiB request/3MiB response. Default15s plus500ms cleanup targets
-only the owned helper tree via fixed system taskkill. A shorter shared telemetry
+base64 fields, bounded32KiB request/3MiB response. Default15s plus500ms cleanup requests
+termination of the owned helper tree via fixed system taskkill. Current rejection
+does not certify helper, terminator or descendant closure; see the
+[WS-L1 correction contract](continuation/WINDOWS-STORAGE-CONTRACT-2026-10-29.md).
+The correction is reviewed but unimplemented. A shorter shared telemetry
 budget is required before native-hook activation; do not put15s work before a
 five-second host guard response. Errors sanitized, no native diagnostics/paths/SIDs
 returned to model. Explicit private-file bytes go only to the calling local process.
@@ -215,8 +218,9 @@ macOS installed dev6 configuration, human trust and selected data are untouched.
   host5s hook deadline. Slow/unavailable optional storage drops metadata, preserves
   the dispatcher decision and reports only a fixed diagnostic. Actual Windows
   host path spelling, sandbox, permissions and throughput remain unverified.
-- Public storage/selected-usage CLI reads use at most15s+500ms cleanup. Cancelled
-  native reads stop the owned helper tree; pre-aborted reads do not spawn. No
+- Public storage/selected-usage CLI reads use15s+500ms scheduling budgets. Cancelled
+  reads request termination of the owned helper tree; current error settlement is
+  not proof of closure or bounded process lifetime. Pre-aborted reads do not spawn. No
   daemon, watcher, network call or model call. POSIX paths remain as before.
 - Windows runtime settings/dashboard and all workspace/Git entry points refuse
   before project traversal or execution. Existing POSIX Git execution uses PATH

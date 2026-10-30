@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "contract": "WS-L1",
+  "project_date": "2026-10-29",
+  "baseline_commit": "8e45b78d3ce4f7d72302b038bba8938d2d032aa0",
+  "review_status": "finite source contract complete; implementation and resulting diff review pending",
+  "model_selection": "GPT-6 Astra / Extra High, human-confirmed; automated backend readback unverified",
+  "review_method": "Serial source/caller/evidence review; no separate independent implementation review yet",
+  "source_sha256": {
+    "src/windows-storage.mjs": "86cce08d7ef440295e023b11ca9db384f7bff36eb00ede45946174d8666d3e84",
+    "src/windows-hook.mjs": "e7210daa55bc7d99ef11ec84dbe9cfc19f1e1fa6773d8f43ef69d4d84f26716a",
+    "src/windows-state.mjs": "0d55302e61f4621e83fac0ab7ab3d1a9b9a0f4c89e9a49eed29aa5ed9dbed8f9",
+    "src/journal.mjs": "6c4fa198ad48c26bff24f4938780922f7fee85933a6e262045a2b3fef44ed39c",
+    "src/state.mjs": "0a6690915a3ac07841625b5c02eca94a045936536a4b0e1a7a7a9325f56e67a0",
+    "src/usage.mjs": "ef3341fbc04d87baf1a4e9697e03109366a82bdf26486f778d151a4bd9f56de6",
+    "src/io.mjs": "6b73669f9647d9598971a7ee7659ea24b3fc494157055d2d3ee9524b36e41006",
+    "src/retention.mjs": "2f24e68d8470dd653f93be76133cd4678cf3b489775e6b5c369a2ed2b44a6cf9",
+    "test/windows-storage.test.mjs": "3e5ef99e712175016ac85f7d24eb984144360fe6dabf8b70fa4bf739ee58a651",
+    "test/owned-fixture-lifecycle.mjs": "9ea4c2a94b9c3eb21527ecccd5e7e3c48bf4b48852cb3c65eb1e8f004430b847",
+    "test/owned-fixture-lifecycle.test.mjs": "68681b20fc6d8cb410a5a7c1522673a8d63eb6b14698135ad4690237234aaa89",
+    "test/windows-owned-process.test.mjs": "dedbfe5c9f2dc6ca454640da9595daf03f2189d026713fdebca4587b39be468a",
+    "test/state-observer-boundary.test.mjs": "500629bad5e03f95027e258e17335dae069e9b94cb04f750b57ddd2746e3aa1f",
+    "test/windows-lock-contention.test.mjs": "687ea6a3b5ecca95aaade381e2a44f50e998bba31cf415ab21834157489f70bb",
+    "proofs/windows-storage-lifecycle-audit.mjs": "3d3a287f156c727b2f2cd4d7e971b432cb2c6e82b0e174c6ba7c5e261ebcadf1",
+    ".github/workflows/ci.yml": "97f8b5110749f6e57309caeb51159c3fa66871629dff20a6194ca072badb64fd",
+    "docs/continuation/ASTRA-CI-CONTRACT-2026-10-27.md": "93cc42443d60e3b570d1ce7dedd747f08bdedd7d536b058ffd4d0a8bc8602431",
+    "docs/continuation/SOL-ABC-IMPLEMENTATION-2026-10-27.md": "481ccc342ae857e5c7f640c5759b39c777b7681fdc85015caa02ec31a9ae37a2"
+  },
+  "evidence_reused": {
+    "original_simulated_failure_traces": 3,
+    "original_normal_control": 1,
+    "rerun": false,
+    "actual_windows_leak_observed": false
+  },
+  "decisions": {
+    "production_correction_required": true,
+    "generic_error_message_preserved": true,
+    "additive_error_code": "ERR_WINDOWS_STORAGE_UNAVAILABLE",
+    "lifecycle_fields": [
+      "version",
+      "helper",
+      "terminator",
+      "descendants"
+    ],
+    "direct_role_values": [
+      "never-started",
+      "closed",
+      "unresolved"
+    ],
+    "descendants_value": "unverified",
+    "cleanup_ms": 500,
+    "max_operation_ms": 15000,
+    "shared_hook_operation_ms": 1500,
+    "journal_failure_ends_optional_sequence": true,
+    "cross_request_quarantine": false,
+    "new_containment_design": false
+  },
+  "acceptance": [
+    {
+      "id": "WS-01",
+      "requirement": "Preserve all three original trace identities. For terminator-close-first and terminator-error-first, remain pending until both relevant closes or the unchanged deadline; at expiry reject with the exact unresolved/closed snapshot.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-02",
+      "requirement": "Reverse close order; helper closed/terminator unresolved must remain pending until terminator close or expiry. Closed roles are never killed again.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-03",
+      "requirement": "Normal valid response succeeds only after helper close within deadline. Nonzero close, malformed/oversized response, valid late output and response after a latched failure never succeed.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-04",
+      "requirement": "Invalid operation/path/options within the supported API and pre-abort spawn nothing, with never-started roles. An abort racing listener setup sends no further stdin and starts at most one cleanup sequence.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-05",
+      "requirement": "Helper spawn throw, asynchronous error then close, and error without close: distinguish attempted/unresolved from observed close. Cover missing PID without inventing never-started evidence.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-06",
+      "requirement": "Terminator spawn throw, error without close, nonzero/zero close and missing close; helper kill returns false or throws. No error is promoted to closure; no raw diagnostics escape.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-07",
+      "requirement": "Timeout, stdin write/error, stdout error and output overflow latch failure once. Repeated/late abort, error, data, exit and close events cannot reset budgets, buffer output, spawn more processes, mutate a receipt or settle twice.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-08",
+      "requirement": "Delayed timer delivery and success at/after deadline use the original monotonic deadline. Failure expiry rejects without waiting for nonexistent close; timer/listener disposal and sanitized immutable receipt are checked. No deadline extension.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-09",
+      "requirement": "Hook journal failure of every receipt type, plus a plain error, starts no state call and preserves fixed result/guard behavior. State-only and successful two-lane positives remain mandatory, with the original shared budget.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-10",
+      "requirement": "Direct state/journal errors propagate; prune stops at first failed stage; observer failure performs no next read; selected usage stays unavailable without content or retry. No blanket schema changes.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-11",
+      "requirement": "Fixture failure/cancellation while child or IO remains unresolved refuses deletion and retains the root. Observed direct close plus completed IO permits only owned cleanup; synthetic descendant checks remain separate. Concurrent sibling requests are all reconciled.",
+      "status": "not run; future corrected source required"
+    },
+    {
+      "id": "WS-12",
+      "requirement": "Exact corrected-source Windows Node 22/24 NTFS storage and owned-process jobs pass with existing ACL/link/admission negatives, normal state/concurrency positives, timeout/abort and hook deny timing assertions retained. Record actual runtime versions and separate direct close from synthetic descendant absence.",
+      "status": "not run; future corrected source required"
+    }
+  ],
+  "implementation_model": "GPT-6.1 Sol / High",
+  "implementation_review_model": "GPT-6 Astra / Extra High",
+  "production_changed": false,
+  "new_runtime_tests_run": false,
+  "new_CI_pass_claimed": false,
+  "native_trial_started": false,
+  "collector_reenabled": false,
+  "permissions_changed": false,
+  "ledger_dispositions_changed": false,
+  "native_v4_approval": "still required separately"
+}
