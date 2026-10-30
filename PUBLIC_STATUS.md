@@ -3,8 +3,9 @@
 [WS-L1 implementation candidate](docs/continuation/WINDOWS-STORAGE-IMPLEMENTATION-2026-10-29.md)
 adds finite direct-process reconciliation, sanitized lifecycle receipts and stops
 state telemetry after journal failure.39 simulated cases pass; local full suite
-392pass/123skips. Windows CI and Astra Extra High diff review remain acceptance
-gates. Collector disabled, native permissions unchanged and v4 trial still held.
+392pass/123skips. Exact candidate CI40986490389 passed five jobs and failed both Windows NTFS
+jobs: concurrent fixture attribution and a stale copied-helper diagnostic block
+acceptance. No rerun; Astra Extra High failure/diff review is next. Collector disabled, native permissions unchanged and v4 trial still held.
 
 [Windows storage contract review](docs/continuation/WINDOWS-STORAGE-CONTRACT-2026-10-29.md)
 is complete: WS-L1 specifies finite direct-process reconciliation, sanitized failure

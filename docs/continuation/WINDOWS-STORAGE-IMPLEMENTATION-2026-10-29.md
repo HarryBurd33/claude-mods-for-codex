@@ -40,3 +40,33 @@ diff review. WS-12 is pending hosted CI. No whole-contract acceptance is claimed
 Native permissions/configuration, collector-disabled state, the v4 approval hold,
 installed plugin, original audit and93 requirement dispositions are preserved. No
 native client, trial, hook registration, install/trust action or release was started.
+
+## Exact candidate CI failed; acceptance stopped
+
+Candidate `60c44f944abfac41d874ad4cfa9851c124024a2c`, tree
+`a52169c4dd6279b1a24cec0de72e229b6ddd2fc4`, ran
+[CI40986490389](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40986490389).
+All four POSIX Node22/24 jobs and the Windows portable job passed. Both Windows
+NTFS Node22/24 jobs failed; each storage invocation reported13pass/12fail. The later
+owned-process step was not reached. This is not WS-12 acceptance.
+
+The first failing storage case is concurrent journal append. Node24 logs include
+`Storage operation and close failed` / `Storage helper close unresolved`; subsequent
+cases refuse with the fixture scope's sticky unresolved state. Node22 also fails that
+concurrent case and then refuses subsequent work. Source inspection identifies a
+fault in the new wrapper's use of `OwnedFixtureScope.externalIO`: simultaneous
+observers each capture other requests' children. An early finishing request can
+therefore label its still-running sibling as unresolved. This is a supported causal
+explanation, not proof that no production issue remains. Do not remove cleanup guards
+or serialize away the required concurrent positive to obtain a pass.
+
+The always-run copied-helper diagnostic also fails `Bridge diagnostic shape` because
+its exact source-string instrumentation no longer matches the changed transport.
+Its source is outside WS-L1's permitted implementation list. Neither that diagnostic
+nor the shared lifecycle helper was changed to suppress the failure. No unchanged
+CI rerun was attempted.
+
+Next gate: Astra Extra High reviews the candidate diff and these failures, specifies
+request-specific concurrent ownership and the finite diagnostic migration scope,
+then returns a bounded repair contract. Preserve original failures, concurrency,
+cleanup refusal and finite deadlines. WS-11/12 and full repair acceptance remain open.
