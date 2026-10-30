@@ -44,3 +44,11 @@ This clears the hosted execution gate; Astra Extra High final diff/evidence revi
 remains pending before WS-L1/WS-L2 acceptance. These results do not approve the native
 Codex trial or establish arbitrary descendant closure. Native permissions, disabled
 collector and all requirement dispositions remain unchanged.
+
+## Final review outcome
+
+The [Astra review](WINDOWS-STORAGE-L2-REVIEW-2026-10-29.md) verified the reported CI
+pass and found a queued fixture-IO callback can execute after enclosing closure or
+cancellation. The global cleanup barrier still protects the root. Full acceptance
+is withheld for the narrow WS-L2-R1 execution-time check and regressions; the existing
+CI pass remains valid for its exact commit. Production source and native holds remain.

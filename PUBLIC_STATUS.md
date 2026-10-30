@@ -1,5 +1,12 @@
 # Public status — incomplete development project
 
+[WS-L2 final review](docs/continuation/WINDOWS-STORAGE-L2-REVIEW-2026-10-29.md)
+confirmed the seven-job CI pass but found one remaining queued-IO fixture race:
+an operation can execute after parent closure or cancellation. Root cleanup still
+refuses unresolved work. Full acceptance is withheld; WS-L2-R1 specifies an execution-time
+check and focused regressions. Production source, permissions, disabled collector and
+native trial hold are unchanged.
+
 [WS-L2 implementation candidate](docs/continuation/WINDOWS-STORAGE-L2-RESULT-2026-10-29.md)
 corrects fixture attribution and copied diagnostic cleanup/instrumentation. Local
 22 focused tests and 43 VM cases pass; full suite 408 pass / 123 skips. Actual
