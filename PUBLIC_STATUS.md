@@ -3,7 +3,8 @@
 [WS-L2 implementation candidate](docs/continuation/WINDOWS-STORAGE-L2-RESULT-2026-10-29.md)
 corrects fixture attribution and copied diagnostic cleanup/instrumentation. Local
 22 focused tests and 43 VM cases pass; full suite 408 pass / 123 skips. Actual
-Windows Node 22/24 corrected-source CI and Astra final review remain acceptance gates.
+Windows Node 22.23.4/24.22.1 corrected-source CI40999690611 passed all seven jobs;
+Astra final diff/evidence review remains the acceptance gate.
 Permissions unchanged, collector disabled and native trial held.
 
 [WS-L1 CI review and WS-L2 contract](docs/continuation/WINDOWS-STORAGE-CI-REVIEW-2026-10-29.md)

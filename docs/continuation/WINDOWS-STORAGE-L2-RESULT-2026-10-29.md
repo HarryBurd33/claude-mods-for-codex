@@ -29,3 +29,18 @@ Astra Extra High final diff/evidence review remain required; no acceptance claim
 Native permissions/config unchanged; collector disabled/unloaded; v4 trial remains
 held. No native client, install/trust action or trial started. All 93 requirement
 ledger dispositions are unchanged. Original failed CI remains evidence.
+
+## Corrected-source hosted result
+
+Candidate `50af5709395ce5496e3fb8b3829634cd15e83c74`, tree
+`1b4fa5171c2679587ee086860ea6411ec36ede55`, passed all seven jobs in
+[run 40999690611](https://github.com/HarryBurd33/claude-mods-for-codex/actions/runs/40999690611).
+Windows NTFS used actual Node **22.23.4** and **24.22.1**. Each passed 12 copied-bridge
+regressions, 25 storage tests and 97 owned-process tests, with zero skips. The copied
+state trace and 43-case transport simulation passed on both. All four POSIX full-suite
+jobs and the portable Windows job passed. Exactly one corrected-source run occurred.
+
+This clears the hosted execution gate; Astra Extra High final diff/evidence review
+remains pending before WS-L1/WS-L2 acceptance. These results do not approve the native
+Codex trial or establish arbitrary descendant closure. Native permissions, disabled
+collector and all requirement dispositions remain unchanged.
