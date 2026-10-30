@@ -20,7 +20,7 @@ object validator; constructing it in the VM corrected the fixture. The original 
 is retained unchanged. This new suite is a regression check, not Windows OS evidence.
 
 Windows storage fixtures now track spawned direct children and fixture writes,
-reconcile concurrent siblings, propagate test signals to direct request wrappers,
+await concurrent siblings, propagate test signals to direct request wrappers,
 and refuse root deletion while work or deliberate descendant absence is unresolved.
 The existing lifecycle helper stays unchanged. Separate observer/lock wrappers remain
 outside this repair. Cancellation of indirect public calls does not establish child
@@ -36,6 +36,9 @@ WS-01–09 have new simulated checks; WS-10 has state/journal propagation, prune
 observer-stop and unavailable-usage checks. Existing owned-fixture regressions plus
 new Windows fixture guards address WS-11, subject to actual Windows execution and
 diff review. WS-12 is pending hosted CI. No whole-contract acceptance is claimed.
+
+Those were candidate-stage claims: the failures below and subsequent review establish
+that the concurrent attribution and cleanup guards do not yet satisfy WS-11.
 
 Native permissions/configuration, collector-disabled state, the v4 approval hold,
 installed plugin, original audit and93 requirement dispositions are preserved. No
@@ -66,7 +69,8 @@ Its source is outside WS-L1's permitted implementation list. Neither that diagno
 nor the shared lifecycle helper was changed to suppress the failure. No unchanged
 CI rerun was attempted.
 
-Next gate: Astra Extra High reviews the candidate diff and these failures, specifies
-request-specific concurrent ownership and the finite diagnostic migration scope,
-then returns a bounded repair contract. Preserve original failures, concurrency,
-cleanup refusal and finite deadlines. WS-11/12 and full repair acceptance remain open.
+The [Astra Extra High review](WINDOWS-STORAGE-CI-REVIEW-2026-10-29.md) now defines
+WS-L2: request-specific ownership, conservative spawn-attempt handling, bounded copied
+diagnostic migration/cleanup and missing regressions. Its new audit reproduces two
+fixture gaps without real processes. Preserve original failures, concurrency, cleanup
+refusal and finite deadlines. WS-11/12 and full repair acceptance remain open.

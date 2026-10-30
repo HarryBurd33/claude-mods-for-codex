@@ -1,0 +1,155 @@
+{
+  "contract": "WS-L2",
+  "date": "2026-10-29",
+  "status": "reviewed correction contract; implementation and acceptance pending",
+  "review_baseline": "2c6c56a8483f66cadf37296f48ea269b8a96ae23",
+  "runtime_candidate": "60c44f944abfac41d874ad4cfa9851c124024a2c",
+  "candidate_tree": "a52169c4dd6279b1a24cec0de72e229b6ddd2fc4",
+  "failed_ci": {
+    "run_id": 40986490389,
+    "passed_jobs": 5,
+    "failed_jobs": 2,
+    "storage_each": {
+      "pass": 13,
+      "fail": 12
+    },
+    "owned_process_steps": "skipped"
+  },
+  "source_pins": [
+    {
+      "path": "src/windows-storage.mjs",
+      "sha256": "4b4f1def595887f2e8b374b602ca42de25bd2321c6448b2e349c98028514ccee"
+    },
+    {
+      "path": "src/windows-hook.mjs",
+      "sha256": "f324a7430c66a1e2ce205badf9efd9306f1aaaab5a7ea413a38cecddbeea45c8"
+    },
+    {
+      "path": "src/windows/PrivateStorage.cs",
+      "sha256": "c9493eb2bf7401577bf4cfd289a8726ec5b4281c87de250e3342e03fc1fb59bd"
+    },
+    {
+      "path": "src/windows/private-storage.ps1",
+      "sha256": "b5f53b4a2c81f9b1456a024ce23e65d2ec1fda18f9898e55cad8011b3a7eba88"
+    },
+    {
+      "path": "src/windows-state.mjs",
+      "sha256": "0d55302e61f4621e83fac0ab7ab3d1a9b9a0f4c89e9a49eed29aa5ed9dbed8f9"
+    },
+    {
+      "path": "src/journal.mjs",
+      "sha256": "6c4fa198ad48c26bff24f4938780922f7fee85933a6e262045a2b3fef44ed39c"
+    },
+    {
+      "path": "src/state.mjs",
+      "sha256": "0a6690915a3ac07841625b5c02eca94a045936536a4b0e1a7a7a9325f56e67a0"
+    },
+    {
+      "path": "src/usage.mjs",
+      "sha256": "ef3341fbc04d87baf1a4e9697e03109366a82bdf26486f778d151a4bd9f56de6"
+    },
+    {
+      "path": "test/owned-fixture-lifecycle.mjs",
+      "sha256": "9ea4c2a94b9c3eb21527ecccd5e7e3c48bf4b48852cb3c65eb1e8f004430b847"
+    },
+    {
+      "path": "test/owned-fixture-lifecycle.test.mjs",
+      "sha256": "68681b20fc6d8cb410a5a7c1522673a8d63eb6b14698135ad4690237234aaa89"
+    },
+    {
+      "path": "test/windows-storage.test.mjs",
+      "sha256": "bc1f5180f48e2d132c0f242456ce91dd94028d3f8e8e6800ba21cd364821e7bc"
+    },
+    {
+      "path": "test/windows-owned-process.test.mjs",
+      "sha256": "dedbfe5c9f2dc6ca454640da9595daf03f2189d026713fdebca4587b39be468a"
+    },
+    {
+      "path": "proofs/windows-state-trace.mjs",
+      "sha256": "efb4e48c8cbe5cc58812f97ae305621ad45c6eb44f808be92ff93f6f23c0b288"
+    },
+    {
+      "path": "proofs/windows-storage-lifecycle-contract.mjs",
+      "sha256": "6bc83ef9d8fff406b06fd1ac59112779e32c32be48262bfd391063f9a3a50494"
+    },
+    {
+      "path": "proofs/windows-storage-lifecycle-audit.mjs",
+      "sha256": "3d3a287f156c727b2f2cd4d7e971b432cb2c6e82b0e174c6ba7c5e261ebcadf1"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "1c59f5846e69b07c688fc2a28bb50623b645d050a47e28bfc7b4ebe8a102d258"
+    },
+    {
+      "path": "docs/continuation/WINDOWS-STORAGE-CONTRACT-2026-10-29.md",
+      "sha256": "0652f8f2320d7f86e917bbcc14d9f7bdb543389d2380d3dfdecab401ab77a836"
+    },
+    {
+      "path": "docs/continuation/WINDOWS-STORAGE-CONTRACT-2026-10-29.json",
+      "sha256": "686dc9aef04cea3bb818ddc9379d816eab0f51edbe6b1aecd3803755f9b41314"
+    },
+    {
+      "path": "docs/continuation/WINDOWS-STORAGE-LIFECYCLE-AUDIT-2026-10-29.md",
+      "sha256": "7a79c89f08447bf7f610ce45064525db50c28d2f62d619df382646e93070a625"
+    },
+    {
+      "path": "package.json",
+      "sha256": "dd9ee2273f02d69e0a542a5d8b736007f7848eb9c10658d9923eba1904ce0af1"
+    }
+  ],
+  "review_artifacts": [
+    {
+      "path": "proofs/windows-fixture-lifecycle-audit.mjs",
+      "sha256": "d87fc9b87db47631891fb78f9328b2d29e1b8fce9bb93dbb0829b3dcc492238c"
+    },
+    {
+      "path": "docs/continuation/WINDOWS-STORAGE-CI-REVIEW-2026-10-29.md",
+      "sha256": "6c692e2bb0122552fbd23836050e7f48df25b6abd80b54163c83b6179289288f"
+    }
+  ],
+  "new_audit": {
+    "source": "proofs/windows-fixture-lifecycle-audit.mjs",
+    "node": "v24.22.0",
+    "sibling_misattribution_reproduced": true,
+    "spawn_throw_cleanup_gap_reproduced": true,
+    "real_child_processes": 0,
+    "fixture_writes": 0,
+    "windows_execution": false,
+    "repair_acceptance": false
+  },
+  "acceptance_ids": [
+    "WSL2-01",
+    "WSL2-02",
+    "WSL2-03",
+    "WSL2-04",
+    "WSL2-05",
+    "WSL2-06",
+    "WSL2-07",
+    "WSL2-08"
+  ],
+  "retained_acceptance_ids": [
+    "WS-01",
+    "WS-02",
+    "WS-03",
+    "WS-04",
+    "WS-05",
+    "WS-06",
+    "WS-07",
+    "WS-08",
+    "WS-09",
+    "WS-10",
+    "WS-11",
+    "WS-12"
+  ],
+  "assignment": {
+    "implementation": "GPT-6.1 Sol / High",
+    "review": "GPT-6 Astra / Extra High",
+    "active_implementation_minutes_max": 90,
+    "local_repair_rounds_max": 2,
+    "corrected_source_hosted_runs_max": 1
+  },
+  "native_trial": "held; no restart",
+  "collector": "disabled and unloaded",
+  "permissions": "unchanged",
+  "production_changes_allowed": false
+}

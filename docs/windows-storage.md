@@ -144,7 +144,9 @@ base64 fields, bounded32KiB request/3MiB response. Default15s plus500ms cleanup 
 termination of the owned helper tree via fixed system taskkill. Request errors carry a fixed immutable lifecycle snapshot distinguishing observed
 direct close from unresolved helper/terminator state; descendant closure is unverified; see the
 [WS-L1 correction contract](continuation/WINDOWS-STORAGE-CONTRACT-2026-10-29.md).
-The implementation candidate awaits Windows CI and diff review. A shorter shared telemetry
+The implementation candidate failed Windows CI; the
+[WS-L2 review](continuation/WINDOWS-STORAGE-CI-REVIEW-2026-10-29.md) defines the
+fixture/diagnostic correction and remaining acceptance gates. A shorter shared telemetry
 budget is required before native-hook activation; do not put15s work before a
 five-second host guard response. Errors sanitized, no native diagnostics/paths/SIDs
 returned to model. Explicit private-file bytes go only to the calling local process.

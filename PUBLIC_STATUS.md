@@ -1,18 +1,27 @@
 # Public status — incomplete development project
 
+[WS-L1 CI review and WS-L2 contract](docs/continuation/WINDOWS-STORAGE-CI-REVIEW-2026-10-29.md)
+are complete. A new pinned synthetic audit reproduces sibling-process misattribution
+and a thrown-spawn cleanup gap; copied diagnostic instrumentation and cleanup also
+need correction. WS-L2 freezes the test/diagnostic repair scope and missing regression
+gates for Sol High, followed by Astra Extra High review and actual Windows Node 22/24
+CI. Production remains the unaccepted WS-L1 candidate. No CI rerun or native trial;
+collector disabled, native permissions unchanged and all 93 dispositions retained.
+
 [WS-L1 implementation candidate](docs/continuation/WINDOWS-STORAGE-IMPLEMENTATION-2026-10-29.md)
 adds finite direct-process reconciliation, sanitized lifecycle receipts and stops
 state telemetry after journal failure.39 simulated cases pass; local full suite
 392pass/123skips. Exact candidate CI40986490389 passed five jobs and failed both Windows NTFS
 jobs: concurrent fixture attribution and a stale copied-helper diagnostic block
-acceptance. No rerun; Astra Extra High failure/diff review is next. Collector disabled, native permissions unchanged and v4 trial still held.
+acceptance. The completed failure/diff review above defines the next correction;
+no unchanged rerun occurred. Collector disabled, native permissions unchanged and v4 trial still held.
 
 [Windows storage contract review](docs/continuation/WINDOWS-STORAGE-CONTRACT-2026-10-29.md)
 is complete: WS-L1 specifies finite direct-process reconciliation, sanitized failure
 receipts and no follow-on state telemetry after journal failure. Twelve acceptance
 groups are frozen for Sol High implementation and Astra Extra High diff review.
-Production transport remains unchanged; no actual Windows leak, repair or new CI
-pass is claimed. The original three simulated traces are preserved without rerun.
+That review changed no production code; the later candidate above remains unaccepted.
+No actual Windows leak or accepted repair is claimed. The original three simulated traces are preserved without rerun.
 Native v4 approval remains pending, collector disabled, and all93 dispositions unchanged.
 
 [Fresh revision4 packet](docs/continuation/NATIVE-APPROVAL-V4-2026-10-29.md) explicitly retains the single unrelated
