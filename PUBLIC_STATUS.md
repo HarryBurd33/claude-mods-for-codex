@@ -1,5 +1,13 @@
 # Public status — incomplete development project
 
+[Native v5 approval intake stopped](docs/continuation/NATIVE-V5-INTAKE-STOP-2026-10-30.md)
+before the clock, registration or startup. The approved CLI 0.165.0 installation and
+its package/resources are absent; the stable installed entry now points to metadata
+version 0.166.0, which has not been executed or accepted. Other selected pins and
+configuration match. Collector disabled/unloaded; permissions unchanged; no trial or
+owned cleanup required. The failed packet is not retried. Current-host review and a
+fresh exact packet/approval are required before native execution.
+
 [Native revision 5 preparation](docs/continuation/NATIVE-APPROVAL-V5-2026-10-30.md)
 reconciles the three marketplace/plugin additions and two newer browser-service
 configuration changes. Existing native permission and trust leaves match revision 4;
@@ -12,6 +20,8 @@ with 17 focused correction checks passing. Final independent security review pas
 conditional approval-readiness; no execution approval, hook registration, batch clock
 or trial startup.
 Collector disabled/unloaded; all 93 requirement dispositions unchanged.
+That preparation describes the previously available 0.165.0 host; the later intake
+failure above prevents executing it now.
 
 [WS-L2-R1 final review](docs/continuation/WINDOWS-STORAGE-L2-R1-REVIEW-2026-10-30.md)
 accepts the bounded WS-L1/WS-L2/R1 storage milestone. The execution-time fixture IO
