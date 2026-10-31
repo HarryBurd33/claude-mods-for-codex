@@ -1,5 +1,17 @@
 # Public status — incomplete development project
 
+[Native revision 6 preparation](docs/continuation/NATIVE-APPROVAL-V6-2026-10-30.md)
+reviews the installed CLI 0.166.0 without execution, pins its 42-file package including
+two newly bundled executables, and reconciles two new direct maintenance MCP leaves.
+Maintenance 0.1.3 source/cache files match; both direct and plugin registrations remain
+disclosed startup exposure. All previous permission/trust leaves match v5 and no live
+configuration was written. A closed package-inventory gate and 28 new synthetic checks
+pass, together with current read-only preservation checks. Independent security review
+passed conditional approval-readiness; execution remains unapproved. Collector disabled/unloaded; no hook, clock
+or trial; all 93 requirement dispositions unchanged. Fresh exact approval is required.
+
+The earlier packet and implementation records below describe their own observation times:
+
 [Native v5 approval intake stopped](docs/continuation/NATIVE-V5-INTAKE-STOP-2026-10-30.md)
 before the clock, registration or startup. The approved CLI 0.165.0 installation and
 its package/resources are absent; the stable installed entry now points to metadata

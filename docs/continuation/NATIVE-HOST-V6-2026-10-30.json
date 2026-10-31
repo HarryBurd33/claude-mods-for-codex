@@ -1,0 +1,65 @@
+{
+  "revision": 6,
+  "status": "independent approval-readiness passed; execution unapproved",
+  "date": "2026-10-30",
+  "cli": {
+    "version": "0.166.0",
+    "target": "aarch64-apple-darwin",
+    "files": 42,
+    "commonChanged": 31,
+    "commonUnchanged": 9,
+    "addedExecutables": [
+      "codex-code-mode-host",
+      "codex-exec-server"
+    ],
+    "entrySha256": "39acf979729dd290f9a24ee38b2914e036c91b65952872e28ae2a6b88a7db7c1",
+    "codeModeHostSha256": "fd37051bfdce0b65cf22a7077e265720a7bd6709d5e400dcbc26197f3041400a",
+    "execServerSha256": "b3073157bdbb5cc598b10c8bbf8785f2ba052f65f3893f9cbeb9432e4c027c08",
+    "metadataSha256": "0f56701b92cc0f72708a11ff1fd60cce97caced6812ee86e5125bc26ce3d25db",
+    "executed": false,
+    "provenance": "unverified",
+    "nativeCompatibility": "unverified"
+  },
+  "maintenance": {
+    "version": "0.1.3",
+    "sourceCacheMatchFiles": 7,
+    "configurationAddedLeaves": 2,
+    "directAndPluginRegistrationsRetained": true,
+    "otherTaskBinding": true,
+    "callsPerformed": 0
+  },
+  "pins": {
+    "selectedEntries": 63,
+    "nativeSourceFiles": 40,
+    "sourceCommit": "61a990aa2484342a38f0be14b3479daa9feb02dc",
+    "privateSealSha256": "c5ed02e189266d2ed735def417501baf80fb69bfb84eae00a91ae2f5e233ed62",
+    "privateBindingSha256": "1fbc1ff4948b7219886cb051f51b0baa7b5532c1888ece350e9626c77e12eaa2",
+    "privatePacketSha256": "59e05f36a5aafa7e2aab5a0aa93ec3124f29ac749295ea9baacb42b16cdadad9"
+  },
+  "verification": {
+    "newSyntheticChecks": 28,
+    "readOnlyPreflight": "pass",
+    "systemLauncher": "pass",
+    "closedCliPackage": "pass",
+    "preservedCache251": "pass",
+    "priorChecksRepeated": false,
+    "independentSecurityReview": "conditional approval-readiness passed"
+  },
+  "constraints": {
+    "permissionsChanged": false,
+    "collector": "disabled/unloaded",
+    "nativeStarted": false,
+    "registrationActive": false,
+    "batchOpened": false,
+    "trialRestarted": false,
+    "executionApproved": false,
+    "requirementDispositionsChanged": false
+  },
+  "residuals": [
+    "publisher provenance and binary behavior unverified",
+    "full transitive and loaded runtime unknown",
+    "duplicate maintenance startup and host precedence unknown",
+    "inherited startup may run before policy display",
+    "native compatibility and actual human trust remain future gates"
+  ]
+}
